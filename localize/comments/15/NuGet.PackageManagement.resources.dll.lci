@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LCX SchemaVersion="6.0" Name="C:\BuildAgent\work\c21523a748a3d719\NuGet\bin\Release\NuGetTools\15\NuGet.PackageManagement.dll" PsrId="211" FileType="1" SrcCul="en-US" Desc="Commenting file created by LCXAdmin. For more information, please visit http://localizability/longhorn/LcxAdmin.asp" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+<LCX SchemaVersion="6.0" Name="E:\A\_work\93\s\artifacts\NuGet.PackageManagement\15.0\bin\release\net45\NuGet.PackageManagement.dll" PsrId="211" FileType="1" SrcCul="en-US" Desc="Commenting file created by LCXAdmin. For more information, please visit http://localizability/longhorn/LcxAdmin.asp" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
   <OwnedComments>
     <Cmt Name="LcxAdmin" />
   </OwnedComments>
@@ -7,9 +7,9 @@
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
   </Item>
   <Item ItemId=";NuGet.PackageManagement.Strings.resources" ItemType="0" PsrId="211" Leaf="false">
-    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
+    <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
-      <Disp Icon="Str" LocTbl="false" />
+      <Disp Icon="Str" Disp="true" LocTbl="false" />
       <Item ItemId=";AnotherNuGetProjectWithSameNameExistsInSolution" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Another NuGetProject with the same name '{0}' exists in solution]]></Val>
@@ -55,6 +55,15 @@
           <Cmt Name="LcxAdmin"><![CDATA[{Locked="NuGetProject"}]]></Cmt>
         </Cmts>
       </Item>
+      <Item ItemId=";NoPackagesInProject" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No packages were found in packages.config for project '{0}'.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="LcxAdmin"><![CDATA[{Locked="packages.config"}]]></Cmt>
+        </Cmts>
+      </Item>
       <Item ItemId=";NuGetProjectDoesNotHaveName" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[NuGetProject does not have 'Name' set in metadata. It should be set and it should be unique]]></Val>
@@ -64,7 +73,7 @@
           <Cmt Name="LcxAdmin"><![CDATA[{Locked="NuGetProject", "Name"}]]></Cmt>
         </Cmts>
       </Item>
-      <Item ItemId=";RestoringPackage" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";RestoringPackage" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Restoring NuGet package {0}.]]></Val>
         </Str>
@@ -91,7 +100,25 @@
           <Cmt Name="LcxAdmin"><![CDATA[{Locked="DependencyBehavior"}]]></Cmt>
         </Cmts>
       </Item>
-      <Item ItemId=";UnsupportedPackageFeature" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";UnknownSource" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Source '{0}' not found. Please provide an HTTP or local source.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="LcxAdmin"><![CDATA[{Locked="HTTP"}]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";UnknownSourceType" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unsupported type of source '{0}'. Please provide an HTTP or local source.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="LcxAdmin"><![CDATA[{Locked="HTTP"}]]></Cmt>
+        </Cmts>
+      </Item>
+      <Item ItemId=";UnsupportedPackageFeature" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package '{0}' uses features that are not supported by the current version of NuGet. To upgrade NuGet, see http://docs.nuget.org/consume/installing-nuget.]]></Val>
         </Str>
