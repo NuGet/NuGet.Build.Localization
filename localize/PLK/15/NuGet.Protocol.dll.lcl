@@ -496,24 +496,36 @@
       <Item ItemId=";Plugin_FailedToQueryPluginOperationsClaims" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A failure occurred while attempting to query plugin operation claims for the plugin at '{0}'.  Exception:  {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Wystąpił błąd podczas próby wykonania zapytania o oświadczenia operacji wtyczki dla wtyczki w lokalizacji „{0}”. Wyjątek:  {1}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Plugin_FailureQueryingPackageVersions" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A failure occurred while attempting to query package versions for package '{0}' using the plugin at '{1}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Wystąpił błąd podczas próby wykonania zapytania o wersje pakietu dla pakietu „{0}” używającego wtyczki w lokalizacji „{1}”.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Plugin_Fault" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Terminating plugin '{0}' due to an unrecoverable fault:  {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Działanie wtyczki „{0}” jest przerywane z powodu nieodwracalnego błędu: {1}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Plugin_FileNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A plugin was not found at path '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nie znaleziono wtyczki w ścieżce „{0}”.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -526,6 +538,9 @@
       <Item ItemId=";Plugin_HandshakeRequestHandlerAlreadyExists" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A handshake request handler already exists.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Procedura obsługi żądania uścisku dłoni już istnieje.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -550,6 +565,9 @@
       <Item ItemId=";Plugin_InvalidEmbeddedSignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The plugin at '{0}' did not have a valid embedded signature.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Wtyczka w lokalizacji „{0}” nie miała prawidłowego osadzonego podpisu.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -562,18 +580,27 @@
       <Item ItemId=";Plugin_InvalidPluginFilePath" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The plugin file path '{0}' is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ścieżka pliku wtyczki „{0}” jest nieprawidłowa.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Plugin_NotConnected" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A plugin is not connected.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Wtyczka nie jest podłączona.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Plugin_PackageDownloadFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Plugin '{0}' failed to download package '{1}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Wtyczka „{0}” nie mogła pobrać pakietu „{1}”.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -601,12 +628,18 @@
       <Item ItemId=";Plugin_RequestContextDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Request context does not exist for request ID '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nie istnieje kontekst żądania dla identyfikatora żądania „{0}”.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Plugin_RequestHandlerDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A request handler does not exist for the message method '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Procedura obsługi żądań nie istnieje dla metody komunikatów „{0}”.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -625,6 +658,9 @@
       <Item ItemId=";Plugin_UnrecognizedOperationClaims" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The operation claims are unrecognized:  {0}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Oświadczenia operacji nie zostały rozpoznane: {0}.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -874,7 +910,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0.4151]]></Val>
+        <Val><![CDATA[4.3.0.4157]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -910,7 +946,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0-preview3-4151]]></Val>
+        <Val><![CDATA[4.3.0-preview3-4157]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
