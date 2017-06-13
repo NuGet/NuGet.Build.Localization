@@ -418,6 +418,9 @@
       <Item ItemId=";CannotBeUsedWithOtherValues" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' cannot be used in conjunction with other values.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA["{0}" kann nicht in Verbindung mit anderen Werten verwendet werden.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -442,6 +445,9 @@
       <Item ItemId=";Error_InvalidATF" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[PackageTargetFallback and AssetTargetFallback cannot be used together. Remove PackageTargetFallback(deprecated) references from the project environment.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[PackageTargetFallback und AssetTargetFallback können nicht zusammen verwendet werden. Entfernen Sie Verweise auf "PackageTargetFallback(deprecated)" aus der Projektumgebung.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -493,18 +499,27 @@
       <Item ItemId=";Error_NoPackageVersionsExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to find package {0}. No packages exist with this id in source(s): {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Paket "{0}" wurde nicht gefunden. Es sind keine Pakete mit dieser ID in folgenden Quellen vorhanden: {1}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_NoPackageVersionsExistInRange" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to find package {0} with version {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Paket "{0}" der Version {1} wurde nicht gefunden.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_NoStablePackageVersionsExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to find a stable package {0} with version {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ein stabiles Paket "{0}" der Version {1} wurde nicht gefunden.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -547,12 +562,18 @@
       <Item ItemId=";Error_ProjectDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to find project '{0}'. Check that the project reference is valid and that the project file exists.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Projekt "{0}" wurde nicht gefunden. Stellen Sie sicher, dass der Projektverweis gültig und die Projektdatei vorhanden ist.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_UnableToFindProjectInfo" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to find project information for '{0}'. The project file may be invalid or missing targets required for restore.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Für "{0}" wurden keine Projektinformationen gefunden. Die Projektdatei ist möglicherweise ungültig, oder es fehlen Ziele, die für die Wiederherstellung erforderlich sind.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -622,12 +643,18 @@
       <Item ItemId=";FoundVersionsInSource" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Found {0} version(s) in {1} [ Nearest version: {2} ]5D;]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} Version(en) gefunden in "{1}" [ Nächste Version: {2} ]5D;]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";FoundVersionsInSourceWithoutMatch" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Found {0} version(s) in {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} Version(en) gefunden in {1}.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -769,6 +796,9 @@
       <Item ItemId=";Log_AssetsFileNotOnDisk" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The expected assets file for {0} does not exist, no-op is not possible. Continuing restore.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die erwartete Assetdatei für "{0}" ist nicht vorhanden, "no-op" ist nicht möglich. Die Wiederherstellung wird fortgesetzt.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -820,6 +850,9 @@
       <Item ItemId=";Log_CycleDetected" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Cycle detected.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Zyklus erkannt.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -994,6 +1027,9 @@
       <Item ItemId=";Log_MissingPackagesOnDisk" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Not all packages are on disk for: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nicht alle Pakete befinden sich auf dem Datenträger für: {0}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1117,6 +1153,9 @@
       <Item ItemId=";Log_PropsFileNotOnDisk" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The props file for {0} at location {1} does not exist, no-op is not possible. Continuing restore.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Eigenschaftendatei für "{0}" am Speicherort "{1}" ist nicht vorhanden, "no-op" ist nicht möglich. Die Wiederherstellung wird fortgesetzt.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1165,12 +1204,18 @@
       <Item ItemId=";Log_RestoreNoOpDGChanged" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The restore inputs for '{0}' have changed. Continuing restore.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Wiederherstellungseingaben für "{0}" wurden geändert. Die Wiederherstellung wird fortgesetzt.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_RestoreNoOpFinish" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The restore inputs for '{0}' have not changed. No further actions are required to complete the restore.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Wiederherstellungseingaben für "{0}" wurden nicht geändert. Zum Abschließen der Wiederherstellung sind keine weiteren Aktionen erforderlich.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1231,12 +1276,18 @@
       <Item ItemId=";Log_SkippingAssetsFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Assets file has not changed. Skipping assets file writing. Path: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Assetdatei wurde nicht geändert. Das Schreiben der Assetdatei wird übersprungen. Pfad: {0}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_SkippingCacheFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No-Op restore. The cache will not be updated. Path: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No-Op-Wiederherstellung. Der Cache wird nicht aktualisiert. Pfad: {0}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1252,24 +1303,36 @@
       <Item ItemId=";Log_TargetsFileNotOnDisk" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The targets file for {0} at location {1} does not exist, no-op is not possible. Continuing restore.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Zieldatei für "{0}" am Speicherort "{1}" ist nicht vorhanden, "no-op" it nicht möglich. Die Wiederherstellung wird fortgesetzt.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_ToolSkippingAssetsFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Tool assets file has not changed. Skipping assets file write. Path: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Toolassetdatei wurde nicht geändert. Das Schreiben der Assetdatei wird übersprungen. Pfad: {0}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_ToolWritingCacheFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Writing tool cache file to disk. Path: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Toolcachedatei wird auf den Datenträger geschrieben. Pfad: {0}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_ToolWritingLockFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Writing tool lock file to disk. Path: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Toolsperrdatei wird auf den Datenträger geschrieben. Pfad: {0}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1312,18 +1375,27 @@
       <Item ItemId=";Log_VersionConflict" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Version conflict detected for {0}. Reference the package directly from the project to resolve this issue.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Für "{0}" wurde ein Versionskonflikt festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um dieses Problem zu lösen.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_WritingCacheFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Writing cache file to disk. Path: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Cachedatei wird auf den Datenträger geschrieben. Pfad: {0}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_WritingLockFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Writing lock file to disk. Path: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Sperrdatei wird auf den Datenträger geschrieben. Pfad: {0}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1546,12 +1618,18 @@
       <Item ItemId=";Warning_MinVersionDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} depends on {1} but {2} was not found. An approximate best match of {3} was resolved.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA["{0}" ist von "{1}" abhängig, "{2}" wurde jedoch nicht gefunden. Die ungefähre höchste Übereinstimmung von "{3}" wurde aufgelöst.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Warning_MinVersionNonInclusive" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. An approximate best match of {2} was resolved.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA["{0}" bietet keine einschließliche Untergrenze für die Abhängigkeit "{1}". Die ungefähre höchste Übereinstimmung von "{2}" wurde aufgelöst.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1603,6 +1681,9 @@
       <Item ItemId=";Warning_ProjectDependencyMissingLowerBound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Project dependency {0} does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Projektabhängigkeit "{0}" enthält keine einschließliche Untergrenze. Schließen Sie eine Untergrenze in die Abhängigkeitsversion ein, um konsistente Wiederherstellungsergebnisse zu erzielen.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1687,7 +1768,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0.4151]]></Val>
+        <Val><![CDATA[4.3.0.4157]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1723,7 +1804,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0-preview3-4151]]></Val>
+        <Val><![CDATA[4.3.0-preview3-4157]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
