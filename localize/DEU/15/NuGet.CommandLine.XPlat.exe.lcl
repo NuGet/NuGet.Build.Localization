@@ -223,12 +223,18 @@
       <Item ItemId=";Error_AddPkgFailOnImportEdit" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Error while performing {0} for package '{1}'. Cannot edit items in imported files - {2}{3}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Fehler bei der Durchführung von {0} für das Paket "{1}". Elemente in importierten Dateien können nicht bearbeitet werden: {2}{3}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_AddPkgIncompatibleWithAllFrameworks" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package '{0}' is incompatible with '{1}' frameworks in project '{2}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Paket "{0}" ist mit {1} Frameworks im Projekt "{2}" nicht kompatibel.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -721,6 +727,9 @@
       <Item ItemId=";Push_Timeout_Error" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Pushing took too long. You can change the default timeout of 300 seconds by using the --timeout <seconds> option with the push command.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Pushübertragung hat zu lange gedauert. Sie können das Standardtimeout von 300 Sekunden ändern, indem Sie die Option "--timeout <seconds>" mit dem Pushbefehl verwenden.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -934,7 +943,7 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0.3]]></Val>
+        <Val><![CDATA[4.3.0.4]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -964,7 +973,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0.4157]]></Val>
+        <Val><![CDATA[4.3.0.4199]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1000,7 +1009,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0-preview3-4157]]></Val>
+        <Val><![CDATA[4.3.0-preview4-4199]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
