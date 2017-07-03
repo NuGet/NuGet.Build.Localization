@@ -444,9 +444,9 @@
       </Item>
       <Item ItemId=";Error_InvalidATF" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[PackageTargetFallback is deprecated. Replace PackageTargetFallback references with AssetTargetFallback in the project environment.]]></Val>
+          <Val><![CDATA[PackageTargetFallback and AssetTargetFallback cannot be used together. Remove PackageTargetFallback(deprecated) references from the project environment.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[PackageTargetFallback ist veraltet. Entfernen Sie PackageTargetFallback-Verweise mit AssetTargetFallback aus der Projektumgebung.]]></Val>
+            <Val><![CDATA[PackageTargetFallback und AssetTargetFallback können nicht zusammen verwendet werden. Entfernen Sie Verweise auf "PackageTargetFallback(deprecated)" aus der Projektumgebung.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[PackageTargetFallback is deprecated. Replace PackageTargetFallback references with AssetTargetFallback in the project environment.]]></Val>
@@ -942,10 +942,13 @@
       </Item>
       <Item ItemId=";Log_ImportsFallbackWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Package '{0}' was restored using '{1}' instead the project target framework '{2}'. This may cause compatibility problems.]]></Val>
+          <Val><![CDATA[Package '{0}' was restored using '{1}' instead of the project target framework '{2}'. This may cause compatibility problems.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Das Paket "{0}" wurde mit "{1}" anstatt mithilfe des Projektzielframeworks "{2}" wiederhergestellt. Dies kann Kompatibilitätsprobleme verursachen.]]></Val>
+            <Val><![CDATA[Das Paket "{0}" wurde nicht mit dem Projektzielframework "{2}", sondern mit "{1}" wiederhergestellt. Dies kann Kompatibilitätsprobleme verursachen.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Package '{0}' was restored using '{1}' instead the project target framework '{2}'. This may cause compatibility problems.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1777,7 +1780,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0.4209]]></Val>
+        <Val><![CDATA[4.3.0.4268]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1813,7 +1816,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0-preview5-4209]]></Val>
+        <Val><![CDATA[4.3.0-preview4-4268]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
