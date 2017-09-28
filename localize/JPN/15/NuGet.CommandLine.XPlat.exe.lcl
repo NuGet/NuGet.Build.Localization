@@ -253,24 +253,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_MultipleMatchingSpecs" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Multiple matching package specs found when attempting to add package '{0}' to project '{1}'. Number of matching package specs found are  '{2}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[パッケージ '{0}' をプロジェクト '{1}' に追加するときに、一致する複数のパッケージ仕様が見つかりました。一致するパッケージ仕様が見つかった数は '{2}' です。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_MultipleProjectsFound" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Error while adding package '{0}' to project '{1}'. dotnet add package command supports adding package to one project at a time. But multiple projects were found at the project path '{1}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[パッケージ '{0}' をプロジェクト '{1}' に追加するときにエラーが発生しました。dotnet add package コマンドがサポートしているのは、1 度に 1 つのプロジェクトへのパッケージの追加ですが、プロジェクト パス '{1}' には複数のプロジェクトがあります。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_NoDgSpec" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[None or invalid DgSpec was passed to NuGet add package command.]]></Val>
@@ -289,15 +271,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_NoProjectFound" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Error while adding package '{0}' to project '{1}'. dotnet add package command supports adding package to one project at a time. But no project was found at the project path '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[パッケージ '{0}' をプロジェクト '{1}' に追加するときにエラーが発生しました。dotnet add package コマンドがサポートするのは、1 度に 1 つのプロジェクトへのパッケージの追加ですが、プロジェクト パス '{0}' にはプロジェクトが見つかりません。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_PkgMissingArgument" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to {0} package. Argument '{1}' not provided.]]></Val>
@@ -312,6 +285,15 @@
           <Val><![CDATA[Unable to {0} package. Missing or Invalid project file '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[パッケージを {0} できません。プロジェクト ファイル '{1}' が見つからないか、無効です。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_UnsupportedProject" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Error while adding package '{0}' to project '{1}'. The project does not support adding package references through the add package command.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プロジェクト '{1}' にパッケージ '{0}' を追加するときにエラーが発生しました。プロジェクトでは、追加パッケージ コマンドによるパッケージ参照の追加はサポートされていません。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -946,7 +928,7 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0.5]]></Val>
+        <Val><![CDATA[4.5.0.1]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -976,7 +958,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0.4305]]></Val>
+        <Val><![CDATA[4.5.0.4512]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1012,7 +994,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0-rtm-4305]]></Val>
+        <Val><![CDATA[4.5.0-preview1-4512]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
