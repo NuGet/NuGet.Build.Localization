@@ -253,24 +253,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_MultipleMatchingSpecs" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Multiple matching package specs found when attempting to add package '{0}' to project '{1}'. Number of matching package specs found are  '{2}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{1}' 프로젝트에 '{0}' 패키지를 추가할 때 일치하는 패키지 사양을 여러 개 찾았습니다. 찾은 일치하는 패키지 사양 수는 '{2}'개입니다.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_MultipleProjectsFound" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Error while adding package '{0}' to project '{1}'. dotnet add package command supports adding package to one project at a time. But multiple projects were found at the project path '{1}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{1}' 프로젝트에 '{0}' 패키지를 추가하는 동안 오류가 발생했습니다. dotnet add package 명령은 한 번에 하나의 프로젝트에 패키지를 추가할 수 있습니다. 하지만 프로젝트 경로 '{1}'에 여러 프로젝트가 있습니다.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_NoDgSpec" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[None or invalid DgSpec was passed to NuGet add package command.]]></Val>
@@ -289,15 +271,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_NoProjectFound" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Error while adding package '{0}' to project '{1}'. dotnet add package command supports adding package to one project at a time. But no project was found at the project path '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{1}' 프로젝트에 '{0}' 패키지를 추가하는 동안 오류가 발생했습니다. dotnet add package 명령은 한 번에 하나의 프로젝트에 패키지를 추가할 수 있습니다. 하지만 프로젝트 경로 '{0}'에 프로젝트가 없습니다.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_PkgMissingArgument" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to {0} package. Argument '{1}' not provided.]]></Val>
@@ -312,6 +285,15 @@
           <Val><![CDATA[Unable to {0} package. Missing or Invalid project file '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[패키지를 {0}할 수 없습니다. 프로젝트 파일 '{1}'이(가) 없거나 잘못되었습니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_UnsupportedProject" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Error while adding package '{0}' to project '{1}'. The project does not support adding package references through the add package command.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[패키지 '{0}'을(를) 프로젝트 '{1}'(으)로 추가하는 중 오류가 발생했습니다. add package 명령을 통한 패키지 참조 추가는 프로젝트에서 지원되지 않습니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -946,7 +928,7 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0.5]]></Val>
+        <Val><![CDATA[4.5.0.1]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -976,7 +958,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0.4305]]></Val>
+        <Val><![CDATA[4.5.0.4515]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1012,7 +994,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0-rtm-4305]]></Val>
+        <Val><![CDATA[4.5.0-preview1-4515]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
