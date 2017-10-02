@@ -253,24 +253,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_MultipleMatchingSpecs" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Multiple matching package specs found when attempting to add package '{0}' to project '{1}'. Number of matching package specs found are  '{2}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Plusieurs spécifications de package correspondantes ont été trouvées durant la tentative d'ajout du package '{0}' au projet '{1}'. Nombre de spécifications de package correspondantes trouvées : '{2}'.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_MultipleProjectsFound" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Error while adding package '{0}' to project '{1}'. dotnet add package command supports adding package to one project at a time. But multiple projects were found at the project path '{1}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Erreur d'ajout du package '{0}' au projet '{1}'. La commande dotnet add package prend en charge l'ajout d'un package à un seul projet à la fois, mais le chemin de projet '{1}' compte plusieurs projets.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_NoDgSpec" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[None or invalid DgSpec was passed to NuGet add package command.]]></Val>
@@ -289,15 +271,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_NoProjectFound" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Error while adding package '{0}' to project '{1}'. dotnet add package command supports adding package to one project at a time. But no project was found at the project path '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Erreur d'ajout du package '{0}' au projet '{1}'. La commande dotnet add package prend en charge l'ajout d'un package à un seul projet à la fois, mais le chemin de projet '{0}' ne compte aucun projet.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_PkgMissingArgument" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to {0} package. Argument '{1}' not provided.]]></Val>
@@ -312,6 +285,15 @@
           <Val><![CDATA[Unable to {0} package. Missing or Invalid project file '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Impossible de {0} le package. Fichier projet manquant ou non valide ('{1}').]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_UnsupportedProject" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Error while adding package '{0}' to project '{1}'. The project does not support adding package references through the add package command.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Erreur lors de l'ajout du package '{0}' au projet '{1}'. Le projet ne prend pas en charge l'ajout de références de package par le biais de la commande add package.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -943,7 +925,7 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0.5]]></Val>
+        <Val><![CDATA[4.5.0.1]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -973,7 +955,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0.4305]]></Val>
+        <Val><![CDATA[4.5.0.4515]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1009,7 +991,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.3.0-rtm-4305]]></Val>
+        <Val><![CDATA[4.5.0-preview1-4515]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
