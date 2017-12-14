@@ -16,120 +16,180 @@
       <Item ItemId=";MSSignCommandCSPNameDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name of the cryptographic service provider which contains the private key container.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[其中包含私钥容器的加密服务提供程序的名称。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandCertificateFileDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[File path to the p7b file to be used while signing the package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[为包签名时使用的 p7b 文件的文件路径。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandCertificateFingerprintDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a p7b file for the certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[用于搜索 p7b 文件的证书的证书 SHA-1 指纹。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Signs a NuGet package with the specified p7b file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[使用指定的 p7b 文件对 NuGet 包进行签名。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandHashAlgorithmDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Hash algorithm to be used while generating the package manifest file. Defaults to SHA256.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[生成包清单文件时使用的哈希算法。默认值为 SHA256。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandInvalidArgumentException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid value provided for '{0}'. For a list of accepted values, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[为“{0}”提供的值无效。有关接受的值的列表，请访问 https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandInvalidCngKeyException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Cng Key is not an RSA key.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Cng 密钥不是 RSA 密钥。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandKeyContainerDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name of the key container which has the private key.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[具有私钥的密钥容器的名称。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandNoCertException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Can't find specified certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[找不到指定的证书。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandNoCngKeyException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Can't find cng key.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[找不到 cng 密钥。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandNoPackageException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No package was provided. For a list of accepted ways to provide a package, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[没有提供任何包。要获取接受的包提供方式列表，请访问 https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandNoTimestamperWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No '-Timestamper' option was provided the signed package will not be timestamped. To learn more about this option, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[未提供 "-Timestamper" 选项，签名的包不会加盖时间戳。若要了解有关此选项的详细信息，请访问 https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandNoValidCertificateFileException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No CertificateFile provided or provided file is not a p7b file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[没有提供 CertificateFile 或者所提供的文件不是 p7b 文件。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandOutputDirectoryDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Directory where the signed package should be saved. By default the original package is overwritten by the signed package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[其中应保存已签名包的目录。默认情况下已签名包会覆盖原始包。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandOverwriteDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Switch to indicate if the current signature should be overwritten. By default the command will fail if the package already has a signature.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[用于指示是否应覆盖当前签名的开关。如果包已有签名，默认情况下该命令将失败。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandTimestampHashAlgorithmDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Hash algorithm to be used by the RFC 3161 timestamp server. Defaults to SHA256.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[RFC 3161 时间戳服务器要使用的哈希算法。默认值为 SHA256。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandTimestamperDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[URL to an RFC 3161 timestamping server.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[RFC 3161 加盖时间戳服务器的 URL。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandUsageDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Signs a NuGet package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[对 NuGet 包进行签名。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandUsageExamples" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[nuget mssign MyPackage.nupkg -Timestamper https://foo.bar -CertificateFile foo.p7b -CSPName "Cryptographic Service Provider"  -KeyContainer "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a" -CertificateFingerprint "4003d786cc374004bfdfc4f3e8ef9b3a"  ]D;]A;]D;]A;nuget mssign MyPackage.nupkg -Timestamper https://foo.bar -CertificateFile foo.p7b -CSPName "Cryptographic Service Provider"  -KeyContainer "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a" -CertificateFingerprint "4003d786cc374004bfdfc4f3e8ef9b3a" -OutputDirectory .\..\Signed]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[nuget mssign MyPackage.nupkg -Timestamper https://foo.bar -CertificateFile foo.p7b -CSPName "Cryptographic Service Provider"  -KeyContainer "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a" -CertificateFingerprint "4003d786cc374004bfdfc4f3e8ef9b3a"  ]D;]A;]D;]A;nuget mssign MyPackage.nupkg -Timestamper https://foo.bar -CertificateFile foo.p7b -CSPName "Cryptographic Service Provider"  -KeyContainer "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a" -CertificateFingerprint "4003d786cc374004bfdfc4f3e8ef9b3a" -OutputDirectory .\..\Signed]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandUsageSummary" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[<package_path> -Timestamper <timestamp_server_url> -CertificateFile <p7b_file_path> -CSPName <cryptographic_service _provider_name>  -KeyContianer <key_container_guid>  -CertificateFingerprint <certificate_fingerprint>]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[<package_path> -Timestamper <timestamp_server_url> -CertificateFile <p7b_file_path> -CSPName <cryptographic_service _provider_name>  -KeyContianer <key_container_guid>  -CertificateFingerprint <certificate_fingerprint>]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -161,6 +221,9 @@
     <Item ItemId=";FileDescription" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[NuGet.MSSigning.Extensions]]></Val>
+        <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[NuGet.MSSigning.Extensions]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
