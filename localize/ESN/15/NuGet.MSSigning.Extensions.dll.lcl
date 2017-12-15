@@ -16,120 +16,180 @@
       <Item ItemId=";MSSignCommandCSPNameDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name of the cryptographic service provider which contains the private key container.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nombre del proveedor de servicios criptográficos que incluye el contenedor de claves privadas.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandCertificateFileDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[File path to the p7b file to be used while signing the package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ruta de acceso al archivo p7b que se va a usar al firmar el paquete.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandCertificateFingerprintDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a p7b file for the certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Huella digital SHA-1 del certificado que se usa al buscar un archivo p7b para el certificado.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Signs a NuGet package with the specified p7b file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Firma un paquete NuGet con el archivo p7b especificado.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandHashAlgorithmDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Hash algorithm to be used while generating the package manifest file. Defaults to SHA256.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Algoritmo hash que se va a usar al generar el archivo de manifiesto del paquete. El valor predeterminado es SHA256.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandInvalidArgumentException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid value provided for '{0}'. For a list of accepted values, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Se proporcionó un valor no válido para "{0}". Para obtener una lista de los valores aceptados, visite https://docs.nuget.org/docs/reference/command-line-reference.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandInvalidCngKeyException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Cng Key is not an RSA key.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La clave CNG no es una clave RSA.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandKeyContainerDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name of the key container which has the private key.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nombre del contenedor de claves que incluye la clave privada.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandNoCertException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Can't find specified certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se encuentra el certificado especificado.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandNoCngKeyException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Can't find cng key.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se encuentra la clave CNG.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandNoPackageException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No package was provided. For a list of accepted ways to provide a package, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se proporcionó ningún paquete. Para obtener una lista de las formas aceptadas para proporcionar un paquete, visite https://docs.nuget.org/docs/reference/command-line-reference.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandNoTimestamperWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No '-Timestamper' option was provided the signed package will not be timestamped. To learn more about this option, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se proporcionó ninguna opción para "-Timestamper" y no se incluirá la marca de tiempo en el paquete firmado. Para obtener más información acerca de esta opción, visite https://docs.nuget.org/docs/reference/command-line-reference.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandNoValidCertificateFileException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No CertificateFile provided or provided file is not a p7b file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se proporcionó ningún archivo de certificado (CertificateFile) o el archivo proporcionado no es p7b.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandOutputDirectoryDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Directory where the signed package should be saved. By default the original package is overwritten by the signed package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Directorio donde se debe guardar el paquete firmado. De forma predeterminada, el paquete original se sobrescribe con el paquete firmado.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandOverwriteDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Switch to indicate if the current signature should be overwritten. By default the command will fail if the package already has a signature.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Se cambia para indicar si la firma actual debe sobrescribirse. Se produce un error del comando de forma predeterminada si el paquete ya tiene una firma.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandTimestampHashAlgorithmDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Hash algorithm to be used by the RFC 3161 timestamp server. Defaults to SHA256.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Algoritmo hash que va a usar el servidor de asignación de marca de tiempo RFC 3161. El valor predeterminado es SHA256.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandTimestamperDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[URL to an RFC 3161 timestamping server.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Dirección URL a un servidor de asignación de marca de tiempo RFC 3161.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandUsageDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Signs a NuGet package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Firma un paquete NuGet.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandUsageExamples" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[nuget mssign MyPackage.nupkg -Timestamper https://foo.bar -CertificateFile foo.p7b -CSPName "Cryptographic Service Provider"  -KeyContainer "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a" -CertificateFingerprint "4003d786cc374004bfdfc4f3e8ef9b3a"  ]D;]A;]D;]A;nuget mssign MyPackage.nupkg -Timestamper https://foo.bar -CertificateFile foo.p7b -CSPName "Cryptographic Service Provider"  -KeyContainer "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a" -CertificateFingerprint "4003d786cc374004bfdfc4f3e8ef9b3a" -OutputDirectory .\..\Signed]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[nuget mssign MyPackage.nupkg -Timestamper https://foo.bar -CertificateFile foo.p7b -CSPName "Proveedor de servicios criptográficos"  -KeyContainer "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a" -CertificateFingerprint "4003d786cc374004bfdfc4f3e8ef9b3a"  ]D;]A;]D;]A;nuget mssign MyPackage.nupkg -Timestamper https://foo.bar -CertificateFile foo.p7b -CSPName "Proveedor de servicios criptográficos"  -KeyContainer "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a" -CertificateFingerprint "4003d786cc374004bfdfc4f3e8ef9b3a" -OutputDirectory .\..\Signed]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandUsageSummary" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[<package_path> -Timestamper <timestamp_server_url> -CertificateFile <p7b_file_path> -CSPName <cryptographic_service _provider_name>  -KeyContianer <key_container_guid>  -CertificateFingerprint <certificate_fingerprint>]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[<package_path> -Timestamper <URL_de_servidor_de_asignación_de_marca_de_tiempo> -CertificateFile <ruta_archivo_p7b> -CSPName <nombre_proveedor_servicios_criptográficos>  -KeyContainer <GUID_de_contenedor_de_claves>  -CertificateFingerprint <huella_digital_certificado>]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -161,12 +221,15 @@
     <Item ItemId=";FileDescription" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[NuGet.MSSigning.Extensions]]></Val>
+        <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[NuGet.MSSigning.Extensions]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0.4716]]></Val>
+        <Val><![CDATA[4.6.0.4728]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -202,7 +265,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0-preview2-4716]]></Val>
+        <Val><![CDATA[4.6.0-preview2-4728]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
