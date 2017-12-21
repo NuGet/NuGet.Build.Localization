@@ -448,11 +448,32 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ErrorMultipleTimestamps" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Multiple timestamps are not accepted.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Více než jedno časové razítko se nepřijímá.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ErrorNoCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Could not validate signature. Signature does not have a certificate.]]></Val>
+          <Val><![CDATA[The primary signature did not have a signing certificate.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Podpis se nepovedlo ověřit. Nemá certifikát.]]></Val>
+            <Val><![CDATA[Primární podpis neměl podpisový certifikát.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Could not validate signature. Signature does not have a certificate.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ErrorNoTimestamp" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The primary signature should be timestamped to enable long-term signature validity after the certificate has expired.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Primární podpis by měl mít časové razítko, aby byl dlouhodobě platný i po vypršení platnosti certifikátu.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -504,10 +525,13 @@
       </Item>
       <Item ItemId=";ErrorSignatureVerificationFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Signature verification failed.]]></Val>
+          <Val><![CDATA[Primary signature validation failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ověření podpisu se nezdařilo.]]></Val>
+            <Val><![CDATA[Nepovedlo se ověřit primární podpis.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Signature verification failed.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -531,10 +555,13 @@
       </Item>
       <Item ItemId=";ErrorZip64NotSupported" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Zip64 archives are not supported]]></Val>
+          <Val><![CDATA[ZIP64 signed packages are not supported.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Archivy Zip64 se nepodporují.]]></Val>
+            <Val><![CDATA[Podepsané balíčky ZIP64 se nepodporují.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Zip64 archives are not supported]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -549,10 +576,13 @@
       </Item>
       <Item ItemId=";Error_NotOnePrimarySignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[SignedCms does not have one primary signature.]]></Val>
+          <Val><![CDATA[The package signature contains multiple primary signatures.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[SignedCms nemá jeden primární podpis.]]></Val>
+            <Val><![CDATA[Podpis balíčku obsahuje několik primárních podpisů.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[SignedCms does not have one primary signature.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -765,9 +795,21 @@
       </Item>
       <Item ItemId=";SignatureFailureInvalidHashAlgorithmOid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Signature response does not contain an acceptable hash algorithm.]]></Val>
+          <Val><![CDATA[The primary signature uses an unsupported hash algorithm.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Odpověď podpisu neobsahuje přijatelný algoritmus hash.]]></Val>
+            <Val><![CDATA[Primární podpis používá nepodporovaný algoritmus hash.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Signature response does not contain an acceptable hash algorithm.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SignatureFileCompressed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[File was found to be compressed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Zjistilo se, že soubor je komprimovaný.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -813,6 +855,15 @@
           <Val><![CDATA[Invalid local file header for signature entry: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Neplatná hlavička místního souboru pro položku podpisu: {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SignatureNotYetValid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The signing certificate is not yet valid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Podpisový certifikát ještě není platný.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -960,28 +1011,37 @@
       </Item>
       <Item ItemId=";TimestampFailureInvalidContentType" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Timestamp signature contains invalid content type.]]></Val>
+          <Val><![CDATA[Timestamp signature validation failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Podpis časového razítka má neplatný typ obsahu.]]></Val>
+            <Val><![CDATA[Nepovedlo se ověřit podpis časového razítka.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Timestamp signature contains invalid content type.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TimestampFailureInvalidHash" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Timestamp response contains invalid signature value hash.]]></Val>
+          <Val><![CDATA[Timestamp integrity check failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Odpověď časového razítka obsahuje neplatnou hodnotu hash hodnoty podpisu.]]></Val>
+            <Val><![CDATA[Nepovedlo se zkontrolovat integritu časového razítka.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Timestamp response contains invalid signature value hash.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TimestampFailureInvalidHashAlgorithmOid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Timestamp response does not contain an acceptable hash algorithm.]]></Val>
+          <Val><![CDATA[The timestamp uses as unsupported hash algorithm.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Odpověď časového razítka neobsahuje přijatelný algoritmus hash.]]></Val>
+            <Val><![CDATA[Časové razítko používá nepodporovaný algoritmus hash.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Timestamp response does not contain an acceptable hash algorithm.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1008,6 +1068,24 @@
           <Val><![CDATA[The signature contains an invalid timestamp.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Podpis obsahuje neplatné časové razítko.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TimestampNoCertificate" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The timestamp signature did not have a signing certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Podpis časového razítka neměl podpisový certifikát.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TimestampNotYetValid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The timestamp signing certificate is not yet valid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Podpisový certifikát časového razítka ještě není platný.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1059,10 +1137,13 @@
       </Item>
       <Item ItemId=";UnsupportedSignatureFormatVersion" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package signature format version is unsupported.  Updating your client may solve this problem.]]></Val>
+          <Val><![CDATA[The package signature format version is not supported. Updating your client may solve this problem.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Verze formátu podpisu balíčku se nepodporuje. Tento problém možná půjde vyřešit aktualizací klienta.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package signature format version is unsupported.  Updating your client may solve this problem.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1159,7 +1240,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0.4746]]></Val>
+        <Val><![CDATA[4.6.0.4749]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1195,7 +1276,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0-preview3-4746]]></Val>
+        <Val><![CDATA[4.6.0-preview3-4749]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>

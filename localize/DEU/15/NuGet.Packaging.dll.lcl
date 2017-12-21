@@ -448,11 +448,32 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ErrorMultipleTimestamps" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Multiple timestamps are not accepted.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Mehrere Zeitstempel werden nicht akzeptiert.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ErrorNoCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Could not validate signature. Signature does not have a certificate.]]></Val>
+          <Val><![CDATA[The primary signature did not have a signing certificate.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Signatur konnte nicht überprüft werden. Die Signatur weist kein Zertifikat auf.]]></Val>
+            <Val><![CDATA[Die primäre Signatur umfasst kein Signaturzertifikat.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Could not validate signature. Signature does not have a certificate.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ErrorNoTimestamp" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The primary signature should be timestamped to enable long-term signature validity after the certificate has expired.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die primäre Signatur muss mit einem Zeitstempel versehen werden, um eine langfristige Gültigkeit der Signatur nach Ablauf des Zertifikats zu ermöglichen.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -504,10 +525,13 @@
       </Item>
       <Item ItemId=";ErrorSignatureVerificationFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Signature verification failed.]]></Val>
+          <Val><![CDATA[Primary signature validation failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Fehler bei der Signaturüberprüfung.]]></Val>
+            <Val><![CDATA[Fehler beim Überprüfen der primären Signatur.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Signature verification failed.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -531,10 +555,13 @@
       </Item>
       <Item ItemId=";ErrorZip64NotSupported" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Zip64 archives are not supported]]></Val>
+          <Val><![CDATA[ZIP64 signed packages are not supported.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zip64-Archive werden nicht unterstützt.]]></Val>
+            <Val><![CDATA[ZIP64-signierte Pakete werden nicht unterstützt.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Zip64 archives are not supported]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -549,10 +576,13 @@
       </Item>
       <Item ItemId=";Error_NotOnePrimarySignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[SignedCms does not have one primary signature.]]></Val>
+          <Val><![CDATA[The package signature contains multiple primary signatures.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[SignedCms weist keine einzelne primäre Signatur auf.]]></Val>
+            <Val><![CDATA[Die Paketsignatur enthält mehrere primäre Signaturen.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[SignedCms does not have one primary signature.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -765,9 +795,21 @@
       </Item>
       <Item ItemId=";SignatureFailureInvalidHashAlgorithmOid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Signature response does not contain an acceptable hash algorithm.]]></Val>
+          <Val><![CDATA[The primary signature uses an unsupported hash algorithm.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Signaturantwort enthält keinen akzeptablen Hashalgorithmus.]]></Val>
+            <Val><![CDATA[Die primäre Signatur verwendet einen nicht unterstützten Hashalgorithmus.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Signature response does not contain an acceptable hash algorithm.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SignatureFileCompressed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[File was found to be compressed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Datei wurde als komprimiert festgestellt.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -813,6 +855,15 @@
           <Val><![CDATA[Invalid local file header for signature entry: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ungültiger lokaler Dateiheader für Signatureintrag: {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SignatureNotYetValid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The signing certificate is not yet valid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Signaturzertifikat ist noch nicht gültig.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -960,28 +1011,37 @@
       </Item>
       <Item ItemId=";TimestampFailureInvalidContentType" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Timestamp signature contains invalid content type.]]></Val>
+          <Val><![CDATA[Timestamp signature validation failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Zeitstempelsignatur enthält einen ungültigen Inhaltstyp.]]></Val>
+            <Val><![CDATA[Fehler beim Überprüfen der Zeitstempelsignatur.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Timestamp signature contains invalid content type.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TimestampFailureInvalidHash" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Timestamp response contains invalid signature value hash.]]></Val>
+          <Val><![CDATA[Timestamp integrity check failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Zeitstempelantwort enthält einen ungültigen Signaturwerthash.]]></Val>
+            <Val><![CDATA[Fehler bei der Paketintegritätsprüfung.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Timestamp response contains invalid signature value hash.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TimestampFailureInvalidHashAlgorithmOid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Timestamp response does not contain an acceptable hash algorithm.]]></Val>
+          <Val><![CDATA[The timestamp uses as unsupported hash algorithm.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Zeitstempelantwort enthält keinen akzeptablen Hashalgorithmus.]]></Val>
+            <Val><![CDATA[Der Zeitstempel verwendet einen nicht unterstützten Hashalgorithmus.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Timestamp response does not contain an acceptable hash algorithm.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1008,6 +1068,24 @@
           <Val><![CDATA[The signature contains an invalid timestamp.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die Signatur enthält einen ungültigen Zeitstempel.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TimestampNoCertificate" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The timestamp signature did not have a signing certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Zeitstempelsignatur umfasst kein Signaturzertifikat.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TimestampNotYetValid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The timestamp signing certificate is not yet valid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Zeitstempelsignaturzertifikat ist noch nicht gültig.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1059,10 +1137,13 @@
       </Item>
       <Item ItemId=";UnsupportedSignatureFormatVersion" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package signature format version is unsupported.  Updating your client may solve this problem.]]></Val>
+          <Val><![CDATA[The package signature format version is not supported. Updating your client may solve this problem.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Version des Paketsignaturformats wird nicht unterstützt. Aktualisieren Sie Ihren Client, um dieses Problem lösen.]]></Val>
+            <Val><![CDATA[Die Version des Paketsignaturformats wird nicht unterstützt. Dieses Problem kann durch eine Aktualisierung Ihres Clients möglicherweise behoben werden.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package signature format version is unsupported.  Updating your client may solve this problem.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1159,7 +1240,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0.4746]]></Val>
+        <Val><![CDATA[4.6.0.4749]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1195,7 +1276,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0-preview3-4746]]></Val>
+        <Val><![CDATA[4.6.0-preview3-4749]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
