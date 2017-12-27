@@ -333,10 +333,13 @@
       </Item>
       <Item ItemId=";ErrorByteSignatureNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Byte signature not found in package archive:]]></Val>
+          <Val><![CDATA[Byte signature not found in package archive:  0x{0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La firma in byte non è stata trovata nell'archivio del pacchetto:]]></Val>
+            <Val><![CDATA[La firma in byte non è stata trovata nell'archivio del pacchetto: 0x{0}]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Byte signature not found in package archive:]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -814,15 +817,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SignatureFileCompressed" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[File was found to be compressed.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Il file trovato è compresso.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";SignatureHashAlgorithm" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Signature Hash Algorithm: {0}]]></Val>
@@ -837,6 +831,15 @@
           <Val><![CDATA[Invalid compression method. Expected '{0}', actual '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Il metodo di compressione non è valido. Previsto: '{0}', effettivo: '{1}'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SignatureInvalidExternalFileAttributes" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package signature file entry is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La voce del file di firma del pacchetto non è valida.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1240,7 +1243,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0.4749]]></Val>
+        <Val><![CDATA[4.6.0.4765]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1276,7 +1279,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0-preview3-4749]]></Val>
+        <Val><![CDATA[4.6.0-preview3-4765]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
