@@ -333,10 +333,13 @@
       </Item>
       <Item ItemId=";ErrorByteSignatureNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Byte signature not found in package archive:]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[Byte signature not found in package archive:  0x{0}]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[バイトの署名がパッケージ アーカイブで見つかりませんでした。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Byte signature not found in package archive:]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -462,6 +465,18 @@
           <Val><![CDATA[The primary signature did not have a signing certificate.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[プライマリ署名には、署名証明書がありませんでした。]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Could not validate signature. Signature does not have a certificate.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ErrorNoTimestamp" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The primary signature should be timestamped to enable long-term signature validity after the certificate has expired.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[証明書の有効期限が切れた後に、署名の長期の有効期限を有効にするには、プライマリ署名にタイムスタンプが設定されている必要があります。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Could not validate signature. Signature does not have a certificate.]]></Val>
@@ -1237,7 +1252,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0.4755]]></Val>
+        <Val><![CDATA[4.6.0.4763]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1273,7 +1288,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0-preview3-4755]]></Val>
+        <Val><![CDATA[4.6.0-preview3-4763]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
