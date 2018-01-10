@@ -304,29 +304,17 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";CertificateChainBuildFailed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A complete certificate chain could not be built for the signing certificate.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";CommitmentTypeIndicationAttributeInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[commitment-type-indication attribute contains an invalid value.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[commitment-type-indication 屬性包含無效的值。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";CommitmentTypeIndicationInvalid" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[commitment-type-indication attribute is invalid.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[commitment-type-indication 屬性無效。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";DebugNoCertificate" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Certificate inside main SignerInfo is null.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[憑證內主要的 SignerInfo 為 null。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -354,10 +342,13 @@
       </Item>
       <Item ItemId=";ErrorCertificateHasLifetimeSignerEKU" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Certificates with lifetime signer EKU are not supported.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[The lifetime signer EKU is not supported.]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[不支援具有存留期簽署者 EKU 的憑證。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Certificates with lifetime signer EKU are not supported.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -381,10 +372,13 @@
       </Item>
       <Item ItemId=";ErrorInvalidCertificateChain" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Certificate chain validation failed with error: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[Certificate chain validation failed with error(s): {0}]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[憑證鏈結驗證失敗，錯誤: {0}]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Certificate chain validation failed with error: {0}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -433,15 +427,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";ErrorInvalidPublicKey" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Could not validate signature. Certificate does not meet the public key requirements.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[無法驗證簽章。憑證不符合公開金鑰的需求。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";ErrorManifestFileNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Manifest file not found at '{0}']]></Val>
@@ -462,12 +447,12 @@
       </Item>
       <Item ItemId=";ErrorNoCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The primary signature did not have a signing certificate.]]></Val>
+          <Val><![CDATA[The primary signature does not have a signing certificate.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[主要簽章不具有簽署憑證。]]></Val>
+            <Val><![CDATA[主要簽章沒有簽署憑證。]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Could not validate signature. Signature does not have a certificate.]]></Val>
+            <Val><![CDATA[The primary signature did not have a signing certificate.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -492,37 +477,25 @@
       </Item>
       <Item ItemId=";ErrorPackageNotSigned" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Package is not signed.]]></Val>
+          <Val><![CDATA[The package is not signed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[套件未簽署。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Package is not signed.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ErrorPackageSignatureInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Package signature is invalid.]]></Val>
+          <Val><![CDATA[The package signature is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[套件簽章無效。]]></Val>
           </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ErrorPackageTampered" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package contents might have been tampered.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[套件內容可能已竄改。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ErrorSignatureFileTooBig" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Signature file is not of a reasonable size. Package contents might have been tampered.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[簽章檔案的大小不合理。套件內容可能已經竄改。]]></Val>
-          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Package signature is invalid.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -538,15 +511,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";ErrorSigningCertUntrustedRoot" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Signing certificate chains to an untrusted root.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[正在將憑證鏈結簽署到不信任的根。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";ErrorUnableToDeleteFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to delete temporary file '{0}'. Error: '{1}'.]]></Val>
@@ -558,12 +522,12 @@
       </Item>
       <Item ItemId=";ErrorZip64NotSupported" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[ZIP64 signed packages are not supported.]]></Val>
+          <Val><![CDATA[Signed Zip64 packages are not supported.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[不支援 ZIP64 的已簽署套件。]]></Val>
+            <Val><![CDATA[不支援簽署的 Zip64 套件。]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Zip64 archives are not supported]]></Val>
+            <Val><![CDATA[ZIP64 signed packages are not supported.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -625,6 +589,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";InvalidAsn1" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The ASN.1 data is invalid.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";InvalidNuspecElement" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} This validation error occurred in a '{1}' element.]]></Val>
@@ -661,12 +631,51 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";InvalidPackageSignatureFileEntry" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package signature file entry is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[套件簽章檔案項目無效。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidPackageSignatureFileEntryCentralDirectoryHeader" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The central directory header field '{0}' has an invalid value ({1}).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[中央目錄標頭欄位 '{0}' 有無效的值 ({1})。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidPackageSignatureFileEntryLocalFileHeader" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The local file header field '{0}' has an invalid value ({1}).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[本機檔案標頭欄位 '{0}' 有無效的值 ({1})。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidPrimarySignature" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The primary signature is invalid.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";InvalidSignatureContent" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature content is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[套件簽章內容無效。]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidTimestampSignature" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The timestamp signature is invalid.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -760,20 +769,17 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";PrimarySignatureHasNoTimestamp" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The primary signature does not have a timestamp.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";SignFailureCertificateInvalidProviderType" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The following certificate cannot be used for package signing as the private key provider is unsupported:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[因為不支援私密金鑰提供者，所以下列憑證無法用於套件簽署:]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignatureCentralDirectoryHeaderInvalid" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Invalid central directory header for signature entry: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[簽章項目的中央目錄標頭無效: {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -789,31 +795,25 @@
       </Item>
       <Item ItemId=";SignatureDebug_HashOidFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Signature hash oid found: {0}]]></Val>
+          <Val><![CDATA[Signature hash OID found: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[找到簽章雜湊 oid: {0}]]></Val>
+            <Val><![CDATA[找到簽章雜湊 OID: {0}]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Signature hash oid found: {0}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignatureFailureInvalidHashAlgorithmOid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The primary signature uses an unsupported hash algorithm.]]></Val>
+          <Val><![CDATA[The package hash uses an unsupported hash algorithm.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[主要簽章使用了不支援的雜湊演算法。]]></Val>
+            <Val><![CDATA[套件雜湊使用了不支援的雜湊演算法。]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Signature response does not contain an acceptable hash algorithm.]]></Val>
+            <Val><![CDATA[The primary signature uses an unsupported hash algorithm.]]></Val>
           </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignatureFileCompressed" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[File was found to be compressed.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[發現檔案已壓縮。]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -826,38 +826,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SignatureInvalidCompressionMethod" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Invalid compression method. Expected '{0}', actual '{1}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[壓縮方法無效。應該是 '{0}'，實際是 '{1}'。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignatureInvalidExternalFileAttributes" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The package signature file entry is invalid.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[套件簽章檔案項目無效。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";SignatureInvalidGeneralPurposeBits" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid general purpose bit flags. Expected '{0}', actual '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[一般目的位元旗標無效。應該是 '{0}'，實際是 '{1}'。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignatureLocalFileHeaderInvalid" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Invalid local file header for signature entry: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[簽章項目的本機檔案標頭無效: {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -873,10 +846,13 @@
       </Item>
       <Item ItemId=";SignaturePackageIntegrityFailure" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Package integrity check failed.]]></Val>
+          <Val><![CDATA[The package integrity check failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[套件完整性檢查失敗。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Package integrity check failed.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -936,10 +912,25 @@
       </Item>
       <Item ItemId=";SignedPackageUnableToAccessSignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package was not opened correctly to perform Signature operations. Please use a Stream based constructor to have access to Signature attributes of the package.]]></Val>
+          <Val><![CDATA[The package was not opened correctly to perform signature operations. Please use a Stream-based constructor to have access to signature attributes of the package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[未正確開啟套件以執行 Signature 作業。請使用以資料流為基礎的建構函式，以擁有套件 Signature 屬性的存取權。]]></Val>
+            <Val><![CDATA[未正確開啟套件，無法執行簽章作業。請使用以資料流為基礎的建構函式，以獲得套件簽章屬性的存取權。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package was not opened correctly to perform Signature operations. Please use a Stream based constructor to have access to Signature attributes of the package.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SigningCertificateAttributeMustNotBePresent" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The signing-certificate attribute is not allowed.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SigningCertificateCertificateNotFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A certificate referenced by the signing-certificate attribute could not be found.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -961,12 +952,63 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";SigningCertificateInvalid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The signing-certificate attribute is invalid.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SigningCertificateMultipleAttributeValues" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Multiple signing-certificate attribute values are not allowed.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SigningCertificateMultipleAttributes" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Multiple signing-certificate attributes are not allowed.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SigningCertificateV2AttributeMustBePresent" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The signing-certificate-v2 attribute must be present.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SigningCertificateV2CertificateNotFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A certificate referenced by the signing-certificate-v2 attribute could not be found.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";SigningCertificateV2Invalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[signing-certificate-v2 attribute value does not match the current certificate chain.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[The signing-certificate-v2 attribute is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[signing-certificate-v2 屬性值不符合目前的憑證鏈結。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[signing-certificate-v2 attribute value does not match the current certificate chain.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SigningCertificateV2MultipleAttributeValues" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Multiple signing-certificate-v2 attribute values are not allowed.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SigningCertificateV2MultipleAttributes" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Multiple signing-certificate-v2 attributes are not allowed.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SigningCertificateV2UnsupportedHashAlgorithm" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The signing-certificate-v2 attribute uses an unsupported hash algorithm.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -981,13 +1023,19 @@
       </Item>
       <Item ItemId=";TimestampCertificateChainBuildFailure" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The timestamp service's certificate chain could not be built for the following certificate: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[The timestamp service's certificate chain could not be built: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[無法為下列憑證建立時間戳記服務的憑證鏈結: {0}]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[The timestamp service's certificate chain could not be built for the following certificate:]]></Val>
+            <Val><![CDATA[The timestamp service's certificate chain could not be built for the following certificate: {0}]]></Val>
           </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TimestampCertificateFailsPublicKeyLengthRequirement" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The timestamp certificate does not meet a minimum public key length requirement.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1003,65 +1051,35 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";TimestampFailureAuthorCertNotValid" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Author certificate was not valid when it was timestamped.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[作者憑證在加上時間戳記時無效。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TimestampFailureInvalidContentType" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Timestamp signature validation failed.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[時間戳記簽章驗證失敗。]]></Val>
-          </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Timestamp signature contains invalid content type.]]></Val>
-          </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TimestampFailureInvalidHash" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Timestamp integrity check failed.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[時間戳記完整性檢查失敗。]]></Val>
-          </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Timestamp response contains invalid signature value hash.]]></Val>
-          </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TimestampFailureInvalidHashAlgorithmOid" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The timestamp uses as unsupported hash algorithm.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[時間戳記使用了不支援的雜湊演算法。]]></Val>
-          </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Timestamp response does not contain an acceptable hash algorithm.]]></Val>
-          </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";TimestampFailureInvalidHttpScheme" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The timestamper url '{0}' has an invalid uri scheme. The supported schemes are '{1}' and '{2}'.]]></Val>
+          <Val><![CDATA[The timestamper URL '{0}' has an invalid URI scheme. The supported schemes are '{1}' and '{2}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Timestamper URL '{0}' 的 URI 配置無效。支援的配置為 '{1}' 和 '{2}'。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The timestamper url '{0}' has an invalid uri scheme. The supported schemes are '{1}' and '{2}'.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TimestampFailureNonceMismatch" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Timestamp response does not contain a matching response.]]></Val>
+          <Val><![CDATA[The timestamp response is invalid.  Nonces did not match.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[時間戳記的回應不包含相符的回應。]]></Val>
+            <Val><![CDATA[時間戳記回應無效。Nonce 不符。]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Timestamp response does not contain a matching response.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TimestampIntegrityCheckFailed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The timestamp integrity check failed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[時間戳記完整性檢查失敗。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1077,10 +1095,13 @@
       </Item>
       <Item ItemId=";TimestampNoCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The timestamp signature did not have a signing certificate.]]></Val>
+          <Val><![CDATA[The timestamp signature does not have a signing certificate.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[時間戳記簽章不具有簽署憑證。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The timestamp signature did not have a signing certificate.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1098,6 +1119,24 @@
           <Val><![CDATA[Timestamp service's response does not meet the NuGet package signature specification: '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[時間戳記服務的回應不符合 NuGet 封裝簽章規格: '{0}'。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TimestampSignatureValidationFailed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Timestamp signature validation failed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[時間戳記簽章驗證失敗。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TimestampUnsupportedSignatureAlgorithm" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The timestamp certificate has an unsupported signature algorithm.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[時間戳記憑證具有不支援的簽章演算法。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1138,6 +1177,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";UnsupportedAsn1" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The ASN.1 data is unsupported.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";UnsupportedSignatureFormatVersion" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature format version is not supported. Updating your client may solve this problem.]]></Val>
@@ -1159,47 +1204,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VerificationDefaultCertDisplay" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Verifying signature with certificate: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[正在使用憑證驗證簽章: {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";VerificationTimestamperCertDisplay" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Verifying timestamp with timestamping service certificate: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[正在使用時間戳記服務憑證驗證時間戳記: {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";WarningOfflineRevocationCheck" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Could not check revocation status of signing certificate online.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[無法檢查線上簽署憑證的撤銷狀態。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";WarningUnknownSignatureType" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Could not validate signature. Unknown signature type.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[無法驗證簽章。未知的簽章類型。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";WarningUntrustedRoot" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Signing certificate does not chain to a trusted root.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[簽署憑證未鏈結至信任的根。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1213,7 +1222,7 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0.3]]></Val>
+        <Val><![CDATA[4.7.0.1]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1243,7 +1252,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0.4763]]></Val>
+        <Val><![CDATA[4.7.0.4796]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1279,7 +1288,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0-preview3-4763]]></Val>
+        <Val><![CDATA[4.7.0-preview1-4796]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
