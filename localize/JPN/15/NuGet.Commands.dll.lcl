@@ -229,33 +229,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";MissingSummaryDescription" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The Description text is long but the Summary text is empty. This means the Description text will be truncated in the 'Manage NuGet Packages' dialog.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[[Description]5D; には長いテキストがありますが、[Summary]5D; にはテキストがありません。これは、[Manage NuGet Packages]5D; ダイアログ ボックスで Description のテキストが切り詰められることを意味します。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";MissingSummarySolution" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Provide a brief summary of the package in the Summary field.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[[Summary]5D; フィールドにパッケージの簡単な要約を入力してください。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";MissingSummaryTitle" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Consider providing Summary text.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[[Summary]5D; のテキストを入力することを検討してください。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";PlaceholderFileInPackageDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[An empty folder placeholder file '{0}' is in a non-empty folder and should be removed.]]></Val>
@@ -1552,6 +1525,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";SignCommandCertificateFileNotFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Certificate file '{0}' not found. For a list of accepted ways to provide a certificate, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[証明書ファイル '{0}' は見つかりませんでした。証明書を提供する承認済みの方法のリストについて、https://docs.nuget.org/docs/reference/command-line-reference をご覧ください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SignCommandCertificateStoreNotFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Certificate store '{0}' not found. For a list of accepted ways to provide a certificate, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[証明書ストア '{0}' は見つかりませんでした。証明書を提供する承認済みの方法のリストについて、https://docs.nuget.org/docs/reference/command-line-reference をご覧ください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";SignCommandDialogMessage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Please select a valid certificate]]></Val>
@@ -1584,15 +1575,6 @@
           <Val><![CDATA[Timestamping package(s) with:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[次の項目を使用してパッケージにタイムスタンプを設定しています。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandFileNotFound" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['{0}' file '{1}' not found. For a list of accepted ways to provide a certificate, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' ファイル '{1}' は見つかりませんでした。証明書を提供する承認済みの方法のリストについて、https://docs.nuget.org/docs/reference/command-line-reference をご覧ください。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1972,7 +1954,7 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0.2]]></Val>
+        <Val><![CDATA[4.7.0.1]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -2002,7 +1984,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0.4721]]></Val>
+        <Val><![CDATA[4.7.0.4796]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -2038,7 +2020,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0-preview2-4721]]></Val>
+        <Val><![CDATA[4.7.0-preview1-4796]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
