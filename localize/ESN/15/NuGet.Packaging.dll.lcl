@@ -307,15 +307,27 @@
       <Item ItemId=";CertificateChainBuildFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A complete certificate chain could not be built for the signing certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se pudo compilar una cadena de certificados completa para el certificado de firma.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CommitmentTypeIndicationAttributeInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[commitment-type-indication attribute contains an invalid value.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[The attribute is not a valid commitment-type-indication attribute.]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[El atributo commitment-type-indication contiene un valor no válido.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[commitment-type-indication attribute contains an invalid value.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";CommitmentTypeIndicationAttributeInvalidCombination" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The commitment-type-indication attribute contains an invalid combination of values.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -343,8 +355,8 @@
       <Item ItemId=";ErrorCertificateHasLifetimeSignerEKU" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The lifetime signer EKU is not supported.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[No se admiten certificados con EKU de firmante de vigencia.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se admite el EKU de firmante de vigencia.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Certificates with lifetime signer EKU are not supported.]]></Val>
@@ -373,8 +385,8 @@
       <Item ItemId=";ErrorInvalidCertificateChain" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Certificate chain validation failed with error(s): {0}]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Error de validación de la cadena de certificados: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se pudo validar la cadena de certificados: {0}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Certificate chain validation failed with error: {0}]]></Val>
@@ -448,8 +460,8 @@
       <Item ItemId=";ErrorNoCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The primary signature does not have a signing certificate.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[La firma principal no tenía un certificado de firma.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La firma principal no tiene un certificado de firma.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The primary signature did not have a signing certificate.]]></Val>
@@ -478,7 +490,7 @@
       <Item ItemId=";ErrorPackageNotSigned" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package is not signed.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[El paquete no está firmado.]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -490,7 +502,7 @@
       <Item ItemId=";ErrorPackageSignatureInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature is invalid.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[La firma del paquete no es válida.]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -523,8 +535,8 @@
       <Item ItemId=";ErrorZip64NotSupported" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Signed Zip64 packages are not supported.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[No se admiten paquetes firmados de ZIP64.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Los paquetes Zip64 firmados no son compatibles.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[ZIP64 signed packages are not supported.]]></Val>
@@ -592,6 +604,9 @@
       <Item ItemId=";InvalidAsn1" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The ASN.1 data is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Los datos ASN.1 no son válidos.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -643,18 +658,27 @@
       <Item ItemId=";InvalidPackageSignatureFileEntryCentralDirectoryHeader" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The central directory header field '{0}' has an invalid value ({1}).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El campo "{0}" del encabezado del directorio central tiene un valor no válido ({1}).]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";InvalidPackageSignatureFileEntryLocalFileHeader" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The local file header field '{0}' has an invalid value ({1}).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El campo del encabezado del archivo local "{0}" tiene un valor no válido ({1}).]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";InvalidPrimarySignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The primary signature is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La firma principal no es válida.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -670,6 +694,9 @@
       <Item ItemId=";InvalidTimestampSignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp signature is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La firma de la marca de tiempo no es válida.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -766,6 +793,9 @@
       <Item ItemId=";PrimarySignatureHasNoTimestamp" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The primary signature does not have a timestamp.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La firma principal no tiene una marca de tiempo.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -790,7 +820,7 @@
       <Item ItemId=";SignatureDebug_HashOidFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Signature hash OID found: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Se encontró un OID de hash de firma: {0}]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -802,8 +832,8 @@
       <Item ItemId=";SignatureFailureInvalidHashAlgorithmOid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package hash uses an unsupported hash algorithm.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[La firma principal usa un algoritmo hash no admitido.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El hash del paquete usa un algoritmo de hash no admitido.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The primary signature uses an unsupported hash algorithm.]]></Val>
@@ -841,8 +871,8 @@
       <Item ItemId=";SignaturePackageIntegrityFailure" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package integrity check failed.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Error al comprobar la integridad del paquete.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se pudo comprobar la integridad del paquete.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Package integrity check failed.]]></Val>
@@ -907,7 +937,7 @@
       <Item ItemId=";SignedPackageUnableToAccessSignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package was not opened correctly to perform signature operations. Please use a Stream-based constructor to have access to signature attributes of the package.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[El paquete no se abrió correctamente para realizar operaciones de firma. Use un constructor basado en secuencias para tener acceso a los atributos de firma del paquete.]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -919,12 +949,18 @@
       <Item ItemId=";SigningCertificateAttributeMustNotBePresent" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate attribute is not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se permite el atributo de certificado de firma.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateCertificateNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A certificate referenced by the signing-certificate attribute could not be found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se pudo encontrar un certificado al que hace referencia el atributo de certificado de firma.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -949,38 +985,53 @@
       <Item ItemId=";SigningCertificateInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate attribute is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El atributo de certificado de firma no es válido.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateMultipleAttributeValues" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Multiple signing-certificate attribute values are not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se permiten varios valores de atributo de certificado de firma.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateMultipleAttributes" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Multiple signing-certificate attributes are not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se permiten varios atributos de certificado de firma.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateV2AttributeMustBePresent" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute must be present.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El atributo de certificado de firma v2 debe estar presente.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateV2CertificateNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A certificate referenced by the signing-certificate-v2 attribute could not be found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se pudo encontrar un certificado al que hace referencia el atributo de certificado de firma v2.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateV2Invalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute is invalid.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[El valor del atributo signing-certificate-v2 no coincide con la cadena de certificados actual.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El atributo de certificado de firma v2 no es válido.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[signing-certificate-v2 attribute value does not match the current certificate chain.]]></Val>
@@ -991,18 +1042,27 @@
       <Item ItemId=";SigningCertificateV2MultipleAttributeValues" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Multiple signing-certificate-v2 attribute values are not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se permiten varios valores de atributo de certificado de firma v2.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateV2MultipleAttributes" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Multiple signing-certificate-v2 attributes are not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se permiten varios atributos de certificado de firma v2.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateV2UnsupportedHashAlgorithm" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute uses an unsupported hash algorithm.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El atributo de certificado de firma v2 usa un algoritmo hash no admitido.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1018,8 +1078,8 @@
       <Item ItemId=";TimestampCertificateChainBuildFailure" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp service's certificate chain could not be built: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[No se pudo compilar una cadena de certificados del servicio de marca de tiempo para el certificado siguiente: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se pudo compilar una cadena de certificados del servicio de marca de tiempo: {0}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The timestamp service's certificate chain could not be built for the following certificate: {0}]]></Val>
@@ -1030,6 +1090,9 @@
       <Item ItemId=";TimestampCertificateFailsPublicKeyLengthRequirement" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp certificate does not meet a minimum public key length requirement.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El certificado de marca de tiempo no cumple el requisito de longitud mínima de la clave pública.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1048,7 +1111,7 @@
       <Item ItemId=";TimestampFailureInvalidHttpScheme" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamper URL '{0}' has an invalid URI scheme. The supported schemes are '{1}' and '{2}'.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[La dirección URL del marcador de tiempo "{0}" tiene un esquema URI no válido. Los esquemas admitidos son "{1}" y "{2}".]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -1060,8 +1123,8 @@
       <Item ItemId=";TimestampFailureNonceMismatch" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp response is invalid.  Nonces did not match.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[La respuesta de la marca de tiempo no contiene una respuesta coincidente.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La respuesta de marca de tiempo no es válida. Los valores de seguridad (nonce) no coincidían.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Timestamp response does not contain a matching response.]]></Val>
@@ -1072,6 +1135,9 @@
       <Item ItemId=";TimestampIntegrityCheckFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp integrity check failed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se pudo comprobar la integridad de la marca de tiempo.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1087,7 +1153,7 @@
       <Item ItemId=";TimestampNoCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp signature does not have a signing certificate.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[La firma de la marca de tiempo no tenía un certificado de firma.]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -1126,6 +1192,9 @@
       <Item ItemId=";TimestampUnsupportedSignatureAlgorithm" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp certificate has an unsupported signature algorithm.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El certificado de marca de tiempo tiene un algoritmo de firma no admitido.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1168,6 +1237,9 @@
       <Item ItemId=";UnsupportedAsn1" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The ASN.1 data is unsupported.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Los datos ASN.1 no son compatibles.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1240,7 +1312,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4796]]></Val>
+        <Val><![CDATA[4.7.0.4807]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1276,7 +1348,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4796]]></Val>
+        <Val><![CDATA[4.7.0-preview1-4807]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>

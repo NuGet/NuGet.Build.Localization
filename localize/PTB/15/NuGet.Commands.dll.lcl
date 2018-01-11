@@ -229,33 +229,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";MissingSummaryDescription" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The Description text is long but the Summary text is empty. This means the Description text will be truncated in the 'Manage NuGet Packages' dialog.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O texto Description está longo, mas o texto Summary está em branco. Isto significa que o texto Description ficará truncado na caixa de diálogo 'Manage NuGet Packages'.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";MissingSummarySolution" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Provide a brief summary of the package in the Summary field.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Forneça um breve resumo do pacote no campo Summary.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";MissingSummaryTitle" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Consider providing Summary text.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Considere fornecer um texto de Summary.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";PlaceholderFileInPackageDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[An empty folder placeholder file '{0}' is in a non-empty folder and should be removed.]]></Val>
@@ -1003,15 +976,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Log_LoadedProject" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Loaded project {0} from {1}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Projeto {0} de {1} carregado.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Log_LockFileMissingLibraryForTargetLibrary" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} {1} is specified in the Lock File target for {2} but is not present in the top-level Libraries list.]]></Val>
@@ -1552,6 +1516,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";SignCommandCertificateFileNotFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Certificate file '{0}' not found. For a list of accepted ways to provide a certificate, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O arquivo de certificado '{0}' não foi encontrado. Para obter uma lista das maneiras aceitas para se fornecer um certificado, visite https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SignCommandCertificateStoreNotFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Certificate store '{0}' not found. For a list of accepted ways to provide a certificate, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O repositório de certificados '{0}' não foi encontrado. Para obter uma lista das maneiras aceitas para se fornecer um certificado, visite https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";SignCommandDialogMessage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Please select a valid certificate]]></Val>
@@ -1584,15 +1566,6 @@
           <Val><![CDATA[Timestamping package(s) with:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Aplicando carimbo de data/hora a pacotes com:]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandFileNotFound" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['{0}' file '{1}' not found. For a list of accepted ways to provide a certificate, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Arquivo '{1}' de '{0}' não encontrado. Para obter uma lista das maneiras aceitas para fornecer um certificado, visite https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1972,7 +1945,7 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0.2]]></Val>
+        <Val><![CDATA[4.7.0.1]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -2002,7 +1975,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0.4721]]></Val>
+        <Val><![CDATA[4.7.0.4807]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -2038,7 +2011,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.6.0-preview2-4721]]></Val>
+        <Val><![CDATA[4.7.0-preview1-4807]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
