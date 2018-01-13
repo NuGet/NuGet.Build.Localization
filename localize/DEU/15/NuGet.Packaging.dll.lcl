@@ -307,14 +307,29 @@
       <Item ItemId=";CertificateChainBuildFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A complete certificate chain could not be built for the signing certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Eine vollständige Zertifikatkette konnte für das Signaturzertifikat nicht erstellt werden.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CommitmentTypeIndicationAttributeInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[commitment-type-indication attribute contains an invalid value.]]></Val>
+          <Val><![CDATA[The attribute is not a valid commitment-type-indication attribute.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Das Attribut "commitment-type-indication" enthält einen ungültigen Wert.]]></Val>
+            <Val><![CDATA[Das Attribut ist kein gültiges commitment-type-indication-Attribut.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[commitment-type-indication attribute contains an invalid value.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";CommitmentTypeIndicationAttributeInvalidCombination" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The commitment-type-indication attribute contains an invalid combination of values.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das commitment-type-indication-Attribut enthält eine ungültige Kombination von Werten.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -343,8 +358,8 @@
       <Item ItemId=";ErrorCertificateHasLifetimeSignerEKU" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The lifetime signer EKU is not supported.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Zertifikate mit Lebensdauer-Signaturgeber-EKU werden nicht unterstützt.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Lebensdauer-Signaturgeber-EKU wird nicht unterstützt.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Certificates with lifetime signer EKU are not supported.]]></Val>
@@ -373,7 +388,7 @@
       <Item ItemId=";ErrorInvalidCertificateChain" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Certificate chain validation failed with error(s): {0}]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Fehler bei der Zertifikatkettenüberprüfung: {0}]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -448,7 +463,7 @@
       <Item ItemId=";ErrorNoCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The primary signature does not have a signing certificate.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die primäre Signatur umfasst kein Signaturzertifikat.]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -478,7 +493,7 @@
       <Item ItemId=";ErrorPackageNotSigned" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package is not signed.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Das Paket ist nicht signiert.]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -490,7 +505,7 @@
       <Item ItemId=";ErrorPackageSignatureInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature is invalid.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die Paketsignatur ist ungültig.]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -523,8 +538,8 @@
       <Item ItemId=";ErrorZip64NotSupported" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Signed Zip64 packages are not supported.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[ZIP64-signierte Pakete werden nicht unterstützt.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Signierte Zip64-Pakete werden nicht unterstützt.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[ZIP64 signed packages are not supported.]]></Val>
@@ -592,6 +607,9 @@
       <Item ItemId=";InvalidAsn1" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The ASN.1 data is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die ASN.1-Daten sind ungültig.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -643,18 +661,27 @@
       <Item ItemId=";InvalidPackageSignatureFileEntryCentralDirectoryHeader" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The central directory header field '{0}' has an invalid value ({1}).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das zentrale Verzeichnisheaderfeld "{0}" weist einen ungültigen Wert auf ({1}).]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";InvalidPackageSignatureFileEntryLocalFileHeader" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The local file header field '{0}' has an invalid value ({1}).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das lokale Dateiheaderfeld "{0}" weist einen ungültigen Wert auf ({1}).]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";InvalidPrimarySignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The primary signature is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die primäre Signatur ist ungültig.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -670,6 +697,9 @@
       <Item ItemId=";InvalidTimestampSignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp signature is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Zeitstempelsignatur ist ungültig.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -766,6 +796,9 @@
       <Item ItemId=";PrimarySignatureHasNoTimestamp" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The primary signature does not have a timestamp.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die primäre Signatur hat keinen Zeitstempel.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -790,7 +823,7 @@
       <Item ItemId=";SignatureDebug_HashOidFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Signature hash OID found: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Signaturhash-OID gefunden: {0}]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -802,8 +835,8 @@
       <Item ItemId=";SignatureFailureInvalidHashAlgorithmOid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package hash uses an unsupported hash algorithm.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Die primäre Signatur verwendet einen nicht unterstützten Hashalgorithmus.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Pakethash verwendet einen nicht unterstützten Hashalgorithmus.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The primary signature uses an unsupported hash algorithm.]]></Val>
@@ -829,6 +862,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";SignatureNotTimeValid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The primary signature validity period has expired.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";SignatureNotYetValid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing certificate is not yet valid.]]></Val>
@@ -841,7 +880,7 @@
       <Item ItemId=";SignaturePackageIntegrityFailure" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package integrity check failed.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Fehler bei der Paketintegritätsprüfung.]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -907,7 +946,7 @@
       <Item ItemId=";SignedPackageUnableToAccessSignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package was not opened correctly to perform signature operations. Please use a Stream-based constructor to have access to signature attributes of the package.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Das Paket wurde für die Durchführung von Signaturvorgängen nicht korrekt geöffnet. Verwenden Sie einen Stream-basierten Konstruktor, um Zugriff auf die Signaturattribute des Pakets zu erhalten.]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -919,12 +958,18 @@
       <Item ItemId=";SigningCertificateAttributeMustNotBePresent" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate attribute is not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Signaturzertifikatattribut ist nicht zulässig.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateCertificateNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A certificate referenced by the signing-certificate attribute could not be found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ein vom Signaturzertifikatattribut referenziertes Zertifikat wurde nicht gefunden.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -949,38 +994,53 @@
       <Item ItemId=";SigningCertificateInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate attribute is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Signaturzertifikatattribut ist ungültig.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateMultipleAttributeValues" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Multiple signing-certificate attribute values are not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Mehrere Signaturzertifikat-Attributwerte sind nicht zulässig.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateMultipleAttributes" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Multiple signing-certificate attributes are not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Mehrere Signaturzertifikatattribute sind nicht zulässig.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateV2AttributeMustBePresent" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute must be present.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das signing-certificate-v2-Attribut muss vorhanden sein.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateV2CertificateNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A certificate referenced by the signing-certificate-v2 attribute could not be found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ein vom signing-certificate-v2-Attribut referenziertes Zertifikat wurde nicht gefunden.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateV2Invalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute is invalid.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Der Wert des Attributs "signing-certificate-v2" entspricht nicht der aktuellen Zertifikatkette.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das signing-certificate-v2-Attribut ist ungültig.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[signing-certificate-v2 attribute value does not match the current certificate chain.]]></Val>
@@ -991,18 +1051,27 @@
       <Item ItemId=";SigningCertificateV2MultipleAttributeValues" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Multiple signing-certificate-v2 attribute values are not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Mehrere Werte sind für das signing-certificate-v2-Attribut nicht zulässig.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateV2MultipleAttributes" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Multiple signing-certificate-v2 attributes are not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Mehrere signing-certificate-v2-Attribute sind nicht zulässig.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateV2UnsupportedHashAlgorithm" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute uses an unsupported hash algorithm.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das signing-certificate-v2-Attribut verwendet einen nicht unterstützten Hashalgorithmus.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1018,8 +1087,8 @@
       <Item ItemId=";TimestampCertificateChainBuildFailure" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp service's certificate chain could not be built: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Die Zertifikatkette des Zeitstempeldiensts konnte für das folgende Zertifikat nicht erstellt werden: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Zertifikatkette des Zeitstempeldiensts konnte nicht erstellt werden: {0}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The timestamp service's certificate chain could not be built for the following certificate: {0}]]></Val>
@@ -1030,6 +1099,9 @@
       <Item ItemId=";TimestampCertificateFailsPublicKeyLengthRequirement" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp certificate does not meet a minimum public key length requirement.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Zeitstempelzertifikat erfüllt eine Mindestlängenanforderung für öffentliche Schlüssel nicht.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1048,7 +1120,7 @@
       <Item ItemId=";TimestampFailureInvalidHttpScheme" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamper URL '{0}' has an invalid URI scheme. The supported schemes are '{1}' and '{2}'.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die Zeitstempel-URL "{0}" weist ein ungültiges URI-Schema auf. Unterstützte Schemas sind "{1}" und "{2}".]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -1060,8 +1132,8 @@
       <Item ItemId=";TimestampFailureNonceMismatch" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp response is invalid.  Nonces did not match.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Die Zeitstempelantwort enthält keine passende Antwort.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Zeitstempelantwort ist ungültig. Nonces stimmten nicht überein.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Timestamp response does not contain a matching response.]]></Val>
@@ -1072,6 +1144,9 @@
       <Item ItemId=";TimestampIntegrityCheckFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp integrity check failed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Fehler bei der Zeitstempel-Integritätsprüfung.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1087,8 +1162,8 @@
       <Item ItemId=";TimestampNoCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp signature does not have a signing certificate.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Die Zeitstempelsignatur umfasst kein Signaturzertifikat.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Zeitstempelsignatur umfasste kein Signaturzertifikat.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The timestamp signature did not have a signing certificate.]]></Val>
@@ -1126,6 +1201,9 @@
       <Item ItemId=";TimestampUnsupportedSignatureAlgorithm" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp certificate has an unsupported signature algorithm.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Zeitstempelzertifikat weist einen nicht unterstützten Signaturalgorithmus auf.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1168,6 +1246,9 @@
       <Item ItemId=";UnsupportedAsn1" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The ASN.1 data is unsupported.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die ASN.1-Daten werden nicht unterstützt.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1240,7 +1321,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4796]]></Val>
+        <Val><![CDATA[4.7.0.4821]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1276,7 +1357,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4796]]></Val>
+        <Val><![CDATA[4.7.0-preview1-4821]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>

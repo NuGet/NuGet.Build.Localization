@@ -307,14 +307,29 @@
       <Item ItemId=";CertificateChainBuildFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A complete certificate chain could not be built for the signing certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[서명 인증서에 대해 전체 인증서 체인을 빌드할 수 없습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CommitmentTypeIndicationAttributeInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[commitment-type-indication attribute contains an invalid value.]]></Val>
+          <Val><![CDATA[The attribute is not a valid commitment-type-indication attribute.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[commitment-type-indication 특성에 잘못된 값이 있습니다.]]></Val>
+            <Val><![CDATA[해당 특성은 유효한 commitment-type-indication 특성이 아닙니다.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[commitment-type-indication attribute contains an invalid value.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";CommitmentTypeIndicationAttributeInvalidCombination" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The commitment-type-indication attribute contains an invalid combination of values.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[commitment-type-indication 특성에 잘못된 값 조합이 포함되어 있습니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -343,8 +358,8 @@
       <Item ItemId=";ErrorCertificateHasLifetimeSignerEKU" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The lifetime signer EKU is not supported.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[수명 서명자 EKU가 있는 인증서는 지원되지 않습니다.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[수명 서명자 EKU가 지원되지 않습니다.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Certificates with lifetime signer EKU are not supported.]]></Val>
@@ -373,8 +388,8 @@
       <Item ItemId=";ErrorInvalidCertificateChain" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Certificate chain validation failed with error(s): {0}]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[인증서 체인 유효성 검사에 실패하고 다음 오류가 발생했습니다. {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[다음 오류로 인해 인증서 체인 유효성 검사에 실패했습니다. {0}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Certificate chain validation failed with error: {0}]]></Val>
@@ -592,6 +607,9 @@
       <Item ItemId=";InvalidAsn1" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The ASN.1 data is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ASN.1 데이터가 잘못되었습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -661,6 +679,9 @@
       <Item ItemId=";InvalidPrimarySignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The primary signature is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[기본 서명이 잘못되었습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -676,6 +697,9 @@
       <Item ItemId=";InvalidTimestampSignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp signature is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[타임스탬프 서명이 잘못되었습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -772,6 +796,9 @@
       <Item ItemId=";PrimarySignatureHasNoTimestamp" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The primary signature does not have a timestamp.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[기본 서명에 타임스탬프가 없습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -832,6 +859,12 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[잘못된 범용 비트 플래그입니다. '{0}'이(가) 필요한데 '{1}'이(가) 있습니다.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SignatureNotTimeValid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The primary signature validity period has expired.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -925,12 +958,18 @@
       <Item ItemId=";SigningCertificateAttributeMustNotBePresent" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate attribute is not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[서명 인증서 특성을 사용할 수 없습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateCertificateNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A certificate referenced by the signing-certificate attribute could not be found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[서명 인증서 특성에 의해 참조되는 인증서를 찾을 수 없습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -955,38 +994,53 @@
       <Item ItemId=";SigningCertificateInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate attribute is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[서명 인증서 특성이 잘못되었습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateMultipleAttributeValues" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Multiple signing-certificate attribute values are not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[여러 개의 서명 인증서 특성 값은 사용할 수 없습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateMultipleAttributes" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Multiple signing-certificate attributes are not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[여러 개의 서명 인증서 특성은 사용할 수 없습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateV2AttributeMustBePresent" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute must be present.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[signing-certificate-v2 특성이 있어야 합니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateV2CertificateNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A certificate referenced by the signing-certificate-v2 attribute could not be found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[signing-certificate-v2 특성에 의해 참조되는 인증서를 찾을 수 없습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateV2Invalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute is invalid.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[signing-certificate-v2 특성 값이 현재 인증서 체인과 일치하지 않습니다.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[signing-certificate-v2 특성이 잘못되었습니다.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[signing-certificate-v2 attribute value does not match the current certificate chain.]]></Val>
@@ -997,18 +1051,27 @@
       <Item ItemId=";SigningCertificateV2MultipleAttributeValues" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Multiple signing-certificate-v2 attribute values are not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[여러 개의 signing-certificate-v2 특성 값은 사용할 수 없습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateV2MultipleAttributes" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Multiple signing-certificate-v2 attributes are not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[여러 개의 signing-certificate-v2 특성은 사용할 수 없습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SigningCertificateV2UnsupportedHashAlgorithm" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute uses an unsupported hash algorithm.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[signing-certificate-v2 특성은 지원되지 않는 해시 알고리즘을 사용합니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1024,8 +1087,8 @@
       <Item ItemId=";TimestampCertificateChainBuildFailure" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp service's certificate chain could not be built: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[다음 인증서에 대한 타임스탬프 서비스의 인증서 체인을 빌드할 수 없습니다. {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[타임스탬프 서비스의 인증서 체인을 빌드할 수 없습니다. {0}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The timestamp service's certificate chain could not be built for the following certificate: {0}]]></Val>
@@ -1036,6 +1099,9 @@
       <Item ItemId=";TimestampCertificateFailsPublicKeyLengthRequirement" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp certificate does not meet a minimum public key length requirement.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[타임스탬프 인증서는 공개 키 길이에 대한 최소 요구 사항을 충족하지 않습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1180,6 +1246,9 @@
       <Item ItemId=";UnsupportedAsn1" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The ASN.1 data is unsupported.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ASN.1 데이터는 지원되지 않습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1252,7 +1321,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4796]]></Val>
+        <Val><![CDATA[4.7.0.4821]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1288,7 +1357,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4796]]></Val>
+        <Val><![CDATA[4.7.0-preview1-4821]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
