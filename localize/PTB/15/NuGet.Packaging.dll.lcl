@@ -316,8 +316,20 @@
       <Item ItemId=";CommitmentTypeIndicationAttributeInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The attribute is not a valid commitment-type-indication attribute.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[O atributo commitment-type-indication contém um valor inválido.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O atributo commitment-type-indication não é válido.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[commitment-type-indication attribute contains an invalid value.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";CommitmentTypeIndicationAttributeInvalidCombination" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The commitment-type-indication attribute contains an invalid combination of values.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O atributo commitment-type-indication contém uma combinação inválida de valores.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[commitment-type-indication attribute contains an invalid value.]]></Val>
@@ -490,7 +502,7 @@
       <Item ItemId=";ErrorPackageNotSigned" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package is not signed.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[O pacote não está assinado.]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -658,18 +670,27 @@
       <Item ItemId=";InvalidPackageSignatureFileEntryCentralDirectoryHeader" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The central directory header field '{0}' has an invalid value ({1}).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O campo do cabeçalho do diretório central '{0}' tem um valor inválido ({1}).]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";InvalidPackageSignatureFileEntryLocalFileHeader" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The local file header field '{0}' has an invalid value ({1}).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O campo do cabeçalho do arquivo local '{0}' tem um valor inválido ({1}).]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";InvalidPrimarySignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The primary signature is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A assinatura principal é inválida.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -850,6 +871,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";SignatureNotTimeValid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The primary signature validity period has expired.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";SignatureNotYetValid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing certificate is not yet valid.]]></Val>
@@ -862,7 +889,7 @@
       <Item ItemId=";SignaturePackageIntegrityFailure" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package integrity check failed.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Falha na verificação de integridade do pacote.]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -928,8 +955,8 @@
       <Item ItemId=";SignedPackageUnableToAccessSignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package was not opened correctly to perform signature operations. Please use a Stream-based constructor to have access to signature attributes of the package.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[O pacote não foi aberto corretamente para executar operações de assinatura. Use um construtor com base em fluxo para ter acesso aos atributos de assinatura do pacote.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O pacote não foi aberto corretamente para executar operações de assinatura. Use um construtor baseado em fluxo para ter acesso aos atributos da assinatura do pacote.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The package was not opened correctly to perform Signature operations. Please use a Stream based constructor to have access to Signature attributes of the package.]]></Val>
@@ -985,6 +1012,9 @@
       <Item ItemId=";SigningCertificateMultipleAttributeValues" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Multiple signing-certificate attribute values are not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Vários valores do atributo signing-certificate não são permitidos.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1300,7 +1330,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4807]]></Val>
+        <Val><![CDATA[4.7.0.4821]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1336,7 +1366,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4807]]></Val>
+        <Val><![CDATA[4.7.0-preview1-4821]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
