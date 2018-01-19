@@ -355,15 +355,9 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";ErrorCertificateHasLifetimeSignerEKU" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";ErrorCertificateHasLifetimeSigningEKU" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The lifetime signer EKU is not supported.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[不支持生存期签名 EKU。]]></Val>
-          </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Certificates with lifetime signer EKU are not supported.]]></Val>
-          </Prev>
+          <Val><![CDATA[The lifetime signing EKU is not supported.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1021,6 +1015,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";SigningCertificateV1OrV2AttributeMustBePresent" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Either the signing-certificate or signing-certificate-v2 attribute must be present.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[必须存在 signing-certificate 或 signing-certificate-v2 属性。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";SigningCertificateV2AttributeMustBePresent" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute must be present.]]></Val>
@@ -1324,7 +1327,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4821]]></Val>
+        <Val><![CDATA[4.7.0.4833]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1360,7 +1363,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4821]]></Val>
+        <Val><![CDATA[4.7.0-preview1-4833]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>

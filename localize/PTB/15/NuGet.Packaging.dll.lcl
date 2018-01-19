@@ -340,18 +340,6 @@
       <Item ItemId=";CommitmentTypeIndicationAttributeInvalidCombination" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The commitment-type-indication attribute contains an invalid combination of values.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O atributo commitment-type-indication contém uma combinação inválida de valores.]]></Val>
-          </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[commitment-type-indication attribute contains an invalid value.]]></Val>
-          </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";CommitmentTypeIndicationAttributeInvalidCombination" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The commitment-type-indication attribute contains an invalid combination of values.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -376,15 +364,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";ErrorCertificateHasLifetimeSignerEKU" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";ErrorCertificateHasLifetimeSigningEKU" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The lifetime signer EKU is not supported.]]></Val>
+          <Val><![CDATA[The lifetime signing EKU is not supported.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O EKU signatário de tempo de vida não é compatível.]]></Val>
+            <Val><![CDATA[O EKU de assinatura de tempo de vida não é compatível.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Certificates with lifetime signer EKU are not supported.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1042,6 +1027,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";SigningCertificateV1OrV2AttributeMustBePresent" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Either the signing-certificate or signing-certificate-v2 attribute must be present.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O atributo signing-certificate ou signing-certificate-v2 deve estar presente.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";SigningCertificateV2AttributeMustBePresent" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute must be present.]]></Val>
@@ -1345,7 +1339,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4821]]></Val>
+        <Val><![CDATA[4.7.0.4833]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1381,7 +1375,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4821]]></Val>
+        <Val><![CDATA[4.7.0-preview1-4833]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
