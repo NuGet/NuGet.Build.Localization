@@ -315,12 +315,12 @@
       </Item>
       <Item ItemId=";CommitmentTypeIndicationAttributeInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The attribute is not a valid commitment-type-indication attribute.]]></Val>
+          <Val><![CDATA[The commitment-type-indication attribute is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Das Attribut ist kein gültiges commitment-type-indication-Attribut.]]></Val>
+            <Val><![CDATA[Das Attribut "commitment-type-indication" ist ungültig.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[commitment-type-indication attribute contains an invalid value.]]></Val>
+            <Val><![CDATA[The attribute is not a valid commitment-type-indication attribute.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -331,15 +331,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Das commitment-type-indication-Attribut enthält eine ungültige Kombination von Werten.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[commitment-type-indication attribute contains an invalid value.]]></Val>
-          </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";CommitmentTypeIndicationAttributeInvalidCombination" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The commitment-type-indication attribute contains an invalid combination of values.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -367,6 +358,9 @@
       <Item ItemId=";ErrorCertificateHasLifetimeSigningEKU" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The lifetime signing EKU is not supported.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Lebensdauersignatur-EKU wird nicht unterstützt.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -729,6 +723,15 @@
           <Val><![CDATA[Nuspec file does not exist in package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die Nuspec-Datei ist im Paket nicht vorhanden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";MultipleAttributeInstanceFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Multiple instances of attribute '{0}' were found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Es wurden mehrere Instanzen des Attributs "{0}" gefunden.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1336,7 +1339,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4833]]></Val>
+        <Val><![CDATA[4.7.0.4853]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1372,7 +1375,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4833]]></Val>
+        <Val><![CDATA[4.7.0-preview1-4853]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>

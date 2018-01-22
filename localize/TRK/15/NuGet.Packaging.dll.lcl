@@ -315,12 +315,12 @@
       </Item>
       <Item ItemId=";CommitmentTypeIndicationAttributeInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The attribute is not a valid commitment-type-indication attribute.]]></Val>
+          <Val><![CDATA[The commitment-type-indication attribute is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Özellik, geçerli bir taahhüt türü göstergesi özniteliği değil.]]></Val>
+            <Val><![CDATA[Taahhüt türü göstergesi özniteliği geçersiz.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[commitment-type-indication attribute contains an invalid value.]]></Val>
+            <Val><![CDATA[The attribute is not a valid commitment-type-indication attribute.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -723,6 +723,15 @@
           <Val><![CDATA[Nuspec file does not exist in package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Nuspec dosyası pakette yok.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";MultipleAttributeInstanceFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Multiple instances of attribute '{0}' were found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' özniteliğinin birden çok örneği bulundu.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1330,7 +1339,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4833]]></Val>
+        <Val><![CDATA[4.7.0.4853]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1366,7 +1375,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4833]]></Val>
+        <Val><![CDATA[4.7.0-preview1-4853]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>

@@ -315,12 +315,12 @@
       </Item>
       <Item ItemId=";CommitmentTypeIndicationAttributeInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The attribute is not a valid commitment-type-indication attribute.]]></Val>
+          <Val><![CDATA[The commitment-type-indication attribute is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Атрибут не является допустимым атрибутом commitment-type-indication.]]></Val>
+            <Val><![CDATA[Недопустимый атрибут commitment-type-indication.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[commitment-type-indication attribute contains an invalid value.]]></Val>
+            <Val><![CDATA[The attribute is not a valid commitment-type-indication attribute.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -331,27 +331,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Атрибут commitment-type-indication содержит недопустимое сочетание значений.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[commitment-type-indication attribute contains an invalid value.]]></Val>
-          </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";CommitmentTypeIndicationAttributeInvalidCombination" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The commitment-type-indication attribute contains an invalid combination of values.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Атрибут commitment-type-indication содержит недопустимое сочетание значений.]]></Val>
-          </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[commitment-type-indication attribute contains an invalid value.]]></Val>
-          </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";CommitmentTypeIndicationAttributeInvalidCombination" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The commitment-type-indication attribute contains an invalid combination of values.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -379,6 +358,9 @@
       <Item ItemId=";ErrorCertificateHasLifetimeSigningEKU" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The lifetime signing EKU is not supported.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Расширенное использование ключа с подписыванием на время существования не поддерживается.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -741,6 +723,15 @@
           <Val><![CDATA[Nuspec file does not exist in package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[В пакете нет Nuspec-файла.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";MultipleAttributeInstanceFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Multiple instances of attribute '{0}' were found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Обнаружено множество экземпляров атрибута "{0}".]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1351,7 +1342,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4833]]></Val>
+        <Val><![CDATA[4.7.0.4853]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1387,7 +1378,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4833]]></Val>
+        <Val><![CDATA[4.7.0-preview1-4853]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
