@@ -478,6 +478,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_InvalidProjectPackageCombo" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid project-package combination for {0} {1}. DotnetToolReference project style can only contain references of the DotnetTool type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} {1} のプロジェクト パケージの組み合わせが無効です。DotnetToolReference プロジェクト形式には、DotnetTool タイプの参照のみ含めることができます。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_InvalidTargetFramework" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Failed to build package because of an unsupported targetFramework value on '{0}'.]]></Val>
@@ -564,6 +573,24 @@
           <Val><![CDATA[Unable to find project '{0}'. Check that the project reference is valid and that the project file exists.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[プロジェクト '{0}' が見つかりません。プロジェクト参照が有効であり、プロジェクト ファイルが存在することを確認してください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_ProjectWithIncorrectDependenciesCount" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Project {0} must have a single package reference(s).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プロジェクト{0} には 1 つのパッケージ参照が必要です。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_ToolsPackageWithExtraPackageTypes" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid tools package {0} {1}. Tools packages cannot contain more than one PackageType.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[無効なツール パッケージ {0} {1} です。ツール パッケージに複数の PackageType を含めることはできません。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -976,15 +1003,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Log_LoadedProject" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Loaded project {0} from {1}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[プロジェクト {0} を {1} から読み込みました。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Log_LockFileMissingLibraryForTargetLibrary" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} {1} is specified in the Lock File target for {2} but is not present in the top-level Libraries list.]]></Val>
@@ -1305,6 +1323,15 @@
           <Val><![CDATA[No-Op restore. The cache will not be updated. Path: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[復元を行いません。キャッシュは更新されません。パス: {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Log_SkippingCompatibiilityCheckOnRidlessGraphForDotnetToolReferenceProject" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Skipping compatibility checks of the ridless graph for DotnetToolReference project type. This graph is not used. ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[DotnetToolReference プロジェクトの種類に対する ridless グラフの互換性チェックをスキップしています。このグラフは使用されません。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1984,7 +2011,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4796]]></Val>
+        <Val><![CDATA[4.7.0.4858]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -2020,7 +2047,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4796]]></Val>
+        <Val><![CDATA[4.7.0-preview1-4858]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
