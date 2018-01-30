@@ -253,8 +253,8 @@
       <Item ItemId=";CertUtilityCertificateHash" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} hash: {1}]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Skrót SHA1: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Skrót dla {0}: {1}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[SHA1 hash: {0}]]></Val>
@@ -341,7 +341,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The commitment-type-indication attribute contains an invalid combination of values.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Atrybut commitment-type-indication zawiera nieprawidłową kombinację wartości.]]></Val>
+            <Val><![CDATA[Atrybut commitment-type-indication jest nieprawidłowy.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -568,6 +568,9 @@
       <Item ItemId=";Error_NoMatchingCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No certificate matching the provided {0} fingerprint(s) was found in the signature.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[W sygnaturze nie znaleziono żadnych certyfikatów zgodnych z dostarczonymi odciskami palców ({0}).]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>

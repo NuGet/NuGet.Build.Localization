@@ -253,8 +253,8 @@
       <Item ItemId=";CertUtilityCertificateHash" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} hash: {1}]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[SHA1 雜湊: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} 雜湊: {1}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[SHA1 hash: {0}]]></Val>
@@ -341,7 +341,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The commitment-type-indication attribute contains an invalid combination of values.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[commitment-type-indication 屬性包含無效的值組合。]]></Val>
+            <Val><![CDATA[commitment-type-indication 屬性無效。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -568,6 +568,9 @@
       <Item ItemId=";Error_NoMatchingCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No certificate matching the provided {0} fingerprint(s) was found in the signature.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[在簽章中找不到任何符合所提供之 {0} 個指紋的憑證。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
