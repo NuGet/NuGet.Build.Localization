@@ -565,6 +565,18 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ExactlyOneAttributeRequired" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Exactly one {0} attribute is required.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ExactlyOneAttributeValueRequired" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The {0} attribute must have exactly one attribute value.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";FailToLoadPackagesConfig" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Fail to load packages.config as XML file. Please check it. ]]></Val>
@@ -597,6 +609,15 @@
           <Val><![CDATA[Unable to find fallback package folder '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Nepovedlo se najít náhradní složku balíčku {0}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidArgument" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The argument is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Argument je neplatný.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -700,6 +721,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";InvalidUrl" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The URL value is invalid.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_InstallingPackage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Installing {0} {1}.]]></Val>
@@ -727,12 +754,9 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";MultipleAttributeInstanceFound" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";MultipleAttributesDisallowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Multiple instances of attribute '{0}' were found.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Našlo se několik instancí atributu {0}.]]></Val>
-          </Tgt>
+          <Val><![CDATA[Multiple {0} attributes are not allowed.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -751,6 +775,30 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[{0} musí obsahovat absolutní cestu {1}.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetPackageOwnersInvalid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The nuget-package-owners attribute is invalid.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetPackageOwnersInvalidValue" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[One or more package owner values are invalid.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetV3ServiceIndexUrlInvalid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The nuget-v3-service-index-url attribute is invalid.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetV3ServiceIndexUrlInvalidValue" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The nuget-v3-service-index-url attribute value is invalid.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1009,38 +1057,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SigningCertificateMultipleAttributeValues" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Multiple signing-certificate attribute values are not allowed.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Více než jedna hodnota atributu podpisového certifikátu se nepovoluje.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SigningCertificateMultipleAttributes" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Multiple signing-certificate attributes are not allowed.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Více než jeden atribut podpisového certifikátu se nepovoluje.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";SigningCertificateV1OrV2AttributeMustBePresent" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Either the signing-certificate or signing-certificate-v2 attribute must be present.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Musí být k dispozici jeden z atributů signing-certificate a signing-certificate-v2.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SigningCertificateV2AttributeMustBePresent" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The signing-certificate-v2 attribute must be present.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Musí se zadat atribut signing-certificate-v2.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1066,21 +1087,9 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SigningCertificateV2MultipleAttributeValues" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";SigningCertificateV2NotExactlyOneAttributeValue" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Multiple signing-certificate-v2 attribute values are not allowed.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Více než jedna hodnota atributu signing-certificate-v2 se nepovoluje.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SigningCertificateV2MultipleAttributes" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Multiple signing-certificate-v2 attributes are not allowed.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Více než jeden atribut signing-certificate-v2 se nepovoluje.]]></Val>
-          </Tgt>
+          <Val><![CDATA[The signing-certificate-v2 attribute does not have exactly one attribute value.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1339,7 +1348,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4853]]></Val>
+        <Val><![CDATA[4.7.0.4858]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1375,7 +1384,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4853]]></Val>
+        <Val><![CDATA[4.7.0-preview1-4858]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
