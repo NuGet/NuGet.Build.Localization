@@ -208,7 +208,7 @@
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" Disp="true" LocTbl="false" />
-      <Item ItemId=";Argument_InvalidOidValue" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Argument_InvalidOidValue" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The OID value was invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -217,7 +217,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Cryptography_Der_Invalid_Encoding" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Cryptography_Der_Invalid_Encoding" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[ASN1 corrupted data.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -226,7 +226,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Cryptography_Invalid_IA5String" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Cryptography_Invalid_IA5String" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The string contains a character not in the 7 bit ASCII character set.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -262,7 +262,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";CertUtilityCertificateHashSha1" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";CertUtilityCertificateHashSha1" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[SHA1 hash: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -325,7 +325,16 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";CommitmentTypeIndicationAttributeInvalid" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";CertificateChainValidationFailed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Certificate chain validation failed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Fehler beim Überprüfen der Zertifikatkette.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";CommitmentTypeIndicationAttributeInvalid" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The commitment-type-indication attribute is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -337,7 +346,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";CommitmentTypeIndicationAttributeInvalidCombination" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";CommitmentTypeIndicationAttributeInvalidCombination" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The commitment-type-indication attribute contains an invalid combination of values.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -367,7 +376,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";ErrorCertificateHasLifetimeSigningEKU" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";ErrorCertificateHasLifetimeSigningEKU" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The lifetime signing EKU is not supported.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -544,7 +553,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";ErrorZip64NotSupported" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";ErrorZip64NotSupported" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Signed Zip64 packages are not supported.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -649,7 +658,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";InvalidAsn1" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";InvalidAsn1" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The ASN.1 data is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -748,7 +757,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";InvalidUrl" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";InvalidUrl" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The URL value is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -811,7 +820,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";NuGetPackageOwnersInvalid" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";NuGetPackageOwnersInvalid" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The nuget-package-owners attribute is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -829,7 +838,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";NuGetV3ServiceIndexUrlInvalid" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";NuGetV3ServiceIndexUrlInvalid" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The nuget-v3-service-index-url attribute is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -838,7 +847,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";NuGetV3ServiceIndexUrlInvalidValue" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";NuGetV3ServiceIndexUrlInvalidValue" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The nuget-v3-service-index-url attribute value is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -919,7 +928,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SignatureDebug_HashOidFound" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";SignatureDebug_HashOidFound" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Signature hash OID found: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -1057,7 +1066,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SigningCertificateAttributeMustNotBePresent" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";SigningCertificateAttributeMustNotBePresent" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate attribute is not allowed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -1066,7 +1075,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SigningCertificateCertificateNotFound" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";SigningCertificateCertificateNotFound" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A certificate referenced by the signing-certificate attribute could not be found.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -1093,7 +1102,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SigningCertificateInvalid" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";SigningCertificateInvalid" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate attribute is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -1102,7 +1111,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SigningCertificateV1OrV2AttributeMustBePresent" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";SigningCertificateV1OrV2AttributeMustBePresent" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Either the signing-certificate or signing-certificate-v2 attribute must be present.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -1111,7 +1120,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SigningCertificateV2CertificateNotFound" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";SigningCertificateV2CertificateNotFound" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A certificate referenced by the signing-certificate-v2 attribute could not be found.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -1120,7 +1129,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SigningCertificateV2Invalid" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";SigningCertificateV2Invalid" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -1132,7 +1141,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SigningCertificateV2NotExactlyOneAttributeValue" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";SigningCertificateV2NotExactlyOneAttributeValue" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute does not have exactly one attribute value.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -1141,7 +1150,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SigningCertificateV2UnsupportedHashAlgorithm" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";SigningCertificateV2UnsupportedHashAlgorithm" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute uses an unsupported hash algorithm.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -1156,18 +1165,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Das Zeichenfolgenargument "{0}" darf nicht NULL oder leer sein.]]></Val>
           </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TimestampCertificateChainBuildFailure" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The timestamp service's certificate chain could not be built: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Zertifikatkette des Zeitstempeldiensts konnte nicht erstellt werden: {0}]]></Val>
-          </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The timestamp service's certificate chain could not be built for the following certificate: {0}]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1192,7 +1189,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";TimestampFailureInvalidHttpScheme" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";TimestampFailureInvalidHttpScheme" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamper URL '{0}' has an invalid URI scheme. The supported schemes are '{1}' and '{2}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -1318,7 +1315,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";UnsupportedAsn1" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";UnsupportedAsn1" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The ASN.1 data is unsupported.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -1385,7 +1382,7 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId=";FileDescription" ItemType="0" PsrId="211" Leaf="true">
+    <Item ItemId=";FileDescription" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[NuGet.Packaging]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -1396,7 +1393,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4875]]></Val>
+        <Val><![CDATA[4.7.0.4903]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1421,7 +1418,7 @@
       </Str>
       <Disp Icon="Str" />
     </Item>
-    <Item ItemId=";ProductName" ItemType="0" PsrId="211" Leaf="true">
+    <Item ItemId=";ProductName" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[NuGet]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -1432,7 +1429,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4875]]></Val>
+        <Val><![CDATA[4.7.0-preview1-4903]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
