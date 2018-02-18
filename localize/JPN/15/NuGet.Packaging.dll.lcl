@@ -204,6 +204,129 @@
       </Item>
     </Item>
   </Item>
+  <Item ItemId=";NuGet.Packaging.Rules.AnalysisResources.resources" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId=";AssemblyDirectlyUnderLibWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The assembly '{0}' is placed directly under 'lib' folder. It is recommended that assemblies be placed inside a framework-specific folder. Move it into a framework-specific folder.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[アセンブリ '{0}' は 'lib' フォルダーのすぐ下に置かれています。アセンブリをフレームワーク固有のフォルダー内に置くことをお勧めします。アセンブリをフレームワーク固有のフォルダー内に移動してください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";AssemblyOutsideLibWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The assembly '{0}' is not inside the 'lib' folder and hence it won't be added as a reference when the package is installed into a project. Move it into the 'lib' folder if it needs to be referenced.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[アセンブリ '{0}' が 'lib' フォルダー内にないため、パッケージがプロジェクトにインストールされるときに参照として追加することができません。参照する必要がある場合は、'lib' フォルダー内に移動してください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";DefaultSpecValueWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The value "{0}" for {1} is a sample value and should be removed. Replace it with an appropriate value or remove it and rebuild your package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ {1} の値 " {0}" はシンプル値であるため、削除する必要があります。適切な値に置き換えるか、削除してからパッケージをリビルドしてください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidFrameworkWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The folder '{0}' under 'lib' is not recognized as a valid framework name or a supported culture identifier. Rename it to a valid framework name or culture identifier.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['lib' の下のフォルダー '{0}' は有効なフレームワーク名またはサポートされているカルチャ識別子として認識されません。有効なフレームワーク名またはカルチャ識別子になるようにフォルダー名を変更してください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidPrereleaseDependencyWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A stable release of a package should not have a prerelease dependency. Either modify the version spec of dependency "{0}" or update the version field in the nuspec.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[パッケージの安定版リリースにリリース前の依存関係を含めることはできません。依存関係 " {0}" のバージョン指定を変更するか、nuspec でバージョン フィールドを更新してください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";LegacyVersionWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package version '{0}' uses SemVer 2.0.0 or components of SemVer 1.0.0 that are not supported on legacy clients. Change the package version to a SemVer 1.0.0 string. If the version contains a release label it must start with a letter. This message can be ignored if the package is not intended for older clients.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[パッケージ バージョン '{0}' は SemVer 2.0.0、またはレガシ クライアントをサポートしていない SemVer 1.0.0 のコンポーネントを使用しています。パッケージ バージョンを SemVer 1.0.0 文字列に変更してください。バージョンにリリース ラベルが含まれる場合、先頭を文字で始める必要があります。パッケージが古いクライアントを対象としていない場合には、このメッセージは無視してかまいません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";MisplacedInitScriptWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The file '{0}' will be ignored by NuGet because it is not directly under 'tools' folder. Place the file directly under 'tools' folder.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ファイル '{0}' は 'tools' フォルダーの直下にないため、NuGet により無視されます。ファイルを 'tools' フォルダーの直下に配置してください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";MisplacedTransformFileWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The transform file '{0}' is outside the 'content' folder and hence will not be transformed during installation of this package. Move it into the 'content' folder.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[変換ファイル '{0}' は、'content' フォルダー外にあるため、このパッケージのインストール中に変換されません。'content' フォルダー内に移動してください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PlaceholderFileInPackageWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[An empty folder placeholder file '{0}' is in a non-empty folder and should be removed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[空のフォルダーのプレースホルダー ファイル '{0}' は空でないフォルダー内にあるため、削除する必要があります。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ScriptOutsideToolsWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The script file '{0}' is outside the 'tools' folder and hence will not be executed during installation of this package. Move it into the 'tools' folder.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[スクリプト ファイル '{0}' は、'tools' フォルダー外にあるため、このパッケージのインストール中に実行されません。'tools' フォルダー内に移動してください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnrecognizedScriptWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The script file '{0}' is not recognized by NuGet and hence will not be executed during installation of this package. Rename it to install.ps1, uninstall.ps1 or init.ps1 and place it directly under 'tools'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[スクリプト ファイル '{0}' は、NuGet によって認識されないため、このパッケージのインストール中に実行されません。ファイルの名前を install.ps1、uninstall.ps1、または init.ps1 に変更して、'tools' の直下に配置してください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnspecifiedDependencyVersionWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The version of dependency '{0}' is not specified. Specify the version of dependency and rebuild your package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[依存関係 '{0}' のバージョンが指定されていません。依存関係のバージョンを指定して、パッケージをリビルドしてください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";WinRTObsoleteWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The file at '{0}' uses the obsolete 'WinRT' as the framework folder. Replace 'WinRT' or 'WinRT45' with 'NetCore45'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' のファイルはフレームワーク フォルダーとして古い形式の 'WinRT' を使用しています。'WinRT' または 'WinRT45' を 'NetCore45' で置き換えてください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+    </Item>
+  </Item>
   <Item ItemId=";NuGet.Packaging.Signing.DerEncoding.SR.resources" ItemType="0" PsrId="211" Leaf="false">
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
@@ -329,7 +452,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Certificate chain validation failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[証明書チェーンの検証に失敗しました。]]></Val>
+            <Val><![CDATA[証明書チェーンを検証できませんでした。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -350,7 +473,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The commitment-type-indication attribute contains an invalid combination of values.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[commitment-type-indication 属性に無効な値の組み合わせが含まれています。]]></Val>
+            <Val><![CDATA[commitment-type-indication 属性には、無効な値の組み合わせが含まれています。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -380,7 +503,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The lifetime signing EKU is not supported.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[ライフタイム署名の EKU はサポートされていません。]]></Val>
+            <Val><![CDATA[ライフタイム署名 EKU はサポートされていません。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -482,7 +605,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The primary signature does not have a signing certificate.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[プライマリ署名に署名証明書がありません。]]></Val>
+            <Val><![CDATA[プライマリ署名には、署名証明書がありません。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The primary signature did not have a signing certificate.]]></Val>
@@ -587,7 +710,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature contains multiple primary signatures.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[パッケージの署名に複数のプライマリ署名が含まれています。]]></Val>
+            <Val><![CDATA[パッケージの署名には、複数のプライマリ署名が含まれています。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[SignedCms does not have one primary signature.]]></Val>
@@ -598,12 +721,18 @@
       <Item ItemId=";Error_NotOneRepositoryCounterSignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature contains multiple repository countersignatures.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[パッケージの署名には、リポジトリの副署名が複数含まれています。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_RepositorySignatureShouldNotHaveARepositoryCountersignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A repository primary signature should not have a repository countersignatures.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[リポジトリのプライマリ署名はリポジトリの副署名を持つことができません。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -611,7 +740,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Exactly one {0} attribute is required.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} 属性は 1 つだけ必要です。]]></Val>
+            <Val><![CDATA[1 つの {0} 属性が必要です。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -620,7 +749,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The {0} attribute must have exactly one attribute value.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} 属性には属性値が 1 つだけ必要です。]]></Val>
+            <Val><![CDATA[{0} 属性には 1 つの属性値が必要です。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -754,6 +883,9 @@
       <Item ItemId=";InvalidRepositoryCounterSignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The repository countersignature is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[リポジトリの副署名が無効です。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -841,6 +973,9 @@
       <Item ItemId=";NuGetPackageOwners" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[nuget-package-owners: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[nuget-package-owners: {0}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -865,6 +1000,9 @@
       <Item ItemId=";NuGetV3ServiceIndexUrl" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[nuget-v3-service-index-url: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[nuget-v3-service-index-url: {0}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1127,7 +1265,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The signing certificate has an unsupported signature algorithm.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[署名証明書に、サポートされていない署名アルゴリズムがあります。]]></Val>
+            <Val><![CDATA[署名証明書には、サポートされていない署名アルゴリズムがあります。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1184,7 +1322,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute uses an unsupported hash algorithm.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[signing-certificate-v2 属性が、サポートされていないハッシュ アルゴリズムを使用しています。]]></Val>
+            <Val><![CDATA[signing-certificate-v2 属性は、サポートされていないハッシュ アルゴリズムを使用します。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1265,7 +1403,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The timestamp's message imprint uses an unsupported hash algorithm.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[タイムスタンプのメッセージ インプリントでは、サポートされていないハッシュ アルゴリズムが使用されます。]]></Val>
+            <Val><![CDATA[タイムスタンプのメッセージ インプリントでは、サポートされていないハッシュ アルゴリズムを使用します。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1274,7 +1412,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The timestamp signature does not have a signing certificate.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[タイムスタンプの署名に署名証明書がありません。]]></Val>
+            <Val><![CDATA[タイムスタンプの署名には、署名証明書がありませんでした。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The timestamp signature did not have a signing certificate.]]></Val>
@@ -1313,7 +1451,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The timestamp certificate has an unsupported signature algorithm.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[タイムスタンプ証明書に、サポートされていない署名アルゴリズムがあります。]]></Val>
+            <Val><![CDATA[タイムスタンプ証明書には、サポートされていない署名アルゴリズムがあります。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1429,7 +1567,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4924]]></Val>
+        <Val><![CDATA[4.7.0.4948]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1462,7 +1600,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4924]]></Val>
+        <Val><![CDATA[4.7.0-preview1.4948+f399fefacef3d4cc769a1580e812e1045d1d3b3e]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
