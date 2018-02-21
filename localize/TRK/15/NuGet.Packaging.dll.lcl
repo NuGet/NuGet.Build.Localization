@@ -204,6 +204,129 @@
       </Item>
     </Item>
   </Item>
+  <Item ItemId=";NuGet.Packaging.Rules.AnalysisResources.resources" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId=";AssemblyDirectlyUnderLibWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The assembly '{0}' is placed directly under 'lib' folder. It is recommended that assemblies be placed inside a framework-specific folder. Move it into a framework-specific folder.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' bütünleştirilmiş kodu doğrudan 'lib' klasörünün altına yerleştirilmiş. Bütünleştirilmiş kodların çerçeveye özel bir klasöre yerleştirilmesi önerilir. Bütünleştirilmiş kodu çerçeveye özel bir klasöre taşıyın.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";AssemblyOutsideLibWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The assembly '{0}' is not inside the 'lib' folder and hence it won't be added as a reference when the package is installed into a project. Move it into the 'lib' folder if it needs to be referenced.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' bütünleştirilmiş kodu 'lib' klasörünün içinde olmadığından paket bir projeye yüklendiğinde başvuru olarak eklenmeyecek. Başvuru olarak kullanılması gerekiyorsa bütünleştirilmiş kodu 'lib' klasörüne taşıyın.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";DefaultSpecValueWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The value "{0}" for {1} is a sample value and should be removed. Replace it with an appropriate value or remove it and rebuild your package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{1} için "{0}" değeri örnek bir değerdir ve kaldırılmalıdır. Uygun bir değerle değiştirin veya kaldırıp paketinizi yeniden derleyin.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidFrameworkWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The folder '{0}' under 'lib' is not recognized as a valid framework name or a supported culture identifier. Rename it to a valid framework name or culture identifier.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['lib' altındaki '{0}' klasörü geçerli bir çerçeve adı veya desteklenen bir kültür tanımlayıcısı olarak tanınmıyor. Geçerli bir çerçeve adı veya kültür tanımlayıcısı olarak yeniden adlandırın.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidPrereleaseDependencyWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A stable release of a package should not have a prerelease dependency. Either modify the version spec of dependency "{0}" or update the version field in the nuspec.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Bir paketin kararlı bir yayınının yayın öncesi bağımlılıkları olmamalıdır. "{0}" bağımlılığının sürüm belirtimini değiştirin veya nuspec'te sürüm alanını güncelleştirin.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";LegacyVersionWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package version '{0}' uses SemVer 2.0.0 or components of SemVer 1.0.0 that are not supported on legacy clients. Change the package version to a SemVer 1.0.0 string. If the version contains a release label it must start with a letter. This message can be ignored if the package is not intended for older clients.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' paket sürümü eski istemcilerde desteklenmeyen SemVer 2.0.0 sürümünü veya SemVer 1.0.0 bileşenlerini kullanıyor. Paket sürümünü bir SemVer 1.0.0 dizesi olarak değiştirin. Sürüm bir yayın etiketi içeriyorsa bir harfle başlamalıdır. Paket eski istemcilere yönelik değilse bu iletiyi yoksayabilirsiniz.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";MisplacedInitScriptWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The file '{0}' will be ignored by NuGet because it is not directly under 'tools' folder. Place the file directly under 'tools' folder.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Doğrudan 'tools' klasörü altında olmadığından '{0}' dosyası NuGet tarafından yoksayılır. Dosyayı doğrudan 'tools' klasörünün altına yerleştirin.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";MisplacedTransformFileWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The transform file '{0}' is outside the 'content' folder and hence will not be transformed during installation of this package. Move it into the 'content' folder.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' dönüşüm dosyası 'content' klasörünün dışında olduğundan bu paketin yüklenmesi sırasında dönüştürülmeyecek. Dosyayı 'content' klasörüne taşıyın.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PlaceholderFileInPackageWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[An empty folder placeholder file '{0}' is in a non-empty folder and should be removed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Boş klasör yer tutucu dosyası '{0}', boş olmayan bir klasörde ve kaldırılması gerekiyor.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ScriptOutsideToolsWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The script file '{0}' is outside the 'tools' folder and hence will not be executed during installation of this package. Move it into the 'tools' folder.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' betik dosyası 'tools' klasörünün dışında olduğundan bu paketin yüklenmesi sırasında yürütülmeyecek. Dosyayı 'tools' klasörüne taşıyın.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnrecognizedScriptWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The script file '{0}' is not recognized by NuGet and hence will not be executed during installation of this package. Rename it to install.ps1, uninstall.ps1 or init.ps1 and place it directly under 'tools'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' betik dosyası NuGet tarafından tanınmıyor ve bu paketin yüklenmesi sırasında yürütülmeyecek. Dosyayı install.ps1, uninstall.ps1 veya init.ps1 olarak yeniden adlandırın ve doğrudan 'tools' klasörünün altına yerleştirin.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnspecifiedDependencyVersionWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The version of dependency '{0}' is not specified. Specify the version of dependency and rebuild your package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' bağımlılığının sürümü belirtilmemiş. Bağımlılık sürümünü belirtip paketinizi yeniden derleyin.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";WinRTObsoleteWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The file at '{0}' uses the obsolete 'WinRT' as the framework folder. Replace 'WinRT' or 'WinRT45' with 'NetCore45'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' konumundaki dosya, çerçeve klasörü olarak eski 'WinRT' sürümünü kullanıyor. 'WinRT' veya 'WinRT45' değerini 'NetCore45' ile değiştirin.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+    </Item>
+  </Item>
   <Item ItemId=";NuGet.Packaging.Signing.DerEncoding.SR.resources" ItemType="0" PsrId="211" Leaf="false">
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
@@ -329,7 +452,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Certificate chain validation failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Sertifika zinciri doğrulaması başarısız oldu.]]></Val>
+            <Val><![CDATA[Sertifika zinciri doğrulanamadı.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -338,7 +461,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The commitment-type-indication attribute is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Taahhüt türü göstergesi özniteliği geçersiz.]]></Val>
+            <Val><![CDATA[commitment-type-indication özniteliği geçersiz.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The attribute is not a valid commitment-type-indication attribute.]]></Val>
@@ -350,7 +473,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The commitment-type-indication attribute contains an invalid combination of values.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Taahhüt tipi gösterge özniteliği geçersiz değer kombinasyonu içeriyor.]]></Val>
+            <Val><![CDATA[commitment-type-indication özniteliği geçersiz bir değer bileşimi içeriyor.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -599,7 +722,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature contains multiple repository countersignatures.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Paket imzası birden çok depo onay imzası içerir.]]></Val>
+            <Val><![CDATA[Paket imzası birden çok depo onay imzası içeriyor.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -608,7 +731,7 @@
         <Str Cat="Text">
           <Val><![CDATA[A repository primary signature should not have a repository countersignatures.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Depo birincil imzası bir depo onay imzası içermemelidir.]]></Val>
+            <Val><![CDATA[Depo birincil imzasında depo onay imzaları olmamalıdır.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1124,7 +1247,7 @@
         <Str Cat="Text">
           <Val><![CDATA[A certificate referenced by the signing-certificate attribute could not be found.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[İmzalama sertifikası özniteliği tarafından başvurulan bir sertifika bulunamadı.]]></Val>
+            <Val><![CDATA[signing-certificate özniteliği tarafından başvurulan bir sertifika bulunamadı.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1160,7 +1283,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Either the signing-certificate or signing-certificate-v2 attribute must be present.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[İmzalama sertifikası veya imzalama sertifikası-v2 özniteliği mevcut olmalıdır.]]></Val>
+            <Val><![CDATA[signing-certificate veya signing-certificate-v2 özniteliği mevcut olmalıdır.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1178,7 +1301,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[İmzalama-sertifika-v2 özniteliği geçersiz.]]></Val>
+            <Val><![CDATA[signing-certificate-v2 özniteliği geçersiz.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[signing-certificate-v2 attribute value does not match the current certificate chain.]]></Val>
@@ -1280,7 +1403,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The timestamp's message imprint uses an unsupported hash algorithm.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zaman damgası ileti mührü desteklenmeyen bir karma algoritma kullanır.]]></Val>
+            <Val><![CDATA[Zaman damgasının ileti baskısı desteklenmeyen bir karma algoritması kullanıyor.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1444,7 +1567,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4924]]></Val>
+        <Val><![CDATA[4.7.0.4950]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1477,7 +1600,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4924]]></Val>
+        <Val><![CDATA[4.7.0-preview1.4950+dde7f1939f5c212f7db9b8e8576cf10414f6c1c3]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
