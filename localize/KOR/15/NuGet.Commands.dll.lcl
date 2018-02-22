@@ -124,6 +124,9 @@
       <Item ItemId=";Error_InvalidDependencyVersionConstraints" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package version constraints for '{0}' return a version range that is empty.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}'에 대한 패키지 버전 제약 조건이 비어 있는 버전 범위를 반환합니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1576,8 +1579,8 @@
       <Item ItemId=";Warning_SemanticVersion" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Version "{0}" does not follow semantic versioning guidelines. Update your nuspec file or use the AssemblyInformationalVersion assembly attribute to specify a semantic version as described at http://semver.org.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA["{0}" 버전이 유의적 버전 지침을 따르지 않습니다.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA["{0}" 버전이 유의적 버전 지침을 따르지 않습니다. http://semver.org에 설명된 대로 nuspec 파일을 업데이트하거나 AssemblyInformationalVersion 어셈블리 특성을 사용하여 유의적 버전을 지정하세요.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Version "{0}" does not follow semantic versioning guidelines.]]></Val>
