@@ -204,6 +204,129 @@
       </Item>
     </Item>
   </Item>
+  <Item ItemId=";NuGet.Packaging.Rules.AnalysisResources.resources" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId=";AssemblyDirectlyUnderLibWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The assembly '{0}' is placed directly under 'lib' folder. It is recommended that assemblies be placed inside a framework-specific folder. Move it into a framework-specific folder.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[L'assembly '{0}' si trova direttamente nella cartella 'lib'. Si consiglia di inserire gli assembly all'interno di una cartella specifica per i framework. Spostarlo in una cartella specifica per i framework.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";AssemblyOutsideLibWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The assembly '{0}' is not inside the 'lib' folder and hence it won't be added as a reference when the package is installed into a project. Move it into the 'lib' folder if it needs to be referenced.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[L'assembly '{0}' non si trova all'interno della cartella 'lib'. Non verrà pertanto aggiunto come riferimento quando il pacchetto viene installato in un progetto. Spostarlo nella cartella 'lib' se deve essere aggiunto come riferimento.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";DefaultSpecValueWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The value "{0}" for {1} is a sample value and should be removed. Replace it with an appropriate value or remove it and rebuild your package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Il valore "{0}" per {1} è un valore di esempio e deve essere rimosso. Sostituirlo con un valore appropriato oppure rimuoverlo e ricompilare il pacchetto.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidFrameworkWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The folder '{0}' under 'lib' is not recognized as a valid framework name or a supported culture identifier. Rename it to a valid framework name or culture identifier.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La cartella '{0}' in 'lib' non è riconosciuta come nome di framework valido o come identificatore delle impostazioni cultura supportato. Rinominarlo in un nome di framework o un identificatore delle impostazioni cultura valido.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidPrereleaseDependencyWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A stable release of a package should not have a prerelease dependency. Either modify the version spec of dependency "{0}" or update the version field in the nuspec.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Una versione stabile di un pacchetto non deve includere una dipendenza della versione preliminare. Modificare la specifica di versione della dipendenza "{0}" oppure aggiornare il campo della versione nel file nuspec.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";LegacyVersionWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package version '{0}' uses SemVer 2.0.0 or components of SemVer 1.0.0 that are not supported on legacy clients. Change the package version to a SemVer 1.0.0 string. If the version contains a release label it must start with a letter. This message can be ignored if the package is not intended for older clients.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La versione '{0}' del pacchetto usa SemVer 2.0.0 o componenti SemVer 1.0.0 non supportati nei client legacy. Modificare la versione del pacchetto e impostarla su una stringa SemVer 1.0.0. Se la versione contiene un'etichetta di versione, deve iniziare con una lettera. Se il pacchetto non è destinato ai client precedenti, ignorare questo messaggio.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";MisplacedInitScriptWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The file '{0}' will be ignored by NuGet because it is not directly under 'tools' folder. Place the file directly under 'tools' folder.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Il file '{0}' verrà ignorato da NuGet perché non si trova direttamente nella cartella 'tools'. Inserire il file direttamente nella cartella 'tools'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";MisplacedTransformFileWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The transform file '{0}' is outside the 'content' folder and hence will not be transformed during installation of this package. Move it into the 'content' folder.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Il file di trasformazione '{0}' si trova fuori dalla cartella 'content' e non verrà pertanto trasformato durante l'installazione di questo pacchetto. Spostarlo nella cartella 'content'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PlaceholderFileInPackageWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[An empty folder placeholder file '{0}' is in a non-empty folder and should be removed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Un file segnaposto '{0}' di cartella vuota si trova in una cartella non vuota e deve essere rimosso.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ScriptOutsideToolsWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The script file '{0}' is outside the 'tools' folder and hence will not be executed during installation of this package. Move it into the 'tools' folder.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Il file di script '{0}' si trova fuori dalla cartella 'tools' e non verrà pertanto eseguito durante l'installazione di questo pacchetto. Spostarlo nella cartella 'tools'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnrecognizedScriptWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The script file '{0}' is not recognized by NuGet and hence will not be executed during installation of this package. Rename it to install.ps1, uninstall.ps1 or init.ps1 and place it directly under 'tools'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Il file di script '{0}' non è riconosciuto da NuGet e non verrà pertanto eseguito durante l'installazione di questo pacchetto. Rinominarlo come install.ps1, uninstall.ps1 o init.ps1 e inserirlo direttamente in 'tools'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnspecifiedDependencyVersionWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The version of dependency '{0}' is not specified. Specify the version of dependency and rebuild your package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La versione della dipendenza '{0}' non è specificata. Specificare la versione della dipendenza e ricompilare il pacchetto.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";WinRTObsoleteWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The file at '{0}' uses the obsolete 'WinRT' as the framework folder. Replace 'WinRT' or 'WinRT45' with 'NetCore45'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Il file in '{0}' usa il nome 'WinRT' obsoleto come cartella per framework. Sostituire 'WinRT' o 'WinRT45' con 'NetCore45'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+    </Item>
+  </Item>
   <Item ItemId=";NuGet.Packaging.Signing.DerEncoding.SR.resources" ItemType="0" PsrId="211" Leaf="false">
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
@@ -380,7 +503,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The lifetime signing EKU is not supported.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[L'utilizzo chiavi avanzato Firma definitiva non è supportato.]]></Val>
+            <Val><![CDATA[L'EKU Firma definitiva non è supportato.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -557,7 +680,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Signed Zip64 packages are not supported.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[I pacchetti ZIP64 firmati non sono supportati.]]></Val>
+            <Val><![CDATA[I pacchetti Zip64 firmati non sono supportati.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[ZIP64 signed packages are not supported.]]></Val>
@@ -608,7 +731,7 @@
         <Str Cat="Text">
           <Val><![CDATA[A repository primary signature should not have a repository countersignatures.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Una firma primaria del repository non deve avere controfirme del repository.]]></Val>
+            <Val><![CDATA[Una firma primaria del repository non deve contenere controfirme del repository.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -671,7 +794,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The argument is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Argomento non valido.]]></Val>
+            <Val><![CDATA[L'argomento non è valido.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -977,7 +1100,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Signature hash OID found: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Identificatore di oggetto hash della firma trovato: {0}]]></Val>
+            <Val><![CDATA[L'OID dell'hash della firma è stato trovato: {0}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Signature hash oid found: {0}]]></Val>
@@ -1280,7 +1403,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The timestamp's message imprint uses an unsupported hash algorithm.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[L'impressione del messaggio del timestamp usa un algoritmo hash non supportato.]]></Val>
+            <Val><![CDATA[L'imprint messaggio del timestamp usa un algoritmo hash non supportato.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1444,7 +1567,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4924]]></Val>
+        <Val><![CDATA[4.7.0.4950]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1477,7 +1600,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4924]]></Val>
+        <Val><![CDATA[4.7.0-preview1.4950+dde7f1939f5c212f7db9b8e8576cf10414f6c1c3]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
