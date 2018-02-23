@@ -212,7 +212,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The assembly '{0}' is placed directly under 'lib' folder. It is recommended that assemblies be placed inside a framework-specific folder. Move it into a framework-specific folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' derlemesi doğrudan 'lib' klasörünün altına yerleştirilmiş. Derlemelerin çerçeveye özel bir klasöre yerleştirilmesi önerilir. Derlemeyi çerçeveye özel bir klasöre taşıyın.]]></Val>
+            <Val><![CDATA['{0}' bütünleştirilmiş kodu doğrudan 'lib' klasörünün altına yerleştirilmiş. Bütünleştirilmiş kodların çerçeveye özel bir klasöre yerleştirilmesi önerilir. Bütünleştirilmiş kodu çerçeveye özel bir klasöre taşıyın.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -221,7 +221,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The assembly '{0}' is not inside the 'lib' folder and hence it won't be added as a reference when the package is installed into a project. Move it into the 'lib' folder if it needs to be referenced.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' derlemesi 'lib' klasöründe olmadığından, paket bir projeye yüklendiğinde başvuru olarak eklenmez. Başvurulması gerekiyorsa, 'lib' klasörüne taşıyın.]]></Val>
+            <Val><![CDATA['{0}' bütünleştirilmiş kodu 'lib' klasörünün içinde olmadığından paket bir projeye yüklendiğinde başvuru olarak eklenmeyecek. Başvuru olarak kullanılması gerekiyorsa bütünleştirilmiş kodu 'lib' klasörüne taşıyın.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -230,7 +230,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The value "{0}" for {1} is a sample value and should be removed. Replace it with an appropriate value or remove it and rebuild your package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{1} için "{0}" değeri örnek bir değerdir ve kaldırılmalıdır. Bunu uygun bir değerle değiştirin veya kaldırarak paketinizi yeniden derleyin.]]></Val>
+            <Val><![CDATA[{1} için "{0}" değeri örnek bir değerdir ve kaldırılmalıdır. Uygun bir değerle değiştirin veya kaldırıp paketinizi yeniden derleyin.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -239,7 +239,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The folder '{0}' under 'lib' is not recognized as a valid framework name or a supported culture identifier. Rename it to a valid framework name or culture identifier.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['lib' altındaki '{0}' klasörü, geçerli bir çerçeve adı olarak tanınmıyor veya desteklenen bir kültür tanımlayıcısı değil. Klasör adını geçerli bir çerçeve adı veya kültür tanımlayıcısı olarak değiştirin.]]></Val>
+            <Val><![CDATA['lib' altındaki '{0}' klasörü geçerli bir çerçeve adı veya desteklenen bir kültür tanımlayıcısı olarak tanınmıyor. Geçerli bir çerçeve adı veya kültür tanımlayıcısı olarak yeniden adlandırın.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -248,7 +248,7 @@
         <Str Cat="Text">
           <Val><![CDATA[A stable release of a package should not have a prerelease dependency. Either modify the version spec of dependency "{0}" or update the version field in the nuspec.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Kararlı bir paket sürümünde, yayın öncesi sürüm bağımlılığı bulunmamalıdır. "{0}" bağımlılığının sürüm belirtimini değiştirin veya nuspec dosyasında version alanını güncelleştirin.]]></Val>
+            <Val><![CDATA[Bir paketin kararlı bir yayınının yayın öncesi bağımlılıkları olmamalıdır. "{0}" bağımlılığının sürüm belirtimini değiştirin veya nuspec'te sürüm alanını güncelleştirin.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -257,7 +257,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package version '{0}' uses SemVer 2.0.0 or components of SemVer 1.0.0 that are not supported on legacy clients. Change the package version to a SemVer 1.0.0 string. If the version contains a release label it must start with a letter. This message can be ignored if the package is not intended for older clients.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' paket sürümü, SemVer 2.0.0 sürümünü veya SemVer 1.0.0 sürümünün eski istemcilerde desteklenmeyen bileşenlerini kullanıyor. Paket sürümünü SemVer 1.0.0 dizesi olarak değiştirin. Sürüm bir yayın etiketi içeriyorsa, etiket bir harfle başlamalıdır. Paket eski istemcilere yönelik değilse bu ileti yoksayılabilir.]]></Val>
+            <Val><![CDATA['{0}' paket sürümü eski istemcilerde desteklenmeyen SemVer 2.0.0 sürümünü veya SemVer 1.0.0 bileşenlerini kullanıyor. Paket sürümünü bir SemVer 1.0.0 dizesi olarak değiştirin. Sürüm bir yayın etiketi içeriyorsa bir harfle başlamalıdır. Paket eski istemcilere yönelik değilse bu iletiyi yoksayabilirsiniz.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -266,7 +266,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The file '{0}' will be ignored by NuGet because it is not directly under 'tools' folder. Place the file directly under 'tools' folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Doğrudan 'tools' klasörü altında olmadığı için '{0}' dosyası NuGet tarafından yoksayılır. Dosyayı doğrudan 'tools' klasörünün altına yerleştirin.]]></Val>
+            <Val><![CDATA[Doğrudan 'tools' klasörü altında olmadığından '{0}' dosyası NuGet tarafından yoksayılır. Dosyayı doğrudan 'tools' klasörünün altına yerleştirin.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -275,7 +275,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The transform file '{0}' is outside the 'content' folder and hence will not be transformed during installation of this package. Move it into the 'content' folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Dönüşüm dosyası '{0}' 'content' klasörünün dışında, bu nedenle bu paketin yüklenmesi sırasında dönüştürülmeyecek. Dosyayı 'content' klasörüne taşıyın.]]></Val>
+            <Val><![CDATA['{0}' dönüşüm dosyası 'content' klasörünün dışında olduğundan bu paketin yüklenmesi sırasında dönüştürülmeyecek. Dosyayı 'content' klasörüne taşıyın.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -293,7 +293,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The script file '{0}' is outside the 'tools' folder and hence will not be executed during installation of this package. Move it into the 'tools' folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Komut dosyası '{0}' 'tools' klasörünün dışında ve bu nedenle bu paketin yüklenmesi sırasında çalıştırılmayacak. Dosyayı 'tools' klasörüne taşıyın.]]></Val>
+            <Val><![CDATA['{0}' betik dosyası 'tools' klasörünün dışında olduğundan bu paketin yüklenmesi sırasında yürütülmeyecek. Dosyayı 'tools' klasörüne taşıyın.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -302,7 +302,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The script file '{0}' is not recognized by NuGet and hence will not be executed during installation of this package. Rename it to install.ps1, uninstall.ps1 or init.ps1 and place it directly under 'tools'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' betik dosyası NuGet tarafından tanınmıyor ve bu nedenle bu paketin yüklenmesi sırasında çalıştırılmayacak. Dosyanın adını install.ps1, uninstall.ps1 veya init.ps1 olarak değiştirin ve doğrudan 'tools' altına yerleştirin.]]></Val>
+            <Val><![CDATA['{0}' betik dosyası NuGet tarafından tanınmıyor ve bu paketin yüklenmesi sırasında yürütülmeyecek. Dosyayı install.ps1, uninstall.ps1 veya init.ps1 olarak yeniden adlandırın ve doğrudan 'tools' klasörünün altına yerleştirin.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -311,7 +311,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The version of dependency '{0}' is not specified. Specify the version of dependency and rebuild your package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' bağımlılığının sürümü belirtilmemiş. Bağımlılığın sürümünü belirtip paketinizi yeniden derleyin.]]></Val>
+            <Val><![CDATA['{0}' bağımlılığının sürümü belirtilmemiş. Bağımlılık sürümünü belirtip paketinizi yeniden derleyin.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -320,7 +320,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The file at '{0}' uses the obsolete 'WinRT' as the framework folder. Replace 'WinRT' or 'WinRT45' with 'NetCore45'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' konumundaki dosya, çerçeve klasörü olarak geçersiz 'WinRT' klasörünü kullanıyor. 'WinRT' veya 'WinRT45' öğesini 'NetCore45' ile değiştirin.]]></Val>
+            <Val><![CDATA['{0}' konumundaki dosya, çerçeve klasörü olarak eski 'WinRT' sürümünü kullanıyor. 'WinRT' veya 'WinRT45' değerini 'NetCore45' ile değiştirin.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -974,7 +974,7 @@
         <Str Cat="Text">
           <Val><![CDATA[nuget-package-owners: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[nuget-paket-sahipler: {0}]]></Val>
+            <Val><![CDATA[nuget-package-owners: {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1001,7 +1001,7 @@
         <Str Cat="Text">
           <Val><![CDATA[nuget-v3-service-index-url: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[nuget-v3-hizmet-dizin-url: {0}]]></Val>
+            <Val><![CDATA[nuget-v3-service-index-url: {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
