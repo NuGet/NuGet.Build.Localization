@@ -221,7 +221,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The assembly '{0}' is not inside the 'lib' folder and hence it won't be added as a reference when the package is installed into a project. Move it into the 'lib' folder if it needs to be referenced.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zestaw „{0}” nie znajduje się w folderze „lib”, dlatego nie zostanie dodany jako odwołanie podczas instalowania pakietu w projekcie. Jeśli do tego zestawu ma być utworzone odwołanie, przenieś go do folderu „lib”.]]></Val>
+            <Val><![CDATA[Zestaw „{0}” nie znajduje się w folderze „lib” i dlatego nie zostanie dodany jako odwołanie podczas instalacji pakietu w projekcie. Przenieś go do folderu „lib”, jeśli konieczne jest tworzenie do niego odwołania.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -239,7 +239,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The folder '{0}' under 'lib' is not recognized as a valid framework name or a supported culture identifier. Rename it to a valid framework name or culture identifier.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nazwa folderu „{0}” w folderze „lib” nie jest rozpoznawana jako prawidłowa nazwa struktury ani obsługiwany identyfikator kultury. Zmień nazwę na prawidłową nazwę struktury lub obsługiwany identyfikator kultury.]]></Val>
+            <Val><![CDATA[Nazwa folderu „{0}” w folderze „lib” nie jest rozpoznawana jako prawidłowa nazwa platformy ani obsługiwany identyfikator kultury. Zmień tę nazwę na prawidłową nazwę platformy lub identyfikator kultury.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -248,7 +248,7 @@
         <Str Cat="Text">
           <Val><![CDATA[A stable release of a package should not have a prerelease dependency. Either modify the version spec of dependency "{0}" or update the version field in the nuspec.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Stabilna wersja pakietu nie może zawierać zależności wersji wstępnej. Zmodyfikuj specyfikację wersji zależności „{0}” lub zaktualizuj pole wersji w pliku nuspec.]]></Val>
+            <Val><![CDATA[Stabilna wersja pakietu nie może zawierać zależności wersji wstępnej. Zmodyfikuj specyfikację wersji zależności „{0}” lub zaktualizuj pole wersji w pakiecie nuspec.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -275,7 +275,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The transform file '{0}' is outside the 'content' folder and hence will not be transformed during installation of this package. Move it into the 'content' folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Plik przekształcenia „{0}” znajduje się poza folderem „content”, dlatego nie zostanie on przekształcony podczas instalacji tego pakietu. Przenieś ten plik do folderu „content”.]]></Val>
+            <Val><![CDATA[Plik przekształcenia „{0}” znajduje się poza folderem „content”, dlatego nie zostanie on przekształcony podczas instalacji tego pakietu. Przenieś go do folderu „content”.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -293,7 +293,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The script file '{0}' is outside the 'tools' folder and hence will not be executed during installation of this package. Move it into the 'tools' folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Plik skryptu „{0}” znajduje się poza folderem „tools”, dlatego nie zostanie on wykonany podczas instalacji tego pakietu. Przenieś ten plik do folderu „tools”.]]></Val>
+            <Val><![CDATA[Plik skryptu „{0}” znajduje się poza folderem „tools”, dlatego nie zostanie on wykonany podczas instalacji tego pakietu. Przenieś go do folderu „tools”.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -320,7 +320,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The file at '{0}' uses the obsolete 'WinRT' as the framework folder. Replace 'WinRT' or 'WinRT45' with 'NetCore45'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Plik w lokalizacji „{0}” używa jako folderu struktury przestarzałego folderu „WinRT”. Zastąp nazwę „WinRT” lub „WinRT45” nazwą „NetCore45”.]]></Val>
+            <Val><![CDATA[Plik w lokalizacji „{0}” używa jako folderu platformy przestarzałego folderu „WinRT”. Zastąp nazwę „WinRT” lub „WinRT45” nazwą „NetCore45”.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -708,12 +708,12 @@
       </Item>
       <Item ItemId=";Error_NotOnePrimarySignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package signature contains multiple primary signatures.]]></Val>
+          <Val><![CDATA[The package signature file does not contain exactly one primary signature.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Podpis pakietu zawiera wiele podpisów podstawowych.]]></Val>
+            <Val><![CDATA[Plik podpisu pakietu nie zawiera dokładnie jednego podpis podstawowego.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[SignedCms does not have one primary signature.]]></Val>
+            <Val><![CDATA[The package signature contains multiple primary signatures.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -844,6 +844,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";InvalidPackageSignatureFile" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package contains an invalid package signature file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Pakiet zawiera nieprawidłowy plik podpisu pakietu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";InvalidPackageSignatureFileEntry" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature file entry is invalid.]]></Val>
@@ -961,11 +970,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";MultiplePackageSignatureFiles" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package contains multiple package signature files.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Pakiet zawiera wiele plików podpisu pakietu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";MustContainAbsolutePath" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' must contain an absolute path '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Element „{0}” musi zawierać ścieżkę bezwzględną „{1}”.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NoPackageSignatureFile" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package does not contain a valid package signature file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Pakiet nie zawiera prawidłowego pliku podpisu pakietu.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1231,6 +1258,15 @@
           <Prev Cat="Text">
             <Val><![CDATA[The package was not opened correctly to perform Signature operations. Please use a Stream based constructor to have access to Signature attributes of the package.]]></Val>
           </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SigningCannotBeDoneInPlace" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} and {1} should be different. Package signing cannot be done in place.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Wartości {0} i {1} powinny być różne. Nie można wykonać podpisywania pakietu na miejscu.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1567,7 +1603,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4953]]></Val>
+        <Val><![CDATA[4.7.0.4977]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1600,7 +1636,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1.4953+e2fb49fed454bcdd48c53efcb40ba26a50be761e]]></Val>
+        <Val><![CDATA[4.7.0-preview1.4977+6d1f613b65cf759ab1f5737903df37065167cde5]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>

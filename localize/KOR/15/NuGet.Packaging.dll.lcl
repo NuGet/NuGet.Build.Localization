@@ -221,7 +221,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The assembly '{0}' is not inside the 'lib' folder and hence it won't be added as a reference when the package is installed into a project. Move it into the 'lib' folder if it needs to be referenced.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' 어셈블리는 'lib' 폴더 내에 없으므로 패키지를 프로젝트에 설치할 때 참조로 추가되지 않습니다. 이 어셈블리를 참조해야 하는 경우 'lib' 폴더로 이동하세요.]]></Val>
+            <Val><![CDATA['{0}' 어셈블리는 'lib' 폴더 안에 없으므로 패키지를 프로젝트에 설치할 때 참조로 추가되지 않습니다. 참조해야 하는 경우 'lib' 폴더로 이동하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -230,7 +230,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The value "{0}" for {1} is a sample value and should be removed. Replace it with an appropriate value or remove it and rebuild your package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{1}에 대한 "{0}" 값은 샘플 값이며 제거해야 합니다. 적절한 값으로 바꾸거나 제거하고 패키지를 다시 빌드하세요.]]></Val>
+            <Val><![CDATA[{1}에 대한 값 "{0}"은(는) 샘플 값이며 제거할 수 없습니다. 적절한 값으로 바꾸거나 제거하고 패키지를 다시 빌드하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -239,7 +239,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The folder '{0}' under 'lib' is not recognized as a valid framework name or a supported culture identifier. Rename it to a valid framework name or culture identifier.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['lib' 아래의 '{0}' 폴더는 유효한 프레임워크 이름 또는 지원되는 문화권 식별자로 인식되지 않습니다. 유효한 프레임워크 이름 또는 문화권 식별자로 이름을 바꾸세요.]]></Val>
+            <Val><![CDATA['lib' 아래의 '{0}' 폴더가 유효한 프레임워크 이름 또는 지원되는 문화권 식별자로 인식되지 않습니다. 유효한 프레임워크 이름 또는 문화권 식별자로 이름을 변경하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -248,7 +248,7 @@
         <Str Cat="Text">
           <Val><![CDATA[A stable release of a package should not have a prerelease dependency. Either modify the version spec of dependency "{0}" or update the version field in the nuspec.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[안정적인 패키지 릴리스에는 시험판 종속성이 있으면 안 됩니다. 종속성 "{0}"의 버전 사양을 수정하거나 nuspec의 버전 필드를 업데이트하세요.]]></Val>
+            <Val><![CDATA[안정판 패키지에는 시험판 종속성이 없어야 합니다. 종속성 "{0}"의 버전 사양을 수정하거나 nuspec의 버전 필드를 업데이트하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -257,7 +257,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package version '{0}' uses SemVer 2.0.0 or components of SemVer 1.0.0 that are not supported on legacy clients. Change the package version to a SemVer 1.0.0 string. If the version contains a release label it must start with a letter. This message can be ignored if the package is not intended for older clients.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[패키지 버전 '{0}'은(는) SemVer 2.0.0 또는 레거시 클라이언트에서 지원되지 않는 SemVer 1.0.0의 구성 요소를 사용합니다. 릴리스 레이블이 포함된 버전은 문자로 시작해야 합니다. 패키지 버전을 SemVer 1.0.0 문자열로 변경하세요. 이전 클라이언트용 패키지가 아닌 경우에는 이 메시지를 무시해도 됩니다.]]></Val>
+            <Val><![CDATA[패키지 버전 '{0}'은(는) SemVer 2.0.0 또는 레거시 클라이언트에서 지원되지 않는 SemVer 1.0.0의 구성 요소를 사용합니다. 패키지 버전을 SemVer 1.0.0 문자열로 변경하세요. 버전에 릴리스 레이블이 포함되는 경우 문자로 시작해야 합니다. 이전 클라이언트용 패키지가 아닌 경우에는 이 메시지를 무시해도 됩니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -266,7 +266,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The file '{0}' will be ignored by NuGet because it is not directly under 'tools' folder. Place the file directly under 'tools' folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' 파일은 'tools' 폴더 바로 아래에 있지 않으므로 NuGet에 의해 무시됩니다. 파일을 'tools' 폴더 바로 아래에 배치하세요.]]></Val>
+            <Val><![CDATA['{0}' 파일은 'tools' 폴더 바로 아래에 있지 않으므로 NuGet에 의해 무시됩니다. 'tools' 폴더 바로 아래에 파일을 두세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -275,7 +275,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The transform file '{0}' is outside the 'content' folder and hence will not be transformed during installation of this package. Move it into the 'content' folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[변환 파일 '{0}'은(는) 'content' 폴더 안에 없으므로 이 패키지를 설치하는 동안 변환되지 않습니다. 'content' 폴더로 이동하세요.]]></Val>
+            <Val><![CDATA['{0}' 변환 파일은 'content' 폴더 안에 없으므로 이 패키지를 설치하는 동안 변환되지 않습니다. 'content' 폴더로 이동하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -293,7 +293,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The script file '{0}' is outside the 'tools' folder and hence will not be executed during installation of this package. Move it into the 'tools' folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[스크립트 파일 '{0}'은(는) 'tools' 폴더 안에 없으므로 이 패키지를 설치하는 동안 실행되지 않습니다. 'tools' 폴더로 이동하세요.]]></Val>
+            <Val><![CDATA['{0}' 스크립트 파일은 'tools' 폴더 안에 없으므로 이 패키지를 설치하는 동안 실행되지 않습니다. 'tools' 폴더로 이동하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -302,7 +302,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The script file '{0}' is not recognized by NuGet and hence will not be executed during installation of this package. Rename it to install.ps1, uninstall.ps1 or init.ps1 and place it directly under 'tools'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[스크립트 파일 '{0}'은(는) NuGet에서 인식되지 않으므로 이 패키지를 설치하는 동안 실행되지 않습니다. 파일을 install.ps1, uninstall.ps1 또는 init.ps1으로 이름을 바꾸고 'tools' 바로 아래에 배치하세요.]]></Val>
+            <Val><![CDATA['{0}' 스크립트 파일은 NuGet에서 인식되지 않으므로 이 패키지를 설치하는 동안 실행되지 않습니다. install.ps1, uninstall.ps1 또는 init.ps1로 이름을 바꾸고 'tools' 바로 아래에 두세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -311,7 +311,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The version of dependency '{0}' is not specified. Specify the version of dependency and rebuild your package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' 종속성에 대한 버전이 지정되지 않았습니다. 종속성 버전을 지정하고 패키지를 다시 빌드하세요.]]></Val>
+            <Val><![CDATA['{0}' 종속성의 버전을 지정하지 않았습니다. 종속성의 버전을 지정하고 패키지를 다시 빌드하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -320,7 +320,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The file at '{0}' uses the obsolete 'WinRT' as the framework folder. Replace 'WinRT' or 'WinRT45' with 'NetCore45'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}'의 파일은 사용되지 않는 'WinRT'를 프레임워크 폴더로 사용합니다. 'WinRT' 또는 'WinRT45'를 'NetCore45'로 바꾸세요.]]></Val>
+            <Val><![CDATA['{0}'에 있는 파일이 프레임워크 폴더로 사용되지 않는 'WinRT'를 사용합니다. 'WinRT' 또는 'WinRT45'를 'NetCore45'로 바꾸세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -708,12 +708,12 @@
       </Item>
       <Item ItemId=";Error_NotOnePrimarySignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package signature contains multiple primary signatures.]]></Val>
+          <Val><![CDATA[The package signature file does not contain exactly one primary signature.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[패키지 서명에는 여러 개의 기본 서명이 포함됩니다.]]></Val>
+            <Val><![CDATA[패키지 시그니처 파일에 정확하게 기본 시그니처 하나가 없습니다.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[SignedCms does not have one primary signature.]]></Val>
+            <Val><![CDATA[The package signature contains multiple primary signatures.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -844,6 +844,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";InvalidPackageSignatureFile" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package contains an invalid package signature file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[패키지에 잘못된 패키지 시그니처 파일이 있습니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";InvalidPackageSignatureFileEntry" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature file entry is invalid.]]></Val>
@@ -961,11 +970,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";MultiplePackageSignatureFiles" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package contains multiple package signature files.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[패키지에 여러 패키지 시그니처 파일이 있습니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";MustContainAbsolutePath" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' must contain an absolute path '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA['{0}'에는 절대 경로 '{1}'이(가) 있어야 합니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NoPackageSignatureFile" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package does not contain a valid package signature file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[패키지에 유효한 패키지 시그니처 파일이 없습니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1231,6 +1258,15 @@
           <Prev Cat="Text">
             <Val><![CDATA[The package was not opened correctly to perform Signature operations. Please use a Stream based constructor to have access to Signature attributes of the package.]]></Val>
           </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SigningCannotBeDoneInPlace" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} and {1} should be different. Package signing cannot be done in place.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} 및 {1}은(는) 달라야 합니다. 패키지 시그니처을 완료할 수 없습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1567,7 +1603,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4953]]></Val>
+        <Val><![CDATA[4.7.0.4977]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1600,7 +1636,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1.4953+e2fb49fed454bcdd48c53efcb40ba26a50be761e]]></Val>
+        <Val><![CDATA[4.7.0-preview1.4977+6d1f613b65cf759ab1f5737903df37065167cde5]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
