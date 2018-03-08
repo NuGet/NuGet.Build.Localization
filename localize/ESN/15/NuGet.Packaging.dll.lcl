@@ -212,7 +212,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The assembly '{0}' is placed directly under 'lib' folder. It is recommended that assemblies be placed inside a framework-specific folder. Move it into a framework-specific folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[El ensamblado "{0}" se coloca directamente en la carpeta "lib". Se recomienda que los ensamblados se coloquen en una carpeta específica del marco. Muévalo en una carpeta específica del marco.]]></Val>
+            <Val><![CDATA[El ensamblado "{0}" se encuentra directamente en la carpeta "lib". Se recomienda que los ensamblados se coloquen en una carpeta específica del marco. Muévalo a una carpeta específica del marco.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -221,7 +221,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The assembly '{0}' is not inside the 'lib' folder and hence it won't be added as a reference when the package is installed into a project. Move it into the 'lib' folder if it needs to be referenced.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[El ensamblado "{0}" no se encuentra dentro de la carpeta "lib" y, por tanto, no se agregará como referencia cuando se instale el paquete en un proyecto. Muévalo a la carpeta "lib" si es necesario hacerle referencia.]]></Val>
+            <Val><![CDATA[El ensamblado "{0}" no está en la carpeta "lib" y, por tanto, no se agregará como referencia cuando se instale el paquete en un proyecto. Muévalo a la carpeta "lib" si es necesario hacer referencia a él.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -230,7 +230,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The value "{0}" for {1} is a sample value and should be removed. Replace it with an appropriate value or remove it and rebuild your package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[El valor "{0}" de {1} es un valor de ejemplo y debe quitarse. Reemplácelo por uno adecuado o quítelo y recompile el paquete.]]></Val>
+            <Val><![CDATA[El valor "{0}" de {1} es solo un valor de ejemplo y debe quitarse. Reemplácelo por un valor adecuado o quítelo y recompile el paquete.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -239,7 +239,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The folder '{0}' under 'lib' is not recognized as a valid framework name or a supported culture identifier. Rename it to a valid framework name or culture identifier.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La carpeta "{0}" que se encuentra en "lib" no se reconoce como un nombre válido de marco o un identificador de referencia cultural admitido. Cámbiele el nombre a un identificador de referencia cultural o un nombre de marco válidos.]]></Val>
+            <Val><![CDATA[La carpeta "{0}" en "lib" no se reconoce como un nombre de marco válido o un identificador de referencia cultural admitida. Dele un nombre de marco o un identificador de referencia cultural válido.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -248,7 +248,7 @@
         <Str Cat="Text">
           <Val><![CDATA[A stable release of a package should not have a prerelease dependency. Either modify the version spec of dependency "{0}" or update the version field in the nuspec.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Una versión estable de un paquete no debe tener ninguna dependencia preliminar. Modifique la especificación de la versión de dependencia "{0}" o actualice el campo de la versión en el archivo nuspec.]]></Val>
+            <Val><![CDATA[Una versión estable de un paquete no debe tener una dependencia de versión preliminar. Modifique la especificación de versión de dependencia "{0}" o actualice el campo de versión en el archivo nuspec.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -257,7 +257,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package version '{0}' uses SemVer 2.0.0 or components of SemVer 1.0.0 that are not supported on legacy clients. Change the package version to a SemVer 1.0.0 string. If the version contains a release label it must start with a letter. This message can be ignored if the package is not intended for older clients.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La versión del paquete "{0}" usa SemVer 2.0.0 o componentes de SemVer 1.0.0 que no se admiten en clientes heredados. Cambie la versión del paquete a una cadena de SemVer 1.0.0. Si la versión contiene una etiqueta de versión, esta debe comenzar con una letra. Este mensaje puede ignorarse si el paquete no está diseñado para los clientes más antiguos.]]></Val>
+            <Val><![CDATA[La versión de paquete "{0}" utiliza SemVer 2.0.0 o componentes de SemVer 1.0.0 no admitidos en clientes heredados. Cambie la versión de paquete a una cadena de SemVer 1.0.0. Si la versión contiene una etiqueta de versión, debe comenzar con una letra. Este mensaje se puede pasar por alto si el paquete no está pensado para clientes más antiguos.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -266,7 +266,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The file '{0}' will be ignored by NuGet because it is not directly under 'tools' folder. Place the file directly under 'tools' folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[NuGet ignorará el archivo "{0}" porque no se encuentra directamente en la carpeta "tools". Coloque el archivo directamente en dicha carpeta.]]></Val>
+            <Val><![CDATA[NuGet omitirá el archivo "{0}" porque no está directamente en la carpeta "tools". Ponga el archivo directamente en la carpeta "tools".]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -275,7 +275,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The transform file '{0}' is outside the 'content' folder and hence will not be transformed during installation of this package. Move it into the 'content' folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[El archivo de transformación "{0}" está fuera de la carpeta "content", por lo que no se transformará durante la instalación de este paquete. Muévelo a la carpeta "tools".]]></Val>
+            <Val><![CDATA[El archivo de transformación "{0}" está fuera de la carpeta "content", por lo que no se transformará durante la instalación de este paquete. Muévalo a la carpeta "content".]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -293,7 +293,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The script file '{0}' is outside the 'tools' folder and hence will not be executed during installation of this package. Move it into the 'tools' folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[El archivo de script "{0}" está fuera de la carpeta "tools", por lo que no se ejecutará durante la instalación de este paquete. Muévelo a la carpeta "tools".]]></Val>
+            <Val><![CDATA[El archivo de script "{0}" está fuera de la carpeta "tools" y, por tanto, no se ejecutará durante la instalación de este paquete. Muévalo a la carpeta "tools".]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -302,7 +302,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The script file '{0}' is not recognized by NuGet and hence will not be executed during installation of this package. Rename it to install.ps1, uninstall.ps1 or init.ps1 and place it directly under 'tools'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[NuGet no reconoce el archivo de script "{0}" y, por tanto, no se ejecutará durante la instalación de este paquete. Cámbiele el nombre a install.ps1, uninstall.ps1 o init.ps1 y colóquelo directamente en "tools".]]></Val>
+            <Val><![CDATA[NuGet no reconoce el archivo de script "{0}" y, por tanto, no se ejecutará durante la instalación de este paquete. Cámbiele el nombre a install.ps1, uninstall.ps1 o init.ps1 y póngalo directamente en "tools".]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -311,7 +311,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The version of dependency '{0}' is not specified. Specify the version of dependency and rebuild your package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La versión de dependencia "{0}" no se especificó. Especifíquela y recompile el paquete.]]></Val>
+            <Val><![CDATA[No se ha especificado la versión de la dependencia "{0}". Especifique la versión de la dependencia y recompile el paquete.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -320,7 +320,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The file at '{0}' uses the obsolete 'WinRT' as the framework folder. Replace 'WinRT' or 'WinRT45' with 'NetCore45'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[El archivo de "{0}" usa el entorno obsoleto "WinRT" como carpeta de marco. Reemplace "WinRT" o "WinRT45" por "NetCore45".]]></Val>
+            <Val><![CDATA[El archivo de "{0}" utiliza "WinRT", que está obsoleto, como carpeta de marco. Reemplace "WinRT" o "WinRT45" con "NetCore45".]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -708,12 +708,12 @@
       </Item>
       <Item ItemId=";Error_NotOnePrimarySignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package signature contains multiple primary signatures.]]></Val>
+          <Val><![CDATA[The package signature file does not contain exactly one primary signature.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La firma del paquete contiene varias firmas principales.]]></Val>
+            <Val><![CDATA[El archivo de firma del paquete no contiene exactamente una firma principal.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[SignedCms does not have one primary signature.]]></Val>
+            <Val><![CDATA[The package signature contains multiple primary signatures.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -844,6 +844,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";InvalidPackageSignatureFile" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package contains an invalid package signature file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El paquete contiene un archivo de firma no válido.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";InvalidPackageSignatureFileEntry" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature file entry is invalid.]]></Val>
@@ -961,11 +970,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";MultiplePackageSignatureFiles" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package contains multiple package signature files.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El paquete contiene varios archivos de firma.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";MustContainAbsolutePath" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' must contain an absolute path '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA['{0}' debe contener una ruta de acceso absoluta '{1}'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NoPackageSignatureFile" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package does not contain a valid package signature file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El paquete no contiene un archivo de firma válido.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1231,6 +1258,15 @@
           <Prev Cat="Text">
             <Val><![CDATA[The package was not opened correctly to perform Signature operations. Please use a Stream based constructor to have access to Signature attributes of the package.]]></Val>
           </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SigningCannotBeDoneInPlace" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} and {1} should be different. Package signing cannot be done in place.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} y {1} deben ser diferentes. No se puede firmar el paquete in situ.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1567,7 +1603,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4953]]></Val>
+        <Val><![CDATA[4.7.0.4983]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1600,7 +1636,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1.4953+e2fb49fed454bcdd48c53efcb40ba26a50be761e]]></Val>
+        <Val><![CDATA[4.7.0-preview1.4983+37c9c7260314d12979399accf0997fdd9cf05b8a]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>

@@ -125,7 +125,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package version constraints for '{0}' return a version range that is empty.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[As restrições da versão do pacote para '{0}' retornam um intervalo de versão que está vazio.]]></Val>
+            <Val><![CDATA[As restrições de versão do pacote para '{0}' retornam um intervalo de versão vazio.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -279,6 +279,15 @@
           <Val><![CDATA[Failed to find a project to restore in the folder '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Falha ao localizar um projeto para restaurar na pasta '{0}'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_UnableToSignPackage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to sign package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Falha ao assinar o pacote.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1504,6 +1513,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Warning_FileExcludedByDefault" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[File '{0}' was not added to the package. Files and folders starting with '.' or ending with '.nupkg' are excluded by default. To include this file, use -NoDefaultExcludes from the commandline]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O arquivo '{0}' não foi adicionado ao pacote. Os arquivos e as pastas que começam com '.' ou terminam com '.nupkg' são excluídos por padrão. Para incluir esse arquivo, use -NoDefaultExcludes da linha de comando]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Warning_MinVersionDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} depends on {1} but {2} was not found. An approximate best match of {3} was resolved.]]></Val>
@@ -1580,7 +1598,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Version "{0}" does not follow semantic versioning guidelines. Update your nuspec file or use the AssemblyInformationalVersion assembly attribute to specify a semantic version as described at http://semver.org.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A versão "{0}" não segue as diretrizes de controle de versão semântica. Atualize o arquivo nuspec ou use o atributo de assembly AssemblyInformationalVersion para especificar uma versão semântica conforme descrito em http://semver.org.]]></Val>
+            <Val><![CDATA[A versão "{0}" não segue as diretrizes semânticas de controle de versão. Atualize o arquivo nuspec ou use o atributo do assembly AssemblyInformationalVersion para especificar uma versão semântica, conforme a descrição em http://semver.org.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Version "{0}" does not follow semantic versioning guidelines.]]></Val>
@@ -1651,7 +1669,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4953]]></Val>
+        <Val><![CDATA[4.7.0.4983]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1687,7 +1705,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1.4953+e2fb49fed454bcdd48c53efcb40ba26a50be761e]]></Val>
+        <Val><![CDATA[4.7.0-preview1.4983+37c9c7260314d12979399accf0997fdd9cf05b8a]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
