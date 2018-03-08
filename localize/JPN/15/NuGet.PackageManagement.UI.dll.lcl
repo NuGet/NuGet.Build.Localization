@@ -447,6 +447,63 @@
       </Item>
     </Item>
   </Item>
+  <Item ItemId=";NuGet.PackageManagement.UI.Resources.UpgradeReport.xslt" ItemType="0" PsrId="210" Leaf="false">
+    <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;XML \ 0 \ 0" />
+    <Item ItemId=";&lt;h2&gt;" ItemType="0" PsrId="210" Leaf="false">
+      <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId="0;IssuesTitle" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+        <Str Cat="AppData">
+          <Val><![CDATA[Issues Found]]></Val>
+          <Tgt Cat="AppData" Stat="Loc" Orig="New">
+            <Val><![CDATA[見つかった問題]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId="0;OverviewTitle" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+        <Str Cat="AppData">
+          <Val><![CDATA[Overview]]></Val>
+          <Tgt Cat="AppData" Stat="Loc" Orig="New">
+            <Val><![CDATA[概要]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId="0;PackagesTitle" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+        <Str Cat="AppData">
+          <Val><![CDATA[Packages Processed]]></Val>
+          <Tgt Cat="AppData" Stat="Loc" Orig="New">
+            <Val><![CDATA[処理されたパッケージ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+    </Item>
+    <Item ItemId=";&lt;th&gt;" ItemType="0" PsrId="210" Leaf="false">
+      <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId="0;DescriptionTableHeader" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+        <Str Cat="AppData">
+          <Val><![CDATA[Description]]></Val>
+          <Tgt Cat="AppData" Stat="Loc" Orig="New">
+            <Val><![CDATA[説明]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+    </Item>
+    <Item ItemId=";&lt;title&gt;" ItemType="0" PsrId="210" Leaf="false">
+      <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId="0;NuGetUpgradeReportTitle" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+        <Str Cat="AppData">
+          <Val><![CDATA[]D;]A;          NuGet Upgrade Report]D;]A;        ]]></Val>
+          <Tgt Cat="AppData" Stat="Loc" Orig="New">
+            <Val><![CDATA[]D;]A;          NuGet アップグレード レポート]D;]A;        ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+    </Item>
+  </Item>
   <Item ItemId=";NuGet.PackageManagement.UI.Resources.resources" ItemType="0" PsrId="211" Leaf="false">
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
@@ -663,6 +720,15 @@
           <Val><![CDATA[Update]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[更新]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Button_Upgrade" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Upgrade]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[アップグレード]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -897,6 +963,15 @@
           <Val><![CDATA[No repository is selected]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[リポジトリが選択されていません]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_ProjectNotInCache" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Project {0} does not exist in the project system cache.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プロジェクト {0} がプロジェクト システム キャッシュに存在しません。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1297,6 +1372,78 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Link_RevertNuGetProjectUpgrade" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reverting NuGet Project Upgrade]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[NuGet プロジェクト アップグレードを元に戻す]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetUpgradeError_CannotFindPackage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} cannot be found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} が見つかりません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetUpgradeWarning_HasContentFiles" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} contains content files and may not work after upgrading.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} は、コンテンツ ファイルを含んでおり、アップグレード後に動作しない可能性があります。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetUpgradeWarning_HasInstallScript" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} contains an install.ps1 script that will not be applied after upgrading.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} は、アップグレード後に適用されない install.ps1 スクリプトを含んでいます。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetUpgrade_PackageDependencyOf" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[(dependency of {0})]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[({0} の依存関係)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetUpgrade_Progress_Installing" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Installing required packages]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[必須パッケージをインストールしています]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetUpgrade_Progress_Uninstalling" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Uninstalling packages from packages.config]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Packages.config からパッケージをアンインストールしています]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetUpgrade_WaitMessage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Upgrading Project to PackageReference]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プロジェクトを PackageReference にアップグレードしています]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Operation_TotalTime" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Time Elapsed: {0}]]></Val>
@@ -1381,6 +1528,24 @@
       <Item ItemId=";RadioBtn_PackagesConfig" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Packages.config]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Radio_CollapseDependencies" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Collapse dependencies (recommended)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[依存関係を折りたたむ (推奨)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Radio_FlattenDependencies" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Flatten dependencies]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[依存関係をフラット化する]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1591,6 +1756,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Text_ChangesForProject" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Changes for {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} の変更]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_DirectDependencies" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Top-level Dependencies]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[最上位レベルの依存関係]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Text_Downloads" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} downloads]]></Val>
@@ -1744,6 +1927,33 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Text_NuGetUpgradeIssues" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Issues:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[問題:]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_NuGetUpgradeNoIssuesFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No issues were found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[問題は見つかりませんでした。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_NuGetUpgradeResolveErrorsBeforeUpgrading" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You must resolve any errors before upgrading.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[アップグレードする前にエラーを解決する必要があります。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Text_PackageFormatApply" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package manager format will apply to the following projects in this Solution]]></Val>
@@ -1794,6 +2004,15 @@
           <Val><![CDATA[Progress]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[進行状況]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_ProjectAnalysisResults" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Project Analysis Results]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プロジェクト解析結果]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1857,6 +2076,78 @@
           <Val><![CDATA[Show all]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[すべて表示]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_TransitiveDependencies" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Transitive Dependencies]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[推移的な依存関係]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_UpgradeComplete" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Upgrade Complete]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[アップグレードが完了しました]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_UpgradeCompletePleaseBuild" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Please build and run your solution to verify that all packages are available.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ソリューションをビルドして実行し、すべてのパッケージが利用可能であることをご確認ください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_UpgradeCompleteResolveProblemsBackup" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[If you run into any issues and would like to revert, we have backed up changed files to the following location:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[問題が発生し、元に戻す場合、変更されたファイルは次の場所にバックアップされています:]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_UpgradeCompleteResolveProblemsDirections" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Follow the directions described in the following document to revert changes:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[変更を元に戻すには、次のドキュメントに記載されている手順に従います:]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_UpgradeNuGetProjectDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Upgrade this project from packages.config to PackageReference format.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[packages.config から PackageReference 形式にこのプロジェクトをアップグレードします。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_UpgradeOptions" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Upgrade Options:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[アップグレード オプション:]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_UpgraderHeader" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Packages as PackageReference:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[PackageReference としてのパッケージ:]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1987,6 +2278,51 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";UpgradeLogger_BackupPathMustBeValid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Must be a valid path.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[有効なパスを指定してください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Upgrade_InstallFailed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[NuGet upgrade failed to install packages as PackageReference. Changed files are backed up at {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[NuGet アップグレードで、パッケージを PackageReference としてインストールできませんでした。変更されたファイルは {0} にバップアップされています]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Upgrade_RevertSteps" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Please follow simple instructions from {0} to go back to previous state.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} の簡単な手順に従い、以前の状態に戻してください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Upgrade_UninstallFailed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[NuGet upgrade failed to uninstall packages from packages.config so rolled back to previous state.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[NuGet アップグレードで、パッケージを packages.config からアンインストールできなかったため、以前の状態にロールバックされました。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Upgrader_BackupFailed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project cannot be upgraded as backing up the project file and packages.config ran into an issue.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プロジェクト ファイルと packages.config のバックアップで問題が発生したため、このプロジェクトをアップグレードできません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Version_Blocked" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Blocked by package.config]]></Val>
@@ -2034,9 +2370,21 @@
       </Item>
       <Item ItemId=";Warning_ProjectJson" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[These options are not applicable to projects managing their dependencies through project.json.]]></Val>
+          <Val><![CDATA[These options are not applicable to projects managing their dependencies through project.json or PackageReference]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[これらのオプションは、project.json を通して依存関係を管理しているプロジェクトには適用されません。]]></Val>
+            <Val><![CDATA[これらのオプションは、project.json または PackageReference を通して依存関係を管理しているプロジェクトには適用されません]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[These options are not applicable to projects managing their dependencies through project.json.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";WindowTitle_ConvertPackagesConfigIntro" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Convert]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[変換]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2073,6 +2421,15 @@
           <Val><![CDATA[License Acceptance]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[ライセンスへの同意]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";WindowTitle_NuGetUpgrader" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[NuGet Upgrader]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[NuGet アップグレード プログラム]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2137,6 +2494,18 @@
         </Bin>
         <Disp Edtr="External" Icon="Bmp" LocTbl="false" />
       </Item>
+      <Item ItemId=";resources/statuserror.16.16.png" ItemType="6" PsrId="211" Leaf="true">
+        <Bin BinId="3">
+          <Val><![CDATA[AAEAAAD/////AQAAAAAAAAAEAQAAAAxTeXN0ZW0uSW50MzIBAAAAB21fdmFsdWUACAMAAAALAAEAAAD/////AQAAAAAAAAAGAQAAAB9yZXNvdXJjZXMvc3RhdHVzZXJyb3IuMTYuMTYucG5nCwABAAAA/////wEAAAAAAAAABAEAAAAfU3lzdGVtLlVuaXR5U2VyaWFsaXphdGlvbkhvbGRlcgMAAAAERGF0YQlVbml0eVR5cGUMQXNzZW1ibHlOYW1lAQABCAYCAAAAH1N5c3RlbS5JTy5Vbm1hbmFnZWRNZW1vcnlTdHJlYW0EAAAABgMAAABLbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5CwABAAAA/////wEAAAAAAAAADwEAAAB5AQAAAolQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAUBJREFUeF6lk71KBEEQhOsGD2VAPNAH8AEM9t7gjIwOzA0UBCMzwVRMjU0FBSMNNL3EE0zM7gIfwMREEE/Bxf9xv6BhpxFBrqDZ3eqqGbqpbcihLMs1SauSOq51KekoxnhoREopM85XNXi+6KX7lW66m1NWcPTQoLUDGmaWNHjZ2mi9nx7rL0yubyru7I0ktWOMt0FAOit3tzGruVBQ8jD+7WBfaPHAB2b+vL4qaCCYPe9T2SGeR4sHb2BhrxVRR5hpmdjMcJkGD17mz5fVKdLX6DEBnrV3epkW74QcPm6GelhezG79fhrB0ZNH0JjwB9Rn5mYq2wnwyetbcNz8fP/KWbDwBuI5VYXD4Ge2ncDVgQevJZEUFhYk4BZW5y2NwxhjO4syCSMk/44yLxCcOn3SU3OpKw84emjMDD/W7wx+AA0rGvbkllSZAAAAAElFTkSuQmCCCwABAAAA/////wEAAAAAAAAABAEAAAAOU3lzdGVtLkJvb2xlYW4BAAAAB21fdmFsdWUAAQALAAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uQm9vbGVhbgEAAAAHbV92YWx1ZQABAAs=]]></Val>
+        </Bin>
+        <Disp Edtr="External" Icon="Bmp" LocTbl="false" />
+      </Item>
+      <Item ItemId=";resources/statusinformation.16.16.png" ItemType="6" PsrId="211" Leaf="true">
+        <Bin BinId="3">
+          <Val><![CDATA[AAEAAAD/////AQAAAAAAAAAEAQAAAAxTeXN0ZW0uSW50MzIBAAAAB21fdmFsdWUACAMAAAALAAEAAAD/////AQAAAAAAAAAGAQAAACVyZXNvdXJjZXMvc3RhdHVzaW5mb3JtYXRpb24uMTYuMTYucG5nCwABAAAA/////wEAAAAAAAAABAEAAAAfU3lzdGVtLlVuaXR5U2VyaWFsaXphdGlvbkhvbGRlcgMAAAAERGF0YQlVbml0eVR5cGUMQXNzZW1ibHlOYW1lAQABCAYCAAAAH1N5c3RlbS5JTy5Vbm1hbmFnZWRNZW1vcnlTdHJlYW0EAAAABgMAAABLbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5CwABAAAA/////wEAAAAAAAAADwEAAABVAQAAAolQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAARxJREFUeF7Nk7FKA0EURe8MKM4qJI2VCmnSJ4XYbpEfWD/AzF9YWFvkL3bF2v0BwW3Fwu1tAmplk0J3JRbrXHiECcMGljS5cJuZOXfeDO+ppmngq65rC2DqHGNdhXMWRVHqMwqiqqoGAPLnr79R+lbj8XMJX5OTfdihwcXxXgkgMcbMJWAFv16/fPcf5r/YJIbcjA4XAMYM0bKe35Y/AfxxdUbDF6vjWTJKKWh3u5WysUFBCBmyrGDaBp/evdOtIWQZEHsf1vKEUMLEGltqNwIKNklXCVMwIGNzdJUwmWZvsz0vBwedYDJktQxGMjs/WnCjtQ/CVk5WnyiDMXYb5X3ck/eFb+Yez/Csu50MwApobyqt85Nz41vWrM/Q/9aIoHnLIqKKAAAAAElFTkSuQmCCCwABAAAA/////wEAAAAAAAAABAEAAAAOU3lzdGVtLkJvb2xlYW4BAAAAB21fdmFsdWUAAQALAAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uQm9vbGVhbgEAAAAHbV92YWx1ZQABAAs=]]></Val>
+        </Bin>
+        <Disp Edtr="External" Icon="Bmp" LocTbl="false" />
+      </Item>
       <Item ItemId=";resources/statusinformation_16x.png" ItemType="6" PsrId="211" Leaf="true">
         <Bin BinId="3">
           <Val><![CDATA[AAEAAAD/////AQAAAAAAAAAEAQAAAAxTeXN0ZW0uSW50MzIBAAAAB21fdmFsdWUACAMAAAALAAEAAAD/////AQAAAAAAAAAGAQAAACNyZXNvdXJjZXMvc3RhdHVzaW5mb3JtYXRpb25fMTZ4LnBuZwsAAQAAAP////8BAAAAAAAAAAQBAAAAH1N5c3RlbS5Vbml0eVNlcmlhbGl6YXRpb25Ib2xkZXIDAAAABERhdGEJVW5pdHlUeXBlDEFzc2VtYmx5TmFtZQEAAQgGAgAAAB9TeXN0ZW0uSU8uVW5tYW5hZ2VkTWVtb3J5U3RyZWFtBAAAAAYDAAAAS21zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQsAAQAAAP////8BAAAAAAAAAA8BAAAAVQEAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAEcSURBVHhezZOxSgNBFEXvDCjOKiSNlQpp0ieF2G6RH1g/wMxfWFhb5C92xdr9AcFtxcLtbQJqZZNCdyUW61x4hAnDBpY0uXCbmTl33gzvqaZp4Kuuawtg6hxjXYVzFkVR6jMKoqqqBgDy56+/UfpW4/FzCV+Tk33YocHF8V4JIDHGzCVgBb9ev3z3H+a/2CSG3IwOFwDGDNGynt+WPwH8cXVGwxer41kySilod7uVsrFBQQgZsqxg2gaf3r3TrSFkGRB7H9byhFDCxBpbajcCCjZJVwlTMCBjc3SVMJlmb7M9LwcHnWAyZLUMRjI7P1pwo7UPwlZOVp8ogzF2G+V93JP3hW/mHs/wrLudDMAKaG8qrfOTc+Nb1qzP0P/WiKB5yyKiigAAAABJRU5ErkJgggsAAQAAAP////8BAAAAAAAAAAQBAAAADlN5c3RlbS5Cb29sZWFuAQAAAAdtX3ZhbHVlAAEACwABAAAA/////wEAAAAAAAAABAEAAAAOU3lzdGVtLkJvb2xlYW4BAAAAB21fdmFsdWUAAQAL]]></Val>
@@ -2152,6 +2521,12 @@
       <Item ItemId=";resources/statusstop_32x.png" ItemType="6" PsrId="211" Leaf="true">
         <Bin BinId="3">
           <Val><![CDATA[AAEAAAD/////AQAAAAAAAAAEAQAAAAxTeXN0ZW0uSW50MzIBAAAAB21fdmFsdWUACAMAAAALAAEAAAD/////AQAAAAAAAAAGAQAAABxyZXNvdXJjZXMvc3RhdHVzc3RvcF8zMngucG5nCwABAAAA/////wEAAAAAAAAABAEAAAAfU3lzdGVtLlVuaXR5U2VyaWFsaXphdGlvbkhvbGRlcgMAAAAERGF0YQlVbml0eVR5cGUMQXNzZW1ibHlOYW1lAQABCAYCAAAAH1N5c3RlbS5JTy5Vbm1hbmFnZWRNZW1vcnlTdHJlYW0EAAAABgMAAABLbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5CwABAAAA/////wEAAAAAAAAADwEAAACMAgAAAolQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAj5JREFUeF7tlzFIHEEUht8Np8IlRBsbK0vLs0sCxuushLsiXQIegpVgEZJWrlUsBCtDWCFpQoospEp3KpiUV1ikTJUUaVTwwCjofPAWxhkO9pbdvcYfpjhu9v/evnm8eVuRlOr3+3URadq1aFdjwLauXYd2xbVarScpVEkBXhGRDbvqMpwIYNcGcpAlAMCzIhIlb3t7cS7/v3yU65/HcvPjiN/3jZ5MSvXZCxl7uiDjL1/z281K2wbyO20AwJsKnwLU77y18E8yhGwQr6S2uZ0EcqZBxD7LDEj5V+DX37/J+fO5oeGIZ3gWD7zwxDvMQPjmwO1bv5OrD3uShyZW1202tkTVcjNh/DPPG47wwlMVwQoCAK5pd+F5BuEeRyQq45x7g4K7fLMmRQlvGLCUKVUFbACg2tnga+bfbSbgn+mKuAIO49HOfsI8MNrh6oCp3KIFAxZM2EbbK01GypDHahrt7XS4UuAea9EkrZb2WoY8VsO4BVK8QpaREeshAOPe58UrZBkdGBgmSoF7rK7RGY5JphS4xzokgBgAY1QZ8lix0em1x7kwRhUtGLBgwq4qYNeuiBmOO5tG4d1quRUfDFUnKULR0bnLBq7KooQ3DFiMZX4faDO9ji0tM8PlDscTbxiwgj7A3K5/MEAmQRQxlLaVFXZC0uIG8fj9Z01Z5jPHw4fHA1uxUw+t5DgmT35RuVmqnWfdtLfwTnUXaJTzbmFOnf4lKxhqVsK3BcYe9roFhxeeo/g47XjgQCP/PL8D8FcFjYt2yk0AAAAASUVORK5CYIILAAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uQm9vbGVhbgEAAAAHbV92YWx1ZQABAAsAAQAAAP////8BAAAAAAAAAAQBAAAADlN5c3RlbS5Cb29sZWFuAQAAAAdtX3ZhbHVlAAEACw==]]></Val>
+        </Bin>
+        <Disp Edtr="External" Icon="Bmp" LocTbl="false" />
+      </Item>
+      <Item ItemId=";resources/statuswarning.16.16.png" ItemType="6" PsrId="211" Leaf="true">
+        <Bin BinId="3">
+          <Val><![CDATA[AAEAAAD/////AQAAAAAAAAAEAQAAAAxTeXN0ZW0uSW50MzIBAAAAB21fdmFsdWUACAMAAAALAAEAAAD/////AQAAAAAAAAAGAQAAACFyZXNvdXJjZXMvc3RhdHVzd2FybmluZy4xNi4xNi5wbmcLAAEAAAD/////AQAAAAAAAAAEAQAAAB9TeXN0ZW0uVW5pdHlTZXJpYWxpemF0aW9uSG9sZGVyAwAAAAREYXRhCVVuaXR5VHlwZQxBc3NlbWJseU5hbWUBAAEIBgIAAAAfU3lzdGVtLklPLlVubWFuYWdlZE1lbW9yeVN0cmVhbQQAAAAGAwAAAEttc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkLAAEAAAD/////AQAAAAAAAAAPAQAAABUBAAACiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAx0lEQVR4XpWSMQ7CMAxFf4xAyBMLCxMrO8dhaBcuwdCJS3RJBw7SA/QGTCxdWJgiQYWKXJWKIXHIlyw5lqr34tQgEOdcBsCOx5yZK3hCCKdYXneQkh4pEfqzLfu+wVDSyyzFoJjfz9NB+pAF+eizx2Vruts0k15mPgvS6GYvpVtQhB61IB/dk6AF6fS4Ben0uIX5odtFe8Q/eW1KvFeH4e8khT6+gm5B+t3juyDt7n0jpe+CANTd+oTUjN/U3yVaABnSUjFz/gFq44JaVSCXeQAAAABJRU5ErkJgggsAAQAAAP////8BAAAAAAAAAAQBAAAADlN5c3RlbS5Cb29sZWFuAQAAAAdtX3ZhbHVlAAEACwABAAAA/////wEAAAAAAAAABAEAAAAOU3lzdGVtLkJvb2xlYW4BAAAAB21fdmFsdWUAAQAL]]></Val>
         </Bin>
         <Disp Edtr="External" Icon="Bmp" LocTbl="false" />
       </Item>
@@ -2193,6 +2568,9 @@
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
     </Item>
     <Item ItemId=";xamls/loadingstatusbar.baml" ItemType="0" PsrId="223" Leaf="true">
+      <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
+    </Item>
+    <Item ItemId=";xamls/nugetprojectupgradewindow.baml" ItemType="0" PsrId="223" Leaf="true">
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
     </Item>
     <Item ItemId=";xamls/optionscontrol.baml" ItemType="0" PsrId="223" Leaf="true">
@@ -2332,7 +2710,7 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4953]]></Val>
+        <Val><![CDATA[4.7.0.4977]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -2362,7 +2740,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4953]]></Val>
+        <Val><![CDATA[4.7.0.4977]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -2398,10 +2776,13 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1.4953+e2fb49fed454bcdd48c53efcb40ba26a50be761e]]></Val>
+        <Val><![CDATA[4.7.0-preview1.4977+6d1f613b65cf759ab1f5737903df37065167cde5]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
+  </Item>
+  <Item ItemId=";XML" ItemType="0" PsrId="210" Leaf="true">
+    <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
   </Item>
   <Item ItemId=";Version" ItemType="8" PsrId="211" Leaf="true">
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
