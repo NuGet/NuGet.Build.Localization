@@ -645,12 +645,12 @@
       </Item>
       <Item ItemId=";ErrorPackageSignatureInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package signature is invalid.]]></Val>
+          <Val><![CDATA[The package signature is invalid or cannot be verified on this platform.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A assinatura do pacote é inválida.]]></Val>
+            <Val><![CDATA[A assinatura do pacote é inválida ou não pode ser verificada nesta plataforma.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Package signature is invalid.]]></Val>
+            <Val><![CDATA[The package signature is invalid.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1528,6 +1528,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";UnexpectedPackageSignatureVerificationError" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[An unexpected error occurred while verifying a package signature.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ocorreu um erro inesperado ao verificar uma assinatura do pacote.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";UnsupportedAsn1" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The ASN.1 data is unsupported.]]></Val>
@@ -1603,7 +1612,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4983]]></Val>
+        <Val><![CDATA[4.7.0.5002]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1636,7 +1645,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1.4983+37c9c7260314d12979399accf0997fdd9cf05b8a]]></Val>
+        <Val><![CDATA[4.7.0-preview1.5002+7cf065d86a844af16239b8c7fdd4f9c6ee7a2936]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
