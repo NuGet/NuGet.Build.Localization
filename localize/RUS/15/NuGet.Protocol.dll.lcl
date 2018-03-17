@@ -292,6 +292,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_FailedToParseRepoSignInfor" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to parse {0} information from {1}. ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Не удалось провести синтаксический анализ сведений {0} из {1}. ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Log_FailedToReadRepositorySignature" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to get repository signature information for source {0}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Не удалось получить сведения о подписи репозитория для источника {0}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_FailedToReadServiceIndex" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to load the service index for source {0}.]]></Val>
@@ -378,6 +396,15 @@
           <Val><![CDATA[An error was encountered when fetching '{0} {1}'. The request will now be retried.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Произошла ошибка при извлечении "{0} {1}". Запрос будет повторен.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Log_RetryingRepositorySignature" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Retrying repository signature request for source '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Повторная отправка запроса подписи репозитория для источника "{0}".]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -979,7 +1006,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4875]]></Val>
+        <Val><![CDATA[4.7.0.5021]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1015,7 +1042,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4875]]></Val>
+        <Val><![CDATA[4.7.0-preview1.5021+bf8f915caefbb68c062329f2f79174f61bdd6e6d]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
