@@ -262,6 +262,30 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Migrator_AssemblyDirectlyUnderLibWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The assembly '{0}' is placed directly under the 'lib' folder. This assembly won't be referenced by the project after migration.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Migrator_PackageHasContentFolder" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package '{0}' contains 'content' folder which will not be copied to the project directory after migration. The package may not work as expected after migration.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Migrator_PackageHasInstallScript" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package '{0}' contains an install.ps1 script that will not be applied after migration.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Migrator_XdtTransformInPackage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package '{0}' contains an xdt transform which will not be applied to the project after migration.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";MisplacedInitScriptWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The file '{0}' will be ignored by NuGet because it is not directly under 'tools' folder. Place the file directly under 'tools' folder.]]></Val>
@@ -727,12 +751,9 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_RepositorySignatureShouldNotHaveARepositoryCountersignature" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_RepositorySignatureMustNotHaveARepositoryCountersignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[A repository primary signature should not have a repository countersignatures.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Podpis podstawowy repozytorium nie powinien mieć kontrpodpisów repozytorium.]]></Val>
-          </Tgt>
+          <Val><![CDATA[A repository primary signature must not have a repository countersignature.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1105,6 +1126,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";RangeOutOfBoundsForArray" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Arguments {0} and {1} were out of bounds for the array.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";SignFailureCertificateInvalidProviderType" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The following certificate cannot be used for package signing as the private key provider is unsupported:]]></Val>
@@ -1204,6 +1231,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";SignedPackageAlreadySigned" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package already contains a signature. Please remove the existing signature before adding a new signature.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Pakiet zawiera już podpis. Usuń istniejący podpis przed dodaniem nowego.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";SignedPackageArchiveIOExtraRead" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package stream read position cannot be longer than the length of the stream.]]></Val>
@@ -1240,12 +1276,9 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SignedPackagePackageAlreadySigned" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";SignedPackagePackageAlreadyCountersigned" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package already contains a signature. Please remove the existing signature before adding a new signature.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Pakiet zawiera już podpis. Usuń istniejący podpis przed dodaniem nowego.]]></Val>
-          </Tgt>
+          <Val><![CDATA[The package already contains a repository countersignature. Please remove the existing signature before adding a new repository countersignature.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1360,6 +1393,18 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Atrybut signing-certificate-v2 korzysta z nieobsługiwanego algorytmu wyznaczania wartości skrótu.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";StreamMustBeReadable" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The stream must be readable.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";StreamMustBeSeekable" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The stream must be seekable.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1612,7 +1657,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.5002]]></Val>
+        <Val><![CDATA[4.7.0.5018]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1645,7 +1690,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1.5002+7cf065d86a844af16239b8c7fdd4f9c6ee7a2936]]></Val>
+        <Val><![CDATA[4.7.0-preview1.5018+4af25d047d1b63a54608498b5dc5e5e254c73c20]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
