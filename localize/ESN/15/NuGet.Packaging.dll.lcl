@@ -265,24 +265,36 @@
       <Item ItemId=";Migrator_AssemblyDirectlyUnderLibWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The assembly '{0}' is placed directly under the 'lib' folder. This assembly won't be referenced by the project after migration.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El ensamblado "{0}" se coloca directamente bajo la carpeta "lib". El proyecto no hará referencia a este ensamblado después de la migración.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Migrator_PackageHasContentFolder" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package '{0}' contains 'content' folder which will not be copied to the project directory after migration. The package may not work as expected after migration.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El paquete "{0}" contiene la carpeta "content", que no se copiará en el directorio del proyecto después de la migración. Es posible que el paquete no funcione como se esperaba después de la migración.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Migrator_PackageHasInstallScript" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package '{0}' contains an install.ps1 script that will not be applied after migration.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El paquete "{0}" contiene un script install.ps1 que no se aplicará después de la migración.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Migrator_XdtTransformInPackage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package '{0}' contains an xdt transform which will not be applied to the project after migration.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El paquete "{0}" contiene una transformación xdt que no se aplicará al proyecto después de la migración.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -754,6 +766,9 @@
       <Item ItemId=";Error_RepositorySignatureMustNotHaveARepositoryCountersignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A repository primary signature must not have a repository countersignature.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Una firma principal del repositorio no debe tener contrafirmas de repositorio.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1129,6 +1144,9 @@
       <Item ItemId=";RangeOutOfBoundsForArray" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Arguments {0} and {1} were out of bounds for the array.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Los argumentos {0} y {1} estaban fuera de los límites de la matriz.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1279,6 +1297,9 @@
       <Item ItemId=";SignedPackagePackageAlreadyCountersigned" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package already contains a repository countersignature. Please remove the existing signature before adding a new repository countersignature.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El paquete ya contiene una contrafirma de repositorio. Quite la firma existente antes de agregar una nueva contrafirma de repositorio.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1399,12 +1420,18 @@
       <Item ItemId=";StreamMustBeReadable" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The stream must be readable.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El flujo debe ser legible.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";StreamMustBeSeekable" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The stream must be seekable.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El flujo debe permitir hacer búsquedas.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1657,7 +1684,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.5018]]></Val>
+        <Val><![CDATA[4.7.0.5026]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1690,7 +1717,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1.5018+4af25d047d1b63a54608498b5dc5e5e254c73c20]]></Val>
+        <Val><![CDATA[4.7.0-preview1.5026+2100be53332a83796b7410f73749b8fc7605fe03]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
