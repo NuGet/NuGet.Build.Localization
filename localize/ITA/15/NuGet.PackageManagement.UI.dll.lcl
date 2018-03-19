@@ -453,10 +453,13 @@
       <Disp Icon="Str" Disp="true" LocTbl="false" />
       <Item ItemId="0;IssuesTitle" ItemType="42;XML:Text" PsrId="210" Leaf="true">
         <Str Cat="AppData">
-          <Val><![CDATA[Issues Found]]></Val>
+          <Val><![CDATA[Package compatibility issues]]></Val>
           <Tgt Cat="AppData" Stat="Loc" Orig="New">
-            <Val><![CDATA[Problemi trovati]]></Val>
+            <Val><![CDATA[Problemi di compatibilità pacchetti]]></Val>
           </Tgt>
+          <Prev Cat="AppData">
+            <Val><![CDATA[Issues Found]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -474,6 +477,27 @@
           <Val><![CDATA[Packages Processed]]></Val>
           <Tgt Cat="AppData" Stat="Loc" Orig="New">
             <Val><![CDATA[Pacchetti elaborati]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+    </Item>
+    <Item ItemId=";&lt;h3&gt;" ItemType="0" PsrId="210" Leaf="false">
+      <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId="0;IncludePackagesTitle" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+        <Str Cat="AppData">
+          <Val><![CDATA[Top-level Dependencies:]]></Val>
+          <Tgt Cat="AppData" Stat="Loc" Orig="New">
+            <Val><![CDATA[Dipendenze di primo livello:]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId="1;IncludePackagesTitle" ItemType="42;XML:Text" PsrId="210" Leaf="true">
+        <Str Cat="AppData">
+          <Val><![CDATA[Transitive Dependencies:]]></Val>
+          <Tgt Cat="AppData" Stat="Loc" Orig="New">
+            <Val><![CDATA[Dipendenze transitive:]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -550,6 +574,18 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Tutti]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";AskForPRMigrator" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Consider migrating this project's NuGet package management format from 'packages.config' to 'PackageReference'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Provare a eseguire la migrazione del formato di gestione pacchetti NuGet di questo progetto da 'packages.config' a 'PackageReference'.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Consider migrating this project's NuGet package management format from 'packages.config' to 'PackageRefernece'.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1354,6 +1390,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Link_DoNotShowAgain" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Don't show again]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Non visualizzare più questo messaggio]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Link_LearnAboutInstallOptions" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Learn about Install Options]]></Val>
@@ -1372,6 +1417,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Link_MigratorHelp" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Why should I migrate?]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Perché eseguire la migrazione]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Link_RevertNuGetProjectUpgrade" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Reverting NuGet Project Upgrade]]></Val>
@@ -1381,29 +1435,47 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";NuGetUpgradeError_CannotFindPackage" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Link_UpgradeOption" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{0} cannot be found.]]></Val>
+          <Val><![CDATA[Migrate Now]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} non è stato trovato.]]></Val>
+            <Val><![CDATA[Esegui ora la migrazione]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";NuGetUpgradeWarning_HasContentFiles" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Migrator_PackageIdColumnHeader" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{0} contains content files and may not work after upgrading.]]></Val>
+          <Val><![CDATA[Package Id]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} contiene file di contenuto e potrebbe non funzionare dopo l'aggiornamento.]]></Val>
+            <Val><![CDATA[ID pacchetto]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";NuGetUpgradeWarning_HasInstallScript" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Migrator_PackageNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{0} contains an install.ps1 script that will not be applied after upgrading.]]></Val>
+          <Val><![CDATA[Migration failed as packages {0} could not be uninstalled. These packages were not found in the solution packages folder. No changes were made to the project.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} contiene un file install.ps1 che non verrà applicato dopo l'aggiornamento.]]></Val>
+            <Val><![CDATA[La migrazione non è riuscita perché non è stato possibile disinstallare i pacchetti {0}. Questi pacchetti non sono stati trovati nella cartella dei pacchetti della soluzione. Non sono state apportate modifiche al progetto.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Migrator_TopLevelColumnHeader" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Top-Level]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Primo livello]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Migrator_VersionColumnHeader" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Version]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Versione]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1528,24 +1600,6 @@
       <Item ItemId=";RadioBtn_PackagesConfig" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Packages.config]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Radio_CollapseDependencies" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Collapse dependencies (recommended)]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Comprimi le dipendenze (scelta consigliata)]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Radio_FlattenDependencies" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Flatten dependencies]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Rendi flat le dipendenze]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1767,10 +1821,13 @@
       </Item>
       <Item ItemId=";Text_DirectDependencies" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Top-level Dependencies]]></Val>
+          <Val><![CDATA[Top-level dependencies:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Dipendenze di primo livello]]></Val>
+            <Val><![CDATA[Dipendenze di primo livello:]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Top-level Dependencies]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1797,6 +1854,15 @@
           <Val><![CDATA[Error occurred]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Si è verificato un errore]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_HelpMeMigrate" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Help me migrate to NuGet PackageReference]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Informazioni sulla migrazione a PackageReference NuGet]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1929,10 +1995,13 @@
       </Item>
       <Item ItemId=";Text_NuGetUpgradeIssues" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Issues:]]></Val>
+          <Val><![CDATA[Package compatibility issues:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Problemi:]]></Val>
+            <Val><![CDATA[Problemi di compatibilità pacchetti:]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Issues:]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2082,10 +2151,13 @@
       </Item>
       <Item ItemId=";Text_TransitiveDependencies" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Transitive Dependencies]]></Val>
+          <Val><![CDATA[Transitive dependencies:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Dipendenze transitive]]></Val>
+            <Val><![CDATA[Dipendenze transitive:]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Transitive Dependencies]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2127,19 +2199,13 @@
       </Item>
       <Item ItemId=";Text_UpgradeNuGetProjectDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Upgrade this project from packages.config to PackageReference format.]]></Val>
+          <Val><![CDATA[Migrate this project from packages.config to PackageReference format.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Aggiorna questo progetto da packages.config al formato PackageReference.]]></Val>
+            <Val><![CDATA[Consente di eseguire la migrazione di questo progetto dal formato packages.config a quello PackageReference.]]></Val>
           </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Text_UpgradeOptions" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Upgrade Options:]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Opzioni di aggiornamento:]]></Val>
-          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Upgrade this project from packages.config to PackageReference format.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2289,10 +2355,13 @@
       </Item>
       <Item ItemId=";Upgrade_InstallFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[NuGet upgrade failed to install packages as PackageReference. Changed files are backed up at {0}]]></Val>
+          <Val><![CDATA[NuGet migrate failed to install packages as PackageReference. Changed files are backed up at {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[L'aggiornamento NuGet non è riuscito a installare i pacchetti come PackageReference. Il backup dei file modificati è disponibile in {0}]]></Val>
+            <Val><![CDATA[La migrazione NuGet non è riuscito a installare i pacchetti come PackageReference. Il backup dei file modificati è disponibile in {0}]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[NuGet upgrade failed to install packages as PackageReference. Changed files are backed up at {0}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2319,6 +2388,15 @@
           <Val><![CDATA[The project cannot be upgraded as backing up the project file and packages.config ran into an issue.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Non è possibile aggiornare il progetto perché si è verificato un errore durante il backup del file di progetto e di packages.config.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Upgrader_PackageNotFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to determine compatibility of package as {0}.nupkg was not found on disk. The project cannot be migrated.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Non è possibile determinare la compatibilità del pacchetto perché {0}.nupkg non è stato trovato nel disco. La migrazione del progetto non verrà eseguita.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2425,11 +2503,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";WindowTitle_NuGetUpgrader" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";WindowTitle_NuGetMigrator" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[NuGet Upgrader]]></Val>
+          <Val><![CDATA[Migrate NuGet format to PackageReference - {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Strumento di aggiornamento NuGet]]></Val>
+            <Val><![CDATA[Esegui la migrazione dal formato NuGet a PackageReference - {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2603,6 +2681,9 @@
     <Item ItemId=";xamls/previewwindow.baml" ItemType="0" PsrId="223" Leaf="true">
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
     </Item>
+    <Item ItemId=";xamls/prmigratorbar.baml" ItemType="0" PsrId="223" Leaf="true">
+      <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
+    </Item>
     <Item ItemId=";xamls/productupdatebar.baml" ItemType="0" PsrId="223" Leaf="true">
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
     </Item>
@@ -2710,7 +2791,7 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4976]]></Val>
+        <Val><![CDATA[4.7.0.5026]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -2740,7 +2821,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4976]]></Val>
+        <Val><![CDATA[4.7.0.5026]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -2776,7 +2857,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1.4976+02f95f1d5679ffe1063fcfd3d2508e91a2d881e6]]></Val>
+        <Val><![CDATA[4.7.0-preview1.5026+2100be53332a83796b7410f73749b8fc7605fe03]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
