@@ -265,18 +265,27 @@
       <Item ItemId=";Migrator_AssemblyDirectlyUnderLibWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The assembly '{0}' is placed directly under the 'lib' folder. This assembly won't be referenced by the project after migration.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[L'assembly '{0}' si trova direttamente sotto la cartella 'lib'. Dopo la migrazione questo assembly non verrà usato come riferimento dal progetto.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Migrator_PackageHasContentFolder" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package '{0}' contains 'content' folder which will not be copied to the project directory after migration. The package may not work as expected after migration.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Il pacchetto '{0}' contiene la cartella 'content' che non verrà copiata nella directory del progetto dopo la migrazione. Il pacchetto potrebbe non funzionare come previsto dopo la migrazione.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Migrator_PackageHasInstallScript" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package '{0}' contains an install.ps1 script that will not be applied after migration.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Il pacchetto '{0}' contiene uno script install.ps1 che non verrà applicato dopo la migrazione.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -757,6 +766,9 @@
       <Item ItemId=";Error_RepositorySignatureMustNotHaveARepositoryCountersignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A repository primary signature must not have a repository countersignature.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Una firma primaria del repository non deve contenere una controfirma del repository.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1132,6 +1144,9 @@
       <Item ItemId=";RangeOutOfBoundsForArray" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Arguments {0} and {1} were out of bounds for the array.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Gli argomenti {0} e {1} non sono compresi nei limiti per la matrice.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1282,6 +1297,9 @@
       <Item ItemId=";SignedPackagePackageAlreadyCountersigned" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package already contains a repository countersignature. Please remove the existing signature before adding a new repository countersignature.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Il pacchetto contiene già una controfirma del repository. Rimuovere la firma esistente prima di aggiungere una nuova controfirma del repository.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1402,12 +1420,18 @@
       <Item ItemId=";StreamMustBeReadable" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The stream must be readable.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Il flusso deve essere leggibile.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";StreamMustBeSeekable" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The stream must be seekable.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Il flusso deve supportare la ricerca.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
