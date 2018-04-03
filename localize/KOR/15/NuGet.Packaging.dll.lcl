@@ -264,37 +264,49 @@
       </Item>
       <Item ItemId=";Migrator_AssemblyDirectlyUnderLibWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The assembly '{0}' is placed directly under the 'lib' folder. This assembly won't be referenced by the project after migration.]]></Val>
+          <Val><![CDATA[The assembly 'lib\{0}' will be ignored when the package is installed after the migration.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' 어셈블리는 'lib' 폴더 바로 아래에 놓입니다. 마이그레이션 후 이 어셈블리는 프로젝트에서 참조하지 않습니다.]]></Val>
+            <Val><![CDATA[마이그레이션 후 패키지가 설치되면 어셈블리 'lib\{0}'이(가) 무시됩니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The assembly '{0}' is placed directly under the 'lib' folder. This assembly won't be referenced by the project after migration.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Migrator_PackageHasContentFolder" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package '{0}' contains 'content' folder which will not be copied to the project directory after migration. The package may not work as expected after migration.]]></Val>
+          <Val><![CDATA[The package '{0}' contains 'content' folder which will not be available when the package is installed after the migration.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' 패키지에 마이그레이션 후 프로젝트 디렉터리로 복사되지 않는 'content' 폴더가 포함되어 있습니다. 마이그레이션 후 패키지가 예상대로 작동하지 않을 수 있습니다.]]></Val>
+            <Val><![CDATA[마이그레이션 후 패키지가 설치되면 패키지 '{0}'에 사용할 수 없는 'content' 폴더가 포함됩니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package '{0}' contains 'content' folder which will not be copied to the project directory after migration. The package may not work as expected after migration.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Migrator_PackageHasInstallScript" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package '{0}' contains an install.ps1 script that will not be applied after migration.]]></Val>
+          <Val><![CDATA[The package '{0}' contains install.ps1 script which will be ignored when the package is installed after the migration.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' 패키지에 마이그레이션 후 적용되지 않는 install.ps1 스크립트가 포함되어 있습니다.]]></Val>
+            <Val><![CDATA[마이그레이션 후 패키지가 설치되면 패키지 '{0}'에 무시되는 install.ps1 스크립트가 포함됩니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package '{0}' contains an install.ps1 script that will not be applied after migration.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Migrator_XdtTransformInPackage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package '{0}' contains an xdt transform which will not be applied to the project after migration.]]></Val>
+          <Val><![CDATA[The XDT transform file '{0}' will not be applied when the package is installed after the migration.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' 패키지에 마이그레이션 후 프로젝트에 적용되지 않는 xdt 변환이 포함되어 있습니다.]]></Val>
+            <Val><![CDATA[마이그레이션 후 패키지가 설치되면 XDT 변환 파일 '{0}'이(가) 적용되지 않습니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package '{0}' contains an xdt transform which will not be applied to the project after migration.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -891,10 +903,13 @@
       </Item>
       <Item ItemId=";InvalidPackageSignatureFileEntry" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package signature file entry is invalid.]]></Val>
+          <Val><![CDATA[The package signature file entry is invalid. {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[패키지 서명 파일 항목이 잘못되었습니다.]]></Val>
+            <Val><![CDATA[패키지 시그니처 파일 항목이 잘못되었습니다. {0}]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package signature file entry is invalid.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1657,7 +1672,7 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.1]]></Val>
+        <Val><![CDATA[4.7.0.4]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1684,7 +1699,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.5026]]></Val>
+        <Val><![CDATA[4.7.0.5060]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1717,7 +1732,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1.5026+2100be53332a83796b7410f73749b8fc7605fe03]]></Val>
+        <Val><![CDATA[4.7.0-preview4.5060+deab84db30cbd8cc738cd46ad694aebdbb43a1cf]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>

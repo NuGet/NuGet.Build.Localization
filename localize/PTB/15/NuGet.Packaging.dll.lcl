@@ -264,37 +264,49 @@
       </Item>
       <Item ItemId=";Migrator_AssemblyDirectlyUnderLibWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The assembly '{0}' is placed directly under the 'lib' folder. This assembly won't be referenced by the project after migration.]]></Val>
+          <Val><![CDATA[The assembly 'lib\{0}' will be ignored when the package is installed after the migration.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O assembly '{0}' está posicionado diretamente na pasta 'lib'. Esse assembly não será referenciado pelo projeto após a migração.]]></Val>
+            <Val><![CDATA[O assembly 'lib\{0}' será ignorado quando o pacote for instalado após a migração.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The assembly '{0}' is placed directly under the 'lib' folder. This assembly won't be referenced by the project after migration.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Migrator_PackageHasContentFolder" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package '{0}' contains 'content' folder which will not be copied to the project directory after migration. The package may not work as expected after migration.]]></Val>
+          <Val><![CDATA[The package '{0}' contains 'content' folder which will not be available when the package is installed after the migration.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O pacote '{0}' contém a pasta "content", que não será copiada para o diretório do projeto após a migração. O pacote poderá não funcionar conforme o esperado após a migração.]]></Val>
+            <Val><![CDATA[O pacote '{0}' contém a pasta de 'conteúdo', que não estará disponível quando o pacote for instalado após a migração.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package '{0}' contains 'content' folder which will not be copied to the project directory after migration. The package may not work as expected after migration.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Migrator_PackageHasInstallScript" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package '{0}' contains an install.ps1 script that will not be applied after migration.]]></Val>
+          <Val><![CDATA[The package '{0}' contains install.ps1 script which will be ignored when the package is installed after the migration.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O pacote '{0}' contém um script install.ps1 que não será aplicado após a migração.]]></Val>
+            <Val><![CDATA[O pacote '{0}' contém o script install.ps1, que será ignorado quando o pacote for instalado após a migração.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package '{0}' contains an install.ps1 script that will not be applied after migration.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Migrator_XdtTransformInPackage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package '{0}' contains an xdt transform which will not be applied to the project after migration.]]></Val>
+          <Val><![CDATA[The XDT transform file '{0}' will not be applied when the package is installed after the migration.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O pacote '{0}' contém uma transformação xdt que não será aplicada ao projeto após a migração.]]></Val>
+            <Val><![CDATA[O arquivo de transformação XDT '{0}' não será aplicado quando o pacote for instalado após a migração.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package '{0}' contains an xdt transform which will not be applied to the project after migration.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -891,10 +903,13 @@
       </Item>
       <Item ItemId=";InvalidPackageSignatureFileEntry" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package signature file entry is invalid.]]></Val>
+          <Val><![CDATA[The package signature file entry is invalid. {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A entrada do arquivo de assinatura do pacote é inválida.]]></Val>
+            <Val><![CDATA[A entrada do arquivo de assinatura do pacote é inválida. {0}]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package signature file entry is invalid.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1657,7 +1672,7 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.1]]></Val>
+        <Val><![CDATA[4.7.0.4]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1684,7 +1699,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.5027]]></Val>
+        <Val><![CDATA[4.7.0.5060]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1717,7 +1732,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1.5027+2100be53332a83796b7410f73749b8fc7605fe03]]></Val>
+        <Val><![CDATA[4.7.0-preview4.5060+deab84db30cbd8cc738cd46ad694aebdbb43a1cf]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
