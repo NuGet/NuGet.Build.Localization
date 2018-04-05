@@ -154,15 +154,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";BaseIntermediateOutputPathNotFound" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The BaseIntermediateOutputPath MSBuild property could not be found for project '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[プロジェクト '{0}' の BaseIntermediateOutputPath MSBuild プロパティが見つかりませんでした。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";ConfigErrorDialogBoxTitle" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[NuGet operation failed]]></Val>
@@ -382,6 +373,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";MSBuildPropertyNotFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The {0} MSBuild property could not be found for project '{1}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プロジェクト '{1}' の {0} MSBuild プロパティが見つかりませんでした。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";PackageStreamShouldBeSeekable" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package stream should be seekable]]></Val>
@@ -568,7 +568,7 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4875]]></Val>
+        <Val><![CDATA[4.7.0.5067]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -589,7 +589,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4875]]></Val>
+        <Val><![CDATA[4.7.0.5067]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -625,7 +625,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4875]]></Val>
+        <Val><![CDATA[4.7.0-preview4.5067+256f313d6122bfa9857dd5b61c637daca5f53c2e]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
