@@ -940,7 +940,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";InvalidRepositoryCounterSignature" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";InvalidRepositoryCountersignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The repository countersignature is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -1162,6 +1162,18 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[{0} 및 {1} 인수가 배열에 대한 범위를 벗어났습니다.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";RepositoryCountersignatureHasNoCertificate" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The repository countersignature does not have a signing certificate.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";RepositoryCountersignatureHasNoTimestamp" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The repository countersignature does not have a timestamp.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1624,6 +1636,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";UnrelatedSignatures" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The primary signature and repository countersignature are unrelated.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";UnsupportedAsn1" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The ASN.1 data is unsupported.]]></Val>
@@ -1699,7 +1717,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.5060]]></Val>
+        <Val><![CDATA[4.7.0.5067]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1732,7 +1750,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview4.5060+deab84db30cbd8cc738cd46ad694aebdbb43a1cf]]></Val>
+        <Val><![CDATA[4.7.0-preview4.5067+256f313d6122bfa9857dd5b61c637daca5f53c2e]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
