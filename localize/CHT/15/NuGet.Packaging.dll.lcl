@@ -276,36 +276,36 @@
       </Item>
       <Item ItemId=";Migrator_PackageHasContentFolder" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package '{0}' contains 'content' folder which will not be available when the package is installed after the migration.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA['content' assets will not be available when the package is installed after the migration.]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[當套件在移轉後安裝時，套件 '{0}' 包含的 'content' 資料夾會無法使用。]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[The package '{0}' contains 'content' folder which will not be copied to the project directory after migration. The package may not work as expected after migration.]]></Val>
+            <Val><![CDATA[The package '{0}' contains 'content' folder which will not be available when the package is installed after the migration.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Migrator_PackageHasInstallScript" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package '{0}' contains install.ps1 script which will be ignored when the package is installed after the migration.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[install.ps1 script will be ignored when the package is installed after the migration.]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[當套件在移轉後安裝時，系統會略過套件 '{0}' 包含的 install.ps1 指令碼。]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[The package '{0}' contains an install.ps1 script that will not be applied after migration.]]></Val>
+            <Val><![CDATA[The package '{0}' contains install.ps1 script which will be ignored when the package is installed after the migration.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Migrator_XdtTransformInPackage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The XDT transform file '{0}' will not be applied when the package is installed after the migration.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[XDT transform file '{0}' will not be applied when the package is installed after the migration.]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[當套件在移轉後安裝時，XDT 轉換檔 '{0}' 就不會套用。]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[The package '{0}' contains an xdt transform which will not be applied to the project after migration.]]></Val>
+            <Val><![CDATA[The XDT transform file '{0}' will not be applied when the package is installed after the migration.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -745,12 +745,27 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_NoMatchingCertificate" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_NoClientAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[No certificate matching the provided {0} fingerprint(s) was found in the signature.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[在簽章中找不到任何符合所提供之 {0} 個指紋的憑證。]]></Val>
-          </Tgt>
+          <Val><![CDATA[The package signature certificate cannot be trusted as no client allow list found.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_NoMatchingClientCertificate" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in client allow list.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_NoMatchingRepositoryCertificate" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in repository allow list.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_NoRepoAllowList" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package signature certificate cannot be trusted as no repository allow list found.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1168,12 +1183,18 @@
       <Item ItemId=";RepositoryCountersignatureHasNoCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The repository countersignature does not have a signing certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[此存放庫副署不具簽署憑證。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";RepositoryCountersignatureHasNoTimestamp" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The repository countersignature does not have a timestamp.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[存放庫副署不具時間戳記。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1639,6 +1660,9 @@
       <Item ItemId=";UnrelatedSignatures" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The primary signature and repository countersignature are unrelated.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[主要簽章與存放庫副署互不相關。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1690,7 +1714,7 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4]]></Val>
+        <Val><![CDATA[4.7.0.6]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1717,7 +1741,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.5067]]></Val>
+        <Val><![CDATA[4.7.0.5083]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1750,7 +1774,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview4.5067+256f313d6122bfa9857dd5b61c637daca5f53c2e]]></Val>
+        <Val><![CDATA[4.7.0-preview6.5083+90524ca5f2313702df2f29b72649c9611aa4b086]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
