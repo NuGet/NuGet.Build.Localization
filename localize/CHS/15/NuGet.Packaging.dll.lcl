@@ -289,8 +289,8 @@
       <Item ItemId=";Migrator_PackageHasInstallScript" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[install.ps1 script will be ignored when the package is installed after the migration.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[包“{0}”包含 install.ps1 脚本，如果包在迁移后安装，将忽略该脚本。]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[如果包在迁移后安装，则会忽略 install.ps1 脚本。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The package '{0}' contains install.ps1 script which will be ignored when the package is installed after the migration.]]></Val>
@@ -1849,6 +1849,9 @@
       <Item ItemId=";VerifyError_TimestampVerifyChainBuildingIssue" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The {0}'s timestamp found a chain building issue: {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} 的时间戳发现链生成问题: {1}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
