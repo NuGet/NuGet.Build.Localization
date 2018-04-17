@@ -277,8 +277,8 @@
       <Item ItemId=";Migrator_PackageHasContentFolder" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['content' assets will not be available when the package is installed after the migration.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[O pacote '{0}' contém a pasta de 'conteúdo', que não estará disponível quando o pacote for instalado após a migração.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Os ativos 'content' não estarão disponíveis quando o pacote for instalado após a migração.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The package '{0}' contains 'content' folder which will not be available when the package is installed after the migration.]]></Val>
@@ -1750,6 +1750,9 @@
       <Item ItemId=";VerifyError_InvalidCertificateChain" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The {0}'s certificate chain validation failed with error(s): {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A validação da cadeia de certificados de {0} falhou com os erros: {1}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
