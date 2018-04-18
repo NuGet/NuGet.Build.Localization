@@ -535,6 +535,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ErrorAuthorTargetCannotBeACountersignature" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Cannot target author signatures that are countersignatures.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nie można wskazywać podpisów autora, które są kontrasygnatami.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ErrorByteSignatureNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Byte signature not found in package archive:  0x{0}]]></Val>
@@ -714,10 +723,13 @@
       </Item>
       <Item ItemId=";Error_NoClientAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package signature certificate cannot be trusted as no client allow list found.]]></Val>
+          <Val><![CDATA[A list of trusted signers is required by the client but none was found.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nie można zaufać certyfikatowi podpisu pakietu, ponieważ nie znaleziono listy dozwolonych klienta.]]></Val>
+            <Val><![CDATA[Lista zaufanych osób podpisujących jest wymagana przez klienta, ale jej nie znaleziono.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package signature certificate cannot be trusted as no client allow list found.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -741,10 +753,13 @@
       </Item>
       <Item ItemId=";Error_NoRepoAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package signature certificate cannot be trusted as no repository allow list found.]]></Val>
+          <Val><![CDATA[A repository announced that their packages should be signed but an empty list of trusted certificates was found.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nie można zaufać certyfikatowi podpisu pakietu, ponieważ nie znaleziono listy dozwolonych repozytorium.]]></Val>
+            <Val><![CDATA[Zgodnie z anonsem repozytorium jego pakiety powinny być podpisane, ale znaleziono pustą listę zaufanych certyfikatów.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package signature certificate cannot be trusted as no repository allow list found.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1900,7 +1915,7 @@
     </Item>
     <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.5094]]></Val>
+        <Val><![CDATA[4.7.0.5106]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1933,7 +1948,7 @@
     </Item>
     <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview6.5094+09bd18127a5a08e7be0fdff3f86ef282f9fc7271]]></Val>
+        <Val><![CDATA[4.7.0-preview6.5106+5727baabd16f04cae045733633182b033695ec70]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
