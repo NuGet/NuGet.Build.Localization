@@ -1228,6 +1228,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";SignError_TimestampGeneralizedTimeInvalid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The timestamp's generalized time is outside the timestamping certificate's validity period.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Uogólniony czas dla sygnatury czasowej wykracza poza okres ważności certyfikatu użycia sygnatury czasowej.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";SignError_TimestampIntegrityCheckFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp integrity check failed.]]></Val>
@@ -1798,6 +1807,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";VerifyError_TimestampGeneralizedTimeInvalid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The {0}'s timestamp's generalized time is outside the timestamping certificate's validity period.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Uogólniony czas dla sygnatury czasowej elementu {0} wykracza poza okres ważności certyfikatu użycia sygnatury czasowej.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";VerifyError_TimestampIntegrityCheckFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The {0}'s timestamp integrity check failed.]]></Val>
@@ -1886,12 +1904,6 @@
   </Item>
   <Item ItemId=";Version" ItemType="0" PsrId="211" Leaf="false">
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
-    <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.6]]></Val>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId=";Comments" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[NuGet's implementation for reading nupkg package and nuspec package specification files.]]></Val>
@@ -1910,12 +1922,6 @@
     <Item ItemId=";FileDescription" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
       <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[NuGet.Packaging]]></Val>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.5106]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1943,12 +1949,6 @@
     <Item ItemId=";ProductName" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
       <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[NuGet]]></Val>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview6.5106+5727baabd16f04cae045733633182b033695ec70]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
