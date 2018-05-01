@@ -186,10 +186,13 @@
       </Item>
       <Item ItemId=";MSSignCommandUsageSummary" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[<package_path> -Timestamper <timestamp_server_url> -CertificateFile <p7b_file_path> -CSPName <cryptographic_service _provider_name>  -KeyContianer <key_container_guid>  -CertificateFingerprint <certificate_fingerprint>]]></Val>
+          <Val><![CDATA[<package_path> -Timestamper <timestamp_server_url> -CertificateFile <p7b_file_path> -CSPName <cryptographic_service _provider_name>  -KeyContainer <key_container_guid>  -CertificateFingerprint <certificate_fingerprint>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[<chemin_du_package> -Timestamper <URL_du_serveur_horodatage> -CertificateFile <chemin_du_fichier_p7b> -CSPName <nom_du_fournisseur_de_services_de_chiffrement>  -KeyContianer <GUID_du_conteneur_de_clé>  -CertificateFingerprint <empreinte_du_certificat>]]></Val>
+            <Val><![CDATA[<chemin_package> -Timestamper <url_serveur_horodatage> -CertificateFile <chemin_fichier_p7b> -CSPName <nom_fournisseur_services_chiffrement> -KeyContainer <guid_conteneur_clé> -CertificateFingerprint <empreinte_digitale_certificat>]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[<package_path> -Timestamper <timestamp_server_url> -CertificateFile <p7b_file_path> -CSPName <cryptographic_service _provider_name>  -KeyContianer <key_container_guid>  -CertificateFingerprint <certificate_fingerprint>]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -251,12 +254,6 @@
   </Item>
   <Item ItemId=";Version" ItemType="0" PsrId="211" Leaf="false">
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
-    <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.1]]></Val>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId=";Comments" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[NuGet client library.]]></Val>
@@ -278,12 +275,6 @@
         <Tgt Cat="Text" Stat="Loc" Orig="New">
           <Val><![CDATA[NuGet.MSSigning.Extensions]]></Val>
         </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4983]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -314,12 +305,6 @@
         <Tgt Cat="Text" Stat="Loc" Orig="New">
           <Val><![CDATA[NuGet]]></Val>
         </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1.4983+37c9c7260314d12979399accf0997fdd9cf05b8a]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
