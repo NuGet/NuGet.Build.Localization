@@ -235,6 +235,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";FilePathTooLongWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The file '{0}' path, name, or both are too long. Your package might not work without long file path support. Please shorten the file path or file name.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Za długa ścieżka lub nazwa pliku „{0}” albo jedno i drugie. Pakiet może nie działać bez obsługi długich ścieżek. Skróć ścieżkę lub nazwę pliku.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";InvalidFrameworkWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The folder '{0}' under 'lib' is not recognized as a valid framework name or a supported culture identifier. Rename it to a valid framework name or culture identifier.]]></Val>
@@ -1066,6 +1075,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";NoRepositorySignature" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package does not have a repository signature (primary or countersignature).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Pakiet nie ma podpisu repozytorium (podstawowego lub kontrasygnaty).]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";NuGetPackageOwners" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[nuget-package-owners: {0}]]></Val>
@@ -1278,15 +1296,6 @@
           <Val><![CDATA[The timestamp signature validation failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Weryfikacja podpisu sygnatury czasowej nie powiodła się.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignError_TimestampUnsupportedSignatureAlgorithm" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The timestamp certificate has an unsupported signature algorithm.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Certyfikat sygnatury czasowej ma nieobsługiwany algorytm podpisu.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1606,6 +1615,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";TimestampCertificateUnsupportedSignatureAlgorithm" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The timestamp certificate has an unsupported signature algorithm ({0}). The following algorithms are supported: {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Certyfikat sygnatury czasowej ma nieobsługiwany algorytm podpisywania ({0}). Obsługiwane są następujące algorytmy: {1}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";TimestampFailureInvalidHttpScheme" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamper URL '{0}' has an invalid URI scheme. The supported schemes are '{1}' and '{2}'.]]></Val>
@@ -1635,6 +1653,15 @@
           <Val><![CDATA[Timestamp service's response does not meet the NuGet package signature specification: '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Odpowiedź usługi sygnatur czasowych nie spełnia wymagań specyfikacji podpisu pakietu NuGet: „{0}”.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TimestampResponseUnsupportedDigestAlgorithm" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The timestamp response has an unsupported digest algorithm ({0}). The following algorithms are supported: {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Odpowiedź sygnatury czasowej ma nieobsługiwany algorytm skrótu ({0}). Obsługiwane są następujące algorytmy: {1}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
