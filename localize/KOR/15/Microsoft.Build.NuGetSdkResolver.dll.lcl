@@ -16,18 +16,27 @@
       <Item ItemId=";CouldNotFindInstalledPackage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Failed to resolve SDK '{0}'. A package was successfully restored but the package could not be located.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[SDK '{0}'을(를) 확인하지 못했습니다. 패키지가 복원되었지만 패키지를 찾을 수 없습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";FailedToParseGlobalJson" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Failed to parse "{0}". {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA["{0}"을(를) 구문 분석하지 못했습니다. {1}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";PackageWasNotInstalled" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Failed to resolve SDK '{0}'. Package restore was successful but a package with the ID of "{1}" was not installed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[SDK '{0}'을(를) 확인하지 못했습니다. 패키지를 복원했지만 ID가 "{1}"인 패키지가 설치되지 않았습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -38,6 +47,9 @@
     <Item ItemId=";Comments" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[MSBuild SDK resolver for NuGet packages.]]></Val>
+        <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[NuGet 패키지에 대한 MSBuild SDK 확인자입니다.]]></Val>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
