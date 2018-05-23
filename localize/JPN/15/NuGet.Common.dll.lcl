@@ -105,9 +105,21 @@
       </Item>
       <Item ItemId=";UnsupportedHashAlgorithmName" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The hash algorithm '{0}' is unsupported.]]></Val>
+          <Val><![CDATA[Hash algorithm '{0}' is unsupported.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[ハッシュ アルゴリズム '{0}' はサポートされていません。]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The hash algorithm '{0}' is unsupported.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnsupportedSignatureAlgorithmName" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Signature algorithm '{0}' is unsupported.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[署名アルゴリズム '{0}' はサポートされていません。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -116,12 +128,6 @@
   </Item>
   <Item ItemId=";Version" ItemType="0" PsrId="211" Leaf="false">
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
-    <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.1]]></Val>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId=";Comments" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[NuGet client library.]]></Val>
@@ -143,12 +149,6 @@
         <Tgt Cat="Text" Stat="Loc" Orig="New">
           <Val><![CDATA[NuGet.Common]]></Val>
         </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4875]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -179,12 +179,6 @@
         <Tgt Cat="Text" Stat="Loc" Orig="New">
           <Val><![CDATA[NuGet]]></Val>
         </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1-4875]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>

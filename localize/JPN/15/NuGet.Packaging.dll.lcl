@@ -235,6 +235,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";FilePathTooLongWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The file '{0}' path, name, or both are too long. Your package might not work without long file path support. Please shorten the file path or file name.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ファイル '{0}' のパスと名前の両方またはいずれかが長すぎます。このパッケージは、長いファイル パスがサポートされていない場合は動作しない可能性があります。ファイルのパスまたはファイル名を短くしてください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";InvalidFrameworkWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The folder '{0}' under 'lib' is not recognized as a valid framework name or a supported culture identifier. Rename it to a valid framework name or culture identifier.]]></Val>
@@ -1060,6 +1069,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";NoRepositorySignature" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package does not have a repository signature (primary or countersignature).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[パッケージには、リポジトリの署名 (プライマリまたは副署名) がありません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";NuGetPackageOwners" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[nuget-package-owners: {0}]]></Val>
@@ -1272,15 +1290,6 @@
           <Val><![CDATA[The timestamp signature validation failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[タイムスタンプ署名の検証に失敗しました。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignError_TimestampUnsupportedSignatureAlgorithm" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The timestamp certificate has an unsupported signature algorithm.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[タイムスタンプ証明書には、サポートされていない署名アルゴリズムがあります。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1600,6 +1609,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";TimestampCertificateUnsupportedSignatureAlgorithm" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The timestamp certificate has an unsupported signature algorithm ({0}). The following algorithms are supported: {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[タイムスタンプの証明書の署名アルゴリズム ({0}) がサポートされていません。サポートされているアルゴリズムは次のとおりです: {1}。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";TimestampFailureInvalidHttpScheme" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamper URL '{0}' has an invalid URI scheme. The supported schemes are '{1}' and '{2}'.]]></Val>
@@ -1629,6 +1647,15 @@
           <Val><![CDATA[Timestamp service's response does not meet the NuGet package signature specification: '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[タイムスタンプ サービスの応答が、次の NuGet パッケージ署名の仕様を満たしていません: '{0}'。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TimestampResponseUnsupportedDigestAlgorithm" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The timestamp response has an unsupported digest algorithm ({0}). The following algorithms are supported: {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[タイムスタンプの応答のダイジェスト アルゴリズム ({0}) がサポートされていません。サポートされているアルゴリズムは次のとおりです: {1}。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
