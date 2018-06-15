@@ -859,6 +859,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";InvalidArgumentCombination" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid combination of arguments {0} and {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Недопустимое сочетание аргументов {0} и {1}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";InvalidAsn1" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The ASN.1 data is invalid.]]></Val>
@@ -1156,6 +1165,12 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Для пакета «{0}» требуется клиент NuGet версии «{1}» или выше, однако текущая версия NuGet — «{2}». Чтобы обновить NuGet, перейдите по адресу: http://docs.nuget.org/consume/installing-nuget]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackageSignatureVerificationLog" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[PackageSignatureVerificationLog: PackageIdentity: {0} Source: {1} PackageSignatureValidity: {2}]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1701,6 +1716,15 @@
           <Val><![CDATA[An unexpected error occurred while verifying a package signature.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Произошла неожиданная ошибка при проверке подписи пакета.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnrecognizedEnumValue" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The enum value '{0}' is unrecognized.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Не удалось распознать значение перечисления "{0}".]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
