@@ -700,11 +700,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ErrorUnableCheckPackageEntries" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[An unexpected error occurred while checking package entries.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[パッケージ エントリのチェック中に予期しないエラーが発生しました。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ErrorUnableToDeleteFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to delete temporary file '{0}'. Error: '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[一時ファイル '{0}' を削除できません。エラー: '{1}'。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ErrorUnsafePackageEntry" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package '{0}' contains an entry which is unsafe for extraction.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[パッケージ '{0}' には、安全に抽出できないエントリが含まれています。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1171,6 +1189,9 @@
       <Item ItemId=";PackageSignatureVerificationLog" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[PackageSignatureVerificationLog: PackageIdentity: {0} Source: {1} PackageSignatureValidity: {2}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[PackageSignatureVerificationLog: PackageIdentity:{0} ソース: {1} PackageSignatureValidity: {2}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
