@@ -700,11 +700,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ErrorUnableCheckPackageEntries" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[An unexpected error occurred while checking package entries.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Wystąpił nieoczekiwany błąd podczas sprawdzania wpisów pakietu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ErrorUnableToDeleteFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to delete temporary file '{0}'. Error: '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Nie można usunąć pliku tymczasowego „{0}”. Błąd: „{1}”.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ErrorUnsafePackageEntry" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package '{0}' contains an entry which is unsafe for extraction.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Pakiet „{0}” zawiera wpis, którego wyodrębnianie nie jest bezpieczne.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1170,6 +1188,15 @@
           <Val><![CDATA[The '{0}' package requires NuGet client version '{1}' or above, but the current NuGet version is '{2}'. To upgrade NuGet, please go to http://docs.nuget.org/consume/installing-nuget]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Pakiet „{0}” wymaga wersji klienta NuGet „{1}” lub nowszej, ale obecna wersja narzędzia NuGet to „{2}”. Aby uaktualnić narzędzie NuGet, przejdź na stronę http://docs.nuget.org/consume/installing-nuget]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackageSignatureVerificationLog" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[PackageSignatureVerificationLog: PackageIdentity: {0} Source: {1} PackageSignatureValidity: {2}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[PackageSignatureVerificationLog: PackageIdentity: {0} Source: {1} PackageSignatureValidity: {2}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

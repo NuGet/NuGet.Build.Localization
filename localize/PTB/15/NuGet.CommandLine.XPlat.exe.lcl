@@ -46,6 +46,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";AddPkg_InteractiveDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Allow the command to block and require manual action for operations like authentication.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Permitir que o comando bloqueie e exija ação manual para operações como a autenticação.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";AddPkg_NoRestoreDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Do not perform restore preview and compatibility check. The added package reference will be unconditional.]]></Val>
@@ -577,7 +586,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";NoServiceEndpoint_Description" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";NoServiceEndpoint_Description" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[--no-service-endpoint does not append "api/v2/packages" to the source URL.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -935,12 +944,6 @@
   </Item>
   <Item ItemId=";Version" ItemType="0" PsrId="211" Leaf="false">
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
-    <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.3]]></Val>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId=";Comments" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[NuGet wrapper for dotnet.exe]]></Val>
@@ -962,12 +965,6 @@
         <Tgt Cat="Text" Stat="Loc" Orig="New">
           <Val><![CDATA[NuGet.CommandLine.XPlat]]></Val>
         </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.5038]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -998,12 +995,6 @@
         <Tgt Cat="Text" Stat="Loc" Orig="New">
           <Val><![CDATA[NuGet]]></Val>
         </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview3.5038+1ff2426c5f90b373598a7cbec3560bd69b9be1a8]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
