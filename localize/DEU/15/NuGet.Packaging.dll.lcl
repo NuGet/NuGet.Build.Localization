@@ -1096,12 +1096,9 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";NoRepositorySignature" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";NoRepositoryCountersignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package does not have a repository signature (primary or countersignature).]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Das Paket weist keine Repositorysignatur auf (primär oder Gegensignatur).]]></Val>
-          </Tgt>
+          <Val><![CDATA[Verification settings require a repository countersignature, but the package does not have a repository countersignature.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1186,11 +1183,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";PackageSignatureVerificationLog" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";PackageSignatureVerificationLog" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[PackageSignatureVerificationLog: PackageIdentity: {0} Source: {1} PackageSignatureValidity: {2}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[PackageSignatureVerificationLog: PackageIdentity: {0} Quelle: {1} PackageSignatureValidity: {2}]]></Val>
+            <Val><![CDATA[PackageSignatureVerificationLog: PackageIdentity: {0} Source: {1} PackageSignatureValidity: {2}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
