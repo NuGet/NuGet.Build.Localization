@@ -1096,11 +1096,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";NoRepositorySignature" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";NoRepositoryCountersignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package does not have a repository signature (primary or countersignature).]]></Val>
+          <Val><![CDATA[Verification settings require a repository countersignature, but the package does not have a repository countersignature.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O pacote não tem uma assinatura de repositório (primária ou referenda).]]></Val>
+            <Val><![CDATA[Configurações de verificação requerem uma referenda de repositório, mas o pacote não tem uma.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1186,7 +1186,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";PackageSignatureVerificationLog" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";PackageSignatureVerificationLog" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[PackageSignatureVerificationLog: PackageIdentity: {0} Source: {1} PackageSignatureValidity: {2}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
