@@ -435,19 +435,25 @@
       </Item>
       <Item ItemId=";LocalsCommand_Description" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clears or lists local NuGet resources such as http requests cache, packages cache or machine-wide global packages folder.]]></Val>
+          <Val><![CDATA[Clears or lists local NuGet resources such as http requests cache, packages folder, plugin operations cache  or machine-wide global packages folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Borra o muestra los recursos NuGet locales, como la caché de solicitudes http, o la caché de paquetes o la carpeta de paquetes globales de todas las máquinas.]]></Val>
+            <Val><![CDATA[Borra o enumera los recursos locales de NuGet, como la memoria caché de solicitudes http, la carpeta de paquetes, la memoria caché de operaciones de complementos o la carpeta de paquetes global para toda la máquina.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Clears or lists local NuGet resources such as http requests cache, packages cache or machine-wide global packages folder.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LocalsCommand_Help" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[uso: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;Para más información, visite http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[Uso: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;Para obtener más información, visite http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -462,28 +468,37 @@
       </Item>
       <Item ItemId=";LocalsCommand_MultipleOperations" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Both operations, --list and --clear, are not supported in the same command. Please specify only one operation.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Val><![CDATA[Both operations, --list and --clear, are not supported in the same command. Please specify only one operation.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ambas operaciones, --list and --clear, no se admiten en el mismo comando. Especifique una sola operación.]D;]A;uso: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;Para más información, visite http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[No se admiten ambas operaciones, --list y --clear, a la vez en el mismo comando. Especifique una sola operación.]D;]A;Uso: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;Para obtener más información, visite http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Both operations, --list and --clear, are not supported in the same command. Please specify only one operation.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LocalsCommand_NoArguments" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[No Cache Type was specified.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Val><![CDATA[No Cache Type was specified.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[No se especificó ningún tipo de caché.]D;]A;uso: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;Para más información, visite http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[No se especificó ningún tipo de caché.]D;]A;Uso: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;Para obtener más información, visite http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[No Cache Type was specified.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LocalsCommand_NoOperation" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Please specify an operation i.e. --list or --clear.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Val><![CDATA[Please specify an operation i.e. --list or --clear.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Especifique una operación, por ejemplo, --list o --clear.]D;]A;uso: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;Para más información, visite http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[Especifique una operación, es decir, --list o --clear.]D;]A;Uso: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;Para obtener más información, visite http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Please specify an operation i.e. --list or --clear.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
