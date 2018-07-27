@@ -249,10 +249,13 @@
       </Item>
       <Item ItemId=";Error_UnableToFindProjectInfo" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to find project information for '{0}'. The project file may be invalid or missing targets required for restore.]]></Val>
+          <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}'에 대한 프로젝트 정보를 찾을 수 없습니다. 프로젝트 파일이 잘못되었거나 복원에 필요한 대상이 없을 수 없습니다.]]></Val>
+            <Val><![CDATA['{0}'에 대한 프로젝트 정보를 찾을 수 없습니다. Visual Studio 내에서 프로젝트가 로드되지 않았거나 현재 솔루션의 일부가 아니기 때문일 수 있습니다. 그렇지 않으면 프로젝트 파일이 잘못되었거나 복원에 필요한 대상이 없을 수 있습니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Unable to find project information for '{0}'. The project file may be invalid or missing targets required for restore.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1092,10 +1095,13 @@
       </Item>
       <Item ItemId=";Log_VersionConflict" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Version conflict detected for {0}. Reference the package directly from the project to resolve this issue.]]></Val>
+          <Val><![CDATA[Version conflict detected for {0}. Install/reference {1} directly to project {2} to resolve this issue.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0}에 대한 버전 충돌이 검색되었습니다. 프로젝트에서 패키지를 직접 참조하여 이 문제를 해결하세요.]]></Val>
+            <Val><![CDATA[{0}에 대해 버전 충돌이 검색되었습니다. 이 문제를 해결하려면 {1}을(를) {2} 프로젝트에 직접 설치/참조하세요.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Version conflict detected for {0}. Reference the package directly from the project to resolve this issue.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

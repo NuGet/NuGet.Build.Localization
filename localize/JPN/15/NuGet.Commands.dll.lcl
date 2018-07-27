@@ -249,10 +249,13 @@
       </Item>
       <Item ItemId=";Error_UnableToFindProjectInfo" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to find project information for '{0}'. The project file may be invalid or missing targets required for restore.]]></Val>
+          <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' のプロジェクト情報が見つかりません。プロジェクト ファイルが無効であるか、復元に必要なターゲットが見つからない可能性があります。]]></Val>
+            <Val><![CDATA['{0}' のプロジェクト情報が見つかりません。Visual Studio で、プロジェクトがアンロードされているか、現在のソリューションの一部ではないことが原因の可能性があります。それ以外の場合、プロジェクト ファイルが無効であるか、復元に必要なターゲットがない可能性があります。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Unable to find project information for '{0}'. The project file may be invalid or missing targets required for restore.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1092,10 +1095,13 @@
       </Item>
       <Item ItemId=";Log_VersionConflict" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Version conflict detected for {0}. Reference the package directly from the project to resolve this issue.]]></Val>
+          <Val><![CDATA[Version conflict detected for {0}. Install/reference {1} directly to project {2} to resolve this issue.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} でバージョンの競合が検出されました。この問題を解決するには、プロジェクトから直接パッケージを参照してください。]]></Val>
+            <Val><![CDATA[{0} のバージョンの競合が検出されました。この問題を解決するには、{1} をプロジェクト {2} に直接インストールするか、参照します。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Version conflict detected for {0}. Reference the package directly from the project to resolve this issue.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

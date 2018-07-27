@@ -252,10 +252,13 @@
       </Item>
       <Item ItemId=";Error_UnableToFindProjectInfo" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to find project information for '{0}'. The project file may be invalid or missing targets required for restore.]]></Val>
+          <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Non è possibile trovare le informazioni di progetto per '{0}'. Il file di progetto potrebbe essere non valido oppure mancano destinazioni necessarie per il ripristino.]]></Val>
+            <Val><![CDATA[Le informazioni sul progetto per '{0}' non sono state trovate. All'interno di Visual Studio, questo problema può dipendere dal fatto che il caricamento del progetto è stato annullato o il progetto non fa parte della soluzione corrente. In caso contrario, il file di progetto potrebbe essere invalido oppure non includere le destinazioni necessarie per il ripristino.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Unable to find project information for '{0}'. The project file may be invalid or missing targets required for restore.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1095,10 +1098,13 @@
       </Item>
       <Item ItemId=";Log_VersionConflict" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Version conflict detected for {0}. Reference the package directly from the project to resolve this issue.]]></Val>
+          <Val><![CDATA[Version conflict detected for {0}. Install/reference {1} directly to project {2} to resolve this issue.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[È stato rilevato un conflitto di versioni per {0}. Per risolvere il problema, fare riferimento al pacchetto direttamente dal progetto.]]></Val>
+            <Val><![CDATA[È stato rilevato un conflitto di versioni per {0}. Per risolvere questo problema, installare {1} o farvi riferimento direttamente nel progetto {2}.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Version conflict detected for {0}. Reference the package directly from the project to resolve this issue.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
