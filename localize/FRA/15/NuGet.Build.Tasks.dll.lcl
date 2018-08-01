@@ -13,6 +13,15 @@
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId=";ImportsFallbackWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[ProjectReference '{0}' was resolved using '{1}' instead of the project target framework '{2}'. This project may not be fully compatible with your project.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La référence de projet '{0}' a été résolue en utilisant '{1}' au lieu du framework cible du projet '{2}'. Ce projet n'est peut-être pas totalement compatible avec votre projet.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";NoCompatibleTargetFramework" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Project '{0}' targets '{2}'. It cannot be referenced by a project that targets '{1}'.]]></Val>
@@ -53,7 +62,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The project fallback framework '{0}' is not a supported target framework.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le framework de secours du projet '{0}' n'est pas un framework cible pris en charge.]]></Val>
+            <Val><![CDATA[Le framework de secours du projet, '{0}', n'est pas un framework cible pris en charge.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -62,7 +71,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The project target framework '{0}' is not a supported target framework.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le framework cible du projet '{0}' n'est pas un framework cible pris en charge.]]></Val>
+            <Val><![CDATA[Le framework cible du projet, '{0}', n'est pas un framework cible pris en charge.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The framework '{0}' is not a supported target framework.]]></Val>
@@ -74,12 +83,6 @@
   </Item>
   <Item ItemId=";Version" ItemType="0" PsrId="211" Leaf="false">
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
-    <Item ItemId=";AssemblyVersion" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.1]]></Val>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId=";Comments" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[NuGet restore for dotnet CLI]]></Val>
@@ -101,12 +104,6 @@
         <Tgt Cat="Text" Stat="Loc" Orig="New">
           <Val><![CDATA[NuGet.Build.Tasks]]></Val>
         </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId=";FileVersion" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0.4957]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -137,12 +134,6 @@
         <Tgt Cat="Text" Stat="Loc" Orig="New">
           <Val><![CDATA[NuGet]]></Val>
         </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
-    <Item ItemId=";ProductVersion" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
-        <Val><![CDATA[4.7.0-preview1.4957+4c0c9658445573845ddbeff5656e4b3129f727a2]]></Val>
       </Str>
       <Disp Icon="Str" />
     </Item>
