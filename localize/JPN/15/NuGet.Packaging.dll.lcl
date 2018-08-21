@@ -262,6 +262,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";InvalidPlaceholderFileWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The file at '{0}' uses the symbol for empty directory '_._', but it is present in a directory that contains other files. Please remove this file from directories that contain other files.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";InvalidPrereleaseDependencyWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A stable release of a package should not have a prerelease dependency. Either modify the version spec of dependency "{0}" or update the version field in the nuspec.]]></Val>
@@ -1307,7 +1313,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The timestamp's generalized time is outside the timestamping certificate's validity period.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[タイムスタンプの汎用化された時間は、タイムスタンプの証明書の有効期間外です。]]></Val>
+            <Val><![CDATA[タイムスタンプの汎用化された時間が、タイムスタンプの証明書の有効期間外です。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1574,7 +1580,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute does not have exactly one attribute value.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[signing-certificate-v2 属性には、1 つの属性値がありません。]]></Val>
+            <Val><![CDATA[signing-certificate-v2 属性の属性値が 1 つではありません。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1931,7 +1937,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The {0} timestamp's message imprint uses an unsupported hash algorithm.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} タイムスタンプのメッセージ インプリントでは、サポートされていないハッシュ アルゴリズムを使用します。]]></Val>
+            <Val><![CDATA[{0} タイムスタンプのメッセージ インプリントで、サポートされていないハッシュ アルゴリズムが使用されています。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
