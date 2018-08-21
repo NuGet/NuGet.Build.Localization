@@ -1538,7 +1538,7 @@
         <Str Cat="Text">
           <Val><![CDATA[File '{0}' was not added to the package. Files and folders starting with '.' or ending with '.nupkg' are excluded by default. To include this file, use -NoDefaultExcludes from the commandline]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[ファイル '{0}' がパッケージに追加されませんでした。既定で、先頭が '.' で始まるフォイルとフォルダー、末尾が '.nupkg' のファイルとフォルダーは除外されます。このファイルを含めるには、コマンドラインから -NoDefaultExcludes を使用します]]></Val>
+            <Val><![CDATA[ファイル '{0}' がパッケージに追加されませんでした。既定で、先頭が '.' で始まるファイルとフォルダー、末尾が '.nupkg' のファイルとフォルダーは除外されます。このファイルを含めるには、コマンドラインから -NoDefaultExcludes を使用します]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1612,18 +1612,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[プロジェクトの依存関係 {0} には下限値 (その値を含む) が含まれていません。復元結果の一貫性を確保するには、依存関係バージョンの下限値を含めてください。]]></Val>
           </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_SemanticVersion" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Version "{0}" does not follow semantic versioning guidelines. Update your nuspec file or use the AssemblyInformationalVersion assembly attribute to specify a semantic version as described at http://semver.org.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[バージョン "{0}" は、セマンティック バージョニングのガイドラインに従っていません。nuspec ファイルを更新するか、http://semver.org で説明されているように AssemblyInformationalVersion アセンブリ属性を使用してセマンティック バージョンを指定してください。]]></Val>
-          </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Version "{0}" does not follow semantic versioning guidelines.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
