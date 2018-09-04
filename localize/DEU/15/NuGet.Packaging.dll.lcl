@@ -1633,6 +1633,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";SigningWouldRequireZip64" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package cannot be signed as it would require the Zip64 format.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Paket kann nicht signiert werden, weil hierzu das Zip64-Format erforderlich wäre.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";StreamMustBeReadable" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The stream must be readable.]]></Val>
@@ -1825,6 +1834,24 @@
           <Prev Cat="Text">
             <Val><![CDATA[Verifying timestamp with timestamping service certificate: {0}]]></Val>
           </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VerifyCertTrustOfflineWhileRevocationModeOffline" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The revocation function was unable to check revocation because the certificate is not available in the cached certificate revocation list and NUGET_CERT_REVOCATION_MODE environment variable has been set to offline. For more information, visit https://aka.ms/certificateRevocationMode.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Sperrfunktion konnte die Sperrung nicht überprüfen, weil das Zertifikat nicht in der zwischengespeicherten Zertifikatsperrliste verfügbar ist und die Umgebungsvariable NUGET_CERT_REVOCATION_MODE auf "offline" festgelegt wurde. Weitere Informationen finden Sie unter https://aka.ms/certificateRevocationMode.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VerifyCertTrustOfflineWhileRevocationModeOnline" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The revocation function was unable to check revocation because the revocation server could not be reached. For more information, visit https://aka.ms/certificateRevocationMode.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Sperrfunktion konnte die Sperrung nicht überprüfen, weil der Sperrserver nicht erreichbar war. Weitere Informationen finden Sie unter https://aka.ms/certificateRevocationMode.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
