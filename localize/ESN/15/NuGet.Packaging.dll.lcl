@@ -1633,6 +1633,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";SigningWouldRequireZip64" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package cannot be signed as it would require the Zip64 format.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se puede firmar el paquete porque debe tener formato de Zip64.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";StreamMustBeReadable" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The stream must be readable.]]></Val>
@@ -1825,6 +1834,24 @@
           <Prev Cat="Text">
             <Val><![CDATA[Verifying timestamp with timestamping service certificate: {0}]]></Val>
           </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VerifyCertTrustOfflineWhileRevocationModeOffline" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The revocation function was unable to check revocation because the certificate is not available in the cached certificate revocation list and NUGET_CERT_REVOCATION_MODE environment variable has been set to offline. For more information, visit https://aka.ms/certificateRevocationMode.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La función de revocación no pudo comprobar la revocación porque el certificado no está disponible en la lista de revocación de certificados almacenada en caché y la variable de entorno NUGET_CERT_REVOCATION_MODE se ha establecido como sin conexión. Para obtener más información, visite https://aka.ms/certificateRevocationMode.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VerifyCertTrustOfflineWhileRevocationModeOnline" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The revocation function was unable to check revocation because the revocation server could not be reached. For more information, visit https://aka.ms/certificateRevocationMode.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La función de revocación no pudo comprobar la revocación porque no se pudo conectar con el servidor correspondiente. Para obtener más información, visite https://aka.ms/certificateRevocationMode.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
