@@ -1633,6 +1633,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";SigningWouldRequireZip64" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package cannot be signed as it would require the Zip64 format.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[패키지는 Zip64 형식이 필요하므로 서명될 수 없습니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";StreamMustBeReadable" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The stream must be readable.]]></Val>
@@ -1825,6 +1834,24 @@
           <Prev Cat="Text">
             <Val><![CDATA[Verifying timestamp with timestamping service certificate: {0}]]></Val>
           </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VerifyCertTrustOfflineWhileRevocationModeOffline" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The revocation function was unable to check revocation because the certificate is not available in the cached certificate revocation list and NUGET_CERT_REVOCATION_MODE environment variable has been set to offline. For more information, visit https://aka.ms/certificateRevocationMode.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[캐시된 인증서 해지 목록에서 인증서를 사용할 수 없고 NUGET_CERT_REVOCATION_MODE 환경 변수가 오프라인으로 설정되어 있기 때문에 해지 함수가 해지를 확인할 수 없습니다. 자세한 내용은 https://aka.ms/certificateRevocationMode를 참조하세요.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VerifyCertTrustOfflineWhileRevocationModeOnline" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The revocation function was unable to check revocation because the revocation server could not be reached. For more information, visit https://aka.ms/certificateRevocationMode.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[해지 서버에 연결할 수 없기 때문에 해지 함수가 해지를 확인할 수 없습니다. 자세한 내용은 https://aka.ms/certificateRevocationMode를 참조하세요.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
