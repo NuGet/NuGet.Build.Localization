@@ -232,18 +232,27 @@
       <Item ItemId=";MissingSummaryDescription" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The Description text is long but the Summary text is empty. This means the Description text will be truncated in the 'Manage NuGet Packages' dialog.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Text Description je dlouhý, ale text Summary je prázdný. To znamená, že se text Description v dialogu Spravovat balíčky NuGet zkrátí.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MissingSummarySolution" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Provide a brief summary of the package in the Summary field.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Zadejte do pole Summary stručný souhrn balíčku.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MissingSummaryTitle" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Consider providing Summary text.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Zvažte možnost poskytnout text Summary]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -571,6 +580,9 @@
       <Item ItemId=";InputFileNotSpecified" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Please specify a nuspec, project.json, or project file to use]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Zadejte prosím soubor nuspec, project.json nebo project, který chcete použít.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -751,8 +763,8 @@
       <Item ItemId=";Log_CycleDetected" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Cycle detected:]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Zjistil se cyklus.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Zjistil se cyklus:]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Cycle detected.]]></Val>
@@ -772,8 +784,8 @@
       <Item ItemId=";Log_DowngradeWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Detected package downgrade: {0} from {1} to {2}]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Zjistil se downgrade balíčku: {0} z {1} na {2}. Pokud chcete vybrat jinou verzi, odkazujte na balíček přímo z projektu.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Zjistil se downgrade balíčku: {0} z {1} na {2}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Detected package downgrade: {0} from {1} to {2}. Reference the package directly from the project to select a different version.]]></Val>
@@ -847,8 +859,8 @@
       <Item ItemId=";Log_ImportsFallbackWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package '{0}' was restored using '{1}' instead the project target framework '{2}'. This may cause compatibility problems.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Balíček {0} se místo cílové verze rozhraní .NET Framework projektu {2} obnovil pomocí {1}. Balíček nemusí být plně kompatibilní s vaším projektem.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Balíček {0} se místo cílové architektury projektu {2} obnovil pomocí {1}. Může to způsobit problémy s kompatibilitou.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Package '{0}' was restored using '{1}' instead of the project target framework '{2}'. This package may not be fully compatible with your project.]]></Val>
@@ -886,6 +898,9 @@
       <Item ItemId=";Log_LoadedProject" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Loaded project {0} from {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Načetl se projekt {0} z {1}.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1063,8 +1078,8 @@
       <Item ItemId=";Log_ResolverConflict" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to satisfy conflicting requests for '{0}': {1}]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Nejde vyhovět konfliktním žádostem pro {0}: {1} Architektura: {2}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nejde vyhovět konfliktním žádostem pro {0}: {1}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Unable to satisfy conflicting requests for '{0}': {1} Framework: {2}]]></Val>
@@ -1201,8 +1216,8 @@
       <Item ItemId=";Log_VersionConflict" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Version conflict detected for {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Pro {0} se zjistil konflikt. Pokud chcete tento problém vyřešit, nainstalujte nebo vytvořte odkaz na {1} přímo do projektu {2}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Pro {0} se zjistil konflikt verzí.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Version conflict detected for {0}. Install/reference {1} directly to project {2} to resolve this issue.]]></Val>
