@@ -232,18 +232,27 @@
       <Item ItemId=";MissingSummaryDescription" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The Description text is long but the Summary text is empty. This means the Description text will be truncated in the 'Manage NuGet Packages' dialog.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Текст Description длинный, а текст Summary пустой. Это значит, что текст Description будет усечен в диалоговом окне "Управление пакетами NuGet".]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MissingSummarySolution" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Provide a brief summary of the package in the Summary field.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Предоставьте краткое описание пакета в поле Summary.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MissingSummaryTitle" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Consider providing Summary text.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Рекомендуем ввести текст Summary.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -571,6 +580,9 @@
       <Item ItemId=";InputFileNotSpecified" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Please specify a nuspec, project.json, or project file to use]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Укажите nuspec, project.json или файл проекта для использования]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -751,8 +763,8 @@
       <Item ItemId=";Log_CycleDetected" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Cycle detected:]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Обнаружен цикл.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Обнаружен цикл:]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Cycle detected.]]></Val>
@@ -772,8 +784,8 @@
       <Item ItemId=";Log_DowngradeWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Detected package downgrade: {0} from {1} to {2}]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Обнаружено понижение версии пакета {0} с {1} на {2}. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Обнаружен переход пакета на использование более ранней версии: {0} с {1} до {2}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Detected package downgrade: {0} from {1} to {2}. Reference the package directly from the project to select a different version.]]></Val>
@@ -847,8 +859,8 @@
       <Item ItemId=";Log_ImportsFallbackWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package '{0}' was restored using '{1}' instead the project target framework '{2}'. This may cause compatibility problems.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Пакет "{0}" был восстановлен с помощью "{1}", а не целевой платформы проекта "{2}". Этот пакет может быть не полностью совместим с вашим проектом.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Пакет "{0}" был восстановлен с помощью "{1}", а не целевой платформы проекта "{2}". Это может вызвать проблемы с совместимостью.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Package '{0}' was restored using '{1}' instead of the project target framework '{2}'. This package may not be fully compatible with your project.]]></Val>
@@ -886,6 +898,9 @@
       <Item ItemId=";Log_LoadedProject" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Loaded project {0} from {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Загружен проект {0} из {1}.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1063,8 +1078,8 @@
       <Item ItemId=";Log_ResolverConflict" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to satisfy conflicting requests for '{0}': {1}]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Не удалось удовлетворить конфликтующие запросы для "{0}": {1}. Платформа: {2}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Не удалось разрешить конфликтующие запросы для "{0}": {1}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Unable to satisfy conflicting requests for '{0}': {1} Framework: {2}]]></Val>
@@ -1201,8 +1216,8 @@
       <Item ItemId=";Log_VersionConflict" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Version conflict detected for {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Обнаружен конфликт версий для {0}. Установите или укажите прямую ссылку {1} на проект {2}, чтобы устранить эту проблему.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Обнаружен конфликт версий для {0}.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Version conflict detected for {0}. Install/reference {1} directly to project {2} to resolve this issue.]]></Val>
