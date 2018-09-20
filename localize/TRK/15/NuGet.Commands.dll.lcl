@@ -133,6 +133,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_InvalidLockFileInput" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid restore input where RestorePackagesWithLockFile property is set to false and also exist a packages lock file at {0}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[RestorePackagesWithLockFile özelliğinin false olarak ayarlandığı ve {0} konumunda paketler kilit dosyasının bulunduğu geçersiz bir geri yükleme girişi.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_InvalidProjectPackageCombo" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid project-package combination for {0} {1}. DotnetToolReference project style can only contain references of the DotnetTool type]]></Val>
@@ -223,6 +232,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_PackageValidationFailed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package {0} sha512 validation failed. The package is different than the last restore.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} paketinin sha512 doğrulaması başarısız oldu. Paket, son geri yüklemedekinden farklı.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_ProcessingNuspecFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Error occurred when processing file '{0}': {1}]]></Val>
@@ -246,6 +264,15 @@
           <Val><![CDATA[Project {0} must have a single package reference(s).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[{0} projesinde tek paket referansları bulunmalıdır.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_RestoreInLockedMode" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --reevaluate flag to run restore to update the lock file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Paketler kilit dosyası proje bağımlılıkları ile tutarlı olmadığından geri yükleme kilitli modda çalıştırılamıyor. Lütfen RestoreLockedMode MSBuild özelliğini devre dışı bırakın veya kilit dosyasını güncelleştirmek amacıyla geri yüklemeyi çalıştırmak için açıkça --reevaluate bayrağını kullanın.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1131,6 +1158,15 @@
           <Val><![CDATA[Writing lock file to disk. Path: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Kilit dosyası diske yazılıyor. Yol: {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Log_WritingPackagesLockFile" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Writing packages lock file at disk. Path: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Paketler kilit dosyası diske yazılıyor. Yol: {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
