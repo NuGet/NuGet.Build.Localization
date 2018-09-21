@@ -49,6 +49,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";BuildIntegratedPackageRestoreFailedForProject" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[NuGet Package restore failed for project {0} for '{1}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Fehler bei der NuGet-Paketwiederherstellung für das Projekt "{0}" für "{1}".]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";CanNotCreateWindow" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Can not create tool window.]]></Val>
@@ -99,15 +108,6 @@
           <Val><![CDATA[The Visual Studio credential provider failed to load.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Der Visual Studio-Anmeldeinformationsanbieter konnte nicht geladen werden.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";DTE_ProjectUnsupported" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The project '{0}' is unsupported]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Das Projekt "{0}" wird nicht unterstützt]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -213,15 +213,6 @@
           <Val><![CDATA[{0} nuget configuration is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die nuget-Konfiguration "{0}" ist ungültig.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ProjectMigrateErrorMessage" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Project is not eligible for migration. Either the project is not packages.config based or doesn't support PackageReference yet. Visit https://docs.microsoft.com/en-us/nuget/reference/migrate-packages-config-to-package-reference for more information.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Das Projekt ist für die Migration nicht geeignet. Entweder basiert das Projekt nicht auf "packages.config", oder PackageReference wird noch nicht unterstützt. Besuchen Sie https://docs.microsoft.com/de-de/nuget/reference/migrate-packages-config-to-package-reference, um weitere Informationen zu erhalten.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -362,54 +353,6 @@
             <Val><![CDATA[&Clear Console]]></Val>
             <Tgt Cat="Button" IgnoreHK="true" Stat="Loc" Orig="New">
               <Val><![CDATA[Konsole &löschen]]></Val>
-            </Tgt>
-          </Str>
-          <Disp Icon="Str" Expand="true" />
-        </Item>
-      </Item>
-      <Item ItemId=";{25fd982b-8cae-4cbd-a440-e03ffccde106},1024" ItemType="0" PsrId="240" Leaf="false">
-        <Disp Icon="Menu" Expand="true" Disp="true" LocTbl="false" />
-        <Item ItemId=";{25fd982b-8cae-4cbd-a440-e03ffccde106},1024" ItemType=";Button" PsrId="240" Leaf="true">
-          <Str Cat="Button" IgnoreHK="true">
-            <Val><![CDATA[&Migrate packages.config to PackageReference...]]></Val>
-            <Tgt Cat="Button" IgnoreHK="true" Stat="Loc" Orig="New">
-              <Val><![CDATA["packages.config" zu PackageReference &migrieren...]]></Val>
-            </Tgt>
-            <Prev Cat="Button" IgnoreHK="true">
-              <Val><![CDATA[&Upgrade packages.config to PackageReference...]]></Val>
-            </Prev>
-          </Str>
-          <Disp Icon="Str" Expand="true" />
-        </Item>
-        <Item ItemId=";{25fd982b-8cae-4cbd-a440-e03ffccde106},1024" ItemType=";CommandName" PsrId="240" Leaf="true">
-          <Str Cat="Button">
-            <Val><![CDATA[cmdidUpgradeNuGetProject]]></Val>
-            <Tgt Cat="Button" Stat="Loc" Orig="New">
-              <Val><![CDATA[cmdidUpgradeNuGetProject]]></Val>
-            </Tgt>
-          </Str>
-          <Disp Icon="Str" Expand="true" />
-        </Item>
-      </Item>
-      <Item ItemId=";{25fd982b-8cae-4cbd-a440-e03ffccde106},1040" ItemType="0" PsrId="240" Leaf="false">
-        <Disp Icon="Menu" Expand="true" Disp="true" LocTbl="false" />
-        <Item ItemId=";{25fd982b-8cae-4cbd-a440-e03ffccde106},1040" ItemType=";Button" PsrId="240" Leaf="true">
-          <Str Cat="Button" IgnoreHK="true">
-            <Val><![CDATA[&Migrate packages.config to PackageReference...]]></Val>
-            <Tgt Cat="Button" IgnoreHK="true" Stat="Loc" Orig="New">
-              <Val><![CDATA["packages.config" zu PackageReference &migrieren...]]></Val>
-            </Tgt>
-            <Prev Cat="Button" IgnoreHK="true">
-              <Val><![CDATA[&Upgrade packages.config to PackageReference...]]></Val>
-            </Prev>
-          </Str>
-          <Disp Icon="Str" Expand="true" />
-        </Item>
-        <Item ItemId=";{25fd982b-8cae-4cbd-a440-e03ffccde106},1040" ItemType=";CommandName" PsrId="240" Leaf="true">
-          <Str Cat="Button">
-            <Val><![CDATA[cmdidUpgradePackagesConfig]]></Val>
-            <Tgt Cat="Button" Stat="Loc" Orig="New">
-              <Val><![CDATA[cmdidUpgradePackagesConfig]]></Val>
             </Tgt>
           </Str>
           <Disp Icon="Str" Expand="true" />
