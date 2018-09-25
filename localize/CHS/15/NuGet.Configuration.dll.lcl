@@ -25,24 +25,36 @@
       <Item ItemId=";AttributeNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Attribute '{0}' is not allowed in element '{1}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[元素“{1}”中不允许使用属性“{0}”。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";AttributeValueNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The attribute '{0}' has an unallowed value '{1}' in element '{2}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[在元素“{2}”中，属性“{0}”具有不允许的值“{1}”。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CannotUpdateDifferentItems" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The item passed to the Update method cannot refer to a different item than the one being updated.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[传递给 Update 方法的项只能引用正在更新的项，不可引用除此之外的其他项。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CannotUpdateMachineWide" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to update setting since it is in a machine-wide NuGet.Config.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[无法更新设置，因为它位于计算机范围内的 NuGet.Config 中。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -85,12 +97,18 @@
       <Item ItemId=";Error_InvalidAttribute" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The attribute {0}-{1} is not valid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[属性 {0}-{1} 无效。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_MergeTwoDifferentSections" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Cannot merge two different sections.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[无法合并两个不同的节。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -124,12 +142,18 @@
       <Item ItemId=";ItemDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The item does not exist in the {0} section.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} 节中不存在该项。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MissingRequiredAttribute" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Missing required attribute '{0}' in element '{1}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[元素“{1}”中缺少必需属性“{0}”。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -145,12 +169,18 @@
       <Item ItemId=";NoAttributesAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The {0} item should not have any attributes and it was found with {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} 项不应具有任何属性，且可在 {1} 中找到。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";NoWritteableConfig" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[There is no NuGet.Config that could be used for writing settings. Please create one at the desired location and restart the client.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[没有可用于编写设置的 NuGet.Config。请在所需位置创建一个并重启客户端。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -166,6 +196,9 @@
       <Item ItemId=";PropertyCannotBeNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} cannot be null or empty.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} 不能为 Null 或为空。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -181,14 +214,17 @@
       <Item ItemId=";SectionDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The section '{0}' does not exist in the settings.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[设置中不存在“{0}”节。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Settings_FileName_Cannot_Be_A_Path" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Parameter 'fileName' to Settings must be just a file name and not a path.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Settings 的参数 "fileName" 只能是 fileName，不能是路径]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Settings 的参数“fileName”只能是文件名，不能是路径。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Parameter 'fileName' to Settings must be just a fileName and not a path]]></Val>
@@ -199,6 +235,9 @@
       <Item ItemId=";ShowError_CannotHaveChildren" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Error parsing NuGet.Config. Element '{0}' cannot have descendant elements. Path: '{1}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[分析 NuGet.Config 时出错。元素“{0}”不能有子代元素。路径:“{1}”。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -277,8 +316,8 @@
       <Item ItemId=";UserSettings_UnableToParseConfigFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to parse config file because: {0} Path: '{1}'.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[无法分析配置文件“{0}”。]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[无法分析配置文件，因为: {0} 路径:“{1}”。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Unable to parse config file '{0}'.]]></Val>
