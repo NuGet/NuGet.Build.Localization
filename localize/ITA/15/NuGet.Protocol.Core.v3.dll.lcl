@@ -17,7 +17,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Install failed. Rolling back...]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Installazione non riuscita. Ripristino dello stato precedente in corso...]]></Val>
+            <Val><![CDATA[L'installazione non è riuscita. Verrà eseguito il rollback...]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -107,7 +107,7 @@
         <Str Cat="Text">
           <Val><![CDATA[{0} {1} will be deleted from the {2}. Would you like to continue?]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Il pacchetto {0} {1} verrà eliminato da {2}. Continuare?]]></Val>
+            <Val><![CDATA[{0} {1} verrà eliminato da {2}. Continuare?]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -116,7 +116,7 @@
         <Str Cat="Text">
           <Val><![CDATA[{0} {1} was deleted successfully.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[L'eliminazione del pacchetto {0} {1} è riuscita.]]></Val>
+            <Val><![CDATA[L'eliminazione di {0} {1} è riuscita.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -125,7 +125,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Deleting {0} {1} from the {2}.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Eliminazione del pacchetto {0} {1} da {2}.]]></Val>
+            <Val><![CDATA[Eliminazione di {0} {1} da {2}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -143,7 +143,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The download URL for {0} '{1}' is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[URL di download per {0} '{1}' non valido.]]></Val>
+            <Val><![CDATA[L'URL di download per {0} '{1}' non è valido.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -277,6 +277,9 @@
       <Item ItemId=";Log_FailedToGetNupkgStream" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to load package '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Non è possibile caricare il pacchetto '{0}'.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -356,7 +359,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Retrying '{0}' for source '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[È in corso un nuovo tentativo dell'operazione '{0}' per l'origine '{1}'.]]></Val>
+            <Val><![CDATA[Nuovo tentativo dell'operazione '{0}' per l'origine '{1}'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -374,7 +377,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Retrying service index request for source '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nuovo tentativo di invio della richiesta di indicizzazione del servizio per l'origine '{0}'.]]></Val>
+            <Val><![CDATA[Nuovo tentativo di invio della richiesta dell'indice del servizio per l'origine '{0}'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -392,7 +395,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Cannot create a NuGet Repository from the Aggregate Source]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Non è possibile creare un repository NuGet dall'origine di aggregazione]]></Val>
+            <Val><![CDATA[Non è possibile creare un repository NuGet dall'origine aggregazione]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -401,7 +404,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The {0} service is not supported by this object.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Servizio {0} non supportato da questo oggetto.]]></Val>
+            <Val><![CDATA[Il servizio {0} non è supportato da questo oggetto.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -446,7 +449,7 @@
         <Str Cat="Text">
           <Val><![CDATA[ERROR: This version of nuget.exe does not support updating packages to package source '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[ERRORE: questa versione del file nuget.exe non supporta l'aggiornamento dei pacchetti nell'origine pacchetto '{0}'.]]></Val>
+            <Val><![CDATA[ERRORE: questa versione del file nuget.exe non supporta l'aggiornamento dei pacchetti nell'origine pacchetti '{0}'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -500,7 +503,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Service index document is missing the 'resources' property.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Proprietà 'resources' mancante nel documento di indicizzazione del servizio.]]></Val>
+            <Val><![CDATA[Nel documento dell'indice del servizio manca la proprietà 'resources'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -527,7 +530,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The content at '{0}' is not valid XML.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Il contenuto in '{0}' non presenta un formato XML valido.]]></Val>
+            <Val><![CDATA[Il contenuto in '{0}' non è in formato XML valido.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -554,7 +557,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The source does not have a Search service!]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Per l'origine non è definito un servizio di ricerca.]]></Val>
+            <Val><![CDATA[Non esiste alcun servizio di ricerca per l'origine.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -599,7 +602,7 @@
         <Str Cat="Text">
           <Val><![CDATA['{0}' is a duplicate url which has already been downloaded and will lead to a cyclic dependency. Please correct from server.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' è un url duplicato già scaricato che genererà una dipendenza ciclica. Correggere dal server.]]></Val>
+            <Val><![CDATA['{0}' è un URL duplicato già scaricato che genererà una dipendenza ciclica. Correggere dal server.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -608,7 +611,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Your package was pushed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[È stato eseguito il push del pacchetto.]]></Val>
+            <Val><![CDATA[Il push del pacchetto è stato eseguito.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
