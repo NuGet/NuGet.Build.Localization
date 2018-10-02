@@ -267,10 +267,13 @@
       </Item>
       <Item ItemId=";Error_RestoreInLockedMode" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --reevaluate flag to run restore to update the lock file.]]></Val>
+          <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --force-evaluate flag to run restore to update the lock file.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le fichier de verrouillage des packages n'est pas cohérent avec les dépendances de projet, la restauration ne peut donc pas être exécutée en mode verrouillé. Désactivez la propriété MSBuild RestoreLockedMode ou passez l'indicateur explicite --reevaluate pour exécuter la restauration afin de mettre à jour le fichier de verrouillage.]]></Val>
+            <Val><![CDATA[Le fichier de verrouillage des packages n'est pas cohérent avec les dépendances de projet, la restauration ne peut donc pas être exécutée en mode verrouillé. Désactivez la propriété MSBuild RestoreLockedMode, ou passez l'indicateur explicite --force-evaluate pour exécuter la restauration et mettre à jour le fichier de verrouillage.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --reevaluate flag to run restore to update the lock file.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
