@@ -184,6 +184,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";OwnersItemMustHaveAtLeastOneOwner" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owners item must have at least one owner.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Per l'elemento owners è necessario definire almeno un proprietario.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";OwnersMustOnlyHaveContent" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owners item must only have text content and cannot be empty.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[L'elemento owners deve includere solo contenuto di testo e non può essere vuoto.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";PackageSource_Invalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package source does not belong to the collection of available sources.]]></Val>
@@ -207,6 +225,15 @@
           <Val><![CDATA[Environment variable '{0}' must contain an absolute path, the full path of '{1}' cannot be determined.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[La variabile di ambiente '{0}' deve contenere un percorso assoluto. Non è possibile determinare il percorso completo di '{1}'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";RepositoryMustHaveOneOwners" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The repository item with name '{0}' and service index '{1}' has more than one owners item in it.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[L'elemento repository con nome '{0}' e indice del servizio '{1}' contiene più elementi owners.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -286,6 +313,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";TrustedSignerMustHaveCertificates" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A trusted signer entry must have at least one certificate entry.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Una voce di firmatario attendibile deve contenere almeno una voce di certificato.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnknownHashAlgorithmNotSupported" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unknown hash algorithm is not supported.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[L'algoritmo hash sconosciuto non è supportato.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Unknown_Config_Exception" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unexpected failure reading NuGet.Config. Path: '{0}'.]]></Val>
@@ -309,6 +354,15 @@
           <Val><![CDATA[Password encryption is not supported on .NET Core for this platform. The following feed try to use an encrypted password: '{0}'. You can use a clear text password as a workaround.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[La crittografia delle password non è supportata in .NET Core per questa piattaforma. Il feed seguente prova a usare una password crittografata: '{0}'. Per ovviare al problema, è possibile usare una password non crittografata.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnsupportedHashAlgorithm" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Certificate entry has an unsupported hash algorithm: '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La voce del certificato contiene un algoritmo hash non supportato: '{0}'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
