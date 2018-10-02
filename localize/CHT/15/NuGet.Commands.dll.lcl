@@ -267,10 +267,13 @@
       </Item>
       <Item ItemId=";Error_RestoreInLockedMode" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --reevaluate flag to run restore to update the lock file.]]></Val>
+          <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --force-evaluate flag to run restore to update the lock file.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[套件鎖定檔案與專案相依性不一致，因此無法在鎖定模式中執行還原。請停用 RestoreLockedMode MSBuild 屬性或傳遞明確的 --reevaluate，以執行還原來更新鎖定檔案。]]></Val>
+            <Val><![CDATA[套件鎖定檔案與專案相依性不一致，因此無法在鎖定模式中執行還原。請停用 RestoreLockedMode MSBuild 屬性或傳遞明確的 --force-evaluate 旗標，以執行還原來更新鎖定檔案。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --reevaluate flag to run restore to update the lock file.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
