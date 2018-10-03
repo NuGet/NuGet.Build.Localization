@@ -184,6 +184,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";OwnersItemMustHaveAtLeastOneOwner" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owners item must have at least one owner.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Sahipler öğesinin en az bir sahibi olmalıdır.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";OwnersMustOnlyHaveContent" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owners item must only have text content and cannot be empty.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Sahipler öğesinin yalnızca metin içeriği olmalı ve öğe boş olmamalıdır.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";PackageSource_Invalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package source does not belong to the collection of available sources.]]></Val>
@@ -207,6 +225,15 @@
           <Val><![CDATA[Environment variable '{0}' must contain an absolute path, the full path of '{1}' cannot be determined.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA['{0}' ortam değişkeni bir mutlak yol içermelidir; '{1}' tam yolu belirlenemiyor.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";RepositoryMustHaveOneOwners" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The repository item with name '{0}' and service index '{1}' has more than one owners item in it.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{1}' hizmet dizinine sahip '{0}' adlı depo öğesinde birden fazla sahipler öğesi var.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -286,6 +313,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";TrustedSignerMustHaveCertificates" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A trusted signer entry must have at least one certificate entry.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Güvenilir bir imzalayan girdisinin en az bir sertifika girdisi olması gerekir.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnknownHashAlgorithmNotSupported" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unknown hash algorithm is not supported.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Bilinmeyen karma algoritması desteklenmiyor.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Unknown_Config_Exception" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unexpected failure reading NuGet.Config. Path: '{0}'.]]></Val>
@@ -309,6 +354,15 @@
           <Val><![CDATA[Password encryption is not supported on .NET Core for this platform. The following feed try to use an encrypted password: '{0}'. You can use a clear text password as a workaround.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Bu platform için .NET Core üzerinde parola şifreleme işlemi desteklenmez. '{0}' akışı şifreli bir parola kullanıyor. Geçici çözüm olarak, düz metinden oluşan bir parola kullanabilirsiniz.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnsupportedHashAlgorithm" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Certificate entry has an unsupported hash algorithm: '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Sertifika girdisinde desteklenmeyen bir karma algoritması var: '{0}'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
