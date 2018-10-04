@@ -184,6 +184,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";OwnersItemMustHaveAtLeastOneOwner" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owners item must have at least one owner.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[У элемента "Владельцы" должен быть хотя бы один владелец.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";OwnersMustOnlyHaveContent" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Owners item must only have text content and cannot be empty.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Элемент "Владельцы" должен включать только текстовое содержимое и не может быть пустым.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";PackageSource_Invalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package source does not belong to the collection of available sources.]]></Val>
@@ -207,6 +225,15 @@
           <Val><![CDATA[Environment variable '{0}' must contain an absolute path, the full path of '{1}' cannot be determined.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Переменная среды "{0}" должна содержать абсолютный путь; невозможно определить полный путь для "{1}".]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";RepositoryMustHaveOneOwners" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The repository item with name '{0}' and service index '{1}' has more than one owners item in it.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Элемент репозитория с именем "{0}" и индексом службы "{1}" содержит несколько элементов "Владельцы".]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -286,6 +313,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";TrustedSignerMustHaveCertificates" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A trusted signer entry must have at least one certificate entry.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Запись доверенного подписывающего должна включать хотя бы одну запись сертификата.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnknownHashAlgorithmNotSupported" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unknown hash algorithm is not supported.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Неизвестный алгоритм хэширования не поддерживается.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Unknown_Config_Exception" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unexpected failure reading NuGet.Config. Path: '{0}'.]]></Val>
@@ -309,6 +354,15 @@
           <Val><![CDATA[Password encryption is not supported on .NET Core for this platform. The following feed try to use an encrypted password: '{0}'. You can use a clear text password as a workaround.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Шифрование пароля не поддерживается в .NET Core для этой платформы. Следующий канал пытается использовать зашифрованный пароль: "{0}". Вместо этого можно использовать открытый пароль.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnsupportedHashAlgorithm" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Certificate entry has an unsupported hash algorithm: '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Запись сертификата использует неподдерживаемый алгоритм хеширования: "{0}".]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
