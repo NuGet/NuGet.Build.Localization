@@ -267,10 +267,13 @@
       </Item>
       <Item ItemId=";Error_RestoreInLockedMode" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --reevaluate flag to run restore to update the lock file.]]></Val>
+          <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --force-evaluate flag to run restore to update the lock file.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Файл блокировки пакетов не соответствует зависимостям проекта, поэтому восстановление не может выполняться в режиме блокировки. Отключите свойство MSBuild RestoreLockedMode или передайте явный флаг --reevaluate в выполняющееся восстановление, чтобы изменить файл блокировки.]]></Val>
+            <Val><![CDATA[Файл блокировки пакетов не соответствует зависимостям проекта, поэтому восстановление в режиме блокировки невозможно. Отключите свойство MSBuild RestoreLockedMode или передайте явно флаг --force-evaluate, чтобы запустить восстановление и обновить файл блокировки.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --reevaluate flag to run restore to update the lock file.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
