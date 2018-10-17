@@ -115,6 +115,9 @@
       <Item ItemId=";Manifest_LicenseFileExtensionIsInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license file '{0}' has an invalid extension. Valid options are .txt, .md or none.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ライセンス ファイル '{0}' の拡張子が無効です。有効なオプションは、.txt、.md、なしのいずれかです。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -166,8 +169,8 @@
       <Item ItemId=";Manifest_RequireLicenseAcceptanceRequiresLicenseUrl" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Enabling license acceptance requires a license or a licenseUrl to be specified. The licenseUrl will be deprecated, consider using the license metadata.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[ライセンスの同意を有効にするには、ライセンスの url が必要です。]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ライセンスの同意を有効にするには、license と licenseUrl のいずれかを指定する必要があります。licenseUrl は非推奨になる予定のため、license メタデータの使用をご検討ください。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Enabling license acceptance requires a license url.]]></Val>
@@ -319,6 +322,9 @@
       <Item ItemId=";LicenseUrlDeprecationWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The 'licenseUrl' element will be deprecated. Consider using the 'license' element instead.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['licenseUrl' 要素は非推奨になる予定です。代わりに 'license' 要素の使用をご検討ください。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1003,6 +1009,9 @@
       <Item ItemId=";InvalidLicenseExppressionVersion_VersionTooHigh" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The version string '{0}' is not supported by this toolset. The highest supported version is '{1}'. Either use a lower version or upgrade your toolset.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[このツールセットでバージョン文字列 '{0}' はサポートされていません。サポートされている最高のバージョンは '{1}' です。それより低いバージョンを使用するか、ツールセットをアップグレードしてください。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1327,12 +1336,18 @@
       <Item ItemId=";NuGetLicense_LicenseElementMissingValue" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license element value is empty. This is likely due to an authoring error. ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[license 要素の値が空です。作成エラーが原因の可能性があります。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";NuGetLicense_LicenseExpressionVersionTooHigh" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license version string '{0}' is higher than the one supported by this toolset '{1}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ライセンス バージョン文字列 '{0}' が、このツールセット '{1}' でサポートされているものより上です。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
