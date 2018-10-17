@@ -40,6 +40,42 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";InvalidLicenseCombination" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid metadata. Cannot specify both a License Expression and a License File.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Métadonnées non valides. Impossible de spécifier à la fois une expression de licence et un fichier de licence.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidLicenseExppressionVersion_VersionTooHigh" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The version string '{0}' is not supported by this toolset. The highest supported version is '{1}'. Either use a lower version or upgrade your toolset.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La chaîne de version '{0}' n'est pas prise en charge par cet ensemble d'outils. La version la plus élevée prise en charge est '{1}'. Utilisez une version inférieure ou mettez à niveau votre ensemble d'outils.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidLicenseExpression" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The license expression '{0}' cannot be parsed succesfully. {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[L'expression de licence '{0}' ne peut pas être analysée correctement. {1}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidLicenseExpressionVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The version string '{0}' for the License Expression is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La chaîne de version '{0}' de l'expression de licence est non valide.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";InvalidMinClientVersion" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[MinClientVersion string specified '{0}' is invalid.]]></Val>
@@ -99,6 +135,15 @@
           <Val><![CDATA[No project was provided to the PackTask.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Aucun projet n'a été fourni à PackTask.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicenses_LicenseUrlCannotBeUsedInConjuctionWithLicense" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The PackageLicenseUrl cannot be used cannot be used in conjunction with the PackageLicenseFile and PackageLicenseExpression.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Impossible d'utiliser PackageLicenseUrl conjointement avec PackageLicenseFile et PackageLicenseExpression.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

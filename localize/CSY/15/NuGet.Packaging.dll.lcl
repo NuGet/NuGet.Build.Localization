@@ -115,18 +115,27 @@
       <Item ItemId=";Manifest_LicenseFileExtensionIsInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license file '{0}' has an invalid extension. Valid options are .txt, .md or none.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Soubor s licencí {0} má neplatnou příponu. Platné možnosti jsou .txt, .md nebo žádná.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Manifest_LicenseFileIsNotInNupkg" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license file '{0}' does not exist in the package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Soubor s licencí {0} v balíčku neexistuje.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Manifest_LicenseUrlCannotBeUsedWithLicenseMetadata" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The licenseUrl and license elements cannot be used together.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Elementy licenseUrl a license se nedají použít najednou.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -160,8 +169,8 @@
       <Item ItemId=";Manifest_RequireLicenseAcceptanceRequiresLicenseUrl" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Enabling license acceptance requires a license or a licenseUrl to be specified. The licenseUrl will be deprecated, consider using the license metadata.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Povolení přijetí licence vyžaduje adresu url licence.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Aby se dalo povolit přijetí licence, musí se zadat license nebo licenseUrl. LicenseUrl se brzy přestane používat, zvažte možnost použít metadata license.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Enabling license acceptance requires a license url.]]></Val>
@@ -313,6 +322,9 @@
       <Item ItemId=";LicenseUrlDeprecationWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The 'licenseUrl' element will be deprecated. Consider using the 'license' element instead.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Element licenseUrl se brzy přestane používat. Zvažte možnost použít element license.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -403,6 +415,9 @@
       <Item ItemId=";UnrecognizedLicenseIdentifier" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license identifier '{0}' is not recognized by the current toolset.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Aktuální sada nástrojů nerozpoznala identifikátor licence {0}.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -607,12 +622,18 @@
       <Item ItemId=";DefaultError_EmptyAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A list of trusted signers is required but none was found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Vyžaduje se seznam důvěryhodných podepisujících osob, ale žádný se nenašel.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DefaultError_NoMatchInAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in the allow list.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Otisk certifikátu podpisu balíčku neodpovídá žádnému otisku certifikátu v seznamu povolených otisků.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -988,6 +1009,9 @@
       <Item ItemId=";InvalidLicenseExppressionVersion_VersionTooHigh" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The version string '{0}' is not supported by this toolset. The highest supported version is '{1}'. Either use a lower version or upgrade your toolset.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Tato sada nástrojů nepodporuje řetězec verze {0}. Nejvyšší podporovaná verze je {1}. Buď použijte nižší verzi, nebo upgradujte sadu nástrojů.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1285,36 +1309,54 @@
       <Item ItemId=";NuGetLicense_InvalidLicenseExpression" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license expression '{0}' cannot be parsed succesfully.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Výraz licence {0} se nedá úspěšně parsovat.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";NuGetLicense_InvalidLicenseExpressionVersion" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license version string '{0}'  is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Řetězec verze licence {0} není platný.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";NuGetLicense_InvalidLicenseType" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unrecognized license type '{0}']]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nerozpoznaný typ licence {0}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";NuGetLicense_LicenseElementMissingValue" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license element value is empty. This is likely due to an authoring error. ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Hodnota elementu license je prázdná. Pravděpodobně se jedná o chybu, ke které došlo během vytváření. ]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";NuGetLicense_LicenseExpressionVersionTooHigh" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license version string '{0}' is higher than the one supported by this toolset '{1}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Řetězec verze licence {0} je vyšší než řetězec, který podporuje tato sada nástrojů {1}.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";NuGetLicense_MissingRequiredValue" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The element 'license' cannot be empty. ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Element license nemůže být prázdný. ]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
