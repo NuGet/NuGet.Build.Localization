@@ -121,12 +121,18 @@
       <Item ItemId=";Manifest_LicenseFileIsNotInNupkg" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license file '{0}' does not exist in the package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ライセンス ファイル '{0}' がパッケージに存在しません。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Manifest_LicenseUrlCannotBeUsedWithLicenseMetadata" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The licenseUrl and license elements cannot be used together.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[licenseUrl 要素と license 要素を併用することはできません。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -403,6 +409,9 @@
       <Item ItemId=";UnrecognizedLicenseIdentifier" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license identifier '{0}' is not recognized by the current toolset.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ライセンス識別子 '{0}' は現在のツールセットで認識されていません。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -607,12 +616,18 @@
       <Item ItemId=";DefaultError_EmptyAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A list of trusted signers is required but none was found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[信頼されている署名者のリストが要求されていますが、見つかりませんでした。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DefaultError_NoMatchInAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in the allow list.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[許可リスト内にある証明書のフィンガープリントの中に、パッケージの署名証明書のフィンガープリントと一致するものがありません。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1285,18 +1300,27 @@
       <Item ItemId=";NuGetLicense_InvalidLicenseExpression" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license expression '{0}' cannot be parsed succesfully.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ライセンス式 '{0}' を正常に解析できません。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";NuGetLicense_InvalidLicenseExpressionVersion" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license version string '{0}'  is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ライセンス バージョン文字列 '{0}' が無効です。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";NuGetLicense_InvalidLicenseType" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unrecognized license type '{0}']]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ライセンスの種類 '{0}' は認識されていません]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1315,6 +1339,9 @@
       <Item ItemId=";NuGetLicense_MissingRequiredValue" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The element 'license' cannot be empty. ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['license' 要素を空にすることはできません。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>

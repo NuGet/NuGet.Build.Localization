@@ -121,12 +121,18 @@
       <Item ItemId=";Manifest_LicenseFileIsNotInNupkg" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license file '{0}' does not exist in the package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[라이선스 파일 '{0}'이(가) 패키지에 없습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Manifest_LicenseUrlCannotBeUsedWithLicenseMetadata" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The licenseUrl and license elements cannot be used together.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[licenseUrl 및 라이선스 요소는 함께 사용할 수 없습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -313,6 +319,9 @@
       <Item ItemId=";LicenseUrlDeprecationWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The 'licenseUrl' element will be deprecated. Consider using the 'license' element instead.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['licenseUrl' 요소는 사용 중지됩니다. 대신 'license' 요소를 사용하세요.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -607,12 +616,18 @@
       <Item ItemId=";DefaultError_EmptyAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A list of trusted signers is required but none was found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[신뢰할 수 있는 서명자 목록이 필요하지만 찾을 수 없습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DefaultError_NoMatchInAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in the allow list.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[패키지 시그니처 인증서 지문이 허용 목록의 모든 인증서 지문과 일치하지 않습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -988,6 +1003,9 @@
       <Item ItemId=";InvalidLicenseExppressionVersion_VersionTooHigh" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The version string '{0}' is not supported by this toolset. The highest supported version is '{1}'. Either use a lower version or upgrade your toolset.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[이 도구 집합이 버전 문자열 '{0}'을(를) 지원하지 않습니다. 지원되는 가장 높은 버전은 '{1}'입니다. 더 낮은 버전을 사용하거나 도구 집합을 업그레이드하세요.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1285,18 +1303,27 @@
       <Item ItemId=";NuGetLicense_InvalidLicenseExpression" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license expression '{0}' cannot be parsed succesfully.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[라이선스 식 '{0}'을(를) 구문 분석할 수 없습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";NuGetLicense_InvalidLicenseExpressionVersion" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license version string '{0}'  is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[라이선스 버전 문자열 '{0}'이(가) 잘못되었습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";NuGetLicense_InvalidLicenseType" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unrecognized license type '{0}']]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[라이선스 형식 '{0}'을(를) 인식할 수 없습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1309,6 +1336,9 @@
       <Item ItemId=";NuGetLicense_LicenseExpressionVersionTooHigh" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license version string '{0}' is higher than the one supported by this toolset '{1}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[라이선스 버전 문자열 '{0}'이(가) 이 도구 집합 '{1}'에서 지원하는 것보다 높습니다.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
