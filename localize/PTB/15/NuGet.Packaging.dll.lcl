@@ -112,6 +112,33 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Manifest_LicenseFileExtensionIsInvalid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The license file '{0}' has an invalid extension. Valid options are .txt, .md or none.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O arquivo de licença '{0}' tem uma extensão inválida. As opções válidas são. txt, .md ou nenhuma.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Manifest_LicenseFileIsNotInNupkg" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The license file '{0}' does not exist in the package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O arquivo de licença '{0}' não existe no pacote.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Manifest_LicenseUrlCannotBeUsedWithLicenseMetadata" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The licenseUrl and license elements cannot be used together.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Os elementos licenseUrl e de licença não podem ser usados juntos.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Manifest_PropertyValueReadFailure" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[An error occured while trying to parse the value '{0}' of property '{1}' in the manifest file.]]></Val>
@@ -141,10 +168,13 @@
       </Item>
       <Item ItemId=";Manifest_RequireLicenseAcceptanceRequiresLicenseUrl" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Enabling license acceptance requires a license url.]]></Val>
+          <Val><![CDATA[Enabling license acceptance requires a license or a licenseUrl to be specified. The licenseUrl will be deprecated, consider using the license metadata.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Para habilitar a aceitação da licença, é necessária uma url da licença.]]></Val>
+            <Val><![CDATA[Para habilitar a aceitação da licença, é necessária uma licença ou a especificação do licenseUrl. O licenseUrl será preterido, considere o uso de metadados de licença.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Enabling license acceptance requires a license url.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -289,6 +319,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";LicenseUrlDeprecationWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The 'licenseUrl' element will be deprecated. Consider using the 'license' element instead.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O elemento 'licenseUrl' será preterido. Em vez dele, considere usar o elemento 'license'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Migrator_AssemblyDirectlyUnderLibWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The assembly 'lib\{0}' will be ignored when the package is installed after the migration.]]></Val>
@@ -369,6 +408,15 @@
           <Val><![CDATA[The script file '{0}' is outside the 'tools' folder and hence will not be executed during installation of this package. Move it into the 'tools' folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[O arquivo de script '{0}' está fora da pasta 'tools' e, portanto, não será executado durante a instalação deste pacote. Mova-o para a pasta 'tools'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnrecognizedLicenseIdentifier" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The license identifier '{0}' is not recognized by the current toolset.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O identificador de licença '{0}' não é reconhecido pelo conjunto de ferramentas atual.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -574,12 +622,18 @@
       <Item ItemId=";DefaultError_EmptyAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A list of trusted signers is required but none was found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Uma lista de signatários confiáveis é exigida, mas nenhum foi encontrado.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DefaultError_NoMatchInAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in the allow list.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A impressão digital do certificado de assinatura do pacote não corresponde a nenhuma impressão digital de certificado na lista de permissões.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -952,6 +1006,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";InvalidLicenseExppressionVersion_VersionTooHigh" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The version string '{0}' is not supported by this toolset. The highest supported version is '{1}'. Either use a lower version or upgrade your toolset.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A cadeia de caracteres de versão '{0}' não é compatível com este conjunto de ferramentas. A versão compatível mais recente é '{1}'. Use uma versão inferior ou atualize seu conjunto de ferramentas.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";InvalidNuspecElement" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} This validation error occurred in a '{1}' element.]]></Val>
@@ -1239,6 +1302,60 @@
           <Val><![CDATA[Mismatched parentheses in the expression.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Parênteses sem correspondência na expressão.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicense_InvalidLicenseExpression" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The license expression '{0}' cannot be parsed succesfully.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A expressão de licença '{0}' não pode ser analisada com êxito.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicense_InvalidLicenseExpressionVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The license version string '{0}'  is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A cadeia de caracteres da versão de licença '{0}' é inválida.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicense_InvalidLicenseType" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unrecognized license type '{0}']]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Tipo de licença '{0}' não reconhecido]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicense_LicenseElementMissingValue" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The license element value is empty. This is likely due to an authoring error. ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O valor do elemento de licença está vazio. Isso provavelmente ocorre devido a um erro de criação. ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicense_LicenseExpressionVersionTooHigh" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The license version string '{0}' is higher than the one supported by this toolset '{1}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A cadeia de caracteres da versão de licença '{0}' é maior do que aquele compatível com este conjunto de ferramentas '{1}'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicense_MissingRequiredValue" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The element 'license' cannot be empty. ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O elemento 'license' não pode ficar vazio. ]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
