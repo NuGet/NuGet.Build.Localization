@@ -852,37 +852,49 @@
       </Item>
       <Item ItemId=";Error_NoClientAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[A list of trusted signers is required by the client but none was found.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, no trusted signers were specified.]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[信頼されている署名者のリストがクライアントによって要求されていますが、見つかりませんでした。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[A list of trusted signers is required by the client but none was found.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_NoMatchingClientCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in client allow list.]]></Val>
+          <Val><![CDATA[This package is signed but not by a trusted signer.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[クライアント許可リスト内にある証明書のフィンガープリントの中に、パッケージの署名証明書のフィンガープリントと一致するものがありません。]]></Val>
+            <Val><![CDATA[このパッケージは署名されていますが、信頼できる署名者による署名ではありません。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in client allow list.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_NoMatchingRepositoryCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in repository allow list.]]></Val>
+          <Val><![CDATA[This package was not repository signed with a certificate listed by this repository.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[リポジトリ許可リスト内にある証明書のフィンガープリントの中に、パッケージの署名証明書のフィンガープリントと一致するものがありません。]]></Val>
+            <Val><![CDATA[このパッケージは、このリポジトリによって一覧表示された証明書で署名されたリポジトリではありません。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in repository allow list.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_NoRepoAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[A repository announced that their packages should be signed but an empty list of trusted certificates was found.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[This repository indicated that all its packages are repository signed; however, it listed no signing certificates.]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[パッケージに署名が必要なのに、見つかった信頼済み証明書のリストは空だったとリポジトリから通知がありました。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[A repository announced that their packages should be signed but an empty list of trusted certificates was found.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -907,12 +919,27 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_RepositorySettings_UnsignedPackage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This repository indicated that all its packages are repository signed; however, this package is unsigned.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[このリポジトリでは、すべてのパッケージが署名済みのリポジトリであることが示されました。ただし、このパッケージは署名されていません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_RepositorySignatureMustNotHaveARepositoryCountersignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A repository primary signature must not have a repository countersignature.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[リポジトリのプライマリ署名にリポジトリ副署名があってはなりません。]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_RequireMode_UnsignedPackage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, this package is unsigned.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1302,6 +1329,15 @@
           <Val><![CDATA[Mismatched parentheses in the expression.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[式の中に、対応しないかっこがあります。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicenseExpression_NonStandardIdentifier" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ライセンス識別子 {0} は現在のツールセットでは認識されません。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

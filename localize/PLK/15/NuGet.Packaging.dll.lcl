@@ -853,8 +853,8 @@
       <Item ItemId=";Error_NoClientAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, no trusted signers were specified.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Lista zaufanych osób podpisujących jest wymagana przez klienta, ale jej nie znaleziono.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Parametr signatureValidationMode ma wartość require, więc tylko pakiety podpisane przez zaufanych podpisujących są dozwolone. Nie określono jednak zaufanych podpisujących.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[A list of trusted signers is required by the client but none was found.]]></Val>
@@ -865,8 +865,8 @@
       <Item ItemId=";Error_NoMatchingClientCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[This package is signed but not by a trusted signer.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Odcisk palca certyfikatu podpisu pakietu nie jest zgodny z żadnym odciskiem palca certyfikatu na liście dozwolonych klienta.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ten pakiet jest podpisany, ale nie przez zaufanego podpisującego.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in client allow list.]]></Val>
@@ -940,6 +940,9 @@
       <Item ItemId=";Error_RequireMode_UnsignedPackage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, this package is unsigned.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Parametr signatureValidationMode ma wartość require, więc tylko pakiety podpisane przez zaufanych podpisujących są dozwolone. Ten pakiet jednak nie jest podpisany.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
