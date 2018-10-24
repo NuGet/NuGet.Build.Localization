@@ -853,8 +853,8 @@
       <Item ItemId=";Error_NoClientAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, no trusted signers were specified.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[信頼されている署名者のリストがクライアントによって要求されていますが、見つかりませんでした。]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[signatureValidationMode は必須に設定されているため、パッケージは信頼できる署名者によって署名されている場合にのみ許可されます。しかし、信頼できる署名者は指定されていません。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[A list of trusted signers is required by the client but none was found.]]></Val>
@@ -889,8 +889,8 @@
       <Item ItemId=";Error_NoRepoAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[This repository indicated that all its packages are repository signed; however, it listed no signing certificates.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[パッケージに署名が必要なのに、見つかった信頼済み証明書のリストは空だったとリポジトリから通知がありました。]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[このリポジトリでは、すべてのパッケージが署名済みのリポジトリであることが示されました。ただし、署名証明書は一覧表示されていません。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[A repository announced that their packages should be signed but an empty list of trusted certificates was found.]]></Val>
@@ -940,6 +940,9 @@
       <Item ItemId=";Error_RequireMode_UnsignedPackage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, this package is unsigned.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[signatureValidationMode は必須に設定されているため、パッケージは信頼できる署名者によって署名されている場合にのみ許可されます。しかし、このパッケージは署名されていません。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
