@@ -852,37 +852,49 @@
       </Item>
       <Item ItemId=";Error_NoClientAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[A list of trusted signers is required by the client but none was found.]]></Val>
+          <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, no trusted signers were specified.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Клиенту требуется список надежных подписавших лиц, но он не найден.]]></Val>
+            <Val><![CDATA[Для параметра signatureValidationMode установлено значение "обязательно", поэтому допускаются только пакеты, подписанные надежными подписавшими лицами, однако надежных подписавших лиц не указано.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[A list of trusted signers is required by the client but none was found.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_NoMatchingClientCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in client allow list.]]></Val>
+          <Val><![CDATA[This package is signed but not by a trusted signer.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Отпечаток сертификата для подписи пакета не совпадает ни с одним отпечатком сертификата в списке разрешений клиента.]]></Val>
+            <Val><![CDATA[Этот пакет подписан, но не надежным подписавшим лицом.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in client allow list.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_NoMatchingRepositoryCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in repository allow list.]]></Val>
+          <Val><![CDATA[This package was not repository signed with a certificate listed by this repository.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Отпечаток сертификата для подписи пакета не совпадает ни с одним отпечатком сертификата в списке разрешений репозитория.]]></Val>
+            <Val><![CDATA[Этот пакет не подписан в репозитории с помощью сертификата, указанного для этого репозитория.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in repository allow list.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_NoRepoAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[A repository announced that their packages should be signed but an empty list of trusted certificates was found.]]></Val>
+          <Val><![CDATA[This repository indicated that all its packages are repository signed; however, it listed no signing certificates.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Репозиторий сообщил, что его пакеты должны быть подписаны, но список доверенных сертификатов пуст.]]></Val>
+            <Val><![CDATA[Этот репозиторий сообщил, что все его пакеты подписаны в репозитории; однако в репозитории отсутствуют сертификаты для подписывания.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[A repository announced that their packages should be signed but an empty list of trusted certificates was found.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -907,11 +919,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_RepositorySettings_UnsignedPackage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This repository indicated that all its packages are repository signed; however, this package is unsigned.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Этот репозиторий сообщил, что все его пакеты подписаны в репозитории; однако этот пакет не подписан.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_RepositorySignatureMustNotHaveARepositoryCountersignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A repository primary signature must not have a repository countersignature.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Основная подпись репозитория не должна иметь подписи другой стороны репозитория.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_RequireMode_UnsignedPackage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, this package is unsigned.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Для параметра signatureValidationMode установлено значение "обязательно", поэтому допускаются только пакеты, подписанные надежными подписавшими лицами, однако этот пакет не подписан.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1309,6 +1339,9 @@
       <Item ItemId=";NuGetLicenseExpression_NonStandardIdentifier" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Текущий набор инструментов не распознает идентификаторы лицензий: {0}.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
