@@ -853,8 +853,8 @@
       <Item ItemId=";Error_NoClientAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, no trusted signers were specified.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Eine Liste vertrauenswürdiger Signaturgeber ist für den Client erforderlich, wurde jedoch nicht gefunden.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[signatureValidationMode ist als erforderlich festgelegt, daher werden Pakete nur zugelassen, wenn sie von vertrauenswürdigen Signaturgebern signiert wurden. Es wurden jedoch keine vertrauenswürdigen Signaturgeber angegeben.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[A list of trusted signers is required by the client but none was found.]]></Val>
@@ -865,8 +865,8 @@
       <Item ItemId=";Error_NoMatchingClientCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[This package is signed but not by a trusted signer.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Der Zertifikatfingerabdruck der Paketsignatur entspricht keinem Zertifikatfingerabdruck in der Zulassungsliste des Clients.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Dieses Paket wurde signiert, aber nicht von einem vertrauenswürdigen Signaturgeber.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in client allow list.]]></Val>
@@ -877,8 +877,8 @@
       <Item ItemId=";Error_NoMatchingRepositoryCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[This package was not repository signed with a certificate listed by this repository.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Der Zertifikatfingerabdruck der Paketsignatur entspricht keinem Zertifikatfingerabdruck in der Zulassungsliste des Repositorys.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Dieses Paket wurde nicht mit einem Repositoryzertifikat signiert, das von diesem Repository aufgeführt wird.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in repository allow list.]]></Val>
@@ -889,8 +889,8 @@
       <Item ItemId=";Error_NoRepoAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[This repository indicated that all its packages are repository signed; however, it listed no signing certificates.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[In einem Repository wurde angekündigt, dass die Pakete signiert sein sollen, es wurde jedoch eine leere Liste vertrauenswürdiger Zertifikate gefunden.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Für dieses Repository wurde angegeben, dass alle Pakete vom Repository signiert sind. Es werden jedoch keine Signaturzertifikate aufgeführt.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[A repository announced that their packages should be signed but an empty list of trusted certificates was found.]]></Val>
@@ -922,6 +922,9 @@
       <Item ItemId=";Error_RepositorySettings_UnsignedPackage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[This repository indicated that all its packages are repository signed; however, this package is unsigned.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Für dieses Repository wurde angegeben, dass alle Pakete vom Repository signiert sind. Dieses Paket ist jedoch nicht signiert.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -937,6 +940,9 @@
       <Item ItemId=";Error_RequireMode_UnsignedPackage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, this package is unsigned.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[signatureValidationMode ist als erforderlich festgelegt, daher werden Pakete nur zugelassen, wenn sie von vertrauenswürdigen Signaturgebern signiert wurden. Dieses Paket ist jedoch nicht signiert.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1333,6 +1339,9 @@
       <Item ItemId=";NuGetLicenseExpression_NonStandardIdentifier" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Lizenzbezeichner "{0}" werden vom aktuellen Toolset nicht erkannt.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
