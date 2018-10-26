@@ -852,42 +852,48 @@
       </Item>
       <Item ItemId=";Error_NoClientAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[A list of trusted signers is required by the client but none was found.]]></Val>
+          <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, no trusted signers were specified.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[客户端需要受信任签名者列表，但找不到任何此类列表。]]></Val>
+            <Val><![CDATA[signatureValidationMode 设置为“要求”，因此仅当被受信任签署人签署后才允许使用包；但未指定任何受信任签署人。]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[The package signature certificate cannot be trusted as no client allow list found.]]></Val>
+            <Val><![CDATA[A list of trusted signers is required by the client but none was found.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_NoMatchingClientCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in client allow list.]]></Val>
+          <Val><![CDATA[This package is signed but not by a trusted signer.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[包签名证书指纹与客户端允许列表中的证书指纹不匹配。]]></Val>
+            <Val><![CDATA[此包已签署，但不是由受信任的签署人签署。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in client allow list.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_NoMatchingRepositoryCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in repository allow list.]]></Val>
+          <Val><![CDATA[This package was not repository signed with a certificate listed by this repository.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[包签名证书指纹与存储库允许列表中的证书指纹不匹配。]]></Val>
+            <Val><![CDATA[此包不是使用由此存储库列出的证书签署的存储库。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in repository allow list.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_NoRepoAllowList" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[A repository announced that their packages should be signed but an empty list of trusted certificates was found.]]></Val>
+          <Val><![CDATA[This repository indicated that all its packages are repository signed; however, it listed no signing certificates.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[存储库通知应对其包进行签名，但找到的受信任证书列表为空。]]></Val>
+            <Val><![CDATA[此存储库指示其所有包都已签署存储库；但列出了未签名的证书。]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[The package signature certificate cannot be trusted as no repository allow list found.]]></Val>
+            <Val><![CDATA[A repository announced that their packages should be signed but an empty list of trusted certificates was found.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -913,11 +919,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_RepositorySettings_UnsignedPackage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This repository indicated that all its packages are repository signed; however, this package is unsigned.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[此存储库指示其所有包都已签署存储库；但此包未签署。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_RepositorySignatureMustNotHaveARepositoryCountersignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A repository primary signature must not have a repository countersignature.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[存储库主签名不得具有存储库副署。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_RequireMode_UnsignedPackage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, this package is unsigned.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[signatureValidationMode 设置为“要求”，因此仅当被受信任签署人签署后才允许使用包；但此包未签署。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1308,6 +1332,15 @@
           <Val><![CDATA[Mismatched parentheses in the expression.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[表达式中的括号不匹配。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicenseExpression_NonStandardIdentifier" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[当前工具集无法识别许可证标识符 {0}。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
