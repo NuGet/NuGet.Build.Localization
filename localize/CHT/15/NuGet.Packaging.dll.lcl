@@ -1273,6 +1273,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";NuGetLicenseExpression_IllegalUnlicensedOperator" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The 'UNLICENSED' license identifier cannot be combined with the '+' operator.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['UNLICENSED' 授權識別碼不能與 '+' 運算子合併使用。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";NuGetLicenseExpression_InvalidCharacters" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license expression '{0}' contains invalid characters.]]></Val>
@@ -1338,9 +1347,30 @@
       </Item>
       <Item ItemId=";NuGetLicenseExpression_NonStandardIdentifier" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[The license identifier(s) '{0}' is(are) not recognized by the current toolset.]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[目前的工具組無法辨識授權識別碼 {0}。]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicenseExpression_UnexpectedIdentifier" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unexpected license identifier '{0}'. The identifier is not allowed in this context.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[未預期的授權識別碼 '{0}'。此內容中不允許該識別碼。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicenseExpression_UnlicensedPackageWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The owner has marked this package as 'UNLICENSED'. This means that there is no license that allows this package to be used outside of the copyright owner.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[擁有者已將此套件標示為 'UNLICENSED'。這表示沒有任何授權可讓此套件用於版權擁有者以外的範圍。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

@@ -1273,6 +1273,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";NuGetLicenseExpression_IllegalUnlicensedOperator" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The 'UNLICENSED' license identifier cannot be combined with the '+' operator.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['UNLICENSED' 라이선스 식별자는 '+' 연산자와 결합할 수 없습니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";NuGetLicenseExpression_InvalidCharacters" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license expression '{0}' contains invalid characters.]]></Val>
@@ -1338,9 +1347,30 @@
       </Item>
       <Item ItemId=";NuGetLicenseExpression_NonStandardIdentifier" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[The license identifier(s) '{0}' is(are) not recognized by the current toolset.]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[라이선스 식별자 {0}을(를) 현재 도구 집합에서 인식할 수 없습니다.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicenseExpression_UnexpectedIdentifier" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unexpected license identifier '{0}'. The identifier is not allowed in this context.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[예기치 않은 라이선스 식별자 '{0}'입니다. 이 컨텍스트에서 이 식별자를 사용할 수 없습니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicenseExpression_UnlicensedPackageWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The owner has marked this package as 'UNLICENSED'. This means that there is no license that allows this package to be used outside of the copyright owner.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[소유자가 이 패키지를 'UNLICENSED'로 표시했습니다. 즉 저작권 소유자 외에 이 패키지를 사용하는 것을 허용하는 라이선스가 없습니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
