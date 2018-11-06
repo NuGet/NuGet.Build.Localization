@@ -1504,11 +1504,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";License_FileEmbeddedInPackage" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";LicenseFile_Loading" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The license file '{0}' is embedded in the package.]]></Val>
+          <Val><![CDATA[Loading license file...]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Soubor s licencí {0} je vložený do balíčku.]]></Val>
+            <Val><![CDATA[Načítá se soubor s licencí...]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2632,6 +2632,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";WindowTitle_LicenseFileWindow" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} License]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} – licence]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";WindowTitle_NuGetMigrator" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Migrate NuGet format to PackageReference - {0}]]></Val>
@@ -2772,6 +2781,9 @@
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
     </Item>
     <Item ItemId=";xamls/licenseacceptancewindow.baml" ItemType="0" PsrId="223" Leaf="true">
+      <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
+    </Item>
+    <Item ItemId=";xamls/licensefilewindow.baml" ItemType="0" PsrId="223" Leaf="true">
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
     </Item>
     <Item ItemId=";xamls/loadingstatusbar.baml" ItemType="0" PsrId="223" Leaf="true">

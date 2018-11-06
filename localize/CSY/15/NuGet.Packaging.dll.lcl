@@ -1273,6 +1273,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";NuGetLicenseExpression_IllegalUnlicensedOperator" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The 'UNLICENSED' license identifier cannot be combined with the '+' operator.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Identifikátor licence UNLICENSED se nedá kombinovat s operátorem +.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";NuGetLicenseExpression_InvalidCharacters" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license expression '{0}' contains invalid characters.]]></Val>
@@ -1338,9 +1347,30 @@
       </Item>
       <Item ItemId=";NuGetLicenseExpression_NonStandardIdentifier" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[The license identifier(s) '{0}' is(are) not recognized by the current toolset.]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[Aktuální sada nástrojů nerozpoznala identifikátory licencí {0}.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicenseExpression_UnexpectedIdentifier" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unexpected license identifier '{0}'. The identifier is not allowed in this context.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Neočekávaný identifikátor licence {0}. Identifikátor se v tomto kontextu nepovoluje.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicenseExpression_UnlicensedPackageWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The owner has marked this package as 'UNLICENSED'. This means that there is no license that allows this package to be used outside of the copyright owner.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Vlastník tento balíček označil jako UNLICENSED. To znamená, že neexistuje žádná licence, která umožňuje používat tento balíček mimo prostředí vlastníka autorských práv.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

@@ -1273,6 +1273,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";NuGetLicenseExpression_IllegalUnlicensedOperator" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The 'UNLICENSED' license identifier cannot be combined with the '+' operator.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Non è possibile combinare l'identificatore di licenza 'UNLICENSED' con l'operatore '+'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";NuGetLicenseExpression_InvalidCharacters" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license expression '{0}' contains invalid characters.]]></Val>
@@ -1338,9 +1347,30 @@
       </Item>
       <Item ItemId=";NuGetLicenseExpression_NonStandardIdentifier" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[The license identifier(s) '{0}' is(are) not recognized by the current toolset.]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[Il set di strumenti corrente non riconosce l'identificatore o gli identificatori di licenza '{0}'.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicenseExpression_UnexpectedIdentifier" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unexpected license identifier '{0}'. The identifier is not allowed in this context.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[L'identificatore di licenza '{0}' è imprevisto. L'identificatore non è consentito in questo contesto.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetLicenseExpression_UnlicensedPackageWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The owner has marked this package as 'UNLICENSED'. This means that there is no license that allows this package to be used outside of the copyright owner.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Il proprietario ha contrassegnato questo pacchetto come 'UNLICENSED', di conseguenza on esiste alcuna licenza che consenta di usare questo pacchetto se non si è il proprietario del copyright.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
