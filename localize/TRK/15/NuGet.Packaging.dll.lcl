@@ -292,15 +292,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";InvalidPlaceholderFileWarning" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The file at '{0}' uses the symbol for empty directory '_._', but it is present in a directory that contains other files. Please remove this file from directories that contain other files.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' konumundaki dosya, boş dizin simgesini '_._' kullanıyor, ancak başka dosyalar içeren bir dizinde de mevcut. Lütfen bu dosyayı başka dosyalar içeren dizinlerden kaldırın.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";InvalidPrereleaseDependencyWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A stable release of a package should not have a prerelease dependency. Either modify the version spec of dependency "{0}" or update the version field in the nuspec.]]></Val>
@@ -1348,8 +1339,8 @@
       <Item ItemId=";NuGetLicenseExpression_NonStandardIdentifier" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license identifier(s) '{0}' is(are) not recognized by the current toolset.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[{0} lisans tanımlayıcıları geçerli araç takımı tarafından tanınmıyor.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' lisans tanımlayıcıları geçerli araç takımı tarafından tanınmıyor.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>
