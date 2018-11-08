@@ -42,10 +42,13 @@
       </Item>
       <Item ItemId=";InvalidLicenseCombination" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Invalid metadata. Cannot specify both a License Expression and a License File.]]></Val>
+          <Val><![CDATA[Invalid metadata. Cannot specify both a PackageLicenseExpression and a PackageLicenseFile.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Neplatná metadata. Výraz licence a soubor s licencí se nedají zadat najednou.]]></Val>
+            <Val><![CDATA[Neplatná metadata. PackageLicenseExpression a PackageLicenseFile se nedají zadat najednou.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Invalid metadata. Cannot specify both a License Expression and a License File.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -69,10 +72,13 @@
       </Item>
       <Item ItemId=";InvalidLicenseExpressionVersion" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The version string '{0}' for the License Expression is invalid.]]></Val>
+          <Val><![CDATA[The PackageLicenseExpressionVersion string '{0}' is not a valid version.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Řetězec verze {0} pro výraz licence není platný.]]></Val>
+            <Val><![CDATA[Řetězec PackageLicenseExpressionVersion {0} není platná verze.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The version string '{0}' for the License Expression is invalid.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -141,10 +147,13 @@
       </Item>
       <Item ItemId=";NuGetLicenses_LicenseUrlCannotBeUsedInConjuctionWithLicense" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The PackageLicenseUrl cannot be used cannot be used in conjunction with the PackageLicenseFile and PackageLicenseExpression.]]></Val>
+          <Val><![CDATA[The PackageLicenseUrl is being deprecated and cannot be used in conjunction with the PackageLicenseFile or PackageLicenseExpression.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[PackageLicenseUrl se nedá použít spolu s PackageLicenseFile a PackageLicenseExpression.]]></Val>
+            <Val><![CDATA[PackageLicenseUrl se zanedlouho vyřadí a nedá se použít spolu s PackageLicenseFile nebo PackageLicenseExpression.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The PackageLicenseUrl cannot be used cannot be used in conjunction with the PackageLicenseFile and PackageLicenseExpression.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
