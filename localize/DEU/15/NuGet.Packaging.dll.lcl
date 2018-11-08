@@ -292,15 +292,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";InvalidPlaceholderFileWarning" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The file at '{0}' uses the symbol for empty directory '_._', but it is present in a directory that contains other files. Please remove this file from directories that contain other files.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Datei unter "{0}" verwendet das Symbol für leere Verzeichnisse "_. _", sie ist jedoch in einem Verzeichnis mit anderen Dateien enthalten. Entfernen Sie diese Datei aus Verzeichnissen, die andere Dateien enthalten.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";InvalidPrereleaseDependencyWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A stable release of a package should not have a prerelease dependency. Either modify the version spec of dependency "{0}" or update the version field in the nuspec.]]></Val>
@@ -1348,8 +1339,8 @@
       <Item ItemId=";NuGetLicenseExpression_NonStandardIdentifier" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license identifier(s) '{0}' is(are) not recognized by the current toolset.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Die Lizenzbezeichner "{0}" werden vom aktuellen Toolset nicht erkannt.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Lizenzbezeichner "{0}" vom aktuellen Toolset nicht erkannt.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>

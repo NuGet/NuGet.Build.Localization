@@ -42,10 +42,13 @@
       </Item>
       <Item ItemId=";InvalidLicenseCombination" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Invalid metadata. Cannot specify both a License Expression and a License File.]]></Val>
+          <Val><![CDATA[Invalid metadata. Cannot specify both a PackageLicenseExpression and a PackageLicenseFile.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ungültige Metadaten. Es darf nicht gleichzeitig ein Lizenzausdruck und eine Lizenzdatei angegeben werden.]]></Val>
+            <Val><![CDATA[Ungültige Metadaten. PackageLicenseExpression und PackageLicenseFile dürfen nicht gleichzeitig angegeben werden.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Invalid metadata. Cannot specify both a License Expression and a License File.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -69,10 +72,13 @@
       </Item>
       <Item ItemId=";InvalidLicenseExpressionVersion" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The version string '{0}' for the License Expression is invalid.]]></Val>
+          <Val><![CDATA[The PackageLicenseExpressionVersion string '{0}' is not a valid version.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Versionszeichenfolge "{0}" für den Lizenzausdruck ist ungültig.]]></Val>
+            <Val><![CDATA[Die Version der PackageLicenseExpressionVersion-Zeichenfolge "{0}" ist ungültig.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The version string '{0}' for the License Expression is invalid.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -141,10 +147,13 @@
       </Item>
       <Item ItemId=";NuGetLicenses_LicenseUrlCannotBeUsedInConjuctionWithLicense" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The PackageLicenseUrl cannot be used cannot be used in conjunction with the PackageLicenseFile and PackageLicenseExpression.]]></Val>
+          <Val><![CDATA[The PackageLicenseUrl is being deprecated and cannot be used in conjunction with the PackageLicenseFile or PackageLicenseExpression.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[PackageLicenseUrl kann nicht zusammen mit PackageLicenseFile und PackageLicenseExpression verwendet werden.]]></Val>
+            <Val><![CDATA[PackageLicenseUrl ist veraltet und kann nicht zusammen mit PackageLicenseFile oder PackageLicenseExpression verwendet werden.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The PackageLicenseUrl cannot be used cannot be used in conjunction with the PackageLicenseFile and PackageLicenseExpression.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

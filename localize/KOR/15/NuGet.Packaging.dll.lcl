@@ -292,15 +292,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";InvalidPlaceholderFileWarning" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The file at '{0}' uses the symbol for empty directory '_._', but it is present in a directory that contains other files. Please remove this file from directories that contain other files.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}'의 파일은 빈 디렉터리 '_._'에 대한 기호를 사용하지만 다른 파일이 포함된 디렉터리에 있습니다. 다른 파일이 포함된 디렉터리에서 이 파일을 제거하세요.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";InvalidPrereleaseDependencyWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A stable release of a package should not have a prerelease dependency. Either modify the version spec of dependency "{0}" or update the version field in the nuspec.]]></Val>
@@ -1348,8 +1339,8 @@
       <Item ItemId=";NuGetLicenseExpression_NonStandardIdentifier" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license identifier(s) '{0}' is(are) not recognized by the current toolset.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[라이선스 식별자 {0}을(를) 현재 도구 집합에서 인식할 수 없습니다.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[라이선스 식별자 '{0}'을(를) 현재 도구 집합에서 인식할 수 없습니다.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>

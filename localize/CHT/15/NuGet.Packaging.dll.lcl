@@ -292,15 +292,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";InvalidPlaceholderFileWarning" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The file at '{0}' uses the symbol for empty directory '_._', but it is present in a directory that contains other files. Please remove this file from directories that contain other files.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[位於 '{0}' 的檔案使用了空白目錄的符號 '_._'，但其存在於包含其他檔案的目錄中。請從包含其他檔案的目錄中移除這個檔案。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";InvalidPrereleaseDependencyWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A stable release of a package should not have a prerelease dependency. Either modify the version spec of dependency "{0}" or update the version field in the nuspec.]]></Val>
@@ -1331,7 +1322,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The license identifier '{0}' contains invalid characters.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[授權識別碼 '{0}' 包含無效字元。]]></Val>
+            <Val><![CDATA[授權識別碼 '{0}' 包含無效的字元。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1348,8 +1339,8 @@
       <Item ItemId=";NuGetLicenseExpression_NonStandardIdentifier" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The license identifier(s) '{0}' is(are) not recognized by the current toolset.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[目前的工具組無法辨識授權識別碼 {0}。]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[目前的工具組無法辨識授權識別碼 '{0}'。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>

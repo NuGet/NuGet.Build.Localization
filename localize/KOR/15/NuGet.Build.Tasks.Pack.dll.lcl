@@ -42,10 +42,13 @@
       </Item>
       <Item ItemId=";InvalidLicenseCombination" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Invalid metadata. Cannot specify both a License Expression and a License File.]]></Val>
+          <Val><![CDATA[Invalid metadata. Cannot specify both a PackageLicenseExpression and a PackageLicenseFile.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[잘못된 메타데이터입니다. 라이선스 식과 라이선스 파일을 모두 지정할 수 없습니다.]]></Val>
+            <Val><![CDATA[잘못된 메타데이터입니다. PackageLicenseExpression과 PackageLicenseFile을 모두 지정할 수 없습니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Invalid metadata. Cannot specify both a License Expression and a License File.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -69,10 +72,13 @@
       </Item>
       <Item ItemId=";InvalidLicenseExpressionVersion" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The version string '{0}' for the License Expression is invalid.]]></Val>
+          <Val><![CDATA[The PackageLicenseExpressionVersion string '{0}' is not a valid version.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[라이선스 식의 버전 문자열 '{0}'이(가) 잘못되었습니다.]]></Val>
+            <Val><![CDATA[PackageLicenseExpressionVersion 문자열 '{0}'은(는) 유효한 버전이 아닙니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The version string '{0}' for the License Expression is invalid.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -141,10 +147,13 @@
       </Item>
       <Item ItemId=";NuGetLicenses_LicenseUrlCannotBeUsedInConjuctionWithLicense" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The PackageLicenseUrl cannot be used cannot be used in conjunction with the PackageLicenseFile and PackageLicenseExpression.]]></Val>
+          <Val><![CDATA[The PackageLicenseUrl is being deprecated and cannot be used in conjunction with the PackageLicenseFile or PackageLicenseExpression.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[PackageLicenseUrl을 PackageLicenseFile 및 PackageLicenseExpression과 함께 사용할 수 없습니다.]]></Val>
+            <Val><![CDATA[PackageLicenseUrl은 사용되고 있지 않으며 PackageLicenseFile 또는 PackageLicenseExpression과 함께 사용할 수 없습니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The PackageLicenseUrl cannot be used cannot be used in conjunction with the PackageLicenseFile and PackageLicenseExpression.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

@@ -42,10 +42,13 @@
       </Item>
       <Item ItemId=";InvalidLicenseCombination" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Invalid metadata. Cannot specify both a License Expression and a License File.]]></Val>
+          <Val><![CDATA[Invalid metadata. Cannot specify both a PackageLicenseExpression and a PackageLicenseFile.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[中繼資料無效。無法同時指定授權運算式和授權檔案。]]></Val>
+            <Val><![CDATA[中繼資料無效。無法同時指定 PackageLicenseExpression 和 PackageLicenseFile。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Invalid metadata. Cannot specify both a License Expression and a License File.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -69,10 +72,13 @@
       </Item>
       <Item ItemId=";InvalidLicenseExpressionVersion" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The version string '{0}' for the License Expression is invalid.]]></Val>
+          <Val><![CDATA[The PackageLicenseExpressionVersion string '{0}' is not a valid version.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[授權運算式的版本字串 '{0}' 無效。]]></Val>
+            <Val><![CDATA[PackageLicenseExpressionVersion 字串 '{0}' 不是有效的版本。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The version string '{0}' for the License Expression is invalid.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -141,10 +147,13 @@
       </Item>
       <Item ItemId=";NuGetLicenses_LicenseUrlCannotBeUsedInConjuctionWithLicense" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The PackageLicenseUrl cannot be used cannot be used in conjunction with the PackageLicenseFile and PackageLicenseExpression.]]></Val>
+          <Val><![CDATA[The PackageLicenseUrl is being deprecated and cannot be used in conjunction with the PackageLicenseFile or PackageLicenseExpression.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[PackageLicenseUrl 不能與 PackageLicenseFile 和 PackageLicenseExpression 一併使用。]]></Val>
+            <Val><![CDATA[PackageLicenseUrl 即將淘汰，不能與 PackageLicenseFile 或 PackageLicenseExpression 一起使用。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The PackageLicenseUrl cannot be used cannot be used in conjunction with the PackageLicenseFile and PackageLicenseExpression.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
