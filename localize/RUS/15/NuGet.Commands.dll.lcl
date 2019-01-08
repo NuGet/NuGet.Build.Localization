@@ -22,6 +22,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ArgumentCannotBeNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The argument cannot be null or empty.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";BuildingProjectTargetingFramework" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Building project '{0}' for target framework '{1}'.]]></Val>
@@ -40,6 +46,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_AuthorTrustExpectedAuthorSignature" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to add trusted author. The package is not author signed.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_BuildFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Failed to build using '{0} {1}'.]]></Val>
@@ -55,6 +67,42 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Не удается найти версию msbuild.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_CannotTrustOwnersForAuthor" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Trusted owners are not supported in trusted author items.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_CouldNotAdd" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Could not add the trusted signer: {0}]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_CouldNotList" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Could not list the trusted signers: {0}]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_CouldNotRemove" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Could not remove the trusted signer: {0}]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_CouldNotSync" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Could not sync the trusted repository: {0}]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_EmptyCertificateListInRepository" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The repository with the service index '{0}' does not list any trusted certificates.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -91,6 +139,18 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[PackageTargetFallback и AssetTargetFallback не могут использоваться совместно. Удалите (устаревшие) ссылки PackageTargetFallback из окружения проекта.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_InvalidCertificateInformationFromServer" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid certificate information from the service index '{0}'.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_InvalidCombinationOfArguments" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid combination of arguments.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -202,12 +262,30 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_NoSignatureTrustedForPackage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No signature to be trusted was specified for the package '{0}'. Please specify either Author or Repository.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_NoSourcesInformation" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to get package sources information.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_NoStablePackageVersionsExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to find a stable package {0} with version {1}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Не удалось найти стабильный пакет {0} с версией {1}]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_NotSupportedHashAlgorithm" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['{0}' is not a supported hash algorithm.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -235,6 +313,12 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Не удалось выполнить сборку пакета. Убедитесь, что "{0}" включает исходные файлы и файлы символов. Справку по сборке пакета символов см. по ссылке {1}.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_PackageNotSigned" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package is not signed.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -274,6 +358,18 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_PropertyCannotBeNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Property '{0}' should not be null or empty.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_RepoTrustExpectedRepoSignature" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to add trusted repository. The package is not repository signed or countersigned.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_RestoreInLockedMode" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --force-evaluate flag to run restore to update the lock file.]]></Val>
@@ -286,12 +382,42 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_ServiceIndexShouldBeHttps" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The repository service index '{0}' is not a valid HTTPS url.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_ToolsPackageWithExtraPackageTypes" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid tools package {0} {1}. Tools packages cannot contain more than one PackageType.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Недопустимый пакет инструментов {0} {1}. Пакеты инструментов не могут содержать более одного PackageType.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_TrustedAuthorNoOwners" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A trusted author cannot have owners.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_TrustedRepoAlreadyExists" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A trusted repository with the service index '{0}' already exists.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_TrustedRepositoryDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A trusted repository '{0}' does not exist.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_TrustedSignerAlreadyExists" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A trusted signer '{0}' already exists.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -343,12 +469,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_UnavailableSource" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Source '{0}' does not exist or cannot be retrived.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_UnknownBuildAction" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package '{0}' specifies an invalid build action '{1}' for file '{2}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Пакет "{0}" указывает недопустимое действие сборки "{1}" для файла "{2}".]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_UnsupportedTrustTarget" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The trust target '{0}' is unsupported.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1207,6 +1345,18 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";NoTrustedSigners" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[There are no trusted signers.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NoTrustedSignersMatching" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No trusted signers with the name: '{0}' were found.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";NonMatchingProperties" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Properties '{0}':'{1}' and '{2}':'{3}' do not match.]]></Val>
@@ -1276,6 +1426,12 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Комбинация входных данных недопустима. Свойство "{0}" запрещено в проекте типа "{1}".]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";RegsiteredTrustedSigners" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Registered trusted signers:]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1468,6 +1624,72 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";SuccessfullUpdatedTrustedSigner" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Successfully updated the trusted signer '{0}'.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SuccessfullyAddedTrustedAuthor" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Successfully added a trusted author '{0}'.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SuccessfullyAddedTrustedRepository" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Successfully added a trusted repository '{0}'.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SuccessfullyRemovedTrustedSigner" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Successfully removed the trusted signer '{0}'.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SuccessfullySynchronizedTrustedRepository" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Successfully synchronized the trusted repository '{0}'.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TrustedSignerLogCertificateSummaryAllowUntrustedRoot" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[[U]5D; {0} - {1}]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TrustedSignerLogCertificateSummaryUnallowUntrustedRoot" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} - {1}]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TrustedSignerLogCertificates" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Certificate fingerprint(s):]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TrustedSignerLogOwners" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Trusted owners: {0}]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TrustedSignerLogServiceIndex" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Service Index: {0}]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TrustedSignerLogTitle" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} [{1}]5D;]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";UnableToExtractAssemblyMetadata" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to extract metadata from '{0}'.]]></Val>
@@ -1483,6 +1705,12 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Не удалось найти "{0}". Убедитесь, что сборка проекта выполнена.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnsupportedHashAlgorithm" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The hash algorithm is unsupported:  '{0}'.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1714,10 +1942,13 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";Comments" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[Complete commands common to command-line and GUI NuGet clients]]></Val>
-        <Tgt Cat="Text" Stat="Loc" Orig="New">
+        <Val><![CDATA[Complete commands common to command-line and GUI NuGet clients.]]></Val>
+        <Tgt Cat="Text" Stat="Update" Orig="New">
           <Val><![CDATA[Выполняйте распространенные команды клиентов командной строки и графического пользовательского интерфейса NuGet]]></Val>
         </Tgt>
+        <Prev Cat="Text">
+          <Val><![CDATA[Complete commands common to command-line and GUI NuGet clients]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1747,10 +1978,13 @@
     </Item>
     <Item ItemId=";LegalCopyright" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+        <Val><![CDATA[© Microsoft Corporation. All rights reserved.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[Корпорация Майкрософт (Microsoft Corporation). Все права защищены.]]></Val>
+          <Val><![CDATA[© Корпорация Майкрософт (Microsoft Corporation). Все права защищены.]]></Val>
         </Tgt>
+        <Prev Cat="Text">
+          <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
