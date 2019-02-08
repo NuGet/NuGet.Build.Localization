@@ -292,6 +292,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";InvalidPlaceholderFileWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The file at '{0}' uses the symbol for empty directory '_._', but it is present in a directory that contains other files. Please remove this file from directories that contain other files.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[位於 '{0}' 的檔案使用了空白目錄的符號 '_._'，但其存在於包含其他檔案的目錄中。請從包含其他檔案的目錄中移除這個檔案。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";InvalidPrereleaseDependencyWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A stable release of a package should not have a prerelease dependency. Either modify the version spec of dependency "{0}" or update the version field in the nuspec.]]></Val>
@@ -1120,6 +1129,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";InvalidPackageTypeVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Nuspec file contains a package type with an invalid package version '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nuspec 包含套件版本 '{0}' 無效的套件類型。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";InvalidPrimarySignature" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The primary signature is invalid.]]></Val>
@@ -1183,11 +1201,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";MissingMetadataNode" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Nuspec file does not contain the '{0}' node.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nuspec 檔案未包含 '{0}' 節點。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";MissingNuspec" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Nuspec file does not exist in package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[封裝中不存在 Nuspec 檔案。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";MissingPackageTypeName" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Nuspec file contains a package type that is missing the name attribute.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nuspec 檔案包含缺少名稱屬性的套件類型。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1215,6 +1251,15 @@
           <Val><![CDATA[The package contains multiple package signature files.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[此套件包含多個套件簽章檔案。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";MultiplePackageTypes" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Nuspec file contains multiple package types. Zero or one package type nodes are allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nuspec 檔案包含多種套件類型。允許零或一個套件類型節點。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

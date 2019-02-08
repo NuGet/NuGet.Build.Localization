@@ -13,6 +13,15 @@
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId=";ImportsFallbackWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[ProjectReference '{0}' was resolved using '{1}' instead of the project target framework '{2}'. This project may not be fully compatible with your project.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Odwołanie ProjectReference „{0}” zostało rozpoznane przy użyciu elementu „{1}” zamiast platformy docelowej projektu „{2}”. Ten projekt może nie być w pełni zgodny z Twoim projektem.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";NoCompatibleTargetFramework" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Project '{0}' targets '{2}'. It cannot be referenced by a project that targets '{1}'.]]></Val>
