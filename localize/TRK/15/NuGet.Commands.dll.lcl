@@ -489,12 +489,12 @@
       </Item>
       <Item ItemId=";Error_UnableToFindProjectInfo" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
+          <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution so please run a restore from command-line. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' için proje bilgileri bulunamıyor. Visual Studio içinde proje yüklenmemiş olabilir veya geçerli çözümün bir parçası olmayabilir. Aksi takdirde proje dosyası geçersiz olabilir veya geri yükleme için gerekli olan hedefler eksik olabilir.]]></Val>
+            <Val><![CDATA['{0}' için proje bilgileri bulunamıyor. Visual Studio içinde proje yüklenmemiş olabilir veya geçerli çözümün bir parçası olmayabilir. Komut satırından bir geri yükleme işlemi çalıştırın. Aksi takdirde proje dosyası geçersiz olabilir veya geri yükleme için gerekli olan hedefler eksik olabilir.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Unable to find project information for '{0}'. The project file may be invalid or missing targets required for restore.]]></Val>
+            <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1297,20 +1297,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_ToolWritingAssetsFile" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Writing tool assets file to disk. Path: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Araç varlıkları dosyası diske yazılıyor. Yol: {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_ToolWritingCacheFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Writing tool cache file to disk. Path: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Araç önbelleği dosyası diske yazılıyor. Yol: {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Log_ToolWritingLockFile" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Writing tool lock file to disk. Path: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Araç kilidi dosyası diske yazılıyor. Yol: {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1363,20 +1363,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_WritingAssetsFile" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Writing assets file to disk. Path: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Varlıklar dosyası diske yazılıyor. Yol: {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_WritingCacheFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Writing cache file to disk. Path: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Önbellek dosyası diske yazılıyor. Yol: {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Log_WritingLockFile" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Writing lock file to disk. Path: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Kilit dosyası diske yazılıyor. Yol: {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2013,15 +2013,6 @@
           <Val><![CDATA[Project dependency {0} does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Proje bağımlılığı {0}, kapsamlı bir alt sınır içermiyor. Tutarlı geri yükleme sonuçları alındığından emin olmak için bağımlılık sürümüne bir alt sınır ekleyin.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_SemanticVersion" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Version "{0}" does not follow semantic versioning guidelines. Update your nuspec file or use the AssemblyInformationalVersion assembly attribute to specify a semantic version as described at http://semver.org.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA["{0}" sürümü anlamsal sürüm oluşturma yönergelerini izlemiyor. Nuspec dosyanızı güncelleştirin veya http://semver.org adresinde açıklandığı şekilde bir anlamsal sürüm belirtmek için AssemblyInformationalVersion bütünleştirilmiş kod özniteliğini kullanın.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
