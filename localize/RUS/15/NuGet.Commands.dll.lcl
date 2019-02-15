@@ -486,12 +486,12 @@
       </Item>
       <Item ItemId=";Error_UnableToFindProjectInfo" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
+          <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution so please run a restore from command-line. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Не удалось найти сведения о проекте для "{0}". В Visual Studio, возможно, причина в том, что проект выгружен или не является частью текущего решения. В ином случае файл проекта может быть недопустим, или в нем могут отсутствовать целевые объекты, необходимые для восстановления.]]></Val>
+            <Val><![CDATA[Не удалось найти сведения о проекте для "{0}". В Visual Studio причина может заключаться в том, что проект выгружен или не является частью текущего решения. В этом случае выполните восстановление из командной строки. В противном случае причина может быть связана с тем, что файл проекта является недопустимым или отсутствуют целевые объекты, необходимые для восстановления.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Unable to find project information for '{0}'. The project file may be invalid or missing targets required for restore.]]></Val>
+            <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1159,12 +1159,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_RestoreCompleteDotnetTool" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Restore completed in {0}.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_RestoreFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Restore failed in {0} for {1}.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Сбой восстановления в {0} для {1}.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Log_RestoreFailedDotnetTool" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Restore failed in {0}.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1200,15 +1212,6 @@
           <Val><![CDATA[Restoring packages for {0} to determine compatibility...]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Идет восстановление пакетов для {0}, чтобы определить совместимость...]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Log_RestoringToolPackages" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Restoring packages for tool '{0}' in {1}...]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Восстановление пакетов для инструмента "{0}" в {1}…]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1294,20 +1297,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_ToolWritingAssetsFile" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Writing tool assets file to disk. Path: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Запись файла ресурсов инструмента на диск. Путь: {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_ToolWritingCacheFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Writing tool cache file to disk. Path: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Запись файла кэша инструмента на диск. Путь: {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Log_ToolWritingLockFile" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Writing tool lock file to disk. Path: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Запись файла блокировки инструмента на диск. Путь: {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1360,20 +1363,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_WritingAssetsFile" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Writing assets file to disk. Path: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Запись файла ресурсов на диск. Путь: {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_WritingCacheFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Writing cache file to disk. Path: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Запись файла кэша на диск. Путь: {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Log_WritingLockFile" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Writing lock file to disk. Path: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Запись файла блокировки на диск. Путь: {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2010,15 +2013,6 @@
           <Val><![CDATA[Project dependency {0} does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Зависимость проекта {0} не содержит включенную нижнюю границу. Включите нижнюю границу в версию зависимости, чтобы обеспечить согласованные результаты восстановления.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_SemanticVersion" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Version "{0}" does not follow semantic versioning guidelines. Update your nuspec file or use the AssemblyInformationalVersion assembly attribute to specify a semantic version as described at http://semver.org.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Версия "{0}" не соответствует рекомендациям по семантическому версионированию. Обновите файл nuspec или используйте атрибут сборки AssemblyInformationalVersion, чтобы указать семантическую версию, как описано на сайте http://semver.org.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
