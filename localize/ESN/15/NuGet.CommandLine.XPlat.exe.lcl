@@ -59,7 +59,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Do not perform restore preview and compatibility check. The added package reference will be unconditional.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[No realiza la restauración de versión preliminar y la comprobación de compatibilidad. La referencia de paquete agregada será incondicional.]]></Val>
+            <Val><![CDATA[No realiza la vista previa de restauración y la comprobación de compatibilidad. La referencia de paquete agregada será incondicional.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -77,7 +77,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Id of the package to be added.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Id. del paquete que se agregará.]]></Val>
+            <Val><![CDATA[Id. del paquete que se va a agregar.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -104,7 +104,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Specifies NuGet package sources to use during the restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Especifica los orígenes de paquete NuGet para usar durante la restauración.]]></Val>
+            <Val><![CDATA[Especifica orígenes de paquete NuGet para usar durante la restauración.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -113,7 +113,7 @@
         <Str Cat="Text">
           <Val><![CDATA[user specified]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[especificado por el usuario]]></Val>
+            <Val><![CDATA[Especificado por el usuario]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -212,7 +212,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Disable buffering when pushing to an HTTP(S) server to decrease memory usage.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Deshabilita el almacenamiento en búfer al realizar la inserción en un servidor HTTP(S) para reducir el uso de memoria.]]></Val>
+            <Val><![CDATA[Deshabilita el almacenamiento en búfer al insertar en un servidor HTTP(S) para reducir el uso de memoria.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -230,7 +230,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Error while performing {0} for package '{1}'. Cannot edit items in imported files - {2}{3}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Error al realizar {0} para el paquete "{1}". No se pueden editar elementos de archivos importados: {2}{3}]]></Val>
+            <Val><![CDATA[Error al realizar {0} para el paquete "{1}". No se pueden editar los elementos de archivos importados: {2}{3}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -338,7 +338,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Prevent inclusion of empty directories when building the package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Impide la inclusión de directorios vacíos al compilar el paquete.]]></Val>
+            <Val><![CDATA[Impide la inclusión de directorios vacíos al crear el paquete.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -401,7 +401,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package '{0}' is compatible with a subset of the specified frameworks in project '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[El paquete "{0}" es compatible con un subconjunto de los marcos de trabajo especificados del proyecto "{1}".]]></Val>
+            <Val><![CDATA[El paquete "{0}" es compatible con un subconjunto de los marcos de trabajo especificados en el proyecto "{1}".]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -579,10 +579,13 @@
       </Item>
       <Item ItemId=";ListPkg_NoUpdatesForProject" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The given project `{0}` have no updates given the current sources.]]></Val>
+          <Val><![CDATA[The given project `{0}` has no updates given the current sources.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[El proyecto "{0}" especificado no tiene ninguna actualización en los orígenes actuales dados.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The given project `{0}` have no updates given the current sources.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -735,12 +738,12 @@
       </Item>
       <Item ItemId=";LocalsCommand_Help" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[Uso: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;Para obtener más información, visite http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -756,36 +759,36 @@
       </Item>
       <Item ItemId=";LocalsCommand_MultipleOperations" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Both operations, --list and --clear, are not supported in the same command. Please specify only one operation.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[Both operations, --list and --clear, are not supported in the same command. Please specify only one operation.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[No se admiten ambas operaciones, --list y --clear, a la vez en el mismo comando. Especifique una sola operación.]D;]A;Uso: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;Para obtener más información, visite http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Both operations, --list and --clear, are not supported in the same command. Please specify only one operation.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[Both operations, --list and --clear, are not supported in the same command. Please specify only one operation.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LocalsCommand_NoArguments" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[No Cache Type was specified.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[No Cache Type was specified.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[No se especificó ningún tipo de caché.]D;]A;Uso: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;Para obtener más información, visite http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[No Cache Type was specified.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[No Cache Type was specified.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LocalsCommand_NoOperation" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Please specify an operation i.e. --list or --clear.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[Please specify an operation i.e. --list or --clear.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[Especifique una operación, es decir, --list o --clear.]D;]A;Uso: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;Para obtener más información, visite http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Please specify an operation i.e. --list or --clear.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[Please specify an operation i.e. --list or --clear.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -891,12 +894,12 @@
       </Item>
       <Item ItemId=";NoServiceEndpoint_Description" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[--no-service-endpoint does not append "api/v2/packages" to the source URL.]]></Val>
+          <Val><![CDATA[Does not append "api/v2/package" to the source URL.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[--no-service-endpoint no anexa "api/v2/packages" a la dirección URL de origen.]]></Val>
+            <Val><![CDATA[No anexa "api/v2/package" a la dirección URL de origen.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Does not append "api/v2/package" to the source URL.]]></Val>
+            <Val><![CDATA[--no-service-endpoint does not append "api/v2/packages" to the source URL.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -921,9 +924,21 @@
       </Item>
       <Item ItemId=";NuGetDocs" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[http://docs.nuget.org/]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[https://docs.nuget.org/]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[http://docs.nuget.org/]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[http://docs.nuget.org/]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetXplatCommand_Interactive" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Allow the command to block and require manual action for operations like authentication.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Permite usar el comando para bloquear y requerir la acción manual para operaciones como la autenticación.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -941,7 +956,7 @@
         <Str Cat="Text">
           <Val><![CDATA[{0} Version: {1}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} versión: {1}]]></Val>
+            <Val><![CDATA[{0} versión {1}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -950,7 +965,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Creates a NuGet package based on the specified nuspec or project file]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Crea un paquete NuGet en función del archivo nuspec o el archivo de proyecto especificado]]></Val>
+            <Val><![CDATA[Crea un paquete NuGet en función del archivo nuspec o el archivo de proyecto]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -959,7 +974,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Attempting to build package from '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Intentando compilar un paquete desde "{0}".]]></Val>
+            <Val><![CDATA[Intentando crear un paquete desde "{0}".]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -978,15 +993,6 @@
           <Val><![CDATA[Version string specified '{0}' is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[La cadena de versión especificada "{0}" no es válida.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";PushDeleteCommand_Interactive" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Allow the command to block and require manual action for operations like authentication.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Permite usar el comando para bloquear y requerir la acción manual para operaciones como la autenticación.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1040,7 +1046,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Pushing took too long. You can change the default timeout of 300 seconds by using the --timeout <seconds> option with the push command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La inserción tardó demasiado tiempo. Puede cambiar el tiempo de espera predeterminado de 300 segundos usando la opción --timeout <seconds> con el comando de inserción.]]></Val>
+            <Val><![CDATA[La inserción tardó demasiado tiempo. Puede cambiar el tiempo de espera predeterminado de 300 segundos mediante la opción --timeout <seconds> con el comando de inserción.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1058,7 +1064,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Id of the package to be removed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Id. del paquete que se quitará.]]></Val>
+            <Val><![CDATA[Id. del paquete que se va a quitar.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1133,7 +1139,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Use legacy behavior when the restore operation is interacting with the global packages directory. This means the ID and version folder names are written with the original package case rather than being normalized to lowercase.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Usa el comportamiento heredado cuando la operación de restauración interactúa con el directorio de paquetes global. Esto significa que los nombres de carpeta de id. y versión se escriben con las mayúsculas o minúsculas originales del paquete, en lugar de normalizarse a minúsculas.]]></Val>
+            <Val><![CDATA[Usa comportamiento heredado cuando la operación de restauración interactúa con el directorio de paquetes global. Esto significa que los nombres de carpeta de id. y versión se escriben con las mayúsculas o minúsculas originales del paquete, en lugar de normalizarse a minúsculas.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1142,7 +1148,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Do not cache packages and http requests.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[No almacena en caché paquetes ni solicitudes http.]]></Val>
+            <Val><![CDATA[No almacena en caché paquetes y solicitudes http.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
