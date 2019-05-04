@@ -148,6 +148,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_IncompatiblePackageType" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package {0} {1} has a package type {2} that is incompatible with this project.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_InputFileNotSpecified" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Please specify a nuspec, project.json, or project file to use]]></Val>
@@ -355,6 +361,12 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Fehler beim Erstellen des Pakets. Stellen Sie sicher, dass "{0}" Quell- und Symboldateien enthält. Hilfe zum Erstellen von Symbolpaketen finden Sie unter {1}.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_PackageDownload_OnlyExactVersionsAreAllowed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['{0}' is not an exact version like '[1.0.0]5D;'. Only exact versions are allowed with PackageDownload.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -717,12 +729,12 @@
       </Item>
       <Item ItemId=";LocalsCommand_Help" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[Syntax: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;Weitere Informationen finden Sie unter http://docs.nuget.org/docs/reference/command-line-reference.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -943,6 +955,12 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[{0} {1} wird im Lock-Dateiziel für {2} angegeben, ist aber in der Liste der Bibliotheken auf oberster Ebene nicht enthalten.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Log_LockFileNotOnDisk" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The lock file for {0} at location {1} does not exist, no-op is not possible. Continuing restore.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1455,10 +1473,13 @@
       </Item>
       <Item ItemId=";NuGetDocs" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[http://docs.nuget.org/]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[https://docs.nuget.org/]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[http://docs.nuget.org/]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[http://docs.nuget.org/]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
