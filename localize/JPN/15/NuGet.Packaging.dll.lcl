@@ -1540,8 +1540,8 @@
       <Item ItemId=";PackageMinVersionNotSatisfied" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The '{0}' package requires NuGet client version '{1}' or above, but the current NuGet version is '{2}'. To upgrade NuGet, please go to https://docs.nuget.org/consume/installing-nuget]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA['{0}' パッケージを使用するには NuGet クライアントのバージョンが '{1}' 以上でなければなりませんが、現在の NuGet バージョンは '{2}' です。NuGet をアップグレードするには、http://docs.nuget.org/consume/installing-nuget にアクセスしてください。]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' パッケージを使用するには NuGet クライアントのバージョンが '{1}' 以上でなければなりませんが、現在の NuGet バージョンは '{2}' です。NuGet をアップグレードするには、https://docs.nuget.org/consume/installing-nuget にアクセスしてください]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The '{0}' package requires NuGet client version '{1}' or above, but the current NuGet version is '{2}'. To upgrade NuGet, please go to http://docs.nuget.org/consume/installing-nuget]]></Val>
@@ -2062,6 +2062,9 @@
       <Item ItemId=";TimestampSignatureUnsupportedDigestAlgorithm" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp signature has an unsupported digest algorithm ({0}). The following algorithms are supported: {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[タイムスタンプ署名のダイジェスト アルゴリズム ({0}) がサポートされていません。サポートされているアルゴリズムは次のとおりです: {1}。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2326,6 +2329,9 @@
       <Item ItemId=";VerifyError_TimestampSignatureUnsupportedDigestAlgorithm" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The {0}'s timestamp signature has an unsupported digest algorithm.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} のタイムスタンプ署名には、サポートされていないダイジェスト アルゴリズムがあります。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
