@@ -340,6 +340,9 @@
       <Item ItemId=";Error_DirectoryDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Directory {0} does not exist.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[目錄 {0} 不存在。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -355,18 +358,27 @@
       <Item ItemId=";Error_InvalidLockFileInput" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid restore input where RestorePackagesWithLockFile property is set to false but a packages lock file exists at {0}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[還原輸入無效，其中 RestorePackagesWithLockFile 屬性設定為 false，但 {0} 上有套件鎖定檔案。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_PackageValidationFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package {0} content hash validation failed. The package is different than the last restore.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[套件 {0} 內容雜湊驗證失敗。此套件與上次還原的套件不同。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_RestoreInLockedModePackagesConfig" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Run restore without using restore locked mode to update the lock file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[套件鎖定檔案與專案相依性不一致，因此無法在鎖定模式中執行還原。請在不使用還原鎖定模式的情況下執行還原，以更新鎖定檔案。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
