@@ -462,10 +462,13 @@
       </Item>
       <Item ItemId=";ListPkg_DeprecatedPkgDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[(D) : The owner has unlisted this package. This could mean the package is deprecated or shouldn't be used anymore.]]></Val>
+          <Val><![CDATA[(D): Deprecated package(s). Use 'dotnet list package --deprecated' for more info.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[(D) : 擁有者已將此套件從清單中移除。這可能表示套件已淘汰，或是不應再使用。]]></Val>
+            <Val><![CDATA[(D): 已淘汰套件。如需詳細資訊，請使用 'dotnet list package --deprecated'。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[(D) : The owner has unlisted this package. This could mean the package is deprecated or shouldn't be used anymore.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -537,6 +540,15 @@
           <Val><![CDATA[Failed to parse one of the given frameworks. Please make sure the given frameworks are valid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[無法剖析其中一個指定的 Framework。請確認指定的架構均有效。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_InvalidOptionsOutdatedAndDeprecated" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid command. Combining the '--outdated' and '--deprecated' options is not supported.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[命令無效，不支援結合 '--outdated' 和 '--deprecated' 選項。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
