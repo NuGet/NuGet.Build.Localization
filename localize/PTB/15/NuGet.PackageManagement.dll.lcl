@@ -340,6 +340,9 @@
       <Item ItemId=";Error_DirectoryDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Directory {0} does not exist.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O diretório {0} não existe.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -355,18 +358,27 @@
       <Item ItemId=";Error_InvalidLockFileInput" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid restore input where RestorePackagesWithLockFile property is set to false but a packages lock file exists at {0}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Restauração inválida de entrada em que a propriedade RestorePackagesWithLockFile é definida como false, mas existe um arquivo de bloqueio de pacotes em {0}.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_PackageValidationFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package {0} content hash validation failed. The package is different than the last restore.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A validação do hash de conteúdo {0} do pacote falhou. O pacote é diferente da última restauração.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_RestoreInLockedModePackagesConfig" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Run restore without using restore locked mode to update the lock file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O arquivo de bloqueio de pacotes é inconsistente com as dependências do projeto, então a restauração não pode ser executada no modo de bloqueio. Execute a restauração sem usar a restauração do modo de bloqueio para atualizar o arquivo de bloqueio.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
