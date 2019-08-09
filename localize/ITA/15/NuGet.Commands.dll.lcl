@@ -234,10 +234,13 @@
       </Item>
       <Item ItemId=";Error_InvalidLockFileInput" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Invalid restore input where RestorePackagesWithLockFile property is set to false and also exist a packages lock file at {0}.]]></Val>
+          <Val><![CDATA[Invalid restore input where RestorePackagesWithLockFile property is set to false but a packages lock file exists at {0}.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Il valore di input per il ripristino non è valido quando la proprietà RestorePackagesWithLockFile è impostata su false ed è presente anche un file di blocco dei pacchetti in {0}.]]></Val>
+            <Val><![CDATA[Il valore di input per il ripristino non è valido quando la proprietà RestorePackagesWithLockFile è impostata su false, ma è presente un file di blocco dei pacchetti in {0}.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Invalid restore input where RestorePackagesWithLockFile property is set to false and also exist a packages lock file at {0}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -387,10 +390,13 @@
       </Item>
       <Item ItemId=";Error_PackageValidationFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package {0} sha512 validation failed. The package is different than the last restore.]]></Val>
+          <Val><![CDATA[The package {0} content hash validation failed. The package is different than the last restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La convalida dell'hash SHA512 del pacchetto {0} non è riuscita. Il pacchetto è diverso dall'ultimo ripristino.]]></Val>
+            <Val><![CDATA[La convalida dell'hash del contenuto del pacchetto {0} non è riuscita. Il pacchetto è diverso dall'ultimo ripristino.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package {0} sha512 validation failed. The package is different than the last restore.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -408,6 +414,24 @@
           <Val><![CDATA[Unable to find project '{0}'. Check that the project reference is valid and that the project file exists.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Il progetto '{0}' non è stato trovato. Verificare che il riferimento del progetto sia valido e che il file di progetto esista.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_ProjectRuntimeJsonIsUnreadable" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The runtime.json specified in the project '{0}' could not be parsed. {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Non è stato possibile analizzare il file runtime.json specificato nel progetto '{0}'. {1}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_ProjectRuntimeJsonNotFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The runtime.json specified in the project '{0}' could not be found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Non è stato possibile trovare il file runtime.json specificato nel progetto '{0}'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -441,12 +465,12 @@
       </Item>
       <Item ItemId=";Error_RestoreInLockedMode" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --force-evaluate flag to run restore to update the lock file.]]></Val>
+          <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Disable the RestoreLockedMode MSBuild property or pass an explicit --force-evaluate option to run restore to update the lock file.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Il file di blocco dei pacchetti non è coerente con le dipendenze del progetto, di conseguenza non è possibile eseguire il ripristino nella modalità di blocco. Disabilitare la proprietà RestoreLockedMode di MSBuild oppure passare il flag esplicito --force-evaluate per eseguire il ripristino e aggiornare il file di blocco.]]></Val>
+            <Val><![CDATA[Il file di blocco dei pacchetti non è coerente con le dipendenze del progetto, di conseguenza non è possibile eseguire il ripristino nella modalità di blocco. Disabilitare la proprietà RestoreLockedMode di MSBuild oppure passare un'opzione esplicita --force-evaluate per eseguire il ripristino e aggiornare il file di blocco.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --reevaluate flag to run restore to update the lock file.]]></Val>
+            <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --force-evaluate flag to run restore to update the lock file.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
