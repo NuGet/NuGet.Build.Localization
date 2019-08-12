@@ -265,6 +265,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";BuildConventionIsViolatedWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[- At least one {0} file was found in '{1}', but '{2}' was not.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";DefaultSpecValueWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The value "{0}" for {1} is a sample value and should be removed. Replace it with an appropriate value or remove it and rebuild your package.]]></Val>
@@ -445,6 +451,30 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Um arquivo do espaço reservado da pasta vazio '{0}' está em uma pasta não vazia de deve ser removido.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[References were found in the nuspec, but some reference assemblies were not found in both the nuspec and ref folder. Add the following reference assemblies:]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToNuspecListItemFormat" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[- Add {0} to the {1} reference group in the nuspec]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToNuspecNoTfmListItemFormat" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[- Add {0} to the references element in the nuspec]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToRefListItemFormat" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[- Add {0} to the ref/{1}/ directory]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -677,7 +707,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in the allow list.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A impressão digital do certificado de assinatura do pacote não corresponde a nenhuma impressão digital de certificado na lista de permissões.]]></Val>
+            <Val><![CDATA[A impressão digital do certificado de assinatura de pacote não corresponde a nenhuma impressão digital de certificado na lista de permissões.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -830,7 +860,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature is invalid or cannot be verified on this platform.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A assinatura do pacote é inválida ou não pode ser verificada nesta plataforma.]]></Val>
+            <Val><![CDATA[A assinatura de pacote é inválida ou não pode ser verificada nesta plataforma.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The package signature is invalid.]]></Val>
@@ -947,7 +977,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature file does not contain exactly one primary signature.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O arquivo de assinatura do pacote não contém exatamente uma assinatura principal.]]></Val>
+            <Val><![CDATA[O arquivo de assinatura de pacote não contém exatamente uma assinatura principal.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The package signature contains multiple primary signatures.]]></Val>
@@ -1148,7 +1178,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature file entry is invalid. {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A entrada do arquivo de assinatura do pacote é inválida. {0}]]></Val>
+            <Val><![CDATA[A entrada do arquivo de assinatura de pacote é inválida. {0}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The package signature file entry is invalid.]]></Val>
@@ -1751,7 +1781,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package signature contains an invalid attribute: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A assinatura do pacote contém um atributo inválido: {0}]]></Val>
+            <Val><![CDATA[A assinatura de pacote contém um atributo inválido: {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2144,7 +2174,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package hash information could not be read from the package signature.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Não foi possível ler informações sobre pacote de hash da assinatura do pacote.]]></Val>
+            <Val><![CDATA[Não foi possível ler informações sobre pacote de hash da assinatura de pacote.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2153,7 +2183,7 @@
         <Str Cat="Text">
           <Val><![CDATA[An unexpected error occurred while verifying a package signature.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ocorreu um erro inesperado ao verificar uma assinatura do pacote.]]></Val>
+            <Val><![CDATA[Ocorreu um erro inesperado ao verificar uma assinatura de pacote.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2189,7 +2219,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature format version is not supported. Updating your client may solve this problem.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A versão do formato da assinatura do pacote não é compatível. Atualizar o cliente poderá resolver esse problema.]]></Val>
+            <Val><![CDATA[A versão do formato da assinatura de pacote não é compatível. Atualizar o cliente poderá resolver esse problema.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The package signature format version is unsupported.  Updating your client may solve this problem.]]></Val>
