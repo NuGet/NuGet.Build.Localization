@@ -268,6 +268,9 @@
       <Item ItemId=";BuildConventionIsViolatedWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- At least one {0} file was found in '{1}', but '{2}' was not.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[-“{1}”中找到至少一个 {0} 文件，但“{2}”中未找到。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -283,18 +286,27 @@
       <Item ItemId=";DependenciesGroupsForEachTFMBeginningToFiles" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add lib or ref assemblies for the]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[-为以下组件添加库或引用程序集]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMBeginningToNuspec" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add a dependency group for]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[-为以下组件添加依赖项组]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMEndingToFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[target framework]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[目标框架]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -310,12 +322,18 @@
       <Item ItemId=";DependenciesGroupsForEachTFMHasCompatMatch" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Some target frameworks declared in the dependencies group of the nuspec and the lib/ref folder have compatible matches, but not exact matches in the other location. Unless intentional, consult the list of actions below:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[在 nuspec 和 lib/ref 文件夹的依赖项组中声明的某些目标框架具有兼容的匹配项，但在其他位置不是完全匹配项。除非有意为之，否则请参阅以下操作列表:]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMHasNoExactMatch" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Some target frameworks declared in the dependencies group of the nuspec and the lib/ref folder do not have exact matches in the other location. Consult the list of actions below:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[在 nuspec 和 lib/ref 文件夹的依赖项组中声明的某些目标框架在其他位置没有完全匹配项。请参阅以下操作列表:]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -460,6 +478,9 @@
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[References were found in the nuspec, but some reference assemblies were not found in both the nuspec and ref folder. Add the following reference assemblies:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[在 nuspec 中找到了引用，但在 nuspec 和 ref 文件夹中都找不到某些引用程序集。请添加以下引用程序集:]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -484,6 +505,9 @@
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToRefListItemFormat" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add {0} to the ref/{1}/ directory]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[-将 {0} 添加到 ref/{1}/ 目录]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
