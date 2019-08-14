@@ -472,6 +472,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ListPkg_DeprecationAlternative" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Alternative]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[대체]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_DeprecationReasons" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason(s)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[이유]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ListPkg_Description" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Lists all the packages used by the current project(s).]]></Val>
@@ -562,6 +580,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ListPkg_NoDeprecatedPackagesForProject" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The given project `{0}` has no deprecated packages given the current sources.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[현재 소스를 고려해 볼 때 지정된 프로젝트 '{0}'에 사용되지 않는 패키지가 없습니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_NoDeprecationsForFramework" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No deprecated packages for this framework.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[이 프레임워크에 대해 사용되지 않는 패키지가 없습니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ListPkg_NoPackagesForFramework" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No packages were found for this framework.]]></Val>
@@ -582,10 +618,13 @@
       </Item>
       <Item ItemId=";ListPkg_NoUpdatesForFramework" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[No updates available for this framework packages.]]></Val>
+          <Val><![CDATA[No package updates available for this framework.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[이 프레임워크 패키지에 대해 사용 가능한 업데이트가 없습니다.]]></Val>
+            <Val><![CDATA[이 프레임워크에 대해 사용 가능한 패키지 업데이트가 없습니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[No updates available for this framework packages.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -633,6 +672,15 @@
           <Val><![CDATA[Considers prerelease versions when looking for latest. Works only with `--outdated`.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[최신 버전을 찾을 때 시험판 버전을 고려합니다. `--outdated`로만 작동합니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_ProjectDeprecationsHeaderLog" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Project `{0}` has the following deprecated packages]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' 프로젝트에 다음 사용되지 않는 패키지가 있습니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
