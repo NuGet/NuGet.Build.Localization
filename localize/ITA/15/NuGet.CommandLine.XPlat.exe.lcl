@@ -472,6 +472,21 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ListPkg_DeprecationAlternative" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Alternative]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_DeprecationReasons" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason(s)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Motivo/i]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ListPkg_Description" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Lists all the packages used by the current project(s).]]></Val>
@@ -562,6 +577,18 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ListPkg_NoDeprecatedPackagesForProject" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The given project `{0}` has no deprecated packages given the current sources.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_NoDeprecationsForFramework" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No deprecated packages for this framework.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ListPkg_NoPackagesForFramework" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No packages were found for this framework.]]></Val>
@@ -582,10 +609,13 @@
       </Item>
       <Item ItemId=";ListPkg_NoUpdatesForFramework" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[No updates available for this framework packages.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[No package updates available for this framework.]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[Non sono disponibili aggiornamenti per questo pacchetto framework.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[No updates available for this framework packages.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -634,6 +664,12 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Include le versioni preliminari nella ricerca dell'ultima versione. Funziona solo con `--outdated`.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_ProjectDeprecationsHeaderLog" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Project `{0}` has the following deprecated packages]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
