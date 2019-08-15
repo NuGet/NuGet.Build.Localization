@@ -268,6 +268,9 @@
       <Item ItemId=";BuildConventionIsViolatedWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- At least one {0} file was found in '{1}', but '{2}' was not.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[– Es wurde mindestens eine {0}-Datei in "{1}" gefunden, aber nicht "{2}".]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -283,36 +286,54 @@
       <Item ItemId=";DependenciesGroupsForEachTFMBeginningToFiles" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add lib or ref assemblies for the]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[– lib- oder ref-Assemblys hinzufügen für]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMBeginningToNuspec" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add a dependency group for]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[– Abhängigkeitsgruppe hinzufügen für]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMEndingToFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[target framework]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Zielframework]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMEndingToNuspec" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[to the nuspec]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[zu NUSPEC]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMHasCompatMatch" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Some target frameworks declared in the dependencies group of the nuspec and the lib/ref folder have compatible matches, but not exact matches in the other location. Unless intentional, consult the list of actions below:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Einige Zielframeworks, die in der Gruppe "Abhängigkeiten" der NUSPEC-Datei und des lib-/ref-Ordners deklariert sind, weisen kompatible Übereinstimmungen, aber keine genauen Übereinstimmungen am anderen Speicherort auf. Wenn dies nicht beabsichtigt ist, sehen Sie sich die folgende Maßnahmenliste an:]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMHasNoExactMatch" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Some target frameworks declared in the dependencies group of the nuspec and the lib/ref folder do not have exact matches in the other location. Consult the list of actions below:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Einige Zielframeworks, die in der Gruppe "Abhängigkeiten" der NUSPEC-Datei und des lib-/ref-Ordners deklariert sind, weisen keine genauen Übereinstimmungen am anderen Speicherort auf. Sehen Sie sich die folgende Maßnahmenliste an:]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -457,24 +478,36 @@
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[References were found in the nuspec, but some reference assemblies were not found in both the nuspec and ref folder. Add the following reference assemblies:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[In NUSPEC wurden Verweise gefunden, aber einige Referenzassemblys wurden nicht in NUSPEC oder im Ordner "ref" gefunden. Fügen Sie die folgenden Referenzassemblys hinzu:]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToNuspecListItemFormat" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add {0} to the {1} reference group in the nuspec]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[– "{0}" zur Referenzgruppe "{1}" in NUSPEC hinzufügen]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToNuspecNoTfmListItemFormat" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add {0} to the references element in the nuspec]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[– "{0}" zum Referenzelement in NUSPEC hinzufügen]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToRefListItemFormat" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add {0} to the ref/{1}/ directory]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[– "{0}" zum Verzeichnis "ref/{1}/" hinzufügen]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
