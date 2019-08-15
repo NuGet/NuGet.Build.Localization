@@ -268,6 +268,9 @@
       <Item ItemId=";BuildConventionIsViolatedWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- At least one {0} file was found in '{1}', but '{2}' was not.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- Au moins un fichier {0} a été trouvé dans '{1}', mais pas dans '{2}'.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -283,36 +286,54 @@
       <Item ItemId=";DependenciesGroupsForEachTFMBeginningToFiles" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add lib or ref assemblies for the]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- Ajouter des assemblys de bibliothèque ou de référence pour le]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMBeginningToNuspec" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add a dependency group for]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- Ajouter un groupe de dépendance pour]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMEndingToFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[target framework]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[framework cible]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMEndingToNuspec" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[to the nuspec]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[au nuspec]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMHasCompatMatch" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Some target frameworks declared in the dependencies group of the nuspec and the lib/ref folder have compatible matches, but not exact matches in the other location. Unless intentional, consult the list of actions below:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Certains frameworks cibles déclarés dans le groupe des dépendances du nuspec et du dossier lib/ref ont des correspondances compatibles, mais aucune correspondance exacte dans l'autre emplacement. À moins que cela ne soit intentionnel, consultez la liste d'actions ci-dessous :]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMHasNoExactMatch" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Some target frameworks declared in the dependencies group of the nuspec and the lib/ref folder do not have exact matches in the other location. Consult the list of actions below:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Certains frameworks cibles déclarés dans le groupe des dépendances du nuspec et du dossier lib/ref n'ont aucune correspondance exacte dans l'autre emplacement. Consultez la liste d'actions ci-dessous :]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -457,24 +478,36 @@
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[References were found in the nuspec, but some reference assemblies were not found in both the nuspec and ref folder. Add the following reference assemblies:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Des références ont été trouvées dans le nuspec. Toutefois, certains assemblys de référence sont introuvables à la fois dans le nuspec et le dossier ref. Ajoutez les assemblys de référence suivants :]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToNuspecListItemFormat" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add {0} to the {1} reference group in the nuspec]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- Ajouter {0} au groupe de référence {1} dans le nuspec]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToNuspecNoTfmListItemFormat" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add {0} to the references element in the nuspec]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- Ajouter {0} à l'élément references dans le nuspec]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToRefListItemFormat" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add {0} to the ref/{1}/ directory]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- Ajouter {0} au répertoire ref/{1}/]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
