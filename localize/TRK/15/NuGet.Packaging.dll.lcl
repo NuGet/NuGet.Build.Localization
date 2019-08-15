@@ -268,6 +268,9 @@
       <Item ItemId=";BuildConventionIsViolatedWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- At least one {0} file was found in '{1}', but '{2}' was not.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- '{1}' içinde en az bir {0} dosyası bulundu, ancak '{2}' bulunamadı.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -283,36 +286,54 @@
       <Item ItemId=";DependenciesGroupsForEachTFMBeginningToFiles" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add lib or ref assemblies for the]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- Şunun için kitaplık veya başvuru bütünleştirilmiş kodu ekleyin:]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMBeginningToNuspec" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add a dependency group for]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- Şunun için bir bağımlılık grubu ekleyin:]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMEndingToFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[target framework]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[hedef çerçeve]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMEndingToNuspec" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[to the nuspec]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[nuspec'e]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMHasCompatMatch" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Some target frameworks declared in the dependencies group of the nuspec and the lib/ref folder have compatible matches, but not exact matches in the other location. Unless intentional, consult the list of actions below:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nuspec ve kitaplık/başvuru klasörünün bağımlılıklar grubunda bildirilen bazı hedef çerçeveler uyumlu eşleşmelere sahip, ancak diğer konumda tam eşleşmelere sahip değil. Bu durum bilerek gerçekleştirilmediyse aşağıdaki eylemler listesine başvurun:]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMHasNoExactMatch" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Some target frameworks declared in the dependencies group of the nuspec and the lib/ref folder do not have exact matches in the other location. Consult the list of actions below:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nuspec ve kitaplık/başvuru klasörünün bağımlılıklar grubunda bildirilen bazı hedef çerçeveler diğer konumda tam eşleşmelere sahip değil. Aşağıdaki eylemler listesine başvurun:]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -457,24 +478,36 @@
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[References were found in the nuspec, but some reference assemblies were not found in both the nuspec and ref folder. Add the following reference assemblies:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nuspec'te başvurular bulundu, ancak bazı başvuru bütünleştirilmiş kodları nuspec ve başvuru klasörünün her ikisinde de bulunamadı. Şu başvuru bütünleştirilmiş kodlarını ekleyin:]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToNuspecListItemFormat" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add {0} to the {1} reference group in the nuspec]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- Nuspec'teki {1} başvuru grubuna {0} ekleyin]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToNuspecNoTfmListItemFormat" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add {0} to the references element in the nuspec]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- Nuspec'teki başvurular öğesine {0} ekleyin]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToRefListItemFormat" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add {0} to the ref/{1}/ directory]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- ref/{1}/ dizinine {0} ekleyin]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>

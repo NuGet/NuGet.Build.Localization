@@ -268,6 +268,9 @@
       <Item ItemId=";BuildConventionIsViolatedWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- At least one {0} file was found in '{1}', but '{2}' was not.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[-在 '{1}' 中找到至少一個 {0} 檔案，但是未找到 '{2}'。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -283,36 +286,54 @@
       <Item ItemId=";DependenciesGroupsForEachTFMBeginningToFiles" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add lib or ref assemblies for the]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- 新增 lib 或參考組件]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMBeginningToNuspec" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add a dependency group for]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- 新增相依性群組]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMEndingToFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[target framework]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[目標 Framework]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMEndingToNuspec" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[to the nuspec]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[至 nuspec]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMHasCompatMatch" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Some target frameworks declared in the dependencies group of the nuspec and the lib/ref folder have compatible matches, but not exact matches in the other location. Unless intentional, consult the list of actions below:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[在 nuspec 與 lib/ref 資料夾的相依性群組中宣告的某些目標架構有相符的項目，在其他位置沒有完全相符的項目。請參閱下列動作清單:]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DependenciesGroupsForEachTFMHasNoExactMatch" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Some target frameworks declared in the dependencies group of the nuspec and the lib/ref folder do not have exact matches in the other location. Consult the list of actions below:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[在 nuspec 與 lib/ref 資料夾的相依性群組中宣告的某些目標架構，在其他位置沒有完全相符的項目。請參閱下列動作清單:]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -457,24 +478,36 @@
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[References were found in the nuspec, but some reference assemblies were not found in both the nuspec and ref folder. Add the following reference assemblies:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[在 nuspec 中找到參考，但在 nuspec 和 ref 資料夾中找不到某些參考元件。新增下列參考元件:]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToNuspecListItemFormat" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add {0} to the {1} reference group in the nuspec]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- 將 {0} 新增至 nuspec 中的 {1} 參考群組]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToNuspecNoTfmListItemFormat" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add {0} to the references element in the nuspec]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- 將 {0} 新增至 nuspec 中的參考元素]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToRefListItemFormat" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[- Add {0} to the ref/{1}/ directory]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- 將 {0} 新增至 ref/{1}/ 目錄]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
