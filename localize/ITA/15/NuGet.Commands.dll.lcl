@@ -390,12 +390,12 @@
       </Item>
       <Item ItemId=";Error_PackageValidationFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package {0} content hash validation failed. The package is different than the last restore.]]></Val>
+          <Val><![CDATA[Package content hash validation failed for {0}. The package is different than the last restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La convalida dell'hash del contenuto del pacchetto {0} non è riuscita. Il pacchetto è diverso dall'ultimo ripristino.]]></Val>
+            <Val><![CDATA[La convalida dell'hash del contenuto del pacchetto non è riuscita per {0}. Il pacchetto è diverso dall'ultimo ripristino.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[The package {0} sha512 validation failed. The package is different than the last restore.]]></Val>
+            <Val><![CDATA[The package {0} content hash validation failed. The package is different than the last restore.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -531,12 +531,12 @@
       </Item>
       <Item ItemId=";Error_UnableToFindProjectInfo" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution so please run a restore from command-line. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
+          <Val><![CDATA[Unable to find project information for '{0}'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so please run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Non è possibile trovare le informazioni sul progetto per '{0}'. All'interno di Visual Studio questo problema può dipendere dal fatto che il caricamento del progetto è stato annullato o il che progetto non fa parte della soluzione corrente. In caso contrario, il file di progetto potrebbe non essere valido oppure non includere le destinazioni necessarie per il ripristino.]]></Val>
+            <Val><![CDATA[Non è possibile trovare le informazioni sul progetto per '{0}'. Se si usa Visual Studio questo problema può dipendere dal fatto che il caricamento del progetto è stato annullato o che il progetto non fa parte della soluzione corrente, di conseguenza è necessario eseguire un ripristino dalla riga di comando. In caso contrario, il file di progetto potrebbe non essere valido oppure non includere le destinazioni necessarie per il ripristino.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
+            <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution so please run a restore from command-line. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1074,6 +1074,15 @@
           <Val><![CDATA[Successfully created package '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Il pacchetto '{0}' è stato creato.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Log_PackageContentHashValidationFailed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package content hash validation failed for {0}. Expected: {1} Actual: {2}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La convalida dell'hash del contenuto del pacchetto non è riuscita per {0}. Previsto: {1}. Effettivo: {2}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

@@ -366,10 +366,13 @@
       </Item>
       <Item ItemId=";Error_PackageValidationFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package {0} content hash validation failed. The package is different than the last restore.]]></Val>
+          <Val><![CDATA[Package content hash validation failed for {0}. The package is different than the last restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Walidacja skrótu zawartości pakietu {0} nie powiodła się. Pakiet jest inny niż ostatnio przywracany.]]></Val>
+            <Val><![CDATA[Walidacja skrótu zawartości pakietu nie powiodła się dla elementu {0}. Pakiet jest inny niż ostatnio przywracany.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package {0} content hash validation failed. The package is different than the last restore.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
