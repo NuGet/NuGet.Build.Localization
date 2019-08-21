@@ -387,12 +387,12 @@
       </Item>
       <Item ItemId=";Error_PackageValidationFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package {0} content hash validation failed. The package is different than the last restore.]]></Val>
+          <Val><![CDATA[Package content hash validation failed for {0}. The package is different than the last restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A validação do hash de conteúdo {0} do pacote falhou. O pacote é diferente da última restauração.]]></Val>
+            <Val><![CDATA[A validação do hash de conteúdo do pacote falhou para {0}. O pacote é diferente da última restauração.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[The package {0} sha512 validation failed. The package is different than the last restore.]]></Val>
+            <Val><![CDATA[The package {0} content hash validation failed. The package is different than the last restore.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -528,12 +528,12 @@
       </Item>
       <Item ItemId=";Error_UnableToFindProjectInfo" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution so please run a restore from command-line. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
+          <Val><![CDATA[Unable to find project information for '{0}'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so please run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Não é possível encontrar as informações do projeto para '{0}'. No Visual Studio, o motivo pode ser que o projeto não está carregado ou não faz parte da solução atual. Portanto, execute uma restauração usando a linha de comando. Outro motivo pode ser que o arquivo de projeto é inválido ou há destinos necessários ausentes para a restauração.]]></Val>
+            <Val><![CDATA[Não é possível encontrar as informações do projeto para '{0}'. Se você está usando o Visual Studio, isso pode ocorrer porque o projeto não está carregado ou não faz parte da solução atual. Portanto, execute uma restauração usando a linha de comando. Do contrário, o arquivo de projeto pode ser inválido ou pode haver destinos obrigatórios para a restauração ausentes.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
+            <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution so please run a restore from command-line. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1071,6 +1071,15 @@
           <Val><![CDATA[Successfully created package '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Pacote criado com êxito '{0}'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Log_PackageContentHashValidationFailed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package content hash validation failed for {0}. Expected: {1} Actual: {2}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Falha na validação do hash de conteúdo do pacote para {0}. Esperado: {1} Real: {2}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
