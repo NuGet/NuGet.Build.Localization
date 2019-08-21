@@ -387,12 +387,12 @@
       </Item>
       <Item ItemId=";Error_PackageValidationFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package {0} content hash validation failed. The package is different than the last restore.]]></Val>
+          <Val><![CDATA[Package content hash validation failed for {0}. The package is different than the last restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[套件 {0} 內容雜湊驗證失敗。此套件與上次還原的套件不同。]]></Val>
+            <Val><![CDATA[{0} 的套件內容雜湊驗證失敗。此套件與上次還原的套件不同。]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[The package {0} sha512 validation failed. The package is different than the last restore.]]></Val>
+            <Val><![CDATA[The package {0} content hash validation failed. The package is different than the last restore.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -528,12 +528,12 @@
       </Item>
       <Item ItemId=";Error_UnableToFindProjectInfo" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution so please run a restore from command-line. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
+          <Val><![CDATA[Unable to find project information for '{0}'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so please run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[找不到 '{0}' 的專案資訊。在 Visual Studio 內，這可能是因為專案已卸載或不屬於目前解決方案的一部分，因此請從命令列執行還原。否則，專案檔可能無效或缺少還原所需的目標。]]></Val>
+            <Val><![CDATA[找不到 '{0}' 的專案資訊。若您目前使用 Visual Studio，這可能是因為專案已卸載或不屬於目前解決方案的一部分，因此請從命令列執行還原。否則，專案檔可能無效或缺少還原所需的目標。]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
+            <Val><![CDATA[Unable to find project information for '{0}'. Inside Visual Studio, this may be because the project is unloaded or not part of current solution so please run a restore from command-line. Otherwise the project file may be invalid or missing targets required for restore.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1071,6 +1071,15 @@
           <Val><![CDATA[Successfully created package '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[已成功建立封裝 '{0}'。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Log_PackageContentHashValidationFailed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package content hash validation failed for {0}. Expected: {1} Actual: {2}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} 的套件內容雜湊驗證失敗。預期: {1} 實際: {2}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
