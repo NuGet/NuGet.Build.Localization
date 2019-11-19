@@ -462,9 +462,30 @@
       </Item>
       <Item ItemId=";ListPkg_DeprecatedPkgDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[(D) : The owner has unlisted this package. This could mean the package is deprecated or shouldn't be used anymore.]]></Val>
+          <Val><![CDATA[(D): Deprecated package(s). Use 'dotnet list package --deprecated' for more info.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[(D): 所有者已取消列出此包。这可能意味着该包已被弃用或不应再使用。]]></Val>
+            <Val><![CDATA[(D): 包已被弃用。使用 "dotnet list package --deprecated" 了解详细信息。]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[(D) : The owner has unlisted this package. This could mean the package is deprecated or shouldn't be used anymore.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_DeprecationAlternative" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Alternative]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[替代项]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_DeprecationReasons" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason(s)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[原因]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -541,11 +562,38 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ListPkg_InvalidOptionsOutdatedAndDeprecated" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Option '--outdated' and '--deprecated' cannot be combined.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[不可结合使用 "--outdated" 或 "--deprecated"。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ListPkg_Latest" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Latest]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[最新]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_NoDeprecatedPackagesForProject" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The given project `{0}` has no deprecated packages given the current sources.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[在给定当前源的情况下，给定项目“{0}”没有已弃用的包。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_NoDeprecationsForFramework" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No deprecated packages for this framework.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[未找到此框架已弃用的包。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -570,10 +618,13 @@
       </Item>
       <Item ItemId=";ListPkg_NoUpdatesForFramework" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[No updates available for this framework packages.]]></Val>
+          <Val><![CDATA[No package updates available for this framework.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[没有可用于此框架包的更新。]]></Val>
+            <Val><![CDATA[没有可用于此框架的包更新。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[No updates available for this framework packages.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -583,9 +634,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[给定项目“{0}”没有给定的当前源的更新。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The given project `{0}` have no updates given the current sources.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -621,6 +669,15 @@
           <Val><![CDATA[Considers prerelease versions when looking for latest. Works only with `--outdated`.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[请在查找最新版本时考虑预发行版本。仅适用于 "--outdated"。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_ProjectDeprecationsHeaderLog" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Project `{0}` has the following deprecated packages]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[项目“{0}”具有以下弃用的包]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -738,12 +795,12 @@
       </Item>
       <Item ItemId=";LocalsCommand_Help" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;有关详细信息，请访问 http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;有关详细信息，请访问 https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -759,36 +816,36 @@
       </Item>
       <Item ItemId=";LocalsCommand_MultipleOperations" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Both operations, --list and --clear, are not supported in the same command. Please specify only one operation.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Val><![CDATA[Both operations, --list and --clear, are not supported in the same command. Please specify only one operation.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[同一命令中不支持同时执行 --list 和 --clear 操作。请只指定一个操作。]D;]A;用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;有关详细信息，请访问 http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[同一命令中不支持同时执行 --list 和 --clear 操作。请只指定一个操作。]D;]A;用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;有关详细信息，请访问 https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Both operations, --list and --clear, are not supported in the same command. Please specify only one operation.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[Both operations, --list and --clear, are not supported in the same command. Please specify only one operation.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LocalsCommand_NoArguments" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[No Cache Type was specified.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Val><![CDATA[No Cache Type was specified.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[未指定缓存类型。]D;]A;用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;有关详细信息，请访问 http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[未指定缓存类型。]D;]A;用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;有关详细信息，请访问 https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[No Cache Type was specified.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[No Cache Type was specified.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LocalsCommand_NoOperation" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Please specify an operation i.e. --list or --clear.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Val><![CDATA[Please specify an operation i.e. --list or --clear.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[请指定一个操作，即 --list 或 --clear。]D;]A;用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;有关详细信息，请访问 http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[请指定一个操作，即 --list 或 --clear。]D;]A;用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;有关详细信息，请访问 https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Please specify an operation i.e. --list or --clear.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[Please specify an operation i.e. --list or --clear.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -898,9 +955,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[请勿将 "api/v2/package" 追加到源 URL。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[--no-service-endpoint does not append "api/v2/packages" to the source URL.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -924,10 +978,13 @@
       </Item>
       <Item ItemId=";NuGetDocs" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[http://docs.nuget.org/]]></Val>
+          <Val><![CDATA[https://docs.nuget.org/]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[http://docs.nuget.org/]]></Val>
+            <Val><![CDATA[https://docs.nuget.org/]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[http://docs.nuget.org/]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -990,6 +1047,15 @@
           <Val><![CDATA[Version string specified '{0}' is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[指定的版本字符串“{0}”无效。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PushCommandSkipDuplicateDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[If a package and version already exists, skip it and continue with the next package in the push, if any.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[如果包和版本已存在，则跳过它并继续推送中的下一个包(若有)。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1199,7 +1265,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The verbosity of logging to use. Allowed values: Debug, Verbose, Information, Minimal, Warning, Error.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[要使用的详细日志记录。允许的值为: Debug、Verbose、Information、Minimal、Warning、Error。]]></Val>
+            <Val><![CDATA[要使用的日志记录的详细程度。允许的值为: Debug、Verbose、Information、Minimal、Warning、Error。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
