@@ -975,10 +975,13 @@
       </Item>
       <Item ItemId=";ErrorUnsafePackageEntry" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package '{0}' contains an entry which is unsafe for extraction.]]></Val>
+          <Val><![CDATA[The package '{0}' contains an entry '{1}' which is unsafe for extraction.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[套件 '{0}' 所包含的某個項目對擷取並不安全。]]></Val>
+            <Val><![CDATA[套件 '{0}' 包含無法安全擷取的項目 '{1}'。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package '{0}' contains an entry which is unsafe for extraction.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

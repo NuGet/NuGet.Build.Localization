@@ -13,11 +13,56 @@
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId=";Argument_Cannot_Be_Null_Or_Empty" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Argument cannot be null or empty]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[参数不能为 null 或空]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";CreatedDependencyGraphSpec" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Created DependencyGraphSpec in {0:D2}ms.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[已在 {0:D2} 毫秒内创建 DependencyGraphSpec。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_PackageDownload_OnlyExactVersionsAreAllowed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['{0}' is not an exact version like '[1.0.0]5D;'. Only exact versions are allowed with PackageDownload.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[“{0}”不是类似 "[1.0.0]5D;" 的精确版本。仅可对 PackageDownload 使用精确版本。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_PackagesConfigParseError" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Error parsing packages.config file at {0}: {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[在 {0} 分析 packages.config 文件时出错: {1}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ImportsFallbackWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[ProjectReference '{0}' was resolved using '{1}' instead of the project target framework '{2}'. This project may not be fully compatible with your project.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[已使用“{1}”而不是项目目标框架“{2}”解析 ProjectReference“{0}”。此项目可能与你的项目不完全兼容。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InstallCommandNothingToInstall" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[All packages listed in {0} are already installed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} 中列出的所有包均已安装。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -49,11 +94,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ProjectEvaluationSummary" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Evaluated {0} project(s) in {1:D2}ms ({2} builds, {3} failures).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[已在 {1:D2} 毫秒内执行 {0} 个项目({2} 个生成，{3} 个失败项)。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";RestoreCanceled" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Restore canceled!]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[已取消还原!]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";RestoreNoSolutionFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No solution found. Restore against a solution or pass in /p:SolutionDir]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[未找到任何解决方案。请针对解决方案还原或传入 /p:SolutionDir]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -76,6 +139,15 @@
           <Prev Cat="Text">
             <Val><![CDATA[The framework '{0}' is not a supported target framework.]]></Val>
           </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Warning_InvalidPackageSaveMode" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid PackageSaveMode value '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[PackageSaveMode 值“{0}”无效。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
