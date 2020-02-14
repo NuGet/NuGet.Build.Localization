@@ -160,8 +160,8 @@
       <Item ItemId=";Error_InputFileNotSpecified" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Specify a nuspec, project.json, or project file to use]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Especifique um nuspec, project.json ou arquivo de projeto para ser usado]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Especifique um nuspec, um project.json ou um arquivo de projeto para ser usado]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Please specify a nuspec, project.json, or project file to use]]></Val>
@@ -238,9 +238,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Restauração inválida de entrada em que a propriedade RestorePackagesWithLockFile é definida como false, mas existe um arquivo de bloqueio de pacotes em {0}.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Invalid restore input where RestorePackagesWithLockFile property is set to false and also exist a packages lock file at {0}.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -284,7 +281,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature did not match any of the allowed certificate fingerprints.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A assinatura de pacote não coincidiu com nenhuma das impressões digitais de certificado permitidas.]]></Val>
+            <Val><![CDATA[A assinatura do pacote não coincidiu com nenhuma das impressões digitais de certificado permitidas.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -310,7 +307,7 @@
       <Item ItemId=";Error_NoSignatureTrustedForPackage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No signature to be trusted was specified for the package '{0}'. Specify either Author or Repository.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Não existe uma assinatura confiável especificada para o pacote '{0}'. Especifique o Autor ou o Repositório.]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -397,9 +394,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[A validação do hash de conteúdo do pacote falhou para {0}. O pacote é diferente da última restauração.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package {0} content hash validation failed. The package is different than the last restore.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -472,9 +466,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[O arquivo de bloqueio de pacotes é inconsistente com as dependências do projeto, então a restauração não pode ser executada no modo de bloqueio. Desabilite a propriedade RestoreLockedMode do MSBuild ou passe uma opção --force-evaluate explícita para executar a restauração para atualizar o arquivo de bloqueio.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --force-evaluate flag to run restore to update the lock file.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -490,6 +481,9 @@
       <Item ItemId=";Error_SourceProviderIsNull" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Property SourceProvider is null.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A propriedade SourceProvider é nula.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -541,7 +535,7 @@
       <Item ItemId=";Error_UnableToFindProjectInfo" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to find project information for '{0}'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Não é possível encontrar as informações do projeto para '{0}'. Se você está usando o Visual Studio, isso pode ocorrer porque o projeto não está carregado ou não faz parte da solução atual. Portanto, execute uma restauração usando a linha de comando. Do contrário, o arquivo de projeto pode ser inválido ou pode haver destinos obrigatórios para a restauração ausentes.]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -688,8 +682,8 @@
       <Item ItemId=";InvalidSource" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The specified source '{0}' is invalid. Provide a valid source.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[A fonte especificada '{0}' é inválida. Forneça uma fonte válida.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A origem especificada '{0}' é inválida. Forneça uma origem válida.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The specified source '{0}' is invalid. Please provide a valid source.]]></Val>
@@ -776,7 +770,7 @@
             <Val><![CDATA[uso: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;Para obter mais informações, visite https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -784,8 +778,8 @@
       <Item ItemId=";LocalsCommand_InvalidLocalResourceName" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[An invalid local resource name was provided. Provide one of the following values: http-cache, temp, global-packages, all.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Um nome de recurso local inválido foi fornecido. Forneça um dos seguintes valores: http-cache, temp, global-packages, all.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Foi fornecido um nome de recurso local inválido. Forneça um dos seguintes valores: http-cache, temp, global-packages, all.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[An invalid local resource name was provided. Please provide one of the following values: http-cache, temp, global-packages, all.]]></Val>
@@ -871,6 +865,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ciclo detectado.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Cycle detected:]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -889,6 +886,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Downgrade de pacote detectado: {0} de {1} para {2}. Referencie o pacote diretamente do projeto para selecionar uma versão diferente.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Detected package downgrade: {0} from {1} to {2}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -962,7 +962,7 @@
             <Val><![CDATA[O pacote '{0}' foi restaurado usando '{1}' em vez da estrutura de destino do projeto '{2}'. Esse pacote pode não ser totalmente compatível com o seu projeto.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Package '{0}' was restored using '{1}' instead of the project target framework '{2}'. This may cause compatibility problems.]]></Val>
+            <Val><![CDATA[Package '{0}' was restored using '{1}' instead the project target framework '{2}'. This may cause compatibility problems.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1216,6 +1216,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Não foi possível satisfazer às solicitações conflitantes de '{0}': {1} Estrutura: {2}]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Unable to satisfy conflicting requests for '{0}': {1}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1442,7 +1445,7 @@
             <Val><![CDATA[Conflito de versão detectado para {0}. Instale/referencie {1} diretamente no projeto {2} para resolver esse problema.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Version conflict detected for {0}. Reference the package directly from the project to resolve this issue.]]></Val>
+            <Val><![CDATA[Version conflict detected for {0}.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1624,7 +1627,7 @@
       <Item ItemId=";SignCommandCertificateFileNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Certificate file '{0}' not found. For a list of accepted ways to provide a certificate, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[O arquivo de certificado '{0}' não foi encontrado. Para obter uma lista das maneiras aceitas de fornecimento de certificado, visite https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -1636,7 +1639,7 @@
       <Item ItemId=";SignCommandCertificateStoreNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Certificate store '{0}' not found. For a list of accepted ways to provide a certificate, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[O repositório de certificados '{0}' não foi encontrado. Para obter uma lista das maneiras aceitas de fornecimento de certificado, visite https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -1648,8 +1651,8 @@
       <Item ItemId=";SignCommandDialogMessage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Select a valid certificate]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Selecione um certificado válido]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Selecionar um certificado válido]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Please select a valid certificate]]></Val>
@@ -1696,7 +1699,7 @@
       <Item ItemId=";SignCommandInvalidCertException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Certificate file '{0}' is invalid. For a list of accepted ways to provide a certificate, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[O arquivo de certificado '{0}' é inválido. Para obter uma lista das formas aceitas de fornecimento de certificado, visite https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -1708,8 +1711,8 @@
       <Item ItemId=";SignCommandInvalidPasswordException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid password was provided for the certificate file '{0}'. Provide a valid password using the '-{1}' option]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Uma senha inválida foi fornecida para o arquivo de certificado '{0}'. Por favor, forneça uma senha válida usando a opção '-{1}']]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Uma senha inválida foi fornecida para o arquivo de certificado '{0}'. Forneça uma senha válida usando a opção '-{1}']]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Invalid password was provided for the certificate file '{0}'. Please provide a valid password using the '-{1}' option]]></Val>
@@ -1729,7 +1732,7 @@
       <Item ItemId=";SignCommandNoCertException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No certificates were found that meet all the given criteria. For a list of accepted ways to provide a certificate, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Não foram encontrados certificados que atendem a determinados critérios. Para obter uma lista das formas aceitas de fornecimento de certificado, visite https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -1759,36 +1762,54 @@
       <Item ItemId=";Source_DefaultNamePrefix" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package source {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Origem do pacote {0}]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Source_InvalidFormatValue" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[invalid value for --format: {0}. Allowed values: 'detailed' or 'short']]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[valor inválido para --format: {0}. Valores permitidos: 'detailed' ou 'short']]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandAllNameIsReserved" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package source name 'All' is a reserved name.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O nome de origem 'Todos' do pacote é um nome reservado.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandClearingExistingAuthTypes" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Clearing existing authentication types settings for package source '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Limpando as configurações de tipos de autenticação existentes para a origem do pacote '{0}'.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandCredentialsRequired" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Both UserName and Password must be specified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O Nome de Usuário e a Senha devem ser especificados.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandCredentialsRequiredWithAuthTypes" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Both UserName and Password must be specified if ValidAuthenticationTypes is specified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O Nome de Usuário e a Senha precisarão ser especificados se ValidAuthenticationTypes for especificado.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1813,78 +1834,117 @@
       <Item ItemId=";SourcesCommandInvalidSource" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The source specified is invalid. Provide a valid source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A origem especificada é inválida. Forneça uma origem válida.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandNameRequired" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The name specified cannot be empty. Provide a valid name.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O nome especificado não pode estar vazio. Forneça um nome válido.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandNoMatchingSourcesFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to find any package source(s) matching name: {0}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Não é possível localizar o nome correspondente de origens do pacote: {0}.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandNoSources" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No sources found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nenhuma fonte encontrada.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandRegisteredSources" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Registered Sources:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Fontes Registradas:]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandSourceAddedSuccessfully" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package source with Name: {0} added successfully.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A origem do pacote com o Nome {0} foi adicionada com êxito.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandSourceDisabledSuccessfully" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package source with Name: {0} disabled successfully.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A origem do pacote com o Nome {0} foi desabilitada com êxito.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandSourceEnabledSuccessfully" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package source with Name: {0} enabled successfully.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A origem do pacote com o Nome {0} foi habilitada com êxito.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandSourceRemovedSuccessfully" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package source with Name: {0} removed successfully.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A origem do pacote com o Nome {0} foi removida com êxito.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandSourceRequired" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The source specified cannot be empty. Provide a valid source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A origem especificada não pode estar vazia. Forneça uma origem válida.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandUniqueName" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The name specified has already been added to the list of available package sources. Provide a unique name.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O nome especificado já foi adicionado à lista de origens de pacotes disponíveis. Forneça um nome exclusivo.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandUniqueSource" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The source specified has already been added to the list of available package sources. Provide a unique source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A origem especificada já foi adicionada à lista de origens de pacotes disponíveis. Forneça uma origem exclusiva.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandUpdateSuccessful" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package source "{0}" was successfully updated.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A origem do pacote "{0}" foi atualizada com êxito.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2108,11 +2168,8 @@
         <Str Cat="Text">
           <Val><![CDATA[Package signature validation failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Falha na validação da assinatura de pacote.]]></Val>
+            <Val><![CDATA[Falha na validação da assinatura do pacote.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Could not verify package(s) signature.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2140,17 +2197,14 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[O pacote '{0}' foi verificado com êxito.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Successfully verified package(s).]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";VerifyCommand_VerificationTypeNotSupported" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Verification type not supported. Use only one of the following supported types: -All, -Signatures]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Tipo de verificação não compatível. Use apenas um dos seguintes tipos compatíveis: -All, -Signatures]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Não há suporte para este tipo de verificação. Use apenas um dos seguintes tipos com suporte: -All, -Signatures]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Verification type not supported. Please use only one of the following supported types: -All, -Signatures]]></Val>
