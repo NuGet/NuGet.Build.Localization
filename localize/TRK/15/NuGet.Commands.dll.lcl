@@ -835,6 +835,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_AllProjectsUpToDate" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[All projects are up-to-date for restore.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Geri yükleme için tüm projeler güncel.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_AssetsFileNotOnDisk" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The expected assets file for {0} does not exist, no-op is not possible. Continuing restore.]]></Val>
@@ -1207,6 +1216,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_ProjectUpToDateSummary" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} of {1} projects are up-to-date for restore.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_ProjectsIncompatible" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[One or more projects are incompatible with {0}.]]></Val>
@@ -1254,37 +1269,49 @@
       </Item>
       <Item ItemId=";Log_RestoreComplete" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Restore completed in {0} for {1}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[Restored {0} (in {1}).]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[{0} içinde {1} için geri yükleme işlemi tamamlandı.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Restore completed in {0} for {1}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_RestoreCompleteDotnetTool" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Restore completed in {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[Restored {0} (in {1}).]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[{0} içinde geri yükleme işlemi tamamlandı.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Restore completed in {0}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_RestoreFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Restore failed in {0} for {1}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[Failed to restore {0} (in {1}).]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[{0} içinde {1} için geri yükleme işlemi başarısız oldu.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Restore failed in {0} for {1}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_RestoreFailedDotnetTool" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Restore failed in {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[Failed to restore {0} (in {1}).]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[{0} içinde geri yükleme işlemi başarısız oldu.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Restore failed in {0}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1782,10 +1809,13 @@
       </Item>
       <Item ItemId=";Source_DefaultNamePrefix" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Package source {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[Package source ]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[{0} paket kaynağı ]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Package source {0}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

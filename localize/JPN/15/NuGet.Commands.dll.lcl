@@ -832,6 +832,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_AllProjectsUpToDate" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[All projects are up-to-date for restore.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_AssetsFileNotOnDisk" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The expected assets file for {0} does not exist, no-op is not possible. Continuing restore.]]></Val>
@@ -1204,6 +1210,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_ProjectUpToDateSummary" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} of {1} projects are up-to-date for restore.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_ProjectsIncompatible" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[One or more projects are incompatible with {0}.]]></Val>
@@ -1251,37 +1263,49 @@
       </Item>
       <Item ItemId=";Log_RestoreComplete" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Restore completed in {0} for {1}.]]></Val>
+          <Val><![CDATA[Restored {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{1} の復元が {0} で完了しました。]]></Val>
+            <Val><![CDATA[{0} を復元しました ({1})。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Restore completed in {0} for {1}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_RestoreCompleteDotnetTool" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Restore completed in {0}.]]></Val>
+          <Val><![CDATA[Restored {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[復元が {0} で完了しました。]]></Val>
+            <Val><![CDATA[{0} を復元しました ({1})。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Restore completed in {0}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_RestoreFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Restore failed in {0} for {1}.]]></Val>
+          <Val><![CDATA[Failed to restore {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{1} の復元が {0} で失敗しました。]]></Val>
+            <Val><![CDATA[{0} を復元できませんでした ({1})。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Restore failed in {0} for {1}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_RestoreFailedDotnetTool" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Restore failed in {0}.]]></Val>
+          <Val><![CDATA[Failed to restore {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[復元が {0} で失敗しました。]]></Val>
+            <Val><![CDATA[{0} を復元できませんでした ({1})。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Restore failed in {0}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1779,10 +1803,13 @@
       </Item>
       <Item ItemId=";Source_DefaultNamePrefix" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Package source {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[Package source ]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[パッケージ ソース {0}]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Package source {0}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
