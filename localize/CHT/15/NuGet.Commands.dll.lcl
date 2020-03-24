@@ -832,12 +832,27 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_AllProjectsUpToDate" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[All projects are up-to-date for restore.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[所有專案都在最新狀態，可進行還原。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_AssetsFileNotOnDisk" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The expected assets file for {0} does not exist, no-op is not possible. Continuing restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[{0} 應有的資產檔不存在，無法進行「無作業」。繼續還原。]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Log_CPVM_DowngradeError" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Detected package downgrade: {0} from {1} to centrally defined {2}. Update the centrally managed package version to a higher version.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1204,6 +1219,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_ProjectUpToDateSummary" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} of {1} projects are up-to-date for restore.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{1} 項專案中有 {0} 項在最新狀態，可進行還原。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_ProjectsIncompatible" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[One or more projects are incompatible with {0}.]]></Val>
@@ -1251,37 +1275,49 @@
       </Item>
       <Item ItemId=";Log_RestoreComplete" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Restore completed in {0} for {1}.]]></Val>
+          <Val><![CDATA[Restored {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{1} 的還原於 {0} 完成。]]></Val>
+            <Val><![CDATA[已還原 {0} (在 {1} 中)。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Restore completed in {0} for {1}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_RestoreCompleteDotnetTool" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Restore completed in {0}.]]></Val>
+          <Val><![CDATA[Restored {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[在 {0} 中還原已完成。]]></Val>
+            <Val><![CDATA[已還原 {0} (在 {1} 中)。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Restore completed in {0}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_RestoreFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Restore failed in {0} for {1}.]]></Val>
+          <Val><![CDATA[Failed to restore {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{1} 的還原於 {0} 失敗。]]></Val>
+            <Val><![CDATA[無法還原 {0} (在 {1} 中)。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Restore failed in {0} for {1}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_RestoreFailedDotnetTool" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Restore failed in {0}.]]></Val>
+          <Val><![CDATA[Failed to restore {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[在 {0} 中還原失敗。]]></Val>
+            <Val><![CDATA[無法還原 {0} (在 {1} 中)。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Restore failed in {0}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1779,10 +1815,13 @@
       </Item>
       <Item ItemId=";Source_DefaultNamePrefix" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Package source {0}]]></Val>
+          <Val><![CDATA[Package source ]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[套件來源 {0}]]></Val>
+            <Val><![CDATA[套件來源 ]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Package source {0}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

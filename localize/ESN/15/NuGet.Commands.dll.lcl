@@ -853,6 +853,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_CPVM_DowngradeError" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Detected package downgrade: {0} from {1} to centrally defined {2}. Update the centrally managed package version to a higher version.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_CheckingCompatibility" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Checking compatibility of packages on {0}.]]></Val>
@@ -1219,6 +1225,9 @@
       <Item ItemId=";Log_ProjectUpToDateSummary" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} of {1} projects are up-to-date for restore.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} de {1} proyectos están actualizados para la restauración.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1270,8 +1279,8 @@
       <Item ItemId=";Log_RestoreComplete" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Restored {0} (in {1}).]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Restauración realizada en {0} para {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Se ha restaurado {0} (en {1}).]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore completed in {0} for {1}.]]></Val>
@@ -1282,8 +1291,8 @@
       <Item ItemId=";Log_RestoreCompleteDotnetTool" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Restored {0} (in {1}).]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Restauración realizada en {0}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Se ha restaurado {0} (en {1}).]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore completed in {0}.]]></Val>
@@ -1810,8 +1819,8 @@
       <Item ItemId=";Source_DefaultNamePrefix" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package source ]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Origen del paquete {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Origen del paquete ]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Package source {0}]]></Val>

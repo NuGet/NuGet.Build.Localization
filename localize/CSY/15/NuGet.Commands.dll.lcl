@@ -835,12 +835,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_AllProjectsUpToDate" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[All projects are up-to-date for restore.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_AssetsFileNotOnDisk" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The expected assets file for {0} does not exist, no-op is not possible. Continuing restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Očekávaný soubor prostředků pro {0} neexistuje, no-op není možné. Pokračuje se v obnovování.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Log_CPVM_DowngradeError" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Detected package downgrade: {0} from {1} to centrally defined {2}. Update the centrally managed package version to a higher version.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1207,6 +1219,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_ProjectUpToDateSummary" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} of {1} projects are up-to-date for restore.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} z {1} projektů jsou v aktuálním stavu pro obnovení.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_ProjectsIncompatible" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[One or more projects are incompatible with {0}.]]></Val>
@@ -1254,37 +1275,49 @@
       </Item>
       <Item ItemId=";Log_RestoreComplete" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Restore completed in {0} for {1}.]]></Val>
+          <Val><![CDATA[Restored {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Obnovení v {0} pro {1} se dokončilo.]]></Val>
+            <Val><![CDATA[Obnovil se projekt {0} (v {1}).]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Restore completed in {0} for {1}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_RestoreCompleteDotnetTool" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Restore completed in {0}.]]></Val>
+          <Val><![CDATA[Restored {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Obnovení v {0} se dokončilo.]]></Val>
+            <Val><![CDATA[Obnovil se projekt {0} (v {1}).]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Restore completed in {0}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_RestoreFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Restore failed in {0} for {1}.]]></Val>
+          <Val><![CDATA[Failed to restore {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Obnovení v {0} pro {1} se nepovedlo.]]></Val>
+            <Val><![CDATA[Obnovení projektu {0} (v {1}) bylo neúspěšné.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Restore failed in {0} for {1}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_RestoreFailedDotnetTool" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Restore failed in {0}.]]></Val>
+          <Val><![CDATA[Failed to restore {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Obnovení v {0} neproběhlo.]]></Val>
+            <Val><![CDATA[Obnovení projektu {0} (v {1}) bylo neúspěšné.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Restore failed in {0}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1782,10 +1815,13 @@
       </Item>
       <Item ItemId=";Source_DefaultNamePrefix" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Package source {0}]]></Val>
+          <Val><![CDATA[Package source ]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zdroj balíčku {0}]]></Val>
+            <Val><![CDATA[Zdroj balíčku ]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Package source {0}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
