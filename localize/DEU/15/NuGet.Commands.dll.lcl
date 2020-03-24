@@ -853,6 +853,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_CPVM_DowngradeError" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Detected package downgrade: {0} from {1} to centrally defined {2}. Update the centrally managed package version to a higher version.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Log_CheckingCompatibility" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Checking compatibility of packages on {0}.]]></Val>
@@ -1219,6 +1225,9 @@
       <Item ItemId=";Log_ProjectUpToDateSummary" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} of {1} projects are up-to-date for restore.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} von {1} Projekten sind für die Wiederherstellung auf dem neuesten Stand.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1270,8 +1279,8 @@
       <Item ItemId=";Log_RestoreComplete" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Restored {0} (in {1}).]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Wiederherstellung in "{0}" für "{1}" abgeschlossen.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA["{0}" wiederhergestellt (in "{1}").]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore completed in {0} for {1}.]]></Val>
@@ -1282,8 +1291,8 @@
       <Item ItemId=";Log_RestoreCompleteDotnetTool" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Restored {0} (in {1}).]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Wiederherstellung in {0} abgeschlossen.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA["{0}" wiederhergestellt (in "{1}").]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore completed in {0}.]]></Val>
@@ -1294,8 +1303,8 @@
       <Item ItemId=";Log_RestoreFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Failed to restore {0} (in {1}).]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Fehler bei der Wiederherstellung in "{0}" für "{1}".]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Fehler beim Wiederherstellen von "{0}" (in "{1}").]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore failed in {0} for {1}.]]></Val>
@@ -1306,8 +1315,8 @@
       <Item ItemId=";Log_RestoreFailedDotnetTool" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Failed to restore {0} (in {1}).]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Fehler bei Wiederherstellung in {0}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Fehler beim Wiederherstellen von "{0}" (in "{1}").]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore failed in {0}.]]></Val>
@@ -1810,8 +1819,8 @@
       <Item ItemId=";Source_DefaultNamePrefix" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package source ]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Paketquelle "{0}"]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Paketquelle]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Package source {0}]]></Val>
