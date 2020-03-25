@@ -853,6 +853,9 @@
       <Item ItemId=";Log_CPVM_DowngradeError" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Detected package downgrade: {0} from {1} to centrally defined {2}. Update the centrally managed package version to a higher version.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[パッケージのダウングレード ({0} が {1} から一元的に定義された {2} へ) が検出されました。一元管理されたパッケージ バージョンをより新しいバージョンに更新してください。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1816,8 +1819,8 @@
       <Item ItemId=";Source_DefaultNamePrefix" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package source ]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[パッケージ ソース {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[パッケージ ソース ]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Package source {0}]]></Val>
