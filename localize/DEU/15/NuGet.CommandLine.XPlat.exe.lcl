@@ -1188,10 +1188,13 @@
       </Item>
       <Item ItemId=";Push_Timeout_Description" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specifies the timeout for pushing to a server in seconds. Defaults to 300 seconds (5 minutes).]]></Val>
+          <Val><![CDATA[Timeout for pushing to a server in seconds. Defaults to 300 seconds (5 minutes).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Gibt das Timeout für die Pushübertragung auf einen Server in Sekunden an. Der Standardwert lautet 300 Sekunden (5 Minuten).]]></Val>
+            <Val><![CDATA[Zeitlimit für die Pushübertragung auf einen Server in Sekunden. Der Standardwert beträgt 300 Sekunden (5 Minuten).]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Specifies the timeout for pushing to a server in seconds. Defaults to 300 seconds (5 minutes).]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1353,10 +1356,13 @@
       </Item>
       <Item ItemId=";Source_Description" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specifies the server URL]]></Val>
+          <Val><![CDATA[Package source (URL, UNC/folder path or package source name) to use. Defaults to DefaultPushSource if specified in NuGet.Config.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Gibt die Server-URL an.]]></Val>
+            <Val><![CDATA[Die Paketquelle (URL, UNC/Ordnerpfad oder Name der Paketquelle), die verwendet werden soll. Der Standardwert ist "DefaultPushSource", wenn in "NuGet.config" angegeben.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Specifies the server URL]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1479,10 +1485,13 @@
       </Item>
       <Item ItemId=";SymbolSource_Description" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specifies the symbol server URL. If not specified, nuget.smbsrc.net is used when pushing to nuget.org.]]></Val>
+          <Val><![CDATA[Symbol server URL to use.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Gibt die Symbolserver-URL an. Wenn keine Angabe vorliegt, wird "nuget.smbsrc.net" bei der Pushübertragung an "nuget.org" verwendet.]]></Val>
+            <Val><![CDATA[Die zu verwendende Symbolserver-URL.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Specifies the symbol server URL. If not specified, nuget.smbsrc.net is used when pushing to nuget.org.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1546,12 +1555,12 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";Comments" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[NuGet wrapper for dotnet.exe.]]></Val>
-        <Tgt Cat="Text" Stat="Loc" Orig="New">
+        <Val><![CDATA[NuGet executable wrapper for the dotnet CLI nuget functionality.]]></Val>
+        <Tgt Cat="Text" Stat="Update" Orig="New">
           <Val><![CDATA[NuGet-Wrapper für "dotnet.exe".]]></Val>
         </Tgt>
         <Prev Cat="Text">
-          <Val><![CDATA[NuGet wrapper for dotnet.exe]]></Val>
+          <Val><![CDATA[NuGet wrapper for dotnet.exe.]]></Val>
         </Prev>
       </Str>
       <Disp Icon="Str" />
