@@ -129,10 +129,13 @@
       </Item>
       <Item ItemId=";IsPackableFalseError" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Cannot generate a package from a project which has IsPackable property set to false.]]></Val>
+          <Val><![CDATA[This project cannot be packaged because packaging has been disabled. Add <IsPackable>true</IsPackable> to the project file to enable producing a package from this project.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[无法根据其 IsPackable 属性设置为 false 的项目生成包。]]></Val>
+            <Val><![CDATA[无法打包此项目，因为已禁用打包。向项目文件添加 <IsPackable>true</IsPackable> ，以便从此项目生成包。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Cannot generate a package from a project which has IsPackable property set to false.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -163,12 +166,12 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";Comments" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[NuGet client library. Microsoft holds the copyright for this NuGet package. .NET Foundation holds the copyright to the source.]]></Val>
+        <Val><![CDATA[NuGet tasks for MSBuild and dotnet pack.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[NuGet 客户端库。Microsoft 保留此 NuGet 包的版权。.NET Foundation 保留源版权。]]></Val>
+          <Val><![CDATA[MSBuild 和 dotnet pack 的 NuGet 任务。]]></Val>
         </Tgt>
         <Prev Cat="Text">
-          <Val><![CDATA[NuGet client library. Microsoft holds the copyright for this NuGet package. .NET Foundations holds the copyright to the source.]]></Val>
+          <Val><![CDATA[NuGet client library.]]></Val>
         </Prev>
       </Str>
       <Disp Icon="Str" />
@@ -196,10 +199,13 @@
     </Item>
     <Item ItemId=";LegalCopyright" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+        <Val><![CDATA[© Microsoft Corporation. All rights reserved.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[Microsoft Corporation。保留所有权利。]]></Val>
+          <Val><![CDATA[© Microsoft Corporation。保留所有权利。]]></Val>
         </Tgt>
+        <Prev Cat="Text">
+          <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>

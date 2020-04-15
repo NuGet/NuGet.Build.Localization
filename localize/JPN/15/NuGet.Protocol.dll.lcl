@@ -598,6 +598,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Plugin_FailedOnCreation" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Plugin '{0}' failed within {1:N3} seconds with exit code {2}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プラグイン '{0}' は {1:N3} 秒以内に終了コード {2} で失敗しました。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Plugin_FailedOperationForPackage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Plugin '{0}' failed a {1} operation for package {2}.{3}.]]></Val>
@@ -729,6 +738,15 @@
           <Val><![CDATA[Plugin '{0}' failed to download package '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[プラグイン '{0}' がパッケージ '{1}' のダウンロードに失敗しました。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Plugin_ProblemStartingPlugin" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Problem starting the plugin '{0}'. {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プラグイン '{0}' を開始するときに問題が発生しています。{1}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -890,7 +908,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The source does not have a Search service!]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[ソースに検索サービスが含まれていません。]]></Val>
+            <Val><![CDATA[ソースに Search Service が含まれていません。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -958,6 +976,33 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";PushCommandSkipDuplicateAdvertiseDotnetExe" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[To skip already published packages, use the option --skip-duplicate]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[既に発行されているパッケージをスキップするには、--skip-duplicate オプションを使用します]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PushCommandSkipDuplicateAdvertiseNuGetExe" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[To skip already published packages, use the option -SkipDuplicate]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[既に発行されているパッケージをスキップするには、-SkipDuplicate オプションを使用します]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PushCommandSkipDuplicateNotImplemented" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The option to skip duplicates is not currently supported for this type of push.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[この種類のプッシュでは、現在、重複をスキップするオプションはサポートされていません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";RepositoryContentUrlMustBeHttps" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Repository content URL for repository signatures must be HTTPS.]]></Val>
@@ -990,6 +1035,15 @@
           <Val><![CDATA[The installation host does not support a feature required by this package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[インストール ホストは、このパッケージで必要な機能をサポートしていません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";StringCannotBeNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[String argument '{0}' cannot be null or empty]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[文字列引数 '{0}' を null または空にすることはできません]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1045,12 +1099,12 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";Comments" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[NuGet client library. Microsoft holds the copyright for this NuGet package. .NET Foundation holds the copyright to the source.]]></Val>
+        <Val><![CDATA[NuGet's implementation for interacting with feeds. Contains functionality for all feed types.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[NuGet クライアント ライブラリです。Microsoft は、この NuGet パッケージの著作権を保持します。.NET Foundation は、ソースに対する著作権を保持します。]]></Val>
+          <Val><![CDATA[フィードと対話するための NuGet の実装。すべての種類のフィードの機能が含まれています。]]></Val>
         </Tgt>
         <Prev Cat="Text">
-          <Val><![CDATA[NuGet client library. Microsoft holds the copyright for this NuGet package. .NET Foundations holds the copyright to the source.]]></Val>
+          <Val><![CDATA[NuGet client library.]]></Val>
         </Prev>
       </Str>
       <Disp Icon="Str" />
@@ -1078,10 +1132,13 @@
     </Item>
     <Item ItemId=";LegalCopyright" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+        <Val><![CDATA[© Microsoft Corporation. All rights reserved.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+          <Val><![CDATA[(C) Microsoft Corporation. All rights reserved.]]></Val>
         </Tgt>
+        <Prev Cat="Text">
+          <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>

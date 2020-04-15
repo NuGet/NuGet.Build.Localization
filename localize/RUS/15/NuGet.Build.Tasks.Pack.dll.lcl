@@ -129,10 +129,13 @@
       </Item>
       <Item ItemId=";IsPackableFalseError" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Cannot generate a package from a project which has IsPackable property set to false.]]></Val>
+          <Val><![CDATA[This project cannot be packaged because packaging has been disabled. Add <IsPackable>true</IsPackable> to the project file to enable producing a package from this project.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Невозможно создать пакет из проекта, в котором свойство IsPackable имеет значение false.]]></Val>
+            <Val><![CDATA[Этот проект невозможно упаковать, так как упаковка отключена. Добавьте <IsPackable>true</IsPackable> в файл проекта, чтобы разрешить создание пакета из этого проекта.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Cannot generate a package from a project which has IsPackable property set to false.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -163,12 +166,12 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";Comments" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[NuGet client library. Microsoft holds the copyright for this NuGet package. .NET Foundation holds the copyright to the source.]]></Val>
+        <Val><![CDATA[NuGet tasks for MSBuild and dotnet pack.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[Клиентская библиотека NuGet. Авторские права на этот пакет NuGet принадлежат корпорации Майкрософт. Авторские права на исходный код принадлежат .NET Foundation.]]></Val>
+          <Val><![CDATA[Задачи NuGet для MSBuild и dotnet pack.]]></Val>
         </Tgt>
         <Prev Cat="Text">
-          <Val><![CDATA[NuGet client library. Microsoft holds the copyright for this NuGet package. .NET Foundations holds the copyright to the source.]]></Val>
+          <Val><![CDATA[NuGet client library.]]></Val>
         </Prev>
       </Str>
       <Disp Icon="Str" />
@@ -199,10 +202,13 @@
     </Item>
     <Item ItemId=";LegalCopyright" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+        <Val><![CDATA[© Microsoft Corporation. All rights reserved.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[Корпорация Майкрософт (Microsoft Corporation). Все права защищены.]]></Val>
+          <Val><![CDATA[© Корпорация Майкрософт (Microsoft Corporation). Все права защищены.]]></Val>
         </Tgt>
+        <Prev Cat="Text">
+          <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>

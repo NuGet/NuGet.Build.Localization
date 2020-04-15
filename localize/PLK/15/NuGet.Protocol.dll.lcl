@@ -476,7 +476,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Cannot create a NuGet Repository from the Aggregate Source]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nie można utworzyć repozytorium NuGet ze źródła agregowania]]></Val>
+            <Val><![CDATA[Nie można utworzyć repozytorium NuGet ze źródła agregacji]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -594,6 +594,15 @@
           <Val><![CDATA[Plugin '{0}' failed with the exception:  {1}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Wystąpił błąd wtyczki „{0}”, wyjątek:  {1}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Plugin_FailedOnCreation" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Plugin '{0}' failed within {1:N3} seconds with exit code {2}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Operacja wtyczki „{0}” nie powiodła się w ciągu {1:N3} s z kodem zakończenia {2}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -729,6 +738,15 @@
           <Val><![CDATA[Plugin '{0}' failed to download package '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Wtyczka „{0}” nie mogła pobrać pakietu „{1}”.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Plugin_ProblemStartingPlugin" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Problem starting the plugin '{0}'. {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Problem podczas uruchamiania wtyczki „{0}”. {1}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -958,6 +976,33 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";PushCommandSkipDuplicateAdvertiseDotnetExe" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[To skip already published packages, use the option --skip-duplicate]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Aby pominąć już opublikowane pakiety, użyj opcji --skip-duplicate]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PushCommandSkipDuplicateAdvertiseNuGetExe" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[To skip already published packages, use the option -SkipDuplicate]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Aby pominąć już opublikowane pakiety, użyj opcji --SkipDuplicate]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PushCommandSkipDuplicateNotImplemented" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The option to skip duplicates is not currently supported for this type of push.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Opcja pomijania duplikatów nie jest obecnie obsługiwana dla tego typu wypychania.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";RepositoryContentUrlMustBeHttps" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Repository content URL for repository signatures must be HTTPS.]]></Val>
@@ -990,6 +1035,15 @@
           <Val><![CDATA[The installation host does not support a feature required by this package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Host instalacji nie obsługuje funkcji wymaganej przez ten pakiet.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";StringCannotBeNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[String argument '{0}' cannot be null or empty]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Argument ciągu „{0}” nie może mieć wartości null ani być pusty]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1045,12 +1099,12 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";Comments" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[NuGet client library. Microsoft holds the copyright for this NuGet package. .NET Foundation holds the copyright to the source.]]></Val>
+        <Val><![CDATA[NuGet's implementation for interacting with feeds. Contains functionality for all feed types.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[Biblioteka klienta NuGet. Prawa autorskie do tego pakietu NuGet ma firma Microsoft. Prawa autorskie do kodu źródłowego ma organizacja .NET Foundation.]]></Val>
+          <Val><![CDATA[Implementacja programu NuGet do interakcji ze źródłami danych. Zawiera funkcje dla wszystkich typów źródeł danych.]]></Val>
         </Tgt>
         <Prev Cat="Text">
-          <Val><![CDATA[NuGet client library. Microsoft holds the copyright for this NuGet package. .NET Foundations holds the copyright to the source.]]></Val>
+          <Val><![CDATA[NuGet client library.]]></Val>
         </Prev>
       </Str>
       <Disp Icon="Str" />
@@ -1078,10 +1132,13 @@
     </Item>
     <Item ItemId=";LegalCopyright" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+        <Val><![CDATA[© Microsoft Corporation. All rights reserved.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[Microsoft Corporation. Wszelkie prawa zastrzeżone.]]></Val>
+          <Val><![CDATA[© Microsoft Corporation. Wszelkie prawa zastrzeżone.]]></Val>
         </Tgt>
+        <Prev Cat="Text">
+          <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>

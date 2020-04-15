@@ -579,10 +579,13 @@
       </Item>
       <Item ItemId=";ListPkg_NoUpdatesForProject" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The given project `{0}` have no updates given the current sources.]]></Val>
+          <Val><![CDATA[The given project `{0}` has no updates given the current sources.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[目前的來源未提供任何更新給指定的專案 `{0}`。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The given project `{0}` have no updates given the current sources.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -891,12 +894,12 @@
       </Item>
       <Item ItemId=";NoServiceEndpoint_Description" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[--no-service-endpoint does not append "api/v2/packages" to the source URL.]]></Val>
+          <Val><![CDATA[Does not append "api/v2/package" to the source URL.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[--no-service-endpoint 不會將 "api/v2/packages" 附加到來源 URL。]]></Val>
+            <Val><![CDATA[不將 "api/v2/package" 附加至來源 URL。]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Does not append "api/v2/package" to the source URL.]]></Val>
+            <Val><![CDATA[--no-service-endpoint does not append "api/v2/packages" to the source URL.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -924,6 +927,15 @@
           <Val><![CDATA[http://docs.nuget.org/]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[http://docs.nuget.org/]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetXplatCommand_Interactive" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Allow the command to block and require manual action for operations like authentication.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[允許命令封鎖及要求對驗證這類作業採取手動動作。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -978,15 +990,6 @@
           <Val><![CDATA[Version string specified '{0}' is invalid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[指定的版本字串 '{0}' 無效。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";PushDeleteCommand_Interactive" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Allow the command to block and require manual action for operations like authentication.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[允許命令封鎖及要求對驗證這類作業採取手動動作。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1261,10 +1264,13 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";Comments" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[NuGet wrapper for dotnet.exe]]></Val>
+        <Val><![CDATA[NuGet wrapper for dotnet.exe.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[dotnet.exe 的 NuGet 包裝函式]]></Val>
+          <Val><![CDATA[dotnet.exe 的 NuGet 包裝函式。]]></Val>
         </Tgt>
+        <Prev Cat="Text">
+          <Val><![CDATA[NuGet wrapper for dotnet.exe]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -1291,10 +1297,13 @@
     </Item>
     <Item ItemId=";LegalCopyright" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+        <Val><![CDATA[© Microsoft Corporation. All rights reserved.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[Microsoft Corporation. 著作權所有，並保留一切權利。]]></Val>
+          <Val><![CDATA[© Microsoft Corporation. 著作權所有，並保留一切權利。]]></Val>
         </Tgt>
+        <Prev Cat="Text">
+          <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>

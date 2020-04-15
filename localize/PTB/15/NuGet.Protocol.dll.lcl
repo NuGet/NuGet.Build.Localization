@@ -598,6 +598,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Plugin_FailedOnCreation" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Plugin '{0}' failed within {1:N3} seconds with exit code {2}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O plug-in '{0}' falhou dentro de {1:N3} segundos com o código de saída {2}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Plugin_FailedOperationForPackage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Plugin '{0}' failed a {1} operation for package {2}.{3}.]]></Val>
@@ -729,6 +738,15 @@
           <Val><![CDATA[Plugin '{0}' failed to download package '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Falha no plug-in '{0}' ao baixar o pacote '{1}'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Plugin_ProblemStartingPlugin" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Problem starting the plugin '{0}'. {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Problema ao iniciar o plug-in '{0}'. {1}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -890,7 +908,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The source does not have a Search service!]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A origem não tem um serviço de Pesquisa!]]></Val>
+            <Val><![CDATA[A origem não tem um serviço Pesquisa!]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -958,6 +976,33 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";PushCommandSkipDuplicateAdvertiseDotnetExe" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[To skip already published packages, use the option --skip-duplicate]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Para ignorar pacotes já publicados, use a opção --skip-duplicate]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PushCommandSkipDuplicateAdvertiseNuGetExe" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[To skip already published packages, use the option -SkipDuplicate]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Para ignorar pacotes já publicados, use a opção -SkipDuplicate]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PushCommandSkipDuplicateNotImplemented" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The option to skip duplicates is not currently supported for this type of push.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No momento, não há suporte para a opção de ignorar duplicatas para esse tipo de push.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";RepositoryContentUrlMustBeHttps" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Repository content URL for repository signatures must be HTTPS.]]></Val>
@@ -990,6 +1035,15 @@
           <Val><![CDATA[The installation host does not support a feature required by this package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[O host de instalação não oferece suporte a um recurso exigido por este pacote.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";StringCannotBeNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[String argument '{0}' cannot be null or empty]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O argumento '{0}' da cadeia de caracteres não pode ser nulo nem estar vazio]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1045,12 +1099,12 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";Comments" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[NuGet client library. Microsoft holds the copyright for this NuGet package. .NET Foundation holds the copyright to the source.]]></Val>
+        <Val><![CDATA[NuGet's implementation for interacting with feeds. Contains functionality for all feed types.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[Biblioteca de cliente do NuGet. A Microsoft tem os direitos autorais deste pacote do NuGet. A .NET Foundation tem os direitos autorais de origem.]]></Val>
+          <Val><![CDATA[Implementação do NuGet para interação com feeds. Contém funcionalidades para todos os tipos de feed.]]></Val>
         </Tgt>
         <Prev Cat="Text">
-          <Val><![CDATA[NuGet client library. Microsoft holds the copyright for this NuGet package. .NET Foundations holds the copyright to the source.]]></Val>
+          <Val><![CDATA[NuGet client library.]]></Val>
         </Prev>
       </Str>
       <Disp Icon="Str" />
@@ -1078,10 +1132,13 @@
     </Item>
     <Item ItemId=";LegalCopyright" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+        <Val><![CDATA[© Microsoft Corporation. All rights reserved.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[Microsoft Corporation. Todos os direitos reservados.]]></Val>
+          <Val><![CDATA[© Microsoft Corporation. Todos os direitos reservados.]]></Val>
         </Tgt>
+        <Prev Cat="Text">
+          <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>

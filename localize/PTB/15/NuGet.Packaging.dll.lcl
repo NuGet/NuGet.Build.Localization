@@ -40,6 +40,51 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";IconCannotOpenFile" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Cannot open the icon file '{0}': {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Não é possível abrir o arquivo de ícone '{0}': {1}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";IconErrorEmpty" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The icon file is empty.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O arquivo de ícone está vazio.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";IconMaxFileSizeExceeded" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The icon file size must not exceed 1 megabyte.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O tamanho do arquivo de ícone não deve exceder 1 megabyte.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";IconMissingRequiredValue" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The element 'icon' cannot be empty.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O elemento 'icon' não pode ficar vazio.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";IconNoFileElement" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The icon file '{0}' does not exist in the package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O arquivo de ícone '{0}' não existe no pacote.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";IncompatibleSchema" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The schema version of '{0}' is incompatible with version {1} of NuGet. Please upgrade NuGet to the latest version from http://go.microsoft.com/fwlink/?LinkId=213942.]]></Val>
@@ -265,11 +310,74 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";BuildConventionIsViolatedWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[- At least one {0} file was found in '{1}', but '{2}' was not.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- Pelo menos um arquivo {0} foi encontrado em '{1}', mas o '{2}' não foi.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";DefaultSpecValueWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The value "{0}" for {1} is a sample value and should be removed. Replace it with an appropriate value or remove it and rebuild your package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[O valor "{0}" para {1} é um valor de exemplo e deve ser removido. Substitua-o por um valor apropriado ou remova-o e recompile o pacote.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";DependenciesGroupsForEachTFMBeginningToFiles" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[- Add lib or ref assemblies for the]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- Adicione assemblies lib ou ref para o]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";DependenciesGroupsForEachTFMBeginningToNuspec" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[- Add a dependency group for]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- Adicione um grupo de dependências para]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";DependenciesGroupsForEachTFMEndingToFile" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[target framework]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[estrutura de destino]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";DependenciesGroupsForEachTFMEndingToNuspec" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[to the nuspec]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[para o nuspec]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";DependenciesGroupsForEachTFMHasCompatMatch" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Some target frameworks declared in the dependencies group of the nuspec and the lib/ref folder have compatible matches, but not exact matches in the other location. Unless intentional, consult the list of actions below:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Algumas estruturas de destino declaradas no grupo de dependências das pastas nuspec e lib/ref têm correspondências compatíveis, mas não têm correspondências exatas no outro local. Caso isso não seja intencional, consulte a lista de ações abaixo:]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";DependenciesGroupsForEachTFMHasNoExactMatch" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Some target frameworks declared in the dependencies group of the nuspec and the lib/ref folder do not have exact matches in the other location. Consult the list of actions below:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Algumas estruturas de destino declaradas no grupo de dependências das pastas nuspec e lib/ref não têm correspondências exatas no outro local. Consulte a lista de ações abaixo:]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -283,11 +391,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";IconUrlDeprecationWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The 'PackageIconUrl'/'iconUrl' element is deprecated. Consider using the 'PackageIcon'/'icon' element instead. Learn more at https://aka.ms/deprecateIconUrl]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O elemento 'PackageIconUrl'/'iconUrl' foi preterido. Em vez dele, use o elemento 'PackageIcon'/'icon'. Saiba mais em https://aka.ms/deprecateIconUrl]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";InvalidFrameworkWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The folder '{0}' under 'lib' is not recognized as a valid framework name or a supported culture identifier. Rename it to a valid framework name or culture identifier.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[A pasta '{0}' em 'lib' não é reconhecida como um nome de estrutura válido nem um identificador de cultura compatível. Use um nome de estrutura válido ou um identificador de cultura.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidPlaceholderFileWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The file at '{0}' uses the symbol for empty directory '_._', but it is present in a directory that contains other files. Please remove this file from directories that contain other files.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O arquivo em '{0}' usa o símbolo para o diretório vazio '_. _', mas ele está presente em um diretório que contém outros arquivos. Remova esse arquivo dos diretórios que contêm outros arquivos.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -385,11 +511,56 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";NoRefOrLibFolderInPackage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This package does not contain a lib/ or ref/ folder, and will therefore be treated as compatible for all frameworks. Since framework specific files were found under the build/ directory for {0}, consider creating the following empty files to correctly narrow the compatibility of the package:]D;]A;{1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Este pacote não contém uma pasta lib/ou ref/ e, portanto, será tratado como compatível para todas as estruturas. Como arquivos específicos da estrutura foram localizados no build/diretório para {0}, considere a criação dos arquivos vazios a seguir para restringir corretamente a compatibilidade do pacote:]D;]A;{1}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";PlaceholderFileInPackageWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[An empty folder placeholder file '{0}' is in a non-empty folder and should be removed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Um arquivo do espaço reservado da pasta vazio '{0}' está em uma pasta não vazia de deve ser removido.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[References were found in the nuspec, but some reference assemblies were not found in both the nuspec and ref folder. Add the following reference assemblies:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Foram encontradas referências no nuspec, mas alguns assemblies de referência não foram encontrados nas pastas nuspec e ref. Adicione os seguintes assemblies de referência:]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToNuspecListItemFormat" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[- Add {0} to the {1} reference group in the nuspec]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- Adicione {0} ao grupo de referência {1} no nuspec]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToNuspecNoTfmListItemFormat" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[- Add {0} to the references element in the nuspec]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- Adicione {0} ao elemento de referências no nuspec]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ReferencesInNuspecAndRefFilesDontMatchWarningAddToRefListItemFormat" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[- Add {0} to the ref/{1}/ directory]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[- Adicione {0} ao diretório ref/{1}/]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -623,7 +794,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in the allow list.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A impressão digital do certificado de assinatura do pacote não corresponde a nenhuma impressão digital de certificado na lista de permissões.]]></Val>
+            <Val><![CDATA[A impressão digital do certificado de assinatura de pacote não corresponde a nenhuma impressão digital de certificado na lista de permissões.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -776,7 +947,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature is invalid or cannot be verified on this platform.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A assinatura do pacote é inválida ou não pode ser verificada nesta plataforma.]]></Val>
+            <Val><![CDATA[A assinatura de pacote é inválida ou não pode ser verificada nesta plataforma.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The package signature is invalid.]]></Val>
@@ -804,10 +975,13 @@
       </Item>
       <Item ItemId=";ErrorUnsafePackageEntry" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package '{0}' contains an entry which is unsafe for extraction.]]></Val>
+          <Val><![CDATA[The package '{0}' contains an entry '{1}' which is unsafe for extraction.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O pacote '{0}' contém uma entrada que não é segura para extração.]]></Val>
+            <Val><![CDATA[O pacote '{0}' contém uma entrada '{1}' que não é segura para extração.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package '{0}' contains an entry which is unsafe for extraction.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -837,6 +1011,15 @@
           <Val><![CDATA[Error parsing nupkg metadata file {0} : {1}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Erro ao analisar o arquivo de metadados nupkg {0} : {1}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_MissingNuspecFile" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package is missing the required nuspec file. ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O arquivo do nuspec obrigatório está ausente no pacote. ]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -893,7 +1076,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature file does not contain exactly one primary signature.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O arquivo de assinatura do pacote não contém exatamente uma assinatura principal.]]></Val>
+            <Val><![CDATA[O arquivo de assinatura de pacote não contém exatamente uma assinatura principal.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The package signature contains multiple primary signatures.]]></Val>
@@ -1094,7 +1277,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature file entry is invalid. {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A entrada do arquivo de assinatura do pacote é inválida. {0}]]></Val>
+            <Val><![CDATA[A entrada do arquivo de assinatura de pacote é inválida. {0}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The package signature file entry is invalid.]]></Val>
@@ -1116,6 +1299,15 @@
           <Val><![CDATA[The local file header field '{0}' has an invalid value ({1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[O campo '{0}' do cabeçalho do arquivo local tem um valor inválido ({1}).]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidPackageTypeVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Nuspec file contains a package type with an invalid package version '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O arquivo Nuspec contém um tipo de pacote com uma versão de pacote '{0}' inválida.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1174,6 +1366,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Message_Path" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Path: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Caminho: {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";MinClientVersionAlreadyExist" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[MinClientVersion already exists in packages.config]]></Val>
@@ -1183,11 +1384,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";MissingNuspec" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
+      <Item ItemId=";MissingMetadataNode" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Nuspec file does not exist in package.]]></Val>
+          <Val><![CDATA[Nuspec file does not contain the '{0}' node.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O arquivo Nuspec não existe no pacote.]]></Val>
+            <Val><![CDATA[O arquivo Nuspec não contém o nó '{0}'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";MissingPackageTypeName" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Nuspec file contains a package type that is missing the name attribute.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O arquivo Nuspec contém um tipo de pacote que não tem um atributo de nome.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1215,6 +1425,15 @@
           <Val><![CDATA[The package contains multiple package signature files.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[O pacote contém vários arquivos de assinatura de pacote.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";MultiplePackageTypes" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Nuspec file contains multiple package types. Zero or one package type nodes are allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O arquivo Nuspec contém vários tipos de pacote. Nenhum ou um nó de tipo de pacote é permitido.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1268,7 +1487,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The 'UNLICENSED' license identifier cannot be combined with the '+' operator.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O identificador de licença 'SEM LICENÇA' não pode ser combinado com o operador '+'.]]></Val>
+            <Val><![CDATA[O identificador de licença 'UNLICENSED' não pode ser combinado com o operador '+'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1361,7 +1580,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The owner has marked this package as 'UNLICENSED'. This means that there is no license that allows this package to be used outside of the copyright owner.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O proprietário marcou este pacote como 'SEM LICENÇA'. Isso significa que não há nenhuma licença que permita que ele seja usado fora do proprietário dos direitos autorais.]]></Val>
+            <Val><![CDATA[O proprietário marcou este pacote como 'UNLICENSED'. Isso significa que não há nenhuma licença que permita que ele seja usado fora do proprietário dos direitos autorais.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1494,10 +1713,13 @@
       </Item>
       <Item ItemId=";PackageMinVersionNotSatisfied" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The '{0}' package requires NuGet client version '{1}' or above, but the current NuGet version is '{2}'. To upgrade NuGet, please go to http://docs.nuget.org/consume/installing-nuget]]></Val>
+          <Val><![CDATA[The '{0}' package requires NuGet client version '{1}' or above, but the current NuGet version is '{2}'. To upgrade NuGet, please go to https://docs.nuget.org/consume/installing-nuget]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O pacote '{0}' exige a versão '{1}' ou superior do cliente NuGet, mas a versão atual do NuGet é '{2}'. Para atualizar o NuGet, acesse http://docs.nuget.org/consume/installing-nuget]]></Val>
+            <Val><![CDATA[O pacote '{0}' exige a versão '{1}' ou superior do cliente NuGet, mas a versão atual do NuGet é '{2}'. Para atualizar o NuGet, acesse https://docs.nuget.org/consume/installing-nuget]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The '{0}' package requires NuGet client version '{1}' or above, but the current NuGet version is '{2}'. To upgrade NuGet, please go to http://docs.nuget.org/consume/installing-nuget]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1658,7 +1880,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package signature contains an invalid attribute: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A assinatura do pacote contém um atributo inválido: {0}]]></Val>
+            <Val><![CDATA[A assinatura de pacote contém um atributo inválido: {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2011,9 +2233,9 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";TimestampResponseUnsupportedDigestAlgorithm" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";TimestampSignatureUnsupportedDigestAlgorithm" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The timestamp response has an unsupported digest algorithm ({0}). The following algorithms are supported: {1}.]]></Val>
+          <Val><![CDATA[The timestamp signature has an unsupported digest algorithm ({0}). The following algorithms are supported: {1}.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[A resposta de carimbo de data/hora tem um algoritmo digest sem suporte ({0}). Há suporte para os seguintes algoritmos: {1}.]]></Val>
           </Tgt>
@@ -2051,7 +2273,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package hash information could not be read from the package signature.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Não foi possível ler informações sobre pacote de hash da assinatura do pacote.]]></Val>
+            <Val><![CDATA[Não foi possível ler informações sobre pacote de hash da assinatura de pacote.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2060,7 +2282,7 @@
         <Str Cat="Text">
           <Val><![CDATA[An unexpected error occurred while verifying a package signature.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ocorreu um erro inesperado ao verificar uma assinatura do pacote.]]></Val>
+            <Val><![CDATA[Ocorreu um erro inesperado ao verificar uma assinatura de pacote.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2096,7 +2318,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature format version is not supported. Updating your client may solve this problem.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A versão do formato da assinatura do pacote não é compatível. Atualizar o cliente poderá resolver esse problema.]]></Val>
+            <Val><![CDATA[A versão do formato da assinatura de pacote não é compatível. Atualizar o cliente poderá resolver esse problema.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The package signature format version is unsupported.  Updating your client may solve this problem.]]></Val>
@@ -2278,6 +2500,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";VerifyError_TimestampSignatureUnsupportedDigestAlgorithm" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The {0}'s timestamp signature has an unsupported digest algorithm.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A assinatura do carimbo de data/hora do {0} tem um algoritmo digest sem suporte.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";VerifyError_TimestampSignatureValidationFailed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The {0}'s timestamp signature validation failed.]]></Val>
@@ -2323,10 +2554,13 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";Comments" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[NuGet's implementation for reading nupkg package and nuspec package specification files.]]></Val>
+        <Val><![CDATA[NuGet's understanding of packages. Reading nuspec, nupkgs and package signing.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[Implementação do NuGet para a leitura de arquivos de especificação do pacote nupkg e do pacote nuspec.]]></Val>
+          <Val><![CDATA[Compreensão que o NuGet tem de pacotes. Leitura de nuspec e de nupkgs e assinatura de pacote.]]></Val>
         </Tgt>
+        <Prev Cat="Text">
+          <Val><![CDATA[NuGet's implementation for reading nupkg package and nuspec package specification files.]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
@@ -2350,10 +2584,13 @@
     </Item>
     <Item ItemId=";LegalCopyright" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+        <Val><![CDATA[© Microsoft Corporation. All rights reserved.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[Microsoft Corporation. Todos os direitos reservados.]]></Val>
+          <Val><![CDATA[© Microsoft Corporation. Todos os direitos reservados.]]></Val>
         </Tgt>
+        <Prev Cat="Text">
+          <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
