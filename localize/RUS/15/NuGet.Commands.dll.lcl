@@ -256,9 +256,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Входные данные восстановления недопустимы, так как свойству RestorePackagesWithLockFile задано значение false, но существует lock-файл пакетов в {0}.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Invalid restore input where RestorePackagesWithLockFile property is set to false and also exist a packages lock file at {0}.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -415,9 +412,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Проверка хэша содержимого пакета для {0} не пройдена. Пакет отличается от последней восстановленной версии.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package {0} content hash validation failed. The package is different than the last restore.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -490,9 +484,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Lock-файл пакетов не соответствует зависимостям проекта, поэтому восстановление в режиме блокировки невозможно. Отключите свойство RestoreLockedMode в MSBuild или передайте явно параметр --force-evaluate, чтобы запустить восстановление и обновить lock-файл.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --force-evaluate flag to run restore to update the lock file.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -794,10 +785,10 @@
         <Str Cat="Text">
           <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Использование: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;Дополнительные сведения: https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[использование: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;Дополнительные сведения: https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -910,6 +901,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Обнаружен цикл.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Cycle detected:]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -928,6 +922,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Обнаружено понижение версии пакета {0} с {1} на {2}. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Detected package downgrade: {0} from {1} to {2}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1001,7 +998,7 @@
             <Val><![CDATA[Пакет "{0}" был восстановлен с помощью "{1}", а не целевой платформы проекта "{2}". Этот пакет может быть не полностью совместим с вашим проектом.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Package '{0}' was restored using '{1}' instead of the project target framework '{2}'. This may cause compatibility problems.]]></Val>
+            <Val><![CDATA[Package '{0}' was restored using '{1}' instead the project target framework '{2}'. This may cause compatibility problems.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1264,6 +1261,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Не удалось удовлетворить конфликтующие запросы для "{0}": {1}. Платформа: {2}]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Unable to satisfy conflicting requests for '{0}': {1}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1502,7 +1502,7 @@
             <Val><![CDATA[Обнаружен конфликт версий для {0}. Установите или укажите прямую ссылку {1} на проект {2}, чтобы устранить эту проблему.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Version conflict detected for {0}. Reference the package directly from the project to resolve this issue.]]></Val>
+            <Val><![CDATA[Version conflict detected for {0}.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1877,7 +1877,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Disabled]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Отключен]]></Val>
+            <Val><![CDATA[Отключено]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2230,9 +2230,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ошибка при проверке подписи пакета.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Could not verify package(s) signature.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2260,9 +2257,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Пакет "{0}" успешно проверен.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Successfully verified package(s).]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
