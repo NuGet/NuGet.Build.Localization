@@ -1080,9 +1080,21 @@
       </Item>
       <Item ItemId=";Option_ConfigFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The NuGet configuration file. If specified, only the settings from this file will be used. If not specified, the hierarchy of configuration files from the current directory will be used. To learn more about NuGet configuration go to https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior.]]></Val>
+          <Val><![CDATA[The NuGet configuration file. If specified, only the settings from this file will be used. If not specified, the hierarchy of configuration files from the current directory will be used. For more information, see https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O arquivo de configuração do NuGet. Se for especificado, somente as configurações desse arquivo serão usadas. Se não for especificado, a hierarquia de arquivos de configuração do diretório atual será usada. Para saber mais sobre a configuração do NuGet, acesse https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior.]]></Val>
+            <Val><![CDATA[O arquivo de configuração do NuGet. Se for especificado, somente as configurações desse arquivo serão usadas. Se não for especificado, a hierarquia de arquivos de configuração do diretório atual será usada. Para saber mais, acesse https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The NuGet configuration file. If specified, only the settings from this file will be used. If not specified, the hierarchy of configuration files from the current directory will be used. To learn more about NuGet configuration go to https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Option_ConfigFile_Docs" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The NuGet configuration file. If specified, only the settings from this file will be used. If not specified, the hierarchy of configuration files from the current directory will be used. For more information, see [Common NuGet Configurations]5D;(https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O arquivo de configuração do NuGet. Se for especificado, somente as configurações desse arquivo serão usadas. Se não for especificado, a hierarquia de arquivos de configuração do diretório atual será usada. Para saber mais, acesse [Configurações Comuns do NuGet]5D; (https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1377,10 +1389,13 @@
       </Item>
       <Item ItemId=";SourcesCommandFormatDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Applies to the list action. Accepts two values: Detailed (the default) and Short.]]></Val>
+          <Val><![CDATA[The format of the list command output: `Detailed` (the default) and `Short`.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Aplica-se à ação da lista. Aceita dois valores: Detailed (o padrão) e Short.]]></Val>
+            <Val><![CDATA[O formato da saída do comando de lista: `Detailed` (o padrão) e `Short`.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Applies to the list action. Accepts two values: Detailed (the default) and Short.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1404,10 +1419,13 @@
       </Item>
       <Item ItemId=";SourcesCommandSourceDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Path to the package(s) source.]]></Val>
+          <Val><![CDATA[Path to the package source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Caminho para a origem do(s) pacote(s).]]></Val>
+            <Val><![CDATA[Caminho para a origem do pacote.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Path to the package(s) source.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1429,9 +1447,9 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SourcesCommandUserNameDescription" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";SourcesCommandUsernameDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[UserName to be used when connecting to an authenticated source.]]></Val>
+          <Val><![CDATA[Username to be used when connecting to an authenticated source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Nome de usuário a ser usado ao conectar-se a uma origem autenticada.]]></Val>
           </Tgt>
@@ -1440,9 +1458,21 @@
       </Item>
       <Item ItemId=";SourcesCommandValidAuthenticationTypesDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Comma-separated list of valid authentication types for this source. By default, all authentication types are valid. Example: basic,negotiate]]></Val>
+          <Val><![CDATA[Comma-separated list of valid authentication types for this source. Set this to basic if the server advertises NTLM or Negotiate and your credentials must be sent using the Basic mechanism, for instance when using a PAT with on-premises Azure DevOps Server. Other valid values include negotiate, kerberos, ntlm, and digest, but these values are unlikely to be useful.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Lista separada por vírgulas dos tipos de autenticação válidos para essa origem. Por padrão, todos os tipos de autenticação são válidos. Exemplo: básico,negociar]]></Val>
+            <Val><![CDATA[Lista separada por vírgulas de tipos de autenticação válidos para essa origem. Defina isso como basic se o servidor anunciar NTLM ou Negotiate e suas credenciais devem ser enviadas usando o mecanismo Básico, por exemplo, ao usar uma PAT com Azure DevOps Server local. Outros valores válidos incluem negotiate, Kerberos, NTLM e digest, mas esses valores provavelmente não serão úteis.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Comma-separated list of valid authentication types for this source. By default, all authentication types are valid. Example: basic,negotiate]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SourcesCommandValidAuthenticationTypesDescription_Docs" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Comma-separated list of valid authentication types for this source. Set this to `basic` if the server advertises NTLM or Negotiate and your credentials must be sent using the Basic mechanism, for instance when using a PAT with on-premises Azure DevOps Server. Other valid values include `negotiate`, `kerberos`, `ntlm`, and `digest`, but these values are unlikely to be useful.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Lista separada por vírgulas de tipos de autenticação válidos para essa origem. Defina isso como `basic` se o servidor anunciar NTLM ou Negotiate e suas credenciais precisarem ser enviadas usando o mecanismo Básico (por exemplo, ao usar uma PAT com Azure DevOps Server local). Outros valores válidos incluem `negotiate`, `kerberos`, `ntlm` e `digest`, mas esses valores provavelmente não serão úteis.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
