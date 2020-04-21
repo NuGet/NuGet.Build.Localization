@@ -214,8 +214,8 @@
       <Item ItemId=";HeaderLabel.Text" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Static Text">
           <Val><![CDATA[Package sources:]]></Val>
-          <Tgt Cat="Static Text" Stat="Update" Orig="New">
-            <Val><![CDATA[&Zdroje balíčků k dispozici:]]></Val>
+          <Tgt Cat="Static Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Zdroje balíčků:]]></Val>
           </Tgt>
           <Prev Cat="Static Text">
             <Val><![CDATA[Available &package sources:]]></Val>
@@ -2073,6 +2073,42 @@
           <Val><![CDATA[The source specified has already been added to the list of available package sources. Please provide a unique source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Zadaný zdroj se už do seznamu dostupných zdrojů balíčků přidal. Zadejte jedinečný zdroj.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Status_Canceled" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Canceled loading packages]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Zrušeno načítání balíčků]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Status_ErrorOccurred" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[An error occurred while loading packages]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Při načítání balíčků došlo k chybě.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Status_NoMoreItems" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[End of package list loaded]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Konec načítání seznamu balíčků]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Status_Ready" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package list loaded]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Seznam balíčků načten]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
