@@ -1081,8 +1081,8 @@
       <Item ItemId=";Option_ConfigFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The NuGet configuration file. If specified, only the settings from this file will be used. If not specified, the hierarchy of configuration files from the current directory will be used. For more information, see https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[NuGet 配置文件。如果指定，将仅使用此文件中的设置。如果未指定，则将使用当前目录中的配置文件的层次结构。要了解有关 NuGet 配置的详细信息，请转到 https://docs.microsoft.com/zh-cn/nuget/consume-packages/configuring-nuget-behavior。]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[NuGet 配置文件。如果指定，将仅使用此文件中的设置。如果未指定，则将使用当前目录中的配置文件的层次结构。有关详细信息，请参阅 https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The NuGet configuration file. If specified, only the settings from this file will be used. If not specified, the hierarchy of configuration files from the current directory will be used. To learn more about NuGet configuration go to https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior.]]></Val>
@@ -1093,6 +1093,9 @@
       <Item ItemId=";Option_ConfigFile_Docs" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The NuGet configuration file. If specified, only the settings from this file will be used. If not specified, the hierarchy of configuration files from the current directory will be used. For more information, see [Common NuGet Configurations]5D;(https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[NuGet 配置文件。如果指定，将仅使用此文件中的设置。如果未指定，则将使用当前目录中的配置文件的层次结构。有关详细信息，请参阅[常见 NuGet 配置]5D;(https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1387,8 +1390,8 @@
       <Item ItemId=";SourcesCommandFormatDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The format of the list command output: `Detailed` (the default) and `Short`.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[应用于列表操作。接受两个值: Detailed (默认)和 Short。]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[list 命令输出的格式:“详细”(默认)和“简短”。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Applies to the list action. Accepts two values: Detailed (the default) and Short.]]></Val>
@@ -1417,7 +1420,7 @@
       <Item ItemId=";SourcesCommandSourceDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Path to the package source.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[包源的路径。]]></Val>
           </Tgt>
           <Prev Cat="Text">
@@ -1447,14 +1450,17 @@
       <Item ItemId=";SourcesCommandUsernameDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Username to be used when connecting to an authenticated source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[连接到已验证源时要使用的用户名。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SourcesCommandValidAuthenticationTypesDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Comma-separated list of valid authentication types for this source. Set this to basic if the server advertises NTLM or Negotiate and your credentials must be sent using the Basic mechanism, for instance when using a PAT with on-premises Azure DevOps Server. Other valid values include negotiate, kerberos, ntlm, and digest, but these values are unlikely to be useful.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[此源的有效身份验证类型的逗号分隔列表。默认情况下，所有身份验证类型都是有效的。示例: basic,negotiate]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[此源的有效身份验证类型的列表(用逗号分隔)。如果服务器公布 NTLM 或 Negotiate，并且你的凭据必须使用基本机制发送(例如将 PAT 与本地 Azure DevOps Server 一起使用时)，请将此项设置为 basic。其他有效值包括 negotiate、kerberos、ntlm 和 digest，但这些值很可能没有用。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Comma-separated list of valid authentication types for this source. By default, all authentication types are valid. Example: basic,negotiate]]></Val>
@@ -1465,6 +1471,9 @@
       <Item ItemId=";SourcesCommandValidAuthenticationTypesDescription_Docs" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Comma-separated list of valid authentication types for this source. Set this to `basic` if the server advertises NTLM or Negotiate and your credentials must be sent using the Basic mechanism, for instance when using a PAT with on-premises Azure DevOps Server. Other valid values include `negotiate`, `kerberos`, `ntlm`, and `digest`, but these values are unlikely to be useful.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[此源的有效身份验证类型的列表(用逗号分隔)。如果服务器公布 NTLM 或 Negotiate，并且你的凭据必须使用基本机制发送(例如将 PAT 与本地 Azure DevOps Server 一起使用时)，请将此项设置为 "basic"。其他有效值包括 "negotiate"、"kerberos"、"ntlm" 和 "digest"，但这些值很可能没有用。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
