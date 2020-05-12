@@ -76,6 +76,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ClientCertificateDuplicateConfiguration" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[There are multiple client certificate configurations associated with the same package source(s): {0}]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";CredentialsItemMustHaveUsernamePassword" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Credentials item must have username and password.]]></Val>
@@ -145,6 +151,48 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Brak zapisywalnych plików konfiguracji.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_StoreCertCertificateNotFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Certificate for the package source '{0}' was not found in '{1}.{2}' storage by '{3}' criteria with '{4}' value.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nie znaleziono certyfikatu źródła pakietu „{0}” w magazynie „{1}.{2}” według kryteriów „{3}” z wartością „{4}”.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";FileCertItemPasswordAndClearTextPasswordAtSameTime" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Password and ClearTextPassword cannot be used at the same time.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nie można jednocześnie używać opcji Password i ClearTextPassword.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";FileCertItemPasswordCannotBeDecrypted" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Client certificate configuration password for the package source '{0}' cannot be decrypted]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nie można odszyfrować hasła konfiguracji certyfikatu klienta dla źródła pakietu „{0}”]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";FileCertItemPathFileNotExist" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A fileCert path specified a file that does not exist.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ścieżka elementu fileCert określa plik, który nie istnieje.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";FileCertItemPathFileNotSet" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A fileCert item path was not set.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
