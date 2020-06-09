@@ -337,7 +337,7 @@
       </Item>
       <Item ItemId=";Source_Description" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specifies the server URL]]></Val>
+          <Val><![CDATA[Package source (URL, UNC/folder path or package source name) to use. Defaults to DefaultPushSource if specified in NuGet.Config.]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
@@ -364,11 +364,11 @@
       </Item>
       <Item ItemId=";SymbolSource_Description" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specifies the symbol server URL. If not specified, nuget.smbsrc.net is used when pushing to nuget.org.]]></Val>
+          <Val><![CDATA[Symbol server URL to use.]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
-          <Cmt Name="LcxAdmin"><![CDATA[{Locked="URL", "nuget.smbsrc.net", "nuget.org"}]]></Cmt>
+          <Cmt Name="LcxAdmin"><![CDATA[{Locked="URL"}]]></Cmt>
         </Cmts>
       </Item>
       <Item ItemId=";Symbols_Description" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
@@ -404,11 +404,11 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";Comments" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[NuGet wrapper for dotnet.exe.]]></Val>
+        <Val><![CDATA[NuGet executable wrapper for the dotnet CLI nuget functionality.]]></Val>
       </Str>
       <Disp Icon="Str" />
       <Cmts>
-        <Cmt Name="LcxAdmin"><![CDATA[{Locked="NuGet", "dotnet.exe"}]]></Cmt>
+        <Cmt Name="LcxAdmin"><![CDATA[{Locked="NuGet"}]]></Cmt>
       </Cmts>
     </Item>
     <Item ItemId=";FileDescription" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
