@@ -13,6 +13,15 @@
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId=";AddClientCertCommandDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Adds a client certificate configuration that matches the given package source name.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[添加与给定包源名称匹配的客户端证书配置。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";AddPkg_All" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text" UsrLk="true">
           <Val><![CDATA[all]]></Val>
@@ -118,6 +127,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";AddSourceCommandDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Add a NuGet source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[添加 NuGet 源。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Add_Description" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Add a NuGet source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[添加 NuGet 源。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ApiKey_Description" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The API key for the server.]]></Val>
@@ -213,6 +240,42 @@
           <Val><![CDATA[Disable buffering when pushing to an HTTP(S) server to decrease memory usage.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[推送到 HTTP(S) 服务器时禁用缓存可减少内存使用。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";DisableSourceCommandDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Disable a NuGet source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[禁用 NuGet 源。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Disable_Description" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Disable a NuGet source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[禁用 NuGet 源。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";EnableSourceCommandDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enable a NuGet source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[启用 NuGet 源。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Enable_Description" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enable a NuGet source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[启用 NuGet 源。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -433,6 +496,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ListClientCertCommandDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Lists all the client certificates in the configuration.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[列出配置中的所有客户端证书。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ListPkg_AutoReferenceDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[(A) : Auto-referenced package.]]></Val>
@@ -462,9 +534,30 @@
       </Item>
       <Item ItemId=";ListPkg_DeprecatedPkgDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[(D) : The owner has unlisted this package. This could mean the package is deprecated or shouldn't be used anymore.]]></Val>
+          <Val><![CDATA[(D): Deprecated package(s). Use 'dotnet list package --deprecated' for more info.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[(D): 所有者已取消列出此包。这可能意味着该包已被弃用或不应再使用。]]></Val>
+            <Val><![CDATA[(D): 包已被弃用。使用 "dotnet list package --deprecated" 了解详细信息。]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[(D) : The owner has unlisted this package. This could mean the package is deprecated or shouldn't be used anymore.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_DeprecationAlternative" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Alternative]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[替代项]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_DeprecationReasons" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Reason(s)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[原因]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -541,11 +634,38 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ListPkg_InvalidOptionsOutdatedAndDeprecated" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Option '--outdated' and '--deprecated' cannot be combined.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[不可结合使用 "--outdated" 或 "--deprecated"。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ListPkg_Latest" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Latest]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[最新]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_NoDeprecatedPackagesForProject" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The given project `{0}` has no deprecated packages given the current sources.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[在给定当前源的情况下，给定项目“{0}”没有已弃用的包。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_NoDeprecationsForFramework" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No deprecated packages for this framework.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[未找到此框架已弃用的包。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -570,10 +690,13 @@
       </Item>
       <Item ItemId=";ListPkg_NoUpdatesForFramework" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[No updates available for this framework packages.]]></Val>
+          <Val><![CDATA[No package updates available for this framework.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[没有可用于此框架包的更新。]]></Val>
+            <Val><![CDATA[没有可用于此框架的包更新。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[No updates available for this framework packages.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -621,6 +744,15 @@
           <Val><![CDATA[Considers prerelease versions when looking for latest. Works only with `--outdated`.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[请在查找最新版本时考虑预发行版本。仅适用于 "--outdated"。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_ProjectDeprecationsHeaderLog" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Project `{0}` has the following deprecated packages]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[项目“{0}”具有以下弃用的包]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -706,6 +838,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ListSourceCommandDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Lists all configured NuGet sources.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[列出所有配置的 NuGet 源。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";List_Description" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[List configured NuGet sources.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[列出配置的 NuGet 源。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";LocalsCommand_ArgumentDescription" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Specifies the cache location(s) to list or clear.]D;]A;<all | http-cache | global-packages | temp>]]></Val>
@@ -738,12 +888,12 @@
       </Item>
       <Item ItemId=";LocalsCommand_Help" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;有关详细信息，请访问 http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;有关详细信息，请访问 https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -759,36 +909,36 @@
       </Item>
       <Item ItemId=";LocalsCommand_MultipleOperations" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Both operations, --list and --clear, are not supported in the same command. Please specify only one operation.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Val><![CDATA[Both operations, --list and --clear, are not supported in the same command. Please specify only one operation.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[同一命令中不支持同时执行 --list 和 --clear 操作。请只指定一个操作。]D;]A;用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;有关详细信息，请访问 http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[同一命令中不支持同时执行 --list 和 --clear 操作。请只指定一个操作。]D;]A;用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;有关详细信息，请访问 https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Both operations, --list and --clear, are not supported in the same command. Please specify only one operation.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[Both operations, --list and --clear, are not supported in the same command. Please specify only one operation.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LocalsCommand_NoArguments" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[No Cache Type was specified.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Val><![CDATA[No Cache Type was specified.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[未指定缓存类型。]D;]A;用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;有关详细信息，请访问 http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[未指定缓存类型。]D;]A;用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;有关详细信息，请访问 https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[No Cache Type was specified.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[No Cache Type was specified.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";LocalsCommand_NoOperation" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Please specify an operation i.e. --list or --clear.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Val><![CDATA[Please specify an operation i.e. --list or --clear.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[请指定一个操作，即 --list 或 --clear。]D;]A;用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;有关详细信息，请访问 http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[请指定一个操作，即 --list 或 --clear。]D;]A;用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;有关详细信息，请访问 https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Please specify an operation i.e. --list or --clear.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[Please specify an operation i.e. --list or --clear.]D;]A;usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -924,10 +1074,13 @@
       </Item>
       <Item ItemId=";NuGetDocs" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[http://docs.nuget.org/]]></Val>
+          <Val><![CDATA[https://docs.nuget.org/]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[http://docs.nuget.org/]]></Val>
+            <Val><![CDATA[https://docs.nuget.org/]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[http://docs.nuget.org/]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -936,6 +1089,105 @@
           <Val><![CDATA[Allow the command to block and require manual action for operations like authentication.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[对于身份验证等操作，允许命令阻止并要求手动操作。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Option_ConfigFile" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The NuGet configuration file. If specified, only the settings from this file will be used. If not specified, the hierarchy of configuration files from the current directory will be used. For more information, see https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[NuGet 配置文件。如果指定，将仅使用此文件中的设置。如果未指定，则将使用当前目录中的配置文件的层次结构。有关详细信息，请参阅 https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Option_ConfigFile_Docs" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The NuGet configuration file. If specified, only the settings from this file will be used. If not specified, the hierarchy of configuration files from the current directory will be used. For more information, see [Common NuGet Configurations]5D;(https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[NuGet 配置文件。如果指定，将仅使用此文件中的设置。如果未指定，则将使用当前目录中的配置文件的层次结构。有关详细信息，请参阅[常见 NuGet 配置]5D;(https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Option_FindBy" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search method to find certificate in certificate store (see docs).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[用于在证书存储中查找证书的搜索方法(请参阅文档)。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Option_FindValue" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the certificate store for the supplied value. Used with FindValue (see docs).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[在证书存储中搜索提供的值。与 FindValue 结合使用(请参阅文档)。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Option_Force" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Skip certificate validation.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[跳过证书验证。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Option_PackageSource" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package source name.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[包源名称。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Option_Password" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Password for the certificate, if needed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[证书密码(如需要)。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Option_Path" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Path to certificate file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[证书文件的路径。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Option_StoreLocation" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Certificate store location (see docs).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[证书存储位置(请参阅文档)。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Option_StoreName" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Certificate store name (see docs).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[证书存储名称(请参阅文档)。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Option_StorePasswordInClearText" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enables storing password for the certificate by disabling password encryption.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[禁用密码加密，以支持存储证书密码。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -994,6 +1246,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";PushCommandSkipDuplicateDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[If a package and version already exists, skip it and continue with the next package in the push, if any.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[如果包和版本已存在，则跳过它并继续推送中的下一个包(若有)。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Push_Description" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Pushes a package to the server and publishes it.]]></Val>
@@ -1032,10 +1293,13 @@
       </Item>
       <Item ItemId=";Push_Timeout_Description" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specifies the timeout for pushing to a server in seconds. Defaults to 300 seconds (5 minutes).]]></Val>
+          <Val><![CDATA[Timeout for pushing to a server in seconds. Defaults to 300 seconds (5 minutes).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定推送到服务器的超时值(以秒为单位)。默认为 300 秒(5 分钟)。]]></Val>
+            <Val><![CDATA[推送到服务器的超时值(以秒为单位)。默认为 300 秒(5 分钟)。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Specifies the timeout for pushing to a server in seconds. Defaults to 300 seconds (5 minutes).]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1044,6 +1308,15 @@
           <Val><![CDATA[Pushing took too long. You can change the default timeout of 300 seconds by using the --timeout <seconds> option with the push command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[推送操作耗时太长。可使用 --timeout <seconds> 选项和推送命令更改 300 秒的超时值。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";RemoveClientCertCommandDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Removes the client certificate configuration that matches the given package source name.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[删除与给定包源名称匹配的客户端证书配置。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1071,6 +1344,24 @@
           <Val><![CDATA[Path to the project file.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[项目文件的路径。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";RemoveSourceCommandDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Remove a NuGet source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[移除 NuGet 源。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Remove_Description" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Remove a NuGet source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[移除 NuGet 源。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1179,9 +1470,111 @@
       </Item>
       <Item ItemId=";Source_Description" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specifies the server URL]]></Val>
+          <Val><![CDATA[Package source (URL, UNC/folder path or package source name) to use. Defaults to DefaultPushSource if specified in NuGet.Config.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定服务器 URL]]></Val>
+            <Val><![CDATA[要使用的包源(URL、UNC/文件夹路径或包源名称)。如果在 NuGet.Config 中指定，则默认为 DefaultPushSource。]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Specifies the server URL]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SourcesCommandDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Provides the ability to manage list of sources located in NuGet.config files.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[提供管理 NuGet.config 文件中源列表的功能。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SourcesCommandFormatDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The format of the list command output: `Detailed` (the default) and `Short`.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[list 命令输出的格式:“详细”(默认)和“简短”。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SourcesCommandNameDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name of the source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[源的名称。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SourcesCommandPasswordDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Password to be used when connecting to an authenticated source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[连接到已验证源时要使用的密码。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SourcesCommandSourceDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Path to the package source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[包源的路径。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SourcesCommandStorePasswordInClearTextDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enables storing portable package source credentials by disabling password encryption.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[通过禁用密码加密来启用存储可移植包源凭据。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SourcesCommandUsageSummary" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[<List|Add|Remove|Enable|Disable|Update> -Name [name]5D; -Source [source]5D;]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[<List|Add|Remove|Enable|Disable|Update> -Name [名称]5D; -Source [源]5D;]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SourcesCommandUsernameDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Username to be used when connecting to an authenticated source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[连接到已验证源时要使用的用户名。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SourcesCommandValidAuthenticationTypesDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Comma-separated list of valid authentication types for this source. Set this to basic if the server advertises NTLM or Negotiate and your credentials must be sent using the Basic mechanism, for instance when using a PAT with on-premises Azure DevOps Server. Other valid values include negotiate, kerberos, ntlm, and digest, but these values are unlikely to be useful.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[此源的有效身份验证类型的列表(用逗号分隔)。如果服务器公布 NTLM 或 Negotiate，并且你的凭据必须使用基本机制发送(例如将 PAT 与本地 Azure DevOps Server 一起使用时)，请将此项设置为 basic。其他有效值包括 negotiate、kerberos、ntlm 和 digest，但这些值很可能没有用。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SourcesCommandValidAuthenticationTypesDescription_Docs" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Comma-separated list of valid authentication types for this source. Set this to `basic` if the server advertises NTLM or Negotiate and your credentials must be sent using the Basic mechanism, for instance when using a PAT with on-premises Azure DevOps Server. Other valid values include `negotiate`, `kerberos`, `ntlm`, and `digest`, but these values are unlikely to be useful.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[此源的有效身份验证类型的列表(用逗号分隔)。如果服务器公布 NTLM 或 Negotiate，并且你的凭据必须使用基本机制发送(例如将 PAT 与本地 Azure DevOps Server 一起使用时)，请将此项设置为 "basic"。其他有效值包括 "negotiate"、"kerberos"、"ntlm" 和 "digest"，但这些值很可能没有用。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Sources_Redirect" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The proper command is '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[正确的命令是“{0}”。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1215,10 +1608,13 @@
       </Item>
       <Item ItemId=";SymbolSource_Description" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specifies the symbol server URL. If not specified, nuget.smbsrc.net is used when pushing to nuget.org.]]></Val>
+          <Val><![CDATA[Symbol server URL to use.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定符号服务器 URL。如果未指定，发布到 nuget.org 时将使用 nuget.smbsrc.net。]]></Val>
+            <Val><![CDATA[要使用的符号服务器 URL。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Specifies the symbol server URL. If not specified, nuget.smbsrc.net is used when pushing to nuget.org.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1236,6 +1632,33 @@
           <Val><![CDATA[Determines if the output files of the project should be in the tool folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[确定项目的输出文件是否应位于工具文件夹中。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UpdateClientCertCommandDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Updates the client certificate configuration that matches the given package source name.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[更新与给定包源名称匹配的客户端证书配置。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UpdateSourceCommandDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update a NuGet source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[更新 NuGet 源。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Update_Description" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update a NuGet source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[更新 NuGet 源。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1264,12 +1687,12 @@
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
     <Item ItemId=";Comments" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[NuGet wrapper for dotnet.exe.]]></Val>
+        <Val><![CDATA[NuGet executable wrapper for the dotnet CLI nuget functionality.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[dotnet.exe 的 NuGet 包装器。]]></Val>
+          <Val><![CDATA[dotnet CLI nuget 功能的 NuGet 可执行文件包装器。]]></Val>
         </Tgt>
         <Prev Cat="Text">
-          <Val><![CDATA[NuGet wrapper for dotnet.exe]]></Val>
+          <Val><![CDATA[NuGet wrapper for dotnet.exe.]]></Val>
         </Prev>
       </Str>
       <Disp Icon="Str" />
