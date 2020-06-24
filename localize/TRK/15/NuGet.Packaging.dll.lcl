@@ -649,6 +649,15 @@
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId=";AnAbsoluteUriIsRequired" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[An absolute URI is required.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Mutlak URI gereklidir.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ArgumentCannotBeNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The argument cannot be null or empty.]]></Val>
@@ -1179,6 +1188,15 @@
           <Val><![CDATA[Unable to find fallback package folder '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Geri dönüş paket klasörü '{0}' bulunamadı.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";HttpOrHttpsIsRequired" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[HTTP or HTTPS is required.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[HTTP veya HTTPS gereklidir.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2229,6 +2247,24 @@
           <Val><![CDATA[Timestamp service's response does not meet the NuGet package signature specification: '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Zaman damgası hizmetinin yanıtı NuGet paket imzası '{0}' belirtimine uygun değil.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TimestampServiceRespondedError" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The timestamp service responded with HTTP status code '{0}' ('{1}').]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Zaman damgası hizmeti HTTP durum kodu '{0}' ('{1}') ile yanıt verdi.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TimestampServiceRespondedInvalidFormat" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The reply from the timestamp server was invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Zaman damgası sunucusu yanıtı geçersizdi.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
