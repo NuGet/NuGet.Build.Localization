@@ -96,10 +96,13 @@
       </Item>
       <Item ItemId=";UnauthorizedLockFail" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to obtain lock file access on '{0}' for operations on '{1}'. This may mean that a different user or administator is holding this lock and that this process does not have permission to access it. If no other process is currently performing an operation on this file it may mean that an earlier NuGet process crashed and left an inaccessible lock file, in this case removing the file '{0}' will allow NuGet to continue.]]></Val>
+          <Val><![CDATA[Unable to obtain lock file access on '{0}' for operations on '{1}'. This may mean that a different user or administrator is holding this lock and that this process does not have permission to access it. If no other process is currently performing an operation on this file it may mean that an earlier NuGet process crashed and left an inaccessible lock file, in this case removing the file '{0}' will allow NuGet to continue.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{1}' での操作に対して '{0}' でロック ファイル アクセスを取得できません。これは、別のユーザーまたは管理者がこのロックを保持していること、およびこのプロセスにこのロックへのアクセス許可がないことを示している可能性があります。現在、他のプロセスがこのファイルで操作を実行していない場合は、以前の NuGet プロセスがクラッシュして、アクセスできないロック ファイルが残されたことを示している可能性があります。この場合、ファイル '{0}' を削除すると、NuGet を続行できます。]]></Val>
+            <Val><![CDATA['{1}' に対する操作に '{0}' のロック ファイル アクセスを取得することができません。これは、別のユーザーまたは管理者がこのロックを保持しており、このプロセスにはアクセス許可がないこと意味している場合があります。他のプロセスでこのファイルに対する操作が実行されていない場合は、以前の NuGet プロセスがクラッシュし、アクセスできないロック ファイルが残っている可能性があります。この場合、ファイル '{0}' を削除すると、NuGet の続行が許可されます。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Unable to obtain lock file access on '{0}' for operations on '{1}'. This may mean that a different user or administator is holding this lock and that this process does not have permission to access it. If no other process is currently performing an operation on this file it may mean that an earlier NuGet process crashed and left an inaccessible lock file, in this case removing the file '{0}' will allow NuGet to continue.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
