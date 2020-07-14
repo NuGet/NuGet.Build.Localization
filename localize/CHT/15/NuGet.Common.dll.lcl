@@ -96,10 +96,13 @@
       </Item>
       <Item ItemId=";UnauthorizedLockFail" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to obtain lock file access on '{0}' for operations on '{1}'. This may mean that a different user or administator is holding this lock and that this process does not have permission to access it. If no other process is currently performing an operation on this file it may mean that an earlier NuGet process crashed and left an inaccessible lock file, in this case removing the file '{0}' will allow NuGet to continue.]]></Val>
+          <Val><![CDATA[Unable to obtain lock file access on '{0}' for operations on '{1}'. This may mean that a different user or administrator is holding this lock and that this process does not have permission to access it. If no other process is currently performing an operation on this file it may mean that an earlier NuGet process crashed and left an inaccessible lock file, in this case removing the file '{0}' will allow NuGet to continue.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[無法為 '{1}' 上的作業取得 '{0}' 的鎖定檔案存取權。這可能表示有其他使用者或系統管理員持有此鎖定，而此處理序沒有權限加以存取。如果目前沒有其他處理序在此檔案上執行作業，則可能表示稍早有 NuGet 處理序損毀，讓鎖定檔案留在無法存取的狀態，在這種情況下，移除檔案 '{0}' 可讓 NuGet 繼續執行。]]></Val>
+            <Val><![CDATA[無法為 '{1}' 上的作業取得 '{0}' 的鎖定檔案存取權。這可能表示有其他使用者或系統管理員正持有此鎖定，導致此處理序沒有權限加以存取。如果目前沒有其他處理序在此檔案上執行作業，則可能表示稍早有 NuGet 處理序損毀，讓鎖定檔案停留在無法存取的狀態，在這種情況下，移除檔案 '{0}' 可讓 NuGet 繼續執行。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Unable to obtain lock file access on '{0}' for operations on '{1}'. This may mean that a different user or administator is holding this lock and that this process does not have permission to access it. If no other process is currently performing an operation on this file it may mean that an earlier NuGet process crashed and left an inaccessible lock file, in this case removing the file '{0}' will allow NuGet to continue.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
