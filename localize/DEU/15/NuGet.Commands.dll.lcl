@@ -382,9 +382,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[PackageTargetFallback und AssetTargetFallback können nicht zusammen verwendet werden. Entfernen Sie Verweise auf "PackageTargetFallback(deprecated)" aus der Projektumgebung.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[PackageTargetFallback is deprecated. Replace PackageTargetFallback references with AssetTargetFallback in the project environment.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -448,9 +445,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ungültige Wiederherstellungseingabe. Die Eigenschaft "RestorePackagesWithLockFile" ist auf FALSE festgelegt, aber bei "{0}" liegt eine Paketsperrdatei vor.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Invalid restore input where RestorePackagesWithLockFile property is set to false and also exist a packages lock file at {0}.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -607,9 +601,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Fehler bei der Hashüberprüfung des Paketinhalts für "{0}". Das Paket unterscheidet sich von der letzten Wiederherstellung.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package {0} sha512 validation failed. The package is different than the last restore.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -682,9 +673,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die Paketsperrdatei stimmt nicht mit den Projektabhängigkeiten überein, daher kann die Wiederherstellung nicht im gesperrten Modus ausgeführt werden. Deaktivieren Sie die MSBuild-Eigenschaft "RestoreLockedMode", oder übergeben Sie eine explizite Option "--force-evaluate", um die Sperrdatei zu aktualisieren.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --force-evaluate flag to run restore to update the lock file.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1025,7 +1013,7 @@
             <Val><![CDATA[Syntax: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;Weitere Informationen finden Sie unter https://docs.nuget.org/docs/reference/command-line-reference.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1138,6 +1126,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Zyklus erkannt.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Cycle detected:]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1156,6 +1147,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ein Downgrade des Pakets "{0}" von {1} auf {2} wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Detected package downgrade: {0} from {1} to {2}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1229,7 +1223,7 @@
             <Val><![CDATA[Das Paket "{0}" wurde nicht mit dem Projektzielframework "{2}", sondern mit "{1}" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Package '{0}' was restored using '{1}' instead of the project target framework '{2}'. This may cause compatibility problems.]]></Val>
+            <Val><![CDATA[Package '{0}' was restored using '{1}' instead the project target framework '{2}'. This may cause compatibility problems.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1492,6 +1486,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die einen Konflikt verursachenden Anforderungen für "{0}" können nicht erfüllt werden: {1} Framework: {2}]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Unable to satisfy conflicting requests for '{0}': {1}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1508,7 +1505,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Restored {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA["{0}" wiederhergestellt (in {1}).]]></Val>
+            <Val><![CDATA["{0}" wiederhergestellt (in "{1}").]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore completed in {0} for {1}.]]></Val>
@@ -1520,7 +1517,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Restored {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA["{0}" wiederhergestellt (in {1}).]]></Val>
+            <Val><![CDATA["{0}" wiederhergestellt (in "{1}").]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore completed in {0}.]]></Val>
@@ -1532,7 +1529,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Failed to restore {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Fehler beim Wiederherstellen von "{0}" (in {1}).]]></Val>
+            <Val><![CDATA[Fehler beim Wiederherstellen von "{0}" (in "{1}").]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore failed in {0} for {1}.]]></Val>
@@ -1544,7 +1541,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Failed to restore {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Fehler beim Wiederherstellen von "{0}" (in {1}).]]></Val>
+            <Val><![CDATA[Fehler beim Wiederherstellen von "{0}" (in "{1}").]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore failed in {0}.]]></Val>
@@ -1730,7 +1727,7 @@
             <Val><![CDATA[Versionskonflikt entdeckt für "{0}". Installieren bzw. referenzieren Sie "{1}" direkt in Projekt "{2}", um dieses Problem zu beheben.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Version conflict detected for {0}. Reference the package directly from the project to resolve this issue.]]></Val>
+            <Val><![CDATA[Version conflict detected for {0}.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -2485,9 +2482,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Fehler beim Überprüfen der Paketsignatur.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Could not verify package(s) signature.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2515,9 +2509,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Das Paket "{0}" wurde erfolgreich überprüft.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Successfully verified package(s).]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2685,7 +2676,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
+      <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -2700,7 +2691,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.Commands.dll]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -2718,7 +2709,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.Commands.dll]]></Val>
       </Str>
       <Disp Icon="Str" />

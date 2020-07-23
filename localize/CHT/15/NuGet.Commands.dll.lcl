@@ -445,9 +445,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[還原輸入無效，其中 RestorePackagesWithLockFile 屬性設定為 false，但 {0} 上有套件鎖定檔案。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Invalid restore input where RestorePackagesWithLockFile property is set to false and also exist a packages lock file at {0}.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -604,9 +601,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[{0} 的套件內容雜湊驗證失敗。此套件與上次還原的套件不同。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package {0} content hash validation failed. The package is different than the last restore.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -679,9 +673,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[套件鎖定檔案與專案相依性不一致，因此無法在鎖定模式中執行還原。請停用 RestoreLockedMode MSBuild 屬性或傳遞明確的 --force-evaluate 選項，以執行還原來更新鎖定檔案。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --force-evaluate flag to run restore to update the lock file.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1019,10 +1010,10 @@
         <Str Cat="Text">
           <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[使用方式: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;如需詳細資訊，請瀏覽 https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[用法: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;如需詳細資訊，請前往 https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1135,6 +1126,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[偵測到循環。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Cycle detected:]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1153,6 +1147,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[偵測到套件降級: {0} 從 {1} 降到 {2}。請直接從專案參考套件，以選取不同的版本。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Detected package downgrade: {0} from {1} to {2}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1226,7 +1223,7 @@
             <Val><![CDATA[已使用 '{1}' 而非專案目標架構 '{2}' 還原了套件 '{0}'。此套件與您的專案並非完全相容。]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Package '{0}' was restored using '{1}' instead of the project target framework '{2}'. This may cause compatibility problems.]]></Val>
+            <Val><![CDATA[Package '{0}' was restored using '{1}' instead the project target framework '{2}'. This may cause compatibility problems.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1489,6 +1486,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[無法滿足 '{0}' 的衝突要求: {1} 架構: {2}]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Unable to satisfy conflicting requests for '{0}': {1}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1727,7 +1727,7 @@
             <Val><![CDATA[偵測到 {0} 有版本衝突。請將 {1} 直接安裝/參考到專案 {2} 來解決此問題。]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Version conflict detected for {0}. Reference the package directly from the project to resolve this issue.]]></Val>
+            <Val><![CDATA[Version conflict detected for {0}.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -2129,7 +2129,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Disabled]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[停用]]></Val>
+            <Val><![CDATA[已停用]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2480,11 +2480,8 @@
         <Str Cat="Text">
           <Val><![CDATA[Package signature validation failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[套件簽章驗證失敗。]]></Val>
+            <Val><![CDATA[套件特徵標記驗證失敗。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Could not verify package(s) signature.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2512,9 +2509,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[已成功驗證套件 '{0}'。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Successfully verified package(s).]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2682,7 +2676,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
+      <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -2697,7 +2691,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.Commands.dll]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -2715,7 +2709,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.Commands.dll]]></Val>
       </Str>
       <Disp Icon="Str" />

@@ -17,7 +17,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Install failed. Rolling back...]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[安裝失敗。復原中...]]></Val>
+            <Val><![CDATA[安裝失敗。正在復原...]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -53,7 +53,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package '{0}' already exists at feed '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[套件 '{0}' 已存在於摘要 '{1}'。]]></Val>
+            <Val><![CDATA[摘要 '{1}' 中已有套件 '{0}'。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -62,7 +62,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Successfully added package '{0}' to feed '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[已成功將套件 '{0}' 新增到摘要 '{1}'.]]></Val>
+            <Val><![CDATA[已成功將套件 '{0}' 新增到摘要 '{1}'。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -71,7 +71,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Argument cannot be null or empty.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[引數不能為 Null 或空白。]]></Val>
+            <Val><![CDATA[引數不得為 Null 或空白。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -80,7 +80,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Argument can not be null or empty.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[引數不能為 Null 或空白。]]></Val>
+            <Val><![CDATA[引數不得為 Null 或空白。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -98,7 +98,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Delete canceled]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[已取消刪除]]></Val>
+            <Val><![CDATA[刪除已取消]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -107,7 +107,7 @@
         <Str Cat="Text">
           <Val><![CDATA[{0} {1} will be deleted from the {2}. Would you like to continue?]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[將會從 {2} 刪除 {0} {1}。要繼續嗎?]]></Val>
+            <Val><![CDATA[將從 {2} 刪除 {0} {1}。要繼續嗎?]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -116,7 +116,7 @@
         <Str Cat="Text">
           <Val><![CDATA[{0} {1} was deleted successfully.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[已成功刪除 {0} {1}。]]></Val>
+            <Val><![CDATA[{0} {1} 刪除成功。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -413,7 +413,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Retrying '{0}' for source '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[正在對來源 '{1}' 重試 '{0}'。]]></Val>
+            <Val><![CDATA[正在重試來源 '{1}' 的 '{0}'。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -422,7 +422,7 @@
         <Str Cat="Text">
           <Val><![CDATA[An error was encountered when fetching '{0} {1}'. The request will now be retried.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[擷取 '{0} {1}' 時遇到錯誤。現在會重試該要求。]]></Val>
+            <Val><![CDATA[擷取 '{0} {1}' 時發生錯誤。將隨即重試此要求。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -440,7 +440,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Retrying service index request for source '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[正在對來源 '{0}' 重試服務索引要求。]]></Val>
+            <Val><![CDATA[正在重試來源 '{0}' 的服務索引要求。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -539,7 +539,7 @@
         <Str Cat="Text">
           <Val><![CDATA[ERROR: This version of nuget.exe does not support updating packages to package source '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[錯誤: 此版本的 nuget.exe 不支援將套件更新為套件來源 '{0}'。]]></Val>
+            <Val><![CDATA[錯誤: 此版 nuget.exe 無法將套件更新為套件來源 '{0}'。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -845,7 +845,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The 'versions' property at '{0}' must be an array.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[位於 '{0}' 的 'versions' 屬性必須為陣列。]]></Val>
+            <Val><![CDATA[位於 '{0}' 的 'versions' 屬性必須是陣列。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -854,7 +854,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Service index document is missing the 'resources' property.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[服務索引文件遺漏 'resources' 屬性。]]></Val>
+            <Val><![CDATA[服務索引文件缺少 'resources' 屬性。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -953,7 +953,7 @@
         <Str Cat="Text">
           <Val><![CDATA['{0}' is a duplicate url which has already been downloaded and will lead to a cyclic dependency. Please correct from server.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' 是已經下載的重複 url，會造成循環相依性。請從伺服器修正此情形。]]></Val>
+            <Val><![CDATA['{0}' 是重複的 URL，其先前已經下載過。這會造成循環相依性。請從伺服器更正此問題。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1052,7 +1052,7 @@
         <Str Cat="Text">
           <Val><![CDATA[File does not exist ({0}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[檔案不存在 ({0})。]]></Val>
+            <Val><![CDATA[沒有此檔案 ({0})。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1110,7 +1110,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
+      <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -1125,7 +1125,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.Protocol.dll]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -1143,7 +1143,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.Protocol.dll]]></Val>
       </Str>
       <Disp Icon="Str" />

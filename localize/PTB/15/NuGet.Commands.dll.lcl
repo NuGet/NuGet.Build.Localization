@@ -116,7 +116,7 @@
         <Str Cat="Text">
           <Val><![CDATA[{0}Certificates status: {1}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0}Status de certificados: {1}]]></Val>
+            <Val><![CDATA[{0}Status dos certificados: {1}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -445,9 +445,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Restauração inválida de entrada em que a propriedade RestorePackagesWithLockFile é definida como false, mas existe um arquivo de bloqueio de pacotes em {0}.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Invalid restore input where RestorePackagesWithLockFile property is set to false and also exist a packages lock file at {0}.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -491,7 +488,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature did not match any of the allowed certificate fingerprints.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A assinatura de pacote não coincidiu com nenhuma das impressões digitais de certificado permitidas.]]></Val>
+            <Val><![CDATA[A assinatura do pacote não coincidiu com nenhuma das impressões digitais de certificado permitidas.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -604,9 +601,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[A validação do hash de conteúdo do pacote falhou para {0}. O pacote é diferente da última restauração.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package {0} content hash validation failed. The package is different than the last restore.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -679,9 +673,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[O arquivo de bloqueio de pacotes é inconsistente com as dependências do projeto, então a restauração não pode ser executada no modo de bloqueio. Desabilite a propriedade RestoreLockedMode do MSBuild ou passe uma opção --force-evaluate explícita para executar a restauração para atualizar o arquivo de bloqueio.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --force-evaluate flag to run restore to update the lock file.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1022,7 +1013,7 @@
             <Val><![CDATA[uso: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;Para obter mais informações, visite https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp | plugins-cache> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[usage: NuGet locals <all | http-cache | global-packages | temp> [--clear | -c | --list | -l]5D;]D;]A;For more information, visit http://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1135,6 +1126,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ciclo detectado.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Cycle detected:]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1153,6 +1147,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Downgrade de pacote detectado: {0} de {1} para {2}. Referencie o pacote diretamente do projeto para selecionar uma versão diferente.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Detected package downgrade: {0} from {1} to {2}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1226,7 +1223,7 @@
             <Val><![CDATA[O pacote '{0}' foi restaurado usando '{1}' em vez da estrutura de destino do projeto '{2}'. Esse pacote pode não ser totalmente compatível com o seu projeto.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Package '{0}' was restored using '{1}' instead of the project target framework '{2}'. This may cause compatibility problems.]]></Val>
+            <Val><![CDATA[Package '{0}' was restored using '{1}' instead the project target framework '{2}'. This may cause compatibility problems.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1489,6 +1486,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Não foi possível satisfazer às solicitações conflitantes de '{0}': {1} Estrutura: {2}]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Unable to satisfy conflicting requests for '{0}': {1}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1727,7 +1727,7 @@
             <Val><![CDATA[Conflito de versão detectado para {0}. Instale/referencie {1} diretamente no projeto {2} para resolver esse problema.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Version conflict detected for {0}. Reference the package directly from the project to resolve this issue.]]></Val>
+            <Val><![CDATA[Version conflict detected for {0}.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -2480,11 +2480,8 @@
         <Str Cat="Text">
           <Val><![CDATA[Package signature validation failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Falha na validação da assinatura de pacote.]]></Val>
+            <Val><![CDATA[Falha na validação da assinatura do pacote.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Could not verify package(s) signature.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2512,9 +2509,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[O pacote '{0}' foi verificado com êxito.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Successfully verified package(s).]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2682,7 +2676,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
+      <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -2697,7 +2691,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.Commands.dll]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -2715,7 +2709,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.Commands.dll]]></Val>
       </Str>
       <Disp Icon="Str" />
