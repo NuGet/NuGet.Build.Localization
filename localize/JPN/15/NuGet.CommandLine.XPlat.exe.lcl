@@ -661,15 +661,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";ListPkg_InvalidOptionsOutdatedAndDeprecated" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";ListPkg_InvalidOptions" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Option '--outdated' and '--deprecated' cannot be combined.]]></Val>
+          <Val><![CDATA[Option '{0}' and '{1}' cannot be combined.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[オプション '--outdated' と '--deprecated' を組み合わせることはできません。]]></Val>
+            <Val><![CDATA[オプション '{0}' と '{1}' を組み合わせることはできません。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Invalid command. Combining the '--outdated' and '--deprecated' options is not supported.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -742,6 +739,21 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ListPkg_NoVulnerabilitiesForFramework" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No vulnerable packages for this framework.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[このフレームワークに脆弱なパッケージはありません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_NoVulnerablePackagesForProject" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The given project `{0}` has no vulnerable packages given the current sources.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ListPkg_NotFoundAtSources" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Not found at the sources]]></Val>
@@ -756,6 +768,15 @@
           <Val><![CDATA[Displays only the packages that need updates with the latest version from the sources.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[ソースからの最新バージョンで更新する必要があるパッケージのみが表示されます。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_OutdatedPkgDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[(O): Outdated package(s). Use 'dotnet list package --outdated' for more info.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[(O): 期限切れのパッケージ。詳細については、'dotnet list package --outdated' を使用してください。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -801,6 +822,15 @@
           <Val><![CDATA[Project `{0}` has the following updates to its packages]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[プロジェクト '{0}' のパッケージに次の更新があります]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_ProjectVulnerabilitiesHeaderLog" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Project `{0}` has the following vulnerable packages]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プロジェクト '{0}' には次の脆弱なパッケージがあります]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -864,6 +894,48 @@
           <Val><![CDATA[Transitive Package]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[推移的なパッケージ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_VulnerabilityAdvisoryUrl" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Advisory URL]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_VulnerabilitySeverity" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Severity]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[重要度]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_VulnerableDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Displays only the packages flagged as vulnerable.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[脆弱性があるとしてフラグが付いているパッケージのみを表示します。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_VulnerableIgnoredOptions" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The command option(s) '--include-prerelease', '--highest-minor', and '--highest-patch' are ignored by this command.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[このコマンドでは、コマンド オプション '--include-prerelease'、'--highest-minor'、'--highest-patch' は無視されます。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ListPkg_VulnerablePkgDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[(V): Vulnerable package(s). Use 'dotnet list package --vulnerable' for more info.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[(V): 脆弱なパッケージ。詳細については、'dotnet list package --vulnerable' をご使用ください。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
