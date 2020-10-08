@@ -94,9 +94,6 @@
       <Item ItemId=";AddPkg_PackagePrerelease" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Allows prerelease packages to be installed.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Consente l'installazione di pacchetti non definitivi.]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -364,9 +361,6 @@
       <Item ItemId=";Error_NoVersionsAvailable" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[There are no versions available for the package '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Non sono disponibili versioni per il pacchetto '{0}'.]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -400,9 +394,6 @@
       <Item ItemId=";Error_PrereleaseWhenVersionSpecified" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The --prerelease and --version options are not supported in the same command.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le opzioni --prerelease e --version non sono supportate nello stesso comando.]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -661,11 +652,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";ListPkg_InvalidOptions" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";ListPkg_InvalidOptionsOutdatedAndDeprecated" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Option '{0}' and '{1}' cannot be combined.]]></Val>
+          <Val><![CDATA[Option '--outdated' and '--deprecated' cannot be combined.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Non è possibile combinare l'opzione '{0}' e '{1}'.]]></Val>
+            <Val><![CDATA[Non è possibile combinare le opzioni '--outdated' e '--deprecated'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -733,27 +724,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Considerate le origini correnti non sono disponibili aggiornamenti per il progetto specificato `{0}`.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The given project `{0}` have no updates given the current sources.]]></Val>
-          </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ListPkg_NoVulnerabilitiesForFramework" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[No vulnerable packages for this framework.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Non esistono pacchetti vulnerabili per questo framework.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ListPkg_NoVulnerablePackagesForProject" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The given project `{0}` has no vulnerable packages given the current sources.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Considerate le origini correnti, il progetto specificato `{0}` non contiene pacchetti vulnerabili.]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -771,15 +741,6 @@
           <Val><![CDATA[Displays only the packages that need updates with the latest version from the sources.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Visualizza solo i pacchetti che richiedono aggiornamenti con l'ultima versione delle origini.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ListPkg_OutdatedPkgDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[(O): Outdated package(s). Use 'dotnet list package --outdated' for more info.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[(O): pacchetto/i non aggiornato/i. Per altre informazioni, usare 'dotnet list package --outdated'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -825,15 +786,6 @@
           <Val><![CDATA[Project `{0}` has the following updates to its packages]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Il progetto `{0} ` contiene gli aggiornamenti seguenti ai relativi pacchetti]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ListPkg_ProjectVulnerabilitiesHeaderLog" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Project `{0}` has the following vulnerable packages]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Il progetto `{0}` contiene i pacchetti vulnerabili seguenti]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -897,51 +849,6 @@
           <Val><![CDATA[Transitive Package]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Pacchetto transitivo]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ListPkg_VulnerabilityAdvisoryUrl" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Advisory URL]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[URL di avviso]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ListPkg_VulnerabilitySeverity" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Severity]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Gravità]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ListPkg_VulnerableDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Displays only the packages flagged as vulnerable.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Visualizza solo i pacchetti contrassegnati come vulnerabili.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ListPkg_VulnerableIgnoredOptions" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The command option(s) '--include-prerelease', '--highest-minor', and '--highest-patch' are ignored by this command.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le opzioni di comando '--include-prerelease', '--highest-minor' e '--highest-patch' vengono ignorate da questo comando.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ListPkg_VulnerablePkgDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[(V): Vulnerable package(s). Use 'dotnet list package --vulnerable' for more info.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[(V): pacchetto/i vulnerabile/i. Per altre informazioni, usare 'dotnet list package --vulnerable'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1156,9 +1063,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Non accoda "api/v2/package" all'URL di origine.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[--no-service-endpoint does not append "api/v2/packages" to the source URL.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1207,6 +1111,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[File di configurazione NuGet. Se è specificato, verranno usate solo le impostazioni di questo file. Se non è specificato, verrà usata la gerarchia dei file di configurazione della directory corrente. Per altre informazioni, vedere https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The NuGet configuration file. If specified, only the settings from this file will be used. If not specified, the hierarchy of configuration files from the current directory will be used. To learn more about NuGet configuration go to https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1357,9 +1264,6 @@
       <Item ItemId=";PrereleaseVersionsAvailable" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[There are no stable versions available, {0} is the best available. Consider adding the --prerelease option]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Non sono disponibili versioni stabili e {0} è la migliore versione disponibile. Provare ad aggiungere l'opzione --prerelease]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1612,6 +1516,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Formato dell'output del comando list: `Detailed` (impostazione predefinita) e `Short`.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Applies to the list action. Accepts two values: Detailed (the default) and Short.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1639,6 +1546,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Percorso dell'origine del pacchetto.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Path to the package(s) source.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1675,6 +1585,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Elenco delimitato da virgole dei tipi di autenticazione validi per questa origine. Impostare su basic se il server annuncia NTLM o Negotiate. Le credenziali devono essere inviate tramite il meccanismo Basic, ad esempio quando si usa un token di accesso personale con l'istanza locale di Azure DevOps Server. Altri valori validi includono negotiate, kerberos, ntlm e digest, ma è improbabile che questi valori siano utili.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Comma-separated list of valid authentication types for this source. By default, all authentication types are valid. Example: basic,negotiate]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1783,45 +1696,30 @@
       <Item ItemId=";Verbosity_Description" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Set the verbosity level of the command. Allowed values are q[uiet]5D;, m[inimal]5D;, n[ormal]5D;, d[etailed]5D;, and diag[nostic]5D;.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Consente di impostare il livello di dettaglio del comando. I valori consentiti sono: q[uiet]5D;, m[inimal]5D;, n[ormal]5D;, d[etailed]5D;, e diag[nostic]5D;.]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";VerifyCommandAllDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Specifies that all verifications possible should be performed to the package(s).]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Specifica che sui pacchetti devono essere eseguite tutte le verifiche possibili.]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";VerifyCommandCertificateFingerprintDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Verify that the signer certificate matches with one of the specified SHA256 fingerprints. A certificate SHA256 fingerprint is a SHA256 hash of the certificate used to identify the certificate. Multiple inputs should be separated by space.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Verificare che il certificato del firmatario corrisponda a una delle impronte digitali SHA256 specificate. L'impronta digitale SHA256 del certificato è un hash SHA256 del certificato usato per identificare il certificato. Gli input multipli devono essere separati da uno spazio.]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";VerifyCommandDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Verifies a signed NuGet package.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Verifica un pacchetto NuGet firmato.]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";VerifyCommandPackagePathDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Specify the path to the package]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Specifica il percorso del pacchetto]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1860,7 +1758,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
+      <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -1875,7 +1773,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.CommandLine.XPlat.dll]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -1893,7 +1791,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.CommandLine.XPlat.dll]]></Val>
       </Str>
       <Disp Icon="Str" />

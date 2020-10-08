@@ -97,8 +97,8 @@
       <Item ItemId=";UnauthorizedLockFail" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to obtain lock file access on '{0}' for operations on '{1}'. This may mean that a different user or administrator is holding this lock and that this process does not have permission to access it. If no other process is currently performing an operation on this file it may mean that an earlier NuGet process crashed and left an inaccessible lock file, in this case removing the file '{0}' will allow NuGet to continue.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Impossible d'obtenir l'accès au fichier de verrouillage sur « {0} » pour les opérations sur « {1} ». Un autre utilisateur ou administrateur détient peut-être ce verrou, et ce processus n'a pas l'autorisation d'y accéder. Si aucun autre processus n'effectue actuellement d'opération sur ce fichier, un processus NuGet antérieur s'est peut-être bloqué et a laissé un fichier de verrouillage inaccessible. Dans ce cas, la suppression du fichier « {0} » permet à NuGet de continuer.]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
+            <Val><![CDATA[Impossible d'obtenir l'accès au fichier de verrouillage sur « {0} » pour les opérations sur « {1} ». Cela peut vouloir dire qu'un autre utilisateur ou administrateur détient ce verrou et que ce processus n'a pas l'autorisation d'y accéder. Si aucun autre processus n'effectue actuellement d'opération sur ce fichier, cela peut vouloir dire qu'un processus NuGet antérieur est tombé en panne et a laissé un fichier de verrouillage inaccessible. Dans ce cas, la suppression du fichier « {0} » permet à NuGet de continuer.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Unable to obtain lock file access on '{0}' for operations on '{1}'. This may mean that a different user or administator is holding this lock and that this process does not have permission to access it. If no other process is currently performing an operation on this file it may mean that an earlier NuGet process crashed and left an inaccessible lock file, in this case removing the file '{0}' will allow NuGet to continue.]]></Val>
@@ -121,9 +121,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[L'algorithme de hachage '{0}' n'est pas pris en charge.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The hash algorithm '{0}' is unsupported.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -153,7 +150,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
+      <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -168,7 +165,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.Common.dll]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -186,7 +183,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.Common.dll]]></Val>
       </Str>
       <Disp Icon="Str" />
