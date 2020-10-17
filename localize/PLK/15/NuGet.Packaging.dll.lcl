@@ -427,6 +427,51 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";InvalidUndottedFrameworkInDependencyGroupsWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The following dependency group(s) require(s) dots in the framework version: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Następujące grupy zależności wymagają kropek w wersji struktury: {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidUndottedFrameworkInFilesWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The following packaged file folder(s) require(s) dots in the framework version: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Następujące spakowane foldery plików wymagają kropek w wersji struktury: {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidUndottedFrameworkInFrameworkAssemblyGroupsWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The following framework assembly group(s) require(s) dots in the framework version: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Następujące grupy zestawów platformy wymagają kropek w wersji struktury: {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidUndottedFrameworkInReferenceGroupsWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The following reference group(s) require(s) dots in the framework version: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Następujące grupy odwołań wymagają kropek w wersji struktury: {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";InvalidUndottedFrameworkWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[One or more target framework specifiers in your package are missing required dots in their framework version numbers. This is required as of .NET5.0. Please rename them to include dots as needed (e.g. 'net50' to 'net5.0').]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[W co najmniej jednym specyfikatorze struktury docelowej w pakiecie brakuje wymaganych kropek w numerach wersji struktury. Jest to wymagane od struktury .NET50. Zmień nazwy tak, aby zawierały odpowiednie kropki (np. „net50” na „net5.0”).]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";LegacyVersionWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package version '{0}' uses SemVer 2.0.0 or components of SemVer 1.0.0 that are not supported on legacy clients. Change the package version to a SemVer 1.0.0 string. If the version contains a release label it must start with a letter. This message can be ignored if the package is not intended for older clients.]]></Val>
@@ -451,9 +496,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Zestaw „lib\{0}” zostanie zignorowany podczas instalowania pakietu po migracji.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The assembly '{0}' is placed directly under the 'lib' folder. This assembly won't be referenced by the project after migration.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -463,9 +505,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Elementy zawartości „content” nie będą dostępne, gdy pakiet zostanie zainstalowany po migracji.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package '{0}' contains 'content' folder which will not be available when the package is installed after the migration.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -475,9 +514,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Skrypt install.ps1 zostanie zignorowany podczas instalowania pakietu po migracji.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package '{0}' contains install.ps1 script which will be ignored when the package is installed after the migration.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -487,9 +523,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Plik przekształcenia XDT „{0}” nie zostanie zastosowany podczas instalowania pakietu po migracji.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The XDT transform file '{0}' will not be applied when the package is installed after the migration.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -682,9 +715,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Skrót dla {0}: {1}]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[SHA1 hash: {0}]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -766,9 +796,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Atrybut commitment-type-indication jest nieprawidłowy.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The attribute is not a valid commitment-type-indication attribute.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -823,9 +850,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Nie można znaleźć podpisu bajtów w archiwum pakietów: 0x{0}]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Byte signature not found in package archive:]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -925,9 +949,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Podpis powinien zostać oznaczony sygnaturą czasową, aby umożliwić długoterminową ważność podpisu po wygaśnięciu certyfikatu.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The primary signature should be timestamped to enable long-term signature validity after the certificate has expired.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -946,9 +967,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Pakiet nie jest podpisany.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Package is not signed.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -958,9 +976,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Podpis pakietu jest nieprawidłowy lub nie można go zweryfikować na tej platformie.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package signature is invalid.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1000,9 +1015,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Podpisane pakiety Zip64 nie są obsługiwane.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[ZIP64 signed packages are not supported.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1039,9 +1051,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Parametr signatureValidationMode ma wartość require, więc tylko pakiety podpisane przez zaufanych podpisujących są dozwolone. Nie określono jednak zaufanych podpisujących.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[A list of trusted signers is required by the client but none was found.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1051,9 +1060,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ten pakiet jest podpisany, ale nie przez zaufanego podpisującego.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in client allow list.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1063,9 +1069,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ten pakiet nie został podpisany przez repozytorium przy użyciu certyfikatu określonego przez to repozytorium.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package signature certificate fingerprint does not match any certificate fingerprint in repository allow list.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1075,9 +1078,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[To repozytorium wskazuje, że wszystkie jego pakiety są podpisane przez repozytorium. Jednak repozytorium nie określa certyfikatów podpisywania.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[A repository announced that their packages should be signed but an empty list of trusted certificates was found.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1087,9 +1087,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Plik podpisu pakietu nie zawiera dokładnie jednego podpis podstawowego.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package signature contains multiple primary signatures.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1297,9 +1294,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Wpis pliku podpisu pakietu jest nieprawidłowy. {0}]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package signature file entry is invalid.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1579,9 +1573,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Bieżący zestaw narzędzi nie rozpoznaje identyfikatorów licencji „{0}”.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The license identifier(s) {0} is(are) not recognized by the current toolset.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1909,9 +1900,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Znaleziono identyfikator OID skrótu podpisu: {0}]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Signature hash oid found: {0}]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1921,9 +1909,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Skrót pakietu używa nieobsługiwanego algorytmu wyznaczania wartości skrótu.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The primary signature uses an unsupported hash algorithm.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1960,9 +1945,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Sprawdzenie integralności pakietu nie powiodło się.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Package integrity check failed.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2035,9 +2017,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Pakiet nie został poprawnie otwarty na potrzeby wykonywania operacji podpisu. Użyj konstruktora opartego na strumieniu, aby mieć dostęp do atrybutów podpisu pakietu.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package was not opened correctly to perform Signature operations. Please use a Stream based constructor to have access to Signature attributes of the package.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2101,9 +2080,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Atrybut signing-certificate-v2 jest nieprawidłowy.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[signing-certificate-v2 attribute value does not match the current certificate chain.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2203,9 +2179,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Certyfikat usługi sygnatur czasowych ma nieprawidłowy czas w przyszłości: {0}]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The timestamp service's certificate has a valid time in the future. -]D;]A;{0}]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2224,9 +2197,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Adres URL modułu sygnatur czasowych „{0}” ma nieprawidłowy schemat identyfikatora URI. Obsługiwane schematy to „{1}” i „{2}”.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The timestamper url '{0}' has an invalid uri scheme. The supported schemes are '{1}' and '{2}'.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2236,9 +2206,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Odpowiedź sygnatury czasowej jest nieprawidłowa. Niezgodne identyfikatory jednorazowe.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Timestamp response does not contain a matching response.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2256,15 +2223,6 @@
           <Val><![CDATA[The timestamp service responded with HTTP status code '{0}' ('{1}').]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Usługa sygnatur czasowych zwróciła kod stanu HTTP „{0}” („{1}”).]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TimestampServiceRespondedInvalidFormat" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The reply from the timestamp server was invalid.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Odpowiedź zwrócona z serwera sygnatur czasowych była nieprawidłowa.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2356,9 +2314,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Wersja formatu podpisu pakietu nie jest obsługiwana. Zaktualizowanie klienta może rozwiązać ten problem.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package signature format version is unsupported.  Updating your client may solve this problem.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2377,9 +2332,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Weryfikowanie sygnatury czasowej elementu {0} za pomocą certyfikatu usługi sygnatury czasowej: {1}]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Verifying timestamp with timestamping service certificate: {0}]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2601,7 +2553,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
+      <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -2613,7 +2565,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.Packaging.dll]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -2631,7 +2583,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.Packaging.dll]]></Val>
       </Str>
       <Disp Icon="Str" />
