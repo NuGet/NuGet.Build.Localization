@@ -640,6 +640,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_PlatformVersionNotPresent" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Platform version is not present for one or more target frameworks, even though they have specified a platform: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Pro nejméně jedno cílové rozhraní není k dispozici verze platformy, i když má platformu zadanou: {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_ProcessingNuspecFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Error occurred when processing file '{0}': {1}]]></Val>
@@ -1861,7 +1870,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";NuGetDocs" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";NuGetDocs" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[https://docs.nuget.org/]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -2407,7 +2416,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";TrustedSignerLogCertificateSummaryAllowUntrustedRoot" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";TrustedSignerLogCertificateSummaryAllowUntrustedRoot" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[[U]5D; {0} - {1}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
