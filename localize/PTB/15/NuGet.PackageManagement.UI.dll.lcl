@@ -730,6 +730,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ArgumentNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Argument cannot be null or empty.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O argumento não pode ser nulo ou estar vazio.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";AskForPRMigrator" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Consider migrating this project's NuGet package management format from 'packages.config' to 'PackageReference'.]]></Val>
@@ -2950,48 +2959,6 @@
         </Bin>
         <Disp Edtr="External" Icon="Bmp" LocTbl="false" />
       </Item>
-      <Item ItemId=";resources/refresh_grey_16x.png" ItemType="6" PsrId="211" Leaf="true">
-        <Bin BinId="3">
-          <Val><![CDATA[AAEAAAD/////AQAAAAAAAAAEAQAAAAxTeXN0ZW0uSW50MzIBAAAAB21fdmFsdWUACAMAAAALAAEAAAD/////AQAAAAAAAAAGAQAAAB5yZXNvdXJjZXMvcmVmcmVzaF9ncmV5XzE2eC5wbmcLAAEAAAD/////AQAAAAAAAAAEAQAAAB9TeXN0ZW0uVW5pdHlTZXJpYWxpemF0aW9uSG9sZGVyAwAAAAREYXRhCVVuaXR5VHlwZQxBc3NlbWJseU5hbWUBAAEIBgIAAAAfU3lzdGVtLklPLlVubWFuYWdlZE1lbW9yeVN0cmVhbQQAAAAGAwAAAEttc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkLAAEAAAD/////AQAAAAAAAAAPAQAAAOoBAAACiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABnElEQVR4Xn1TLW8CQRTckBrA8BP4AyRIJF+eYjGlAU2pPEUVyFIkITkwINsEDT0HKP4BYO9OUHMgtzPk9rLtXthksu+9nX3M7OOElFLELdYvl4sM0UUey0nEFXVyq9USh8Ph/Xq92jFNzAYEyLywZ+y6rrAsS2y32yZrRhOtQMlN3/flZDKR7XZblstlHazTzhHIK6UJ/TKk2p1OR8znc8o2lEEFtyyQ/2OBHYMgsCmVkrmq1apoNBoMo3w0Gv0gLCWTyen/17b7/X4kdb1eU+o3cMsXiwXzPaUrtcCbbuFxs9ncglqtJgqFwlcqlSoxHwwGrDkI68ATLp5pFfFLZAHyMwBDXub2oRTmcrlh2CzreV4XY83wnbAy5hhNPAOvDNRICX09cEun01EBv8KtCDiwMdW4xfDMbEAypBc5pvF4TBs9eGV9GPK6sNjDmW7T0S3M1MhAFPS4Wq16SM8EY9bUO4XcmRqjGuXncrnk2O6CHHKNjwl/jnqlUnEwNr684ZU1npFDrvEtaEqawPF0OsndbncDY9Z4Ro5+9xchrlelbonOiQAAAABJRU5ErkJgggsAAQAAAP////8BAAAAAAAAAAQBAAAADlN5c3RlbS5Cb29sZWFuAQAAAAdtX3ZhbHVlAAEACwABAAAA/////wEAAAAAAAAABAEAAAAOU3lzdGVtLkJvb2xlYW4BAAAAB21fdmFsdWUAAQAL]]></Val>
-        </Bin>
-        <Disp Edtr="External" Icon="Bmp" LocTbl="false" />
-      </Item>
-      <Item ItemId=";resources/refresh_inverse_16x.png" ItemType="6" PsrId="211" Leaf="true">
-        <Bin BinId="3">
-          <Val><![CDATA[AAEAAAD/////AQAAAAAAAAAEAQAAAAxTeXN0ZW0uSW50MzIBAAAAB21fdmFsdWUACAMAAAALAAEAAAD/////AQAAAAAAAAAGAQAAACFyZXNvdXJjZXMvcmVmcmVzaF9pbnZlcnNlXzE2eC5wbmcLAAEAAAD/////AQAAAAAAAAAEAQAAAB9TeXN0ZW0uVW5pdHlTZXJpYWxpemF0aW9uSG9sZGVyAwAAAAREYXRhCVVuaXR5VHlwZQxBc3NlbWJseU5hbWUBAAEIBgIAAAAfU3lzdGVtLklPLlVubWFuYWdlZE1lbW9yeVN0cmVhbQQAAAAGAwAAAEttc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkLAAEAAAD/////AQAAAAAAAAAPAQAAAO0BAAACiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABn0lEQVR4Xn1TsU4CQRAdjQXlXUlndZdQAFa0KxaYYCEdnTHBhmDUAjvEyAdoDZdoDwQbSsk1RwmGggSa+wQtrzvnbTYbd4O+ZHJvZ2bfzgwDpWlKuwB/Pp9PYeB/YX/HRUO01bqmQqFgiEhuC9gB3/eXIK7rUrt9L0U8z1uyOUYFtioSm81myi8XO50HAjKZDDHHt8jHpS2gLwshcJHK5RPKZrNko9G4Ajm0BfTLSEDJwGKxoNnsA1Sfg2BAm81mzxZAv6/V6pksFej1nmg8HoVRFBEwnU5x/kyS5IgUeBaPvys4z+VyksznEXHiO4sd4xwEAXwh0xrbBT/2hVaZ3xi/93A4kgbO6oK/eAX8Wb0oSqVS2u8PZB5ixgxsrFYrkEuu5I4UHMfVM1KiDgRQsnaqVgT4drt9g5CCcF1jBRD/PlA8XK/XApcxTOZdVof/RcVvuZIuYgzE5R09A3sO6LNer6NPGDh8xpz0yoOofiZIRMJ/poQnLGIsEhakxssSYgfiOCYb8CGGHAzX/gPhq41fiFFmpXIqDRw+FdcG/ABIih6Id/ngqQAAAABJRU5ErkJgggsAAQAAAP////8BAAAAAAAAAAQBAAAADlN5c3RlbS5Cb29sZWFuAQAAAAdtX3ZhbHVlAAEACwABAAAA/////wEAAAAAAAAABAEAAAAOU3lzdGVtLkJvb2xlYW4BAAAAB21fdmFsdWUAAQAL]]></Val>
-        </Bin>
-        <Disp Edtr="External" Icon="Bmp" LocTbl="false" />
-      </Item>
-      <Item ItemId=";resources/statuserror.16.16.png" ItemType="6" PsrId="211" Leaf="true">
-        <Bin BinId="3">
-          <Val><![CDATA[AAEAAAD/////AQAAAAAAAAAEAQAAAAxTeXN0ZW0uSW50MzIBAAAAB21fdmFsdWUACAMAAAALAAEAAAD/////AQAAAAAAAAAGAQAAAB9yZXNvdXJjZXMvc3RhdHVzZXJyb3IuMTYuMTYucG5nCwABAAAA/////wEAAAAAAAAABAEAAAAfU3lzdGVtLlVuaXR5U2VyaWFsaXphdGlvbkhvbGRlcgMAAAAERGF0YQlVbml0eVR5cGUMQXNzZW1ibHlOYW1lAQABCAYCAAAAH1N5c3RlbS5JTy5Vbm1hbmFnZWRNZW1vcnlTdHJlYW0EAAAABgMAAABLbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5CwABAAAA/////wEAAAAAAAAADwEAAAB5AQAAAolQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAUBJREFUeF6lk71KBEEQhOsGD2VAPNAH8AEM9t7gjIwOzA0UBCMzwVRMjU0FBSMNNL3EE0zM7gIfwMREEE/Bxf9xv6BhpxFBrqDZ3eqqGbqpbcihLMs1SauSOq51KekoxnhoREopM85XNXi+6KX7lW66m1NWcPTQoLUDGmaWNHjZ2mi9nx7rL0yubyru7I0ktWOMt0FAOit3tzGruVBQ8jD+7WBfaPHAB2b+vL4qaCCYPe9T2SGeR4sHb2BhrxVRR5hpmdjMcJkGD17mz5fVKdLX6DEBnrV3epkW74QcPm6GelhezG79fhrB0ZNH0JjwB9Rn5mYq2wnwyetbcNz8fP/KWbDwBuI5VYXD4Ge2ncDVgQevJZEUFhYk4BZW5y2NwxhjO4syCSMk/44yLxCcOn3SU3OpKw84emjMDD/W7wx+AA0rGvbkllSZAAAAAElFTkSuQmCCCwABAAAA/////wEAAAAAAAAABAEAAAAOU3lzdGVtLkJvb2xlYW4BAAAAB21fdmFsdWUAAQALAAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uQm9vbGVhbgEAAAAHbV92YWx1ZQABAAs=]]></Val>
-        </Bin>
-        <Disp Edtr="External" Icon="Bmp" LocTbl="false" />
-      </Item>
-      <Item ItemId=";resources/statusinformation.16.16.png" ItemType="6" PsrId="211" Leaf="true">
-        <Bin BinId="3">
-          <Val><![CDATA[AAEAAAD/////AQAAAAAAAAAEAQAAAAxTeXN0ZW0uSW50MzIBAAAAB21fdmFsdWUACAMAAAALAAEAAAD/////AQAAAAAAAAAGAQAAACVyZXNvdXJjZXMvc3RhdHVzaW5mb3JtYXRpb24uMTYuMTYucG5nCwABAAAA/////wEAAAAAAAAABAEAAAAfU3lzdGVtLlVuaXR5U2VyaWFsaXphdGlvbkhvbGRlcgMAAAAERGF0YQlVbml0eVR5cGUMQXNzZW1ibHlOYW1lAQABCAYCAAAAH1N5c3RlbS5JTy5Vbm1hbmFnZWRNZW1vcnlTdHJlYW0EAAAABgMAAABLbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5CwABAAAA/////wEAAAAAAAAADwEAAABVAQAAAolQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAARxJREFUeF7Nk7FKA0EURe8MKM4qJI2VCmnSJ4XYbpEfWD/AzF9YWFvkL3bF2v0BwW3Fwu1tAmplk0J3JRbrXHiECcMGljS5cJuZOXfeDO+ppmngq65rC2DqHGNdhXMWRVHqMwqiqqoGAPLnr79R+lbj8XMJX5OTfdihwcXxXgkgMcbMJWAFv16/fPcf5r/YJIbcjA4XAMYM0bKe35Y/AfxxdUbDF6vjWTJKKWh3u5WysUFBCBmyrGDaBp/evdOtIWQZEHsf1vKEUMLEGltqNwIKNklXCVMwIGNzdJUwmWZvsz0vBwedYDJktQxGMjs/WnCjtQ/CVk5WnyiDMXYb5X3ck/eFb+Yez/Csu50MwApobyqt85Nz41vWrM/Q/9aIoHnLIqKKAAAAAElFTkSuQmCCCwABAAAA/////wEAAAAAAAAABAEAAAAOU3lzdGVtLkJvb2xlYW4BAAAAB21fdmFsdWUAAQALAAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uQm9vbGVhbgEAAAAHbV92YWx1ZQABAAs=]]></Val>
-        </Bin>
-        <Disp Edtr="External" Icon="Bmp" LocTbl="false" />
-      </Item>
-      <Item ItemId=";resources/statusinformation_16x.png" ItemType="6" PsrId="211" Leaf="true">
-        <Bin BinId="3">
-          <Val><![CDATA[AAEAAAD/////AQAAAAAAAAAEAQAAAAxTeXN0ZW0uSW50MzIBAAAAB21fdmFsdWUACAMAAAALAAEAAAD/////AQAAAAAAAAAGAQAAACNyZXNvdXJjZXMvc3RhdHVzaW5mb3JtYXRpb25fMTZ4LnBuZwsAAQAAAP////8BAAAAAAAAAAQBAAAAH1N5c3RlbS5Vbml0eVNlcmlhbGl6YXRpb25Ib2xkZXIDAAAABERhdGEJVW5pdHlUeXBlDEFzc2VtYmx5TmFtZQEAAQgGAgAAAB9TeXN0ZW0uSU8uVW5tYW5hZ2VkTWVtb3J5U3RyZWFtBAAAAAYDAAAAS21zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQsAAQAAAP////8BAAAAAAAAAA8BAAAAVQEAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAEcSURBVHhezZOxSgNBFEXvDCjOKiSNlQpp0ieF2G6RH1g/wMxfWFhb5C92xdr9AcFtxcLtbQJqZZNCdyUW61x4hAnDBpY0uXCbmTl33gzvqaZp4Kuuawtg6hxjXYVzFkVR6jMKoqqqBgDy56+/UfpW4/FzCV+Tk33YocHF8V4JIDHGzCVgBb9ev3z3H+a/2CSG3IwOFwDGDNGynt+WPwH8cXVGwxer41kySilod7uVsrFBQQgZsqxg2gaf3r3TrSFkGRB7H9byhFDCxBpbajcCCjZJVwlTMCBjc3SVMJlmb7M9LwcHnWAyZLUMRjI7P1pwo7UPwlZOVp8ogzF2G+V93JP3hW/mHs/wrLudDMAKaG8qrfOTc+Nb1qzP0P/WiKB5yyKiigAAAABJRU5ErkJgggsAAQAAAP////8BAAAAAAAAAAQBAAAADlN5c3RlbS5Cb29sZWFuAQAAAAdtX3ZhbHVlAAEACwABAAAA/////wEAAAAAAAAABAEAAAAOU3lzdGVtLkJvb2xlYW4BAAAAB21fdmFsdWUAAQAL]]></Val>
-        </Bin>
-        <Disp Edtr="External" Icon="Bmp" LocTbl="false" />
-      </Item>
-      <Item ItemId=";resources/statusok_32x.png" ItemType="6" PsrId="211" Leaf="true">
-        <Bin BinId="3">
-          <Val><![CDATA[AAEAAAD/////AQAAAAAAAAAEAQAAAAxTeXN0ZW0uSW50MzIBAAAAB21fdmFsdWUACAMAAAALAAEAAAD/////AQAAAAAAAAAGAQAAABpyZXNvdXJjZXMvc3RhdHVzb2tfMzJ4LnBuZwsAAQAAAP////8BAAAAAAAAAAQBAAAAH1N5c3RlbS5Vbml0eVNlcmlhbGl6YXRpb25Ib2xkZXIDAAAABERhdGEJVW5pdHlUeXBlDEFzc2VtYmx5TmFtZQEAAQgGAgAAAB9TeXN0ZW0uSU8uVW5tYW5hZ2VkTWVtb3J5U3RyZWFtBAAAAAYDAAAAS21zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQsAAQAAAP////8BAAAAAAAAAA8BAAAAsQIAAAKJUE5HDQoaCgAAAA1JSERSAAAAIAAAACAIBgAAAHN6evQAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAJjSURBVHhexVcxaNtQED2L0sG40K14KBQKhWw2yRqijh4M1iBCtmjxmOxZghft9ujF2UrxYIEHj5ExdHKxt0KhUOgQugUaPHTqf+I+HP+7jfSj2g9uEEj33ruvO+5XKCc2m02DiDoqTlT4tB2pirmKpFqtrikHKjmIz4noUkWDigEC+krIjYsAEL8hopF2+/D7gWbfZrT6uUJkzxK15zVqvmpm0XrbwrOsSqSEfM8rAOQdJn8JosFykJEXAURcHF1oIfcsIiED3l9KPgH54seCwklYmByAYHyLHMiFnMhtV8B2DvLM9fjLmMpAeBBm1WAEshKeeeZlkwPIhZyMEXNZRzDiskvyMkXI4xhJAfrcffxw8aeYXNF+16Zld6mDpmdTkkBu7h4fnLICl7r0EOGK7mGXJIafhyShO0pyVnjCrUDc+th6kvtr/5o07n7dUftDe3uHnM50ezY9Hq+i1cp3L2FwdTye7ZhuT3Jff1GX7mn6dUrbYHCdQIDPAnbi3uDyPfGD7MC9zaUF7Mi9jWf0CNDL0mEv7cGhs3tG7grAkem4NPdSAPelDTiCMwYcw7mje5vL44UBi0SRKji7N7hSCJgLAXmr4Oze4JpDQMIbTJF/wdm9wZV4vL2ucS4QkbMKru7lvrgGt+6Cvgq9w+Vw6uYexOBg9ORKhp3gFqMRS8NVekX/A7Ef0/HrYzykyv17cw5EKu7xAna4soGcINcbsjUHeG+P+CiEiNKX0ghclgAWkUgRKBnOzRH4FjlM8uSfo5ivUoE+jnEw1t1RtNXwrSx7gNx7vZrt43LaM0puYe/X8z+HqGcpvPan/QAAAABJRU5ErkJgggsAAQAAAP////8BAAAAAAAAAAQBAAAADlN5c3RlbS5Cb29sZWFuAQAAAAdtX3ZhbHVlAAEACwABAAAA/////wEAAAAAAAAABAEAAAAOU3lzdGVtLkJvb2xlYW4BAAAAB21fdmFsdWUAAQAL]]></Val>
-        </Bin>
-        <Disp Edtr="External" Icon="Bmp" LocTbl="false" />
-      </Item>
-      <Item ItemId=";resources/statusstop_32x.png" ItemType="6" PsrId="211" Leaf="true">
-        <Bin BinId="3">
-          <Val><![CDATA[AAEAAAD/////AQAAAAAAAAAEAQAAAAxTeXN0ZW0uSW50MzIBAAAAB21fdmFsdWUACAMAAAALAAEAAAD/////AQAAAAAAAAAGAQAAABxyZXNvdXJjZXMvc3RhdHVzc3RvcF8zMngucG5nCwABAAAA/////wEAAAAAAAAABAEAAAAfU3lzdGVtLlVuaXR5U2VyaWFsaXphdGlvbkhvbGRlcgMAAAAERGF0YQlVbml0eVR5cGUMQXNzZW1ibHlOYW1lAQABCAYCAAAAH1N5c3RlbS5JTy5Vbm1hbmFnZWRNZW1vcnlTdHJlYW0EAAAABgMAAABLbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5CwABAAAA/////wEAAAAAAAAADwEAAACMAgAAAolQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAj5JREFUeF7tlzFIHEEUht8Np8IlRBsbK0vLs0sCxuushLsiXQIegpVgEZJWrlUsBCtDWCFpQoospEp3KpiUV1ikTJUUaVTwwCjofPAWxhkO9pbdvcYfpjhu9v/evnm8eVuRlOr3+3URadq1aFdjwLauXYd2xbVarScpVEkBXhGRDbvqMpwIYNcGcpAlAMCzIhIlb3t7cS7/v3yU65/HcvPjiN/3jZ5MSvXZCxl7uiDjL1/z281K2wbyO20AwJsKnwLU77y18E8yhGwQr6S2uZ0EcqZBxD7LDEj5V+DX37/J+fO5oeGIZ3gWD7zwxDvMQPjmwO1bv5OrD3uShyZW1202tkTVcjNh/DPPG47wwlMVwQoCAK5pd+F5BuEeRyQq45x7g4K7fLMmRQlvGLCUKVUFbACg2tnga+bfbSbgn+mKuAIO49HOfsI8MNrh6oCp3KIFAxZM2EbbK01GypDHahrt7XS4UuAea9EkrZb2WoY8VsO4BVK8QpaREeshAOPe58UrZBkdGBgmSoF7rK7RGY5JphS4xzokgBgAY1QZ8lix0em1x7kwRhUtGLBgwq4qYNeuiBmOO5tG4d1quRUfDFUnKULR0bnLBq7KooQ3DFiMZX4faDO9ji0tM8PlDscTbxiwgj7A3K5/MEAmQRQxlLaVFXZC0uIG8fj9Z01Z5jPHw4fHA1uxUw+t5DgmT35RuVmqnWfdtLfwTnUXaJTzbmFOnf4lKxhqVsK3BcYe9roFhxeeo/g47XjgQCP/PL8D8FcFjYt2yk0AAAAASUVORK5CYIILAAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uQm9vbGVhbgEAAAAHbV92YWx1ZQABAAsAAQAAAP////8BAAAAAAAAAAQBAAAADlN5c3RlbS5Cb29sZWFuAQAAAAdtX3ZhbHVlAAEACw==]]></Val>
-        </Bin>
-        <Disp Edtr="External" Icon="Bmp" LocTbl="false" />
-      </Item>
     </Item>
     <Item ItemId=";resources/resources.baml" ItemType="0" PsrId="223" Leaf="true">
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
@@ -3023,9 +2990,6 @@
     <Item ItemId=";xamls/infinitescrolllist.baml" ItemType="0" PsrId="223" Leaf="true">
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
     </Item>
-    <Item ItemId=";xamls/installedindicator.baml" ItemType="0" PsrId="223" Leaf="true">
-      <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
-    </Item>
     <Item ItemId=";xamls/licenseacceptancewindow.baml" ItemType="0" PsrId="223" Leaf="true">
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
     </Item>
@@ -3033,9 +2997,6 @@
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
     </Item>
     <Item ItemId=";xamls/loadingstatusbar.baml" ItemType="0" PsrId="223" Leaf="true">
-      <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
-    </Item>
-    <Item ItemId=";xamls/migratorhelpicon.baml" ItemType="0" PsrId="223" Leaf="true">
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
     </Item>
     <Item ItemId=";xamls/nugetprojectupgradewindow.baml" ItemType="0" PsrId="223" Leaf="true">
