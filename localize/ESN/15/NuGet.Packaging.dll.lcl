@@ -238,6 +238,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Manifest_RequireLicenseAcceptanceRequiresEmit" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[EmitRequireLicenseAcceptance must not be set to false if RequireLicenseAcceptance is set to true.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[EmitRequireLicenseAcceptance no debe establecerse en false si RequireLicenseAcceptance está establecido en true.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Manifest_RequireLicenseAcceptanceRequiresLicenseUrl" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Enabling license acceptance requires a license or a licenseUrl to be specified. The licenseUrl will be deprecated, consider using the license metadata.]]></Val>
@@ -2694,6 +2703,24 @@
           <Val><![CDATA[The {0} does not have a signing certificate.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[{0} no tiene un certificado de firma.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ZipFileLastWriteTimeStampModifiedMessage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['{0}' changed from '{1}' to '{2}']]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA["{0}" ha cambiado de "{1}" a "{2}"]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ZipFileTimeStampModifiedWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The zip format supports a limited date range. The following files are outside the supported range:]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El formato zip admite un intervalo de fechas limitado. Los archivos siguientes están fuera del intervalo admitido:]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
