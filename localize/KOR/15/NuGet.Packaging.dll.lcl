@@ -238,6 +238,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Manifest_RequireLicenseAcceptanceRequiresEmit" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[EmitRequireLicenseAcceptance must not be set to false if RequireLicenseAcceptance is set to true.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[RequireLicenseAcceptance가 true로 설정된 경우 EmitRequireLicenseAcceptance를 false로 설정하지 않아야 합니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Manifest_RequireLicenseAcceptanceRequiresLicenseUrl" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Enabling license acceptance requires a license or a licenseUrl to be specified. The licenseUrl will be deprecated, consider using the license metadata.]]></Val>
@@ -2695,6 +2704,18 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[{0}에 서명 인증서가 없습니다.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ZipFileLastWriteTimeStampModifiedMessage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA['{0}' changed from '{1}' to '{2}']]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ZipFileTimeStampModifiedWarning" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The zip format supports a limited date range. The following files are outside the supported range:]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
