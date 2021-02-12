@@ -733,9 +733,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Le projet spécifié '{0}' n'a aucune mise à jour compte tenu des sources actuelles.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The given project `{0}` have no updates given the current sources.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1156,9 +1153,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[N'ajoute pas « api/v2/package » à l'URL source.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[--no-service-endpoint does not append "api/v2/packages" to the source URL.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1207,6 +1201,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Fichier config NuGet. Si ce fichier est spécifié, seuls ses paramètres sont utilisés. S'il n'est pas spécifié, la hiérarchie des fichiers config du répertoire actif est utilisée. Pour plus d'informations, consultez https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The NuGet configuration file. If specified, only the settings from this file will be used. If not specified, the hierarchy of configuration files from the current directory will be used. To learn more about NuGet configuration go to https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1534,6 +1531,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Émet uniquement un avertissement en cas d'échec des sources si des packages satisfont aux exigences de version.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Only warning failed sources if there are packages meeting version requirement]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1609,6 +1609,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Format de la sortie de la commande list : 'Detailed' (valeur par défaut) et 'Short'.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Applies to the list action. Accepts two values: Detailed (the default) and Short.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1636,6 +1639,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Chemin de la source du package.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Path to the package(s) source.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1672,6 +1678,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Liste d'éléments séparés par des virgules, qui correspondent aux types d'authentification valides pour cette source. Affectez la valeur basic si le serveur annonce l'utilisation de NTLM ou Negotiate, et si vos informations d'identification doivent être envoyées à l'aide du mécanisme de base, par exemple quand vous utilisez PAT avec une instance locale d'Azure DevOps Server. Les autres valeurs valides sont negotiate, kerberos, ntlm et digest, mais elles ne sont probablement pas utiles.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Comma-separated list of valid authentication types for this source. By default, all authentication types are valid. Example: basic,negotiate]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1706,7 +1715,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The verbosity of logging to use. Allowed values: Debug, Verbose, Information, Minimal, Warning, Error.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Niveau de détail à utiliser pour la journalisation. Valeurs autorisées : Debug, Verbose, Information, Minimal, Warning, Error.]]></Val>
+            <Val><![CDATA[Verbosité à utiliser pour la journalisation. Valeurs autorisées : Debug, Verbose, Information, Minimal, Warning, Error.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1857,7 +1866,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
+      <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -1872,7 +1881,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.CommandLine.XPlat.dll]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -1890,7 +1899,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.CommandLine.XPlat.dll]]></Val>
       </Str>
       <Disp Icon="Str" />
