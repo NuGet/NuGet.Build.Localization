@@ -112,6 +112,159 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";None" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[None]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Brak]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_CentralPackageVersionRemoved" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Central package management file(s) doesn't contain version range for {0} package which is specified as CentralTransitive dependency in the lock file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Pliki centralnego zarządzania pakietami nie zawierają zakresu wersji dla pakietu {0}, który został określony jako zależność CentralTransitive w pliku blokady.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_IncompatibleLockFileVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Version specified in the packages.lock.json file is incompatible. Current tooling supports version {0} and previous formats.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Wersja określona w pliku packages.lock.json jest niezgodna. Bieżące narzędzia obsługują wersję {0} i wcześniejsze formaty.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_MismatchedTargetFrameworks" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project target frameworks are different than the lock file's target frameworks. Lock file target frameworks: {0}. Project target frameworks {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Platformy docelowe projektu różnią się od platform docelowych pliku blokady. Platformy docelowe pliku blokady: {0}. Platformy docelowe projektu: {1}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_NewTargetFramework" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project target framework {0} was not found in the lock file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[W pliku blokady nie znaleziono platformy docelowej projektu {0}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_PackageReferenceAdded" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A new package reference was found {0} for the project target framework {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Znaleziono nowe odwołanie pakietu {0} dla platformy docelowej projektu {1}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_PackageReferenceVersionChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package reference {0} version has changed from {1} to {2}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Wersja odwołania pakietu {0} została zmieniona z {1} na {2}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_PackageReferencesHaveChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package references have changed for {0}. Lock file's package references: {1}, project's package references: {2}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Odwołania pakietu zostały zmienione dla elementu {0}. Odwołania pakietu pliku blokady: {1}, odwołania pakietu projektu: {2}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectReferenceAdded" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A new project reference to {0} was found for {1} target framework.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Znaleziono nowe odwołanie projektu do elementu {0} dla platformy docelowej {1}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectReferenceDependenciesHasChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project references {0} whose dependencies has changed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Odwołania projektu {0}, których zależności zostały zmienione.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectReferenceHasNoCompatibleTargetFramework" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project {0} has no compatible target framework. ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Projekt {0} nie ma zgodnej platformy docelowej. ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectReferencesHasChange" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project reference {0} has changed. Current dependencies: {1} lock file's dependencies: {2}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Odwołanie projektu {0} zostało zmienione. Bieżące zależności: {1}, zależności pliku blokady: {2}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectTransitiveDependencyChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Transitive dependency {0} moved to be centraly managed invalidated the lock file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Zależność przechodnia {0} przeniesiona do centralnego zarządzania unieważniła plik blokady.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectTransitiveDependencyVersionChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Mistmatch between the requestedVersion of a lock file dependency marked as CentralTransitive and the the version specified in the central package management file. Lock file version {0}, central package management version {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Niezgodność wersji requestedVersion zależności pliku blokady oznaczonej jako CentralTransitive i wersji określonej w pliku centralnego zarządzania pakietami. Wersja pliku blokady: {0}, wersja centralnego zarządzania pakietami: {1}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_RestoreMetadataMissingTfms" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Restore metadata is mising the required target frameworks list. Please file a bug with repro steps on NuGet/Home if seen.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[W metadanych przywracania brakuje wymaganej listy platform docelowych. Jeśli napotkasz usterkę, zgłoś ją razem z krokami odtwarzania na ekranie głównym narzędzia NuGet.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_RuntimeIdentifiersChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project's runtime identifiers have changed from. Project's runtime identifiers: {0}, lock file's runtime identifiers {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Identyfikatory środowiska uruchomieniowego projektu zostały zmienione. Identyfikatory środowiska uruchomieniowego projektu: {0}, identyfikatory środowiska uruchomieniowego pliku blokady: {1}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_UnableToLoadPackagespec" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to load package spec for {0} project.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nie można załadować specyfikacji pakietu dla projektu {0}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
     </Item>
   </Item>
   <Item ItemId=";Version" ItemType="0" PsrId="211" Leaf="false">
