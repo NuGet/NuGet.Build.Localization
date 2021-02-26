@@ -112,6 +112,159 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";None" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[None]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[なし]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_CentralPackageVersionRemoved" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Central package management file(s) doesn't contain version range for {0} package which is specified as CentralTransitive dependency in the lock file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[中央のパッケージ管理ファイルには、ロック ファイルで CentralTransitive 依存関係として指定された {0} パッケージのバージョン範囲が含まれていません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_IncompatibleLockFileVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Version specified in the packages.lock.json file is incompatible. Current tooling supports version {0} and previous formats.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[packages.lock.js ファイルで指定されたバージョンには互換性がありません。現在のツールでは、バージョン {0} および以前の形式をサポートしています。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_MismatchedTargetFrameworks" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project target frameworks are different than the lock file's target frameworks. Lock file target frameworks: {0}. Project target frameworks {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プロジェクトのターゲット フレームワークがロック ファイルのターゲット フレームワークと異なります。ロック ファイルのターゲット フレームワーク: {0}。プロジェクトのターゲット フレームワーク: {1}。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_NewTargetFramework" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project target framework {0} was not found in the lock file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プロジェクトのターゲット フレームワーク {0} がロック ファイルで見つかりませんでした。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_PackageReferenceAdded" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A new package reference was found {0} for the project target framework {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プロジェクトのターゲット フレームワーク {1} の新しいパッケージ参照が見つかりました {0}。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_PackageReferenceVersionChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package reference {0} version has changed from {1} to {2}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[パッケージ参照 {0} のバージョンが {1} から {2} に変更されました。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_PackageReferencesHaveChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package references have changed for {0}. Lock file's package references: {1}, project's package references: {2}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} のパッケージ参照が変更されました。ロック ファイルのパッケージ参照: {1}、プロジェクトのパッケージ参照: {2}。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectReferenceAdded" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A new project reference to {0} was found for {1} target framework.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{1} ターゲット フレームワークの {0} への新しいプロジェクト参照が見つかりました。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectReferenceDependenciesHasChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project references {0} whose dependencies has changed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[依存関係が変更されたプロジェクト参照 {0}。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectReferenceHasNoCompatibleTargetFramework" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project {0} has no compatible target framework. ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プロジェクト {0} には互換性のあるターゲット フレームワークがありません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectReferencesHasChange" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project reference {0} has changed. Current dependencies: {1} lock file's dependencies: {2}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プロジェクト参照 {0} が変更されました。現在の依存関係: {1}、ロック ファイルの依存関係: {2}。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectTransitiveDependencyChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Transitive dependency {0} moved to be centraly managed invalidated the lock file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[推移的な依存関係 {0} を一元管理に移行すると、ロック ファイルが無効にされます。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectTransitiveDependencyVersionChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Mistmatch between the requestedVersion of a lock file dependency marked as CentralTransitive and the the version specified in the central package management file. Lock file version {0}, central package management version {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[CentralTransitive としてマークされたロック ファイルの依存関係の requestedVersion と、中央のパッケージ管理ファイルに指定されたバージョンが一致しません。ロック ファイル バージョン {0}、中央のパッケージ管理バージョン {1}。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_RestoreMetadataMissingTfms" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Restore metadata is mising the required target frameworks list. Please file a bug with repro steps on NuGet/Home if seen.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[復元メタデータに、必要なターゲット フレームワーク リストがありません。表示されている場合は、NuGet またはホームで再現手順を添えてバグ報告をお寄せください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_RuntimeIdentifiersChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project's runtime identifiers have changed from. Project's runtime identifiers: {0}, lock file's runtime identifiers {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プロジェクトのランタイム識別子の変更元。プロジェクトのランタイム識別子: {0}、ロック ファイルのランタイム識別子 {1}。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_UnableToLoadPackagespec" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to load package spec for {0} project.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} プロジェクトのパッケージ仕様を読み込めません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
     </Item>
   </Item>
   <Item ItemId=";Version" ItemType="0" PsrId="211" Leaf="false">
