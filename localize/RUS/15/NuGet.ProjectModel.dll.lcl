@@ -112,6 +112,159 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";None" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[None]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Нет]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_CentralPackageVersionRemoved" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Central package management file(s) doesn't contain version range for {0} package which is specified as CentralTransitive dependency in the lock file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Файлы централизованного управления пакетами не содержат диапазон версий для пакета {0}, который указан как зависимость CentralTransitive в файле блокировки.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_IncompatibleLockFileVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Version specified in the packages.lock.json file is incompatible. Current tooling supports version {0} and previous formats.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Указанная в файле packages.lock.json версия несовместима. Текущие инструменты поддерживают версию {0} и предыдущие форматы.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_MismatchedTargetFrameworks" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project target frameworks are different than the lock file's target frameworks. Lock file target frameworks: {0}. Project target frameworks {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Целевые платформы в проекте отличаются от указанных в файле блокировки. Целевые платформы в проекте: {1}. Целевые платформы в файле блокировки: {0}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_NewTargetFramework" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project target framework {0} was not found in the lock file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Целевая платформа проекта {0} не найдена в файле блокировки.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_PackageReferenceAdded" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A new package reference was found {0} for the project target framework {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Найдена новая ссылка на пакет {0} для целевой платформы проекта {1}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_PackageReferenceVersionChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package reference {0} version has changed from {1} to {2}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Версия ссылки на пакет {0} изменена с {1} на {2}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_PackageReferencesHaveChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package references have changed for {0}. Lock file's package references: {1}, project's package references: {2}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Изменены ссылки на пакеты для следующего: {0}. Ссылки на пакеты в файле блокировки: {1}. Ссылки на пакеты в проекте: {2}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectReferenceAdded" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A new project reference to {0} was found for {1} target framework.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Для целевой платформы {1} найдена новая ссылка проекта на следующее: {0}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectReferenceDependenciesHasChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project references {0} whose dependencies has changed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Проект ссылается на следующий элемент с измененными зависимостями: {0}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectReferenceHasNoCompatibleTargetFramework" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project {0} has no compatible target framework. ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[У проекта {0} нет совместимой целевой платформы. ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectReferencesHasChange" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project reference {0} has changed. Current dependencies: {1} lock file's dependencies: {2}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ссылка проекта {0} изменена. Текущие зависимости: {1}. Зависимости в файле блокировки: {2}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectTransitiveDependencyChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Transitive dependency {0} moved to be centraly managed invalidated the lock file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Перемещение транзитивной зависимости {0} для централизованного управления сделало файл блокировки недействительным.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_ProjectTransitiveDependencyVersionChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Mistmatch between the requestedVersion of a lock file dependency marked as CentralTransitive and the the version specified in the central package management file. Lock file version {0}, central package management version {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Несоответствие версии requestedVersion для зависимости в файле блокировки, помеченной как CentralTransitive, и версии, указанной в файле централизованного управления пакетами. Версия в файле блокировки: {0}. Версия в файле централизованного управления пакетами: {1}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_RestoreMetadataMissingTfms" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Restore metadata is mising the required target frameworks list. Please file a bug with repro steps on NuGet/Home if seen.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Метаданные восстановления не содержат список требуемых целевых платформ. Если вы видите эту ошибку, сообщите о ней в NuGet/Home, указав шаги для воспроизведения проблемы.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_RuntimeIdentifiersChanged" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project's runtime identifiers have changed from. Project's runtime identifiers: {0}, lock file's runtime identifiers {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Изменены идентификаторы среды выполнения проекта. Идентификаторы среды выполнения в проекте: {0}. Идентификаторы среды выполнения в файле блокировки: {1}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackagesLockFile_UnableToLoadPackagespec" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to load package spec for {0} project.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Невозможно загрузить спецификацию пакета для проекта {0}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
     </Item>
   </Item>
   <Item ItemId=";Version" ItemType="0" PsrId="211" Leaf="false">
