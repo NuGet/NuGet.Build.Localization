@@ -1840,8 +1840,8 @@
       <Item ItemId=";NuGetPackageOwners" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Owners: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[nuget-package-owners: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Os Proprietários: {0}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[nuget-package-owners: {0}]]></Val>
@@ -1870,8 +1870,8 @@
       <Item ItemId=";NuGetV3ServiceIndexUrl" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Service index: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[nuget-v3-service-index-url: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Índice de serviço: {0}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[nuget-v3-service-index-url: {0}]]></Val>
@@ -2152,8 +2152,8 @@
       <Item ItemId=";SignaturePackageIntegrityFailure" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package integrity check failed. The package has changed since it was signed. Try clearing the local http-cache and run nuget operation again.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Falha na verificação de integridade do pacote.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A verificação de integridade do pacote falhou. O pacote mudou desde que foi assinado. Tente limpar o cache http local e execute a operação nuget novamente.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The package integrity check failed.]]></Val>
@@ -2599,6 +2599,9 @@
       <Item ItemId=";VerifyChainBuildingIssue_UntrustedRoot" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The {0}'s signing certificate is not trusted by the trust provider.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O certificado de assinatura de {0} não é confiável para o provedor de confiança.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2767,6 +2770,9 @@
       <Item ItemId=";VerifyTimestampChainBuildingIssue_UntrustedRoot" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The {0}'s timestamping certificate is not trusted by the trust provider.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O certificado de carimbo de data/hora de {0} não é confiável para o provedor de confiança.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
