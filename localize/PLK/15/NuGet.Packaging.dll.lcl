@@ -1839,10 +1839,13 @@
       </Item>
       <Item ItemId=";NuGetPackageOwners" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[nuget-package-owners: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[Owners: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[nuget-package-owners: {0}]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[nuget-package-owners: {0}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1866,10 +1869,13 @@
       </Item>
       <Item ItemId=";NuGetV3ServiceIndexUrl" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[nuget-v3-service-index-url: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[Service index: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[nuget-v3-service-index-url: {0}]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[nuget-v3-service-index-url: {0}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2145,12 +2151,12 @@
       </Item>
       <Item ItemId=";SignaturePackageIntegrityFailure" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package integrity check failed.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[The package integrity check failed. The package has changed since it was signed. Try clearing the local http-cache and run nuget operation again.]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
             <Val><![CDATA[Sprawdzenie integralności pakietu nie powiodło się.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Package integrity check failed.]]></Val>
+            <Val><![CDATA[The package integrity check failed.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -2590,6 +2596,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";VerifyChainBuildingIssue_UntrustedRoot" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The {0}'s signing certificate is not trusted by the trust provider.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";VerifyError_CertificateFailsPublicKeyLengthRequirement" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The {0}'s certificate does not meet a minimum public key length requirement.]]></Val>
@@ -2752,6 +2764,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";VerifyTimestampChainBuildingIssue_UntrustedRoot" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The {0}'s timestamping certificate is not trusted by the trust provider.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Verify_ErrorNoCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The {0} does not have a signing certificate.]]></Val>
@@ -2799,7 +2817,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
+      <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -2811,7 +2829,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.Packaging.dll]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -2829,7 +2847,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.Packaging.dll]]></Val>
       </Str>
       <Disp Icon="Str" />
