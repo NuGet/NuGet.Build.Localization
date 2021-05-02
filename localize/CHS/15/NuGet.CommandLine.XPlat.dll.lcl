@@ -406,6 +406,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_UnknownAction" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The action '{0}' is not recognized.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[无法识别操作“{0}”。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_UnsupportedProject" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Error while adding package '{0}' to project '{1}'. The project does not support adding package references through the add package command.]]></Val>
@@ -1752,6 +1761,51 @@
           <Val><![CDATA[Determines if the output files of the project should be in the tool folder.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[确定项目的输出文件是否应位于工具文件夹中。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TrustCommandActionDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Command actions allow you to specify only a specific subset of signers whose signatures will be accepted, while rejecting all others.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[通过命令操作，可仅指定将接受其签名的特定子集的签名人，同时拒绝所有其他签名人。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TrustCommandAlgorithm" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Specifies the hash algorithm used to calculate the certificate fingerprint. Defaults to SHA256. Values supported are SHA256, SHA384 and SHA512.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[指定用于计算证书指纹的哈希算法。默认使用 SHA256。受支持的值有 SHA256、SHA384 和 SHA512。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TrustCommandAllowUntrustedRoot" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Specifies if the certificate for the trusted signer should be allowed to chain to an untrusted root.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[指定是否应允许受信任签名人证书链到不受信任的根。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TrustCommandDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Manage the trusted signers.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[管理受信任的签名人。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TrustCommandOwners" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Semi-colon separated list of trusted owners to further restrict the trust of a repository.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[用分号分隔的受信任所有者列表，用来进一步限制存储库的信任。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
