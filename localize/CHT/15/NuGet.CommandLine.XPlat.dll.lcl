@@ -292,6 +292,9 @@
       <Item ItemId=";Err_InvalidValue" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid value provided for '{0}'. The accepted values are {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[為 '{0}' 提供無效的值。接受的值為 {1}。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1606,72 +1609,108 @@
       <Item ItemId=";SignCommandCertificateFingerprintDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[要用來在本機憑證存放區搜尋憑證的憑證 SHA-1 指紋。憑證存放區可由 --certificate-store-name 以及 --certificate-store-location 選項指定。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandCertificatePasswordDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Password for the certificate, if needed.]D;]A;This option can be used to specify the password for the certificate. The command will throw an error message if certificate is password protected but password is not provided as input.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[憑證的密碼 (如有需要)。]D;]A;此選項可用於指定憑證的密碼。如果憑證受密碼保護，但未提供密碼輸入，則命令會發出錯誤訊息。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandCertificatePathDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[File path to the certificate to be used while signing the package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[簽署封裝時所使用之憑證的檔案路徑。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandCertificateStoreLocationDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name of the X.509 certificate store use to search for the certificate. Defaults to "CurrentUser", the X.509 certificate store used by the current user.]D;]A;This option should be used when specifying the certificate via --certificate-subject-name or --certificate-fingerprint options.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[要用來搜尋憑證的 X.509 憑證存放區名稱。預設為 [CurrentUser]5D; 之目前使用者使用的 X.509 憑證存放區。]D;]A;此選項應在透過 --certificate-subject-name 或 --certificate-fingerprint 選項指定憑證時使用。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandCertificateStoreNameDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name of the X.509 certificate store to use to search for the certificate. Defaults to "My", the X.509 certificate store for personal certificates.]D;]A;This option should be used when specifying the certificate via --certificate-subject-name or --certificate-fingerprint options.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[要用來搜尋憑證的 X.509 憑證存放區區名稱。預設為 [My]5D; 之個人憑證的 X.509 憑證存放區。]D;]A;此選項應在透過 --certificate-subject-name 或 --certificate-fingerprint 選項指定憑證時使用。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandCertificateSubjectNameDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Subject name of the certificate used to search a local certificate store for the certificate.]D;]A;The search is a case-insensitive string comparison using the supplied value, which will find all certificates with the subject name containing that string, regardless of other subject values. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[要用來在本機憑證存放區搜尋憑證的憑證主題名稱。]D;]A;搜尋是使用提供值之不區分大小寫的字串比較，它會尋找主體名稱包含該字串的所有憑證，無論其他的主體值為何。憑證存放區可由 --certificate-store-name 以及 --certificate-store-location 選項指定。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Signs NuGet package(s) at <package-paths> with the specified certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[使用指定的憑證於 <package-paths> 上簽署 NuGet 封裝。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandHashAlgorithmDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Hash algorithm to be used to sign the package. Defaults to SHA256.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[要用來簽署封裝的雜湊演算法。預設為 SHA256。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandMultipleCertificateException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Multiple options were used to specify a certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[已使用多個選項來指定憑證。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandNoCertificateException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No certificate was provided.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[未提供任何憑證。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandNoTimestamperWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The '--timestamper' option was not provided. The signed package will not be timestamped. To learn more about this option, please visit https://docs.microsoft.com/dotnet/core/tools]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[未提供任何 '--timestamper' 選項。簽署的封裝不會加上時間戳記。若要深入了解這個選項，請瀏覽 https://docs.microsoft.com/dotnet/core/tools]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandOutputDirectoryDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Directory where the signed package(s) should be saved. By default the original package is overwritten by the signed package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[應用來儲存已簽署封裝的目錄。根據預設，已簽署封裝會複寫原始封裝。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1687,6 +1726,9 @@
       <Item ItemId=";SignCommandPackagePathDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Signs NuGet packages at <package-paths> with the specified certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[使用指定的憑證於 <package-paths> 上簽署 NuGet 封裝。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>

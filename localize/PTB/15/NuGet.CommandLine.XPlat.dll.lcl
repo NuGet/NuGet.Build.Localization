@@ -292,6 +292,9 @@
       <Item ItemId=";Err_InvalidValue" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid value provided for '{0}'. The accepted values are {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Valor inválido fornecido para '{0}'. Os valores aceitos são {1}.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1606,72 +1609,108 @@
       <Item ItemId=";SignCommandCertificateFingerprintDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Impressão digital SHA-1 do certificado usado para pesquisar um armazenamento de certificado local para o certificado. O armazenamento de certificados pode ser especificado pelas opções --certificate-store-name e --certificate-store-location.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandCertificatePasswordDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Password for the certificate, if needed.]D;]A;This option can be used to specify the password for the certificate. The command will throw an error message if certificate is password protected but password is not provided as input.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Senha do certificado, se necessário.]D;]A;Essa opção pode ser usada para especificar a senha do certificado. O comando emitirá uma mensagem de erro se o certificado for protegido por senha, mas a senha não for fornecida como entrada.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandCertificatePathDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[File path to the certificate to be used while signing the package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Caminho do arquivo para o certificado a ser usado durante a assinatura do pacote.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandCertificateStoreLocationDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name of the X.509 certificate store use to search for the certificate. Defaults to "CurrentUser", the X.509 certificate store used by the current user.]D;]A;This option should be used when specifying the certificate via --certificate-subject-name or --certificate-fingerprint options.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nome do armazenamento de certificados X.509 para ser usado para pesquisar o certificado. O padrão para "CurrentUser", o armazenamento de certificados X.509 usado pelo usuário atual.]D;]A;Essa opção deve ser usada ao especificar o certificado com as opções --certificate-subject-name ou --certificate-fingerprint.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandCertificateStoreNameDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Name of the X.509 certificate store to use to search for the certificate. Defaults to "My", the X.509 certificate store for personal certificates.]D;]A;This option should be used when specifying the certificate via --certificate-subject-name or --certificate-fingerprint options.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nome do armazenamento de certificados X.509 para ser usado para pesquisar o certificado. O padrão para "My", o armazenamento de certificados X.509 para certificados pessoais.]D;]A;Essa opção deve ser usada ao especificar o certificado com as opções --certificate-subject-name ou --certificate-fingerprint.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandCertificateSubjectNameDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Subject name of the certificate used to search a local certificate store for the certificate.]D;]A;The search is a case-insensitive string comparison using the supplied value, which will find all certificates with the subject name containing that string, regardless of other subject values. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nome do assunto do certificado usado para pesquisar um armazenamento de certificados local para o certificado.]D;]A;A pesquisa é uma comparação de cadeia de caracteres que não faz distinção entre maiúsculas e minúsculas usando o valor fornecido, o qual encontrará todos os certificados com o nome do assunto que contém essa cadeia de caracteres, independentemente de outros valores de assunto. O armazenamento de certificados pode ser especificado pelas opções --certificate-store-name e --certificate-store-location.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Signs NuGet package(s) at <package-paths> with the specified certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Assina o(s) pacote(s) NuGet em <package-paths> com o certificado especificado.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandHashAlgorithmDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Hash algorithm to be used to sign the package. Defaults to SHA256.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Algoritmo de hash para ser usado para assinar o pacote. Padrões para SHA256.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandMultipleCertificateException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Multiple options were used to specify a certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Várias opções foram usadas para especificar um certificado.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandNoCertificateException" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No certificate was provided.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nenhum certificado foi fornecido.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandNoTimestamperWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The '--timestamper' option was not provided. The signed package will not be timestamped. To learn more about this option, please visit https://docs.microsoft.com/dotnet/core/tools]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A opção "--timestamper" não foi fornecida. O pacote assinado não será carimbado no prazo. Para saber mais sobre esta opção, visite https://docs.microsoft.com/dotnet/core/tools]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SignCommandOutputDirectoryDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Directory where the signed package(s) should be saved. By default the original package is overwritten by the signed package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Diretório em que o(s) pacote(s) assinado(s) deve(m) ser salvo(s). Por padrão, o pacote original é substituído pelo pacote assinado.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1687,6 +1726,9 @@
       <Item ItemId=";SignCommandPackagePathDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Signs NuGet packages at <package-paths> with the specified certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Assina os pacotes NuGet em <package-paths> com o certificado especificado.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
