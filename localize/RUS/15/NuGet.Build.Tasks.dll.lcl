@@ -94,6 +94,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Log_NoProjectsForRestore" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The solution did not have any projects to restore, ensure that all projects are known to be MSBuild and that the projects exist.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[В решении отсутствуют проекты для восстановления, убедитесь, что все проекты известны как MSBuild и действительно существуют.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Log_ProjectsInSolutionNotKnowntoMSBuild" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The solution contains '{0}' project(s) '{1}' that are not known to MSBuild. Ensure that all projects are known to be MSBuild before running restore on the solution.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Решение содержит «{0}» проекты «{1}», которые не известны MSBuild. Перед выполнением восстановления решения убедитесь, что все проекты известны как MSBuild.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";NoCompatibleTargetFramework" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Project '{0}' targets '{2}'. It cannot be referenced by a project that targets '{1}'.]]></Val>
