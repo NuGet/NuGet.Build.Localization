@@ -1611,28 +1611,37 @@
       </Item>
       <Item ItemId=";Label_Installed_DeprecatedWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[You have {0} deprecated package(s) installed.]]></Val>
+          <Val><![CDATA[You have {0} deprecated package versions installed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[非推奨のパッケージが {0} 個インストールされています。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[You have {0} deprecated package(s) installed.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Label_Installed_VulnerableAndDeprecatedWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[You have {0} vulnerable package(s) and {1} deprecated package(s) installed.]]></Val>
+          <Val><![CDATA[You have {0} vulnerable package versions and {1} deprecated package versions installed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[脆弱性のあるパッケージ {0} 個、非推奨のパッケージ {1} 個インストールされています。]]></Val>
+            <Val><![CDATA[脆弱性のあるパッケージ バージョン {0} 個と、非推奨のパッケージ バージョン {1} 個がインストールされています。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[You have {0} vulnerable package(s) and {1} deprecated package(s) installed.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Label_Installed_VulnerableWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[You have {0} vulnerable package(s) installed.]]></Val>
+          <Val><![CDATA[You have {0} vulnerable package versions installed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[脆弱性のあるパッケージが {0} 個インストールされています。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[You have {0} vulnerable package(s) installed.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1839,24 +1848,6 @@
           <Val><![CDATA[Updates]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[更新プログラム]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Label_UseInstead" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Incompatible: Use {0} instead]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[非互換: 代わりに {0} を使用してください]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Label_UseInsteadInSolutionPackageManager" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[[Incompatible: Use {0} instead]5D;]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[[非互換: 代わりに {0} を使用してください]5D;]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3279,9 +3270,6 @@
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
     </Item>
     <Item ItemId=";xamls/packagemanagercontrol.baml" ItemType="0" PsrId="223" Leaf="true">
-      <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
-    </Item>
-    <Item ItemId=";xamls/packagemanagerproviderslabel.baml" ItemType="0" PsrId="223" Leaf="true">
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
     </Item>
     <Item ItemId=";xamls/packagemanagertoppanel.baml" ItemType="0" PsrId="223" Leaf="true">
