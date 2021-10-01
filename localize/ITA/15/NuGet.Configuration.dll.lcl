@@ -49,15 +49,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";AttributeValuesAllowed" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Allowed value(s): {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Valore/i consentito/i: {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";CannotUpdateDifferentItems" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The item passed to the Update method cannot refer to a different item than the one being updated.]]></Val>
@@ -139,20 +130,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_ItemNeedsAtLeastOneNamespace" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_ItemNeedsAtLeastOnePackagePattern" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Package source namespace '{0}' must have at least one namespace.]]></Val>
+          <Val><![CDATA[Package source '{0}' must have at least one package pattern.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Lo spazio dei nomi di origine del pacchetto '{0}' deve avere almeno uno spazio dei nomi.]]></Val>
+            <Val><![CDATA[L'origine del pacchetto '{0}' deve includere almeno un criterio pacchetti.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_ItemNeedsAtLeastOneNamespaceWithPath" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_ItemNeedsAtLeastOnePackagePatternWithPath" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Package source namespace '{0}' must have at least one namespace. Path: '{1}']]></Val>
+          <Val><![CDATA[Package source '{0}' must have at least one package pattern. Path: '{1}']]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Lo spazio dei nomi di origine del pacchetto '{0}' deve avere almeno uno spazio dei nomi. Percorso: '{1}']]></Val>
+            <Val><![CDATA[L'origine del pacchetto '{0}' deve includere almeno un criterio pacchetti. Percorso: '{1}']]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
