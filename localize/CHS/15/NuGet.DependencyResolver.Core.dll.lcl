@@ -24,19 +24,25 @@
       </Item>
       <Item ItemId=";Log_MatchingSourceFoundForPackage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Package namespace matches found for package ID '{0}' are: '{1}'.]]></Val>
+          <Val><![CDATA[Package source mapping matches found for package ID '{0}' are: '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[已找到与包 ID "{0}" 匹配的包命名空间: "{1}"]]></Val>
+            <Val><![CDATA[为包 ID "{0}" 找到的包源映射匹配项为: "{1}"。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Package namespace matches found for package ID '{0}' are: '{1}'.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Log_NoMatchingSourceFoundForPackage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Package namespace match not found for package ID '{0}'.]]></Val>
+          <Val><![CDATA[Package source mapping match not found for package ID '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[未找到与包 ID "{0}" 匹配的包命名空间。]]></Val>
+            <Val><![CDATA[找不到包 ID "{0}" 的包源映射匹配项。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Package namespace match not found for package ID '{0}'.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
