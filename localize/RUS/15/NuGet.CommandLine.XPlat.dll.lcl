@@ -418,6 +418,9 @@
       <Item ItemId=";Error_TrustFingerPrintAlreadyExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The certificate finger you're trying to add is already in the certificate fingerprint list.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Отпечаток сертификата, который вы пытаетесь добавить, уже есть в списке отпечатков сертификата.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1945,12 +1948,18 @@
       <Item ItemId=";TrustAuthorCommandDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Adds a trusted signer with the given name, based on the author signature of the package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Добавляет доверенное подписывающее лицо с указанным именем на основе авторской подписи пакета.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TrustCertificateFingerprint" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The fingerprint of the certificate.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Отпечаток сертификата.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1975,8 +1984,8 @@
       <Item ItemId=";TrustCommandAllowUntrustedRoot" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Specifies if the certificate for the trusted signer should be allowed to chain to an untrusted root. This is not recommended.]]></Val>
-          <Tgt Cat="Text" Stat="Update" Orig="New">
-            <Val><![CDATA[Указывает, разрешено ли сертификату для доверенного подписывающего соединение с недоверенным корнем.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Указывает, разрешено ли сертификату для доверенного подписывающего соединение с недоверенным корнем. Это не рекомендуется.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Specifies if the certificate for the trusted signer should be allowed to chain to an untrusted root.]]></Val>
@@ -2005,72 +2014,108 @@
       <Item ItemId=";TrustListCommandDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Lists all the trusted signers in the configuration.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Список всех доверенных подписывающих лиц в конфигурации.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TrustLocalSignedNupkgPath" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The given package should be a local path to the signed .nupkg file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Данный пакет должен быть локальным путем к подписанному NUPKG-файлу.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TrustRemoveCommandDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Removes any trusted signers that match the given name.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Удаляет доверенных подписывающих лиц, соответствующих заданному имени.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TrustRepositoryCommandDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Adds a trusted signer with the given name, based on the repository signature or countersignature of a signed package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Добавляет доверенное подписывающее лицо с указанным именем на основе подписи репозитория или второй подписи подписанного пакета.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TrustSourceCommandDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Adds a trusted signer based on a given package source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Добавляет доверенное подписывающее лицо на основе указанного источника пакетов.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TrustSourceSignerName" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA["The name of the trusted signer to add. If only <NAME> is provided without --<source-url>, the package source from your NuGet configuration files with the same name is added to the trusted list. If <NAME> already exists in the configuration, the package source is appended to it."]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA["Имя доверенного подписывающего лица, которое нужно добавить. Если указано только <NAME> без параметра --<source-url>, источник пакета из файлов конфигурации NuGet с тем же именем добавляется в список доверенных. Если <NAME> уже существует в конфигурации, к нему добавляется источник пакета."]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TrustSourceUrl" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[If a source-url is provided, it must be a v3 package source URL (like https://api.nuget.org/v3/index.json). Other package source types are not supported.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Если указан URL-адрес источника, это должен быть URL-адрес источника пакета версии 3 (например, https://api.nuget.org/v3/index.json). Другие типы источников пакетов не поддерживаются.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TrustSyncCommandDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Deletes the current list of certificates and replaces them with an up-to-date list from the repository.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Удаляет текущий список сертификатов и заменяет их актуальным списком из репозитория.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TrustedCertificateSignerNameToAdd" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The name of the trusted signer to add. If a trusted signer with the given name already exists, the certificate item is added to that signer. Otherwise a trusted author is created with a certificate item from the given certificate information.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Имя добавляемого доверенного подписывающего лица. Если доверенное подписывающее лицо с таким именем уже существует, элемент сертификата добавляется к этому подписывающему лицу. В противном случае создается доверенный автор с элементом сертификата на основе указанных сведений о сертификате.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TrustedSignerNameExists" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The name of the existing trusted signer to sync.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Имя существующего доверенного подписывающего лица, которое нужно синхронизировать.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TrustedSignerNameToAdd" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The name of the trusted signer to add. If name already exists in the configuration, the signature is appended.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Имя добавляемого доверенного подписывающего лица. Если имя уже существует в конфигурации, добавляется подпись.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";TrustedSignerNameToRemove" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The name of the existing trusted signer to remove.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Имя существующего доверенного подписывающего лица, которое нужно удалить.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
