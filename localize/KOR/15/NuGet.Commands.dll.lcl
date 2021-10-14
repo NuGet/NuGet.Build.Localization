@@ -518,7 +518,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature did not match any of the allowed certificate fingerprints.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[패키지 서명이 허용된 인증서 지문과 일치하지 않습니다.]]></Val>
+            <Val><![CDATA[패키지 시그니처가 허용된 인증서 지문과 일치하지 않습니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2543,7 +2543,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package signature validation failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[패키지 서명 유효성 검사에 실패했습니다.]]></Val>
+            <Val><![CDATA[패키지 시그니처 유효성 검사에 실패했습니다.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Could not verify package(s) signature.]]></Val>
@@ -2556,15 +2556,6 @@
           <Val><![CDATA[Finished with {0} errors and {1} warnings.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[완료되었으나 {0}개 오류 및 {1}개 경고가 발생했습니다.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";VerifyCommand_NotSupported" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package signature validation command is not supported on this platform.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[이 플랫폼에서는 패키지 서명 유효성 검사 명령이 지원되지 않습니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2634,15 +2625,6 @@
           <Val><![CDATA[File '{0}' was not added to the package. Files and folders starting with '.' or ending with '.nupkg' are excluded by default. To include this file, use -NoDefaultExcludes from the commandline]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA['{0}' 파일이 패키지에 추가되지 않았습니다. '.'으로 시작하거나 '.nupkg'로 끝나는 파일 및 폴더는 기본적으로 제외됩니다. 이 파일을 포함하려면 명령줄에서 -NoDefaultExcludes를 사용하세요.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_MacCatalystXamarinIOSCompat" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['{0}' was resolved as a dependency of '{1}', but the dependency is using 'Xamarin.iOS' while '{1}' is using '{2}' as its TargetFramework. There might be compatibility issues when MacCatalyst projects depend on Xamarin.iOS projects.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}'이(가) '{1}'의 종속성으로 확인되었지만 종속성이 'Xamarin.iOS'를 사용하는 반면 '{1}'은(는) TargetFramework로 '{2}'을(를) 사용하고 있습니다. MacCatalyst 프로젝트가 Xamarin.iOS 프로젝트에 종속된 경우 호환성 문제가 있을 수 있습니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

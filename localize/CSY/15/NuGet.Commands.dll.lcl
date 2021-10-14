@@ -35,7 +35,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Building project '{0}' for target framework '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Sestavuje se projekt {0} pro cílovou architekturu {1}.]]></Val>
+            <Val><![CDATA[Sestavuje se projekt {0} pro cílové rozhraní {1}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1262,7 +1262,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package '{0}' was restored using '{1}' instead of the project target framework '{2}'. This package may not be fully compatible with your project.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Balíček {0} se místo cílové architektury projektu {2} obnovil pomocí {1}. Balíček nemusí být plně kompatibilní s vaším projektem.]]></Val>
+            <Val><![CDATA[Balíček {0} se místo cílové verze rozhraní .NET Framework projektu {2} obnovil pomocí {1}. Balíček nemusí být plně kompatibilní s vaším projektem.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Package '{0}' was restored using '{1}' instead of the project target framework '{2}'. This may cause compatibility problems.]]></Val>
@@ -1418,7 +1418,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package {0} {1} does not support any target frameworks.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Balíček {0} {1} nepodporuje žádnou cílovou architekturu.]]></Val>
+            <Val><![CDATA[Balíček {0} {1} nepodporuje žádné cílové rozhraní.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1454,7 +1454,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The project {0} does not specify any target frameworks in {1}.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Projekt {0} neurčuje žádné cílové architektury v {1}.]]></Val>
+            <Val><![CDATA[Projekt {0} neurčuje žádná cílová rozhraní v {1}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1472,7 +1472,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Project {0} does not support any target frameworks.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Projekt {0} nepodporuje žádné cílové architektury.]]></Val>
+            <Val><![CDATA[Projekt {0} nepodporuje žádné cílové rozhraní.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2186,7 +2186,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Disabled]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zakázáno]]></Val>
+            <Val><![CDATA[Zakázané]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2563,15 +2563,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VerifyCommand_NotSupported" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package signature validation command is not supported on this platform.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Příkaz pro ověření podpisu balíčku není na této platformě podporován.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";VerifyCommand_PackageIsNotValid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' is not a valid package file.]]></Val>
@@ -2637,15 +2628,6 @@
           <Val><![CDATA[File '{0}' was not added to the package. Files and folders starting with '.' or ending with '.nupkg' are excluded by default. To include this file, use -NoDefaultExcludes from the commandline]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Soubor {0} se nepřidal do balíčku. Soubory a složky, které začínají tečkou (.) nebo končí .nupkg, se standardně vylučují. Pokud chcete tento soubor zahrnout, použijte v příkazovém řádku možnost -NoDefaultExcludes.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_MacCatalystXamarinIOSCompat" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['{0}' was resolved as a dependency of '{1}', but the dependency is using 'Xamarin.iOS' while '{1}' is using '{2}' as its TargetFramework. There might be compatibility issues when MacCatalyst projects depend on Xamarin.iOS projects.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} byl vyřešen jako závislost {1}, ale závislost používá Xamarin.iOS, zatímco {1} používá {2} jako TargetFramework. Problémy s kompatibilitou můžou nastat, pokud projekty MacCatalyst závisí na projektech Xamarin.iOS.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

@@ -1697,7 +1697,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The targets file for {0} at location {1} does not exist, no-op is not possible. Continuing restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[位置 {1} 处的目标文件 {0} 不存在，no-op  不可能。继续还原。]]></Val>
+            <Val><![CDATA[位置 {0} 处的目标文件 {1} 不存在，无法执行 no-op。继续还原。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2560,15 +2560,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VerifyCommand_NotSupported" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package signature validation command is not supported on this platform.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[此平台上不支持包签名验证命令。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";VerifyCommand_PackageIsNotValid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' is not a valid package file.]]></Val>
@@ -2634,15 +2625,6 @@
           <Val><![CDATA[File '{0}' was not added to the package. Files and folders starting with '.' or ending with '.nupkg' are excluded by default. To include this file, use -NoDefaultExcludes from the commandline]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[文件“{0}”未添加到包。默认排除以 "." 开头或以 ".nupkg" 结尾的文件和文件夹。若要添加此文件，请在命令行中使用 -NoDefaultExcludes]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_MacCatalystXamarinIOSCompat" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['{0}' was resolved as a dependency of '{1}', but the dependency is using 'Xamarin.iOS' while '{1}' is using '{2}' as its TargetFramework. There might be compatibility issues when MacCatalyst projects depend on Xamarin.iOS projects.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' 已解析为 '{1}' 的依赖项，但依赖项使用 'Xamarin.iOS'，而 '{1}' 使用 '{2}' 作为其 TargetFramework。当 MacCatalyst 项目依赖于 Xamarin.iOS 项目时，可能会出现兼容性问题。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
