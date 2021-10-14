@@ -518,7 +518,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature did not match any of the allowed certificate fingerprints.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[パッケージの署名が、許可されている証明書のフィンガープリントのいずれとも一致しませんでした。]]></Val>
+            <Val><![CDATA[パッケージ署名が、許可されている証明書のフィンガープリントのいずれとも一致しませんでした。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2543,7 +2543,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package signature validation failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[パッケージの署名の検証に失敗しました。]]></Val>
+            <Val><![CDATA[パッケージ署名の検証に失敗しました。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Could not verify package(s) signature.]]></Val>
@@ -2556,15 +2556,6 @@
           <Val><![CDATA[Finished with {0} errors and {1} warnings.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[完了しました。エラー {0}、警告 {1}。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";VerifyCommand_NotSupported" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package signature validation command is not supported on this platform.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[パッケージの署名検証コマンドは、このプラットフォームではサポートされていません。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2634,15 +2625,6 @@
           <Val><![CDATA[File '{0}' was not added to the package. Files and folders starting with '.' or ending with '.nupkg' are excluded by default. To include this file, use -NoDefaultExcludes from the commandline]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[ファイル '{0}' がパッケージに追加されませんでした。既定で、先頭が '.' で始まるファイルとフォルダー、末尾が '.nupkg' のファイルとフォルダーは除外されます。このファイルを含めるには、コマンドラインから -NoDefaultExcludes を使用します]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_MacCatalystXamarinIOSCompat" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['{0}' was resolved as a dependency of '{1}', but the dependency is using 'Xamarin.iOS' while '{1}' is using '{2}' as its TargetFramework. There might be compatibility issues when MacCatalyst projects depend on Xamarin.iOS projects.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' は '{1}' の依存関係として解決されましたが、依存関係は 'Xamarin.iOS' を使用していますが、'{1}' は TargetFramework として '{2}' を使用しています。MacCatalyst プロジェクトが Xamarin.iOS プロジェクトに依存している場合、互換性の問題が発生する可能性があります。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

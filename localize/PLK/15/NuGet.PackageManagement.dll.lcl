@@ -515,7 +515,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Invalid!! Could not find a folder under artifact type '{0}', so cannot request for artifacts specific to target framework '{1}']]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nieprawidłowy element. Nie można odnaleźć folderu dla typu artefaktu „{0}”, dlatego nie można żądać artefaktów przeznaczonych tylko dla struktury docelowej „{1}”]]></Val>
+            <Val><![CDATA[Błąd. Nie można znaleźć folderu dla typu artefaktu „{0}”, dlatego nie można zażądać artefaktów przeznaczonych tylko dla platformy docelowej „{1}”]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -678,24 +678,6 @@
           <Val><![CDATA[Unable to uninstall '{0}' because '{1}' depend on it.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Nie można odinstalować pakietu „{0}”, ponieważ zależą od niego elementy „{1}”.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";PackageNamespaceMatchFound" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package namespace matches found for package ID '{0}' are: '{1}']]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Znalezione dopasowania przestrzeni nazw pakietu dla identyfikatora pakietu „{0}” to: „{1}”]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";PackageNamespaceNoMatchFound" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package namespace match not found for package ID '{0}']]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nie znaleziono dopasowania przestrzeni nazw pakietu dla identyfikatora pakietu „{0}”]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -938,7 +920,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Solution directory '{0}' must be a rooted path.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Katalog rozwiązań „{0}” musi być ścieżką zawierającą katalog główny.]]></Val>
+            <Val><![CDATA[Katalog rozwiązania „{0}” musi być ścieżką od katalogu głównego.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1001,7 +983,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Either should have value in {0} for {1} or {2} & {3}.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Tabela {0} powinna zawierać wartość dla ścieżki {1} albo dla identyfikatora {2} i źródła {3}.]]></Val>
+            <Val><![CDATA[Powinna zostać podana wartość w {0} dla {1} lub {2} i {3}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

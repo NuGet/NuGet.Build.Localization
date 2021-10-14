@@ -1544,7 +1544,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Restored {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA["{0}" wiederhergestellt (in {1}).]]></Val>
+            <Val><![CDATA["{0}" wiederhergestellt (in "{1}").]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore completed in {0} for {1}.]]></Val>
@@ -1556,7 +1556,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Restored {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA["{0}" wiederhergestellt (in {1}).]]></Val>
+            <Val><![CDATA["{0}" wiederhergestellt (in "{1}").]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore completed in {0}.]]></Val>
@@ -1568,7 +1568,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Failed to restore {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Fehler beim Wiederherstellen von "{0}" (in {1}).]]></Val>
+            <Val><![CDATA[Fehler beim Wiederherstellen von "{0}" (in "{1}").]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore failed in {0} for {1}.]]></Val>
@@ -1580,7 +1580,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Failed to restore {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Fehler beim Wiederherstellen von "{0}" (in {1}).]]></Val>
+            <Val><![CDATA[Fehler beim Wiederherstellen von "{0}" (in "{1}").]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore failed in {0}.]]></Val>
@@ -2563,15 +2563,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VerifyCommand_NotSupported" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package signature validation command is not supported on this platform.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der Überprüfungsbefehl für die Paketsignatur wird auf dieser Plattform nicht unterstützt.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";VerifyCommand_PackageIsNotValid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' is not a valid package file.]]></Val>
@@ -2637,15 +2628,6 @@
           <Val><![CDATA[File '{0}' was not added to the package. Files and folders starting with '.' or ending with '.nupkg' are excluded by default. To include this file, use -NoDefaultExcludes from the commandline]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die Datei "{0}" wurde dem Paket nicht hinzugefügt. Dateien und Ordner, die mit "." beginnen oder mit ".nupkg" enden, werden standardmäßig ausgeschlossen. Um diese Datei einzubeziehen, verwenden Sie "-NoDefaultExcludes" in der Befehlszeile.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_MacCatalystXamarinIOSCompat" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['{0}' was resolved as a dependency of '{1}', but the dependency is using 'Xamarin.iOS' while '{1}' is using '{2}' as its TargetFramework. There might be compatibility issues when MacCatalyst projects depend on Xamarin.iOS projects.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA["{0}" wurde als Abhängigkeit von "{1}" aufgelöst, aber die Abhängigkeit verwendet "Xamarin.iOS", während "{1}" "{2}" als TargetFramework verwendet. Es kann Kompatibilitätsprobleme geben, wenn MacCatalyst-Projekte von Xamarin.iOS-Projekten abhängen.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

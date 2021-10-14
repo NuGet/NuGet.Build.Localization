@@ -289,15 +289,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Err_InvalidValue" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Invalid value provided for '{0}'. The accepted values are {1}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Byla zadána neplatná hodnota pro {0}. Přípustné hodnoty jsou {1}.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_AddPkgErrorStringForImportedEdit" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Item '{0}' for '{1}' in Imported file '{2}'.]]></Val>
@@ -1235,7 +1226,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The NuGet configuration file. If specified, only the settings from this file will be used. If not specified, the hierarchy of configuration files from the current directory will be used. For more information, see [Common NuGet Configurations]5D;(https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Konfigurační soubor NuGet. Když se zadá, použijí se jen nastavení z tohoto souboru. Když se soubor nezadá, použijte se hierarchie konfiguračních souborů z aktuálního adresáře. Další informace najdete v článku o [běžných konfiguracích NuGetu]5D;(https://docs.microsoft.com/cs-cz/nuget/consume-packages/configuring-nuget-behavior).]]></Val>
+            <Val><![CDATA[Konfigurační soubor NuGet. Pokud je zadaný, použije se jen nastavení z tohoto souboru. Pokud zadaný není, použijte se hierarchie konfiguračních souborů v aktuálním adresáři. Další informace najdete v článku [Nejčastější konfigurace souboru NuGet]5D;(https://docs.microsoft.com/cs-cz/nuget/consume-packages/configuring-nuget-behavior).]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1602,150 +1593,6 @@
           <Val><![CDATA[Sets the nuspec serviceable element to true.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Nastaví element nuspec serviceable na true.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandCertificateFingerprintDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Otisk SHA-1 certifikátu použitý k hledání místního úložiště certifikátů tohoto certifikátu. Úložiště certifikátů lze zadat pomocí parametrů --certificate-store-name a --certificate-store-location.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandCertificatePasswordDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Password for the certificate, if needed.]D;]A;This option can be used to specify the password for the certificate. The command will throw an error message if certificate is password protected but password is not provided as input.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Heslo certifikátu, pokud je zapotřebí.]D;]A;Tento parametr lze použít k zadání hesla certifikátu. Tento příkaz vypíše chybovou zprávu, pokud je certifikát chráněný heslem, ale heslo není součástí zadání.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandCertificatePathDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[File path to the certificate to be used while signing the package.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Cesta k souboru certifikátu, který se má použít při podepisování balíčku]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandCertificateStoreLocationDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Name of the X.509 certificate store use to search for the certificate. Defaults to "CurrentUser", the X.509 certificate store used by the current user.]D;]A;This option should be used when specifying the certificate via --certificate-subject-name or --certificate-fingerprint options.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Název úložiště certifikátů X.509, který se používá k hledání certifikátu. Výchozí hodnota je CurrentUser, což je úložiště osobních certifikátů X.509 používané aktuálním uživatelem.]D;]A;Tento parametr se má použít při zadávání certifikátu pomocí parametrů --certificate-subject-name nebo --certificate-fingerprint.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandCertificateStoreNameDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Name of the X.509 certificate store to use to search for the certificate. Defaults to "My", the X.509 certificate store for personal certificates.]D;]A;This option should be used when specifying the certificate via --certificate-subject-name or --certificate-fingerprint options.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Název úložiště certifikátů X.509, který se používá k hledání certifikátu. Výchozí hodnota je My, což je úložiště osobních certifikátů X.509.]D;]A;Tento parametr se má použít při zadávání certifikátu pomocí parametrů --certificate-subject-name nebo --certificate-fingerprint.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandCertificateSubjectNameDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Subject name of the certificate used to search a local certificate store for the certificate.]D;]A;The search is a case-insensitive string comparison using the supplied value, which will find all certificates with the subject name containing that string, regardless of other subject values. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Název subjektu certifikátu použitý k hledání místního úložiště certifikátů tohoto certifikátu.]D;]A;Hledání porovnává řetězce bez rozlišování malých a velkých písmen pomocí zadané hodnoty, a najde všechny certifikáty s názvem subjektu obsahujícím tento řetězec bez ohledu na jiné hodnoty subjektu. Úložiště certifikátů lze zadat pomocí parametrů --certificate-store-name a --certificate-store-location.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Signs NuGet package(s) at <package-paths> with the specified certificate.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Podepíše balíčky NuGet v cestě <package-paths> pomocí zadaného certifikátu.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandHashAlgorithmDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Hash algorithm to be used to sign the package. Defaults to SHA256.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Hashovací algoritmus, který se má použít k podepsání balíčku. Výchozí hodnota je SHA256.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandMultipleCertificateException" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Multiple options were used to specify a certificate.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[K zadání certifikátu bylo použito více parametrů.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandNoCertificateException" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[No certificate was provided.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nebyl zadán žádný certifikát.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandNoTimestamperWarning" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The '--timestamper' option was not provided. The signed package will not be timestamped. To learn more about this option, please visit https://docs.microsoft.com/dotnet/core/tools]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Parametr --timestamper nebyl zadán. Podepsaný balíček nebude opatřen časovým razítkem. Další informace o tomto parametru najdete na adrese https://docs.microsoft.com/dotnet/core/tools.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandOutputDirectoryDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Directory where the signed package(s) should be saved. By default the original package is overwritten by the signed package.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Adresář, do kterého se mají uložit podepsané balíčky. Ve výchozím nastavení se původní balíček přepíše podepsaným balíčkem.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandOverwriteDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Switch to indicate if the current signature should be overwritten. By default the command will fail if the package already has a signature.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Přepínač, který určuje, jestli se má přepsat aktuální podpis. Pokud balíček už bude obsahovat podpis, příkaz se ve výchozím nastavení neprovede úspěšně.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandPackagePathDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Signs NuGet packages at <package-paths> with the specified certificate.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Podepíše balíčky NuGet v cestě <package-paths> pomocí zadaného certifikátu.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandTimestampHashAlgorithmDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Hash algorithm to be used by the RFC 3161 timestamp server. Defaults to SHA256.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Hashovací algoritmus používaný serverem časového razítka podle standardu RFC 3161. Výchozí je SHA256.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandTimestamperDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[URL to an RFC 3161 timestamping server.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Adresa URL serveru časového razítka podle standardu RFC 3161]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
