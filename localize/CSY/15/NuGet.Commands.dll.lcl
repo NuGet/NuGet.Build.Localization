@@ -2650,15 +2650,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Warning_MacCatalystXamarinIOSCompat" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['{0}' was resolved as a dependency of '{1}', but the dependency is using 'Xamarin.iOS' while '{1}' is using '{2}' as its TargetFramework. There might be compatibility issues when MacCatalyst projects depend on Xamarin.iOS projects.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} byl vyřešen jako závislost {1}, ale závislost používá Xamarin.iOS, zatímco {1} používá {2} jako TargetFramework. Problémy s kompatibilitou můžou nastat, pokud projekty MacCatalyst závisí na projektech Xamarin.iOS.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Warning_MinVersionDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} depends on {1} but {2} was not found. An approximate best match of {3} was resolved.]]></Val>
@@ -2727,6 +2718,15 @@
           <Val><![CDATA[Project dependency {0} does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Závislost projektu {0} neobsahuje inkluzivní dolní mez. Pokud chcete mít jistotu, že výsledky obnovení budou konzistentní, přidejte do verze závislosti dolní mez.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Warning_ProjectDependencyMissingVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Project dependency '{0}' does not specify a version. Include a version for the dependency to ensure consistent restore results.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Závislost projektu {0} neurčuje verzi. Pokud chcete zajistit konzistentní výsledky obnovení, pro závislost zadejte verzi.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
