@@ -2650,15 +2650,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Warning_MacCatalystXamarinIOSCompat" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['{0}' was resolved as a dependency of '{1}', but the dependency is using 'Xamarin.iOS' while '{1}' is using '{2}' as its TargetFramework. There might be compatibility issues when MacCatalyst projects depend on Xamarin.iOS projects.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}', '{1}' bağımlılığı olarak çözümlendi ancak '{1}' TargetFramework özniteliği olarak '{2}' öğesini kullanırken bağımlılık 'Xamarin.iOS' uzantısını kullanıyor. MacCatalyst projeleri Xamarin.iOS projelerine bağımlı olduğunda uyumluluk sorunları olabilir.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Warning_MinVersionDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} depends on {1} but {2} was not found. An approximate best match of {3} was resolved.]]></Val>
@@ -2727,6 +2718,15 @@
           <Val><![CDATA[Project dependency {0} does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Proje bağımlılığı {0}, kapsamlı bir alt sınır içermiyor. Tutarlı geri yükleme sonuçları alındığından emin olmak için bağımlılık sürümüne bir alt sınır ekleyin.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Warning_ProjectDependencyMissingVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Project dependency '{0}' does not specify a version. Include a version for the dependency to ensure consistent restore results.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[‘{0}’ proje bağımlılığı sürüm belirtmiyor. Tutarlı geri yükleme sonuçları sağlamak için bağımlılığın sürümünü ekleyin.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
