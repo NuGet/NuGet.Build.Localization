@@ -35,7 +35,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Building project '{0}' for target framework '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Sestavuje se projekt {0} pro cílovou architekturu {1}.]]></Val>
+            <Val><![CDATA[Sestavuje se projekt {0} pro cílové rozhraní {1}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -751,15 +751,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_TrustFingerPrintAlreadyExist" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The certificate finger you're trying to add is already in the certificate fingerprint list.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Otisk prstu certifikátu, který se pokoušíte přidat, už je v seznamu otisků prstů certifikátu.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_TrustedAuthorNoOwners" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A trusted author cannot have owners.]]></Val>
@@ -1271,7 +1262,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package '{0}' was restored using '{1}' instead of the project target framework '{2}'. This package may not be fully compatible with your project.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Balíček {0} se místo cílové architektury projektu {2} obnovil pomocí {1}. Balíček nemusí být plně kompatibilní s vaším projektem.]]></Val>
+            <Val><![CDATA[Balíček {0} se místo cílové verze rozhraní .NET Framework projektu {2} obnovil pomocí {1}. Balíček nemusí být plně kompatibilní s vaším projektem.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Package '{0}' was restored using '{1}' instead of the project target framework '{2}'. This may cause compatibility problems.]]></Val>
@@ -1427,7 +1418,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package {0} {1} does not support any target frameworks.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Balíček {0} {1} nepodporuje žádnou cílovou architekturu.]]></Val>
+            <Val><![CDATA[Balíček {0} {1} nepodporuje žádné cílové rozhraní.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1463,7 +1454,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The project {0} does not specify any target frameworks in {1}.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Projekt {0} neurčuje žádné cílové architektury v {1}.]]></Val>
+            <Val><![CDATA[Projekt {0} neurčuje žádná cílová rozhraní v {1}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1481,7 +1472,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Project {0} does not support any target frameworks.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Projekt {0} nepodporuje žádné cílové architektury.]]></Val>
+            <Val><![CDATA[Projekt {0} nepodporuje žádné cílové rozhraní.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1701,15 +1692,6 @@
           <Val><![CDATA[Skipping runtime dependency walk, no runtimes defined in project.json.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Vynechává se procházení závislostí modulu runtime; v souboru project.json nejsou definovány žádné moduly runtime.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Log_SourceMappingEnabledNoMatchingPackageSources" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[PackageSourceMapping is enabled, the following source(s) were not considered: {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[PackageSourceMapping je povolené, následující zdroje se nezvažovaly {0}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2143,15 +2125,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SourceNotConsidered" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Versions from {0} were not considered]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Verze z {0} se nezvažovaly.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Source_DefaultNamePrefix" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package source ]]></Val>
@@ -2213,7 +2186,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Disabled]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zakázáno]]></Val>
+            <Val><![CDATA[Zakázané]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2590,15 +2563,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VerifyCommand_NotSupported" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package signature validation command is not supported on this platform.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Příkaz pro ověření podpisu balíčku není na této platformě podporován.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";VerifyCommand_PackageIsNotValid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' is not a valid package file.]]></Val>
@@ -2736,15 +2700,6 @@
           <Val><![CDATA[Project dependency {0} does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Závislost projektu {0} neobsahuje inkluzivní dolní mez. Pokud chcete mít jistotu, že výsledky obnovení budou konzistentní, přidejte do verze závislosti dolní mez.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_ProjectDependencyMissingVersion" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Project dependency '{0}' does not specify a version. Include a version for the dependency to ensure consistent restore results.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Závislost projektu {0} neurčuje verzi. Pokud chcete zajistit konzistentní výsledky obnovení, pro závislost zadejte verzi.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

@@ -518,7 +518,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature did not match any of the allowed certificate fingerprints.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[パッケージの署名が、許可されている証明書のフィンガープリントのいずれとも一致しませんでした。]]></Val>
+            <Val><![CDATA[パッケージ署名が、許可されている証明書のフィンガープリントのいずれとも一致しませんでした。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -744,15 +744,6 @@
           <Val><![CDATA[Invalid tools package {0} {1}. Tools packages cannot contain more than one PackageType.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[無効なツール パッケージ {0} {1} です。ツール パッケージに複数の PackageType を含めることはできません。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_TrustFingerPrintAlreadyExist" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The certificate finger you're trying to add is already in the certificate fingerprint list.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[追加しようとしている証明書のフィンガープリントは、既に証明書のフィンガープリント一覧に含まれています。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1702,15 +1693,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Log_SourceMappingEnabledNoMatchingPackageSources" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[PackageSourceMapping is enabled, the following source(s) were not considered: {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[PackageSourceMapping が有効になっています。次のソースは考慮されませんでした: {0}。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Log_TargetsFileNotOnDisk" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The targets file for {0} at location {1} does not exist, no-op is not possible. Continuing restore.]]></Val>
@@ -2140,15 +2122,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SourceNotConsidered" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Versions from {0} were not considered]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} からのバージョンは考慮されませんでした。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Source_DefaultNamePrefix" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package source ]]></Val>
@@ -2570,7 +2543,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package signature validation failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[パッケージの署名の検証に失敗しました。]]></Val>
+            <Val><![CDATA[パッケージ署名の検証に失敗しました。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Could not verify package(s) signature.]]></Val>
@@ -2583,15 +2556,6 @@
           <Val><![CDATA[Finished with {0} errors and {1} warnings.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[完了しました。エラー {0}、警告 {1}。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";VerifyCommand_NotSupported" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package signature validation command is not supported on this platform.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[パッケージの署名検証コマンドは、このプラットフォームではサポートされていません。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2733,15 +2697,6 @@
           <Val><![CDATA[Project dependency {0} does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[プロジェクトの依存関係 {0} には下限値 (その値を含む) が含まれていません。復元結果の一貫性を確保するには、依存関係バージョンの下限値を含めてください。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_ProjectDependencyMissingVersion" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Project dependency '{0}' does not specify a version. Include a version for the dependency to ensure consistent restore results.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[プロジェクトの依存関係 '{0}' でバージョンが指定されていません。一貫性のある復元結果を得るには、依存関係のバージョンを含めます。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
