@@ -751,15 +751,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_TrustFingerPrintAlreadyExist" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The certificate finger you're trying to add is already in the certificate fingerprint list.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der Zertifikatfinger, den Sie hinzufügen möchten, befindet sich bereits in der Zertifikatfingerabdruckliste.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_TrustedAuthorNoOwners" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A trusted author cannot have owners.]]></Val>
@@ -1553,7 +1544,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Restored {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA["{0}" wiederhergestellt (in {1}).]]></Val>
+            <Val><![CDATA["{0}" wiederhergestellt (in "{1}").]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore completed in {0} for {1}.]]></Val>
@@ -1565,7 +1556,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Restored {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA["{0}" wiederhergestellt (in {1}).]]></Val>
+            <Val><![CDATA["{0}" wiederhergestellt (in "{1}").]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore completed in {0}.]]></Val>
@@ -1577,7 +1568,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Failed to restore {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Fehler beim Wiederherstellen von "{0}" (in {1}).]]></Val>
+            <Val><![CDATA[Fehler beim Wiederherstellen von "{0}" (in "{1}").]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore failed in {0} for {1}.]]></Val>
@@ -1589,7 +1580,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Failed to restore {0} (in {1}).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Fehler beim Wiederherstellen von "{0}" (in {1}).]]></Val>
+            <Val><![CDATA[Fehler beim Wiederherstellen von "{0}" (in "{1}").]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Restore failed in {0}.]]></Val>
@@ -1701,15 +1692,6 @@
           <Val><![CDATA[Skipping runtime dependency walk, no runtimes defined in project.json.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die Ausführung der Laufzeitabhängigkeit wird übersprungen. In "project.json" sind keine Laufzeiten definiert.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Log_SourceMappingEnabledNoMatchingPackageSources" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[PackageSourceMapping is enabled, the following source(s) were not considered: {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[PackageSourceMapping ist aktiviert. Die folgende(n) Quelle(n) wurde(n) nicht berücksichtigt: {0}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2139,15 +2121,6 @@
           <Val><![CDATA[Package(s) signed successfully.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die Pakete wurden erfolgreich signiert.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SourceNotConsidered" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Versions from {0} were not considered]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Versionen von {0} wurden nicht berücksichtigt.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2590,15 +2563,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VerifyCommand_NotSupported" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package signature validation command is not supported on this platform.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Der Überprüfungsbefehl für die Paketsignatur wird auf dieser Plattform nicht unterstützt.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";VerifyCommand_PackageIsNotValid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' is not a valid package file.]]></Val>
@@ -2736,15 +2700,6 @@
           <Val><![CDATA[Project dependency {0} does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die Projektabhängigkeit "{0}" enthält keine einschließliche Untergrenze. Schließen Sie eine Untergrenze in die Abhängigkeitsversion ein, um konsistente Wiederherstellungsergebnisse zu erzielen.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_ProjectDependencyMissingVersion" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Project dependency '{0}' does not specify a version. Include a version for the dependency to ensure consistent restore results.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Die Projektabhängigkeit „{0}“ gibt keine Version an. Fügen Sie eine Version für die Abhängigkeit ein, um konsistente Wiederherstellungsergebnisse sicherzustellen.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
