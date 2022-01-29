@@ -517,11 +517,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_NoClientAllowList" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, no trusted signers were specified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[signatureValidationMode está establecido como obligatorio, por lo que los paquetes solo se permiten si están firmados por firmantes de confianza. Sin embargo, no se ha especificado ningún firmante de confianza.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_NoMatchingCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature did not match any of the allowed certificate fingerprints.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[La firma del paquete no coincide con ninguna de las huellas digitales de certificado permitidas.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_NoMatchingClientCertificate" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This package is signed but not by a trusted signer.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Este paquete está firmado, pero no por un firmante de confianza.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

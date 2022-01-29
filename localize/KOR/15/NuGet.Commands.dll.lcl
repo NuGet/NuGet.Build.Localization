@@ -514,11 +514,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_NoClientAllowList" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, no trusted signers were specified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[signatureValidationMode를 설정해야 합니다. 신뢰할 수 있는 서명자가 서명한 경우에만 패키지가 허용됩니다. 그러나 신뢰할 수 있는 서명자가 지정되지 않았습니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_NoMatchingCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature did not match any of the allowed certificate fingerprints.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[패키지 서명이 허용된 인증서 지문과 일치하지 않습니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_NoMatchingClientCertificate" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This package is signed but not by a trusted signer.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[이 패키지는 서명되어 있지만 신뢰할 수 있는 서명자가 서명하지 않았습니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
