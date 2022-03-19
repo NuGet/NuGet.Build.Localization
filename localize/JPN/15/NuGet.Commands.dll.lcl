@@ -355,6 +355,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_CouldNotUpdateMetadataLastAccessTime" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Updating last access time on file {0} failed with {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ファイル {0} の最終アクセス時刻の更新が {1} で失敗しました]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_EmptyCertificateListInRepository" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The repository with the service index '{0}' does not list any trusted certificates.]]></Val>
@@ -2661,15 +2670,6 @@
           <Val><![CDATA[Verifying {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA['{0}' を確認しています]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_CentralPackageVersions_VersionOverrideIgnored" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The package reference {0} specifies a VersionOverride but central package manageent is currently disabled so the value was ignored.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[パッケージ参照 {0} は VersionOverride を指定していますが、中央パッケージ管理は現在無効になっているため、値は無視されました。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

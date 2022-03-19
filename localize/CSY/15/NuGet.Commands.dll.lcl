@@ -355,6 +355,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_CouldNotUpdateMetadataLastAccessTime" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Updating last access time on file {0} failed with {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Aktualizace času posledního přístupu k souboru {0} se nezdařila s chybou: {1}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_EmptyCertificateListInRepository" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The repository with the service index '{0}' does not list any trusted certificates.]]></Val>
@@ -2664,15 +2673,6 @@
           <Val><![CDATA[Verifying {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ověřuje se {0}.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_CentralPackageVersions_VersionOverrideIgnored" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The package reference {0} specifies a VersionOverride but central package manageent is currently disabled so the value was ignored.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Odkaz na balíček {0} určuje VersionOverride, ale centrální správa balíčků je aktuálně zakázaná, takže se hodnota ignorovala.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
