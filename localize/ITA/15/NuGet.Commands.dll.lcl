@@ -238,15 +238,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_VersionOverrideDisabled" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The package reference {0} specifies a VersionOverride but the ability to override a centrally defined version is currently disabled.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Il riferimento al pacchetto {0} specifica un VersionOverride, ma la possibilità di eseguire l'override di una versione definita a livello centrale è attualmente disabilitata.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_CentralPackageVersions_VersionsNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: {0}.]]></Val>
@@ -351,15 +342,6 @@
           <Val><![CDATA[Could not update the client certificate: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Non è stato possibile aggiornare il certificato client: {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_CouldNotUpdateMetadataLastAccessTime" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Updating last access time on file {0} failed with {1}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[L'aggiornamento dell'ora dell'ultimo accesso al file {0} non è riuscito con {1}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -535,29 +517,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_NoClientAllowList" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, no trusted signers were specified.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[signatureValidationMode è impostato su require, di conseguenza i pacchetti sono consentiti solo se firmati da firmatari attendibili. Non è però stato specificato alcun firmatario attendibile.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_NoMatchingCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature did not match any of the allowed certificate fingerprints.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[La firma del pacchetto non corrisponde a nessuna delle impronte digitali di certificato consentite.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_NoMatchingClientCertificate" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[This package is signed but not by a trusted signer.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Questo pacchetto è firmato ma non da un firmatario attendibile.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -783,15 +747,6 @@
           <Val><![CDATA[Invalid tools package {0} {1}. Tools packages cannot contain more than one PackageType.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Il pacchetto di strumenti {0} {1} non è valido. I pacchetti di strumenti non possono contenere più di un elemento PackageType.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_TrustFingerPrintAlreadyExist" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The certificate finger you're trying to add is already in the certificate fingerprint list.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[L'impronta digitale del certificato che si prova ad aggiungere è già presente nell'elenco delle impronte digitali dei certificati.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1580,7 +1535,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Resolving conflicts for {0}...]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Risoluzione dei conflitti per {0}...]]></Val>
+            <Val><![CDATA[Risoluzione dei conflitti per {0} in corso...]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1737,15 +1692,6 @@
           <Val><![CDATA[Skipping runtime dependency walk, no runtimes defined in project.json.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[La dipendenza di runtime viene ignorata, non sono presenti runtime definiti in project.json.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Log_SourceMappingEnabledNoMatchingPackageSources" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[PackageSourceMapping is enabled, the following source(s) were not considered: {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[PackageSourceMapping è abilitato. Le origini seguenti non sono state considerate: {0}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2175,15 +2121,6 @@
           <Val><![CDATA[Package(s) signed successfully.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[I pacchetti sono stati firmati.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SourceNotConsidered" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Versions from {0} were not considered]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le versioni di {0} non sono state considerate]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2626,15 +2563,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VerifyCommand_NotSupported" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package signature validation command is not supported on this platform.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Il comando di convalida della firma del pacchetto non è supportato in questa piattaforma.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";VerifyCommand_PackageIsNotValid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' is not a valid package file.]]></Val>
@@ -2673,15 +2601,6 @@
           <Val><![CDATA[Verifying {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Verifica di {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_CentralPackageVersions_MultipleSourcesWithoutPackageSourceMapping" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[There are {0} package sources defined in your configuration. When using central package management, please map your package sources with package source mapping (https://aka.ms/nuget-package-source-mapping) or specify a single package source.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nella configurazione sono presenti {0} origini pacchetti definite. Quando si usa la gestione centralizzata dei pacchetti, eseguire il mapping delle origini pacchetti con il mapping dell'origine pacchetto (https://aka.ms/nuget-package-source-mapping) o specificare una singola origine pacchetto.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2781,15 +2700,6 @@
           <Val><![CDATA[Project dependency {0} does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[La dipendenza {0} del progetto non contiene un limite inferiore inclusivo. Includere un limite inferiore nella versione della ripendenza per garantire risultati di ripristino coerenti.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_ProjectDependencyMissingVersion" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Project dependency '{0}' does not specify a version. Include a version for the dependency to ensure consistent restore results.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La dipendenza del progetto '{0}' non specifica una versione. Includere una versione per la dipendenza per garantire risultati di ripristino coerenti.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

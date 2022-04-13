@@ -238,15 +238,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_VersionOverrideDisabled" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The package reference {0} specifies a VersionOverride but the ability to override a centrally defined version is currently disabled.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} paket başvurusu VersionOverride belirtiyor ancak merkezi olarak tanımlanmış bir sürümü geçersiz kılma özelliği şu anda devre dışı.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_CentralPackageVersions_VersionsNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: {0}.]]></Val>
@@ -351,15 +342,6 @@
           <Val><![CDATA[Could not update the client certificate: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[İstemci sertifikası güncelleştirilemedi: {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_CouldNotUpdateMetadataLastAccessTime" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Updating last access time on file {0} failed with {1}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} dosyasında son erişim zamanını güncelleştirme işlemi {1} ile başarısız oldu]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -535,29 +517,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_NoClientAllowList" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, no trusted signers were specified.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[signatureValidationMode gerekli olarak ayarlandığından paketlere yalnızca güvenilir imzalayanlar tarafından imzalandıklarında izin verilir, ancak güvenilir imzalayan belirtilmedi.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_NoMatchingCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature did not match any of the allowed certificate fingerprints.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Paket imzası, izin verilen sertifika parmak izlerinden herhangi biriyle eşleşmedi.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_NoMatchingClientCertificate" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[This package is signed but not by a trusted signer.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Bu paket imzalı ancak güvenilen bir imzalayan tarafından imzalanmamış.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -783,15 +747,6 @@
           <Val><![CDATA[Invalid tools package {0} {1}. Tools packages cannot contain more than one PackageType.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Geçersiz araçlar paketi {0} {1}. Araç paketleri birden fazla PackageType içeremez.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_TrustFingerPrintAlreadyExist" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The certificate finger you're trying to add is already in the certificate fingerprint list.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Eklemeye çalıştığınız sertifika parmak izi zaten sertifika parmak izi listesinde var.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1741,15 +1696,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Log_SourceMappingEnabledNoMatchingPackageSources" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[PackageSourceMapping is enabled, the following source(s) were not considered: {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[PackageSourceMapping etkinleştirildi, şu kaynak(lar) değerlendirilmedi: {0}.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Log_TargetsFileNotOnDisk" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The targets file for {0} at location {1} does not exist, no-op is not possible. Continuing restore.]]></Val>
@@ -2175,15 +2121,6 @@
           <Val><![CDATA[Package(s) signed successfully.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Paketler başarıyla imzalandı.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SourceNotConsidered" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Versions from {0} were not considered]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} sürümleri değerlendirilmedi]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2626,15 +2563,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VerifyCommand_NotSupported" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package signature validation command is not supported on this platform.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Paket imzası doğrulama komutu bu platformda desteklenmiyor.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";VerifyCommand_PackageIsNotValid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' is not a valid package file.]]></Val>
@@ -2673,15 +2601,6 @@
           <Val><![CDATA[Verifying {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[{0} doğrulanıyor]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_CentralPackageVersions_MultipleSourcesWithoutPackageSourceMapping" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[There are {0} package sources defined in your configuration. When using central package management, please map your package sources with package source mapping (https://aka.ms/nuget-package-source-mapping) or specify a single package source.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Konfigürasyonunuzda tanımlanmış {0} paket kaynakları var. Merkezi paket yönetimini kullanırken lütfen paket kaynak eşleme (https://aka.ms/nuget-package-source-mapping) ile paket kaynaklarınızı eşleyin veya tek bir paket kaynağı belirtin.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2781,15 +2700,6 @@
           <Val><![CDATA[Project dependency {0} does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Proje bağımlılığı {0}, kapsamlı bir alt sınır içermiyor. Tutarlı geri yükleme sonuçları alındığından emin olmak için bağımlılık sürümüne bir alt sınır ekleyin.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_ProjectDependencyMissingVersion" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Project dependency '{0}' does not specify a version. Include a version for the dependency to ensure consistent restore results.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[‘{0}’ proje bağımlılığı sürüm belirtmiyor. Tutarlı geri yükleme sonuçları sağlamak için bağımlılığın sürümünü ekleyin.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

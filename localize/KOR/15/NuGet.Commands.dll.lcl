@@ -238,15 +238,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_VersionOverrideDisabled" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The package reference {0} specifies a VersionOverride but the ability to override a centrally defined version is currently disabled.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} 패키지 참조에서 VersionOverride를 지정하지만 현재 중앙에서 정의된 버전을 재정의하는 기능을 사용할 수 없습니다.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_CentralPackageVersions_VersionsNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: {0}.]]></Val>
@@ -351,15 +342,6 @@
           <Val><![CDATA[Could not update the client certificate: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[클라이언트 인증서를 업로드할 수 없습니다. {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_CouldNotUpdateMetadataLastAccessTime" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Updating last access time on file {0} failed with {1}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} 파일의 지난 액세스 시간을 업데이트하지 못했습니다({1}).]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -532,29 +514,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_NoClientAllowList" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[signatureValidationMode is set to require, so packages are allowed only if signed by trusted signers; however, no trusted signers were specified.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[signatureValidationMode를 설정해야 합니다. 신뢰할 수 있는 서명자가 서명한 경우에만 패키지가 허용됩니다. 그러나 신뢰할 수 있는 서명자가 지정되지 않았습니다.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_NoMatchingCertificate" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package signature did not match any of the allowed certificate fingerprints.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[패키지 서명이 허용된 인증서 지문과 일치하지 않습니다.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_NoMatchingClientCertificate" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[This package is signed but not by a trusted signer.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[이 패키지는 서명되어 있지만 신뢰할 수 있는 서명자가 서명하지 않았습니다.]]></Val>
+            <Val><![CDATA[패키지 시그니처가 허용된 인증서 지문과 일치하지 않습니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -780,15 +744,6 @@
           <Val><![CDATA[Invalid tools package {0} {1}. Tools packages cannot contain more than one PackageType.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[잘못된 도구 패키지 {0} {1}입니다. 도구 패키지에는 둘 이상의 PackageType을 포함할 수 없습니다.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_TrustFingerPrintAlreadyExist" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The certificate finger you're trying to add is already in the certificate fingerprint list.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[추가하려는 인증서 손가락이 이미 인증서 지문 목록에 있습니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1738,15 +1693,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Log_SourceMappingEnabledNoMatchingPackageSources" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[PackageSourceMapping is enabled, the following source(s) were not considered: {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[PackageSourceMapping을 사용하도록 설정했습니다. 다음 원본이 고려되지 않았습니다. {0}.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Log_TargetsFileNotOnDisk" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The targets file for {0} at location {1} does not exist, no-op is not possible. Continuing restore.]]></Val>
@@ -2176,15 +2122,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SourceNotConsidered" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Versions from {0} were not considered]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} 버전이 고려되지 않음]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Source_DefaultNamePrefix" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package source ]]></Val>
@@ -2606,7 +2543,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package signature validation failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[패키지 서명 유효성 검사에 실패했습니다.]]></Val>
+            <Val><![CDATA[패키지 시그니처 유효성 검사에 실패했습니다.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Could not verify package(s) signature.]]></Val>
@@ -2619,15 +2556,6 @@
           <Val><![CDATA[Finished with {0} errors and {1} warnings.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[완료되었으나 {0}개 오류 및 {1}개 경고가 발생했습니다.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";VerifyCommand_NotSupported" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package signature validation command is not supported on this platform.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[이 플랫폼에서는 패키지 서명 유효성 검사 명령이 지원되지 않습니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2670,15 +2598,6 @@
           <Val><![CDATA[Verifying {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[{0}을(를) 확인하고 있습니다.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_CentralPackageVersions_MultipleSourcesWithoutPackageSourceMapping" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[There are {0} package sources defined in your configuration. When using central package management, please map your package sources with package source mapping (https://aka.ms/nuget-package-source-mapping) or specify a single package source.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[구성에 정의된 {0} 패키지 원본이 있습니다. 중앙 패키지 관리를 사용하는 경우 패키지 원본을 패키지 원본 매핑(https://aka.ms/nuget-package-source-mapping)으로 매핑하거나 단일 패키지 원본을 지정하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2778,15 +2697,6 @@
           <Val><![CDATA[Project dependency {0} does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[프로젝트 종속성 {0}에 포함 하한이 포함되어 있지 않습니다. 일관된 복원 결과를 얻으려면 종속 버전의 하한을 포함하세요.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_ProjectDependencyMissingVersion" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Project dependency '{0}' does not specify a version. Include a version for the dependency to ensure consistent restore results.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[프로젝트 종속성 '{0}'이(가) 버전을 지정하지 않습니다. 일관된 복원 결과를 보장하기 위해 종속성에 대한 버전을 포함합니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
