@@ -13,33 +13,6 @@
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" Disp="true" LocTbl="false" />
-      <Item ItemId=";ActionExecutor_RollingBack" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Install failed. Rolling back...]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Instalacja nie powiodła się. Trwa wycofywanie...]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ActionResolver_UnsupportedAction" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unrecognized Package Action '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nierozpoznana akcja pakietu: „{0}”.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ActionResolver_UnsupportedDependencyBehavior" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unsupported Dependency Behavior '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nieobsługiwane zachowanie zależności: „{0}”.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";AddPackage_ExistingPackageInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package '{0}' already exists at feed '{1}' and is invalid.]]></Val>
@@ -135,24 +108,6 @@
           <Val><![CDATA[Not Found.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Nie znaleziono.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";DownloadActionHandler_InvalidDownloadUrl" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The download URL for {0} '{1}' is invalid.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Adres URL pobierania {0} „{1}” jest nieprawidłowy.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";DownloadActionHandler_NoDownloadUrl" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[No download URL could be found for {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nie można odnaleźć adresu URL pobierania dla {0}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -472,24 +427,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";NuGetRepository_CannotCreateAggregateRepo" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Cannot create a NuGet Repository from the Aggregate Source]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nie można utworzyć repozytorium NuGet ze źródła agregacji]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";NuGetServiceProvider_ServiceNotSupported" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The {0} service is not supported by this object.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Usługa {0} nie jest obsługiwana przez ten obiekt.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";NupkgPath_Invalid" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' is not a valid nupkg file.]]></Val>
@@ -513,15 +450,6 @@
           <Val><![CDATA[One or more URIs must be specified.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Konieczne jest określenie co najmniej jednego identyfikatora URI.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";PackageActionDescriptionWrapper_UnrecognizedAction" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unrecognized Package Action '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nierozpoznana akcja pakietu: „{0}”.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -616,15 +544,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Plugin_FailedToQueryPluginOperationsClaims" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[A failure occurred while attempting to query plugin operation claims for the plugin at '{0}'.  Exception:  {1}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Wystąpił błąd podczas próby wykonania zapytania o oświadczenia operacji wtyczki dla wtyczki w lokalizacji „{0}”. Wyjątek:  {1}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Plugin_FailureQueryingPackageVersions" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A failure occurred while attempting to query package versions for package '{0}' using the plugin at '{1}'.]]></Val>
@@ -675,15 +594,6 @@
           <Val><![CDATA[The idle timeout must be greater than or equal to System.Threading.Timeout.InfiniteTimeSpan.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Limit czasu bezczynności musi być większy lub równy wartości System.Threading.Timeout.InfiniteTimeSpan.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Plugin_IllegalMessageWhileHandshaking" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[An illegal message type was received during handshake.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Podczas uścisku dłoni odebrano komunikat o niedozwolonym typie.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -823,15 +733,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";ProjectInstallationTarget_ProjectIsNotTargetted" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The project '{0}' is not one of the projects targetted by this object.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Projekt „{0}” nie jest jednym z projektów docelowych tego obiektu.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Protocol_BadSource" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Failed to retrieve metadata from source '{0}'.]]></Val>
@@ -841,38 +742,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Protocol_FlatContainerIndexVersionsNotArray" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The 'versions' property at '{0}' must be an array.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Właściwość „versions” („{0}”) musi być tablicą.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Protocol_IndexMissingResourcesNode" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Service index document is missing the 'resources' property.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[W dokumencie indeksu usługi brakuje właściwości „resources”.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Protocol_InvalidJsonObject" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The content at '{0}' is not a valid JSON object.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Zawartość w lokalizacji „{0}” nie jest prawidłowym obiektem JSON.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Protocol_InvalidServiceIndex" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The source does not have the 'version' property at '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Źródło nie ma właściwości „version” w lokalizacji „{0}”.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -891,15 +765,6 @@
           <Val><![CDATA[Metadata could not be loaded from the source '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Nie można załadować metadanych ze źródła „{0}”.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Protocol_MissingRegistrationBase" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The source does not have a Registration Base Url defined!]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Źródło nie ma zdefiniowanego podstawowego adresu Url rejestracji.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1021,24 +886,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";RequiredFeatureUnsupportedException_DefaultMessageWithFeature" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The '{0}' installation feature was required by a package but is not supported on the current host.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Pakiet wymaga funkcji instalacji „{0}”, ale nie jest ona obsługiwana na bieżącym hoście.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";RequiredFeatureUnsupportedException_DefaultMessageWithoutFeature" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The installation host does not support a feature required by this package.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Host instalacji nie obsługuje funkcji wymaganej przez ten pakiet.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";StringCannotBeNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[String argument '{0}' cannot be null or empty]]></Val>
@@ -1066,29 +913,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Warning_HttpServerUsage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Uruchamiasz operację „{0}” ze źródłem „http”, „{1}”. Obsługa źródeł „http” zostanie usunięta w przyszłych wersjach.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Warning_SymbolServerNotConfigured" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Found symbols package '{0}', but no API key was specified for the symbol server. To save an API Key, run 'NuGet.exe setApiKey [your API key from http://www.NuGet.org]5D;'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Znaleziono pakiet symboli „{0}”, ale nie określono klucza interfejsu API dla serwera symboli. Aby zapisać klucz interfejsu API, uruchom polecenie „NuGet.exe setApiKey [klucz interfejsu API ze strony http://www.NuGet.org]5D;”.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";v2sourceDescription" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[API v2 (legacy)]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[API v2 (starsza wersja)]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";v3sourceDescription" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[API v3]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[API v3]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

@@ -13,29 +13,11 @@
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" Disp="true" LocTbl="false" />
-      <Item ItemId=";AddFileToPackage" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Add file '{0}' to package as '{1}']]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ajouter un fichier '{0}' au package en tant que '{1}']]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";ArgumentCannotBeNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The argument cannot be null or empty.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[L'argument ne peut pas être null ou vide.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";BuildingProjectTargetingFramework" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Building project '{0}' for target framework '{1}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Génération du projet '{0}' pour la version cible du .NET Framework '{1}'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -184,15 +166,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_BuildFailed" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Failed to build using '{0} {1}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Échec de la génération avec '{0} {1}'.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_CannotFindMsbuild" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Cannot find version of msbuild.]]></Val>
@@ -310,29 +283,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CouldNotListClientCertificates" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Could not list the client certificates: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Impossible de lister les certificats clients : {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_CouldNotRemove" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Could not remove the trusted signer: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Impossible de supprimer le signataire approuvé : {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_CouldNotRemoveClientCertificate" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Could not remove the client certificate: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Impossible de supprimer le certificat client : {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -682,15 +637,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_ProcessingNuspecFile" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Error occurred when processing file '{0}': {1}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Une erreur s'est produite durant le traitement du fichier '{0}' : {1}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_ProjectDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to find project '{0}'. Check that the project reference is valid and that the project file exists.]]></Val>
@@ -766,29 +712,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_SourceProviderIsNull" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Property SourceProvider is null.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La propriété SourceProvider a une valeur null.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_ToolsPackageWithExtraPackageTypes" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid tools package {0} {1}. Tools packages cannot contain more than one PackageType.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Package d'outils non valide {0} {1}. Les packages d'outils ne peuvent pas contenir plusieurs PackageType.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_TrustFingerPrintAlreadyExist" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The certificate finger you're trying to add is already in the certificate fingerprint list.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le doigt de certificat que vous essayez d’ajouter figure déjà dans la liste des empreintes digitales de certificat.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -855,15 +783,6 @@
           <Val><![CDATA[The folder '{0}' does not contain a project to restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Le dossier '{0}' ne contient pas de projet à restaurer.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_UnableToLocateRestoreTarget_Because" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Failed to find a project to restore in the folder '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Projet à restaurer introuvable dans le dossier '{0}'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1038,15 +957,6 @@
           <Val><![CDATA[Local resources cleared.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ressources locales effacées.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";LocalsCommand_ClearingNuGetCache" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Clearing NuGet cache: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Effacement du cache NuGet : {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1246,29 +1156,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Log_FailedToResolveConflicts" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Failed to resolve conflicts for {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Échec de la résolution des conflits pour {0}.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Log_FeedsUsedSummary" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Feeds used:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Flux utilisés :]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Log_FoundProjectRoot" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Found project root directory: {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Répertoire racine du projet : {0}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1330,38 +1222,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Log_InstallingPackage" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Installing {0} {1}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Installation de {0} {1}.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Log_LockFileMissingLibraryForTargetLibrary" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[{0} {1} is specified in the Lock File target for {2} but is not present in the top-level Libraries list.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} {1} est spécifié dans la cible du fichier Lock pour {2}, mais n'est pas présent dans la liste des bibliothèques du plus haut niveau.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Log_LockFileNotOnDisk" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The lock file for {0} at location {1} does not exist, no-op is not possible. Continuing restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Opération no-op impossible, car le fichier de verrouillage pour {0} n'existe pas à l'emplacement {1}. Poursuite de la restauration.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Log_LockFileOutOfDate" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The lock file is out-of-date relative to the project file. Regenerating the lock file and re-locking.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le fichier de verrouillage est obsolète par rapport au fichier de projet. Regénération du fichier de verrouillage et reverrouillage.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1483,15 +1348,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Log_PackagesIncompatible" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[One or more packages are incompatible with {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Un ou plusieurs packages sont incompatibles avec {0}.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Log_ProjectDoesNotSpecifyTargetFrameworks" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The project {0} does not specify any target frameworks in {1}.]]></Val>
@@ -1533,15 +1389,6 @@
           <Val><![CDATA[{0} of {1} projects are up-to-date for restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Sur l'ensemble des projets, {0} sur {1} sont à jour pour la restauration.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Log_ProjectsIncompatible" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[One or more projects are incompatible with {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Un ou plusieurs projets sont incompatibles avec {0}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1657,15 +1504,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Log_RestoringPackagesForCompat" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Restoring packages for {0} to determine compatibility...]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Restauration des packages pour {0} pour déterminer la compatibilité...]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Log_RunningNonParallelRestore" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Running non-parallel restore.]]></Val>
@@ -1729,15 +1567,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Log_SkippingRuntimeWalk" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Skipping runtime dependency walk, no runtimes defined in project.json.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le parcours des dépendances du runtime est ignoré. Pas de runtime défini dans project.json.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Log_SourceMappingEnabledNoMatchingPackageSources" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[PackageSourceMapping is enabled, the following source(s) were not considered: {0}.]]></Val>
@@ -1797,24 +1626,6 @@
           <Val><![CDATA[Unable to resolve '{0}' for '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Impossible de résoudre '{0}' pour '{1}'.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Log_UsingPackagesDirectory" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Using packages directory: {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Utilisation du répertoire de packages : {0}.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Log_UsingSource" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Using source {0}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Utilisation de la source {0}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1951,42 +1762,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";PackageCommandFileFromDependencyIsChanged" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[File from dependency is not changed. File '{0}' is not added.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le fichier de la dépendance est inchangé. Le fichier '{0}' n'est pas ajouté.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";PackageCommandFileFromDependencyIsNotChanged" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[File from dependency is not changed. File '{0}' is not added.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le fichier de la dépendance est inchangé. Le fichier '{0}' n'est pas ajouté.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";PackagingFilesFromOutputPath" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Packing files from '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Compression des fichiers à partir de '{0}'.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";PersistDGFile" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Persisting restore input to '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Persistance de l'entrée de restauration dans '{0}'.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";PropertyNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid input combination. Property '{0}' is not allowed.]]></Val>
@@ -2100,15 +1875,6 @@
           <Val><![CDATA[Timestamping package(s) with:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Horodatage du ou des packages avec :]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandInvalidCertEku" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The following certificate cannot be used for signing a package as it does not have Code Signing enhanced key usage:]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Impossible d'utiliser le certificat suivant pour signer un package, car il ne propose pas l'utilisation améliorée de la clé Signature du code :]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2269,15 +2035,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SourcesCommandNameRequired" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The name specified cannot be empty. Provide a valid name.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le nom spécifié ne peut pas être vide. Indiquez un nom valide.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";SourcesCommandNoMatchingSourcesFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to find any package source(s) matching name: {0}.]]></Val>
@@ -2341,15 +2098,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SourcesCommandSourceRequired" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The source specified cannot be empty. Provide a valid source.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La source spécifiée ne peut pas être vide. Indiquez une source valide.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";SourcesCommandUniqueName" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The name specified has already been added to the list of available package sources. Provide a unique name.]]></Val>
@@ -2391,15 +2139,6 @@
           <Val><![CDATA[Invalid target framework '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Framework cible '{0}' non valide.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SpecValidationMissingDependency" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Missing dependency on '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Dépendance manquante sur '{0}'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2548,24 +2287,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";UnableToExtractAssemblyMetadata" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unable to extract metadata from '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Impossible d'extraire les métadonnées de '{0}'.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";UnableToFindBuildOutput" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unable to find '{0}'. Make sure the project has been built.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' est introuvable. Assurez-vous que le projet a été généré.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";UnsupportedHashAlgorithm" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The hash algorithm is unsupported:  '{0}'.]]></Val>
@@ -2580,24 +2301,6 @@
           <Val><![CDATA[Skipping restore for project '{0}'. The project file may be invalid or missing targets required for restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ignorer la restauration du projet '{0}'. Il est possible que le fichier projet ne soit pas valide ou qu'il ne contienne pas toutes les cibles nécessaires à la restauration.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";UsingNuspecForMetadata" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Using '{0}' for metadata.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Utilisation de '{0}' pour les métadonnées.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";UsingPackagesConfigForDependencies" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Found packages.config. Using packages listed as dependencies]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[packages.config a été trouvé. Utilisation des packages listés en tant que dépendances]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2692,20 +2395,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Warning_FileDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['{0}' was included in the project but doesn't exist. Skipping...]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' a été inclus dans le projet, mais il n'existe pas. Ignoré...]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Warning_FileExcludedByDefault" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[File '{0}' was not added to the package. Files and folders starting with '.' or ending with '.nupkg' are excluded by default. To include this file, use -NoDefaultExcludes from the commandline]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Le fichier '{0}' n’a pas été ajouté au package. Les fichiers et dossiers commençant par '.' ou se terminant par '.nupkg' sont exclus par défaut. Pour inclure ce fichier, utilisez - NoDefaultExcludes à partir de la ligne de commande]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Warning_HttpServerUsage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Vous exécutez l’opération de '{0}' avec une source « http », '{1}'. La prise en charge des sources « http » sera supprimée dans une future version.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2728,51 +2431,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Warning_MultiTarget" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Packages containing MSBuild targets and props files cannot be fully installed in projects targeting multiple frameworks. The MSBuild targets and props files have been ignored.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Les packages contenant des cibles et des fichiers de propriétés MSBuild ne peuvent pas être installés complètement dans des projets ciblant plusieurs frameworks. Les cibles et les fichiers de propriétés MSBuild ont été ignorés.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_PackageCommandIssueDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Description: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Description : {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_PackageCommandIssueSolution" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Solution: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Solution : {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_PackageCommandIssueTitle" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Issue: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Problème : {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_PackageCommandPackageIssueSummary" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Issue found with package '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Problème trouvé pour le package '{0}'.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Warning_ProjectDependencyMissingLowerBound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Project dependency {0} does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.]]></Val>
@@ -2787,24 +2445,6 @@
           <Val><![CDATA[Project dependency '{0}' does not specify a version. Include a version for the dependency to ensure consistent restore results.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Le '{0}' de dépendance du projet ne spécifie pas de version. Incluez une version de la dépendance pour garantir des résultats de restauration cohérents.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_UnresolvedFilePath" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['{0}' was included in the project but the path could not be resolved. Skipping...]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' a été inclus dans le projet mais le chemin n'a pas pu être résolu. Ignoré...]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_UnspecifiedField" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[{0} was not specified. Using '{1}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} n'a pas été spécifié. Utilisation de '{1}'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
