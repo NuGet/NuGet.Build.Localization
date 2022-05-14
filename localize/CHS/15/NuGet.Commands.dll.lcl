@@ -2379,10 +2379,13 @@
       </Item>
       <Item ItemId=";Warning_CentralPackageVersions_MultipleSourcesWithoutPackageSourceMapping" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[There are {0} package sources defined in your configuration. When using central package management, please map your package sources with package source mapping (https://aka.ms/nuget-package-source-mapping) or specify a single package source.]]></Val>
+          <Val><![CDATA[There are {0} package sources defined in your configuration. When using central package management, please map your package sources with package source mapping (https://aka.ms/nuget-package-source-mapping) or specify a single package source. The following sources are defined: {1}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[配置中定义了{0} 个包源。使用中央包管理时，请使用包源映射映射你的包源(https://aka.ms/nuget-package-source-mapping)，或指定单个包源。]]></Val>
+            <Val><![CDATA[配置中定义了{0} 个包源。使用中央包管理时，请使用包源映射映射你的包源(https://aka.ms/nuget-package-source-mapping)，或指定单个包源。以下源已定义: {1}]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[There are {0} package sources defined in your configuration. When using central package management, please map your package sources with package source mapping (https://aka.ms/nuget-package-source-mapping) or specify a single package source.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
