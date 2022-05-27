@@ -1465,6 +1465,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";String1" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";SymbolApiKey_Description" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The API key for the symbol server.]]></Val>
@@ -1728,6 +1734,24 @@
           <Val><![CDATA[--no-restore|-n flag was used. No compatibility check will be done and the added package reference will be unconditional.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[使用了 --no-restore|-n 旗標。將不會進行任何相容性檢查，且新增的套件參考將會無條件。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Warning_HttpServerUsage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source, '{1}'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[您正在使用 'HTTP' 來源 '{1}' 執行 '{0}' 作業。未來的版本將移除非 HTTPS 存取。請考慮移轉至 'HTTPS' 來源。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Warning_HttpServerUsage_MultipleSources" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}]D;]A;Non-HTTPS access will be removed in a future version. Consider migrating to 'HTTPS' sources.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[您正在使用 'HTTP' 來源: {1}]D;]A; 執行 '{0}' 作業。未來的版本將移除非 HTTPS 存取。請考慮移轉至 'HTTPS' 來源。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
