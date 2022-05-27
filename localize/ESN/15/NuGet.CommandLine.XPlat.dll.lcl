@@ -1465,6 +1465,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";String1" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";SymbolApiKey_Description" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The API key for the symbol server.]]></Val>
@@ -1728,6 +1734,24 @@
           <Val><![CDATA[--no-restore|-n flag was used. No compatibility check will be done and the added package reference will be unconditional.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Se usó el indicador--no-restore|-n. No se realizarán comprobaciones de compatibilidad y la referencia de paquete agregada será incondicional.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Warning_HttpServerUsage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source, '{1}'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Está ejecutando la operación "{0}" con un origen "HTTP", "{1}". El acceso que no sea HTTPS se quitará en una versión futura. Considere la posibilidad de migrar a un origen "HTTPS".]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Warning_HttpServerUsage_MultipleSources" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}]D;]A;Non-HTTPS access will be removed in a future version. Consider migrating to 'HTTPS' sources.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Está ejecutando la operación "{0}" con orígenes "HTTP": {1}]D;]A;El acceso que no sea HTTPS se quitará en una versión futura. Considere la posibilidad de migrar a orígenes "HTTPS".]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
