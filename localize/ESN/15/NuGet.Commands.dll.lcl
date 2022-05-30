@@ -2412,9 +2412,21 @@
       </Item>
       <Item ItemId=";Warning_HttpServerUsage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
+          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source, '{1}'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Está ejecutando la operación '{0}' con un origen 'http', '{1}'. La compatibilidad con orígenes "http" se quitará en una versión futura.]]></Val>
+            <Val><![CDATA[Está ejecutando la operación "{0}" con un origen "HTTP", "{1}". El acceso que no sea HTTPS se quitará en una versión futura. Considere la posibilidad de migrar a un origen "HTTPS".]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Warning_HttpServerUsage_MultipleSources" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}]D;]A;Non-HTTPS access will be removed in a future version. Consider migrating to 'HTTPS' sources.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Está ejecutando la operación "{0}" con orígenes "HTTP": {1}]D;]A;El acceso que no sea HTTPS se quitará en una versión futura. Considere la posibilidad de migrar a orígenes "HTTPS".]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

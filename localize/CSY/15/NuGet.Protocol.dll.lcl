@@ -915,10 +915,13 @@
       </Item>
       <Item ItemId=";Warning_HttpServerUsage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
+          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source, '{1}'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Spouštíte operaci {0} se zdrojem http {1}. Podpora pro zdroje http bude v budoucí verzi odebrána.]]></Val>
+            <Val><![CDATA[Spouštíte operaci {0} se zdrojem HTTP {1}. V budoucí verzi bude odebrána možnost přístupu bez zabezpečení HTTPS. Zvažte migraci na zdroj HTTPS.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
