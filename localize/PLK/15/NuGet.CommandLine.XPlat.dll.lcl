@@ -289,15 +289,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Err_InvalidValue" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Invalid value provided for '{0}'. The accepted values are {1}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Podano nieprawidłową wartość elementu „{0}”. Akceptowane wartości są {1}.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_AddPkgErrorStringForImportedEdit" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Item '{0}' for '{1}' in Imported file '{2}'.]]></Val>
@@ -411,33 +402,6 @@
           <Val><![CDATA[The --prerelease and --version options are not supported in the same command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Opcje --prerelease i --version nie są obsługiwane w tym samym poleceniu.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_TrustFingerPrintAlreadyExist" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The certificate finger you're trying to add is already in the certificate fingerprint list.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Odcisk palca, który próbujesz dodać już istnieje na liście odcisków palca powiązanych z certyfikatem.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_TrustedRepoAlreadyExists" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[A trusted repository with the service index '{0}' already exists.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zaufane repozytorium z indeksem usługi „{0}” już istnieje.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_TrustedSignerAlreadyExists" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[A trusted signer '{0}' already exists.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zaufana osoba podpisująca „{0}” już istnieje.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1633,150 +1597,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SignCommandCertificateFingerprintDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Odcisk palca SHA-1 certyfikatu używanego do wyszukiwania certyfikatu w lokalnym magazynie certyfikatów. Magazyn certyfikatów można określić za pomocą opcji --certificate-store-name i --certificate-store-location.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandCertificatePasswordDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Password for the certificate, if needed.]D;]A;This option can be used to specify the password for the certificate. The command will throw an error message if certificate is password protected but password is not provided as input.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[W razie potrzeby hasło certyfikatu.]D;]A;Tej opcji można użyć do określenia hasła certyfikatu. Polecenie wyrzuci komunikat o błędzie, jeśli certyfikat jest chroniony hasłem, a hasło nie zostało podane jako dane wejściowe.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandCertificatePathDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[File path to the certificate to be used while signing the package.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ścieżka do pliku z certyfikatem, który ma zostać użyty podczas podpisywania pakietu.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandCertificateStoreLocationDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Name of the X.509 certificate store use to search for the certificate. Defaults to "CurrentUser", the X.509 certificate store used by the current user.]D;]A;This option should be used when specifying the certificate via --certificate-subject-name or --certificate-fingerprint options.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nazwa magazynu certyfikatów X.509, który będzie używany do wyszukiwania certyfikatów. Domyślnie jest to „CurrentUser”, czyli magazyn certyfikatów X.509 używany przez bieżącego użytkownika.]D;]A;Opcja ta powinna być używana w przypadku, gdy certyfikat został określony przez opcje --certificate-subject-name lub --certificate-fingerprint.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandCertificateStoreNameDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Name of the X.509 certificate store to use to search for the certificate. Defaults to "My", the X.509 certificate store for personal certificates.]D;]A;This option should be used when specifying the certificate via --certificate-subject-name or --certificate-fingerprint options.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nazwa magazynu certyfikatów X.509, który będzie używany do wyszukiwania certyfikatów. Domyślnie jest to „Mój”, czyli magazyn certyfikatów X.509 dla certyfikatów osobistych.]D;]A;Opcja ta powinna być używana w przypadku, gdy certyfikat został określony przez opcje --certificate-subject-name lub --certificate-fingerprint.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandCertificateSubjectNameDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Subject name of the certificate used to search a local certificate store for the certificate.]D;]A;The search is a case-insensitive string comparison using the supplied value, which will find all certificates with the subject name containing that string, regardless of other subject values. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nazwa podmiotu certyfikatu używanego do wyszukiwania certyfikatu w lokalnym magazynie certyfikatów.]D;]A;Wyszukiwanie polega na porównywaniu łańcuchów bez rozróżniania wielkości liter przy użyciu podanej wartości, co spowoduje znalezienie wszystkich certyfikatów, których nazwa tematu zawiera ten ciąg znaków, niezależnie od innych wartości tematu. Magazyn certyfikatów może być określony przez opcje --certificate-store-name i --certificate-store-location.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Signs NuGet package(s) at <package-paths> with the specified certificate.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Podpisuje pakiet(-y) NuGet w <package-paths> przy użyciu określonego certyfikatu.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandHashAlgorithmDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Hash algorithm to be used to sign the package. Defaults to SHA256.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Algorytm haszujący, który ma być używany do podpisywania pakietu. Wartość domyślna to SHA256.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandMultipleCertificateException" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Multiple options were used to specify a certificate.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Do określenia certyfikatu użyto wielu opcji.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandNoCertificateException" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[No certificate was provided.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nie podano certyfikatu.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandNoTimestamperWarning" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The '--timestamper' option was not provided. The signed package will not be timestamped. To learn more about this option, please visit https://docs.microsoft.com/dotnet/core/tools]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nie podano opcji „--timestamper”. Podpisany pakiet nie będzie opatrzony znacznikiem czasu. Aby dowiedzieć się więcej, wejdź na: https://docs.microsoft.com/dotnet/core/tools]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandOutputDirectoryDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Directory where the signed package(s) should be saved. By default the original package is overwritten by the signed package.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Katalog, w którym podpisany pakiet(-y) powinien zostać zapisany. Domyślnie oryginalny pakiet jest nadpisywany przez podpisany pakiet.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandOverwriteDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Switch to indicate if the current signature should be overwritten. By default the command will fail if the package already has a signature.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Przełącz, aby wskazać, czy bieżący podpis ma być zastąpiony. Domyślnie polecenie nie powiedzie się, jeżeli pakiet zawiera już podpis.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandPackagePathDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Signs NuGet packages at <package-paths> with the specified certificate.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Podpisuje pakiety NuGet w <package-paths> przy użyciu określonego certyfikatu.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandTimestampHashAlgorithmDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Hash algorithm to be used by the RFC 3161 timestamp server. Defaults to SHA256.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Algorytm wyznaczania wartości skrótu do użycia przez serwer znaczników czasu RFC 3161. Wartość domyślna to SHA256.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";SignCommandTimestamperDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[URL to an RFC 3161 timestamping server.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Adres URL do serwera znaczników czasu RFC 3161.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Source_Description" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package source (URL, UNC/folder path or package source name) to use. Defaults to DefaultPushSource if specified in NuGet.Config.]]></Val>
@@ -1945,24 +1765,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";TrustAuthorCommandDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Adds a trusted signer with the given name, based on the author signature of the package.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Dodaje zaufaną osobę podpisującą o podanej nazwie na podstawie podpisu autora pakietu.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TrustCertificateFingerprint" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The fingerprint of the certificate.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Odcisk palca powiązany z certyfikatem.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";TrustCommandActionDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Command actions allow you to specify only a specific subset of signers whose signatures will be accepted, while rejecting all others.]]></Val>
@@ -1983,13 +1785,10 @@
       </Item>
       <Item ItemId=";TrustCommandAllowUntrustedRoot" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specifies if the certificate for the trusted signer should be allowed to chain to an untrusted root. This is not recommended.]]></Val>
+          <Val><![CDATA[Specifies if the certificate for the trusted signer should be allowed to chain to an untrusted root.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Określa, czy certyfikat zaufanej osoby podpisującej powinien mieć możliwość łączenia się z podejrzanym źródłem. Nie jest to polecane rozwiązanie.]]></Val>
+            <Val><![CDATA[Określa, czy certyfikat zaufanej osoby podpisującej powinien mieć możliwość łączenia się w łańcuch do niezaufanego korzenia.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Specifies if the certificate for the trusted signer should be allowed to chain to an untrusted root.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2007,114 +1806,6 @@
           <Val><![CDATA[Semi-colon separated list of trusted owners to further restrict the trust of a repository.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Rozdzielana średnikami lista zaufanych właścicieli w celu dalszego ograniczenia zaufania repozytorium.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TrustListCommandDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Lists all the trusted signers in the configuration.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Wyświetla wszystkie zaufane osoby podpisujące w konfiguracji.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TrustLocalSignedNupkgPath" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The given package should be a local path to the signed .nupkg file.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Podany pakiet powinien być lokalną ścieżką do podpisanego pliku .nupkg.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TrustRemoveCommandDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Removes any trusted signers that match the given name.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Usuwa zaufane osoby podpisujące pasujący do danej nazwy.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TrustRepositoryCommandDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Adds a trusted signer with the given name, based on the repository signature or countersignature of a signed package.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Dodaje zaufaną osobę podpisującą na podstawie podpisu repozytorium lub kontrasygnatury podpisanego pakietu.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TrustSourceCommandDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Adds a trusted signer based on a given package source.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Dodaje zaufaną osobę podpisującą na podstawie podanego źródła pakietu.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TrustSourceSignerName" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA["The name of the trusted signer to add. If only <NAME> is provided without --<source-url>, the package source from your NuGet configuration files with the same name is added to the trusted list. If <NAME> already exists in the configuration, the package source is appended to it."]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[„Nazwa zaufanej osoby podpisującej do dodania. Jeśli podana jest tylko <NAZWA> bez --<adresu URL>, do listy zaufanych zostanie dodane źródło pakietu z plików konfiguracji NuGet o tej samej nazwie. Jeśli <NAZWA> już istnieje w konfiguracji, źródło pakietu zostanie do niej dołączone.”]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TrustSourceUrl" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[If a source-url is provided, it must be a v3 package source URL (like https://api.nuget.org/v3/index.json). Other package source types are not supported.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Jeśli podano adres URL, musi to być źródłowy adres URL w wersji pakietu 3 (np. https://api.nuget.org/v3/index.json). Inne typy źródeł pakietów nie są obsługiwane.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TrustSyncCommandDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Deletes the current list of certificates and replaces them with an up-to-date list from the repository.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Usuwa bieżącą listę certyfikatów i zastępuje ją zaktualizowaną listą z repozytorium.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TrustedCertificateSignerNameToAdd" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The name of the trusted signer to add. If a trusted signer with the given name already exists, the certificate item is added to that signer. Otherwise a trusted author is created with a certificate item from the given certificate information.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nazwa zaufanej osoby podpisującej do dodania. Jeśli zaufana osoba podpisująca o podanej nazwie już istnieje, element certyfikatu zostanie dodany do tej osoby. W innym wypadku zostanie utworzony zaufany autor z elementem certyfikacie.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TrustedSignerNameExists" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The name of the existing trusted signer to sync.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nazwa istniejącej osoby podpisującej do zsynchronizowania.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TrustedSignerNameToAdd" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The name of the trusted signer to add. If name already exists in the configuration, the signature is appended.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Imię osoby podpisującej do dodania. Jeśli imię już istnieje w konfiguracji, podpis zostanie dołączony.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TrustedSignerNameToRemove" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The name of the existing trusted signer to remove.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Imię istniejącej osoby podpisującej do usunięcia.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
