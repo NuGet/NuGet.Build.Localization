@@ -895,6 +895,42 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ChainBuilding_UsingDefaultTrustStore" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[X.509 certificate chain validation will use the default trust store selected by .NET.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La validation de la chaîne de certificats X.509 utilisera le magasin d’approbations par défaut sélectionné par .NET.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ChainBuilding_UsingFallbackCertificateBundle" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[X.509 certificate chain validation will use the fallback certificate bundle at '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La validation de la chaîne de certificats X.509 utilisera l’offre groupée de certificats de secours au '{0}'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ChainBuilding_UsingNoCertificateBundle" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[X.509 certificate chain validation will not have any trusted roots. Chain building will fail with an untrusted status.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La validation de la chaîne de certificats X.509 n’aura aucune racine approuvée. La génération de chaîne échouera avec un état non approuvé.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ChainBuilding_UsingSystemCertificateBundle" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[X.509 certificate chain validation will use the system certificate bundle at '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La validation de la chaîne de certificats X.509 utilisera l’offre groupée de certificats du système au '{0}'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";CommitmentTypeIndicationAttributeInvalid" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The commitment-type-indication attribute is invalid.]]></Val>
@@ -961,15 +997,6 @@
           <Prev Cat="Text">
             <Val><![CDATA[Byte signature not found in package archive:]]></Val>
           </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ErrorByteSignatureTooBig" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Byte signature too big to seek in current stream position.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Signature d'octet trop grande pour une recherche à la position actuelle du flux.]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1408,15 +1435,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";InvalidPackageSignature" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package {0} signature is invalid.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La signature du package {0} n'est pas valide.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";InvalidPackageSignatureFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package contains an invalid package signature file.]]></Val>
@@ -1627,15 +1645,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";MultiplePackageTypes" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Nuspec file contains multiple package types. Zero or one package type nodes are allowed.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le fichier Nuspec contient plusieurs types de package. Zéro ou un type de package est autorisé.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";MustContainAbsolutePath" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' must contain an absolute path '{1}'.]]></Val>
@@ -1779,15 +1788,6 @@
           <Val><![CDATA[The owner has marked this package as 'UNLICENSED'. This means that there is no license that allows this package to be used outside of the copyright owner.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Le propriétaire a marqué ce package comme 'UNLICENSED'. Cela signifie qu'aucune licence n'autorise l'utilisation de ce package en dehors du propriétaire des droits d'auteur.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";NuGetLicense_InvalidLicenseExpression" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The license expression '{0}' cannot be parsed succesfully.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[L'expression de licence '{0}' ne peut pas être analysée correctement.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2140,15 +2140,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SignatureInvalidGeneralPurposeBits" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Invalid general purpose bit flags. Expected '{0}', actual '{1}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Indicateurs de bit à usage général non valides. Attendus '{0}', réels '{1}'.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";SignaturePackageIntegrityFailure" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package integrity check failed. The package has changed since it was signed. Try clearing the local http-cache and run nuget operation again.]]></Val>
@@ -2302,15 +2293,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";SigningCertificateV2NotExactlyOneAttributeValue" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The signing-certificate-v2 attribute does not have exactly one attribute value.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[L’attribut signing-certificate-v2 n'a pas exactement une valeur d'attribut.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";SigningCertificateV2UnsupportedHashAlgorithm" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The signing-certificate-v2 attribute uses an unsupported hash algorithm.]]></Val>
@@ -2392,18 +2374,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";TimestampCertificateInvalid" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The timestamp service's certificate has a valid time in the future: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le certificat du service d'horodatage a une heure valide dans le futur : {0}]]></Val>
-          </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The timestamp service's certificate has a valid time in the future. -]D;]A;{0}]]></Val>
-          </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";TimestampCertificateUnsupportedSignatureAlgorithm" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The timestamp certificate has an unsupported signature algorithm ({0}). The following algorithms are supported: {1}.]]></Val>
@@ -2434,15 +2404,6 @@
           <Prev Cat="Text">
             <Val><![CDATA[Timestamp response does not contain a matching response.]]></Val>
           </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";TimestampResponseExceptionGeneral" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Timestamp service's response does not meet the NuGet package signature specification: '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La réponse du service d'horodatage ne répond pas à la spécification de la signature de package NuGet : « {0} ».]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
