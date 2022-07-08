@@ -13,6 +13,33 @@
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId=";ActionExecutor_RollingBack" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Install failed. Rolling back...]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[インストールに失敗しました。ロールバックしています...]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ActionResolver_UnsupportedAction" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unrecognized Package Action '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[認識されないパッケージ アクション '{0}'。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ActionResolver_UnsupportedDependencyBehavior" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unsupported Dependency Behavior '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[サポートされていない依存関係の動作 '{0}'。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";AddPackage_ExistingPackageInvalid" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package '{0}' already exists at feed '{1}' and is invalid.]]></Val>
@@ -26,7 +53,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package '{0}' already exists at feed '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[パッケージ '{0}' がフィード '{1}' に既に存在します。]]></Val>
+            <Val><![CDATA[パッケージ '{0}' はフィード '{1}' に既に存在します。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -80,7 +107,7 @@
         <Str Cat="Text">
           <Val><![CDATA[{0} {1} will be deleted from the {2}. Would you like to continue?]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} {1} が {2} から削除されます。続行しますか。]]></Val>
+            <Val><![CDATA[{0} {1} が {2} から削除されます。続行しますか?]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -108,6 +135,24 @@
           <Val><![CDATA[Not Found.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[見つかりません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";DownloadActionHandler_InvalidDownloadUrl" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The download URL for {0} '{1}' is invalid.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} '{1}' のダウンロード URL が無効です。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";DownloadActionHandler_NoDownloadUrl" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No download URL could be found for {0}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} のダウンロード URL が見つかりませんでした。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -368,7 +413,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Retrying '{0}' for source '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[ソース '{1}' に関して '{0}' を再試行しています。]]></Val>
+            <Val><![CDATA[ソース '{1}' の '{0}' を再試行しています。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -427,6 +472,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";NuGetRepository_CannotCreateAggregateRepo" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Cannot create a NuGet Repository from the Aggregate Source]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[集約ソースから NuGet リポジトリを作成できません]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";NuGetServiceProvider_ServiceNotSupported" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The {0} service is not supported by this object.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} サービスは、このオブジェクトでサポートされていません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";NupkgPath_Invalid" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA['{0}' is not a valid nupkg file.]]></Val>
@@ -450,6 +513,15 @@
           <Val><![CDATA[One or more URIs must be specified.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[1 つ以上の URI を指定する必要があります。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackageActionDescriptionWrapper_UnrecognizedAction" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unrecognized Package Action '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[認識されないパッケージ アクション '{0}'。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -544,6 +616,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Plugin_FailedToQueryPluginOperationsClaims" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A failure occurred while attempting to query plugin operation claims for the plugin at '{0}'.  Exception:  {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' のプラグインで、プラグイン操作要求のクエリを実行しているときにエラーが発生しました。例外: {1}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Plugin_FailureQueryingPackageVersions" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[A failure occurred while attempting to query package versions for package '{0}' using the plugin at '{1}'.]]></Val>
@@ -594,6 +675,15 @@
           <Val><![CDATA[The idle timeout must be greater than or equal to System.Threading.Timeout.InfiniteTimeSpan.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[アイドル タイムアウトは、System.Threading.Timeout.InfiniteTimeSpan 以上である必要があります。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Plugin_IllegalMessageWhileHandshaking" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[An illegal message type was received during handshake.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ハンドシェイク中に無効なメッセージの種類を受信しました。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -733,6 +823,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ProjectInstallationTarget_ProjectIsNotTargetted" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project '{0}' is not one of the projects targetted by this object.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プロジェクト '{0}' は、このオブジェクトで対象となっているプロジェクトに含まれていません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Protocol_BadSource" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Failed to retrieve metadata from source '{0}'.]]></Val>
@@ -742,11 +841,38 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Protocol_FlatContainerIndexVersionsNotArray" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The 'versions' property at '{0}' must be an array.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' の 'versions' プロパティは配列にする必要があります。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Protocol_IndexMissingResourcesNode" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Service index document is missing the 'resources' property.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[サービス インデックス ドキュメントに 'resources' プロパティがありません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Protocol_InvalidJsonObject" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The content at '{0}' is not a valid JSON object.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA['{0}' のコンテンツは有効な JSON オブジェクトではありません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Protocol_InvalidServiceIndex" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The source does not have the 'version' property at '{0}'.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ソースの '{0}' に 'version' プロパティがありません。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -769,11 +895,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Protocol_MissingRegistrationBase" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The source does not have a Registration Base Url defined!]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ソースに登録ベース URL が定義されていません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Protocol_MissingSearchService" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The source does not have a Search service!]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[ソースに検索サービスが含まれていません。]]></Val>
+            <Val><![CDATA[ソースに Search Service が含まれていません。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -886,6 +1021,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";RequiredFeatureUnsupportedException_DefaultMessageWithFeature" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The '{0}' installation feature was required by a package but is not supported on the current host.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' インストール機能がパッケージで必要でしたが、現在のホストではサポートされていません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";RequiredFeatureUnsupportedException_DefaultMessageWithoutFeature" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The installation host does not support a feature required by this package.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[インストール ホストは、このパッケージで必要な機能をサポートしていません。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";StringCannotBeNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[String argument '{0}' cannot be null or empty]]></Val>
@@ -913,23 +1066,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Warning_HttpServerUsage" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source, '{1}'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['HTTP' ソース '{1}' で '{0}' 操作を実行しています。HTTPS 以外のアクセスは、今後のバージョンでは削除されます。'HTTPS' ソースへの移行を検討してください。]]></Val>
-          </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
-          </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Warning_SymbolServerNotConfigured" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Found symbols package '{0}', but no API key was specified for the symbol server. To save an API Key, run 'NuGet.exe setApiKey [your API key from http://www.NuGet.org]5D;'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[シンボル パッケージ '{0}' が見つかりましたが、シンボル サーバーで API キーが指定されていません。API キーを保存するには、'NuGet.exe setApiKey [http://www.NuGet.org の API キー]5D;' を実行します。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";v2sourceDescription" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[API v2 (legacy)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[API v2 (レガシ)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";v3sourceDescription" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[API v3]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[API v3]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
