@@ -76,15 +76,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";CannotUpdateOrigin" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Cannot update the origin of a setting.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Bir ayarın kaynağı güncelleştirilemiyor.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";CannotUpdateReadOnlyConfig" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to update setting since it is in an uneditable config file.]]></Val>
@@ -108,6 +99,15 @@
           <Val><![CDATA[Credentials item must have username and password.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Kimlik bilgileri öğesinde kullanıcı adı ve parola olmalıdır.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_DuplicatePackageSource" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[PackageSourceMapping is enabled and there are multiple package sources associated with the same key(s): {0}. Path: {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[PackageSourceMapping etkinleştirildi ve aynı anahtarlarla ilişkilendirilmiş birden çok paket kaynağı var: {0}. Yol: {1}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -180,15 +180,6 @@
           <Val><![CDATA[A credentials item must have only one ValidAuthenticationTypes entry.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Bir kimlik bilgileri öğesinde yalnızca bir ValidAuthenticationTypes girdisinin olması gerekir.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_NoWritableConfig" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[There are no writable config files.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Yazılabilir yapılandırma dosyası yok.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -319,29 +310,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";PackageSource_Invalid" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The package source does not belong to the collection of available sources.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Paket kaynağı, kullanılabilir kaynaklar koleksiyonuna ait değil.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";PropertyCannotBeNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} cannot be null or empty.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[{0} özelliği null veya boş olamaz.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";RelativeEnvVarPath" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Environment variable '{0}' must contain an absolute path, the full path of '{1}' cannot be determined.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' ortam değişkeni bir mutlak yol içermelidir; '{1}' tam yolu belirlenemiyor.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
