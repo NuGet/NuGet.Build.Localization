@@ -76,15 +76,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";CannotUpdateOrigin" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Cannot update the origin of a setting.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zdroj nastavení nelze aktualizovat.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";CannotUpdateReadOnlyConfig" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to update setting since it is in an uneditable config file.]]></Val>
@@ -108,6 +99,15 @@
           <Val><![CDATA[Credentials item must have username and password.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Položka přihlašovacích údajů musí obsahovat uživatelské jméno a heslo.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_DuplicatePackageSource" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[PackageSourceMapping is enabled and there are multiple package sources associated with the same key(s): {0}. Path: {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[PackageSourceMapping je povoleno a ke stejným klíčům je přidruženo více zdrojů balíčku: {0}. Cesta: {1}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -180,15 +180,6 @@
           <Val><![CDATA[A credentials item must have only one ValidAuthenticationTypes entry.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Položka přihlašovacích údajů musí mít jenom jednu položku ValidAuthenticationTypes.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_NoWritableConfig" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[There are no writable config files.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nejsou dostupné žádné konfigurační soubory s možností zápisu.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -319,29 +310,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";PackageSource_Invalid" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The package source does not belong to the collection of available sources.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zdroj balíčků nepatří do kolekce dostupných zdrojů.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";PropertyCannotBeNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} cannot be null or empty.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Vlastnost {0} nemůže být null nebo prázdná.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";RelativeEnvVarPath" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Environment variable '{0}' must contain an absolute path, the full path of '{1}' cannot be determined.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Proměnná prostředí {0} musí obsahovat absolutní cestu. Úplnou cestu pro {1} nejde určit.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

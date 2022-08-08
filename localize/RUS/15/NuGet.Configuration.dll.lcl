@@ -76,15 +76,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";CannotUpdateOrigin" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Cannot update the origin of a setting.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Невозможно обновить источник параметра.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";CannotUpdateReadOnlyConfig" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to update setting since it is in an uneditable config file.]]></Val>
@@ -108,6 +99,15 @@
           <Val><![CDATA[Credentials item must have username and password.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Элемент учетных данных должен иметь имя пользователя и пароль.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_DuplicatePackageSource" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[PackageSourceMapping is enabled and there are multiple package sources associated with the same key(s): {0}. Path: {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[PackageSourceMapping включен, и с одинаковыми ключами связано несколько источников пакетов: {0}. Путь: {1}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -180,15 +180,6 @@
           <Val><![CDATA[A credentials item must have only one ValidAuthenticationTypes entry.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Элемент учетных данных должен иметь только одну запись ValidAuthenticationTypes.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_NoWritableConfig" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[There are no writable config files.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Отсутствуют файлы конфигурации, доступные для записи.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -319,29 +310,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";PackageSource_Invalid" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The package source does not belong to the collection of available sources.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Источник пакетов не принадлежит к коллекции доступных источников.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";PropertyCannotBeNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} cannot be null or empty.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[{0} не может быть пустым или равным NULL.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";RelativeEnvVarPath" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Environment variable '{0}' must contain an absolute path, the full path of '{1}' cannot be determined.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Переменная среды "{0}" должна содержать абсолютный путь; невозможно определить полный путь для "{1}".]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
