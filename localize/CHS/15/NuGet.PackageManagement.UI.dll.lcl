@@ -90,12 +90,12 @@
       </Item>
       <Item ItemId=";localsCommandButton.Text" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Button">
-          <Val><![CDATA[&Clear All NuGet Cache(s)]]></Val>
+          <Val><![CDATA[&Clear All NuGet Storage]]></Val>
           <Tgt Cat="Button" Stat="Loc" Orig="New">
-            <Val><![CDATA[清除所有 NuGet 缓存(&C)]]></Val>
+            <Val><![CDATA[清除所有 NuGet 存储(&C)]]></Val>
           </Tgt>
           <Prev Cat="Button">
-            <Val><![CDATA[Clear All NuGet Cache(s)]]></Val>
+            <Val><![CDATA[&Clear All NuGet Cache(s)]]></Val>
           </Prev>
         </Str>
         <Bin BinId="1">
@@ -2199,28 +2199,37 @@
       </Item>
       <Item ItemId=";ShowMessage_LocalsCommandFailure" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[NuGet cache(s) clear failed at {0}. ]D;]A;Error: {1}]D;]A;Please see https://aka.ms/troubleshoot_nuget_cache for more help.]]></Val>
+          <Val><![CDATA[NuGet storage clear failed at {0}. ]D;]A;Error: {1}]D;]A;Please see https://aka.ms/troubleshoot_nuget_cache for more help.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[在 {0}，NuGet 缓存清理失败。]D;]A;错误: {1}]D;]A;请参阅 https://aka.ms/troubleshoot_nuget_cache 以获取更多帮助。]]></Val>
+            <Val><![CDATA[未能清理 {0} 处的 NuGet 存储。]D;]A;错误: {1}]D;]A;请参阅 https://aka.ms/troubleshoot_nuget_cache 以获取更多帮助。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[NuGet cache(s) clear failed at {0}. ]D;]A;Error: {1}]D;]A;Please see https://aka.ms/troubleshoot_nuget_cache for more help.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ShowMessage_LocalsCommandSuccess" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[NuGet cache(s) cleared at {0}]]></Val>
+          <Val><![CDATA[NuGet storage cleared at {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[在 {0}，已清理 NuGet 缓存]]></Val>
+            <Val><![CDATA[已清除 {0} 处的 NuGet 存储]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[NuGet cache(s) cleared at {0}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ShowMessage_LocalsCommandWorking" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clearing all NuGet cache(s). ]]></Val>
+          <Val><![CDATA[Clearing all NuGet storage. ]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[正在清除所有 NuGet 缓存。]]></Val>
+            <Val><![CDATA[正在清除所有 NuGet 存储。 ]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Clearing all NuGet cache(s). ]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
