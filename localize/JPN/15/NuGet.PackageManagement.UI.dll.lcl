@@ -90,12 +90,12 @@
       </Item>
       <Item ItemId=";localsCommandButton.Text" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Button">
-          <Val><![CDATA[&Clear All NuGet Cache(s)]]></Val>
+          <Val><![CDATA[&Clear All NuGet Storage]]></Val>
           <Tgt Cat="Button" Stat="Loc" Orig="New">
-            <Val><![CDATA[すべての NuGet キャッシュをクリア(&C)]]></Val>
+            <Val><![CDATA[すべての NuGet ストレージをクリア(&C)]]></Val>
           </Tgt>
           <Prev Cat="Button">
-            <Val><![CDATA[Clear All NuGet Cache(s)]]></Val>
+            <Val><![CDATA[&Clear All NuGet Cache(s)]]></Val>
           </Prev>
         </Str>
         <Bin BinId="1">
@@ -2199,28 +2199,37 @@
       </Item>
       <Item ItemId=";ShowMessage_LocalsCommandFailure" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[NuGet cache(s) clear failed at {0}. ]D;]A;Error: {1}]D;]A;Please see https://aka.ms/troubleshoot_nuget_cache for more help.]]></Val>
+          <Val><![CDATA[NuGet storage clear failed at {0}. ]D;]A;Error: {1}]D;]A;Please see https://aka.ms/troubleshoot_nuget_cache for more help.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[NuGet キャッシュをクリアできませんでした ({0})。]D;]A;エラー: {1}]D;]A;詳しいヘルプについては、https://aka.ms/troubleshoot_nuget_cache をご覧ください。]]></Val>
+            <Val><![CDATA[NuGet ストレージをクリアできませんでした ({0})。]D;]A;エラー: {1}]D;]A;詳しいヘルプについては、https://aka.ms/troubleshoot_nuget_cache をご覧ください。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[NuGet cache(s) clear failed at {0}. ]D;]A;Error: {1}]D;]A;Please see https://aka.ms/troubleshoot_nuget_cache for more help.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ShowMessage_LocalsCommandSuccess" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[NuGet cache(s) cleared at {0}]]></Val>
+          <Val><![CDATA[NuGet storage cleared at {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[NuGet キャッシュがクリアされました ({0})]]></Val>
+            <Val><![CDATA[NuGet ストレージが {0} でクリアされました]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[NuGet cache(s) cleared at {0}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ShowMessage_LocalsCommandWorking" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clearing all NuGet cache(s). ]]></Val>
+          <Val><![CDATA[Clearing all NuGet storage. ]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[すべての NuGet キャッシュをクリアしています。]]></Val>
+            <Val><![CDATA[すべての NuGet ストレージをクリアしています。 ]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Clearing all NuGet cache(s). ]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

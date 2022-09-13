@@ -90,12 +90,12 @@
       </Item>
       <Item ItemId=";localsCommandButton.Text" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Button">
-          <Val><![CDATA[&Clear All NuGet Cache(s)]]></Val>
+          <Val><![CDATA[&Clear All NuGet Storage]]></Val>
           <Tgt Cat="Button" Stat="Loc" Orig="New">
-            <Val><![CDATA[&Cancella tutte le cache NuGet]]></Val>
+            <Val><![CDATA[&Cancella tutto lo spazio di archiviazione NuGet]]></Val>
           </Tgt>
           <Prev Cat="Button">
-            <Val><![CDATA[Clear All NuGet Cache(s)]]></Val>
+            <Val><![CDATA[&Clear All NuGet Cache(s)]]></Val>
           </Prev>
         </Str>
         <Bin BinId="1">
@@ -2199,28 +2199,37 @@
       </Item>
       <Item ItemId=";ShowMessage_LocalsCommandFailure" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[NuGet cache(s) clear failed at {0}. ]D;]A;Error: {1}]D;]A;Please see https://aka.ms/troubleshoot_nuget_cache for more help.]]></Val>
+          <Val><![CDATA[NuGet storage clear failed at {0}. ]D;]A;Error: {1}]D;]A;Please see https://aka.ms/troubleshoot_nuget_cache for more help.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La cancellazione delle cache NuGet in {0}non è riuscita. ]D;]A;Errore: {1}]D;]A;Per altre informazioni, vedere https://aka.ms/troubleshoot_nuget_cache.]]></Val>
+            <Val><![CDATA[La pulizia dello spazio di archiviazione NuGet non è riuscita in {0}. ]D;]A;Errore: {1}]D;]A;Per altre informazioni, vedere https://aka.ms/troubleshoot_nuget_cache.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[NuGet cache(s) clear failed at {0}. ]D;]A;Error: {1}]D;]A;Please see https://aka.ms/troubleshoot_nuget_cache for more help.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ShowMessage_LocalsCommandSuccess" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[NuGet cache(s) cleared at {0}]]></Val>
+          <Val><![CDATA[NuGet storage cleared at {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le cache NuGet in {0} sono state cancellate]]></Val>
+            <Val><![CDATA[Spazio di archiviazione NuGet cancellato in {0}]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[NuGet cache(s) cleared at {0}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ShowMessage_LocalsCommandWorking" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clearing all NuGet cache(s). ]]></Val>
+          <Val><![CDATA[Clearing all NuGet storage. ]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Cancellazione di tutte le cache Nuget. ]]></Val>
+            <Val><![CDATA[Cancellazione di tutte le risorse di archiviazione NuGet in corso. ]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Clearing all NuGet cache(s). ]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

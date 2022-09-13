@@ -90,12 +90,12 @@
       </Item>
       <Item ItemId=";localsCommandButton.Text" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Button">
-          <Val><![CDATA[&Clear All NuGet Cache(s)]]></Val>
+          <Val><![CDATA[&Clear All NuGet Storage]]></Val>
           <Tgt Cat="Button" Stat="Loc" Orig="New">
-            <Val><![CDATA[모든 NuGet 캐시 지우기(&C)]]></Val>
+            <Val><![CDATA[모든 NuGet 스토리지 지우기(&C)]]></Val>
           </Tgt>
           <Prev Cat="Button">
-            <Val><![CDATA[Clear All NuGet Cache(s)]]></Val>
+            <Val><![CDATA[&Clear All NuGet Cache(s)]]></Val>
           </Prev>
         </Str>
         <Bin BinId="1">
@@ -2199,28 +2199,37 @@
       </Item>
       <Item ItemId=";ShowMessage_LocalsCommandFailure" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[NuGet cache(s) clear failed at {0}. ]D;]A;Error: {1}]D;]A;Please see https://aka.ms/troubleshoot_nuget_cache for more help.]]></Val>
+          <Val><![CDATA[NuGet storage clear failed at {0}. ]D;]A;Error: {1}]D;]A;Please see https://aka.ms/troubleshoot_nuget_cache for more help.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0}에서 NuGet 캐시 지우기에 실패했습니다. ]D;]A;오류: {1}]D;]A;자세한 도움말은 https://aka.ms/troubleshoot_nuget_cache를 참조하세요.]]></Val>
+            <Val><![CDATA[{0}에서 NuGet 스토리지 지우기에 실패했습니다. ]D;]A;오류: {1}]D;]A;자세한 도움말은 https://aka.ms/troubleshoot_nuget_cache를 참조하세요.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[NuGet cache(s) clear failed at {0}. ]D;]A;Error: {1}]D;]A;Please see https://aka.ms/troubleshoot_nuget_cache for more help.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ShowMessage_LocalsCommandSuccess" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[NuGet cache(s) cleared at {0}]]></Val>
+          <Val><![CDATA[NuGet storage cleared at {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0}에서 NuGet 캐시를 지웠습니다.]]></Val>
+            <Val><![CDATA[{0}에 NuGet 스토리지가 지워졌습니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[NuGet cache(s) cleared at {0}]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ShowMessage_LocalsCommandWorking" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Clearing all NuGet cache(s). ]]></Val>
+          <Val><![CDATA[Clearing all NuGet storage. ]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[모든 NuGet 캐시를 지웁니다. ]]></Val>
+            <Val><![CDATA[모든 NuGet 스토리지를 지우는 중입니다. ]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Clearing all NuGet cache(s). ]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
