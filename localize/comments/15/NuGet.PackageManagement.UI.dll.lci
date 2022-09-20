@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LCX SchemaVersion="6.0" Name="E:\A\_work\93\s\artifacts\NuGet.PackageManagement.UI\15.0\bin\release\NuGet.PackageManagement.UI.dll" PsrId="211" FileType="1" SrcCul="en-US" Desc="Commenting file created by LCXAdmin. For more information, please visit http://localizability/longhorn/LcxAdmin.asp" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+<LCX SchemaVersion="6.0" Name="E:\A\_work\10\s\artifacts\NuGet.PackageManagement.UI\15.0\bin\release\NuGet.PackageManagement.UI.dll" PsrId="211" FileType="1" SrcCul="en-US" Desc="Commenting file created by LCXAdmin. For more information, please visit http://localizability/longhorn/LcxAdmin.asp" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
   <OwnedComments>
     <Cmt Name="LcxAdmin" />
   </OwnedComments>
+  <Settings Name="@vsLocTools@\default.lss" Type="Lss" />
   <Item ItemId=";Managed Resources" ItemType="0" PsrId="211" Leaf="true">
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
   </Item>
@@ -10,8 +11,8 @@
     <Disp Icon="Dlg" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";GeneralOptionControl" ItemType="4" PsrId="211" Leaf="false">
       <Disp Edtr="External" Icon="Dlg" Disp="true" LocTbl="false" />
-      <Item ItemId=";defaultPackageManagementFormatItems.Items" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Combo Box">
+      <Item ItemId=";defaultPackageManagementFormatItems.Items" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Combo Box" UsrLk="true">
           <Val><![CDATA[Packages.config]]></Val>
         </Str>
         <Disp Icon="Dlg" />
@@ -19,7 +20,7 @@
           <Cmt Name="LcxAdmin"><![CDATA[{Locked="Packages.config"}]]></Cmt>
         </Cmts>
       </Item>
-      <Item ItemId=";defaultPackageManagementFormatItems.Items1" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";defaultPackageManagementFormatItems.Items1" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Combo Box">
           <Val><![CDATA[PackageReference]]></Val>
         </Str>
@@ -28,16 +29,16 @@
           <Cmt Name="LcxAdmin"><![CDATA[{Locked="PackageReference"}]]></Cmt>
         </Cmts>
       </Item>
-      <Item ItemId=";localsCommandButton.Text" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";localsCommandButton.Text" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Button">
-          <Val><![CDATA[Clear All NuGet Cache(s)]]></Val>
+          <Val><![CDATA[&Clear All NuGet Storage]]></Val>
         </Str>
         <Disp Icon="Dlg" />
         <Cmts>
           <Cmt Name="LcxAdmin"><![CDATA[{Locked="NuGet"}]]></Cmt>
         </Cmts>
       </Item>
-      <Item ItemId=";packageRestoreAutomaticCheckBox.Text" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";packageRestoreAutomaticCheckBox.Text" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Check Box">
           <Val><![CDATA[Auto&matically check for missing packages during build in Visual Studio]]></Val>
         </Str>
@@ -46,7 +47,7 @@
           <Cmt Name="LcxAdmin"><![CDATA[{Locked="Visual Studio"}]]></Cmt>
         </Cmts>
       </Item>
-      <Item ItemId=";packageRestoreConsentCheckBox.Text" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";packageRestoreConsentCheckBox.Text" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Check Box">
           <Val><![CDATA[&Allow NuGet to download missing packages]]></Val>
         </Str>
@@ -106,42 +107,6 @@
           <Cmt Name="LcxAdmin"><![CDATA[{Locked="NuGet"}]]></Cmt>
         </Cmts>
       </Item>
-      <Item ItemId=";PackageRestoreCompleted" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Finished configuring this solution to restore NuGet packages on build.]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-        <Cmts>
-          <Cmt Name="LcxAdmin"><![CDATA[{Locked="NuGet"}]]></Cmt>
-        </Cmts>
-      </Item>
-      <Item ItemId=";PackageRestoreConfirmation" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Do you want to configure this solution to download and restore missing NuGet packages during build? A .nuget folder will be added to the root of the solution that contains files that enable package restore.]D;]A;]D;]A;Packages installed into Website projects will not be restored during build. Consider converting those into Web application projects if necessary.]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-        <Cmts>
-          <Cmt Name="LcxAdmin"><![CDATA[{Locked="NuGet", ".nuget"}]]></Cmt>
-        </Cmts>
-      </Item>
-      <Item ItemId=";PackageRestoreErrorMessage" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[An error occurred while configuring the solution to restore NuGet packages on build]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-        <Cmts>
-          <Cmt Name="LcxAdmin"><![CDATA[{Locked="NuGet"}]]></Cmt>
-        </Cmts>
-      </Item>
-      <Item ItemId=";PackageRestoreWaitMessage" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Configuring the solution to restore NuGet packages on build...]]></Val>
-        </Str>
-        <Disp Icon="Str" />
-        <Cmts>
-          <Cmt Name="LcxAdmin"><![CDATA[{Locked="NuGet"}]]></Cmt>
-        </Cmts>
-      </Item>
       <Item ItemId=";RadioBtn_PackageRef" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[PackageReference in project file]]></Val>
@@ -152,7 +117,7 @@
         </Cmts>
       </Item>
       <Item ItemId=";RadioBtn_PackagesConfig" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
+        <Str Cat="Text" UsrLk="true">
           <Val><![CDATA[Packages.config]]></Val>
         </Str>
         <Disp Icon="Str" />
@@ -216,7 +181,7 @@
       </Item>
       <Item ItemId=";Warning_ProjectJson" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[These options are not applicable to projects managing their dependencies through project.json.]]></Val>
+          <Val><![CDATA[These options are not applicable to projects managing their dependencies through project.json or PackageReference]]></Val>
         </Str>
         <Disp Icon="Str" />
         <Cmts>
