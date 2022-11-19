@@ -166,6 +166,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Http_ResponseLogWithRetryAfter" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} {1} {2}ms (retry after: {3}s)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0}{1}{2}ミリ秒 (後で再試行: {3}秒)]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Http_Timeout" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The HTTP request to '{0} {1}' has timed out after {2}ms.]]></Val>
