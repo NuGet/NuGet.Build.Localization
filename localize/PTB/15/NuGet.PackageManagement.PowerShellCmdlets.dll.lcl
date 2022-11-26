@@ -13,6 +13,24 @@
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId=";Add_WrapperMembers" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[#]D;]A;# This private script adds $InterfaceType members to $psObject which invokes on $wrappedObject]D;]A;#]D;]A;Param(]D;]A;    $psObject,]D;]A;    $wrappedObject,]D;]A;    [Type]5D;$InterfaceType]D;]A;)]D;]A;]D;]A;function GetInvoker]D;]A;{]D;]A;    Param(]D;]A;        $Target,]D;]A;        $Method]D;]A;    )]D;]A;]D;]A;    if ($Method.IsGenericMethodDefinition) {]D;]A;        return {]D;]A;            $t = $Target]D;]A;            $m = $Method.MakeGenericMethod($args)]D;]A;            ]D;]A;            if (!$m.GetParameters()) {]D;]A;                return $m.Invoke($t, @())]D;]A;            }]D;]A;            ]D;]A;            $o = New-Object PSObject]D;]A;            Add-Member -InputObject $o -MemberType ScriptMethod -Name Invoke -Value {]D;]A;                    [NuGetConsole.Host.PowerShell.Implementation.PSTypeWrapper]5D;::InvokeMethod($t, $m, $args)]D;]A;                }.GetNewClosure()]D;]A;            return $o]D;]A;        }.GetNewClosure()]D;]A;    }]D;]A;    ]D;]A;    return {]D;]A;        [NuGetConsole.Host.PowerShell.Implementation.PSTypeWrapper]5D;::InvokeMethod($Target, $Method, $args)]D;]A;    }.GetNewClosure()]D;]A;}]D;]A;]D;]A;$InterfaceType.GetMembers() | %{]D;]A;    $m = $_]D;]A;    $getter = $null]D;]A;    $setter = $null]D;]A;    ]D;]A;    if ($m.MemberType -eq [System.Reflection.MemberTypes]5D;"Property") {]D;]A;    ]D;]A;        if ($m.CanRead) {]D;]A;            $getter = GetInvoker $wrappedObject $m.GetGetMethod()]D;]A;        }]D;]A;        if ($m.CanWrite) {]D;]A;            $setter = GetInvoker $wrappedObject $m.GetSetMethod()]D;]A;        }]D;]A;        ]D;]A;        $prop = New-Object Management.Automation.PSScriptProperty $m.Name, $getter, $setter]D;]A;        $psObject.PSObject.Properties.Add($prop)]D;]A;        ]D;]A;    } elseif (!$m.IsSpecialName -and]D;]A;            ($m.MemberType -eq [System.Reflection.MemberTypes]5D;"Method")) {]D;]A;    ]D;]A;        $invoker = GetInvoker $wrappedObject $m]D;]A;        $method = New-Object Management.Automation.PSScriptMethod $m.Name, $invoker]D;]A;        $psObject.PSObject.Methods.Add($method)]D;]A;    }]D;]A;}]D;]A;]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[#]D;]A;# Este script privado adiciona membros do $InterfaceType ao $psObject que invoca o parâmetro $wrappedObject ]D;]A;#]D;]A;(]D;]A;    $psObject,]D;]A;    $wrappedObject,]D;]A;    [Type]5D;$InterfaceType]D;]A;)]D;]A;]D;]A;function GetInvoker]D;]A;{]D;]A;    Param(]D;]A;        $Target,]D;]A;        $Method]D;]A;    )]D;]A;]D;]A;    if ($Method.IsGenericMethodDefinition) {]D;]A;        return {]D;]A;            $t = $Target]D;]A;            $m = $Method.MakeGenericMethod($args)]D;]A;            ]D;]A;            if (!$m.GetParameters()) {]D;]A;                return $m.Invoke($t, @())]D;]A;            }]D;]A;            ]D;]A;            $o = New-Object PSObject]D;]A;            Add-Member -InputObject $o -MemberType ScriptMethod -Name Invoke -Value {]D;]A;                    [NuGetConsole.Host.PowerShell.Implementation.PSTypeWrapper]5D;::InvokeMethod($t, $m, $args)]D;]A;                }.GetNewClosure()]D;]A;            return $o]D;]A;        }.GetNewClosure()]D;]A;    }]D;]A;    ]D;]A;    return {]D;]A;        [NuGetConsole.Host.PowerShell.Implementation.PSTypeWrapper]5D;::InvokeMethod($Target, $Method, $args)]D;]A;    }.GetNewClosure()]D;]A;}]D;]A;]D;]A;$InterfaceType.GetMembers() | %{]D;]A;    $m = $_]D;]A;    $getter = $null]D;]A;    $setter = $null]D;]A;    ]D;]A;    if ($m.MemberType -eq [System.Reflection.MemberTypes]5D;"Property") {]D;]A;    ]D;]A;        if ($m.CanRead) {]D;]A;            $getter = GetInvoker $wrappedObject $m.GetGetMethod()]D;]A;        }]D;]A;        if ($m.CanWrite) {]D;]A;            $setter = GetInvoker $wrappedObject $m.GetSetMethod()]D;]A;        }]D;]A;        ]D;]A;        $prop = New-Object Management.Automation.PSScriptProperty $m.Name, $getter, $setter]D;]A;        $psObject.PSObject.Properties.Add($prop)]D;]A;        ]D;]A;    } elseif (!$m.IsSpecialName -and]D;]A;            ($m.MemberType -eq [System.Reflection.MemberTypes]5D;"Method")) {]D;]A;    ]D;]A;        $invoker = GetInvoker $wrappedObject $m]D;]A;        $method = New-Object Management.Automation.PSScriptMethod $m.Name, $invoker]D;]A;        $psObject.PSObject.Methods.Add($method)]D;]A;    }]D;]A;}]D;]A;]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";AggregateSourceName" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[All]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Todos]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Argument_Cannot_Be_Null_Or_Empty" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Argument cannot be null or empty]]></Val>
@@ -27,15 +45,6 @@
           <Val><![CDATA[This Command/Parameter combination has been deprecated and will be removed in the next release. Please consider using the new command that replaces it: '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Esta combinação de Comando/Parâmetro foi preterida e será removida da próxima versão. Considere usar o novo comando que a substitui: '{0}'.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Cmdlet_CommandRemoved" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The {0} Command has been deprecated and will be removed in the next release. Please modify your PowerShell scripts accordingly. ]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O Comando {0} foi preterido e será removido da próxima versão. Modifique os scripts do PowerShell adequadamente. ]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -184,15 +193,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Cmdlet_InstallSuccessDisclaimerText" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[You are downloading {0} from {1}, the license agreement to which is available at {2}. Check the package for additional dependencies, which may come with their own license agreement(s). Your use of the package and dependencies constitutes your acceptance of their license agreements. If you do not accept the license agreement(s), then delete the relevant components from your device.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Você está baixando {0} de {1} e o respectivo contrato de licença está disponível em {2}. Verifique se há dependências adicionais no pacote, que podem apresentar os próprios contratos de licença. O uso que você faz do pacote e das dependências constitui aceitação dos respectivos contratos de licença. Se você não aceitar os contratos de licença, exclua os componentes relevantes do seu dispositivo.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Cmdlet_InvalidPSDrive" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The PSDrive '{0}' was not found.]]></Val>
@@ -220,24 +220,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Cmdlet_Log_NoActionsWhatIf" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[None]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nenhum]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Cmdlet_Log_OperationWhatIf" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[WhatIf: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[WhatIf: {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Cmdlet_MissingPackages" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Some NuGet packages are missing from the solution. The packages need to be restored in order to build the dependency graph. Restore the packages before performing any operations.]]></Val>
@@ -252,15 +234,6 @@
           <Val><![CDATA[&No]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[&Não]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Cmdlet_NoActivePackageSource" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unable to retrieve package list because no source was specified.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Não é possível recuperar a lista de pacotes porque nenhuma origem foi especificada.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -328,33 +301,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Cmdlet_OpenPackagePageAction" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Open]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Abrir]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Cmdlet_PackageIdAndVersionNotFound" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package with the Id '{0}' and version '{1}' is not found in the specified source.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O pacote com a Id '{0}' e a versão '{1}' não foi encontrado na origem especificada.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Cmdlet_PackageIdNotFound" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package with the Id '{0}' is not found in the specified source.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O pacote com a Id '{0}' não foi encontrado na origem especificada.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Cmdlet_PackageNotInstalled" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package with the Id '{0}' is not installed to project '{1}'.]]></Val>
@@ -369,24 +315,6 @@
           <Val><![CDATA['{0}' was not installed in any project. Update failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA['{0}' não foi instalado(a) em nenhum projeto. Falha na atualização.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Cmdlet_PackageOperation" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[{0} {1}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} {1}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Cmdlet_PackageSourceNotFound" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package source '{0}' is not matching any of the enabled package sources.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[A origem do pacote '{0}' não corresponde a nenhuma das origens do pacote habilitado.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -427,33 +355,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Cmdlet_UnknownPackage" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unable to find package '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Não é possível localizar o pacote '{0}'.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Cmdlet_UnknownPackageSpecificVersion" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Unable to find version '{1}' of package '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Não é possível encontrar a versão '{1}' do pacote '{0}'.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Cmdlet_UrlMissing" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The package '{0}' does not provide the requested URL.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O pacote '{0}' não fornece a URL solicitada.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Cmdlet_Yes" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[&Yes]]></Val>
@@ -481,11 +382,65 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Console_DisclaimerText" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Each package is licensed to you by its owner. NuGet is not responsible for, nor does it grant any licenses to, third-party packages. Some packages may include dependencies which are governed by additional licenses. Follow the package source (feed) URL to determine any dependencies.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Cada pacote é licenciado para você por seu proprietário. A NuGet não é responsável por pacotes de terceiros nem concede licenças a eles. Alguns pacotes podem incluir dependências que são administradas por licenças adicionais. Siga a URL da origem (feed) do pacote para determinar todas as dependências.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Console_HelpText" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Type 'get-help NuGet' to see all available NuGet commands.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Digite 'get-help NuGet' para ver todos os comandos disponíveis do NuGet.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ErrorNestedPromptNotSupported" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Nested prompt not supported.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Aviso aninhado sem suporte.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Exception_PackageNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to find package '{0}' at source '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Não foi possível encontrar o pacote '{0}' na fonte '{1}'.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Host_PSNotInstalled" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Error: The Package Manager Console requires PowerShell 2.0 runtime, which is not detected on this machine. Please install the PowerShell 2.0 from http://support.microsoft.com/kb/968929 and restart Visual Studio.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Erro: o Package Manager Console exige o runtime do PowerShell 2.0, que não foi detectado nesta máquina. Instale o PowerShell 2.0 de http://support.microsoft.com/kb/968929 e reinicie o Visual Studio.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PowerShellHostTitle" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package Manager Console Host Version {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Versão {0} do Host do Console do Gerenciador de Pacotes]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PromptForChoiceSuffix" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[[?]5D; Help (default is "{0}"):]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[[?]5D; Ajuda (o padrão é "{0}"):]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -535,19 +490,19 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ZeroLengthCollection" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Zero length collection.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Coleção de comprimento zero.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
     </Item>
   </Item>
   <Item ItemId=";Version" ItemType="0" PsrId="211" Leaf="false">
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
-    <Item ItemId=";Comments" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
-        <Val><![CDATA[NuGet's PowerShell Cmdlets for the Visual Studio client]]></Val>
-        <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[Cmdlets do PowerShell do NuGet para o cliente do Visual Studio]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
@@ -556,10 +511,13 @@
     </Item>
     <Item ItemId=";FileDescription" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[NuGet.PackageManagement.PowerShellCmdlets]]></Val>
+        <Val><![CDATA[ ]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[NuGet.PackageManagement.PowerShellCmdlets]]></Val>
+          <Val><![CDATA[ ]]></Val>
         </Tgt>
+        <Prev Cat="Text">
+          <Val><![CDATA[NuGet.PackageManagement.PowerShellCmdlets]]></Val>
+        </Prev>
       </Str>
       <Disp Icon="Str" />
     </Item>
