@@ -307,12 +307,72 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_AddPkg_CentralPackageVersions_EmptyVersionOverride" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[VersionOverride for package '{0}' should not be empty.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_AddPkg_CentralPackageVersions_PackageReference_WrongLocation" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package reference for package '{0}' defined in incorrect location, PackageReference should be defined in project file.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_AddPkg_CentralPackageVersions_PackageVersion_WrongLocation" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[PackageVersion for package '{0}' defined in incorrect location, PackageVersion should be defined in Directory.Package.props.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_AssetsFileNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No assets file was found for `{0}`. Please run restore before running this command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Für "{0}" wurden keine Assetdateien gefunden. Führen Sie eine Wiederherstellung durch, bevor Sie diesen Befehl ausführen.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_CentralPackageVersions_AutoreferencedReferencesNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The packages {0} are implicitly referenced. You do not typically need to reference them from your project or in your central package versions management file. For more information, see https://aka.ms/sdkimplicitrefs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Auf die Pakete "{0}" wird implizit verwiesen. Sie müssen in der Regel nicht von Ihrem Projekt oder Ihrer zentralen Paketversions-Verwaltungsdatei aus darauf verweisen. Weitere Informationen finden Sie unter https://aka.ms/sdkimplicitrefs.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_CentralPackageVersions_FloatingVersionsAreNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Centrally defined floating package versions are not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Zentral definierte Paketversionen mit übergreifenden Rechten sind nicht zulässig.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_CentralPackageVersions_MissingPackageVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The PackageReference items {0} do not have corresponding PackageVersion.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die PackageReference-Elemente "{0}" weisen keine entsprechende PackageVersion auf.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_CentralPackageVersions_VersionOverrideDisabled" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package reference {0} specifies a VersionOverride but the ability to override a centrally defined version is currently disabled.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Paketverweis {0} gibt eine VersionOverride an, aber die Möglichkeit zum Überschreiben einer zentral definierten Version ist zurzeit deaktiviert.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_CentralPackageVersions_VersionsNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: {0}]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

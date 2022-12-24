@@ -310,11 +310,83 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_AddPkg_CentralPackageVersions_EmptyVersionOverride" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[VersionOverride for package '{0}' should not be empty.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Položka VersionOverride pro balíček {0} by neměla být prázdná.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_AddPkg_CentralPackageVersions_PackageReference_WrongLocation" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package reference for package '{0}' defined in incorrect location, PackageReference should be defined in project file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Odkaz na balíček {0} je definovaný v nesprávném umístění. Položka PackageReference by měla být definována v souboru projektu.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_AddPkg_CentralPackageVersions_PackageVersion_WrongLocation" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[PackageVersion for package '{0}' defined in incorrect location, PackageVersion should be defined in Directory.Package.props.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Položka PackageVersion pro balíček {0} je definovaná v nesprávném umístění. Položka PackageVersion by měla být definována v Directory.Package.props.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_AssetsFileNotFound" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No assets file was found for `{0}`. Please run restore before running this command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Pro {0} se nenašel žádný soubor prostředků. Než spustíte tento příkaz, spusťte prosím obnovení.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_CentralPackageVersions_AutoreferencedReferencesNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The packages {0} are implicitly referenced. You do not typically need to reference them from your project or in your central package versions management file. For more information, see https://aka.ms/sdkimplicitrefs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Na balíčky {0} se odkazuje implicitně. Obvykle na ně nemusíte odkazovat ze svého projektu nebo ze souboru centrální správy verzí balíčků. Další informace najdete na https://aka.ms/sdkimplicitrefs.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_CentralPackageVersions_FloatingVersionsAreNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Centrally defined floating package versions are not allowed.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Centrálně definované verze plovoucích balíčků nejsou povolené.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_CentralPackageVersions_MissingPackageVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The PackageReference items {0} do not have corresponding PackageVersion.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Položky PackageReference {0} nemají odpovídající PackageVersion.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_CentralPackageVersions_VersionOverrideDisabled" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package reference {0} specifies a VersionOverride but the ability to override a centrally defined version is currently disabled.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Odkaz na balíček {0} určuje VersionOverride, ale možnost přepsat centrálně definovanou verzi je aktuálně zakázaná.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_CentralPackageVersions_VersionsNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Projekty, které používají centrální správu verzí balíčků, by neměly definovat verzi pomocí položek PackageReference, ale pomocí položek PackageVersion: {0}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
