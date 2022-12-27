@@ -313,18 +313,27 @@
       <Item ItemId=";Error_AddPkg_CentralPackageVersions_EmptyVersionOverride" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[VersionOverride for package '{0}' should not be empty.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' paketi için VersionOverride boş olmamalıdır.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_AddPkg_CentralPackageVersions_PackageReference_WrongLocation" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package reference for package '{0}' defined in incorrect location, PackageReference should be defined in project file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' paketi için paket başvurusu yanlış konumda tanımlanmış, PackageReference proje dosyasında tanımlanmalıdır.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_AddPkg_CentralPackageVersions_PackageVersion_WrongLocation" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[PackageVersion for package '{0}' defined in incorrect location, PackageVersion should be defined in Directory.Package.props.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' paketi için paket referansı yanlış konumda tanımlanmış, PackageReference proje dosyasında tanımlanmalıdır.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -376,6 +385,9 @@
       <Item ItemId=";Error_CentralPackageVersions_VersionsNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Merkezi paket sürüm yönetimi kullanan projeler, PackageReference öğelerindeki sürümü değil PackageVersion öğelerindeki sürümü tanımlamalıdır: {0}.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>

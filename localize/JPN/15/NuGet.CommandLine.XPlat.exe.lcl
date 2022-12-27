@@ -310,18 +310,27 @@
       <Item ItemId=";Error_AddPkg_CentralPackageVersions_EmptyVersionOverride" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[VersionOverride for package '{0}' should not be empty.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[パッケージ '{0}' の VersionOverride を空にすることはできません。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_AddPkg_CentralPackageVersions_PackageReference_WrongLocation" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package reference for package '{0}' defined in incorrect location, PackageReference should be defined in project file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[パッケージ '{0}' のパッケージ参照が正しくない場所で定義されています。PackageReference はプロジェクト ファイルで定義する必要があります。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_AddPkg_CentralPackageVersions_PackageVersion_WrongLocation" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[PackageVersion for package '{0}' defined in incorrect location, PackageVersion should be defined in Directory.Package.props.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[パッケージ '{0}' の PackageVersion が正しくない場所で定義されています。PackageVersion は Directory.Package.props で定義する必要があります。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -373,6 +382,9 @@
       <Item ItemId=";Error_CentralPackageVersions_VersionsNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[中央のパッケージ バージョン管理を使用するプロジェクトでは、PackageReference アイテムではなく、PackageVersion アイテムでバージョンを定義する必要があります: {0}。]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
