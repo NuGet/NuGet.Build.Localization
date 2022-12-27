@@ -310,18 +310,27 @@
       <Item ItemId=";Error_AddPkg_CentralPackageVersions_EmptyVersionOverride" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[VersionOverride for package '{0}' should not be empty.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[VersionOverride für das Paket „{0}“ darf nicht leer sein.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_AddPkg_CentralPackageVersions_PackageReference_WrongLocation" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package reference for package '{0}' defined in incorrect location, PackageReference should be defined in project file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Paketverweis für das Paket „{0}“ ist an einem falschen Speicherort definiert. PackageReference sollte in der Projektdatei definiert sein.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_AddPkg_CentralPackageVersions_PackageVersion_WrongLocation" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[PackageVersion for package '{0}' defined in incorrect location, PackageVersion should be defined in Directory.Package.props.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[PackageVersion für das Paket „{0}“ ist an einem falschen Speicherort definiert. PackageVersion sollte in Directory.Package.props definiert sein.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -373,6 +382,9 @@
       <Item ItemId=";Error_CentralPackageVersions_VersionsNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Projekte, welche die zentrale Paketversionsverwaltung verwenden, sollten die Version nicht für die PackageReference-Elemente, sondern für die PackageVersion-Elemente definieren: {0}.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
