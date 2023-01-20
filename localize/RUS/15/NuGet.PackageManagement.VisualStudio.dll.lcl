@@ -9,7 +9,7 @@
   <Item ItemId=";Managed Resources" ItemType="0" PsrId="211" Leaf="true">
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
   </Item>
-  <Item ItemId=";NuGet.PackageManagement.VisualStudio.CommonResources.resources" ItemType="0" PsrId="211" Leaf="false">
+  <Item ItemId=";NuGet.CommonResources.resources" ItemType="0" PsrId="211" Leaf="false">
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" Disp="true" LocTbl="false" />
@@ -85,7 +85,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";EnsureImportedMessage" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";EnsureImportedMessage" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -100,6 +100,42 @@
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId=";AccountProvider_FailedToLoadAccountManager" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Could not get the account manager, unable to check the keychain.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Невозможно получить диспетчер учетных записей, не удалось проверить цепочку ключей.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";AccountProvider_FailedToLoadVSOAccountProvider" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Could not get the account provider, unable to check the keychain.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Невозможно получить поставщик учетных записей, не удалось проверить цепочку ключей.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";AccountProvider_NoValidCrededentialsFound" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No valid credentials found for VSO account.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Не удалось найти допустимые учетные данные для учетной записи VSO.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";AccountProvider_TriedToShowUIOnNonInteractive" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to authenticate without prompting user.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Не удалось выполнить проверку подлинности без запроса пользователя.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";AggregateSourceName" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[All]]></Val>
@@ -113,7 +149,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Argument cannot be null or empty]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Аргумент не может быть равен NULL или быть пустым]]></Val>
+            <Val><![CDATA[Аргумент не может быть пустым или равным NULL]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -251,7 +287,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Removed folder '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Папка «{0}» удалена.]]></Val>
+            <Val><![CDATA[Папка "{0}" удалена.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -297,15 +333,6 @@
           <Val><![CDATA[Failed to load '{0}', while updating binding redirects. {1}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Не удалось загрузить файл "{0}" во время обновления перенаправления привязок. {1}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Exception_InvalidContinuationToken" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Invalid token]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Недопустимый маркер]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -373,11 +400,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";PackageStreamShouldBeSeekable" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package stream should be seekable]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Поток пакетов должен поддерживать поиск]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";PathToExistingFileNotPresent" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Path '{0}' to existing file is not found on disk. Cannot add to project '{1}']]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Путь «{0}» к существующему файлу на диске не найден. Не удается добавить в проект «{1}».]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ProjectCouldNotBeCastedToBuildPropertyStorage" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The project '{0}' could not be cast to a build property storage interface, which is required to get MSBuild properties inside Visual Studio.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Не удалось преобразовать проект "{0}" в интерфейс хранилища свойств сборки, но это нужно, чтобы сделать свойства MSBuild доступными в Visual Studio.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -434,7 +479,7 @@
         <Str Cat="Text">
           <Val><![CDATA[migration document]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[документе о миграции]]></Val>
+            <Val><![CDATA[документ по миграции]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -464,7 +509,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The following project(s) target the deprecated framework:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Проекты, использующие устаревшую платформу:]]></Val>
+            <Val><![CDATA[Проекты, использующие нерекомендуемую платформу:]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -474,6 +519,15 @@
           <Val><![CDATA[Unable to get the project's package installation service for project '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Не удалось получить службу установки пакетов для проекта "{0}".]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UninstallingPackage" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Uninstalling NuGet package {0}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Удаление пакета NuGet {0}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -500,7 +554,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Directory '{0}' is not empty. Skipping...]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Каталог «{0}» не пуст. Пропуск…]]></Val>
+            <Val><![CDATA[Каталог "{0}" не пуст. Пропуск…]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -563,15 +617,6 @@
   </Item>
   <Item ItemId=";Version" ItemType="0" PsrId="211" Leaf="false">
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
-    <Item ItemId=";Comments" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
-        <Val><![CDATA[NuGet's Visual Studio functionalities, integrations and utilities.]]></Val>
-        <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[Функциональные возможности, интеграции и служебные программы Visual Studio NuGet.]]></Val>
-        </Tgt>
-      </Str>
-      <Disp Icon="Str" />
-    </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
         <Val><![CDATA[Microsoft Corporation]]></Val>
@@ -583,13 +628,10 @@
     </Item>
     <Item ItemId=";FileDescription" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[NuGet.PackageManagement.VisualStudio]]></Val>
+        <Val><![CDATA[ProjectManagement.VisualStudio]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[NuGet.PackageManagement.VisualStudio]]></Val>
-        </Tgt>
-        <Prev Cat="Text">
           <Val><![CDATA[ProjectManagement.VisualStudio]]></Val>
-        </Prev>
+        </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>

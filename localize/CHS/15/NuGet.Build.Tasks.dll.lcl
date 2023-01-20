@@ -49,15 +49,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_DuplicateItems" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Duplicate '{0}' items found. Remove the duplicate items or use the Update functionality to ensure a consistent restore behavior. The duplicate '{0}' items are: {1}.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[已找到重复 "{0}" 项。删除重复项或使用更新功能来确保一致的还原行为。重复 "{0}" 项为: {1}。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_MissingRestoreGraphOutputPath" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Cannot write the dependency graph spec because the `RestoreGraphOutputPath` is missing.]]></Val>
@@ -99,24 +90,6 @@
           <Val><![CDATA[All packages listed in {0} are already installed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[{0} 中列出的所有包均已安装。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Log_NoProjectsForRestore" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The solution did not have any projects to restore, ensure that all projects are known to be MSBuild and that the projects exist.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[解决方案没有任何要还原的项目，请确保所有项目都为 MSBuild 所知并且项目存在。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Log_ProjectsInSolutionNotKnowntoMSBuild" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The solution contains '{0}' project(s) '{1}' that are not known to MSBuild. Ensure that all projects are known to be MSBuild before running restore on the solution.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[该解决方案包含 MSBuild 不了解的 "{0}" 项目 "{1}"。在解决方案上运行还原之前，请确保所有项目都为 MSBuild 所知。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

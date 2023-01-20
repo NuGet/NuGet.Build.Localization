@@ -13,15 +13,6 @@
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" Disp="true" LocTbl="false" />
-      <Item ItemId=";Argument_Cannot_Be_Null_Empty_Or_WhiteSpaceOnly" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Argument cannot be null, empty, or whitespace only.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[El argumento no puede ser nulo, estar vacío ni contener solo espacios en blanco.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Argument_Cannot_Be_Null_Or_Empty" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Value cannot be null or empty string.]]></Val>
@@ -76,6 +67,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";CannotUpdateOrigin" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Cannot update the origin of a setting.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se puede actualizar el origen de una configuración.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";CannotUpdateReadOnlyConfig" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Unable to update setting since it is in an uneditable config file.]]></Val>
@@ -103,15 +103,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_DuplicatePackageSource" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[PackageSourceMapping is enabled and there are multiple package sources associated with the same key(s): {0}. Path: {1}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[PackageSourceMapping está habilitado y hay varios orígenes de paquete asociados a las mismas claves: {0}. Ruta de acceso: {1}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_EncryptionUnsupported" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Encryption is not supported on non-Windows platforms.]]></Val>
@@ -126,24 +117,6 @@
           <Val><![CDATA[The attribute {0}-{1} is not valid.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[El atributo {0}-{1} no es válido.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_ItemNeedsAtLeastOnePackagePattern" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package source '{0}' must have at least one package pattern.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[El origen del paquete "{0}" debe tener al menos un patrón de paquete.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_ItemNeedsAtLeastOnePackagePatternWithPath" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package source '{0}' must have at least one package pattern. Path: '{1}']]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[El origen del paquete "{0}" debe tener al menos un patrón de paquete. Ruta de acceso: "{1}"]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -180,6 +153,15 @@
           <Val><![CDATA[A credentials item must have only one ValidAuthenticationTypes entry.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Un elemento de credenciales debe tener solo una entrada ValidAuthenticationTypes.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_NoWritableConfig" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[There are no writable config files.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No hay archivos de configuración editables.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -310,11 +292,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";PackageSource_Invalid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package source does not belong to the collection of available sources.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El origen del paquete no pertenece a la colección de orígenes disponibles.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";PropertyCannotBeNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} cannot be null or empty.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[{0} no puede ser nulo ni estar vacío.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";RelativeEnvVarPath" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Environment variable '{0}' must contain an absolute path, the full path of '{1}' cannot be determined.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La variable de entorno '{0}' debe contener una ruta de acceso absoluta. No se puede determinar la ruta de acceso completa de '{1}'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -354,15 +354,6 @@
           <Val><![CDATA[Error parsing NuGet.Config. Element '{0}' cannot have descendant elements. Path: '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Error al analizar NuGet.Config. El elemento "{0}" no puede tener elementos descendientes. Ruta de acceso: "{1}".]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ShowError_ConfigDuplicateDisabledSources" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Cannot update package sources, config file contains a duplicated key '{0}' in the disabled package sources section. Path: '{1}']]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[No se pueden actualizar los orígenes del paquete, el archivo de configuración contiene una clave duplicada "{0}" en la sección de orígenes de paquetes deshabilitados. Ruta de acceso: "{1}"]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
