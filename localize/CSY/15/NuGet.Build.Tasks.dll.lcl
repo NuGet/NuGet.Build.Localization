@@ -85,6 +85,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_StaticGraphNonZeroExitCode" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Static graph-based restore failed with exit code '{0}' but did not log an error. Please file an issue at https://github.com/NuGet/Home.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Statické obnovení založené na grafu selhalo s ukončovacím kódem {0}, ale nezaprotokolovalo chybu. Nahlaste prosím problém na https://github.com/NuGet/Home.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_StaticGraphUnhandledException" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Static graph-based restore encountered an unhandled exception. Please file an issue at https://github.com/NuGet/Home.  The exception was:]D;]A;{0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Při statickém obnovení založeném na grafu došlo k neošetřené výjimce. Nahlaste prosím problém na https://github.com/NuGet/Home.  Výjimka:]D;]A;{0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ImportsFallbackWarning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[ProjectReference '{0}' was resolved using '{1}' instead of the project target framework '{2}'. This project may not be fully compatible with your project.]]></Val>
@@ -117,6 +135,15 @@
           <Val><![CDATA[The solution contains '{0}' project(s) '{1}' that are not known to MSBuild. Ensure that all projects are known to be MSBuild before running restore on the solution.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Řešení obsahuje projekty {0} {1}, které MSBuild nezná. Před spuštěním obnovení řešení se ujistěte, že MSBuild zná všechny projekty.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Log_RunningStaticGraphRestoreCommand" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Running command: '{0}' {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Spuštěný příkaz: {0} {1}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
