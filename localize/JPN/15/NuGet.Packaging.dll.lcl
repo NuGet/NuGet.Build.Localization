@@ -646,6 +646,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";MissingReadmeInformation" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package {0} is missing a readme. Go to https://aka.ms/nuget/authoring-best-practices/readme to learn why package readmes are important.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[パッケージ {0} に readme がありません。https://aka.ms/nuget/authoring-best-practices/readme にアクセスして、パッケージ readmes が重要な理由を確認してください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";NoRefOrLibFolderInPackage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[This package does not contain a lib/ or ref/ folder, and will therefore be treated as compatible for all frameworks. Since framework specific files were found under the build/ directory for {0}, consider creating the following empty files to correctly narrow the compatibility of the package:]D;]A;{1}]]></Val>
@@ -895,11 +904,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";ChainBuilding_UsingDefaultTrustStore" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";ChainBuilding_UsingDefaultTrustStoreForCodeSigning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[X.509 certificate chain validation will use the default trust store selected by .NET.]]></Val>
+          <Val><![CDATA[X.509 certificate chain validation will use the default trust store selected by .NET for code signing.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[X.509 証明書チェーンの検証では、.NET によって選択された既定の信頼ストアが使用されます。]]></Val>
+            <Val><![CDATA[X.509 証明書チェーンの検証では、コード署名のために .NET によって選択された既定の信頼ストアが使用されます。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ChainBuilding_UsingDefaultTrustStoreForTimestamping" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[X.509 certificate chain validation will use the default trust store selected by .NET for timestamping.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[X.509 証明書チェーンの検証では、タイムスタンプに .NET によって選択された既定の信頼ストアが使用されます。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
