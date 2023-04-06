@@ -2536,6 +2536,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";UntrustedRoot_WithCertificateBundle" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The following X.509 root certificate is untrusted because it is not present in the certificate bundle at {0}.  For more information, see documentation for NU3042.]D;]A;    Subject:  {1}]D;]A;    Fingerprint (SHA-256):  {2}]D;]A;    Certificate (PEM):]D;]A;{3}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[다음 X.509 루트 인증서는 {0}에 있는 인증서 번들에 없으므로 신뢰할 수 없습니다.  자세한 내용은 NU3042에 대한 설명서를 참조하세요.]D;]A;    제목: {1}]D;]A;    지문(SHA-256): {2}]D;]A;    인증서(PEM):]D;]A;{3}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UntrustedRoot_WithoutCertificateBundle" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The following X.509 root certificate is untrusted because no certificate bundle was found.  For more information, see documentation for NU3042.]D;]A;    Subject:  {0}]D;]A;    Fingerprint (SHA-256):  {1}]D;]A;    Certificate (PEM):]D;]A;{2}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[다음 X.509 루트 인증서는 인증서 번들을 찾을 수 없으므로 신뢰할 수 없습니다.  자세한 내용은 NU3042에 대한 설명서를 참조하세요.]D;]A;    제목:  {0}]D;]A;    지문(SHA-256):  {1}]D;]A;    인증서(PEM):]D;]A;{2}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";VerificationCertDisplay" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Verifying the {0} with certificate: {1}]]></Val>

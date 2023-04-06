@@ -2536,6 +2536,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";UntrustedRoot_WithCertificateBundle" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The following X.509 root certificate is untrusted because it is not present in the certificate bundle at {0}.  For more information, see documentation for NU3042.]D;]A;    Subject:  {1}]D;]A;    Fingerprint (SHA-256):  {2}]D;]A;    Certificate (PEM):]D;]A;{3}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[下列 X.509 根憑證未受信任，因為它並不存在於 {0} 的憑證套件組合中。如需詳細資訊，請參閱 NU3042 的文件。]D;]A;    主旨:  {1}]D;]A;    指紋 (SHA-256):  {2}]D;]A;    憑證 (PEM):]D;]A;{3}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UntrustedRoot_WithoutCertificateBundle" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The following X.509 root certificate is untrusted because no certificate bundle was found.  For more information, see documentation for NU3042.]D;]A;    Subject:  {0}]D;]A;    Fingerprint (SHA-256):  {1}]D;]A;    Certificate (PEM):]D;]A;{2}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[下列 X.509 根憑證未受信任，因為找不到任何憑證套件組合中。如需詳細資訊，請參閱 NU3042 的文件。]D;]A;    主旨:  {0}]D;]A;    指紋 (SHA-256):  {1}]D;]A;    憑證 (PEM):]D;]A;{2}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";VerificationCertDisplay" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Verifying the {0} with certificate: {1}]]></Val>
