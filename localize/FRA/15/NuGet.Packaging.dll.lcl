@@ -2536,6 +2536,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";UntrustedRoot_WithCertificateBundle" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The following X.509 root certificate is untrusted because it is not present in the certificate bundle at {0}.  For more information, see documentation for NU3042.]D;]A;    Subject:  {1}]D;]A;    Fingerprint (SHA-256):  {2}]D;]A;    Certificate (PEM):]D;]A;{3}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Le certificat racine X.509 suivant n’est pas approuvé, car il n’est pas présent dans le bundle de certificats à {0}. Pour plus d’informations, consultez la documentation relative à NU3042.]D;]A;    Objet : {1}]D;]A;    Empreinte digitale (SHA-256) : {2}]D;]A;    Certificat (PEM) :]D;]A;{3}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UntrustedRoot_WithoutCertificateBundle" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The following X.509 root certificate is untrusted because no certificate bundle was found.  For more information, see documentation for NU3042.]D;]A;    Subject:  {0}]D;]A;    Fingerprint (SHA-256):  {1}]D;]A;    Certificate (PEM):]D;]A;{2}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Le certificat racine X.509 suivant n’est pas approuvé, car aucun bundle de certificats n’a été trouvé.  Pour plus d’informations, consultez la documentation relative à NU3042.]D;]A;    Objet :  {0}]D;]A;    Empreinte (SHA-256):  {1}]D;]A;    Certificat (PEM):]D;]A;{2}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";VerificationCertDisplay" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Verifying the {0} with certificate: {1}]]></Val>
