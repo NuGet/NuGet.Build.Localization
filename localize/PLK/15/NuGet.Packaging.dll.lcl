@@ -2536,6 +2536,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";UntrustedRoot_WithCertificateBundle" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The following X.509 root certificate is untrusted because it is not present in the certificate bundle at {0}.  For more information, see documentation for NU3042.]D;]A;    Subject:  {1}]D;]A;    Fingerprint (SHA-256):  {2}]D;]A;    Certificate (PEM):]D;]A;{3}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Następujący certyfikat główny X.509 nie jest zaufany, ponieważ nie występuje w pakiecie certyfikatów w {0}. Aby uzyskać więcej informacji, zobacz dokumentację dla NU3042.]D;]A;    Temat: {1}]D;]A;    Odcisk palca (SHA-256): {2}]D;]A;    Certyfikat (PEM):]D;]A;{3}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UntrustedRoot_WithoutCertificateBundle" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The following X.509 root certificate is untrusted because no certificate bundle was found.  For more information, see documentation for NU3042.]D;]A;    Subject:  {0}]D;]A;    Fingerprint (SHA-256):  {1}]D;]A;    Certificate (PEM):]D;]A;{2}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Następujący certyfikat główny X.509 nie jest zaufany, ponieważ nie znaleziono żadnych pakietów certyfikatów. Aby uzyskać więcej informacji, zobacz dokumentację dla NU3042.]D;]A;    Temat: {0}]D;]A;    Odcisk palca (SHA-256): {1}]D;]A;    Certyfikat (PEM):]D;]A;{2}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";VerificationCertDisplay" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Verifying the {0} with certificate: {1}]]></Val>
