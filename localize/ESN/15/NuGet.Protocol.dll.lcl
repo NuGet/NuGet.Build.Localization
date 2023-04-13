@@ -922,6 +922,78 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";VulnerabilityPage_CouldNotLoad" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package source '{0}' vulnerability data index '{1}' could not be loaded. This indicates a problem with the JSON file contents returned from the server.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[No se pudo cargar el índice de datos de vulnerabilidad '{0}' del origen del paquete '{1}'. Esto indica un problema con el contenido del archivo JSON devuelto desde el servidor.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VulnerabilityPage_HasNoName" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Vulnerability page index {0} does not contain a name (Source: '{1}')]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El índice de página de vulnerabilidad {0} no contiene un nombre (origen: '{1}')]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VulnerabilityPage_NameHasInvalidCharacters" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Vulnerability page index {0} contains invalid characters (Source: '{1}')]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El índice de página de vulnerabilidad {0} contiene caracteres no válidos (origen: '{1}')]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VulnerabilityPage_NameNotUnique" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Vulnerability page name '{0}' is not unique. Only using the first (Source: '{1}')]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El nombre de página de vulnerabilidad '{0}' no es único. Solo se usa el primero (origen: '{1}')]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VulnerabilityPage_NameTooLong" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Vulnerability page index {0} name is longer than {1} characters (Source: '{2}')]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El nombre del índice de páginas de vulnerabilidad {0} tiene más de {1} caracteres (origen: '{2}')]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VulnerabilityPage_NoUrl" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Vulnerability page '{0}' does not contain a URL (Source: '{1}')]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La página de vulnerabilidad '{0}' no contiene una dirección URL (origen: '{1}')]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VulnerabilityPage_UrlNotHttp" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Vulnerability page '{0}' contains URL that is not http(s) (Source: '{1}')]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La página de vulnerabilidad '{0}' contiene una dirección URL que no es http(s) (origen: '{1}')]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Vulnerability_TooManyPages" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package source '{0}' has {1} vulnerability data pages. Using the first {2}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El '{0}' de origen del paquete tiene {1} páginas de datos de vulnerabilidad. Usando la primera {2}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Warning_HttpServerUsage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source, '{1}'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.]]></Val>
