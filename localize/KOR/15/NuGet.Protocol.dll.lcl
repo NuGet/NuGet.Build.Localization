@@ -922,6 +922,78 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";VulnerabilityPage_CouldNotLoad" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package source '{0}' vulnerability data index '{1}' could not be loaded. This indicates a problem with the JSON file contents returned from the server.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[패키지 원본 '{0}' 취약성 데이터 인덱스 '{1}'을(를) 로드할 수 없습니다. 이는 서버에서 반환된 JSON 파일 내용에 문제가 있음을 나타냅니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VulnerabilityPage_HasNoName" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Vulnerability page index {0} does not contain a name (Source: '{1}')]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[취약성 페이지 인덱스 {0}에 이름이 없습니다(원본: '{1}').]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VulnerabilityPage_NameHasInvalidCharacters" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Vulnerability page index {0} contains invalid characters (Source: '{1}')]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[취약성 페이지 인덱스 {0}에 잘못된 문자가 포함되어 있습니다(원본: '{1}').]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VulnerabilityPage_NameNotUnique" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Vulnerability page name '{0}' is not unique. Only using the first (Source: '{1}')]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[취약성 페이지 이름 '{0}'이(가) 고유하지 않습니다. 첫 번째만 사용 중(원본: '{1}')]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VulnerabilityPage_NameTooLong" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Vulnerability page index {0} name is longer than {1} characters (Source: '{2}')]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[취약성 페이지 인덱스 {0} 이름이 {1}자보다 깁니다(원본: '{2}').]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VulnerabilityPage_NoUrl" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Vulnerability page '{0}' does not contain a URL (Source: '{1}')]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[취약성 페이지 '{0}'에 URL이 포함되어 있지 않습니다(원본: '{1}').]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";VulnerabilityPage_UrlNotHttp" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Vulnerability page '{0}' contains URL that is not http(s) (Source: '{1}')]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[취약성 페이지 '{0}'에는 http가 아닌 URL이 포함되어 있습니다(원본: '{1}').]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Vulnerability_TooManyPages" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package source '{0}' has {1} vulnerability data pages. Using the first {2}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[패키지 원본 '{0}'에 취약성 데이터 페이지가 {1}개 있습니다. 첫 번째 {2}을(를) 사용하고 있습니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Warning_HttpServerUsage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source, '{1}'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.]]></Val>
