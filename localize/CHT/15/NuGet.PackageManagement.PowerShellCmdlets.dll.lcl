@@ -13,15 +13,6 @@
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" Disp="true" LocTbl="false" />
-      <Item ItemId=";Add_WrapperMembers" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[#]D;]A;# This private script adds $InterfaceType members to $psObject which invokes on $wrappedObject]D;]A;#]D;]A;Param(]D;]A;    $psObject,]D;]A;    $wrappedObject,]D;]A;    [Type]5D;$InterfaceType]D;]A;)]D;]A;]D;]A;function GetInvoker]D;]A;{]D;]A;    Param(]D;]A;        $Target,]D;]A;        $Method]D;]A;    )]D;]A;]D;]A;    if ($Method.IsGenericMethodDefinition) {]D;]A;        return {]D;]A;            $t = $Target]D;]A;            $m = $Method.MakeGenericMethod($args)]D;]A;            ]D;]A;            if (!$m.GetParameters()) {]D;]A;                return $m.Invoke($t, @())]D;]A;            }]D;]A;            ]D;]A;            $o = New-Object PSObject]D;]A;            Add-Member -InputObject $o -MemberType ScriptMethod -Name Invoke -Value {]D;]A;                    [NuGetConsole.Host.PowerShell.Implementation.PSTypeWrapper]5D;::InvokeMethod($t, $m, $args)]D;]A;                }.GetNewClosure()]D;]A;            return $o]D;]A;        }.GetNewClosure()]D;]A;    }]D;]A;    ]D;]A;    return {]D;]A;        [NuGetConsole.Host.PowerShell.Implementation.PSTypeWrapper]5D;::InvokeMethod($Target, $Method, $args)]D;]A;    }.GetNewClosure()]D;]A;}]D;]A;]D;]A;$InterfaceType.GetMembers() | %{]D;]A;    $m = $_]D;]A;    $getter = $null]D;]A;    $setter = $null]D;]A;    ]D;]A;    if ($m.MemberType -eq [System.Reflection.MemberTypes]5D;"Property") {]D;]A;    ]D;]A;        if ($m.CanRead) {]D;]A;            $getter = GetInvoker $wrappedObject $m.GetGetMethod()]D;]A;        }]D;]A;        if ($m.CanWrite) {]D;]A;            $setter = GetInvoker $wrappedObject $m.GetSetMethod()]D;]A;        }]D;]A;        ]D;]A;        $prop = New-Object Management.Automation.PSScriptProperty $m.Name, $getter, $setter]D;]A;        $psObject.PSObject.Properties.Add($prop)]D;]A;        ]D;]A;    } elseif (!$m.IsSpecialName -and]D;]A;            ($m.MemberType -eq [System.Reflection.MemberTypes]5D;"Method")) {]D;]A;    ]D;]A;        $invoker = GetInvoker $wrappedObject $m]D;]A;        $method = New-Object Management.Automation.PSScriptMethod $m.Name, $invoker]D;]A;        $psObject.PSObject.Methods.Add($method)]D;]A;    }]D;]A;}]D;]A;]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[#]D;]A;# 此私人指令碼會將 $InterfaceType 成員新增至在 $wrappedObject 上叫用的 $psObject]D;]A;#]D;]A;Param(]D;]A;    $psObject,]D;]A;    $wrappedObject,]D;]A;    [Type]5D;$InterfaceType]D;]A;)]D;]A;]D;]A;function GetInvoker]D;]A;{]D;]A;    Param(]D;]A;        $Target,]D;]A;        $Method]D;]A;    )]D;]A;]D;]A;    if ($Method.IsGenericMethodDefinition) {]D;]A;        return {]D;]A;            $t = $Target]D;]A;            $m = $Method.MakeGenericMethod($args)]D;]A;            ]D;]A;            if (!$m.GetParameters()) {]D;]A;                return $m.Invoke($t, @())]D;]A;            }]D;]A;            ]D;]A;            $o = New-Object PSObject]D;]A;            Add-Member -InputObject $o -MemberType ScriptMethod -Name Invoke -Value {]D;]A;                    [NuGetConsole.Host.PowerShell.Implementation.PSTypeWrapper]5D;::InvokeMethod($t, $m, $args)]D;]A;                }.GetNewClosure()]D;]A;            return $o]D;]A;        }.GetNewClosure()]D;]A;    }]D;]A;    ]D;]A;    return {]D;]A;        [NuGetConsole.Host.PowerShell.Implementation.PSTypeWrapper]5D;::InvokeMethod($Target, $Method, $args)]D;]A;    }.GetNewClosure()]D;]A;}]D;]A;]D;]A;$InterfaceType.GetMembers() | %{]D;]A;    $m = $_]D;]A;    $getter = $null]D;]A;    $setter = $null]D;]A;    ]D;]A;    if ($m.MemberType -eq [System.Reflection.MemberTypes]5D;"Property") {]D;]A;    ]D;]A;        if ($m.CanRead) {]D;]A;            $getter = GetInvoker $wrappedObject $m.GetGetMethod()]D;]A;        }]D;]A;        if ($m.CanWrite) {]D;]A;            $setter = GetInvoker $wrappedObject $m.GetSetMethod()]D;]A;        }]D;]A;        ]D;]A;        $prop = New-Object Management.Automation.PSScriptProperty $m.Name, $getter, $setter]D;]A;        $psObject.PSObject.Properties.Add($prop)]D;]A;        ]D;]A;    } elseif (!$m.IsSpecialName -and]D;]A;            ($m.MemberType -eq [System.Reflection.MemberTypes]5D;"Method")) {]D;]A;    ]D;]A;        $invoker = GetInvoker $wrappedObject $m]D;]A;        $method = New-Object Management.Automation.PSScriptMethod $m.Name, $invoker]D;]A;        $psObject.PSObject.Methods.Add($method)]D;]A;    }]D;]A;}]D;]A;]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";AggregateSourceName" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[All]]></Val>
@@ -503,6 +494,15 @@
   </Item>
   <Item ItemId=";Version" ItemType="0" PsrId="211" Leaf="false">
     <Disp Icon="Ver" Disp="true" LocTbl="false" Path=" \ ;Version \ 8 \ 0" />
+    <Item ItemId=";Comments" ItemType="0" PsrId="211" Leaf="true">
+      <Str Cat="Text">
+        <Val><![CDATA[Package Manager Console PowerShell host implementation and NuGet's PowerShell cmdlets for the Visual Studio client.]]></Val>
+        <Tgt Cat="Text" Stat="Loc" Orig="New">
+          <Val><![CDATA[套件管理員主控台 PowerShell 主機實作，以及 NuGet 的 Visual Studio 用戶端的 PowerShell Cmdlet。]]></Val>
+        </Tgt>
+      </Str>
+      <Disp Icon="Str" />
+    </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
@@ -511,12 +511,12 @@
     </Item>
     <Item ItemId=";FileDescription" ItemType="0" PsrId="211" Leaf="true">
       <Str Cat="Text">
-        <Val><![CDATA[ ]]></Val>
+        <Val><![CDATA[NuGet.PackageManagement.PowerShellCmdlets]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[ ]]></Val>
+          <Val><![CDATA[NuGet.PackageManagement.PowerShellCmdlets]]></Val>
         </Tgt>
         <Prev Cat="Text">
-          <Val><![CDATA[NuGet.PackageManagement.PowerShellCmdlets]]></Val>
+          <Val><![CDATA[ ]]></Val>
         </Prev>
       </Str>
       <Disp Icon="Str" />
