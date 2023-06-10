@@ -445,6 +445,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_InvalidNuGetAuditModeValue" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid NuGetAuditMode value '{0}'. Expected values: {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ungültiger NuGetAuditMode-Wert "{0}". Erwartete Werte: {1}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_InvalidProjectPackageCombo" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid project-package combination for {0} {1}. DotnetToolReference project style can only contain references of the DotnetTool type]]></Val>
@@ -2518,6 +2527,12 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA["{0}" bietet keine einschließliche Untergrenze für die Abhängigkeit "{1}". Die ungefähre höchste Übereinstimmung von "{2}" wurde aufgelöst.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Warning_NoVulnerabilityData" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[NuGetAudit is enabled, but no package sources contain known vulnerability data.]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
