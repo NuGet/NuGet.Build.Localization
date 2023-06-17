@@ -13,15 +13,6 @@
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" Disp="true" LocTbl="false" />
-      <Item ItemId=";AbsolutePathRequired" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[An absolute path is required: '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[需要绝对路径:“{0}”。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";ArgumentNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Argument cannot be null or empty]]></Val>
@@ -36,15 +27,6 @@
           <Val><![CDATA[Value must be greater than or equal to {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[值必须大于或等于 {0}]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_FailedToCreateRandomFile" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Failed to create random file for dotnet add pkg command.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[未能为 dotnet add pkg 命令创建随机文件。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -67,20 +49,38 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";NoPackageFoldersFound" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";TimeUnits_Hour" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[At least one package folder path must be provided.]]></Val>
+          <Val><![CDATA[{0:0.##} hr]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[必须提供至少一个包文件夹路径。]]></Val>
+            <Val><![CDATA[{0:0.##} 小时]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";PackageFolderNotFound" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";TimeUnits_Millisecond" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Package folder not found: '{0}'.]]></Val>
+          <Val><![CDATA[{0:0.##} ms]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[未找到包文件夹:“{0}”。]]></Val>
+            <Val><![CDATA[{0:0.##} 毫秒]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TimeUnits_Minute" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0:0.##} min]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0:0.##} 分钟]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";TimeUnits_Second" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0:0.##} sec]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0:0.##} 秒]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -90,6 +90,15 @@
           <Val><![CDATA[Unable to determine the current NuGet client version.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[无法确定当前 NuGet 客户端版本。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnableToSetNuGetTempFolderPermission" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[User is unable to set permission to 700 while creating {0}, errno={1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[用户无法在创建 {0} 时将权限设置为 700，errno={1}。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
