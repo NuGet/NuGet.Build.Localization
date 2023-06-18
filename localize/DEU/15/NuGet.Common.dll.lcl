@@ -13,15 +13,6 @@
     <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;Managed Resources \ 0 \ 0" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" Disp="true" LocTbl="false" />
-      <Item ItemId=";AbsolutePathRequired" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[An absolute path is required: '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ein absoluter Pfad ist erforderlich: "{0}".]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";ArgumentNullOrEmpty" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Argument cannot be null or empty]]></Val>
@@ -40,15 +31,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_FailedToCreateRandomFile" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Failed to create random file for dotnet add pkg command.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Fehler beim Erstellen einer zufälligen Datei für den Befehl "dotnet add pkg".]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";MissingRequiredEnvVar" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Required environment variable '{0}' is not set. Try setting '{0}' and running the operation again.]]></Val>
@@ -63,24 +45,6 @@
           <Val><![CDATA[Required environment variable '{0}' is not set. Try setting '{1}' or '{0}' and running the operation]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die erforderliche Umgebungsvariable "{0}" ist nicht festgelegt. Legen Sie "{1}" oder "{0}" fest, und führen Sie den Vorgang aus.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";NoPackageFoldersFound" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[At least one package folder path must be provided.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Mindestens ein Paketordnerpfad muss angegeben werden.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";PackageFolderNotFound" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Package folder not found: '{0}'.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Paketordner nicht gefunden: "{0}".]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -126,6 +90,15 @@
           <Val><![CDATA[Unable to determine the current NuGet client version.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die aktuelle NuGet-Clientversion kann nicht ermittelt werden.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";UnableToSetNuGetTempFolderPermission" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[User is unable to set permission to 700 while creating {0}, errno={1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der Benutzer kann die Berechtigung beim Erstellen von {0} nicht auf 700 festlegen, errno={1}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
