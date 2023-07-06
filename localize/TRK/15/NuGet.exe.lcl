@@ -493,7 +493,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Type '{0} help <command>' for help on a specific command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Belirli bir komut hakkında yardım için '{0} yardımı <command>' yazın.]]></Val>
+            <Val><![CDATA[Belirli bir komut hakkında yardım için '{0} yardım <command>' yazın.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1402,7 +1402,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Password for the certificate, if needed.]D;]A;This option can be used to specify the password for the certificate. If no password is provided, the command will prompt for a password at run time, unless the -NonInteractive option is passed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Gerekirse sertifikanın parolası.]D;]A;Bu seçenek, sertifikanın parolasını belirtmek için kullanılabilir. Parola sağlanmamışsa -NonInteractive seçeneği geçirilmediği takdirde komut çalışma zamanında parola isteminde bulunur.]]></Val>
+            <Val><![CDATA[Gerekirse sertifikanın parolası.]D;]A;Bu seçenek, sertifikanın parolasını belirtmek için kullanılabilir. Parola sağlanmamışsa -NonInteractive seçeneği geçirilmediği takdirde komut, çalışma zamanında parola isteminde bulunur.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3670,7 +3670,7 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}]D;]A;Non-HTTPS access will be removed in a future version. Consider migrating to 'HTTPS' sources.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' işlemini 'HTTP' kaynakları ile birlikte çalıştırıyorsunuz: {1}]D;]A;HTTPS dışı erişim gelecek sürümlerde kaldırılacak. 'HTTPS' kaynaklarına geçirmeyi deneyin.]]></Val>
+            <Val><![CDATA['{0}' işlemini 'HTTP' kaynaklarıyla çalıştırıyorsunuz: {1}]D;]A;Gelecek sürümlerde HTTPS dışı erişim kaldırılacak. 'HTTPS' kaynaklarına geçmeyi düşünün.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3824,7 +3824,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
+      <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -3839,7 +3839,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.exe]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -3854,7 +3854,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.exe]]></Val>
       </Str>
       <Disp Icon="Str" />
