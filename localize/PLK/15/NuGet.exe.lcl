@@ -1924,7 +1924,7 @@
         <Str Cat="Text">
           <Val><![CDATA[nuget update]D;]A;    ]D;]A;nuget update -Safe]D;]A;]D;]A;nuget update -Self]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[aktualizacja nuget]D;]A; ]D;]A;nuget update -Safe]D;]A;]D;]A;nuget update -Self]]></Val>
+            <Val><![CDATA[aktualizacja nuget]D;]A;    ]D;]A;nuget update -Safe]D;]A;]D;]A;nuget update -Self]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2020,7 +2020,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package '{0}' already exists at feed '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Pakiet „{0}” już istnieje w kanale informacyjnym „{1}”.]]></Val>
+            <Val><![CDATA[Pakiet „{0}” już istnieje w źródle danych „{1}”.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2232,6 +2232,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_CannotFindNonArchitectureSpecificMsbuild" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The resolved MSBuild directory is `{0}` which is an architecture-specific directory. Could not find MSBuild in its parent directory (non-architecture specific).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Rozpoznany katalog MSBuild to „{0}”, który jest katalogiem specyficznym dla architektury. Nie można odnaleźć programu MSBuild w katalogu nadrzędnym (nie specyficznym dla architektury).]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_CannotGetGetAllProjectFileNamesMethod" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Cannot get the GetAllProjectFileNamesMethod from type  Mono.XBuild.CommandLine.SolutionParser.]]></Val>
@@ -2425,7 +2434,7 @@
         <Str Cat="Text">
           <Val><![CDATA[`project.json` pack is disabled in the current NuGet version, and will be permanently removed in a future version.]D;]A;Please consider migrating '{0}' to `PackageReference` and using the pack targets.]D;]A;You can set the '{1}' environment variable to 'true' to temporarily reenable this functionality.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Pakiet „project.json” jest wyłączony w bieżącej wersji menedżera pakietów NuGet, i zostanie trwale usunięty w przyszłej wersji.]D;]A; Rozważ migrację „{0}” do elementu "PackageReference" i użycie elementów docelowych pakietu.]D;]A;Możesz ustawić zmienną środowiskową „{1}” na wartość „true”, aby tymczasowo ponownie włączyć tę funkcję.]]></Val>
+            <Val><![CDATA[Pakiet „project.json” jest wyłączony w bieżącej wersji menedżera pakietów NuGet, i zostanie trwale usunięty w przyszłej wersji.]D;]A;Rozważ migrację „{0}” do elementu „PackageReference” i użycie elementów docelowych pakietu.]D;]A;Możesz ustawić zmienną środowiskową „{1}” na wartość „true”, aby tymczasowo ponownie włączyć tę funkcję.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3661,7 +3670,7 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}]D;]A;Non-HTTPS access will be removed in a future version. Consider migrating to 'HTTPS' sources.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Uruchamiasz operację „{0}” ze źródłami HTTP: {1}]D;]A;Dostęp inny niż HTTPS zostanie usunięty w przyszłej wersji. Rozważ przeprowadzenie migracji do źródeł „HTTPS”.]]></Val>
+            <Val><![CDATA[Uruchamiasz operację „{0}” ze źródłami „HTTP”: {1}]D;]A;Dostęp inny niż HTTPS zostanie usunięty w przyszłej wersji. Rozważ przeprowadzenie migracji do źródeł „HTTPS”.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3815,7 +3824,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
+      <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -3830,7 +3839,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.exe]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -3845,7 +3854,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.exe]]></Val>
       </Str>
       <Disp Icon="Str" />
