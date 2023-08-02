@@ -2407,25 +2407,16 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Vulnerability_Severity_1" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Vulnerability_Severity_Critical" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[low]]></Val>
+          <Val><![CDATA[critical]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[niedrig]]></Val>
+            <Val><![CDATA[kritisch]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Vulnerability_Severity_2" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[moderate]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[moderat]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Vulnerability_Severity_3" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Vulnerability_Severity_High" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[high]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -2434,11 +2425,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Vulnerability_Severity_4" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Vulnerability_Severity_Low" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[critical]]></Val>
+          <Val><![CDATA[low]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[kritisch]]></Val>
+            <Val><![CDATA[niedrig]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Vulnerability_Severity_Moderate" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[moderate]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[moderat]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2533,15 +2533,21 @@
       <Item ItemId=";Warning_NoVulnerabilityData" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[NuGetAudit is enabled, but no package sources contain known vulnerability data.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[NuGetAudit ist aktiviert, aber keine Paketquellen enthalten bekannte Sicherheitsrisikodaten.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Warning_PackageWithKnownVulnerability" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Package '{0}' {1} has a known {2} severity vulnerability, {3}.]]></Val>
+          <Val><![CDATA[Package '{0}' {1} has a known {2} severity vulnerability, {3}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Das Paket "{0}" {1} weist eine bekannte {2} Schweregrad-Sicherheitsanfälligkeit auf, {3}.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Package '{0}' {1} has a known {2} severity vulnerability, {3}.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
