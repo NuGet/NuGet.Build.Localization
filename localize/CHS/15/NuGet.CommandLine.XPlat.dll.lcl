@@ -1564,6 +1564,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";SourcesCommandProtocolVersionDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The NuGet server protocol version to be used. Currently supported versions are 2 and 3. See https://learn.microsoft.com/nuget/api/overview for information about the version 3 protocol. Defaults to 2 if not specified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[要使用的 NuGet 服务器协议版本。当前支持的版本为 2 和 3。有关版本 3 协议的信息，请参阅 https://learn.microsoft.com/nuget/api/overview。如果未指定，则默认为 2。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";SourcesCommandSourceDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Path to the package source.]]></Val>
@@ -1596,6 +1605,15 @@
           <Val><![CDATA[Comma-separated list of valid authentication types for this source. Set this to basic if the server advertises NTLM or Negotiate and your credentials must be sent using the Basic mechanism, for instance when using a PAT with on-premises Azure DevOps Server. Other valid values include negotiate, kerberos, ntlm, and digest, but these values are unlikely to be useful.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[此源的有效身份验证类型的列表(用逗号分隔)。如果服务器公布 NTLM 或 Negotiate，并且你的凭据必须使用基本机制发送(例如将 PAT 与本地 Azure DevOps Server 一起使用时)，请将此项设置为 basic。其他有效值包括 negotiate、kerberos、ntlm 和 digest，但这些值很可能没有用。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SourcesCommandValidProtocolVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The protocol version specified is invalid. Provide a valid protocol version.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[指定的协议版本无效。请提供有效的协议版本。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
