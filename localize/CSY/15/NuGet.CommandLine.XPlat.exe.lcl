@@ -1510,6 +1510,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";SourcesCommandProtocolVersionDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The NuGet server protocol version to be used. Currently supported versions are 2 and 3. See https://learn.microsoft.com/nuget/api/overview for information about the version 3 protocol. Defaults to 2 if not specified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Verze protokolu serveru NuGet, která se má použít. Aktuálně se podporují verze 2 a 3. Informace o protokolu verze 3 najdete v https://learn.microsoft.com/nuget/api/overview. Pokud se nezadá, výchozí hodnota je 2.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";SourcesCommandSourceDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Path to the package source.]]></Val>
@@ -1549,6 +1558,15 @@
           <Prev Cat="Text">
             <Val><![CDATA[Comma-separated list of valid authentication types for this source. By default, all authentication types are valid. Example: basic,negotiate]]></Val>
           </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SourcesCommandValidProtocolVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The protocol version specified is invalid. Provide a valid protocol version.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Zadaná verze protokolu je neplatná. Zadejte platnou verzi protokolu.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
