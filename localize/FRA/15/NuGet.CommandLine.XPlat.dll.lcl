@@ -1564,6 +1564,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";SourcesCommandProtocolVersionDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The NuGet server protocol version to be used. Currently supported versions are 2 and 3. See https://learn.microsoft.com/nuget/api/overview for information about the version 3 protocol. Defaults to 2 if not specified.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Version du protocole serveur NuGet à utiliser. Les versions actuellement prises en charge sont 2 et 3. Consultez https://learn.microsoft.com/nuget/api/overview pour plus d’informations sur le protocole version 3. La valeur par défaut est 2 si elle n’est pas spécifiée.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";SourcesCommandSourceDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Path to the package source.]]></Val>
@@ -1596,6 +1605,15 @@
           <Val><![CDATA[Comma-separated list of valid authentication types for this source. Set this to basic if the server advertises NTLM or Negotiate and your credentials must be sent using the Basic mechanism, for instance when using a PAT with on-premises Azure DevOps Server. Other valid values include negotiate, kerberos, ntlm, and digest, but these values are unlikely to be useful.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Liste d'éléments séparés par des virgules, qui correspondent aux types d'authentification valides pour cette source. Affectez la valeur basic si le serveur annonce l'utilisation de NTLM ou Negotiate, et si vos informations d'identification doivent être envoyées à l'aide du mécanisme de base, par exemple quand vous utilisez PAT avec une instance locale d'Azure DevOps Server. Les autres valeurs valides sont negotiate, kerberos, ntlm et digest, mais elles ne sont probablement pas utiles.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SourcesCommandValidProtocolVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The protocol version specified is invalid. Provide a valid protocol version.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[La version de protocole spécifiée n’est pas valide. Indiquez une version de protocole valide.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
