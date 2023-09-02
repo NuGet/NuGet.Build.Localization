@@ -268,6 +268,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_VulnerabilityDataFetch" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Error occurred while getting package vulnerability data: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[패키지 취약성 데이터를 가져오는 동안 오류가 발생했습니다. {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ExceptionWhenTryingToAddSource" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Exception '{0}' thrown when trying to add source '{1}'. Please verify all your online package sources are available.]]></Val>
@@ -876,6 +885,15 @@
           <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA['http' 소스 '{1}'(으)로 '{0}' 작업을 실행하고 있습니다. 'http' 소스에 대한 지원은 향후 버전에서 제거됩니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Warning_PackageWithKnownVulnerability" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package '{0}' {1} has a known {2} severity vulnerability, {3}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' {1} 패키지에 알려진 {2} 심각도 취약성인 {3}이(가) 있습니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
