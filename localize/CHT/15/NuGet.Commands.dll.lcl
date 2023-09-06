@@ -631,12 +631,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_PackageDownload_NoVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package '{0}' does not have an exact version like '[1.0.0]5D;'. Only exact versions are allowed with PackageDownload.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[套件 '{0}' 沒有如 '[1.0.0]5D;' 的精確版本。只有精確版本才允許使用 PackageDownload。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_PackageDownload_OnlyExactVersionsAreAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA['{0}' is not an exact version like '[1.0.0]5D;'. Only exact versions are allowed with PackageDownload.]]></Val>
+          <Val><![CDATA[Package '{0} {1}' does not have an exact version like '[1.0.0]5D;'. Only exact versions are allowed with PackageDownload.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' 不是確切的版本，如 '[1.0.0]5D;'。PackageDownload 只允許確切的版本。]]></Val>
+            <Val><![CDATA[套件 '{0} {1}' 沒有如 '[1.0.0]5D;' 的精確版本。只有精確版本才允許使用 PackageDownload。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA['{0}' is not an exact version like '[1.0.0]5D;'. Only exact versions are allowed with PackageDownload.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
