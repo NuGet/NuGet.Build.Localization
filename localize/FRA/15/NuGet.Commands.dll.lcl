@@ -631,12 +631,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_PackageDownload_NoVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package '{0}' does not have an exact version like '[1.0.0]5D;'. Only exact versions are allowed with PackageDownload.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Le paquet '{0}' n’a pas de version exacte comme '[1.0.0]5D;'. Seules les versions exactes sont autorisées avec PackageDownload.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_PackageDownload_OnlyExactVersionsAreAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA['{0}' is not an exact version like '[1.0.0]5D;'. Only exact versions are allowed with PackageDownload.]]></Val>
+          <Val><![CDATA[Package '{0} {1}' does not have an exact version like '[1.0.0]5D;'. Only exact versions are allowed with PackageDownload.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' n'est pas une version exacte telle que '[1.0.0]5D;'. Seules les versions exactes sont autorisées avec PackageDownload.]]></Val>
+            <Val><![CDATA[Le paquet '{0}' {1} n'a pas de version exacte comme '[1.0.0]5D;'. Seules les versions exactes sont autorisées avec PackageDownload.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA['{0}' is not an exact version like '[1.0.0]5D;'. Only exact versions are allowed with PackageDownload.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

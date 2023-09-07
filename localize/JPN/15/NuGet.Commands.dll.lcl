@@ -631,12 +631,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_PackageDownload_NoVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package '{0}' does not have an exact version like '[1.0.0]5D;'. Only exact versions are allowed with PackageDownload.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[パッケージ '{0}' に '[1.0.0]5D;' のような正確なバージョンがありません。PackageDownload では、正確なバージョンのみが許可されます。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_PackageDownload_OnlyExactVersionsAreAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA['{0}' is not an exact version like '[1.0.0]5D;'. Only exact versions are allowed with PackageDownload.]]></Val>
+          <Val><![CDATA[Package '{0} {1}' does not have an exact version like '[1.0.0]5D;'. Only exact versions are allowed with PackageDownload.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' は '[1.0.0]5D;' のような正確なバージョンではありません。PackageDdownload では、正確なバージョンのみを使用できます。]]></Val>
+            <Val><![CDATA[パッケージ '{0}{1}' に '[1.0.0]5D;' のような正確なバージョンがありません。PackageDownload では、正確なバージョンのみが許可されます。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA['{0}' is not an exact version like '[1.0.0]5D;'. Only exact versions are allowed with PackageDownload.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
