@@ -882,10 +882,13 @@
       </Item>
       <Item ItemId=";Warning_HttpServerUsage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
+          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source, '{1}'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Vous exécutez l’opération de '{0}' avec une source « http », '{1}'. La prise en charge des sources « http » sera supprimée dans une future version.]]></Val>
+            <Val><![CDATA[Vous exécutez l’opération '{0}' avec une source « HTTP », '{1}'. L’accès non-HTTPS sera supprimé dans une future version. Envisagez de migrer vers une source « HTTPS ».]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
