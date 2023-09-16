@@ -879,10 +879,13 @@
       </Item>
       <Item ItemId=";Warning_HttpServerUsage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
+          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source, '{1}'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['http' ソース '{1}' を使用して '{0}' 操作を実行しています。'http' ソースのサポートは将来のバージョンで削除される予定です。]]></Val>
+            <Val><![CDATA['HTTP' ソース '{1}' で '{0}' 操作を実行しています。HTTPS 以外のアクセスは、今後のバージョンでは削除されます。'HTTPS' ソースへの移行を検討してください。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
