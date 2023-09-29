@@ -1393,7 +1393,7 @@
         <Str Cat="Text">
           <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate.]D;]A;The certificate store can be specified by -CertificateStoreName and -CertificateStoreLocation options.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[証明書のローカル証明書ストアの検索に使用される証明書の SHA-1 フィンガープリントです。]D;]A;証明書ストアは、-CertificateStoreName と -CertificateStoreLocation のオプションによって指定できます。]]></Val>
+            <Val><![CDATA[証明書のローカル証明書ストアの検索に使用されるこの証明書の SHA-1 フィンガープリントです。]D;]A;証明書ストアは、-CertificateStoreName と -CertificateStoreLocation のオプションによって指定できます。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1402,7 +1402,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Password for the certificate, if needed.]D;]A;This option can be used to specify the password for the certificate. If no password is provided, the command will prompt for a password at run time, unless the -NonInteractive option is passed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[必要に応じて、証明書のパスワード。]D;]A;このオプションを使用して、証明書のパスワードを指定できます。パスワードが指定されていない場合、-NonInteractive オプションが渡されない限り、コマンドは実行時にパスワードの入力を求めます。]]></Val>
+            <Val><![CDATA[必要な場合の証明書のパスワードです。]D;]A;このオプションを使用して、証明書のパスワードを指定できます。パスワードが指定されていない場合、-NonInteractive オプションが渡されない限り、コマンドは実行時にパスワードの入力を求めます。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2029,7 +2029,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package '{0}' already exists at feed '{1}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[パッケージ '{0}' がフィード '{1}' に既に存在します。]]></Val>
+            <Val><![CDATA[パッケージ '{0}' はフィード '{1}' に既に存在します。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2443,7 +2443,7 @@
         <Str Cat="Text">
           <Val><![CDATA[`project.json` pack is disabled in the current NuGet version, and will be permanently removed in a future version.]D;]A;Please consider migrating '{0}' to `PackageReference` and using the pack targets.]D;]A;You can set the '{1}' environment variable to 'true' to temporarily reenable this functionality.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['project.json' パックは現在の NuGet バージョンでは無効になっており、今後のバージョンでは完全に削除されます。]D;]A;'{0}' を 'PackageReference' に移行し、パック ターゲットを使用することを検討してください。]D;]A;'{1}' 環境変数を 'true' に設定して、この機能を再有効化することができます。]]></Val>
+            <Val><![CDATA[`project.json` パックは現在の NuGet バージョンでは無効になっており、今後のバージョンでは完全に削除されます。]D;]A;'{0}' を 'PackageReference' に移行し、パック ターゲットを使用することを検討してください。]D;]A;'{1}' 環境変数を 'true' に設定して、この機能を再有効化することができます。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3319,7 +3319,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Restoring NuGet packages...]D;]A;To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the NuGet Package Manager node and uncheck '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[NuGet パッケージを復元しています...]D;]A;NuGet がビルド中にパッケージを復元しないようにするには、Visual Studio の [オプション]5D; ダイアログ ボックスを開き、NuGet の [パッケージ マネージャー]5D; ノードをクリックして、['{0}']5D; をオフにします。]]></Val>
+            <Val><![CDATA[NuGet パッケージを復元しています...]D;]A;NuGet がビルド中にパッケージを復元しないようにするには、[Visual Studio のオプション]5D; ダイアログ ボックスを開き、NuGet の [パッケージ マネージャー]5D; ノードをクリックして、['{0}']5D; をオフにします。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3833,7 +3833,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
+      <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -3848,7 +3848,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.exe]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -3857,13 +3857,13 @@
       <Str Cat="Text">
         <Val><![CDATA[© Microsoft Corporation. All rights reserved.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[(C) Microsoft Corporation. All rights reserved.]]></Val>
+          <Val><![CDATA[© Microsoft Corporation. All rights reserved.]]></Val>
         </Tgt>
       </Str>
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.exe]]></Val>
       </Str>
       <Disp Icon="Str" />
