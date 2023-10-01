@@ -237,6 +237,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";CommandNoHttpCache" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Disable the use of the HTTP cache and contact all configured package sources for live information.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Deshabilite el uso de la caché HTTP y póngase en contacto con todos los orígenes de paquetes configurados para obtener información activa.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";CommandNoServiceEndpointDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Does not append "api/v2/packages" to the source URL.]]></Val>
@@ -791,6 +800,15 @@
           <Val><![CDATA[<all | http-cache | global-packages | temp | plugins-cache> [-clear | -list]5D;]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[<todos los | | http-cache | de paquetes globales | temporal plugins-cache> [-clear | -list]5D;]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Log_RestoreNoCacheInformation" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[NoCache is deprecated and has been renamed to NoHttpCache. Please use NoHttpCache instead.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[NoCache está en desuso y se ha cambiado el nombre a NoHttpCache. Use NoHttpCache en su lugar.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
