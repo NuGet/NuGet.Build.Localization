@@ -237,6 +237,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";CommandNoHttpCache" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Disable the use of the HTTP cache and contact all configured package sources for live information.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[HTTP 캐시 사용을 사용하지 않도록 설정하고 구성된 모든 패키지 원본에 라이브 정보를 문의합니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";CommandNoServiceEndpointDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Does not append "api/v2/packages" to the source URL.]]></Val>
@@ -791,6 +800,15 @@
           <Val><![CDATA[<all | http-cache | global-packages | temp | plugins-cache> [-clear | -list]5D;]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[<모두 | http 캐시 | 글로벌 패키지 | 온도 | 플러그인 캐시> [-clear | -목록]5D;]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Log_RestoreNoCacheInformation" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[NoCache is deprecated and has been renamed to NoHttpCache. Please use NoHttpCache instead.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[NoCache는 더 이상 사용되지 않으며 NoHttpCache로 이름이 바뀌었습니다. 대신 NoHttpCache를 사용하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
