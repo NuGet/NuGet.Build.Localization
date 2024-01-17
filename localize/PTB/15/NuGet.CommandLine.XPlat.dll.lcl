@@ -349,6 +349,9 @@
       <Item ItemId=";Error_CannotObtainSearchSource" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Failed to obtain a search resource.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Falha ao obter um recurso de pesquisa.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -409,6 +412,9 @@
       <Item ItemId=";Error_InvalidOptionValue" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid value `{0}` for option {1}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Valor inválido ''{0}'' para a opção {1}.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -442,6 +448,9 @@
       <Item ItemId=";Error_NoSource" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No package sources found.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nenhuma fonte de pacote encontrada.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1948,60 +1957,90 @@
       <Item ItemId=";pkgSearch_Description" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Searches one or more package sources for packages that match a search term. If no sources are specified, all sources defined in the NuGet.Config are used.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Pesquisa uma ou mais fontes de pacote em busca de pacotes que correspondam a um termo de pesquisa. Se nenhuma fonte for especificada, todas as fontes definidas no NuGet.Config serão usadas.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";pkgSearch_ExactMatchDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Require that the search term exactly match the name of the package. Causes `--take` and `--skip` options to be ignored.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Requer que o termo de pesquisa corresponda exatamente ao nome do pacote. Faz com que as opções ''--take'' e ''--skip'' sejam ignoradas.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";pkgSearch_FormatDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Format the output accordingly. Either `table`, or `json`. The default value is `table`.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Formatar a saída adequadamente. ''table'' ou ''json''. O valor padrão é ''table''.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";pkgSearch_InteractiveDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Stop and wait for user input or action (for example to complete authentication).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Pare e aguarde a entrada ou a ação do usuário (por exemplo, para concluir a autenticação).]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";pkgSearch_PrereleaseDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Include prerelease packages.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Incluir pacotes de pré-lançamento.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";pkgSearch_SkipDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Number of results to skip, to allow pagination. Default 0.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Número de resultados a serem ignorados, para permitir paginação. Padrão 0.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";pkgSearch_SourceDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Package source to search. You can pass multiple `--source` options to search multiple package sources. Example: `--source https://api.nuget.org/v3/index.json`.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A fonte do pacote a ser pesquisada. Você pode passar várias opções de fonte para pesquisar várias fontes de pacote. Exemplo: ''--source https://api.nuget.org/v3/index.json''.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";pkgSearch_TakeDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Number of results to return. Default 20.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O número de resultados a serem retornados. Padrão 20.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";pkgSearch_VerbosityDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Display this amount of details in the output: `normal`, `minimal`, `detailed`. The default is `normal`.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Exiba essa quantidade de detalhes na saída: ''normal'', ''mínimo'', ''detalhado''. O padrão é ''normal''.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";pkgSearch_termDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Search term to filter package names, descriptions, and tags. Used as a literal value. Example: `dotnet package search some.package`. See also `--exact-match`.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Termo de pesquisa para filtrar nomes, descrições e marcas do pacote. Usado como um valor literal. Exemplo: ''dotnet package search some.package''. Consulte também ''--exact-match''.]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
