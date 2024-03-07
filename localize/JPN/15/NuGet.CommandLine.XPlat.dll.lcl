@@ -172,123 +172,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";ConfigCommandKeyNotFound" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Key '{0}' not found.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[キー '{0}' が見つかりません。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ConfigGetAllOrConfigKeyDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[ALL: Get all merged NuGet configuration settings from multiple NuGet configuration files that will be applied, when invoking NuGet command from the working directory path.  CONFIG_KEY: Get the effective value of the specified configuration settings of the config section.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[ALL: 作業ディレクトリ パスから NuGet コマンドを呼び出すときに適用される複数の NuGet 構成ファイルから、マージされたすべての NuGet 構成設定を取得します。CONFIG_KEY: 構成セクションの指定された構成設定の有効な値を取得します。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ConfigGetCommandDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Gets the NuGet configuration settings that will be applied.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[適用される NuGet 構成設定を取得します。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ConfigGetShowPathDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Indicate that the NuGet configuration file path will be shown beside the configuration settings.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[NuGet 構成ファイルのパスが構成設定の横に表示されることを示します。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ConfigPathsCommandDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Lists the paths to all NuGet configuration files that will be applied when invoking NuGet command in a specific directory]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[特定のディレクトリで NuGet コマンドを呼び出すときに適用されるすべての NuGet 構成ファイルへのパスを一覧表示します]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ConfigPathsWorkingDirectoryDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Specifies the directory to start from when listing configuration files. If not specified, the current directory is used.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[構成ファイルの一覧表示時に開始するディレクトリを指定します。指定しない場合は、現在のディレクトリが使用されます。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ConfigSetCommandDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Set the value of a specified NuGet configuration setting.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定された NuGet 構成設定の値を設定します。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ConfigSetConfigKeyDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The key of the settings that are to be set.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[設定する設定のキー。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ConfigSetConfigValueDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The value of the settings that are to be set.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[設定する設定の値。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ConfigUnsetCommandDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Removes the key-value pair from a specified NuGet configuration setting.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定された NuGet 構成設定からキーと値のペアを削除します。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ConfigUnsetConfigKeyDescription" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The key of the settings that are to be removed.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[削除する設定のキー。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";ConfigUnsetNonExistingKey" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The key "{0}" could not be found in config section, so it could not be unset.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[キー "{0}" が構成セクションに見つからなかったため、設定を解除できませんでした。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Config_Description" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[NuGet configuration CLI]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[NuGet 構成 CLI]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";ConsoleConfirmMessage" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[{0} (y/N)]]></Val>
@@ -517,15 +400,6 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_ConfigSetInvalidKey" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA['{0}' is not a valid config key in config section.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' は構成セクションの有効な構成キーではありません。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";Error_InvalidCultureInfo" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid culture identifier in {0} environment variable. Value read is '{1}']]></Val>
@@ -594,15 +468,6 @@
           <Val><![CDATA[The project `{0}` uses package.config for NuGet packages, while the command works only with package reference projects.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[プロジェクト '{0}' では NuGet パッケージに package.config を使用しますが、コマンドはパッケージ参照プロジェクトでのみ動作します。]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Error_PathNotFound" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[The specified path '{0}' does not exist.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定されたパス '{0}' がありません。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1799,7 +1664,7 @@
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";String1" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
+        <Str Cat="Text" UsrLk="true">
           <Val><![CDATA[]]></Val>
         </Str>
         <Disp Icon="Str" />
@@ -2084,7 +1949,7 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}]D;]A;Non-HTTPS access will be removed in a future version. Consider migrating to 'HTTPS' sources.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA["HTTP" ソースで '{0}' 操作を実行しています。{1}]D;]A;"HTTPS" 以外のアクセスは、今後のバージョンでは削除されます。"HTTPS" ソースへの移行を検討してください。]]></Val>
+            <Val><![CDATA[`HTTP` ソースを使用して `{0}` 操作を実行しています: {1}]D;]A;HTTPS 以外のアクセスは今後のバージョンから削除される予定です。`HTTPS` ソースへの移行をご検討ください。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2220,7 +2085,7 @@
       <Str Cat="Text">
         <Val><![CDATA[© Microsoft Corporation. All rights reserved.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[(C) Microsoft Corporation. All rights reserved.]]></Val>
+          <Val><![CDATA[© Microsoft Corporation. All rights reserved.]]></Val>
         </Tgt>
         <Prev Cat="Text">
           <Val><![CDATA[Microsoft Corporation. All rights reserved.]]></Val>
