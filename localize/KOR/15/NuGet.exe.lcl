@@ -1393,7 +1393,7 @@
         <Str Cat="Text">
           <Val><![CDATA[nuget setapikey 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a]D;]A;]D;]A;nuget setapikey 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -Source http://example.com/nugetfeed]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[nuget setapikey 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a]D;]A;]D;]A;nuget setapikey 4003d786-cc37-4004-bfdf-c4f3e8ef9feedb3a -Source http://example.com]]></Val>
+            <Val><![CDATA[nuget setapikey 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a]D;]A;]D;]A;nuget setapikey 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -Source http://example.com/nugetfeed]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1456,7 +1456,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Subject name of the certificate used to search a local certificate store for the certificate. ]D;]A;The search is a case-insensitive string comparison using the supplied value, which will find all certificates with the subject name containing that string, regardless of other subject values.]D;]A;The certificate store can be specified by -CertificateStoreName and -CertificateStoreLocation options.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[인증서에 대한 로컬 인증서 저장소를 검색하는 데 사용되는 인증서의 주체 이름입니다. ]D;]A;검색은 제공된 값을 사용하여 대소문자를 구분하지 않는 문자열 비교로, 다른 주제 값에 관계없이 해당 문자열을 포함하는 주제 이름을 가진 모든 인증서를 찾습니다.]D;]A;인증서 저장소는 -CertificateStoreName 및 -CertificateStoreLocation 옵션으로 지정됩니다.]]></Val>
+            <Val><![CDATA[인증서에 대한 로컬 인증서 저장소를 검색하는 데 사용되는 인증서의 주체 이름입니다. ]D;]A;검색은 제공된 값을 사용하여 대/소문자를 구분하지 않는 문자열 비교로, 다른 주제 값에 관계없이 해당 문자열을 포함하는 주체 이름을 가진 모든 인증서를 찾습니다.]D;]A;인증서 저장소는 -CertificateStoreName 및 -CertificateStoreLocation 옵션으로 지정될 수 있습니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2014,7 +2014,7 @@
         <Str Cat="Text">
           <Val><![CDATA[nuget verify -Signatures .\..\MyPackage.nupkg -CertificateFingerprint "CE40881FF5F0AD3E58965DA20A9F571EF1651A56933748E1BF1C99E537C4E039;5F874AAF47BCB268A19357364E7FBB09D6BF9E8A93E1229909AC5CAC865802E2" -Verbosity detailed]D;]A;]D;]A;nuget verify -Signatures C:\packages\MyPackage.nupkg -CertificateFingerprint CE40881FF5F0AD3E58965DA20A9F571EF1651A56933748E1BF1C99E537C4E039]D;]A;]D;]A;nuget verify -Signatures MyPackage.nupkg -Verbosity quiet]D;]A;]D;]A;nuget verify -Signatures .\*.nupkg]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[nuget verify -Signatures .\..\MyPackage.nupkg -CertificateFingerprint "CE40881FF5F0AD3E58965DA20A9F571EF1651A56933748E1BF1C99E537C4E039;5F874AAF47BCB268A19357364E7FBB09D6BF9E8A93E1229909AC5CAC865802E2" -Verbosity detailed]D;]A;]D;]A;nuget verify -Signatures C:\packages\MyPackage.nupkg -CertificateFingerprint CE40881FF5F0AD3E58965DA20A9F571EF1651A56933748E1BF1C99E537C4E039]D;]A;]D;]A;nuget verify -Signatures MyPackage.nupkg -Verbosity quiet]D;]A;]D;]A;nuget verify -Signatures .\*.nupkg]]></Val>
+            <Val><![CDATA[nuget verify -Signatures .\..\MyPackage.nupkg -CertificateFingerprint "CE40881FF5F0AD3E58965DA20A9F571EF1651A56933748E1BF1C99E537C4E039;5F874AAF47BCB268A19357364E7FBB09D6BF9E8A93E1229909AC5CAC865802E2" -세부 정보 표시 상세 기술]D;]A;]D;]A;nuget verify -Signatures C:\packages\MyPackage.nupkg -CertificateFingerprint CE40881FF5F0AD3E58965DA20A9F571EF1651A56933748E1BF1C99E537C4E039]D;]A;]D;]A;nuget verify -Signatures MyPackage.nupkg -세부 정보 표시 자동]D;]A;]D;]A;nuget verify -Signatures .\*.nupkg]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3860,7 +3860,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
+      <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -3875,7 +3875,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.exe]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -3890,7 +3890,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.exe]]></Val>
       </Str>
       <Disp Icon="Str" />
