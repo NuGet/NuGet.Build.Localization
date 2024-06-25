@@ -562,11 +562,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_MultipleProjectOrSolutionFilesInDirectory" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The directory '{0}' contains multiple project or solution files. Please specify which project or solution file to use.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El directorio "{0}" contiene varios archivos de proyecto o solución. Especifique el archivo de proyecto o solución que se va a usar.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_NoDgSpec" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[None or invalid DgSpec was passed to NuGet add package command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[No se pasó ningún valor DgSpec al comando NuGet add package o el valor no era válido.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_NoProjectOrSolutionFilesInDirectory" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The directory '{0}' does not contain any project or solution files.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[El directorio "{0}" no contiene ningún archivo de proyecto o solución.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -594,6 +612,15 @@
           <Val><![CDATA[The project `{0}` uses package.config for NuGet packages, while the command works only with package reference projects.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[El proyecto "{0}" usa package.config para los paquetes NuGet, aunque el comando solo funciona con proyectos de referencia de paquetes.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_PathIsMissingOrInvalid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Missing or invalid path '{0}'. Please provide a path to a project, solution file, or directory.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Falta la ruta de acceso "{0}" o no es válida. Proporcione una ruta de acceso a un proyecto, archivo de solución o directorio.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2107,21 +2134,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";WhyCommand_Error_InvalidAssetsFile" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";WhyCommand_Error_ArgumentExceptionThrown" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The assets file {0} is invalid. Please run restore for project '{1}' before running this command.]]></Val>
+          <Val><![CDATA[Unable to run 'dotnet nuget why'. {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[El archivo de recursos {0} no es válido. Ejecute la restauración del proyecto '{1}' antes de ejecutar este comando.]]></Val>
+            <Val><![CDATA[No se puede ejecutar "dotnet nuget why". {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";WhyCommand_Error_PathIsMissingOrInvalid" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";WhyCommand_Error_InvalidAssetsFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to run 'dotnet nuget why'. Missing or invalid project/solution file '{0}'.]]></Val>
+          <Val><![CDATA[The assets file '{0}' is invalid. Please run restore for project '{1}' before running this command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[No se puede ejecutar "dotnet nuget why". Falta el archivo de proyecto o solución '{0}' o no es válido.]]></Val>
+            <Val><![CDATA[El archivo de recursos "{0}" no es válido. Ejecute la restauración del proyecto "{1}" antes de ejecutar este comando.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The assets file {0} is invalid. Please run restore for project '{1}' before running this command.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2190,10 +2220,13 @@
       </Item>
       <Item ItemId=";WhyCommand_Warning_AssetsFileDoesNotContainSpecifiedTarget" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The assets file {0} for project '{1}' does not contain a target for the specified input framework '{2}'.]]></Val>
+          <Val><![CDATA[The assets file '{0}' for project '{1}' does not contain a target for the specified input framework '{2}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[El archivo de recursos {0} para el proyecto '{1}' no contiene un destino para el marco de entrada '{2}' especificado.]]></Val>
+            <Val><![CDATA[El archivo de recursos "{0}" para el proyecto "{1}" no contiene un destino para el marco de entrada "{2}" especificado.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The assets file {0} for project '{1}' does not contain a target for the specified input framework '{2}'.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

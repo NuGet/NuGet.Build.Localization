@@ -562,11 +562,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_MultipleProjectOrSolutionFilesInDirectory" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The directory '{0}' contains multiple project or solution files. Please specify which project or solution file to use.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[目錄 '{0}' 包含多個專案檔或方案檔。請指定要使用的專案檔或方案檔。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_NoDgSpec" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[None or invalid DgSpec was passed to NuGet add package command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[對 NuGet add package 命令傳遞了「無」或無效的 DgSpec。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_NoProjectOrSolutionFilesInDirectory" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The directory '{0}' does not contain any project or solution files.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[目錄 '{0}' 未包含任何專案檔或方案檔。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -594,6 +612,15 @@
           <Val><![CDATA[The project `{0}` uses package.config for NuGet packages, while the command works only with package reference projects.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[專案 `{0}` 會使用 NuGet 套件的 package.config，且命令僅能搭配套件參考專案使用。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_PathIsMissingOrInvalid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Missing or invalid path '{0}'. Please provide a path to a project, solution file, or directory.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[路徑 '{0}' 遺漏或無效。請提供專案檔、方案檔或目錄的路徑。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2107,21 +2134,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";WhyCommand_Error_InvalidAssetsFile" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";WhyCommand_Error_ArgumentExceptionThrown" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The assets file {0} is invalid. Please run restore for project '{1}' before running this command.]]></Val>
+          <Val><![CDATA[Unable to run 'dotnet nuget why'. {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[資產檔案 {0} 無效。執行此命令之前，請先執行專案 '{1}' 的還原。]]></Val>
+            <Val><![CDATA[無法執行 'dotnet nuget why'。{0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";WhyCommand_Error_PathIsMissingOrInvalid" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";WhyCommand_Error_InvalidAssetsFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to run 'dotnet nuget why'. Missing or invalid project/solution file '{0}'.]]></Val>
+          <Val><![CDATA[The assets file '{0}' is invalid. Please run restore for project '{1}' before running this command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[無法執行 'dotnet nuget why'。專案/解決方案檔案 '{0}' 遺失或無效。]]></Val>
+            <Val><![CDATA[資產檔案 '{0}' 無效。執行此命令之前，請先執行專案 '{1}' 的還原。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The assets file {0} is invalid. Please run restore for project '{1}' before running this command.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2190,10 +2220,13 @@
       </Item>
       <Item ItemId=";WhyCommand_Warning_AssetsFileDoesNotContainSpecifiedTarget" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The assets file {0} for project '{1}' does not contain a target for the specified input framework '{2}'.]]></Val>
+          <Val><![CDATA[The assets file '{0}' for project '{1}' does not contain a target for the specified input framework '{2}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[專案 '{1}' 的資產檔案 {0} 未包含指定輸入架構 '{2}' 的目標。]]></Val>
+            <Val><![CDATA[專案 '{1}' 的資產檔案 '{0}' 未包含指定輸入架構 '{2}' 的目標。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The assets file {0} for project '{1}' does not contain a target for the specified input framework '{2}'.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

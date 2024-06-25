@@ -562,11 +562,29 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_MultipleProjectOrSolutionFilesInDirectory" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The directory '{0}' contains multiple project or solution files. Please specify which project or solution file to use.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ディレクトリ '{0}' に複数のプロジェクト ファイルまたはソリューション ファイルが含まれています。使用するプロジェクトまたはソリューション ファイルを指定してください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_NoDgSpec" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[None or invalid DgSpec was passed to NuGet add package command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[NuGet add package コマンドに渡された DgSpec が存在しないか、無効です。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_NoProjectOrSolutionFilesInDirectory" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The directory '{0}' does not contain any project or solution files.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ディレクトリ '{0}' にプロジェクト ファイルまたはソリューション ファイルが含まれていません。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -594,6 +612,15 @@
           <Val><![CDATA[The project `{0}` uses package.config for NuGet packages, while the command works only with package reference projects.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[プロジェクト '{0}' では NuGet パッケージに package.config を使用しますが、コマンドはパッケージ参照プロジェクトでのみ動作します。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_PathIsMissingOrInvalid" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Missing or invalid path '{0}'. Please provide a path to a project, solution file, or directory.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[パス '{0}' が見つからないか無効です。プロジェクト、ソリューション ファイル、またはディレクトリへのパスを指定してください。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2107,21 +2134,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";WhyCommand_Error_InvalidAssetsFile" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";WhyCommand_Error_ArgumentExceptionThrown" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The assets file {0} is invalid. Please run restore for project '{1}' before running this command.]]></Val>
+          <Val><![CDATA[Unable to run 'dotnet nuget why'. {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[アセット ファイル {0} が無効です。このコマンドを実行する前に、プロジェクト '{1}' の復元を実行してください。]]></Val>
+            <Val><![CDATA['dotnet nuget why' を実行できません。{0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";WhyCommand_Error_PathIsMissingOrInvalid" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";WhyCommand_Error_InvalidAssetsFile" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to run 'dotnet nuget why'. Missing or invalid project/solution file '{0}'.]]></Val>
+          <Val><![CDATA[The assets file '{0}' is invalid. Please run restore for project '{1}' before running this command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['dotnet nuget why' を実行できません。プロジェクト/ソリューション ファイル '{0}' が見つからないか無効です。]]></Val>
+            <Val><![CDATA[アセット ファイル '{0}' が無効です。このコマンドを実行する前に、プロジェクト '{1}' の復元を実行してください。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The assets file {0} is invalid. Please run restore for project '{1}' before running this command.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2190,10 +2220,13 @@
       </Item>
       <Item ItemId=";WhyCommand_Warning_AssetsFileDoesNotContainSpecifiedTarget" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The assets file {0} for project '{1}' does not contain a target for the specified input framework '{2}'.]]></Val>
+          <Val><![CDATA[The assets file '{0}' for project '{1}' does not contain a target for the specified input framework '{2}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[プロジェクト '{1}' のアセット ファイル {0} に、指定された入力フレームワーク '{2}' のターゲットが含まれていません。]]></Val>
+            <Val><![CDATA[プロジェクト '{1}' のアセット ファイル '{0}' に、指定された入力フレームワーク '{2}' のターゲットが含まれていません。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The assets file {0} for project '{1}' does not contain a target for the specified input framework '{2}'.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
