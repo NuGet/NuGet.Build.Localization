@@ -59,7 +59,7 @@
         <Disp Icon="Dlg" />
       </Item>
       <Item ItemId=";defaultPackageManagementFormatItems.Items" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Combo Box">
+        <Str Cat="Combo Box" UsrLk="true">
           <Val><![CDATA[Packages.config]]></Val>
         </Str>
         <Disp Icon="Dlg" />
@@ -191,7 +191,7 @@
         <Disp Icon="Dlg" />
       </Item>
       <Item ItemId=";BrowseButton.Text" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Button">
+        <Str Cat="Button" UsrLk="true">
           <Val><![CDATA[...]]></Val>
         </Str>
         <Bin BinId="1">
@@ -809,7 +809,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Select a Package Source Folder]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Seleziona una cartella di origine pacchetti]]></Val>
+            <Val><![CDATA[Consente di selezionare una cartella di origine pacchetti]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1318,9 +1318,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Il pacchetto '{0}' è disponibile nella cartella Pacchetti globali, ma l'origine da cui proviene '{1}' non è una delle origini configurate.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package `{0}` is available in the Global packages folder, but the source it came from `{1}` is not one of this solution's configured sources.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2237,7 +2234,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Can not access NuGet.Config, Please check NuGet.Config]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Non è possibile accedere a NuGet.Config, controllare NuGet.Config]]></Val>
+            <Val><![CDATA[Non è possibile accedere a NuGet.Config. Controllare NuGet.Config]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2303,7 +2300,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The source specified is invalid. Please provide a valid source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[L'origine specificata non è valida. Fornire un'origine valida.]]></Val>
+            <Val><![CDATA[L'origine specificata non è valida. Specificare un'origine valida.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2312,7 +2309,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The name and source specified cannot be empty. Please provide a valid name and source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Il nome e l'origine specificati non possono essere vuoti. Fornire un nome e un'origine validi.]]></Val>
+            <Val><![CDATA[Il nome e l'origine specificati non possono essere vuoti. Specificare un nome e un'origine validi.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2321,7 +2318,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The name specified cannot be empty. Please provide a valid name.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Il nome specificato non può essere vuoto. Fornire un nome valido.]]></Val>
+            <Val><![CDATA[Il nome specificato non può essere vuoto. Specificare un nome valido.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2348,7 +2345,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The name specified has already been added to the list of available package sources. Please provide a unique name.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Il nome specificato è già stato aggiunto all'elenco delle origini dei pacchetti disponibili. Fornire un nome univoco.]]></Val>
+            <Val><![CDATA[Il nome specificato è già stato aggiunto all'elenco delle origini pacchetti disponibili. Specificare un nome univoco.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2357,7 +2354,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The source specified has already been added to the list of available package sources. Please provide a unique source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[L'origine specificata è già stata aggiunta all'elenco delle origini dei pacchetti disponibili. Fornire un'origine univoca.]]></Val>
+            <Val><![CDATA[L'origine specificata è già stata aggiunta all'elenco delle origini pacchetti disponibili. Specificare un'origine univoca.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3353,13 +3350,13 @@
         <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
       </Item>
       <Item ItemId=";AddMappingDialogWindow" ItemType=";FrameworkElement.Height" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true">
+        <Str Cat="Unknown" DevLk="true" UsrLk="true">
           <Val><![CDATA[348]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/addmappingdialog.baml \ 0 \ 0 \ ;Height \ ;0 \ 0" />
       </Item>
       <Item ItemId=";AddMappingDialogWindow" ItemType=";FrameworkElement.Width" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true">
+        <Str Cat="Unknown" DevLk="true" UsrLk="true">
           <Val><![CDATA[480]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/addmappingdialog.baml \ 0 \ 0 \ ;Width \ ;0 \ 0" />
@@ -3374,7 +3371,7 @@
         <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
       </Item>
       <Item ItemId=";ListItemStackPanel" ItemType=";FrameworkElement.Margin" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true">
+        <Str Cat="Unknown" DevLk="true" UsrLk="true">
           <Val><![CDATA[0,3,0,3]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/packagesourcemappingoptionscontrol.baml \ 0 \ 0 \ ;Margin \ ;0 \ 0" />
