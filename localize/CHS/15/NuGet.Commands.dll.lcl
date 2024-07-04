@@ -2529,19 +2529,25 @@
       </Item>
       <Item ItemId=";Warning_MinVersionDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{0} depends on {1} but {2} was not found. An approximate best match of {3} was resolved.]]></Val>
+          <Val><![CDATA[{0} depends on {1} but {2} was not found. {3} was resolved instead.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} 依赖于 {1}，但找不到 {2}。 已解决 {3} 的近似最佳匹配。 ]]></Val>
+            <Val><![CDATA[{0} 依赖于 {1}，但没有找到 {2}。已改为解析 {3}。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[{0} depends on {1} but {2} was not found. An approximate best match of {3} was resolved.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Warning_MinVersionNonInclusive" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. An approximate best match of {2} was resolved.]]></Val>
+          <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. {2} was resolved instead.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} 未提供依赖项 {1} 的包含下限。已解决 {2} 的近似最佳匹配。]]></Val>
+            <Val><![CDATA[{0} 不提供依赖项 {1} 的下限(含)。已改为解析 {2}。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. An approximate best match of {2} was resolved.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

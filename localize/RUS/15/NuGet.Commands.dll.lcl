@@ -2529,19 +2529,25 @@
       </Item>
       <Item ItemId=";Warning_MinVersionDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{0} depends on {1} but {2} was not found. An approximate best match of {3} was resolved.]]></Val>
+          <Val><![CDATA[{0} depends on {1} but {2} was not found. {3} was resolved instead.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} зависит от {1}, но {2} не найден. Использовано наилучшее приближенное соответствие {3}.]]></Val>
+            <Val><![CDATA[{0} зависит от {1}, но версия {2} не найдена. Использовалась версия {3}.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[{0} depends on {1} but {2} was not found. An approximate best match of {3} was resolved.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Warning_MinVersionNonInclusive" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. An approximate best match of {2} was resolved.]]></Val>
+          <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. {2} was resolved instead.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} не задает включенную нижнюю границу для зависимости {1}. Использовано наилучшее приближенное соответствие {2}.]]></Val>
+            <Val><![CDATA[{0} не задает включенную нижнюю границу для зависимости {1}. Использовалась версия {2}.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. An approximate best match of {2} was resolved.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

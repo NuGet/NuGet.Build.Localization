@@ -2529,19 +2529,25 @@
       </Item>
       <Item ItemId=";Warning_MinVersionDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{0} depends on {1} but {2} was not found. An approximate best match of {3} was resolved.]]></Val>
+          <Val><![CDATA[{0} depends on {1} but {2} was not found. {3} was resolved instead.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} は {1} に依存していますが、{2} が見つかりませんでした。{3} の概算の最適な一致が解決されました。]]></Val>
+            <Val><![CDATA[{0} は {1} によって異なりますが、{2} が見つかりませんでした。代わりに {3} が解決されました。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[{0} depends on {1} but {2} was not found. An approximate best match of {3} was resolved.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Warning_MinVersionNonInclusive" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. An approximate best match of {2} was resolved.]]></Val>
+          <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. {2} was resolved instead.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} は依存関係 {1} の下限値 (その値を含む) を指定しませんでした。{2} の概算の最適な一致が解決されました。]]></Val>
+            <Val><![CDATA[{0} では、依存関係 {1} の下限値 (その値を含む) を指定しませんでした。代わりに、{2} が解決されました。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. An approximate best match of {2} was resolved.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
