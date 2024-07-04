@@ -2529,19 +2529,25 @@
       </Item>
       <Item ItemId=";Warning_MinVersionDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{0} depends on {1} but {2} was not found. An approximate best match of {3} was resolved.]]></Val>
+          <Val><![CDATA[{0} depends on {1} but {2} was not found. {3} was resolved instead.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0}은(는) {1}에 종속되어 있지만 {2}을(를) 찾을 수 없습니다. 대략적으로 가장 잘 일치하는 {3}이(가) 확인되었습니다.]]></Val>
+            <Val><![CDATA[{0}은(는) {1}에 종속되지만 {2}을(를) 찾을 수 없습니다. 대신 {3}이(가) 확인되었습니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[{0} depends on {1} but {2} was not found. An approximate best match of {3} was resolved.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Warning_MinVersionNonInclusive" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. An approximate best match of {2} was resolved.]]></Val>
+          <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. {2} was resolved instead.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0}은(는) {1} 종속성에 대한 포함 하한을 제공하지 않습니다. 대략적으로 가장 잘 일치하는 {2}이(가) 확인되었습니다.]]></Val>
+            <Val><![CDATA[{0}은(는) 종속성 {1}에 대한 포괄적인 하한을 제공하지 않습니다. 대신 {2}이(가) 확인되었습니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. An approximate best match of {2} was resolved.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

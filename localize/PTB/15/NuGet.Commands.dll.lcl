@@ -2529,19 +2529,25 @@
       </Item>
       <Item ItemId=";Warning_MinVersionDoesNotExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{0} depends on {1} but {2} was not found. An approximate best match of {3} was resolved.]]></Val>
+          <Val><![CDATA[{0} depends on {1} but {2} was not found. {3} was resolved instead.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} depende de {1}, mas {2} não foi encontrado. A melhor correspondência aproximada de {3} foi resolvida.]]></Val>
+            <Val><![CDATA[{0} depende de {1} mas {2} não foi encontrado. {3} foi resolvido.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[{0} depends on {1} but {2} was not found. An approximate best match of {3} was resolved.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Warning_MinVersionNonInclusive" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. An approximate best match of {2} was resolved.]]></Val>
+          <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. {2} was resolved instead.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} não fornece nenhum limite inferior inclusivo para a dependência {1}. A melhor correspondência aproximada {2} foi resolvida.]]></Val>
+            <Val><![CDATA[{0} não fornece um limite inferior inclusivo para a dependência {1}. {2} foi resolvido.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. An approximate best match of {2} was resolved.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
