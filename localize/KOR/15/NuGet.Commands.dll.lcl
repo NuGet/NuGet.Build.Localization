@@ -337,6 +337,33 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_HttpSource_Single" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{1} 'HTTP' 원본을 사용하여 '{0}' 작업을 실행하고 있습니다. NuGet에 HTTPS 원본이 필요합니다. HTTP 소스를 사용하려면 NuGet.Config 파일에서 'allowInsecureConnections'를 명시적으로 true로 설정해야 합니다. https://aka.ms/nuget-https-everywhere에서 자세한 내용을 참조하세요.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_HttpSource_Single_Short" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{1} 'HTTP' 원본을 사용하여 '{0}' 작업을 실행하고 있습니다. NuGet에 HTTPS 원본이 필요합니다. https://aka.ms/nuget-https-everywhere에서 자세한 내용을 참조하세요.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_HttpSources_Multiple" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{1} 'HTTP' 원본을 사용하여 '{0}' 작업을 실행하고 있습니다. NuGet에 HTTPS 원본이 필요합니다. HTTP 소스를 사용하려면 NuGet.Config 파일에서 'allowInsecureConnections'를 명시적으로 true로 설정해야 합니다. https://aka.ms/nuget-https-everywhere에서 자세한 내용을 참조하세요.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_IncompatiblePackageType" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The package {0} {1} has a package type {2} that is incompatible with this project.]]></Val>
@@ -2523,6 +2550,24 @@
           <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}]D;]A;Non-HTTPS access will be removed in a future version. Consider migrating to 'HTTPS' sources.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[{0}{1}]D; 'HTTP' 원본을 사용하여 ']A;' 작업을 실행하고 있습니다. 비 HTTPS 액세스는 이후 버전에서 제거됩니다. 'HTTPS' 원본으로 마이그레이션하는 것이 좋습니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Warning_List_HttpSource" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The following is a 'Non-HTTPS' source: {0}]D;]A;NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[다음은 '비 HTTPS' 원본입니다. {0}]D;]A;NuGet에 HTTPS 원본이 필요합니다. https://aka.ms/nuget-https-everywhere에서 자세한 내용을 참조하세요.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Warning_List_HttpSources" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The following are 'Non-HTTPS' sources: {0}]D;]A;NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[다음은 '비 HTTPS' 원본입니다. {0}]D;]A;NuGet에 HTTPS 원본이 필요합니다. https://aka.ms/nuget-https-everywhere에서 자세한 내용을 참조하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
