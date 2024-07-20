@@ -59,7 +59,7 @@
         <Disp Icon="Dlg" />
       </Item>
       <Item ItemId=";defaultPackageManagementFormatItems.Items" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Combo Box" UsrLk="true">
+        <Str Cat="Combo Box">
           <Val><![CDATA[Packages.config]]></Val>
         </Str>
         <Disp Icon="Dlg" />
@@ -191,7 +191,7 @@
         <Disp Icon="Dlg" />
       </Item>
       <Item ItemId=";BrowseButton.Text" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Button" UsrLk="true">
+        <Str Cat="Button">
           <Val><![CDATA[...]]></Val>
         </Str>
         <Bin BinId="1">
@@ -809,7 +809,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Select a Package Source Folder]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Seleccionar una carpeta de origen del paquete]]></Val>
+            <Val><![CDATA[Seleccionar una carpeta del origen seleccionado]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1318,6 +1318,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[El paquete ''{0}'' está disponible en la carpeta paquetes globales, pero el origen de ''{1}'' no es uno de los orígenes configurados.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package `{0}` is available in the Global packages folder, but the source it came from `{1}` is not one of this solution's configured sources.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2234,7 +2237,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Can not access NuGet.Config, Please check NuGet.Config]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[No se puede acceder a NuGet.Config. Compruebe NuGet.Config.]]></Val>
+            <Val><![CDATA[No se puede acceder a NuGet.Config, Compruebe NuGet.Config]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2345,7 +2348,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The name specified has already been added to the list of available package sources. Please provide a unique name.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[El nombre especificado ya se ha agregado a la lista de orígenes de paquete disponibles. Proporcione un nombre único.]]></Val>
+            <Val><![CDATA[El nombre especificado ya se ha agregado a la lista de orígenes de paquetes disponibles. Proporcione un nombre único.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2354,7 +2357,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The source specified has already been added to the list of available package sources. Please provide a unique source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[El origen especificado ya se ha agregado a la lista de orígenes de paquete disponibles. Proporcione un origen único.]]></Val>
+            <Val><![CDATA[El origen especificado ya se ha agregado a la lista de orígenes de paquetes disponibles. Proporcione un origen único.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2381,7 +2384,7 @@
         <Str Cat="Text">
           <Val><![CDATA[End of package list loaded]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Final de la lista de paquetes cargada]]></Val>
+            <Val><![CDATA[Fin de la carga de la lista de paquetes]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2633,7 +2636,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package source mapping is off.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La asignación del origen del paquete está desactivada.]]></Val>
+            <Val><![CDATA[La asignación de origen del paquete está desactivada.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2642,7 +2645,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package source mapping found.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Se encontró la asignación del origen del paquete.]]></Val>
+            <Val><![CDATA[Se encontró la asignación de origen del paquete.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2651,7 +2654,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Requires a package source mapping.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Requiere una asignación del origen del paquete.]]></Val>
+            <Val><![CDATA[Requiere una asignación de origen de paquete.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3350,13 +3353,13 @@
         <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
       </Item>
       <Item ItemId=";AddMappingDialogWindow" ItemType=";FrameworkElement.Height" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true" UsrLk="true">
+        <Str Cat="Unknown" DevLk="true">
           <Val><![CDATA[348]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/addmappingdialog.baml \ 0 \ 0 \ ;Height \ ;0 \ 0" />
       </Item>
       <Item ItemId=";AddMappingDialogWindow" ItemType=";FrameworkElement.Width" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true" UsrLk="true">
+        <Str Cat="Unknown" DevLk="true">
           <Val><![CDATA[480]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/addmappingdialog.baml \ 0 \ 0 \ ;Width \ ;0 \ 0" />
@@ -3371,7 +3374,7 @@
         <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
       </Item>
       <Item ItemId=";ListItemStackPanel" ItemType=";FrameworkElement.Margin" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true" UsrLk="true">
+        <Str Cat="Unknown" DevLk="true">
           <Val><![CDATA[0,3,0,3]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/packagesourcemappingoptionscontrol.baml \ 0 \ 0 \ ;Margin \ ;0 \ 0" />
@@ -3570,7 +3573,7 @@
       <Str Cat="Text">
         <Val><![CDATA[Package Management UI elements for Visual Studio, Package Manager UI, Migrator, Options dialog.]]></Val>
         <Tgt Cat="Text" Stat="Loc" Orig="New">
-          <Val><![CDATA[Elementos de la interfaz de usuario de Administración de paquetes para Visual Studio, interfaz de usuario del Administrador de paquetes, Migrador, cuadro de diálogo Opciones.]]></Val>
+          <Val><![CDATA[Administración de paquetes elementos de la interfaz de usuario para Visual Studio, Administrador de paquetes UI, Migrator, cuadro de diálogo Opciones.]]></Val>
         </Tgt>
         <Prev Cat="Text">
           <Val><![CDATA[Package Management UI elements for Visual Studio, Package Manager UI, Migrator, Options dialog]]></Val>
