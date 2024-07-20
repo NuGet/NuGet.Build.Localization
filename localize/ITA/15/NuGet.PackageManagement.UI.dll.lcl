@@ -1273,6 +1273,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";DialogTitle_HttpSource" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[HTTP Source]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Origine HTTP]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";DoNotShowThisAgain" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[_Don't show this again]]></Val>
@@ -1290,6 +1299,15 @@
           <Val><![CDATA[Operation failed]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Operazione non riuscita]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_HttpSource_Single" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[NuGet richiede origini HTTPS. Per usare un'origine HTTP, devi impostare in modo esplicito "allowInsecureConnections" su "Vero" nel file NuGet.Config.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1971,6 +1989,15 @@
           <Val><![CDATA[Migrate Now]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Esegui ora la migrazione]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Link_configuration" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Common NuGet configurations; How settings are applied.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Configurazioni comuni di NuGet: modalità di applicazione delle impostazioni.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3214,21 +3241,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Warning_HTTPSource" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Warn_Adding_HttpSource" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Warning: Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.]]></Val>
+          <Val><![CDATA[You are attempting to add an HTTP source, which is insecure. Would you like to proceed with adding this insecure HTTP source?]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Avviso: l'accesso non HTTPS verrà rimosso in una versione futura. Valutare la possibilità di eseguire la migrazione a un'origine 'HTTPS'.]]></Val>
+            <Val><![CDATA[Stai provando ad aggiungere un'origine HTTP non sicura. Vuoi continuare ad aggiungere questa origine HTTPS non sicura?]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Warning_NewHTTPSource_VSOptions" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Warning_HTTPSource" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.]]></Val>
+          <Val><![CDATA[AllowInsecureConnections is enabled and allows http access. Note: This method is not secure. For secure options, see https://aka.ms/nuget-https-everywhere.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[L'accesso non HTTPS verrà rimosso in una versione futura. Valutare la possibilità di eseguire la migrazione a un'origine 'HTTPS'.]]></Val>
+            <Val><![CDATA[L'opzione AllowInsecureConnections è abilitata e consente l'accesso HTTP. Nota: questo metodo non è sicuro. Per informazioni sulle opzioni di sicurezza, vedi https://aka.ms/nuget-https-everywhere.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Warning: Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
