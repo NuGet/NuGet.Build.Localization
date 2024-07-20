@@ -240,10 +240,13 @@
       </Item>
       <Item ItemId=";Error_HttpSource_Single" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere.]]></Val>
+          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' işlemini bir {1} 'HTTP' kaynağıyla çalıştırıyorsunuz. NuGet için HTTPS kaynakları gereklidir. Bir HTTP kaynağı kullanmak için 'allowInsecureConnections' değerini NuGet.Config dosyanızda açıkça true olarak ayarlamalısınız. Lütfen şuraya başvurun: https://aka.ms/nuget-https-everywhere.]]></Val>
+            <Val><![CDATA['{0}' işlemini bir {1} 'HTTP' kaynağıyla çalıştırıyorsunuz. NuGet için HTTPS kaynakları gereklidir. Bir HTTP kaynağı kullanmak için 'allowInsecureConnections' değerini NuGet.Config dosyanızda açıkça true olarak ayarlamalısınız. Daha fazla bilgi için şuraya başvurun: https://aka.ms/nuget-https-everywhere.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -849,6 +852,15 @@
           <Val><![CDATA[Package '{0}' has a package type '{1}' that is not supported by project '{2}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA['{0}' paketinin paket türü '{1}'. Bu, '{2}' projesi tarafından desteklenmiyor.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Warning_AuditSourceWithoutData" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Audit source '{0}' did not provide any vulnerability data.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' güvenlik kaynağı hassasiyet verisi sağlamadı.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

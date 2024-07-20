@@ -339,28 +339,37 @@
       </Item>
       <Item ItemId=";Error_HttpSource_Single" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Sie führen den Vorgang „{0}“ mit einer „HTTP“-Quelle aus: {1}. NuGet erfordert HTTPS-Quellen. Um eine HTTP-Quelle zu verwenden, müssen Sie „allowInsecureConnections“ in Ihrer NuGet.Config-Datei explizit auf TRUE festlegen. Weitere Informationen finden Sie unter https://aka.ms/nuget-https-everywhere.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_HttpSource_Single_Short" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Sie führen den Vorgang „{0}“ mit einer „HTTP“-Quelle aus: {1}. NuGet erfordert HTTPS-Quellen. Weitere Informationen finden Sie unter https://aka.ms/nuget-https-everywhere.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_HttpSources_Multiple" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Sie führen den Vorgang „{0}“ mit „HTTP“-Quellen aus: {1}. NuGet erfordert HTTPS-Quellen. Um HTTP-Quellen zu verwenden, müssen Sie „allowInsecureConnections“ in Ihrer NuGet.Config-Datei explizit auf TRUE festlegen. Weitere Informationen finden Sie unter https://aka.ms/nuget-https-everywhere.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1024,6 +1033,15 @@
           <Prev Cat="Text">
             <Val><![CDATA[The specified source '{0}' is invalid. Please provide a valid source.]]></Val>
           </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Invalid_AttributeValue" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The {0} value: `{1}` is invalid. Valid example: `{2}`]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Der {0}-Wert „{1}“ ist ungültig. Gültiges Beispiel: „{2}“]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2506,6 +2524,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Warning_AuditSourceWithoutVulnerabilityData" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Audit source '{0}' did not provide any vulnerability data.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Die Überwachungsquelle „{0}“ hat keine Sicherheitsrisikodaten bereitgestellt.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Warning_CentralPackageVersions_MultipleSourcesWithoutPackageSourceMapping" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[There are {0} package sources defined in your configuration. When using central package management, please map your package sources with package source mapping (https://aka.ms/nuget-package-source-mapping) or specify a single package source. The following sources are defined: {1}]]></Val>
@@ -2559,19 +2586,25 @@
       </Item>
       <Item ItemId=";Warning_List_HttpSource" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The following is a 'Non-HTTPS' source: {0}]D;]A;NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          <Val><![CDATA[The following is a 'Non-HTTPS' source: {0}]D;]A;NuGet requires HTTPS sources. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die folgende Quelle ist „Nicht-HTTPS“: {0}]D;]A;NuGet erfordert HTTPS-Quellen. Weitere Informationen finden Sie unter https://aka.ms/nuget-https-everywhere.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The following is a 'Non-HTTPS' source: {0}]D;]A;NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Warning_List_HttpSources" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The following are 'Non-HTTPS' sources: {0}]D;]A;NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          <Val><![CDATA[The following are 'Non-HTTPS' sources: {0}]D;]A;NuGet requires HTTPS sources. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Die folgenden Quellen sind „Nicht-HTTPS“: {0}]D;]A;NuGet erfordert HTTPS-Quellen. Weitere Informationen finden Sie unter https://aka.ms/nuget-https-everywhere.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The following are 'Non-HTTPS' sources: {0}]D;]A;NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2596,15 +2629,6 @@
           <Prev Cat="Text">
             <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. An approximate best match of {2} was resolved.]]></Val>
           </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_NoVulnerabilityData" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[NuGetAudit is enabled, but no package sources contain known vulnerability data.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[NuGetAudit ist aktiviert, aber keine Paketquellen enthalten bekannte Sicherheitsrisikodaten.]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>

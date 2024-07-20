@@ -240,10 +240,13 @@
       </Item>
       <Item ItemId=";Error_HttpSource_Single" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere.]]></Val>
+          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Вы выполняете операцию "{0}" с источником "HTTP": {1}. Для NuGet требуются источники HTTPS. Чтобы использовать источник HTTP, необходимо явно задать для параметра "allowInsecureConnections" значение true в файле NuGet.Config. Сведения: https://aka.ms/nuget-https-everywhere.]]></Val>
+            <Val><![CDATA[Вы выполняете операцию "{0}" с источником "HTTP": {1}. Для NuGet требуются источники HTTPS. Чтобы использовать источник HTTP, необходимо явно задать для параметра "allowInsecureConnections" значение true в файле NuGet.Config. Дополнительные сведения см. на странице https://aka.ms/nuget-https-everywhere.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -849,6 +852,15 @@
           <Val><![CDATA[Package '{0}' has a package type '{1}' that is not supported by project '{2}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Пакет "{0}" имеет тип пакета "{1}", который не поддерживается проектом "{2}".]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Warning_AuditSourceWithoutData" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Audit source '{0}' did not provide any vulnerability data.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Источник аудита "{0}" не предоставил данных об уязвимости.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

@@ -1581,10 +1581,13 @@
       </Item>
       <Item ItemId=";SignCommandCertificateFingerprintDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
+          <Val><![CDATA[SHA-256, SHA-384 or SHA-512 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Otisk SHA-1 certifikátu použitý k hledání místního úložiště certifikátů tohoto certifikátu. Úložiště certifikátů lze zadat pomocí parametrů --certificate-store-name a --certificate-store-location.]]></Val>
+            <Val><![CDATA[Otisk SHA-256, SHA-384 nebo SHA-512 certifikátu použitý k hledání místního úložiště certifikátů tohoto certifikátu Úložiště certifikátů lze zadat pomocí parametrů --certificate-store-name a --certificate-store-location.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1647,6 +1650,15 @@
           <Val><![CDATA[Hash algorithm to be used to sign the package. Defaults to SHA256.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Hashovací algoritmus, který se má použít k podepsání balíčku. Výchozí hodnota je SHA256.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SignCommandInvalidCertificateFingerprint" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid value for '--certificate-fingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Neplatná hodnota pro možnost --certificate-fingerprint. Hodnotou musí být otisk certifikátu SHA-256, SHA-384 nebo SHA-512 (v šestnáctkovém tvaru).]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1831,12 +1843,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Správný příkaz je {0}.]]></Val>
           </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";String1" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

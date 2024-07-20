@@ -1581,10 +1581,13 @@
       </Item>
       <Item ItemId=";SignCommandCertificateFingerprintDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
+          <Val><![CDATA[SHA-256, SHA-384 or SHA-512 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Empreinte SHA-1 du certificat utilisé pour rechercher le certificat dans un magasin de certificats local. Vous pouvez spécifier le magasin de certificats à l’aide des options --certificat-magasin-nom et--certificat-magasin-emplacement.]]></Val>
+            <Val><![CDATA[Empreinte SHA-256, SHA-384 ou SHA-512 du certificat utilisé pour rechercher le certificat dans un magasin de certificats local. Vous pouvez spécifier le magasin de certificats à l’aide des options --certificat-magasin-nom et--certificat-magasin-emplacement.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1647,6 +1650,15 @@
           <Val><![CDATA[Hash algorithm to be used to sign the package. Defaults to SHA256.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Algorithme de hachage à utiliser pour signer le package. La valeur par défaut est SHA256.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SignCommandInvalidCertificateFingerprint" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid value for '--certificate-fingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Valeur non valide pour l’option « --certificate-fingerprint ». La valeur doit être une empreinte digitale de certificat SHA-256, SHA-384 ou SHA-512 (en hexadécimal).]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1831,12 +1843,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[La commande appropriée est '{0}'.]]></Val>
           </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";String1" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>

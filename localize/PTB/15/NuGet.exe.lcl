@@ -1418,10 +1418,13 @@
       </Item>
       <Item ItemId=";SignCommandCertificateFingerprintDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate.]D;]A;The certificate store can be specified by -CertificateStoreName and -CertificateStoreLocation options.]]></Val>
+          <Val><![CDATA[SHA-256, SHA-384 or SHA-512 fingerprint of the certificate used to search a local certificate store for the certificate.]D;]A;The certificate store can be specified by -CertificateStoreName and -CertificateStoreLocation options.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Impressão digital SHA-1 do certificado usado para pesquisar um armazenamento de certificado local para o certificado. ]D;]A;O armazenamento de certificados pode ser especificado pelas opções -CertificateStoreName e -CertificateStoreLocation.]]></Val>
+            <Val><![CDATA[Impressão digital SHA-256, SHA-384 ou SHA-512 do certificado usada para pesquisar o certificado em um repositório de certificados local.]D;]A;O repositório de certificados pode ser especificado pelas opções -CertificateStoreName e -CertificateStoreLocation.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate.]D;]A;The certificate store can be specified by -CertificateStoreName and -CertificateStoreLocation options.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1493,6 +1496,15 @@
           <Val><![CDATA[Hash algorithm to be used to sign the package. Defaults to SHA256.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Algoritmo de hash para ser usado para assinar o pacote. Padrões para SHA256.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SignCommandInvalidCertificateFingerprint" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid value for 'CertificateFingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Valor inválido para a opção "CertificateFingerprint". O valor deve ser uma impressão digital de certificado SHA-256, SHA-384 ou SHA-512 (em hexadecimal).]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2360,19 +2372,25 @@
       </Item>
       <Item ItemId=";Error_HttpSource_Single" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere.]]></Val>
+          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Você está executando a operação '{0}' com uma fonte 'HTTP': {1}. O NuGet requer fontes HTTPS. Para usar uma fonte HTTP, você deve definir explicitamente "allowInsecureConnections" como true em seu arquivo NuGet.Config. Consulte https://aka.ms/nuget-https-everywhere.]]></Val>
+            <Val><![CDATA[Você está executando a operação "{0}" com uma fonte "HTTP": {1}. O NuGet exige fontes HTTPS. Para usar uma fonte HTTP, você deve definir explicitamente "allowInsecureConnections" como true no arquivo NuGet.Config. Consulte https://aka.ms/nuget-https-everywhere para obter mais informações.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Error_HttpSources_Multiple" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere.]]></Val>
+          <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Você está executando a operação '{0}' com fontes 'HTTP': {1}. O NuGet requer fontes HTTPS. Para usar fontes HTTP, você deve definir explicitamente "allowInsecureConnections" como true em seu arquivo NuGet.Config. Consulte https://aka.ms/nuget-https-everywhere.]]></Val>
+            <Val><![CDATA[Você está executando a operação "{0}" com fontes 'HTTP': {1}. O NuGet exige fontes HTTPS. Para usar fontes HTTP, você deve definir explicitamente "allowInsecureConnections" como true no arquivo NuGet.Config. Consulte https://aka.ms/nuget-https-everywhere para obter mais informações.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

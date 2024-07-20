@@ -661,6 +661,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_ProjectAssetsFilePropertyNotFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Project '{0}' does not have MSBuild property ProjectAssetsFile defined. This may indicate that this project does not support NuGet PackageReference, or that project customization has prevented the .NET SDK setting default values.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Для проекта "{0}" не определено свойство MSBuild ProjectAssetsFile. Это может означать, что этот проект не поддерживает NuGet PackageReference или что настройка проекта помешала установке значений по умолчанию для пакета SDK для .NET.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_TrustFingerPrintAlreadyExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The certificate finger you're trying to add is already in the certificate fingerprint list.]]></Val>
@@ -1581,10 +1590,13 @@
       </Item>
       <Item ItemId=";SignCommandCertificateFingerprintDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
+          <Val><![CDATA[SHA-256, SHA-384 or SHA-512 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Отпечаток SHA-1 сертификата, используемый для поиска сертификата в локальном хранилище. Хранилище сертификатов можно указать в параметрах --certificate-store-name и --certificate-store-location.]]></Val>
+            <Val><![CDATA[Отпечаток сертификата SHA-256, SHA-384 или SHA-512, используемый для поиска сертификата в локальном хранилище. Хранилище сертификатов можно указать в параметрах --certificate-store-name и --certificate-store-location.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1647,6 +1659,15 @@
           <Val><![CDATA[Hash algorithm to be used to sign the package. Defaults to SHA256.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Алгоритм хэширования, используемый для подписи пакета. Значение по умолчанию: SHA256.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SignCommandInvalidCertificateFingerprint" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid value for '--certificate-fingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Недопустимое значение параметра "--certificate-fingerprint". Значение должно быть отпечатком сертификата SHA-256, SHA-384 или SHA-512 (в шестнадцатеричном формате).]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1831,12 +1852,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Правильная команда: "{0}".]]></Val>
           </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";String1" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2152,15 +2167,21 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";WhyCommand_Error_InvalidAssetsFile" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";WhyCommand_Error_InvalidAssetsFile_WithProject" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The assets file '{0}' is invalid. Please run restore for project '{1}' before running this command.]]></Val>
+          <Val><![CDATA[The file '{0}' does not appear to be a NuGet assets file. Please run restore for project '{1}' before running this command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Файл ресурсов "{0}" недопустим. Перед выполнением этой команды запустите восстановление для проекта "{1}".]]></Val>
+            <Val><![CDATA[Файл "{0}" не является файлом ресурсов NuGet. Перед выполнением этой команды запустите восстановление для проекта "{1}".]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The assets file {0} is invalid. Please run restore for project '{1}' before running this command.]]></Val>
-          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";WhyCommand_Error_InvalidAssetsFile_WithoutProject" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The file '{0}' does not appear to be a NuGet assets file. For more information, see https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Файл "{0}" не является файлом ресурсов NuGet. Дополнительные сведения см. на странице https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2202,10 +2223,13 @@
       </Item>
       <Item ItemId=";WhyCommand_Message_NonSDKStyleProjectsAreNotSupported" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to run 'dotnet nuget why' for project '{0}'. This command only works on SDK-style projects.]]></Val>
+          <Val><![CDATA[Unable to run 'dotnet nuget why' for project '{0}'. See https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Не удалось выполнить "dotnet nuget why" для проекта "{0}". Эта команда работает только в проектах в стиле SDK.]]></Val>
+            <Val><![CDATA[Не удалось выполнить "dotnet nuget why" для проекта "{0}". Сведения: https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Unable to run 'dotnet nuget why' for project '{0}'. This command only works on SDK-style projects.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

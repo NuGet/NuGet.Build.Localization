@@ -661,6 +661,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_ProjectAssetsFilePropertyNotFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Project '{0}' does not have MSBuild property ProjectAssetsFile defined. This may indicate that this project does not support NuGet PackageReference, or that project customization has prevented the .NET SDK setting default values.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[プロジェクト '{0}' に MSBuild プロパティ ProjectAssetsFile が定義されていません。これは、このプロジェクトが NuGet PackageReference をサポートしていないか、プロジェクトのカスタマイズによって .NET SDK 設定の既定値が許可されていないことを示している可能性があります。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_TrustFingerPrintAlreadyExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The certificate finger you're trying to add is already in the certificate fingerprint list.]]></Val>
@@ -1581,10 +1590,13 @@
       </Item>
       <Item ItemId=";SignCommandCertificateFingerprintDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
+          <Val><![CDATA[SHA-256, SHA-384 or SHA-512 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[証明書のローカル証明書ストアの検索に使用される証明書の SHA-1 フィンガープリントです。証明書ストアは、--certificate-store-name と --certificate-store-location のオプションによって指定できます。]]></Val>
+            <Val><![CDATA[証明書のローカル証明書ストアの検索に使用される証明書の SHA-256、SHA-384、または SHA-512 フィンガープリントです。証明書ストアは、--certificate-store-name と --certificate-store-location のオプションによって指定できます。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1647,6 +1659,15 @@
           <Val><![CDATA[Hash algorithm to be used to sign the package. Defaults to SHA256.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[パッケージの署名に使用するハッシュ アルゴリズムです。既定値は SHA256 です。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";SignCommandInvalidCertificateFingerprint" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid value for '--certificate-fingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['--certificate-fingerprint' オプションの値が無効です。値は SHA-256、SHA-384、または SHA-512 証明書フィンガープリント (16 進数) である必要があります。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1831,12 +1852,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[正しいコマンドは '{0}' です。]]></Val>
           </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";String1" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2152,15 +2167,21 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";WhyCommand_Error_InvalidAssetsFile" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";WhyCommand_Error_InvalidAssetsFile_WithProject" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The assets file '{0}' is invalid. Please run restore for project '{1}' before running this command.]]></Val>
+          <Val><![CDATA[The file '{0}' does not appear to be a NuGet assets file. Please run restore for project '{1}' before running this command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[アセット ファイル '{0}' が無効です。このコマンドを実行する前に、プロジェクト '{1}' の復元を実行してください。]]></Val>
+            <Val><![CDATA[ファイル '{0}' は NuGet アセット ファイルではない可能性があります。このコマンドを実行する前に、プロジェクト '{1}' の復元を実行してください。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The assets file {0} is invalid. Please run restore for project '{1}' before running this command.]]></Val>
-          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";WhyCommand_Error_InvalidAssetsFile_WithoutProject" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The file '{0}' does not appear to be a NuGet assets file. For more information, see https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ファイル '{0}' は NuGet アセット ファイルではない可能性があります。詳細については、https://aka.ms/dotnet/nuget/why#older-project-format を参照してください]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2202,10 +2223,13 @@
       </Item>
       <Item ItemId=";WhyCommand_Message_NonSDKStyleProjectsAreNotSupported" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to run 'dotnet nuget why' for project '{0}'. This command only works on SDK-style projects.]]></Val>
+          <Val><![CDATA[Unable to run 'dotnet nuget why' for project '{0}'. See https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[プロジェクト '{0}' に対して 'dotnet nuget why' を実行できません。このコマンドは、SDK スタイルのプロジェクトでのみ機能します。]]></Val>
+            <Val><![CDATA[プロジェクト '{0}' に対して 'dotnet nuget why' を実行できません。https://aka.ms/dotnet/nuget/why#older-project-format を参照してください]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Unable to run 'dotnet nuget why' for project '{0}'. This command only works on SDK-style projects.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
