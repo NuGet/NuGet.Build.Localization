@@ -661,6 +661,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_ProjectAssetsFilePropertyNotFound" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Project '{0}' does not have MSBuild property ProjectAssetsFile defined. This may indicate that this project does not support NuGet PackageReference, or that project customization has prevented the .NET SDK setting default values.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Project '{0}' n’a pas de propriété MSBuild ProjectAssetsFile définie. Cela peut indiquer que ce projet ne prend pas en charge NuGet PackageReference ou que la personnalisation du projet a empêché le SDK .NET de définir les valeurs par défaut.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_TrustFingerPrintAlreadyExist" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The certificate finger you're trying to add is already in the certificate fingerprint list.]]></Val>
@@ -2158,15 +2167,21 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";WhyCommand_Error_InvalidAssetsFile" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";WhyCommand_Error_InvalidAssetsFile_WithProject" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The assets file '{0}' is invalid. Please run restore for project '{1}' before running this command.]]></Val>
+          <Val><![CDATA[The file '{0}' does not appear to be a NuGet assets file. Please run restore for project '{1}' before running this command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le fichier d’actifs « {0} » est incorrect. Veuillez exécuter la restauration pour l projet « {1} » avant d’exécuter cette commande.]]></Val>
+            <Val><![CDATA[Le fichier «{0}» ne semble pas être un fichier de ressources NuGet. Veuillez exécuter la restauration pour l projet « {1} » avant d’exécuter cette commande.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The assets file {0} is invalid. Please run restore for project '{1}' before running this command.]]></Val>
-          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";WhyCommand_Error_InvalidAssetsFile_WithoutProject" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The file '{0}' does not appear to be a NuGet assets file. For more information, see https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Le fichier «{0}» ne semble pas être un fichier de ressources NuGet. Pour plus d'informations, consultez https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
+          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2208,10 +2223,13 @@
       </Item>
       <Item ItemId=";WhyCommand_Message_NonSDKStyleProjectsAreNotSupported" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to run 'dotnet nuget why' for project '{0}'. This command only works on SDK-style projects.]]></Val>
+          <Val><![CDATA[Unable to run 'dotnet nuget why' for project '{0}'. See https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Impossible d’exécuter « dotnet nuget why » pour le projet « {0} ». Cette commande fonctionne uniquement sur les projets de style SDK.]]></Val>
+            <Val><![CDATA[Impossible d'exécuter « dotnet nuget Why » pour le projet « {0} ». Voir https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Unable to run 'dotnet nuget why' for project '{0}'. This command only works on SDK-style projects.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
