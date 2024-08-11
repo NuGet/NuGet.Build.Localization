@@ -33,10 +33,13 @@
       </Item>
       <Item ItemId=";MSSignCommandCertificateFingerprintDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a p7b file for the certificate.]]></Val>
+          <Val><![CDATA[SHA-256, SHA-384 or SHA-512 fingerprint of the certificate used to search a p7b file for the certificate.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[인증서에 대한 P7B 파일을 검색하는 데 사용되는 인증서의 SHA-1 지문입니다.]]></Val>
+            <Val><![CDATA[인증서의 p7b 파일에서 인증서를 검색하는 데 사용되는 인증서의 SHA-256, SHA-384 또는 SHA-512 지문입니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a p7b file for the certificate.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -60,9 +63,21 @@
       </Item>
       <Item ItemId=";MSSignCommandInvalidArgumentException" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Invalid value provided for '{0}'. For a list of accepted values, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Val><![CDATA[Invalid value provided for '{0}'. For a list of accepted values, please visit https://learn.microsoft.com/nuget/reference/cli-reference/cli-ref-sign]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}'에 잘못된 값이 제공되었습니다. 허용되는 값 목록은 https://docs.nuget.org/docs/reference/command-line-reference를 참조하세요.]]></Val>
+            <Val><![CDATA['{0}'에 잘못된 값이 제공되었습니다. 허용되는 값 목록은 https://learn.microsoft.com/nuget/reference/cli-reference/cli-ref-sign 페이지를 참조하세요.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Invalid value provided for '{0}'. For a list of accepted values, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";MSSignCommandInvalidCertificateFingerprint" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid value for 'CertificateFingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['CertificateFingerprint' 옵션의 값이 잘못되었습니다. 값은 SHA-256, SHA-384 또는 SHA-512 인증서 지문(16진수)이어야 합니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

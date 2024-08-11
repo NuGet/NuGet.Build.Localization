@@ -33,10 +33,13 @@
       </Item>
       <Item ItemId=";MSSignCommandCertificateFingerprintDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a p7b file for the certificate.]]></Val>
+          <Val><![CDATA[SHA-256, SHA-384 or SHA-512 fingerprint of the certificate used to search a p7b file for the certificate.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[SHA-1-Fingerabdruck des Zertifikats, das zum Suchen einer P7B-Datei für das Zertifikat verwendet wird.]]></Val>
+            <Val><![CDATA[SHA-256-, SHA-384- oder SHA-512-Fingerabdruck des Zertifikats, das zum Suchen einer P7B-Datei für das Zertifikat verwendet wird.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a p7b file for the certificate.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -60,9 +63,21 @@
       </Item>
       <Item ItemId=";MSSignCommandInvalidArgumentException" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Invalid value provided for '{0}'. For a list of accepted values, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Val><![CDATA[Invalid value provided for '{0}'. For a list of accepted values, please visit https://learn.microsoft.com/nuget/reference/cli-reference/cli-ref-sign]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Für "{0}" wurde ein ungültiger Wert angegeben. Eine Liste zulässiger Werte finden Sie unter https://docs.nuget.org/docs/reference/command-line-reference.]]></Val>
+            <Val><![CDATA[Für „{0}“ wurde ein ungültiger Wert angegeben. Eine Liste der akzeptierten Werte finden Sie unter https://learn.microsoft.com/nuget/reference/cli-reference/cli-ref-sign.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Invalid value provided for '{0}'. For a list of accepted values, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";MSSignCommandInvalidCertificateFingerprint" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid value for 'CertificateFingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Ungültiger Wert für die Option „--certificate-fingerprint“. Der Wert muss ein SHA-256-, SHA-384- oder SHA-512-Zertifikatfingerabdruck (hexadezimal) sein.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
