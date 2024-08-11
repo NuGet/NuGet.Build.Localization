@@ -33,10 +33,13 @@
       </Item>
       <Item ItemId=";MSSignCommandCertificateFingerprintDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a p7b file for the certificate.]]></Val>
+          <Val><![CDATA[SHA-256, SHA-384 or SHA-512 fingerprint of the certificate used to search a p7b file for the certificate.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Отпечаток SHA-1 сертификата, используемый для поиска P7B-файла для сертификата.]]></Val>
+            <Val><![CDATA[Отпечаток SHA-256, SHA-384 или SHA-512 сертификата, используемый для поиска P7B-файла для сертификата.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a p7b file for the certificate.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -60,9 +63,21 @@
       </Item>
       <Item ItemId=";MSSignCommandInvalidArgumentException" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Invalid value provided for '{0}'. For a list of accepted values, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          <Val><![CDATA[Invalid value provided for '{0}'. For a list of accepted values, please visit https://learn.microsoft.com/nuget/reference/cli-reference/cli-ref-sign]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Недопустимое значение "{0}". Список допустимых значений: https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+            <Val><![CDATA[Указано недопустимое значение для "{0}". Список допустимых значений см. на странице https://learn.microsoft.com/nuget/reference/cli-reference/cli-ref-sign]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Invalid value provided for '{0}'. For a list of accepted values, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
+          </Prev>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";MSSignCommandInvalidCertificateFingerprint" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid value for 'CertificateFingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Недопустимое значение параметра "CertificateFingerprint". Значение должно быть отпечатком сертификата SHA-256, SHA-384 или SHA-512 (в шестнадцатеричном формате).]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
