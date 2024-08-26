@@ -59,7 +59,7 @@
         <Disp Icon="Dlg" />
       </Item>
       <Item ItemId=";defaultPackageManagementFormatItems.Items" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Combo Box" UsrLk="true">
+        <Str Cat="Combo Box">
           <Val><![CDATA[Packages.config]]></Val>
         </Str>
         <Disp Icon="Dlg" />
@@ -191,7 +191,7 @@
         <Disp Icon="Dlg" />
       </Item>
       <Item ItemId=";BrowseButton.Text" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Button" UsrLk="true">
+        <Str Cat="Button">
           <Val><![CDATA[...]]></Val>
         </Str>
         <Bin BinId="1">
@@ -1318,6 +1318,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Pakiet „{0}” jest dostępny w folderze pakietów globalnych, ale źródło, z którego pochodzi „{1}”, nie jest jednym ze skonfigurowanych źródeł..]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package `{0}` is available in the Global packages folder, but the source it came from `{1}` is not one of this solution's configured sources.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2264,7 +2267,7 @@
         <Str Cat="Text">
           <Val><![CDATA[NuGet storage clear failed at {0}. ]D;]A;Error: {1}]D;]A;Please see https://aka.ms/troubleshoot_nuget_cache for more help.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Czyszczenie pamięci narzędzia NuGet nie powiodło się o {0}. ]D;]A;Błąd: {1}]D;]A;Aby uzyskać dodatkową pomoc, zobacz https://aka.ms/troubleshoot_nuget_cache.]]></Val>
+            <Val><![CDATA[Czyszczenie pamięci podręcznych narzędzia NuGet nie powiodło się: {0}. ]D;]A;Błąd: {1}]D;]A;Aby uzyskać dodatkową pomoc, zobacz https://aka.ms/troubleshoot_nuget_cache.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[NuGet cache(s) clear failed at {0}. ]D;]A;Error: {1}]D;]A;Please see https://aka.ms/troubleshoot_nuget_cache for more help.]]></Val>
@@ -2381,7 +2384,7 @@
         <Str Cat="Text">
           <Val><![CDATA[End of package list loaded]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Koniec załadowanej listy pakietów]]></Val>
+            <Val><![CDATA[Załadowano koniec listy pakietów]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2390,7 +2393,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package list loaded]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Załadowana lista pakietów]]></Val>
+            <Val><![CDATA[Załadowano listę pakietów]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2435,7 +2438,7 @@
         <Str Cat="Text">
           <Val><![CDATA[by {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[przez: {0}]]></Val>
+            <Val><![CDATA[przez {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3350,13 +3353,13 @@
         <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
       </Item>
       <Item ItemId=";AddMappingDialogWindow" ItemType=";FrameworkElement.Height" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true" UsrLk="true">
+        <Str Cat="Unknown" DevLk="true">
           <Val><![CDATA[348]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/addmappingdialog.baml \ 0 \ 0 \ ;Height \ ;0 \ 0" />
       </Item>
       <Item ItemId=";AddMappingDialogWindow" ItemType=";FrameworkElement.Width" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true" UsrLk="true">
+        <Str Cat="Unknown" DevLk="true">
           <Val><![CDATA[480]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/addmappingdialog.baml \ 0 \ 0 \ ;Width \ ;0 \ 0" />
@@ -3371,7 +3374,7 @@
         <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
       </Item>
       <Item ItemId=";ListItemStackPanel" ItemType=";FrameworkElement.Margin" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true" UsrLk="true">
+        <Str Cat="Unknown" DevLk="true">
           <Val><![CDATA[0,3,0,3]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/packagesourcemappingoptionscontrol.baml \ 0 \ 0 \ ;Margin \ ;0 \ 0" />

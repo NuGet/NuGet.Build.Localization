@@ -59,7 +59,7 @@
         <Disp Icon="Dlg" />
       </Item>
       <Item ItemId=";defaultPackageManagementFormatItems.Items" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Combo Box" UsrLk="true">
+        <Str Cat="Combo Box">
           <Val><![CDATA[Packages.config]]></Val>
         </Str>
         <Disp Icon="Dlg" />
@@ -191,7 +191,7 @@
         <Disp Icon="Dlg" />
       </Item>
       <Item ItemId=";BrowseButton.Text" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Button" UsrLk="true">
+        <Str Cat="Button">
           <Val><![CDATA[...]]></Val>
         </Str>
         <Bin BinId="1">
@@ -650,7 +650,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Packages]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[套件]]></Val>
+            <Val><![CDATA[Package]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -752,7 +752,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Argument cannot be null or empty.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[引數不得為 Null 或空白。]]></Val>
+            <Val><![CDATA[引數不能為 Null 或空白。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1318,6 +1318,9 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[套件 '{0}' 可在全域套件資料夾中使用，但其來源 '{1}' 不是此解決方案的設定來源之一。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[The package `{0}` is available in the Global packages folder, but the source it came from `{1}` is not one of this solution's configured sources.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1688,7 +1691,7 @@
         <Str Cat="Text">
           <Val><![CDATA[An error occurred while fetching additional information about the package. Refresh to try again.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[擷取套件的其他資訊時發生錯誤。重新整理以再試一次。]]></Val>
+            <Val><![CDATA[擷取封裝的其他資訊時發生錯誤。重新整理以再試一次。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2234,7 +2237,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Can not access NuGet.Config, Please check NuGet.Config]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[無法存取 NuGet.Config。請檢查 NuGet.Config]]></Val>
+            <Val><![CDATA[無法存取 NuGet.Config，請檢查 NuGet.Config]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2309,7 +2312,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The name and source specified cannot be empty. Please provide a valid name and source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定的名稱與來源不得為空白。請提供有效的名稱與來源。]]></Val>
+            <Val><![CDATA[指定的名稱與來源不可為空白。請提供有效的名稱與來源。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2318,7 +2321,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The name specified cannot be empty. Please provide a valid name.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定的名稱不得為空白。請提供有效的名稱。]]></Val>
+            <Val><![CDATA[指定的名稱不可為空白。請提供有效的名稱。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2327,7 +2330,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The source specified cannot be empty. Please provide a valid source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定的來源不得為空白。請提供有效的來源。]]></Val>
+            <Val><![CDATA[指定的來源不可為空白。請提供有效的來源。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2345,7 +2348,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The name specified has already been added to the list of available package sources. Please provide a unique name.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[已將指定的名稱新增到可用套件來源清單。請提供唯一的名稱。]]></Val>
+            <Val><![CDATA[指定的名稱已加入至可用套件來源清單中。請提供唯一名稱。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2354,7 +2357,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The source specified has already been added to the list of available package sources. Please provide a unique source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[已將指定的來源新增到可用套件來源清單。請提供唯一的來源。]]></Val>
+            <Val><![CDATA[指定的來源已加入至可用套件來源清單中。請提供唯一來源。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2372,7 +2375,7 @@
         <Str Cat="Text">
           <Val><![CDATA[An error occurred while loading packages]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[載入套件期間發生錯誤]]></Val>
+            <Val><![CDATA[載入套件時發生錯誤]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2426,7 +2429,7 @@
         <Str Cat="Text">
           <Val><![CDATA[by {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[作者: {0}]]></Val>
+            <Val><![CDATA[作者 {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2435,7 +2438,7 @@
         <Str Cat="Text">
           <Val><![CDATA[by {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[擁有者: {0}]]></Val>
+            <Val><![CDATA[擁有者 {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3350,13 +3353,13 @@
         <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
       </Item>
       <Item ItemId=";AddMappingDialogWindow" ItemType=";FrameworkElement.Height" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true" UsrLk="true">
+        <Str Cat="Unknown" DevLk="true">
           <Val><![CDATA[348]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/addmappingdialog.baml \ 0 \ 0 \ ;Height \ ;0 \ 0" />
       </Item>
       <Item ItemId=";AddMappingDialogWindow" ItemType=";FrameworkElement.Width" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true" UsrLk="true">
+        <Str Cat="Unknown" DevLk="true">
           <Val><![CDATA[480]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/addmappingdialog.baml \ 0 \ 0 \ ;Width \ ;0 \ 0" />
@@ -3371,7 +3374,7 @@
         <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
       </Item>
       <Item ItemId=";ListItemStackPanel" ItemType=";FrameworkElement.Margin" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true" UsrLk="true">
+        <Str Cat="Unknown" DevLk="true">
           <Val><![CDATA[0,3,0,3]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/packagesourcemappingoptionscontrol.baml \ 0 \ 0 \ ;Margin \ ;0 \ 0" />
