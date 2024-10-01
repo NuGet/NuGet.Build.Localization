@@ -665,7 +665,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Project '{0}' does not have MSBuild property ProjectAssetsFile defined. This may indicate that this project does not support NuGet PackageReference, or that project customization has prevented the .NET SDK setting default values.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Project '{0}' n’a pas de propriété MSBuild ProjectAssetsFile définie. Cela peut indiquer que ce projet ne prend pas en charge NuGet PackageReference ou que la personnalisation du projet a empêché le SDK .NET de définir les valeurs par défaut.]]></Val>
+            <Val><![CDATA[Le projet '{0}' n'a pas de propriété MSBuild ProjectAssetsFile définie. Cela peut indiquer que ce projet ne prend pas en charge NuGet PackageReference ou que la personnalisation du projet a empêché la définition des valeurs par défaut du SDK .NET.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1592,7 +1592,7 @@
         <Str Cat="Text">
           <Val><![CDATA[SHA-256, SHA-384 or SHA-512 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Empreinte SHA-256, SHA-384 ou SHA-512 du certificat utilisé pour rechercher le certificat dans un magasin de certificats local. Vous pouvez spécifier le magasin de certificats à l’aide des options --certificat-magasin-nom et--certificat-magasin-emplacement.]]></Val>
+            <Val><![CDATA[Empreinte digitale SHA-256, SHA-384 ou SHA-512 du certificat utilisée pour rechercher le certificat dans un magasin de certificats local. Le magasin de certificats peut être spécifié par les options --certificate-store-name et --certificate-store-location.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
@@ -1667,7 +1667,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Invalid value for '--certificate-fingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Valeur non valide pour l’option « --certificate-fingerprint ». La valeur doit être une empreinte digitale de certificat SHA-256, SHA-384 ou SHA-512 (en hexadécimal).]]></Val>
+            <Val><![CDATA[Valeur non valide pour l'option '--certificate-fingerprint'. La valeur doit être une empreinte de certificat SHA-256, SHA-384 ou SHA-512 (en hexadécimal).]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1760,7 +1760,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Allows HTTP connections for adding or updating packages. Note: This method is not secure. For secure options, see https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Autorise les connexions HTTP pour l’ajout ou la mise à jour de packages. Remarque : cette méthode n’est pas sécurisée. Si vous souhaitez découvrir des options sécurisées, consultez https://aka.ms/nuget-https-everywhere pour obtenir plus d’informations.]]></Val>
+            <Val><![CDATA[Permet les connexions HTTP pour ajouter ou mettre à jour des packages. Remarque : cette méthode n'est pas sécurisée. Pour les options sécurisées, consultez https://aka.ms/nuget-https-everywhere pour plus d'informations.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2135,7 +2135,7 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}]D;]A;Non-HTTPS access will be removed in a future version. Consider migrating to 'HTTPS' sources.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Vous exécutez l'opération ’{0}' avec des sources 'HTTP' : {1}]D;]A;l'accès non-HTTPS sera supprimé dans une future version. Envisagez de migrer vers des sources "HTTPS".]]></Val>
+            <Val><![CDATA[Vous exécutez l’opération « {0} » avec des sources « HTTP » : {1}]D;]A;L’accès non HTTPS sera supprimé dans une version ultérieure. Envisagez de migrer vers des sources « HTTPS ».]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2171,7 +2171,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The file '{0}' does not appear to be a NuGet assets file. Please run restore for project '{1}' before running this command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le fichier «{0}» ne semble pas être un fichier de ressources NuGet. Veuillez exécuter la restauration pour l projet « {1} » avant d’exécuter cette commande.]]></Val>
+            <Val><![CDATA[Le fichier '{0}' ne semble pas être un fichier de ressources NuGet. Veuillez exécuter la restauration du projet '{1}' avant d'exécuter cette commande.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2180,7 +2180,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The file '{0}' does not appear to be a NuGet assets file. For more information, see https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le fichier «{0}» ne semble pas être un fichier de ressources NuGet. Pour plus d'informations, consultez https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
+            <Val><![CDATA[Le fichier '{0}' ne semble pas être un fichier de ressources NuGet. Pour plus d'informations, consultez https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2225,7 +2225,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Unable to run 'dotnet nuget why' for project '{0}'. See https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Impossible d'exécuter « dotnet nuget Why » pour le projet « {0} ». Voir https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
+            <Val><![CDATA[Impossible d'exécuter « dotnet nuget why » pour le projet '{0}'. Voir https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Unable to run 'dotnet nuget why' for project '{0}'. This command only works on SDK-style projects.]]></Val>

@@ -341,11 +341,8 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Vous exécutez l’opération « {0} » avec une source « HTTP » : {1}. NuGet exige des sources HTTPS. Pour utiliser une source HTTP, vous devez explicitement définir « allowInsecureConnections » sur la valeur true dans votre fichier NuGet.Config. Référez-vous à https://aka.ms/nuget-https-everywhere pour plus d’informations.]]></Val>
+            <Val><![CDATA[Vous exécutez l'opération « {0} » avec une source 'HTTP' : {1}. NuGet nécessite des sources HTTPS. Pour utiliser une source HTTP, vous devez définir explicitement « allowInsecureConnections » sur true dans votre fichier NuGet.Config. Reportez-vous à https://aka.ms/nuget-https-everywhere pour plus d'informations.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -353,11 +350,8 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Vous exécutez l’opération « {0} » avec une source « HTTP » : {1}. NuGet exige des sources HTTPS. Référez-vous à https://aka.ms/nuget-https-everywhere pour plus d’informations.]]></Val>
+            <Val><![CDATA[Vous exécutez l'opération « {0} » avec une source 'HTTP' : {1}. NuGet nécessite des sources HTTPS. Reportez-vous à https://aka.ms/nuget-https-everywhere pour plus d'informations.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -365,11 +359,8 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Vous exécutez l’opération « {0} » avec des sources « HTTP » : {1}. NuGet exige des sources HTTPS. Pour utiliser des sources HTTP, vous devez explicitement définir « allowInsecureConnections » sur la valeur true dans votre fichier NuGet.Config. Référez-vous à https://aka.ms/nuget-https-everywhere pour plus d’informations.]]></Val>
+            <Val><![CDATA[Vous exécutez l'opération « {0} » avec des sources « HTTP » : {1}. NuGet nécessite des sources HTTPS. Pour utiliser des sources HTTP, vous devez définir explicitement « allowInsecureConnections » sur true dans votre fichier NuGet.Config. Reportez-vous à https://aka.ms/nuget-https-everywhere pour plus d'informations.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -569,7 +560,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The package signature did not match any of the allowed certificate fingerprints.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La signature de package ne correspond à aucune des empreintes digitales de certificat autorisées.]]></Val>
+            <Val><![CDATA[La signature du package ne correspond à aucune des empreintes digitales de certificat autorisées.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1037,7 +1028,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The {0} value: `{1}` is invalid. Valid example: `{2}`]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La valeur {0} : `{1}` n’est pas valide. Exemple valide : `{2}`]]></Val>
+            <Val><![CDATA[La valeur {0} : « {1} » n’est pas valide. Exemple valide : « {2} »]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2399,7 +2390,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package signature validation failed.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Échec de la validation de la signature de package.]]></Val>
+            <Val><![CDATA[Échec de la validation de la signature du package.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Could not verify package(s) signature.]]></Val>
@@ -2525,7 +2516,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Audit source '{0}' did not provide any vulnerability data.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[La source d’audit « {0} » n’a fourni aucune donnée de vulnérabilité.]]></Val>
+            <Val><![CDATA[La source d'audit « {0} » n'a fourni aucune donnée sur la vulnérabilité.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2585,11 +2576,8 @@
         <Str Cat="Text">
           <Val><![CDATA[The following is a 'Non-HTTPS' source: {0}]D;]A;NuGet requires HTTPS sources. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Voici une source « Non-HTTPS » : {0}]D;]A;NuGet exige des sources HTTPS. Référez-vous à https://aka.ms/nuget-https-everywhere pour plus d’informations.]]></Val>
+            <Val><![CDATA[Ce qui suit est une source « non HTTPS » : {0}]D;]A;NuGet nécessite des sources HTTPS. Reportez-vous à https://aka.ms/nuget-https-everywhere pour plus d'informations.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The following is a 'Non-HTTPS' source: {0}]D;]A;NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2597,11 +2585,8 @@
         <Str Cat="Text">
           <Val><![CDATA[The following are 'Non-HTTPS' sources: {0}]D;]A;NuGet requires HTTPS sources. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Les sources « Non-HTTPS » sont les suivantes : {0}]D;]A;NuGet exige des sources HTTPS. Référez-vous à https://aka.ms/nuget-https-everywhere pour plus d’informations.]]></Val>
+            <Val><![CDATA[Les sources suivantes sont des sources « non-HTTPS » : {0}]D;]A;NuGet nécessite des sources HTTPS. Reportez-vous à https://aka.ms/nuget-https-everywhere pour plus d'informations.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The following are 'Non-HTTPS' sources: {0}]D;]A;NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2621,7 +2606,7 @@
         <Str Cat="Text">
           <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. {2} was resolved instead.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} ne fournit pas de limite inférieure inclusive pour la dépendance {1}. {2} a été résolu à la place.]]></Val>
+            <Val><![CDATA[{0} ne fournit pas de limite inférieure inclusive pour la dépendance {1}. {2} a été résolu à la place]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[{0} does not provide an inclusive lower bound for dependency {1}. An approximate best match of {2} was resolved.]]></Val>

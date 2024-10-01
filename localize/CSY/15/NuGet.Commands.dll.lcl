@@ -341,11 +341,8 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Máte spuštěnu operaci {0} se zdrojem HTTP: {1}. NuGet vyžaduje zdroje HTTPS. Pokud chcete použít zdroj HTTP, musíte v souboru NuGet.Config explicitně nastavit možnost allowInsecureConnections na true. Další informace najdete na https://aka.ms/nuget-https-everywhere.]]></Val>
+            <Val><![CDATA[Máte spuštěnu operaci {0} se zdrojem HTTP: {1}. NuGet vyžaduje zdroje HTTPS. Pokud chcete použít zdroj HTTP, musíte v souboru NuGet.Config explicitně nastavit parametr allowInsecureConnections na true. Další informace najdete na https://aka.ms/nuget-https-everywhere.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -355,9 +352,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Máte spuštěnu operaci {0} se zdrojem HTTP: {1}. NuGet vyžaduje zdroje HTTPS. Další informace najdete na https://aka.ms/nuget-https-everywhere.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -365,11 +359,8 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Máte spuštěnu operaci {0} se zdroji HTTP: {1}. NuGet vyžaduje zdroje HTTPS. Pokud chcete používat zdroje HTTP, musíte v souboru NuGet.Config explicitně nastavit možnost allowInsecureConnections na true. Další informace najdete na https://aka.ms/nuget-https-everywhere.]]></Val>
+            <Val><![CDATA[Máte spuštěnu operaci {0} se zdroji HTTP: {1}. NuGet vyžaduje zdroje HTTPS. Pokud chcete používat zdroje HTTP, musíte v souboru NuGet.Config explicitně nastavit parametr allowInsecureConnections na true. Další informace najdete na https://aka.ms/nuget-https-everywhere.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1040,7 +1031,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The {0} value: `{1}` is invalid. Valid example: `{2}`]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Hodnota {0}: {1} je neplatná. Platný příklad: {2}]]></Val>
+            <Val><![CDATA[Hodnota {0}: {1} neplatí. Platný příklad: {2}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1280,7 +1271,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package '{0}' was restored using '{1}' instead of the project target framework '{2}'. This package may not be fully compatible with your project.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Balíček {0} se místo cílové architektury projektu {2} obnovil pomocí {1}. Balíček nemusí být plně kompatibilní s vaším projektem.]]></Val>
+            <Val><![CDATA[Balíček {0} se místo cílové verze rozhraní .NET Framework projektu {2} obnovil pomocí {1}. Balíček nemusí být plně kompatibilní s vaším projektem.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Package '{0}' was restored using '{1}' instead of the project target framework '{2}'. This may cause compatibility problems.]]></Val>
@@ -1409,7 +1400,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package {0} {1} does not support any target frameworks.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Balíček {0} {1} nepodporuje žádnou cílovou architekturu.]]></Val>
+            <Val><![CDATA[Balíček {0} {1} nepodporuje žádné cílové rozhraní.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1436,7 +1427,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The project {0} does not specify any target frameworks in {1}.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Projekt {0} neurčuje žádné cílové architektury v {1}.]]></Val>
+            <Val><![CDATA[Projekt {0} neurčuje žádná cílová rozhraní v {1}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1454,7 +1445,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Project {0} does not support any target frameworks.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Projekt {0} nepodporuje žádné cílové architektury.]]></Val>
+            <Val><![CDATA[Projekt {0} nepodporuje žádné cílové rozhraní.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2096,7 +2087,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Disabled]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zakázáno]]></Val>
+            <Val><![CDATA[Zakázané]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2590,9 +2581,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Následující zdroj není zdroj HTTPS: {0}]D;]A;NuGet vyžaduje zdroje HTTPS. Další informace najdete na https://aka.ms/nuget-https-everywhere.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The following is a 'Non-HTTPS' source: {0}]D;]A;NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2602,9 +2590,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Následující zdroje nejsou zdroje HTTPS: {0}]D;]A;NuGet vyžaduje zdroje HTTPS. Další informace najdete na https://aka.ms/nuget-https-everywhere.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The following are 'Non-HTTPS' sources: {0}]D;]A;NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

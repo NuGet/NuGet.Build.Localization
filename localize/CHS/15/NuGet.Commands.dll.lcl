@@ -341,11 +341,8 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[正在使用“HTTP”源运行“{0}”操作: {1}。NuGet 需要 HTTPS 源。若要使用 HTTP 源，必须在 NuGet.Config 文件中将 'allowInsecureConnections' 显式设置为 true。有关详细信息，请参阅 https://aka.ms/nuget-https-everywhere。]]></Val>
+            <Val><![CDATA[正在通过 “HTTP” 源 {1} 运行“{0}”操作。NuGet 需要 HTTPS 源。要使用 HTTP 源，必须在 NuGet.Config 文件中将“allowInsecureConnections”显式设置为 true。有关详细信息，请参阅 https://aka.ms/nuget-https-everywhere。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -353,11 +350,8 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[正在使用“HTTP”源运行“{0}”操作: {1}。NuGet 需要 HTTPS 源。有关详细信息，请参阅 https://aka.ms/nuget-https-everywhere。]]></Val>
+            <Val><![CDATA[正在通过 “HTTP” 源 {1} 运行“{0}”操作。NuGet 需要 HTTPS 源。有关详细信息，请参阅 https://aka.ms/nuget-https-everywhere。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -365,11 +359,8 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[正在使用“HTTP”源运行“{0}”操作: {1}。NuGet 需要 HTTPS 源。若要使用 HTTP 源，必须在 NuGet.Config 文件中将 'allowInsecureConnections' 显式设置为 true。有关详细信息，请参阅 https://aka.ms/nuget-https-everywhere。]]></Val>
+            <Val><![CDATA[正在通过“HTTP”源 {1} 运行“{0}”操作。NuGet 需要 HTTPS 源。要使用 HTTP 源，必须在 NuGet.Config 文件中将“allowInsecureConnections”显式设置为 true。有关详细信息，请参阅 https://aka.ms/nuget-https-everywhere。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1661,7 +1652,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The targets file for {0} at location {1} does not exist, no-op is not possible. Continuing restore.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[位置 {1} 处的目标文件 {0} 不存在，no-op  不可能。继续还原。]]></Val>
+            <Val><![CDATA[位置 {0} 处的目标文件 {1} 不存在，无法执行 no-op。继续还原。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2576,7 +2567,7 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}]D;]A;Non-HTTPS access will be removed in a future version. Consider migrating to 'HTTPS' sources.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[正在通过 “HTTP” 源运行“{0}”操作: {1}]D;]A;未来版本中将删除非 HTTPS 访问权限。请考虑迁移到 “HTTPS” 源。]]></Val>
+            <Val><![CDATA[正在通过 "HTTP" 源运行 "{0}" 操作: {1}]D;]A;未来版本中将删除非 HTTPS 访问权限。请考虑迁移到 "HTTPS" 源。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2587,9 +2578,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[以下是“非 HTTPS”源: {0}]D;]A;NuGet 需要 HTTPS 源。有关详细信息，请参阅 https://aka.ms/nuget-https-everywhere。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The following is a 'Non-HTTPS' source: {0}]D;]A;NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2599,9 +2587,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[以下是“非 HTTPS”源: {0}]D;]A;NuGet 需要 HTTPS 源。有关详细信息，请参阅 https://aka.ms/nuget-https-everywhere。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The following are 'Non-HTTPS' sources: {0}]D;]A;NuGet requires HTTPS sources. Please refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
