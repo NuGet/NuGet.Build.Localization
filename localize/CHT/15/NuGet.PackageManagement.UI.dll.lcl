@@ -59,7 +59,7 @@
         <Disp Icon="Dlg" />
       </Item>
       <Item ItemId=";defaultPackageManagementFormatItems.Items" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Combo Box">
+        <Str Cat="Combo Box" UsrLk="true">
           <Val><![CDATA[Packages.config]]></Val>
         </Str>
         <Disp Icon="Dlg" />
@@ -191,7 +191,7 @@
         <Disp Icon="Dlg" />
       </Item>
       <Item ItemId=";BrowseButton.Text" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Button">
+        <Str Cat="Button" UsrLk="true">
           <Val><![CDATA[...]]></Val>
         </Str>
         <Bin BinId="1">
@@ -650,7 +650,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Packages]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Package]]></Val>
+            <Val><![CDATA[套件]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -752,7 +752,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Argument cannot be null or empty.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[引數不能為 Null 或空白。]]></Val>
+            <Val><![CDATA[引數不得為 Null 或空白。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1147,6 +1147,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ColumnHeader_PackageLevel" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package Level]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ColumnHeader_Project" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Project]]></Val>
@@ -1276,9 +1282,6 @@
       <Item ItemId=";DialogTitle_HttpSource" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[HTTP Source]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[HTTP 來源]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1306,9 +1309,6 @@
       <Item ItemId=";Error_HttpSource_Single" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[NuGet 需要 HTTPS 來源。若要使用 HTTP 來源，您必須在 NuGet.Config 檔案中將 'allowInsecureConnections' 明確設定為 [true]5D;。]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1336,9 +1336,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[套件 '{0}' 可在全域套件資料夾中使用，但其來源 '{1}' 不是此解決方案的設定來源之一。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package `{0}` is available in the Global packages folder, but the source it came from `{1}` is not one of this solution's configured sources.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1408,9 +1405,6 @@
       <Item ItemId=";Hyperlink_Owner" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Owner]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[擁有者]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1660,8 +1654,8 @@
       <Item ItemId=";Label_InstalledVersionsCount" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Versions: {0}]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[版本：{0}]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
+            <Val><![CDATA[版本 - {0}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Versions - {0}]]></Val>
@@ -1714,11 +1708,17 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Label_MultiplePackageVulnerableVersionToolTip" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[These installed package versions contain vulnerabilities: {0}]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Label_NetworkError" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[An error occurred while fetching additional information about the package. Refresh to try again.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[擷取封裝的其他資訊時發生錯誤。重新整理以再試一次。]]></Val>
+            <Val><![CDATA[擷取套件的其他資訊時發生錯誤。重新整理以再試一次。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2005,9 +2005,6 @@
       <Item ItemId=";Link_configuration" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Common NuGet configurations; How settings are applied.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[一般 NuGet 設定: 如何套用設定。]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2273,7 +2270,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Can not access NuGet.Config, Please check NuGet.Config]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[無法存取 NuGet.Config，請檢查 NuGet.Config]]></Val>
+            <Val><![CDATA[無法存取 NuGet.Config。請檢查 NuGet.Config]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2348,7 +2345,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The name and source specified cannot be empty. Please provide a valid name and source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定的名稱與來源不可為空白。請提供有效的名稱與來源。]]></Val>
+            <Val><![CDATA[指定的名稱與來源不得為空白。請提供有效的名稱與來源。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2357,7 +2354,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The name specified cannot be empty. Please provide a valid name.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定的名稱不可為空白。請提供有效的名稱。]]></Val>
+            <Val><![CDATA[指定的名稱不得為空白。請提供有效的名稱。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2366,7 +2363,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The source specified cannot be empty. Please provide a valid source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定的來源不可為空白。請提供有效的來源。]]></Val>
+            <Val><![CDATA[指定的來源不得為空白。請提供有效的來源。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2384,7 +2381,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The name specified has already been added to the list of available package sources. Please provide a unique name.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定的名稱已加入至可用套件來源清單中。請提供唯一名稱。]]></Val>
+            <Val><![CDATA[已將指定的名稱新增到可用套件來源清單。請提供唯一的名稱。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2393,7 +2390,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The source specified has already been added to the list of available package sources. Please provide a unique source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定的來源已加入至可用套件來源清單中。請提供唯一來源。]]></Val>
+            <Val><![CDATA[已將指定的來源新增到可用套件來源清單。請提供唯一的來源。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2411,7 +2408,7 @@
         <Str Cat="Text">
           <Val><![CDATA[An error occurred while loading packages]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[載入套件時發生錯誤]]></Val>
+            <Val><![CDATA[載入套件期間發生錯誤]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2656,6 +2653,18 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[套件管理員格式會套用到此 Solution 中的下列專案]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_PackageLevelTopLevel" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Top-level]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_PackageLevelTransitive" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Transitive]]></Val>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2920,9 +2929,6 @@
       <Item ItemId=";ToolTip_TransitivePathHelp" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[To learn more about transitive paths, see]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[若要深入了解可轉移的路徑，請參閱]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2930,7 +2936,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Uninstall this package.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[解除安裝此封裝。]]></Val>
+            <Val><![CDATA[解除安裝此套件。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3122,7 +3128,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package pattern:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[封裝模式:]]></Val>
+            <Val><![CDATA[套件模式:]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3262,17 +3268,14 @@
       <Item ItemId=";Warn_Adding_HttpSource" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[You are attempting to add an HTTP source, which is insecure. Would you like to proceed with adding this insecure HTTP source?]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[您正在嘗試新增不安全的 HTTP 來源。您是否要繼續新增此不安全的 HTTP 來源?]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";Warning_HTTPSource" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[AllowInsecureConnections is enabled and allows http access. Note: This method is not secure. For secure options, see https://aka.ms/nuget-https-everywhere.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[AllowInsecureConnections 已啟用並允許 HTTP 存取。注意: 此方法不安全。如需安全選項，請參閱 https://aka.ms/nuget-https-everywhere。]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
+            <Val><![CDATA[警告: 未來的版本將移除非 HTTPS 存取。請考慮移轉至 'HTTPS' 來源。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Warning: Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.]]></Val>
@@ -3401,13 +3404,13 @@
         <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
       </Item>
       <Item ItemId=";AddMappingDialogWindow" ItemType=";FrameworkElement.Height" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true">
+        <Str Cat="Unknown" DevLk="true" UsrLk="true">
           <Val><![CDATA[348]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/addmappingdialog.baml \ 0 \ 0 \ ;Height \ ;0 \ 0" />
       </Item>
       <Item ItemId=";AddMappingDialogWindow" ItemType=";FrameworkElement.Width" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true">
+        <Str Cat="Unknown" DevLk="true" UsrLk="true">
           <Val><![CDATA[480]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/addmappingdialog.baml \ 0 \ 0 \ ;Width \ ;0 \ 0" />
@@ -3422,7 +3425,7 @@
         <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
       </Item>
       <Item ItemId=";ListItemStackPanel" ItemType=";FrameworkElement.Margin" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true">
+        <Str Cat="Unknown" DevLk="true" UsrLk="true">
           <Val><![CDATA[0,3,0,3]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/packagesourcemappingoptionscontrol.baml \ 0 \ 0 \ ;Margin \ ;0 \ 0" />

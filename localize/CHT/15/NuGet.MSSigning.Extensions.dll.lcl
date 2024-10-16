@@ -34,8 +34,8 @@
       <Item ItemId=";MSSignCommandCertificateFingerprintDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[SHA-256, SHA-384 or SHA-512 fingerprint of the certificate used to search a p7b file for the certificate.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[用來為憑證搜尋 p7b 檔案的憑證 SHA-256、SHA-384 或 SHA-512 指紋。]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
+            <Val><![CDATA[用來為憑證搜尋 p7b 檔案的憑證 SHA-1 指紋。]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a p7b file for the certificate.]]></Val>
@@ -64,8 +64,8 @@
       <Item ItemId=";MSSignCommandInvalidArgumentException" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid value provided for '{0}'. For a list of accepted values, please visit https://learn.microsoft.com/nuget/reference/cli-reference/cli-ref-sign]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[提供給 '{0}' 的值無效。如需接受值的清單，請瀏覽 https://learn.microsoft.com/nuget/reference/cli-reference/cli-ref-sign]]></Val>
+          <Tgt Cat="Text" Stat="Update" Orig="New">
+            <Val><![CDATA[提供給 '{0}' 的值無效。如需可接受的值清單，請瀏覽 https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Invalid value provided for '{0}'. For a list of accepted values, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
@@ -76,9 +76,6 @@
       <Item ItemId=";MSSignCommandInvalidCertificateFingerprint" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid value for 'CertificateFingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['CertificateFingerprint' 選項的值無效。該值必須是 SHA-256、SHA-384 或 SHA-512 憑證指紋 (十六進位格式)。]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -191,20 +188,14 @@
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandUsageExamples" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
+        <Str Cat="Text" UsrLk="true">
           <Val><![CDATA[nuget mssign MyPackage.nupkg -Timestamper https://foo.bar -CertificateFile foo.p7b -CSPName "Cryptographic Service Provider"  -KeyContainer "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a" -CertificateFingerprint "4003d786cc374004bfdfc4f3e8ef9b3a"  ]D;]A;]D;]A;nuget mssign MyPackage.nupkg -Timestamper https://foo.bar -CertificateFile foo.p7b -CSPName "Cryptographic Service Provider"  -KeyContainer "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a" -CertificateFingerprint "4003d786cc374004bfdfc4f3e8ef9b3a" -OutputDirectory .\..\Signed]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[nuget mssign MyPackage.nupkg -Timestamper https://foo.bar -CertificateFile foo.p7b -CSPName "Cryptographic Service Provider"  -KeyContainer "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a" -CertificateFingerprint "4003d786cc374004bfdfc4f3e8ef9b3a"  ]D;]A;]D;]A;nuget mssign MyPackage.nupkg -Timestamper https://foo.bar -CertificateFile foo.p7b -CSPName "Cryptographic Service Provider"  -KeyContainer "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a" -CertificateFingerprint "4003d786cc374004bfdfc4f3e8ef9b3a" -OutputDirectory .\..\Signed]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandUsageSummary" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
+        <Str Cat="Text" UsrLk="true">
           <Val><![CDATA[<package_path> -Timestamper <timestamp_server_url> -CertificateFile <p7b_file_path> -CSPName <cryptographic_service _provider_name>  -KeyContainer <key_container_guid>  -CertificateFingerprint <certificate_fingerprint>]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[<package_path> -Timestamper <timestamp_server_url> -CertificateFile <p7b_file_path> -CSPName <cryptographic_service _provider_name>  -KeyContainer <key_container_guid>  -CertificateFingerprint <certificate_fingerprint>]]></Val>
-          </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[<package_path> -Timestamper <timestamp_server_url> -CertificateFile <p7b_file_path> -CSPName <cryptographic_service _provider_name>  -KeyContianer <key_container_guid>  -CertificateFingerprint <certificate_fingerprint>]]></Val>
           </Prev>
@@ -239,11 +230,8 @@
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";RepoSignCommandUsageExamples" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
+        <Str Cat="Text" UsrLk="true">
           <Val><![CDATA[nuget reposign MyPackage.nupkg -Timestamper http://timestamper.test -CertificateFile certificates.p7b -CSPName "Cryptographic Service Provider" -KeyContainer 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -CertificateFingerprint 8599ADD1C62EE42E315EA887FF60908B7A7C6E9B -V3ServiceIndexUrl https://v3.index.test]D;]A;]D;]A;nuget reposign MyPackage.nupkg -Timestamper http://timestamper.test -CertificateFile certificates.p7b -CSPName "Cryptographic Service Provider" -KeyContainer 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -CertificateFingerprint 8599ADD1C62EE42E315EA887FF60908B7A7C6E9B -OutputDirectory .\..\Signed -PackageOwners "owner1;owner2" -V3ServiceIndexUrl https://v3.index.test]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[nuget reposign MyPackage.nupkg -Timestamper http://timestamper.test -CertificateFile certificates.p7b -CSPName "Cryptographic Service Provider" -KeyContainer 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -CertificateFingerprint 8599ADD1C62EE42E315EA887FF60908B7A7C6E9B -V3ServiceIndexUrl https://v3.index.test]D;]A;]D;]A;nuget reposign MyPackage.nupkg -Timestamper http://timestamper.test -CertificateFile certificates.p7b -CSPName "Cryptographic Service Provider" -KeyContainer 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -CertificateFingerprint 8599ADD1C62EE42E315EA887FF60908B7A7C6E9B -OutputDirectory .\..\Signed -PackageOwners "owner1;owner2" -V3ServiceIndexUrl https://v3.index.test]]></Val>
-          </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[nuget reposign MyPackage.nupkg -Timestamper http://timestamper.test -CertificateFile certificates.p7b -CSPName "Cryptographic Service Provider" -KeyContainer 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -CertificateFingerprint 8599ADD1C62EE42E315EA887FF60908B7A7C6E9B -V3ServiceIndexUrl https://v3.index.test]D;]A;]D;]A;nuget reposign MyPackage.nupkg -Timestamper http://timestamper.test -CertificateFile certificates.p7b -CSPName "Cryptographic Service Provider" -KeyContainer 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -CertificateFingerprint 8599ADD1C62EE42E315EA887FF60908B7A7C6E9B -OutputDirectory .\..\Signed -PackageOwners owner1;owner2 -V3ServiceIndexUrl https://v3.index.test]]></Val>
           </Prev>
@@ -251,11 +239,8 @@
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";RepoSignCommandUsageSummary" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
+        <Str Cat="Text" UsrLk="true">
           <Val><![CDATA[<package_path> -Timestamper <timestamp_server_url> -CertificateFile <p7b_file_path> -CSPName <cryptographic_service_provider_name> -KeyContainer <key_container_guid> -CertificateFingerprint <certificate_fingerprint> -PackageOwners <package_owners> -V3ServiceIndexUrl <v3_service_index_url>]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[<package_path> -Timestamper <timestamp_server_url> -CertificateFile <p7b_file_path> -CSPName <cryptographic_service_provider_name> -KeyContainer <key_container_guid> -CertificateFingerprint <certificate_fingerprint> -PackageOwners <package_owners> -V3ServiceIndexUrl <v3_service_index_url>]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>

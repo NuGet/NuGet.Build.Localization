@@ -1592,7 +1592,7 @@
         <Str Cat="Text">
           <Val><![CDATA[SHA-256, SHA-384 or SHA-512 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Odcisk cyfrowy certyfikatu SHA-256, SHA-384 lub SHA-512 używany do przeszukiwania magazynu certyfikatów w zakresie danego certyfikatu. Magazyn certyfikatów można określić za pomocą opcji --certificate-store-name i --certificate-store-location.]]></Val>
+            <Val><![CDATA[Odcisk cyfrowy certyfikatu SHA-256, SHA-384 lub SHA-512 używany do przeszukiwania lokalnego magazynu certyfikatów w zakresie danego certyfikatu. Magazyn certyfikatów można określić za pomocą opcji --certificate-store-name i --certificate-store-location.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[SHA-1 fingerprint of the certificate used to search a local certificate store for the certificate. The certificate store can be specified by --certificate-store-name and --certificate-store-location options.]]></Val>
@@ -1667,7 +1667,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Invalid value for '--certificate-fingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nieprawidłowa wartość opcji „--certificate-fingerprint”. Wartość musi być odciskiem palca certyfikatu SHA-256, SHA-384 lub SHA-512 (w formacie szesnastkowym).]]></Val>
+            <Val><![CDATA[Nieprawidłowa wartość dla opcji „--certificate-fingerprint”. Wartość musi być odciskiem cyfrowym certyfikatu SHA-256, SHA-384 lub SHA-512 (w systemie szesnastkowym).]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1760,7 +1760,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Allows HTTP connections for adding or updating packages. Note: This method is not secure. For secure options, see https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zezwala na połączenia HTTP na potrzeby dodawania lub aktualizowania pakietów. Uwaga: ta metoda nie jest bezpieczna. Aby uzyskać więcej informacji na temat bezpiecznych opcji, sprawdź witrynę https://aka.ms/nuget-https-everywhere.]]></Val>
+            <Val><![CDATA[Zezwala na połączenia HTTP na potrzeby dodawania lub aktualizowania pakietów. Uwaga: ta metoda nie jest bezpieczna. Aby uzyskać więcej informacji na temat opcji zabezpieczeń, sprawdź witrynę https://aka.ms/nuget-https-everywhere.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2135,7 +2135,7 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}]D;]A;Non-HTTPS access will be removed in a future version. Consider migrating to 'HTTPS' sources.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Uruchamiasz operację „{0}” ze źródłami HTTP: {1}]D;]A;Dostęp inny niż HTTPS zostanie usunięty w przyszłej wersji. Rozważ przeprowadzenie migracji do źródeł „HTTPS”.]]></Val>
+            <Val><![CDATA[Uruchamiasz operację „{0}” ze źródłami „HTTP”: {1}]D;]A;Dostęp inny niż HTTPS zostanie usunięty w przyszłej wersji. Rozważ przeprowadzenie migracji do źródeł „HTTPS”.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2171,7 +2171,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The file '{0}' does not appear to be a NuGet assets file. Please run restore for project '{1}' before running this command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Plik „{0}” prawdopodobnie nie jest plikiem zasobów NuGet. Przed uruchomieniem tego polecenia uruchom przywracanie projektu „{1}”.]]></Val>
+            <Val><![CDATA[Plik „{0}” prawdopodobnie nie jest plikiem zasobów NuGet. Przed uruchomieniem tego polecenia uruchom przywracanie w przypadku projektu „{1}”.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2180,7 +2180,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The file '{0}' does not appear to be a NuGet assets file. For more information, see https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Plik „{0}” prawdopodobnie nie jest plikiem zasobów NuGet. Aby uzyskać więcej informacji, zobacz https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
+            <Val><![CDATA[Plik „{0}” prawdopodobnie nie jest plikiem zasobów NuGet. Aby uzyskać więcej informacji, zobacz stronę https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2225,7 +2225,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Unable to run 'dotnet nuget why' for project '{0}'. See https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nie można uruchomić polecenia „dotnet nuget why” dla projektu „{0}”. Zobacz https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
+            <Val><![CDATA[Nie można uruchomić polecenia „dotnet nuget why” dla projektu „{0}”. Zobacz stronę https://aka.ms/dotnet/nuget/why#older-project-format]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Unable to run 'dotnet nuget why' for project '{0}'. This command only works on SDK-style projects.]]></Val>

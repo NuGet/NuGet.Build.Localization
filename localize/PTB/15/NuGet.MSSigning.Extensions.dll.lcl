@@ -65,7 +65,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Invalid value provided for '{0}'. For a list of accepted values, please visit https://learn.microsoft.com/nuget/reference/cli-reference/cli-ref-sign]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Valor inválido fornecido para '{0}'. Para obter uma lista dos valores aceitos, visite https://learn.microsoft.com/nuget/reference/cli-reference/cli-ref-sign]]></Val>
+            <Val><![CDATA[Valor inválido fornecido para "{0}". Para obter uma lista dos valores aceitos, visite https://learn.microsoft.com/nuget/reference/cli-reference/cli-ref-sign]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Invalid value provided for '{0}'. For a list of accepted values, please visit https://docs.nuget.org/docs/reference/command-line-reference]]></Val>
@@ -191,20 +191,14 @@
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandUsageExamples" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
+        <Str Cat="Text" UsrLk="true">
           <Val><![CDATA[nuget mssign MyPackage.nupkg -Timestamper https://foo.bar -CertificateFile foo.p7b -CSPName "Cryptographic Service Provider"  -KeyContainer "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a" -CertificateFingerprint "4003d786cc374004bfdfc4f3e8ef9b3a"  ]D;]A;]D;]A;nuget mssign MyPackage.nupkg -Timestamper https://foo.bar -CertificateFile foo.p7b -CSPName "Cryptographic Service Provider"  -KeyContainer "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a" -CertificateFingerprint "4003d786cc374004bfdfc4f3e8ef9b3a" -OutputDirectory .\..\Signed]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[nuget mssign MyPackage.nupkg -Timestamper https://foo.bar -CertificateFile foo.p7b -CSPName "Cryptographic Service Provider"  -KeyContainer "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a" -CertificateFingerprint "4003d786cc374004bfdfc4f3e8ef9b3a"  ]D;]A;]D;]A;nuget mssign MyPackage.nupkg -Timestamper https://foo.bar -CertificateFile foo.p7b -CSPName "Cryptographic Service Provider"  -KeyContainer "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a" -CertificateFingerprint "4003d786cc374004bfdfc4f3e8ef9b3a" -OutputDirectory .\..\Signed]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";MSSignCommandUsageSummary" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
+        <Str Cat="Text" UsrLk="true">
           <Val><![CDATA[<package_path> -Timestamper <timestamp_server_url> -CertificateFile <p7b_file_path> -CSPName <cryptographic_service _provider_name>  -KeyContainer <key_container_guid>  -CertificateFingerprint <certificate_fingerprint>]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[<package_path> -Timestamper <timestamp_server_url> -CertificateFile <p7b_file_path> -CSPName <cryptographic_service _provider_name>  -KeyContainer <key_container_guid>  -CertificateFingerprint <certificate_fingerprint>]]></Val>
-          </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[<package_path> -Timestamper <timestamp_server_url> -CertificateFile <p7b_file_path> -CSPName <cryptographic_service _provider_name>  -KeyContianer <key_container_guid>  -CertificateFingerprint <certificate_fingerprint>]]></Val>
           </Prev>
@@ -239,11 +233,8 @@
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";RepoSignCommandUsageExamples" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
+        <Str Cat="Text" UsrLk="true">
           <Val><![CDATA[nuget reposign MyPackage.nupkg -Timestamper http://timestamper.test -CertificateFile certificates.p7b -CSPName "Cryptographic Service Provider" -KeyContainer 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -CertificateFingerprint 8599ADD1C62EE42E315EA887FF60908B7A7C6E9B -V3ServiceIndexUrl https://v3.index.test]D;]A;]D;]A;nuget reposign MyPackage.nupkg -Timestamper http://timestamper.test -CertificateFile certificates.p7b -CSPName "Cryptographic Service Provider" -KeyContainer 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -CertificateFingerprint 8599ADD1C62EE42E315EA887FF60908B7A7C6E9B -OutputDirectory .\..\Signed -PackageOwners "owner1;owner2" -V3ServiceIndexUrl https://v3.index.test]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[nuget reposign MyPackage.nupkg -Timestamper http://timestamper.test -CertificateFile certificates.p7b -CSPName "Cryptographic Service Provider" -KeyContainer 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -CertificateFingerprint 8599ADD1C62EE42E315EA887FF60908B7A7C6E9B -V3ServiceIndexUrl https://v3.index.test]D;]A;]D;]A;nuget reposign MyPackage.nupkg -Timestamper http://timestamper.test -CertificateFile certificates.p7b -CSPName "Cryptographic Service Provider" -KeyContainer 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -CertificateFingerprint 8599ADD1C62EE42E315EA887FF60908B7A7C6E9B -OutputDirectory .\..\Signed -PackageOwners "owner1;owner2" -V3ServiceIndexUrl https://v3.index.test]]></Val>
-          </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[nuget reposign MyPackage.nupkg -Timestamper http://timestamper.test -CertificateFile certificates.p7b -CSPName "Cryptographic Service Provider" -KeyContainer 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -CertificateFingerprint 8599ADD1C62EE42E315EA887FF60908B7A7C6E9B -V3ServiceIndexUrl https://v3.index.test]D;]A;]D;]A;nuget reposign MyPackage.nupkg -Timestamper http://timestamper.test -CertificateFile certificates.p7b -CSPName "Cryptographic Service Provider" -KeyContainer 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -CertificateFingerprint 8599ADD1C62EE42E315EA887FF60908B7A7C6E9B -OutputDirectory .\..\Signed -PackageOwners owner1;owner2 -V3ServiceIndexUrl https://v3.index.test]]></Val>
           </Prev>
@@ -251,11 +242,8 @@
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";RepoSignCommandUsageSummary" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
-        <Str Cat="Text">
+        <Str Cat="Text" UsrLk="true">
           <Val><![CDATA[<package_path> -Timestamper <timestamp_server_url> -CertificateFile <p7b_file_path> -CSPName <cryptographic_service_provider_name> -KeyContainer <key_container_guid> -CertificateFingerprint <certificate_fingerprint> -PackageOwners <package_owners> -V3ServiceIndexUrl <v3_service_index_url>]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[<package_path> -Timestamper <timestamp_server_url> -CertificateFile <p7b_file_path> -CSPName <cryptographic_service_provider_name> -KeyContainer <key_container_guid> -CertificateFingerprint <certificate_fingerprint> -PackageOwners <package_owners> -V3ServiceIndexUrl <v3_service_index_url>]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>

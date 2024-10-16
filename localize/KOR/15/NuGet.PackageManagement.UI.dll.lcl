@@ -59,7 +59,7 @@
         <Disp Icon="Dlg" />
       </Item>
       <Item ItemId=";defaultPackageManagementFormatItems.Items" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Combo Box">
+        <Str Cat="Combo Box" UsrLk="true">
           <Val><![CDATA[Packages.config]]></Val>
         </Str>
         <Disp Icon="Dlg" />
@@ -191,7 +191,7 @@
         <Disp Icon="Dlg" />
       </Item>
       <Item ItemId=";BrowseButton.Text" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Button">
+        <Str Cat="Button" UsrLk="true">
           <Val><![CDATA[...]]></Val>
         </Str>
         <Bin BinId="1">
@@ -1147,6 +1147,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";ColumnHeader_PackageLevel" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package Level]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[패키지 수준]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";ColumnHeader_Project" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Project]]></Val>
@@ -1268,7 +1277,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Learn more]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[자세한 정보]]></Val>
+            <Val><![CDATA[자세히 알아보기]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1307,7 +1316,7 @@
         <Str Cat="Text">
           <Val><![CDATA[NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[NuGet에 HTTPS 원본이 필요합니다. HTTP 소스를 사용하려면 NuGet.Config 파일에서 'allowInsecureConnections'를 명시적으로 true로 설정해야 합니다.]]></Val>
+            <Val><![CDATA[NuGet에 HTTPS 원본이 필요합니다. HTTP 원본을 사용하려면 NuGet.Config 파일에서 'allowInsecureConnections'를 명시적으로 true로 설정해야 합니다.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1336,9 +1345,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[`{0}` 패키지는 전역 패키지 폴더에서 사용할 수 있지만 `{1}`에서 가져온 원본이 이 구성된 원본 중 하나가 아닙니다.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package `{0}` is available in the Global packages folder, but the source it came from `{1}` is not one of this solution's configured sources.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1710,6 +1716,15 @@
           <Val><![CDATA[License:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[라이선스:]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Label_MultiplePackageVulnerableVersionToolTip" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[These installed package versions contain vulnerabilities: {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[설치된 패키지 버전에 취약성이 포함되어 있음: {0}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2273,7 +2288,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Can not access NuGet.Config, Please check NuGet.Config]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[NuGet.Config에 액세스할 수 없습니다. NuGet.Config를 확인하십시오.]]></Val>
+            <Val><![CDATA[NuGet.Config에 액세스할 수 없습니다. NuGet.Config를 확인하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2339,7 +2354,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The source specified is invalid. Please provide a valid source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[지정한 소스가 잘못되었습니다. 올바른 소스를 제공하십시오.]]></Val>
+            <Val><![CDATA[지정한 소스가 잘못되었습니다. 유효한 소스를 제공하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2348,7 +2363,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The name and source specified cannot be empty. Please provide a valid name and source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[지정한 이름과 소스는 비워둘 수 없습니다. 올바른 이름과 소스를 제공하십시오.]]></Val>
+            <Val><![CDATA[지정한 이름과 소스는 비워둘 수 없습니다. 유효한 이름과 소스를 제공하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2357,7 +2372,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The name specified cannot be empty. Please provide a valid name.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[지정한 이름은 비워둘 수 없습니다. 올바른 이름을 제공하십시오.]]></Val>
+            <Val><![CDATA[지정한 이름은 비워둘 수 없습니다. 유효한 이름을 제공하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2366,7 +2381,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The source specified cannot be empty. Please provide a valid source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[지정한 소스는 비워둘 수 없습니다. 올바른 소스를 제공하십시오.]]></Val>
+            <Val><![CDATA[지정한 소스는 비워둘 수 없습니다. 유효한 소스를 제공하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2384,7 +2399,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The name specified has already been added to the list of available package sources. Please provide a unique name.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[지정한 이름은 이미 사용 가능한 패키지 소스 목록에 추가되어 있습니다. 고유한 이름을 제공하십시오.]]></Val>
+            <Val><![CDATA[지정한 이름은 이미 사용 가능한 패키지 소스 목록에 추가되어 있습니다. 고유한 이름을 제공하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2393,7 +2408,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The source specified has already been added to the list of available package sources. Please provide a unique source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[지정한 소스는 이미 사용 가능한 패키지 소스 목록에 추가되어 있습니다. 고유한 소스를 제공하십시오.]]></Val>
+            <Val><![CDATA[지정한 소스는 이미 사용 가능한 패키지 소스 목록에 추가되어 있습니다. 고유한 소스를 제공하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2402,7 +2417,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Canceled loading packages]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[패키지 로드를 취소함]]></Val>
+            <Val><![CDATA[패키지 로드가 취소됨]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2655,6 +2670,24 @@
           <Val><![CDATA[The package manager format will apply to the following projects in this Solution]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[패키지 관리자 형식은 이 Solution의 다음 프로젝트에 적용됩니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_PackageLevelTopLevel" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Top-level]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[최상위 수준]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_PackageLevelTransitive" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Transitive]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[전이]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3401,13 +3434,13 @@
         <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
       </Item>
       <Item ItemId=";AddMappingDialogWindow" ItemType=";FrameworkElement.Height" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true">
+        <Str Cat="Unknown" DevLk="true" UsrLk="true">
           <Val><![CDATA[348]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/addmappingdialog.baml \ 0 \ 0 \ ;Height \ ;0 \ 0" />
       </Item>
       <Item ItemId=";AddMappingDialogWindow" ItemType=";FrameworkElement.Width" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true">
+        <Str Cat="Unknown" DevLk="true" UsrLk="true">
           <Val><![CDATA[480]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/addmappingdialog.baml \ 0 \ 0 \ ;Width \ ;0 \ 0" />
@@ -3422,7 +3455,7 @@
         <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
       </Item>
       <Item ItemId=";ListItemStackPanel" ItemType=";FrameworkElement.Margin" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true">
+        <Str Cat="Unknown" DevLk="true" UsrLk="true">
           <Val><![CDATA[0,3,0,3]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/packagesourcemappingoptionscontrol.baml \ 0 \ 0 \ ;Margin \ ;0 \ 0" />

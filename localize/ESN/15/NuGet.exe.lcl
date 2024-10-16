@@ -142,7 +142,7 @@
         <Str Cat="Text">
           <Val><![CDATA[nuget client-certs Add -PackageSource Foo -Path .\MyCertificate.pfx]D;]A;]D;]A;nuget client-certs Add -PackageSource Contoso -Path c:\MyCertificate.pfx -Password 42]D;]A;]D;]A;nuget client-certs Add -PackageSource Foo -FindValue ca4e7b265780fc87f3cb90b6b89c54bf4341e755]D;]A;]D;]A;nuget client-certs Add -PackageSource Contoso -StoreLocation LocalMachine -StoreName My -FindBy Thumbprint -FindValue ca4e7b265780fc87f3cb90b6b89c54bf4341e755]D;]A;]D;]A;nuget client-certs Update -PackageSource Foo -FindValue ca4e7b265780fc87f3cb90b6b89c54bf4341e755]D;]A;]D;]A;nuget client-certs Remove -PackageSource certificateName]D;]A;]D;]A;nuget client-certs]D;]A;]D;]A;nuget client-certs List]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[nuget client-certs Agregar -PackageSource Foo -Path .\MyCertificate.pfx]D;]A;]D;]A;nuget client-certs Add -PackageSource Contoso -Path c:\MyCertificate.pfx -Password 42]D;]A;]D;]A;Agregar certificado de cliente de nuget -PackageSource Foo -FindValue ca4e7b265780fc87f3cb90b6b89c54bf4341e755]D;]A;]D;]A;Agregar certificado de cliente de nuget -PackageSource Contoso -StoreLocation LocalMachine -StoreName My -FindBy Thumbprint -FindValue ca4e7b265780fc87f3cb90b6b89c54bf4341e755]D;]A;]D;]A;Actualizar certificado de cliente de nuget -PackageSource Foo -FindValue ca4e7b265780fc87f3cb90b6b89c54bf4341e755]D;]A;]D;]A;Eliminar certificado de cliente de nuget -PackageSource certificateName]D;]A;]D;]A;nuget client-certs]D;]A;]D;]A;Lista de certificados de cliente de nuget]]></Val>
+            <Val><![CDATA[nuget client-certs Add -PackageSource Foo -Path .\MyCertificate.pfx]D;]A;]D;]A;nuget client-certs Add -PackageSource Contoso -Path c:\MyCertificate.pfx -Password 42]D;]A;]D;]A;nuget client-certs Add -PackageSource Foo -FindValue ca4e7b265780fc87f3cb90b6b89c54bf4341e755]D;]A;]D;]A;nuget client-certs Add -PackageSource Contoso -StoreLocation LocalMachine -StoreName My -FindBy Thumbprint -FindValue ca4e7b265780fc87f3cb90b6b89c54bf4341e755]D;]A;]D;]A;nuget client-certs Update -PackageSource Foo -FindValue ca4e7b265780fc87f3cb90b6b89c54bf4341e755]D;]A;]D;]A;nuget client-certs Remove -PackageSource certificateName]D;]A;]D;]A;nuget client-certs]D;]A;]D;]A;nuget client-certs List]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -367,7 +367,7 @@
         <Str Cat="Text">
           <Val><![CDATA[nuget delete MyPackage 1.0]D;]A;    ]D;]A;nuget delete MyPackage 1.0 -NoPrompt]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[nuget borrar MyPackage 1.0]D;]A;    ]D;]A;nuget borrar MyPackage 1.0 -NoPrompt]]></Val>
+            <Val><![CDATA[nuget delete MyPackage 1.0]D;]A;    ]D;]A;nuget delete MyPackage 1.0 -NoPrompt]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -511,7 +511,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Type '{0} help <command>' for help on a specific command.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Escriba “{0} help <comando>” para ver la ayuda de un comando en concreto.]]></Val>
+            <Val><![CDATA[Escriba '{0} help <command>' para ver la ayuda de un comando en concreto.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -529,7 +529,7 @@
         <Str Cat="Text">
           <Val><![CDATA[usage: {0} <command> [args]5D; [options]5D;]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[uso: {0} <comando> [argumentos]5D; [opciones]5D;]]></Val>
+            <Val><![CDATA[uso: {0} <command> [argumentos]5D; [opciones]5D;]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -664,7 +664,7 @@
         <Str Cat="Text">
           <Val><![CDATA[nuget install elmah]D;]A;]D;]A;nuget install packages.config]D;]A;]D;]A;nuget install ninject -o c:\foo]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[instalación de nuget elmah]D;]A;]D;]A;nuget instalar packages.config]D;]A;]D;]A;nuget instalar ninject -o c:\foo]]></Val>
+            <Val><![CDATA[nuget install elmah]D;]A;]D;]A;nuget install packages.config]D;]A;]D;]A;nuget install ninject -o c:\foo]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -871,7 +871,7 @@
         <Str Cat="Text">
           <Val><![CDATA[nuget pack]D;]A;]D;]A;nuget pack foo.nuspec]D;]A;]D;]A;nuget pack foo.csproj]D;]A;]D;]A;nuget pack foo.csproj -Build -Symbols -Properties Configuration=Release]D;]A;]D;]A;nuget pack foo.nuspec -Version 2.1.0]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[paquete nuget]D;]A;]D;]A;nuget pack foo.nuspec]D;]A;]D;]A;nuget pack foo.csproj]D;]A;]D;]A;nuget pack foo.csproj -Build -Symbols -Properties Configuration=Release]D;]A;]D;]A;nuget pack foo.nuspec -Version 2.1.0]]></Val>
+            <Val><![CDATA[nuget pack]D;]A;]D;]A;nuget pack foo.nuspec]D;]A;]D;]A;nuget pack foo.csproj]D;]A;]D;]A;nuget pack foo.csproj -Build -Symbols -Properties Configuration=Release]D;]A;]D;]A;nuget pack foo.nuspec -Version 2.1.0]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1450,7 +1450,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Name of the X.509 certificate store use to search for the certificate. Defaults to "CurrentUser", the X.509 certificate store used by the current user.]D;]A;This option should be used when specifying the certificate via -CertificateSubjectName or -CertificateFingerprint options.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nombre del almacén de certificados X.509 que se usa para buscar el certificado. El valor predeterminado es "CurrentUser", el almacén de certificados X.509 usado por el usuario actual.]D;]A;Esta opción tiene que usarse al especificar el certificado a través de las opciones de certificate-subject-name o --certificate-fingerprint.]]></Val>
+            <Val><![CDATA[Nombre del almacén de certificados X.509 que se usa para buscar el certificado. El valor predeterminado es "CurrentUser", el almacén de certificados X.509 usado por el usuario actual.]D;]A;Esta opción tiene que usarse al especificar el certificado a través de las opciones de -CertificateSubjectName o -CertificateFingerprint.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1459,7 +1459,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Name of the X.509 certificate store to use to search for the certificate. Defaults to "My", the X.509 certificate store for personal certificates.]D;]A;This option should be used when specifying the certificate via -CertificateSubjectName or -CertificateFingerprint options.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nombre del almacén de certificados X.509 que se utilizará para buscar el certificado. El valor predeterminado es "Mi", el almacén de certificados X.509 para certificados personales.]D;]A; Esta opción debe usarse al especificar el certificado a través de las opciones --certificate-subject-name o --certificate-fingerprint.]]></Val>
+            <Val><![CDATA[Nombre del almacén de certificados X.509 que se utilizará para buscar el certificado. El valor predeterminado es "Mi", el almacén de certificados X.509 para certificados personales.]D;]A; Esta opción debe usarse al especificar el certificado a través de las opciones -CertificateSubjectName o -CertificateFingerprint.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1468,7 +1468,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Subject name of the certificate used to search a local certificate store for the certificate. ]D;]A;The search is a case-insensitive string comparison using the supplied value, which will find all certificates with the subject name containing that string, regardless of other subject values.]D;]A;The certificate store can be specified by -CertificateStoreName and -CertificateStoreLocation options.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nombre del asunto del certificado que se usa para buscar un almacén de certificados local para el certificado.]D;]A;La búsqueda es una comparación de cadenas que no diferencia mayúsculas de minúsculas con el valor proporcionado, que encontrará todos los certificados con el nombre del asunto que contienen esa cadena, independientemente de otros valores de asunto.]D;]A;El almacén de certificados se puede especificar por las opciones-CertificateStoreName y -CertificateStoreLocation.]]></Val>
+            <Val><![CDATA[Nombre del asunto del certificado que se usa para buscar un almacén de certificados local para el certificado.]D;]A;La búsqueda es una comparación de cadenas que no diferencia mayúsculas de minúsculas con el valor proporcionado, que encontrará todos los certificados con el nombre del asunto que contienen esa cadena, independientemente de otros valores de asunto.]D;]A;El almacén de certificados se puede especificar por las opciones -CertificateStoreName y -CertificateStoreLocation.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1621,7 +1621,7 @@
         <Str Cat="Text">
           <Val><![CDATA[nuget sign MyPackage.nupkg -Timestamper https://foo.bar]D;]A;]D;]A;nuget sign .\..\MyPackage.nupkg -Timestamper https://foo.bar -OutputDirectory .\..\Signed]D;]A;]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[nuget sign MyPackage.nupkg -Timestamper https://foo.bar]D;]A;]D;]A;signo nuget .\.. \MyPackage.nupkg -Timestamper https://foo.bar -OutputDirectory .\.. \Firmado]D;]A;]]></Val>
+            <Val><![CDATA[nuget sign MyPackage.nupkg -Timestamper https://foo.bar]D;]A;]D;]A;nuget sign .\..\MyPackage.nupkg -Timestamper https://foo.bar -OutputDirectory .\..\Signed]D;]A;]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1639,7 +1639,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Allows HTTP connections for adding or updating packages. Note: This method is not secure. For secure options, see https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Permite conexiones HTTP para agregar o actualizar paquetes. Nota: este método no es seguro. Para opciones seguras, consulte https://aka.ms/nuget-https-everywhere para obtener más información.]]></Val>
+            <Val><![CDATA[Permite conexiones HTTP para agregar o actualizar paquetes. Nota: Este método no es seguro. En referencia a opciones seguras, consulte https://aka.ms/nuget-https-everywhere para obtener más información.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1882,7 +1882,7 @@
         <Str Cat="Text">
           <Val><![CDATA[nuget trusted-signers]D;]A;]D;]A;nuget trusted-signers Add -Name existingSource]D;]A;]D;]A;nuget trusted-signers Add -Name trustedRepo -ServiceIndex https://trustedRepo.test/v3ServiceIndex]D;]A;]D;]A;nuget trusted-signers Add -Name author1 -CertificateFingerprint CE40881FF5F0AD3E58965DA20A9F571EF1651A56933748E1BF1C99E537C4E039 -FingerprintAlgorithm SHA256]D;]A;]D;]A;nuget trusted-signers Add -Repository .\..\MyRepositorySignedPackage.nupkg -Name TrustedRepo]D;]A;]D;]A;nuget trusted-signers Remove -Name TrustedRepo]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[firmantes de confianza de NuGet]D;]A;]D;]A;nuget trusted-signers Add -Name existingSource]D;]A;]D;]A;nuget trusted-signers Add -Name trustedRepo -ServiceIndex https://trustedRepo.test/v3ServiceIndex]D;]A;]D;]A;nuget trusted-signers Add -Name author1 -CertificateFingerprint CE40881FF5F0AD3E58965DA20A9F571EF1651A56933748E1BF1C99E537C4E039 -FingerprintAlgorithm SHA256]D;]A;]D;]A;nuget trusted-signers Add -Repository .\.. \MyRepositorySignedPackage.nupkg -Name TrustedRepo]D;]A;]D;]A;nuget trusted-signers Remove -Name TrustedRepo]]></Val>
+            <Val><![CDATA[nuget trusted-signers]D;]A;]D;]A;nuget trusted-signers Add -Name existingSource]D;]A;]D;]A;nuget trusted-signers Add -Name trustedRepo -ServiceIndex https://trustedRepo.test/v3ServiceIndex]D;]A;]D;]A;nuget trusted-signers Add -Name author1 -CertificateFingerprint CE40881FF5F0AD3E58965DA20A9F571EF1651A56933748E1BF1C99E537C4E039 -FingerprintAlgorithm SHA256]D;]A;]D;]A;nuget trusted-signers Add -Repository .\..\MyRepositorySignedPackage.nupkg -Name TrustedRepo]D;]A;]D;]A;nuget trusted-signers Remove -Name TrustedRepo]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1981,7 +1981,7 @@
         <Str Cat="Text">
           <Val><![CDATA[nuget update]D;]A;    ]D;]A;nuget update -Safe]D;]A;]D;]A;nuget update -Self]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[actualización de nuget]D;]A;    ]D;]A;actualización de nuget -Safe]D;]A;]D;]A;actualización de nuget -Self]]></Val>
+            <Val><![CDATA[nuget update]D;]A;    ]D;]A;nuget update -Safe]D;]A;]D;]A;nuget update -Self]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2044,7 +2044,7 @@
         <Str Cat="Text">
           <Val><![CDATA[nuget verify -Signatures .\..\MyPackage.nupkg -CertificateFingerprint "CE40881FF5F0AD3E58965DA20A9F571EF1651A56933748E1BF1C99E537C4E039;5F874AAF47BCB268A19357364E7FBB09D6BF9E8A93E1229909AC5CAC865802E2" -Verbosity detailed]D;]A;]D;]A;nuget verify -Signatures C:\packages\MyPackage.nupkg -CertificateFingerprint CE40881FF5F0AD3E58965DA20A9F571EF1651A56933748E1BF1C99E537C4E039]D;]A;]D;]A;nuget verify -Signatures MyPackage.nupkg -Verbosity quiet]D;]A;]D;]A;nuget verify -Signatures .\*.nupkg]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[nuget verify -Signatures .\.. \MyPackage.nupkg -CertificateFingerprint "CE40881FF5F0AD3E58965DA20A9F571EF1651A56933748E1BF1C99E537C4E039;5F874AAF47BCB268A19357364E7FBB09D6BF9E8A93E1229909AC5CAC865802E2" -Verbosity detailed]D;]A;]D;]A;nuget verify -Signatures C:\packages\MyPackage.nupkg -CertificateFingerprint CE40881FF5F0AD3E58965DA20A9F571EF1651A56933748E1BF1C99E537C4E039]D;]A;]D;]A;nuget verify -Signatures MyPackage.nupkg -Verbosity quiet]D;]A;]D;]A;nuget verify -Signatures .\*.nupkg]]></Val>
+            <Val><![CDATA[nuget verify -Signatures .\..\MyPackage.nupkg -CertificateFingerprint "CE40881FF5F0AD3E58965DA20A9F571EF1651A56933748E1BF1C99E537C4E039;5F874AAF47BCB268A19357364E7FBB09D6BF9E8A93E1229909AC5CAC865802E2" -Verbosity detailed]D;]A;]D;]A;nuget verify -Signatures C:\packages\MyPackage.nupkg -CertificateFingerprint CE40881FF5F0AD3E58965DA20A9F571EF1651A56933748E1BF1C99E537C4E039]D;]A;]D;]A;nuget verify -Signatures MyPackage.nupkg -Verbosity quiet]D;]A;]D;]A;nuget verify -Signatures .\*.nupkg]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2374,11 +2374,8 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Está ejecutando la operación "{0}" con un origen "HTTP": {1}. NuGet requiere orígenes HTTPS. Para usar un origen HTTP, es necesario establecer explícitamente "allowInsecureConnections" en verdadero en el archivo NuGet.Config. Consulte https://aka.ms/nuget-https-everywhere para obtener más información.]]></Val>
+            <Val><![CDATA[Está ejecutando la operación "{0}" con un origen "HTTP" {1}. NuGet requiere orígenes HTTPS. Para usar un origen HTTP, es necesario establecer explícitamente "allowInsecureConnections" en verdadero en el archivo NuGet.Config. Consulte https://aka.ms/nuget-https-everywhere para obtener más información.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2386,11 +2383,8 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Está ejecutando la operación "{0}" con orígenes "HTTP": {1}. NuGet requiere orígenes HTTPS. Para usar orígenes HTTP, es necesario establecer explícitamente "allowInsecureConnections" en verdadero en el archivo NuGet.Config. Consulte https://aka.ms/nuget-https-everywhere para obtener más información.]]></Val>
+            <Val><![CDATA[Está ejecutando la operación "{0}" con orígenes "HTTP" {1}. NuGet requiere orígenes HTTPS. Para usar orígenes HTTP, es necesario establecer explícitamente "allowInsecureConnections" en verdadero en el archivo NuGet.Config. Consulte https://aka.ms/nuget-https-everywhere para obtener más información.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2515,7 +2509,7 @@
         <Str Cat="Text">
           <Val><![CDATA[`project.json` pack is disabled in the current NuGet version, and will be permanently removed in a future version.]D;]A;Please consider migrating '{0}' to `PackageReference` and using the pack targets.]D;]A;You can set the '{1}' environment variable to 'true' to temporarily reenable this functionality.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[El paquete "project.json" está deshabilitado en la versión actual de NuGet y se quitará permanentemente en una versión futura.]D;]A;Considere la posibilidad de migrar “{0}” a "PackageReference" y usar los destinos del paquete.]D;]A;Puede establecer la variable de entorno “{1}” en "true" para volver a habilitar temporalmente esta funcionalidad.]]></Val>
+            <Val><![CDATA[El paquete "project.json" está deshabilitado en la versión actual de NuGet y se quitará permanentemente en una versión futura.]D;]A;Considere la posibilidad de migrar '{0}' a "PackageReference" y usar los destinos del paquete.]D;]A;Puede establecer la variable de entorno '{1}' en "true" para volver a habilitar temporalmente esta funcionalidad.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3400,7 +3394,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Restoring NuGet packages...]D;]A;To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the NuGet Package Manager node and uncheck '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Restaurando paquetes NuGet...]D;]A;Para evitar que NuGet restaure paquetes durante la compilación, abra el cuadro de diálogo de opciones de Visual Studio, haga clic en el nodo Administrador de paquetes NuGet y desactive la casilla "{0}".]]></Val>
+            <Val><![CDATA[Restaurando paquetes NuGet...]D;]A;Para evitar que NuGet descargue paquetes durante la compilación, abra el cuadro de diálogo de opciones de Visual Studio, haga clic en el nodo Administrador de paquetes NuGet y desactive la casilla '{0}'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3905,7 +3899,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
+      <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -3920,7 +3914,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.exe]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -3935,7 +3929,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.exe]]></Val>
       </Str>
       <Disp Icon="Str" />
