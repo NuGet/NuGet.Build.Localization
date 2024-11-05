@@ -1351,6 +1351,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_UnableToLoadReadme" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[An error occurred while trying to load the README.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Wystąpił błąd podczas próby załadowania pliku README.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";FileConflictAction_IgnoreAll" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Ignore All]]></Val>
@@ -1777,6 +1786,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Label_PackageDetails" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Package Details]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Szczegóły pakietu]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Label_PackageManager" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[NuGet Package Manager: {0}]]></Val>
@@ -1827,6 +1845,15 @@
           <Val><![CDATA[Readme:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Plik readme:]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Label_Readme_Tab" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[README]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[README]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2617,6 +2644,18 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Nie odnaleziono pakietów]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Text_NoReadme" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Could not read package README from selected package.]D;]A;]D;]A;Only the package maintainer can add a README. If you are not the maintainer, please consider filing an issue or contacting the maintainer to request a README.]D;]A;]D;]A;For instructions on how to add a README, please visit [aka.ms/nuget/readme]5D;(https://aka.ms/nuget/readme)]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Nie można odczytać pliku README pakietu z wybranego pakietu.]D;]A;]D;]A;Tylko opiekun pakietu może dodawać plik README. Jeśli nie jesteś opiekunem, rozważ zgłoszenie problemu lub skontaktowanie się z opiekunem w celu zażądania pliku README.]D;]A;]D;]A;Aby uzyskać instrukcje dotyczące sposobu dodawania pliku README, odwiedź witrynę [aka.ms/nuget/readme]5D;(https://aka.ms/nuget/readme)]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Could not read package README from selected package.]D;]A;]D;]A;Only the package maintainer can add a README.]D;]A;]D;]A;If you are not the maintainer, please consider filing an issue or contacting the maintainer to request a README.]D;]A;]D;]A;For instructions on how to add a README, please visit [aka.ms/nuget/readme]5D;(https://aka.ms/nuget/readme)]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -3512,6 +3551,9 @@
     <Item ItemId=";xamls/optionscontrol.baml" ItemType="0" PsrId="223" Leaf="true">
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
     </Item>
+    <Item ItemId=";xamls/packagedetailstabcontrol.baml" ItemType="0" PsrId="223" Leaf="true">
+      <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
+    </Item>
     <Item ItemId=";xamls/packageitemcontrol.baml" ItemType="0" PsrId="223" Leaf="true">
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
     </Item>
@@ -3529,6 +3571,24 @@
     </Item>
     <Item ItemId=";xamls/packagemetadatacontrol.baml" ItemType="0" PsrId="223" Leaf="true">
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
+    </Item>
+    <Item ItemId=";xamls/packagereadmecontrol.baml" ItemType="0" PsrId="223" Leaf="false">
+      <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
+      <Item ItemId=";FlowDirection Modifier" ItemType=";0" PsrId="223" Leaf="false">
+        <Disp Edtr="External" Icon="Dlg" Disp="true" LocTbl="false" />
+        <Item ItemId=";descriptionMarkdownPreview" ItemType=";ContentControl" PsrId="223" Leaf="true">
+          <Str Cat="Dialog Item">
+            <Val><![CDATA[ ]]></Val>
+            <Tgt Cat="Dialog Item" Stat="Loc" Orig="New">
+              <Val><![CDATA[ ]]></Val>
+            </Tgt>
+          </Str>
+          <Bin>
+            <Val><![CDATA[AAA=]]></Val>
+          </Bin>
+          <Disp Icon="Dlg" />
+        </Item>
+      </Item>
     </Item>
     <Item ItemId=";xamls/packagerestorebar.baml" ItemType="0" PsrId="223" Leaf="true">
       <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;Baml Resources \ ;0 \ 0" />
