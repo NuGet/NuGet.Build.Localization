@@ -1665,10 +1665,13 @@
       </Item>
       <Item ItemId=";SignCommandInvalidCertificateFingerprint" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Invalid value for '--certificate-fingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
+          <Val><![CDATA[{0}: Invalid value for '--certificate-fingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Valeur non valide pour l’option « --certificate-fingerprint ». La valeur doit être une empreinte digitale de certificat SHA-256, SHA-384 ou SHA-512 (en hexadécimal).]]></Val>
+            <Val><![CDATA[{0} : Valeur non valide pour l'option '--certificate-fingerprint'. La valeur doit être une empreinte de certificat SHA-256, SHA-384 ou SHA-512 (en hexadécimal).]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Invalid value for '--certificate-fingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
