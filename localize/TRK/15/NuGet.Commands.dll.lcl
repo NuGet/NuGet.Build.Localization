@@ -787,6 +787,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_RestorePruningDirectPackageReference" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[PackageReference {0} will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[PackageReference {0} ayıklandırılacak. Büyük olasılıkla gereksiz olduğundan bu paketi bağımlılıklardan kaldırmayı düşünün.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_RestorePruningProjectReference" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A ProjectReference cannot be pruned, {0}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[ProjectReference ayıklanamıyor, {0}.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_ServiceIndexShouldBeHttps" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The repository service index '{0}' is not a valid HTTPS url.]]></Val>
@@ -1896,6 +1914,15 @@
           <Val><![CDATA[{0} (via {1})]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[({1} üzerinden) {0} ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";RestoreDebugPruningPackageReference" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Pruning the package '{0}' as a dependency of '{1}'. The maximum prunable version is '{2}']]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Paket ayıklanıyor'{0}' bağımlılık olarak ayıklanıyor '{1}'. Ayıklanabilir en yüksek sürüm '{2}']]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
