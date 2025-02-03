@@ -151,12 +151,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";ProjectMigrateErrorMessage" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";ProjectJsonMigrateErrorMessage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Project is not eligible for migration. Either the project is not packages.config based or doesn't support PackageReference yet. Visit https://docs.microsoft.com/en-us/nuget/reference/migrate-packages-config-to-package-reference for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Das Projekt ist für die Migration nicht geeignet. Entweder basiert das Projekt nicht auf "packages.config", oder PackageReference wird noch nicht unterstützt. Besuchen Sie https://docs.microsoft.com/de-de/nuget/reference/migrate-packages-config-to-package-reference, um weitere Informationen zu erhalten.]]></Val>
           </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";ProjectMigrateErrorMessage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Project is not eligible for migration as it's not project.json based.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Das Projekt ist nicht für die Migration qualifiziert, weil es nicht project.json basiert.]]></Val>
+          </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Project is not eligible for migration. Either the project is not packages.config based or doesn't support PackageReference yet. Visit https://docs.microsoft.com/en-us/nuget/reference/migrate-packages-config-to-package-reference for more information.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -356,6 +368,27 @@
             <Val><![CDATA[cmdidUpgradePackagesConfig]]></Val>
             <Tgt Cat="Button" Stat="Loc" Orig="New">
               <Val><![CDATA[cmdidUpgradePackagesConfig]]></Val>
+            </Tgt>
+          </Str>
+          <Disp Icon="Str" Expand="true" />
+        </Item>
+      </Item>
+      <Item ItemId=";{25fd982b-8cae-4cbd-a440-e03ffccde106},1056" ItemType="0" PsrId="240" Leaf="false">
+        <Disp Icon="Menu" Expand="true" Disp="true" LocTbl="false" />
+        <Item ItemId=";{25fd982b-8cae-4cbd-a440-e03ffccde106},1056" ItemType=";Button" PsrId="240" Leaf="true">
+          <Str Cat="Button" IgnoreHK="true">
+            <Val><![CDATA[&Migrate project.json to PackageReference...]]></Val>
+            <Tgt Cat="Button" IgnoreHK="true" Stat="Loc" Orig="New">
+              <Val><![CDATA[&Migrieren von project.json nach PackageReference...]]></Val>
+            </Tgt>
+          </Str>
+          <Disp Icon="Str" Expand="true" />
+        </Item>
+        <Item ItemId=";{25fd982b-8cae-4cbd-a440-e03ffccde106},1056" ItemType=";CommandName" PsrId="240" Leaf="true">
+          <Str Cat="Button">
+            <Val><![CDATA[cmdidUpgradeProjectJsonNuGetProject]]></Val>
+            <Tgt Cat="Button" Stat="Loc" Orig="New">
+              <Val><![CDATA[cmdidUpgradeProjectJsonNuGetProject]]></Val>
             </Tgt>
           </Str>
           <Disp Icon="Str" Expand="true" />
