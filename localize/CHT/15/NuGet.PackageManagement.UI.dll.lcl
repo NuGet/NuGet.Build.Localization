@@ -59,7 +59,7 @@
         <Disp Icon="Dlg" />
       </Item>
       <Item ItemId=";defaultPackageManagementFormatItems.Items" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Combo Box">
+        <Str Cat="Combo Box" UsrLk="true">
           <Val><![CDATA[Packages.config]]></Val>
         </Str>
         <Disp Icon="Dlg" />
@@ -137,7 +137,7 @@
         <Str Cat="Check Box">
           <Val><![CDATA[Prompt for &format selection on first package install]]></Val>
           <Tgt Cat="Check Box" Stat="Loc" Orig="New">
-            <Val><![CDATA[在安裝第一個套件時選取格式的提示(&F)]]></Val>
+            <Val><![CDATA[在安裝第一個套件時提示選擇格式(&F)]]></Val>
           </Tgt>
           <Prev Cat="Check Box">
             <Val><![CDATA[Allow &format selection on first package install]]></Val>
@@ -194,7 +194,7 @@
         <Disp Icon="Dlg" />
       </Item>
       <Item ItemId=";BrowseButton.Text" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Button">
+        <Str Cat="Button" UsrLk="true">
           <Val><![CDATA[...]]></Val>
         </Str>
         <Bin BinId="1">
@@ -626,7 +626,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package manager]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[套件管理員]]></Val>
+            <Val><![CDATA[套件管理器]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -653,7 +653,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Packages]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Package]]></Val>
+            <Val><![CDATA[套件]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -755,7 +755,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Argument cannot be null or empty.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[引數不能為 Null 或空白。]]></Val>
+            <Val><![CDATA[引數不得為 Null 或空白。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1319,7 +1319,7 @@
         <Str Cat="Text">
           <Val><![CDATA[NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[NuGet 需要 HTTPS 來源。若要使用 HTTP 來源，您必須在 NuGet.Config 檔案中將 'allowInsecureConnections' 明確設定為 [true]5D;。]]></Val>
+            <Val><![CDATA[NuGet 需要 HTTPS 來源。若要使用 HTTP 來源，您必須在 NuGet.Config 檔案中將 'allowInsecureConnections' 明確設定為 true。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1348,9 +1348,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[套件 '{0}' 可在全域套件資料夾中使用，但其來源 '{1}' 不是此解決方案的設定來源之一。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[The package `{0}` is available in the Global packages folder, but the source it came from `{1}` is not one of this solution's configured sources.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -1682,7 +1679,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Versions: {0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[版本：{0}]]></Val>
+            <Val><![CDATA[版本: {0}]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Versions - {0}]]></Val>
@@ -1748,7 +1745,7 @@
         <Str Cat="Text">
           <Val><![CDATA[An error occurred while fetching additional information about the package. Refresh to try again.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[擷取封裝的其他資訊時發生錯誤。重新整理以再試一次。]]></Val>
+            <Val><![CDATA[擷取套件的其他資訊時發生錯誤。重新整理以再試一次。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2054,7 +2051,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Common NuGet configurations; How settings are applied.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[一般 NuGet 設定: 如何套用設定。]]></Val>
+            <Val><![CDATA[一般 NuGet 設定; 如何套用設定。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2222,7 +2219,7 @@
         <Str Cat="Text">
           <Val><![CDATA[{0} by {1}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0}，由 {1} 修改]]></Val>
+            <Val><![CDATA[{0} 來自於 {1}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2321,7 +2318,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Can not access NuGet.Config, Please check NuGet.Config]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[無法存取 NuGet.Config，請檢查 NuGet.Config]]></Val>
+            <Val><![CDATA[無法存取 NuGet.Config。請檢查 NuGet.Config]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2396,7 +2393,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The name and source specified cannot be empty. Please provide a valid name and source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定的名稱與來源不可為空白。請提供有效的名稱與來源。]]></Val>
+            <Val><![CDATA[指定的名稱與來源不得為空白。請提供有效的名稱與來源。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2405,7 +2402,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The name specified cannot be empty. Please provide a valid name.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定的名稱不可為空白。請提供有效的名稱。]]></Val>
+            <Val><![CDATA[指定的名稱不得為空白。請提供有效的名稱。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2414,7 +2411,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The source specified cannot be empty. Please provide a valid source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定的來源不可為空白。請提供有效的來源。]]></Val>
+            <Val><![CDATA[指定的來源不得為空白。請提供有效的來源。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2432,7 +2429,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The name specified has already been added to the list of available package sources. Please provide a unique name.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定的名稱已加入至可用套件來源清單中。請提供唯一名稱。]]></Val>
+            <Val><![CDATA[已將指定的名稱新增到可用套件來源清單。請提供唯一的名稱。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2441,7 +2438,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The source specified has already been added to the list of available package sources. Please provide a unique source.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[指定的來源已加入至可用套件來源清單中。請提供唯一來源。]]></Val>
+            <Val><![CDATA[已將指定的來源新增到可用套件來源清單。請提供唯一的來源。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2459,7 +2456,7 @@
         <Str Cat="Text">
           <Val><![CDATA[An error occurred while loading packages]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[載入套件時發生錯誤]]></Val>
+            <Val><![CDATA[載入套件期間發生錯誤]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2591,7 +2588,7 @@
         <Str Cat="Text">
           <Val><![CDATA[The following package(s) require that you accept their license terms before installing.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[下列封裝需要您在安裝之前接受其授權條款。]]></Val>
+            <Val><![CDATA[下列套件需要您在安裝之前接受其授權條款。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2600,7 +2597,7 @@
         <Str Cat="Text">
           <Val><![CDATA[By clicking "I Accept," you agree to the license terms for the package(s) listed above. If you do not agree to the license terms, click "I Decline."]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[按一下 [我接受]5D;，表示您同意上面所列封裝的授權條款。如果您不同意授權條款，請按一下 [我拒絕]5D;。]]></Val>
+            <Val><![CDATA[按一下 [我接受]5D;，表示您同意上面所列套件的授權條款。如果您不同意授權條款，請按一下 [我拒絕]5D;。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2665,9 +2662,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[選取的套件版本沒有可用的自述檔。如需詳細資訊，請流覽 [aka.ms/nuget/noreadme]5D;(https://aka.ms/nuget/noreadme).]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[Could not read package README from selected package.]D;]A;]D;]A;Only the package maintainer can add a README. If you are not the maintainer, please consider filing an issue or contacting the maintainer to request a README.]D;]A;]D;]A;For instructions on how to add a README, please visit [aka.ms/nuget/readme]5D;(https://aka.ms/nuget/readme)]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2759,7 +2753,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Package source mapping is off.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[關閉套件來源對應。]]></Val>
+            <Val><![CDATA[套件來源對應已關閉。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3359,7 +3353,7 @@
         <Str Cat="Text">
           <Val><![CDATA[You are attempting to add an HTTP source, which is insecure. Would you like to proceed with adding this insecure HTTP source?]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[您正在嘗試新增不安全的 HTTP 來源。您是否要繼續新增此不安全的 HTTP 來源?]]></Val>
+            <Val><![CDATA[您正在嘗試新增不安全的 HTTP 來源。您要繼續新增此不安全的 HTTP 來源嗎?]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3497,13 +3491,13 @@
         <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
       </Item>
       <Item ItemId=";AddMappingDialogWindow" ItemType=";FrameworkElement.Height" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true">
+        <Str Cat="Unknown" DevLk="true" UsrLk="true">
           <Val><![CDATA[348]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/addmappingdialog.baml \ 0 \ 0 \ ;Height \ ;0 \ 0" />
       </Item>
       <Item ItemId=";AddMappingDialogWindow" ItemType=";FrameworkElement.Width" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true">
+        <Str Cat="Unknown" DevLk="true" UsrLk="true">
           <Val><![CDATA[480]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/addmappingdialog.baml \ 0 \ 0 \ ;Width \ ;0 \ 0" />
@@ -3518,7 +3512,7 @@
         <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
       </Item>
       <Item ItemId=";ListItemStackPanel" ItemType=";FrameworkElement.Margin" PsrId="223" Leaf="true">
-        <Str Cat="Unknown" DevLk="true">
+        <Str Cat="Unknown" DevLk="true" UsrLk="true">
           <Val><![CDATA[0,3,0,3]]></Val>
         </Str>
         <Disp Icon="Str" Path=" \ ;NuGet.PackageManagement.UI.g.resources \ 0 \ 0 \ ;options/packagesourcemappingoptionscontrol.baml \ 0 \ 0 \ ;Margin \ ;0 \ 0" />
