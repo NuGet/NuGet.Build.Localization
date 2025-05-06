@@ -121,6 +121,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_HttpServerUsage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source, '{1}'. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[您正在使用 'HTTP' 來源 '{1}' 執行 '{0}' 作業。NuGet 需要 HTTPS 來源。您必須在 NuGet.Config 檔案中將 'allowInsecureConnections' 明確設定為 true，才能使用 HTTP 來源。參閱 https://aka.ms/nuget-https-everywhere 以取得更多資訊。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Http_CredentialsForForbidden" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The server responded with HTTP '403 Forbidden' when accessing the source '{0}'. This suggests that the server has authenticated your identity but has not permitted you to access the requested resource. Provide credentials that have permissions to view this resource.]]></Val>
@@ -991,18 +1000,6 @@
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[套件來源 '{0}' 具有 {1} 個弱點資料頁面。請使用第一個 {2}。]]></Val>
           </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_HttpServerUsage" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source, '{1}'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[您正在使用 'HTTP' 來源 '{1}' 執行 '{0}' 作業。未來的版本將移除非 HTTPS 存取。請考慮移轉至 'HTTPS' 來源。]]></Val>
-          </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

@@ -526,6 +526,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_HttpServerUsage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source, '{1}'. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' işlemini bir '{1}' 'HTTP' kaynağı ile çalıştırıyorsunuz. NuGet için HTTPS kaynakları gereklidir. HTTP kaynaklarını kullanmak için NuGet.Config dosyanızda 'allowInsecureConnections' ayarını açıkça “true” olarak ayarlamanız gerekir. Daha fazla bilgi için şuraya başvurun: https://aka.ms/nuget-https-everywhere.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_HttpServerUsage_MultipleSources" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}]D;]A;NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA['{0}' işlemini {1}]D; 'HTTP' kaynakları ile çalıştırıyorsunuz.]A;NuGet için HTTPS kaynakları gereklidir. HTTP kaynaklarını kullanmak için NuGet.Config dosyanızda 'allowInsecureConnections' ayarını açıkça “true” olarak ayarlamanız gerekir. Daha fazla bilgi için şuraya başvurun: https://aka.ms/nuget-https-everywhere.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_InvalidCultureInfo" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Invalid culture identifier in {0} environment variable. Value read is '{1}']]></Val>
@@ -2130,24 +2148,6 @@
           <Val><![CDATA[Audit source '{0}' did not provide any vulnerability data.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA['{0}' güvenlik kaynağı hassasiyet verisi sağlamadı.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_HttpServerUsage" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source, '{1}'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' işlemini '{1}' 'HTTP' kaynağı ile birlikte çalıştırıyorsunuz. HTTPS dışı erişim gelecek sürümlerde kaldırılacak. Bir 'HTTPS' kaynağına geçirmeyi deneyin.]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_HttpServerUsage_MultipleSources" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}]D;]A;Non-HTTPS access will be removed in a future version. Consider migrating to 'HTTPS' sources.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['{0}' işlemini {1} 'HTTP' kaynakları ile çalıştırıyorsunuz]D;]A;Gelecek sürümde HTTPS dışı erişim kaldırılacak. 'HTTPS' kaynaklarına geçirmeyi göz önünde bulundurun.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
