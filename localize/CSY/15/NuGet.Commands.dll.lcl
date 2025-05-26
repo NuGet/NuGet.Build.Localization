@@ -175,47 +175,47 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_AutoreferencedReferencesNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_FloatingVersionsNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The packages {0} are implicitly referenced. You do not typically need to reference them from your project or in your central package versions management file. For more information, see https://aka.ms/sdkimplicitrefs]]></Val>
+          <Val><![CDATA[The following PackageVersion items cannot specify a floating version: {0}. For more information on how to enable this functionality for projects using Central Package Management, visit https://aka.ms/nu1011]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Na balíčky {0} se odkazuje implicitně. Obvykle na ně nemusíte odkazovat ze svého projektu nebo ze souboru centrální správy verzí balíčků. Další informace najdete na https://aka.ms/sdkimplicitrefs.]]></Val>
+            <Val><![CDATA[Následující položky PackageVersion nemohou určovat plovoucí verzi: {0}. Další informace o povolení této funkce pro projekty využívající CPM (Central Package Management) najdete na https://aka.ms/nu1011]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_FloatingVersionsAreNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_ImplicitPackageReferenceWithVersionNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Centrally defined floating package versions are not allowed.]]></Val>
+          <Val><![CDATA[The following PackageReference items are implicitly defined and cannot define a PackageVersion item: {0}. Projects using Central Package Management require that implicit package versions be specified by the PackageReference item. For more information, visit https://aka.ms/sdkimplicitrefs]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Centrálně definované verze plovoucích balíčků nejsou povolené.]]></Val>
+            <Val><![CDATA[Následující položky PackageReference jsou implicitně definovány a nemohou definovat položku PackageVersion: {0}. Projekty využívající CPM (Central Package Management) vyžadují, aby položka PackageReference určovala implicitní verze balíčku. Další informace najdete na https://aka.ms/sdkimplicitrefs]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_MissingPackageVersion" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_MissingPackageVersion" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The PackageReference items {0} do not have corresponding PackageVersion.]]></Val>
+          <Val><![CDATA[The following PackageReference items do not define a corresponding PackageVersion item: {0}. Projects using Central Package Management must declare PackageReference and PackageVersion items with matching names. For more information, visit https://aka.ms/nuget/cpm/gettingstarted]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Položky PackageReference {0} nemají odpovídající PackageVersion.]]></Val>
+            <Val><![CDATA[Následující položky PackageReference nedefinují odpovídající položku PackageVersion: {0}. Projekty využívající CPM (Central Package Management) musí deklarovat položky PackageReference a PackageVersion s odpovídajícími názvy. Další informace najdete na https://aka.ms/nuget/cpm/gettingstarted]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_VersionOverrideDisabled" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_PackageReferenceWithVersionNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package reference {0} specifies a VersionOverride but the ability to override a centrally defined version is currently disabled.]]></Val>
+          <Val><![CDATA[The following PackageReference items cannot define a value for Version: {0}. Projects using Central Package Management must define a Version value on a PackageVersion item. For more information, visit https://aka.ms/nuget/cpm/gettingstarted]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Odkaz na balíček {0} určuje VersionOverride, ale možnost přepsat centrálně definovanou verzi je aktuálně zakázaná.]]></Val>
+            <Val><![CDATA[Následující položky PackageReference nemohou definovat hodnotu parametru Version: {0}. Projekty využívající CPM (Central Package Management) musí definovat hodnotu parametru Version pro položku PackageVersion. Další informace najdete na https://aka.ms/nuget/cpm/gettingstarted]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_VersionsNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_VersionOverrideNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: {0}.]]></Val>
+          <Val><![CDATA[The following PackageReference items cannot specify a value for VersionOverride: {0}.  Projects using Central Package Management are currently configured to disable this functionality. For more information, visit https://aka.ms/nuget/cpm/versionoverride]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Projekty, které používají centrální správu verzí balíčků, by neměly definovat verzi pomocí položek PackageReference, ale pomocí položek PackageVersion: {0}.]]></Val>
+            <Val><![CDATA[Následující položky PackageReference nemohou určovat hodnotu parametru VersionOverride: {0}.  Projekty využívající CPM (Central Package Management) jsou aktuálně nakonfigurovány tak, aby tuto funkci zakazovaly. Další informace najdete na https://aka.ms/nuget/cpm/versionoverride]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2569,15 +2569,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Warning_CentralPackageVersions_MultipleSourcesWithoutPackageSourceMapping" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Warning_CentralPackageManagement_MultipleSourcesWithoutPackageSourceMapping" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[There are {0} package sources defined in your configuration. When using central package management, please map your package sources with package source mapping (https://aka.ms/nuget-package-source-mapping) or specify a single package source. The following sources are defined: {1}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Ve vaší konfiguraci jsou definovány {0} zdroje balíčků. Při použití centrální správy balíčků prosím namapujte zdroje balíčků pomocí mapování zdrojů balíčků (https://aka.ms/nuget-package-source-mapping) nebo zadejte jeden zdroj balíčku. Jsou definovány následující zdroje: {1}]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[There are {0} package sources defined in your configuration. When using central package management, please map your package sources with package source mapping (https://aka.ms/nuget-package-source-mapping) or specify a single package source.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2608,15 +2605,6 @@
           <Prev Cat="Text">
             <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
           </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_HttpServerUsage_MultipleSources" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}]D;]A;Non-HTTPS access will be removed in a future version. Consider migrating to 'HTTPS' sources.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Spouštíte operaci {0} se zdroji HTTP: {1}]D;]A;V budoucí verzi bude odebrána možnost přístupu bez zabezpečení HTTPS. Zvažte migraci na zdroje HTTPS.]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>

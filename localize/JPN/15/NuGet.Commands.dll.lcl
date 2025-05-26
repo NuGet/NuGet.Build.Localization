@@ -175,47 +175,47 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_AutoreferencedReferencesNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_FloatingVersionsNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The packages {0} are implicitly referenced. You do not typically need to reference them from your project or in your central package versions management file. For more information, see https://aka.ms/sdkimplicitrefs]]></Val>
+          <Val><![CDATA[The following PackageVersion items cannot specify a floating version: {0}. For more information on how to enable this functionality for projects using Central Package Management, visit https://aka.ms/nu1011]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[パッケージ {0} は、暗黙的に参照されています。通常、プロジェクトや中央パッケージ バージョン管理ファイルから参照する必要はありません。詳細については、https://aka.ms/sdkimplicitrefs を参照してください。]]></Val>
+            <Val><![CDATA[次の PackageVersion 項目では、フローティング バージョンを指定できません: {0}。Central Package Management を使用するプロジェクトに対してこの機能を有効化する方法については、https://aka.ms/nu1011 を参照してください]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_FloatingVersionsAreNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_ImplicitPackageReferenceWithVersionNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Centrally defined floating package versions are not allowed.]]></Val>
+          <Val><![CDATA[The following PackageReference items are implicitly defined and cannot define a PackageVersion item: {0}. Projects using Central Package Management require that implicit package versions be specified by the PackageReference item. For more information, visit https://aka.ms/sdkimplicitrefs]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[一元定義の浮動パッケージ バージョンは許可されていません。]]></Val>
+            <Val><![CDATA[次の PackageReference 項目は暗黙的に定義されており、PackageVersion 項目を定義することはできません: {0}。Central Package Management を使用するプロジェクトでは、暗黙的なパッケージ バージョンは PackageReference 項目によって指定されている必要があります。詳細情報については、https://aka.ms/sdkimplicitrefs にアクセスしてください]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_MissingPackageVersion" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_MissingPackageVersion" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The PackageReference items {0} do not have corresponding PackageVersion.]]></Val>
+          <Val><![CDATA[The following PackageReference items do not define a corresponding PackageVersion item: {0}. Projects using Central Package Management must declare PackageReference and PackageVersion items with matching names. For more information, visit https://aka.ms/nuget/cpm/gettingstarted]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[PackageReference 項目 {0} には、対応する PackageVersion がありません。]]></Val>
+            <Val><![CDATA[次の PackageReference 項目では、対応する PackageVersion 項目を定義していません: {0}。Central Package Management を使用するプロジェクトでは、PackageReference 項目と PackageVersion 項目を、名前が一致するように宣言する必要があります。詳細情報については、https://aka.ms/nuget/cpm/gettingstarted を参照してください]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_VersionOverrideDisabled" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_PackageReferenceWithVersionNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package reference {0} specifies a VersionOverride but the ability to override a centrally defined version is currently disabled.]]></Val>
+          <Val><![CDATA[The following PackageReference items cannot define a value for Version: {0}. Projects using Central Package Management must define a Version value on a PackageVersion item. For more information, visit https://aka.ms/nuget/cpm/gettingstarted]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[パッケージ参照 {0} は VersionOverride を指定していますが、一元的に定義されたバージョンをオーバーライドする機能は現在無効になっています。]]></Val>
+            <Val><![CDATA[次の PackageReference 項目では、Version の値を定義できません: {0}。Central Package Management を使用するプロジェクトでは、PackageVersion 項目で Version 値を定義する必要があります。詳細情報については、https://aka.ms/nuget/cpm/gettingstarted を参照してください]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_VersionsNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_VersionOverrideNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: {0}.]]></Val>
+          <Val><![CDATA[The following PackageReference items cannot specify a value for VersionOverride: {0}.  Projects using Central Package Management are currently configured to disable this functionality. For more information, visit https://aka.ms/nuget/cpm/versionoverride]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[中央のパッケージ バージョン管理を使用するプロジェクトでは、PackageReference アイテムではなく、PackageVersion アイテムでバージョンを定義する必要があります: {0}。]]></Val>
+            <Val><![CDATA[次の PackageReference 項目では、VersionOverride の値を指定できません: {0}。 現在、Central Package Management を使用するプロジェクトは、この機能を無効にするように構成されています。詳細については、https://aka.ms/nuget/cpm/versionoverride を参照してください]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2566,15 +2566,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Warning_CentralPackageVersions_MultipleSourcesWithoutPackageSourceMapping" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Warning_CentralPackageManagement_MultipleSourcesWithoutPackageSourceMapping" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[There are {0} package sources defined in your configuration. When using central package management, please map your package sources with package source mapping (https://aka.ms/nuget-package-source-mapping) or specify a single package source. The following sources are defined: {1}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[お客様の構成には {0} 個のパッケージ ソースが定義されています。中央パッケージ管理を使用する場合は、パッケージ ソース マッピング (https://aka.ms/nuget-package-source-mapping) を使用してパッケージ ソースをマップするか、単一のパッケージ ソースを指定してください: {1}]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[There are {0} package sources defined in your configuration. When using central package management, please map your package sources with package source mapping (https://aka.ms/nuget-package-source-mapping) or specify a single package source.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2605,15 +2602,6 @@
           <Prev Cat="Text">
             <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
           </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_HttpServerUsage_MultipleSources" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}]D;]A;Non-HTTPS access will be removed in a future version. Consider migrating to 'HTTPS' sources.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[「HTTP」ソース: {1}]D;]A; で「{0}」操作を実行しています。HTTPS 以外のアクセスは、今後のバージョンからは削除される予定です。「HTTPS」ソースへの移行をご検討ください。]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
