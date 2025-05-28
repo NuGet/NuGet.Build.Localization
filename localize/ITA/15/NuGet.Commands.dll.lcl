@@ -175,47 +175,47 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_AutoreferencedReferencesNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_FloatingVersionsNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The packages {0} are implicitly referenced. You do not typically need to reference them from your project or in your central package versions management file. For more information, see https://aka.ms/sdkimplicitrefs]]></Val>
+          <Val><![CDATA[The following PackageVersion items cannot specify a floating version: {0}. For more information on how to enable this functionality for projects using Central Package Management, visit https://aka.ms/nu1011]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ai pacchetti {0} viene fatto riferimento in modo implicito. In genere non è necessario farvi riferimento dal progetto o dal file di gestione centralizzata delle versioni del pacchetto. Per altre informazioni, vedere https://aka.ms/sdkimplicitrefs]]></Val>
+            <Val><![CDATA[I seguenti elementi PackageVersion non possono specificare una versione mobile: {0}. Per altre informazioni su come abilitare questa funzionalità per i progetti che usano la Gestione pacchetti centrale, visita https://aka.ms/nu1011]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_FloatingVersionsAreNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_ImplicitPackageReferenceWithVersionNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Centrally defined floating package versions are not allowed.]]></Val>
+          <Val><![CDATA[The following PackageReference items are implicitly defined and cannot define a PackageVersion item: {0}. Projects using Central Package Management require that implicit package versions be specified by the PackageReference item. For more information, visit https://aka.ms/sdkimplicitrefs]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le versioni di pacchetto mobili definite centralmente non sono consentite.]]></Val>
+            <Val><![CDATA[Gli elementi PackageReference seguenti sono definiti in modo implicito e non possono definire un elemento PackageVersion: {0}. I progetti che usano la Gestione pacchetti centrale richiedono che le versioni implicite del pacchetto siano specificate dall'elemento PackageReference. Per altre informazioni, visita https://aka.ms/sdkimplicitrefs]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_MissingPackageVersion" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_MissingPackageVersion" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The PackageReference items {0} do not have corresponding PackageVersion.]]></Val>
+          <Val><![CDATA[The following PackageReference items do not define a corresponding PackageVersion item: {0}. Projects using Central Package Management must declare PackageReference and PackageVersion items with matching names. For more information, visit https://aka.ms/nuget/cpm/gettingstarted]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Non esiste alcun elemento PackageVersion per gli elementi PackageReference {0}.]]></Val>
+            <Val><![CDATA[Gli elementi PackageReference seguenti non definiscono un elemento PackageVersion corrispondente: {0}. I progetti che usano la Gestione pacchetti centrale devono dichiarare elementi PackageReference e PackageVersion con nomi corrispondenti. Per altre informazioni, visita https://aka.ms/nuget/cpm/gettingstarted]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_VersionOverrideDisabled" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_PackageReferenceWithVersionNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package reference {0} specifies a VersionOverride but the ability to override a centrally defined version is currently disabled.]]></Val>
+          <Val><![CDATA[The following PackageReference items cannot define a value for Version: {0}. Projects using Central Package Management must define a Version value on a PackageVersion item. For more information, visit https://aka.ms/nuget/cpm/gettingstarted]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Il riferimento al pacchetto {0} specifica un VersionOverride, ma la possibilità di eseguire l'override di una versione definita a livello centrale è attualmente disabilitata.]]></Val>
+            <Val><![CDATA[I seguenti elementi PackageReference non possono definire un valore per Version: {0}. I progetti che utilizzano la Gestione pacchetti centrale devono definire un valore Version in un elemento PackageVersion. Per altre informazioni, visita https://aka.ms/nuget/cpm/gettingstarted]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_VersionsNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_VersionOverrideNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: {0}.]]></Val>
+          <Val><![CDATA[The following PackageReference items cannot specify a value for VersionOverride: {0}.  Projects using Central Package Management are currently configured to disable this functionality. For more information, visit https://aka.ms/nuget/cpm/versionoverride]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[I progetti che usano la gestione centralizzata delle versioni del pacchetto non devono definire la versione negli elementi PackageReference ma in quelli PackageVersion: {0}.]]></Val>
+            <Val><![CDATA[Gli elementi PackageReference seguenti non possono specificare un valore per VersionOverride: {0}.  I progetti che usano la Gestione pacchetti centrale attualmente sono configurati per disabilitare questa funzionalità. Per altre informazioni, visita https://aka.ms/nuget/cpm/versionoverride]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2569,15 +2569,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Warning_CentralPackageVersions_MultipleSourcesWithoutPackageSourceMapping" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Warning_CentralPackageManagement_MultipleSourcesWithoutPackageSourceMapping" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[There are {0} package sources defined in your configuration. When using central package management, please map your package sources with package source mapping (https://aka.ms/nuget-package-source-mapping) or specify a single package source. The following sources are defined: {1}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Nella configurazione sono presenti {0} origini pacchetti definite. Quando si usa la gestione centralizzata dei pacchetti, eseguire il mapping delle origini pacchetti con il mapping dell'origine pacchetto (https://aka.ms/nuget-package-source-mapping) o specificare una singola origine pacchetto. Sono definite le origini seguenti: {1}]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[There are {0} package sources defined in your configuration. When using central package management, please map your package sources with package source mapping (https://aka.ms/nuget-package-source-mapping) or specify a single package source.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2608,15 +2605,6 @@
           <Prev Cat="Text">
             <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
           </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_HttpServerUsage_MultipleSources" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}]D;]A;Non-HTTPS access will be removed in a future version. Consider migrating to 'HTTPS' sources.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Si sta eseguendo l'operazione '{0}' con origini 'HTTP': {1}]D;]A;l'accesso non HTTPS verrà rimosso nella versione futura. Valutare la possibilità di a eseguire la migrazione a origini 'HTTPS'.]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>

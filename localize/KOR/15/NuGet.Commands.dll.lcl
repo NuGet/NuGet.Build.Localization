@@ -175,47 +175,47 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_AutoreferencedReferencesNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_FloatingVersionsNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The packages {0} are implicitly referenced. You do not typically need to reference them from your project or in your central package versions management file. For more information, see https://aka.ms/sdkimplicitrefs]]></Val>
+          <Val><![CDATA[The following PackageVersion items cannot specify a floating version: {0}. For more information on how to enable this functionality for projects using Central Package Management, visit https://aka.ms/nu1011]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} 패키지는 암시적으로 참조됩니다. 일반적으로 프로젝트나 중앙 패키지 버전 관리 파일에서 해당 패키지를 참조할 필요가 없습니다. 자세한 내용은 https://aka.ms/sdkimplicitrefs를 참조하세요.]]></Val>
+            <Val><![CDATA[다음 PackageVersion 항목은 부동 버전을 지정할 수 없습니다. {0}. 중앙 패키지 관리를 사용하는 프로젝트에 이 기능을 사용하도록 설정하는 방법에 대한 자세한 내용은 https://aka.ms/nu1011을 방문하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_FloatingVersionsAreNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_ImplicitPackageReferenceWithVersionNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Centrally defined floating package versions are not allowed.]]></Val>
+          <Val><![CDATA[The following PackageReference items are implicitly defined and cannot define a PackageVersion item: {0}. Projects using Central Package Management require that implicit package versions be specified by the PackageReference item. For more information, visit https://aka.ms/sdkimplicitrefs]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[중앙에서 정의된 부동 패키지 버전은 허용되지 않습니다.]]></Val>
+            <Val><![CDATA[다음 PackageReference 항목은 암시적으로 정의되며 PackageVersion 항목을 정의할 수 없습니다. {0}. 중앙 패키지 관리를 사용하는 프로젝트는 PackageReference 항목에서 암시적 패키지 버전을 지정해야 합니다. 자세한 내용은 https://aka.ms/sdkimplicitrefs를 방문하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_MissingPackageVersion" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_MissingPackageVersion" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The PackageReference items {0} do not have corresponding PackageVersion.]]></Val>
+          <Val><![CDATA[The following PackageReference items do not define a corresponding PackageVersion item: {0}. Projects using Central Package Management must declare PackageReference and PackageVersion items with matching names. For more information, visit https://aka.ms/nuget/cpm/gettingstarted]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[PackageReference 항목 {0}에 해당하는 PackageVersion이 없습니다.]]></Val>
+            <Val><![CDATA[다음 PackageReference 항목은 해당 PackageVersion 항목을 정의하지 않습니다. {0}. 중앙 패키지 관리를 사용하는 프로젝트는 이름이 일치하는 PackageReference 및 PackageVersion 항목을 선언해야 합니다. 자세한 내용은 https://aka.ms/nuget/cpm/gettingstarted를 방문하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_VersionOverrideDisabled" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_PackageReferenceWithVersionNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The package reference {0} specifies a VersionOverride but the ability to override a centrally defined version is currently disabled.]]></Val>
+          <Val><![CDATA[The following PackageReference items cannot define a value for Version: {0}. Projects using Central Package Management must define a Version value on a PackageVersion item. For more information, visit https://aka.ms/nuget/cpm/gettingstarted]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0} 패키지 참조에서 VersionOverride를 지정하지만 현재 중앙에서 정의된 버전을 재정의하는 기능을 사용할 수 없습니다.]]></Val>
+            <Val><![CDATA[다음 PackageReference 항목은 버전에 대한 값을 정의할 수 없습니다. {0}. 중앙 패키지 관리를 사용하는 프로젝트는 PackageVersion 항목에 버전 값을 정의해야 합니다. 자세한 내용은 https://aka.ms/nuget/cpm/gettingstarted를 방문하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Error_CentralPackageVersions_VersionsNotAllowed" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Error_CentralPackageManagement_VersionOverrideNotAllowed" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: {0}.]]></Val>
+          <Val><![CDATA[The following PackageReference items cannot specify a value for VersionOverride: {0}.  Projects using Central Package Management are currently configured to disable this functionality. For more information, visit https://aka.ms/nuget/cpm/versionoverride]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[중앙 패키지 버전 관리를 사용하는 프로젝트에서는 PackageReference 항목에 대한 버전이 아니라 PackageVersion 항목 {0}에 대한 버전을 정의해야 합니다.]]></Val>
+            <Val><![CDATA[다음 PackageReference 항목은 VersionOverride의 값을 지정할 수 없습니다. {0}.  중앙 패키지 관리를 사용하는 프로젝트는 현재 이 기능을 사용하지 않도록 구성되어 있습니다. 자세한 내용은 https://aka.ms/nuget/cpm/versionoverride를 방문하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2566,15 +2566,12 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";Warning_CentralPackageVersions_MultipleSourcesWithoutPackageSourceMapping" ItemType="0" PsrId="211" Leaf="true">
+      <Item ItemId=";Warning_CentralPackageManagement_MultipleSourcesWithoutPackageSourceMapping" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[There are {0} package sources defined in your configuration. When using central package management, please map your package sources with package source mapping (https://aka.ms/nuget-package-source-mapping) or specify a single package source. The following sources are defined: {1}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[구성에 정의된 {0} 패키지 원본이 있습니다. 중앙 패키지 관리를 사용하는 경우 패키지 원본을 패키지 원본 매핑(https://aka.ms/nuget-package-source-mapping)으로 매핑하거나 단일 패키지 원본을 지정하세요. 다음 원본이 정의됩니다. {1}]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[There are {0} package sources defined in your configuration. When using central package management, please map your package sources with package source mapping (https://aka.ms/nuget-package-source-mapping) or specify a single package source.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2605,15 +2602,6 @@
           <Prev Cat="Text">
             <Val><![CDATA[You are running the '{0}' operation with an 'http' source, '{1}'. Support for 'http' sources will be removed in a future version.]]></Val>
           </Prev>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";Warning_HttpServerUsage_MultipleSources" ItemType="0" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}]D;]A;Non-HTTPS access will be removed in a future version. Consider migrating to 'HTTPS' sources.]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{0}{1}]D; 'HTTP' 원본을 사용하여 ']A;' 작업을 실행하고 있습니다. 비 HTTPS 액세스는 이후 버전에서 제거됩니다. 'HTTPS' 원본으로 마이그레이션하는 것이 좋습니다.]]></Val>
-          </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
