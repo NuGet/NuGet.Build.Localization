@@ -526,6 +526,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_CouldNotFindPackageVersionForCpmPackage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Central Package Management configuration error: Could not find PackageVersion for package {0}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Erro Gerenciamento de Pacotes configuração central: não foi possível localizar PackageVersion para o pacote {0}]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Error_HttpServerUsage" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source, '{1}'. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
@@ -630,6 +639,15 @@
           <Val><![CDATA[The project `{0}` uses package.config for NuGet packages, while the command works only with package reference projects.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[O projeto '{0}' usa package.config para pacotes do NuGet, enquanto o comando funciona somente com projetos de referência do pacote.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Error_PackageNotReferenced" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package {0} is not referenced by project {1}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O pacote {0} não é referenciado pelo projeto {1}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1477,6 +1495,33 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";PackageUpdateCommand_Description" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update referenced packages in a project or solution.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Atualize os pacotes referenciados em um projeto ou solução.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackageUpdateCommand_ProjectOptionDescription" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Path to a project or solution file, or a directory.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Caminho para um projeto ou arquivo de solução ou um diretório.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";PackageUpdate_PreviewRestoreFailed" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Preview restore with updated packages was not successful. Force mode is not yet available.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[A restauração de visualização com pacotes atualizados não foi bem-sucedida. O modo de força ainda não está disponível.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";PrereleaseVersionsAvailable" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[There are no stable versions available, {0} is the best available. Consider adding the --prerelease option]]></Val>
@@ -2062,6 +2107,51 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Unsupported_MoreThanOnePackage" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unsupported: Updating more than one package is not yet supported]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Sem suporte: ainda não há suporte para a atualização de mais de um pacote]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Unsupported_PackageSourceMapping" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unsupported: Projects using Package Source Mapping are not yet supported]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Sem suporte: ainda não há suporte para projetos que usam o Mapeamento de Origem do Pacote]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Unsupported_UpdatePackageWithDifferentPerTfmVersions" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package {0} references different versions of the package for different target frameworks. This is not supported by this command. Please edit the project file directly. ({1})]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O pacote {0} faz referência a diferentes versões do pacote para diferentes estruturas de destino. Este comando não dá suporte a isso. Edite o arquivo de projeto diretamente. ({1})]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Unsupported_UpdatingMoreThanOneProject" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unsupported: Updating more than one project is not yet supported]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Sem suporte: ainda não há suporte para a atualização de mais de um projeto]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Unsupported_UpgradeAllPackages" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unsupported: Upgrading all packages in a project is not yet supported]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Sem suporte: ainda não há suporte para a atualização de todos os pacotes em um projeto]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";UpdateClientCertCommandDescription" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Updates the client certificate configuration that matches the given package source name.]]></Val>
@@ -2139,6 +2229,15 @@
           <Val><![CDATA[--no-restore|-n flag was used. No compatibility check will be done and the added package reference will be unconditional.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[O sinalizador --no-restore|-n foi usado. Nenhuma verificação de compatibilidade será executada e a referência do pacote adicionado será incondicional.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";Warning_AlreadyHighestVersion" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The package {0} is already referencing the highest version {1} in project {2}]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[O pacote {0} já está referenciando a versão mais alta {1} no projeto {2}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
