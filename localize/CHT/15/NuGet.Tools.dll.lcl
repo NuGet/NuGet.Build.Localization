@@ -244,12 +244,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Text_HttpSource_Error" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to [https://aka.ms/nuget-https-everywhere]5D;(https://aka.ms/nuget-https-everywhere) for more information.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[NuGet 需要 HTTPS 來源。您必須在 NuGet.Config 檔案中將 'allowInsecureConnections' 明確設定為 true，才能使用 HTTP 來源。若需其他資訊，請參閱 [https://aka.ms/nuget-https-everywhere]5D;(https://aka.ms/nuget-https-everywhere)。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Text_HttpSource_Warning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[You are attempting to add an HTTP source, which is insecure.]]></Val>
+          <Val><![CDATA[HTTP sources are insecure. Consider using HTTPS instead. 'AllowInsecureConnections' is enabled, permitting HTTP access. For more secure options, see [https://aka.ms/nuget-https-everywhere]5D;(https://aka.ms/nuget-https-everywhere).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[您正在嘗試新增不安全的 HTTP 來源。]]></Val>
+            <Val><![CDATA[HTTP 來源不安全。請考慮改用 HTTPS。已啟用 'AllowInsecureConnections' 並允許 HTTP 存取。若要獲得更安全的選項，請參閱 [https://aka.ms/nuget-https-everywhere]5D;(https://aka.ms/nuget-https-everywhere)。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[You are attempting to add an HTTP source, which is insecure.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
