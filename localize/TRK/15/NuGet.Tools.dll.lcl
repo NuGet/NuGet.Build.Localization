@@ -244,12 +244,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Text_HttpSource_Error" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to [https://aka.ms/nuget-https-everywhere]5D;(https://aka.ms/nuget-https-everywhere) for more information.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[NuGet için HTTPS kaynakları gereklidir. Bir HTTP kaynağı kullanmak için NuGet.Config dosyanızda 'allowInsecureConnections' ayarını açıkça “true” olarak ayarlamanız gerekir. Daha güvenli seçenekler için [https://aka.ms/nuget-https-everywhere]5D;(https://aka.ms/nuget-https-everywhere) adresine bakın.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Text_HttpSource_Warning" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[You are attempting to add an HTTP source, which is insecure.]]></Val>
+          <Val><![CDATA[HTTP sources are insecure. Consider using HTTPS instead. 'AllowInsecureConnections' is enabled, permitting HTTP access. For more secure options, see [https://aka.ms/nuget-https-everywhere]5D;(https://aka.ms/nuget-https-everywhere).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Güvenli olmayan bir HTTP kaynağı eklemeye çalışıyorsunuz.]]></Val>
+            <Val><![CDATA[HTTP kaynakları güvenli değil. Bunun yerine HTTPS kullanmayı düşünün. 'AllowInsecureConnections' etkinleştirildi ve HTTP erişimine izin verildi. Daha güvenli seçenekler için [https://aka.ms/nuget-https-everywhere]5D;(https://aka.ms/nuget-https-everywhere) adresine bakın.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[You are attempting to add an HTTP source, which is insecure.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
