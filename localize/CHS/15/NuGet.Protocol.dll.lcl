@@ -130,6 +130,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";Error_Insecure_HTTP" ItemType="0" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You are using a NuGet source '{0}' that contains an 'HTTP' service index resource endpoint: '{1}'. This is insecure and not recommended. To allow HTTP resources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. For more information, visit https://aka.ms/nuget-https-everywhere.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[你使用的 NuGet 源 "{0}" 包含 "HTTP" 服务索引资源终结点: "{1}"。这是不安全的，不建议这样做。若要允许 HTTP 资源，必须在 NuGet.Config 文件中将 "allowInsecureConnections" 显式设置为 true。有关详细信息，请访问 https://aka.ms/nuget-https-everywhere。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";Http_CredentialsForForbidden" ItemType="0" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[The server responded with HTTP '403 Forbidden' when accessing the source '{0}'. This suggests that the server has authenticated your identity but has not permitted you to access the requested resource. Provide credentials that have permissions to view this resource.]]></Val>

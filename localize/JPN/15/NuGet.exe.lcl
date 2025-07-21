@@ -1502,10 +1502,13 @@
       </Item>
       <Item ItemId=";SignCommandInvalidCertificateFingerprint" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Invalid value for 'CertificateFingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
+          <Val><![CDATA[{0}: Invalid value for 'CertificateFingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['CertificateFingerprint' オプションの値が無効です。値は SHA-256、SHA-384、または SHA-512 証明書フィンガープリント (16 進数) である必要があります。]]></Val>
+            <Val><![CDATA[{0}: 'CertificateFingerprint' オプションの値が無効です。値は SHA-256、SHA-384、または SHA-512 証明書フィンガープリント (16 進数) である必要があります。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Invalid value for 'CertificateFingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

@@ -1502,10 +1502,13 @@
       </Item>
       <Item ItemId=";SignCommandInvalidCertificateFingerprint" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Invalid value for 'CertificateFingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
+          <Val><![CDATA[{0}: Invalid value for 'CertificateFingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['CertificateFingerprint' 選項的值無效。該值必須是 SHA-256、SHA-384 或 SHA-512 憑證指紋 (十六進位格式)。]]></Val>
+            <Val><![CDATA[{0}: 'CertificateFingerprint' 選項的值無效。該值必須是 SHA-256、SHA-384 或 SHA-512 憑證指紋 (十六進位格式)。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Invalid value for 'CertificateFingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>

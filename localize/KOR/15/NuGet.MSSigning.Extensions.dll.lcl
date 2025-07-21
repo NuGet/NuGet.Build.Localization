@@ -75,10 +75,13 @@
       </Item>
       <Item ItemId=";MSSignCommandInvalidCertificateFingerprint" ItemType="0" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Invalid value for 'CertificateFingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
+          <Val><![CDATA[{0}: Invalid value for 'CertificateFingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA['CertificateFingerprint' 옵션의 값이 잘못되었습니다. 값은 SHA-256, SHA-384 또는 SHA-512 인증서 지문(16진수)이어야 합니다.]]></Val>
+            <Val><![CDATA[{0}: 'CertificateFingerprint' 옵션의 값이 잘못되었습니다. 값은 SHA-256, SHA-384 또는 SHA-512 인증서 지문(16진수)이어야 합니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Invalid value for 'CertificateFingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
