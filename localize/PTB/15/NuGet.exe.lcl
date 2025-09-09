@@ -1639,7 +1639,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Allows HTTP connections for adding or updating packages. Note: This method is not secure. For secure options, see https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Permite conexões HTTP para adicionar ou atualizar pacotes. Observação: esse método não é seguro. Para opções seguras, consulte https://aka.ms/nuget-https-everywhere para obter mais informações.]]></Val>
+            <Val><![CDATA[Permite conexões HTTP para adicionar ou atualizar pacotes. Observação: esse método não é seguro. Para opções seguras, confira https://aka.ms/nuget-https-everywhere para obter mais informações.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1720,7 +1720,7 @@
         <Str Cat="Text">
           <Val><![CDATA[<List|Add|Remove|Enable|Disable|Update> -Name [name]5D; -Source [source]5D;]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[<List|Add|Remove|Enable|Disable|Update> -Name [nome]5D; -Source [origem]5D;]]></Val>
+            <Val><![CDATA[<List|Add|Remove|Enable|Disable|Update> -Name [name]5D; -Source [source]5D;]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2122,7 +2122,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Argument cannot be null or empty.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[O argumento não pode ser nulo ou estar vazio.]]></Val>
+            <Val><![CDATA[O argumento não pode ser nulo nem estar vazio.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2374,11 +2374,8 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Você está executando a operação "{0}" com uma fonte "HTTP": {1}. O NuGet exige fontes HTTPS. Para usar uma fonte HTTP, você deve definir explicitamente "allowInsecureConnections" como true no arquivo NuGet.Config. Consulte https://aka.ms/nuget-https-everywhere para obter mais informações.]]></Val>
+            <Val><![CDATA[Você está executando a operação "{0}" com uma fonte "HTTP": {1}. O NuGet requer fontes HTTPS. Para usar uma fonte HTTP, você deve definir explicitamente "allowInsecureConnections" como true no arquivo NuGet.Config. Consulte https://aka.ms/nuget-https-everywhere para obter mais informações.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2386,11 +2383,8 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Você está executando a operação "{0}" com fontes 'HTTP': {1}. O NuGet exige fontes HTTPS. Para usar fontes HTTP, você deve definir explicitamente "allowInsecureConnections" como true no arquivo NuGet.Config. Consulte https://aka.ms/nuget-https-everywhere para obter mais informações.]]></Val>
+            <Val><![CDATA[Você está executando a operação ''{0}'' com as fontes ''HTTP'': {1}. O NuGet requer fontes HTTPS. Para usar fontes HTTP, você deve definir explicitamente "allowInsecureConnections" como true no arquivo NuGet.Config. Consulte https://aka.ms/nuget-https-everywhere para obter mais informações.]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -3905,7 +3899,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
+      <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -3920,7 +3914,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.exe]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -3935,7 +3929,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.exe]]></Val>
       </Str>
       <Disp Icon="Str" />

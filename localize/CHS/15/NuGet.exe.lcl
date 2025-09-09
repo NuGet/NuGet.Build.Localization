@@ -151,7 +151,7 @@
         <Str Cat="Text">
           <Val><![CDATA[<List|Add|Update|Remove> [options]5D;]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[<列表|添加|更新|移除> [选项]5D;]]></Val>
+            <Val><![CDATA[<List|Add|Update|Remove> [选项]5D;]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -376,7 +376,7 @@
         <Str Cat="Text">
           <Val><![CDATA[<package Id> <package version> [API Key]5D; [options]5D;]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[<包 Id> <包 版本> [API 密钥]5D; [选项]5D;]]></Val>
+            <Val><![CDATA[<package Id> <package version> [API 密钥]5D; [选项]5D;]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -448,7 +448,7 @@
         <Str Cat="Text">
           <Val><![CDATA[nuget help]D;]A;]D;]A;nuget help push]D;]A;]D;]A;nuget ?]D;]A;]D;]A;nuget push -?]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[nuget 帮助]D;]A;]D;]A;nuget 帮助推送]D;]A;]D;]A;nuget?]D;]A;]D;]A;nuget 推送 -?]]></Val>
+            <Val><![CDATA[nuget help]D;]A;]D;]A;nuget help push]D;]A;]D;]A;nuget ?]D;]A;]D;]A;nuget push -?]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1450,7 +1450,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Name of the X.509 certificate store use to search for the certificate. Defaults to "CurrentUser", the X.509 certificate store used by the current user.]D;]A;This option should be used when specifying the certificate via -CertificateSubjectName or -CertificateFingerprint options.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[用于搜索证书的 X.509 证书存储的名称。默认为 “CurrentUser”，即当前用户使用的 X.509 证书存储。]D;]A;通过 -CertificateSubjectName 或 -CertificateFingerPrint 选项指定证书时，应使用此选项。]]></Val>
+            <Val><![CDATA[用于搜索证书的 X.509 证书存储的名称。默认为 "CurrentUser"，即当前用户使用的 X.509 证书存储。]D;]A;通过 -CertificateSubjectName 或 -CertificateFingerPrint 选项指定证书时，应使用此选项。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1459,7 +1459,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Name of the X.509 certificate store to use to search for the certificate. Defaults to "My", the X.509 certificate store for personal certificates.]D;]A;This option should be used when specifying the certificate via -CertificateSubjectName or -CertificateFingerprint options.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[用于搜索证书的 X.509 证书存储的名称。默认为 “My”，即用于个人证书的 X.509 证书存储。]D;]A;通过 -CertificateSubjectName 或 -CertificateFingerprint 选项指定证书时，应使用此选项。]]></Val>
+            <Val><![CDATA[用于搜索证书的 X.509 证书存储的名称。默认为 "My"，即用于个人证书的 X.509 证书存储。]D;]A;通过 -CertificateSubjectName 或 -CertificateFingerprint 选项指定证书时，应使用此选项。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1504,7 +1504,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Invalid value for 'CertificateFingerprint' option. The value must be a SHA-256, SHA-384, or SHA-512 certificate fingerprint (in hexadecimal).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[“CertificateFingerprint” 选项的值无效。该值必须是 SHA-256、SHA-384 或 SHA-512 证书指纹(十六进制)。]]></Val>
+            <Val><![CDATA[“CertificateFingerprint”选项的值无效。该值必须是 SHA-256、SHA-384 或 SHA-512 证书指纹(十六进制)。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2374,11 +2374,8 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[正在通过 “HTTP” 源 {1} 运行“{0}”操作。NuGet 需要 HTTPS 源。要使用 HTTP 源，必须在 NuGet.Config 文件中将 'allowInsecureConnections' 显式设置为 true。有关详细信息，请参阅 https://aka.ms/nuget-https-everywhere。]]></Val>
+            <Val><![CDATA[正在通过 “HTTP” 源 {1} 运行“{0}”操作。NuGet 需要 HTTPS 源。要使用 HTTP 源，必须在 NuGet.Config 文件中将“allowInsecureConnections”显式设置为 true。有关详细信息，请参阅 https://aka.ms/nuget-https-everywhere。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with an 'HTTP' source: {1}. NuGet requires HTTPS sources. To use an HTTP source, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -2386,11 +2383,8 @@
         <Str Cat="Text">
           <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Refer to https://aka.ms/nuget-https-everywhere for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[正在通过 “HTTP” 源 {1} 运行“{0}”操作。NuGet 需要 HTTPS 源。要使用 HTTP 源，必须在 NuGet.Config 文件中将 'allowInsecureConnections' 显式设置为 true。有关详细信息，请参阅 https://aka.ms/nuget-https-everywhere。]]></Val>
+            <Val><![CDATA[正在通过“HTTP”源 {1} 运行“{0}”操作。NuGet 需要 HTTPS 源。要使用 HTTP 源，必须在 NuGet.Config 文件中将“allowInsecureConnections”显式设置为 true。有关详细信息，请参阅 https://aka.ms/nuget-https-everywhere。]]></Val>
           </Tgt>
-          <Prev Cat="Text">
-            <Val><![CDATA[You are running the '{0}' operation with 'HTTP' sources: {1}. NuGet requires HTTPS sources. To use HTTP sources, you must explicitly set 'allowInsecureConnections' to true in your NuGet.Config file. Please refer to https://aka.ms/nuget-https-everywhere.]]></Val>
-          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -3400,7 +3394,7 @@
         <Str Cat="Text">
           <Val><![CDATA[Restoring NuGet packages...]D;]A;To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the NuGet Package Manager node and uncheck '{0}'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[正在还原 NuGet 包...]D;]A;若要防止 NuGet 在生成期间下载包，请打开“Visual Studio 选项”对话框，单击 NuGet 程序包管理器节点，然后取消选中“{0}”。]]></Val>
+            <Val><![CDATA[正在还原 NuGet 包...]D;]A;若要防止 NuGet 在生成期间下载包，请打开“Visual Studio 选项”对话框，单击 NuGet 程序包管理器节点，然后取消选中 "{0}"。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3905,7 +3899,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";CompanyName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text">
+      <Str Cat="Text" UsrLk="true">
         <Val><![CDATA[Microsoft Corporation]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -3920,7 +3914,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";InternalName" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.exe]]></Val>
       </Str>
       <Disp Icon="Str" />
@@ -3935,7 +3929,7 @@
       <Disp Icon="Str" />
     </Item>
     <Item ItemId=";OriginalFilename" ItemType="0" PsrId="211" Leaf="true">
-      <Str Cat="Text" DevLk="true">
+      <Str Cat="Text" DevLk="true" UsrLk="true">
         <Val><![CDATA[NuGet.exe]]></Val>
       </Str>
       <Disp Icon="Str" />
